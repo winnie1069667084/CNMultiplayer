@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+  <string id="str_order_set_name.None" text="{=koX9okuG}None" />
+  <string id="str_order_set_name.Movement" text="{=KiJd6Xik}Movement" />
+  <string id="str_order_set_name.Form" text="{=iBk2wbn3}Form" />
+  <string id="str_order_set_name.Toggle" text="{=0HTNYQz2}Toggle" />
+  <string id="str_order_set_name.Facing" text="{=psynaDsM}Facing" />
+  <string id="str_order_name.FaceEnemy" text="{=u8j8nN5U}Face Enemy" />
+  <string id="str_order_name.MoveToPosition" text="{=Ok03egKG}Move To Position" />
+  <string id="str_order_name.Charge" text="{=Dxmq32qW}Charge" />
+  <string id="str_order_name.FollowMe" text="{=5LpufKs7}Follow Me" />
+  <string id="str_order_name.Advance" text="{=A38xbjqm}Engage" />
+  <string id="str_order_name.Fallback" text="{=WhUoF9Mw}Fallback" />
+  <string id="str_order_name.Stop" text="{=QTr6UDAa}Stop" />
+  <string id="str_order_name.Retreat" text="{=VbeHEAsa}Retreat" />
+  <string id="str_order_name.FormLine" text="{=9aboazgu}Line" />
+  <string id="str_order_name.FormClose" text="{=rTPnyeJ3}Shield Wall" />
+  <string id="str_order_name.FormLoose" text="{=iJXH3841}Loose" />
+  <string id="str_order_name.FormCircular" text="{=9TGLirQf}Circle" />
+  <string id="str_order_name.FormSchiltron" text="{=E3tCWX7w}Square" />
+  <string id="str_order_name.FormV" text="{=uCyQNvq1}Skein" />
+  <string id="str_order_name.FormColumn" text="{=WsmZzaOq}Column" />
+  <string id="str_order_name.FormScatter" text="{=eEf7hE4r}Scatter" />
+  <string id="str_order_name.ToggleFacing" text="{=GQOS4d9g}Toggle Facing" />
+  <string id="str_order_name.ToggleFire" text="{=V1kxYbRp}Toggle Fire" />
+  <string id="str_order_name.ToggleMount" text="{=UJaQuEpD}Toggle Mount" />
+  <string id="str_order_name.ToggleAI" text="{=8vXHhxPr}Toggle AI" />
+  <string id="str_order_name.ToggleTransfer" text="{=AmbKQ7LT}Transfer" />
+  <string id="str_order_name.Return" text="{=EmVbbIUc}Return" />
+  <string id="str_order_name.ActivationFaceDirection" text="{=EZRnvPJS}Face This Direction" />
+  <string id="str_order_name_off.ToggleFire" text="{=Q2yjFlC9}Hold Fire" />
+  <string id="str_order_name_on.ToggleFire" text="{=CjPiabbn}Fire At Will" />
+  <string id="str_order_name_off.ToggleMount" text="{=wk4bgkCt}Dismount" />
+  <string id="str_order_name_on.ToggleMount" text="{=uGM8DWrm}Mount" />
+  <string id="str_order_name_off.ToggleAI" text="{=zatDiaEI}Delegate Command On" />
+  <string id="str_order_name_on.ToggleAI" text="{=JceqNdWx}Delegate Command Off" />
+  <string id="str_order_name_off.ToggleTransfer" text="{=AmbKQ7LT}Transfer" />
+  <string id="str_order_name_on.ToggleTransfer" text="{=2uynGJbP}Transfering Troops" />
+  <string id="str_order_name_off.ToggleFacing" text="{=u8j8nN5U}Face Enemy" />
+  <string id="str_order_name_on.ToggleFacing" text="{=EZRnvPJS}Face This Direction" />
+  <string id="str_order_name_off.Return" text="{=EmVbbIUc}Return" />
+  <string id="str_order_name_on.Return" text="{=EmVbbIUc}Return" />
+  <string id="ui_hit_shield_on_back" text="{=05loYcST}Hit shield on back" />
+  <string id="ui_delivered_couched_lance_damage" text="{=0DBQGaka}Delivered couched lance damage!" />
+  <string id="ui_received_couched_lance_damage" text="{=ccROnOY3}Received couched lance damage!" />
+  <string id="ui_delivered_braced_polearm_damage" text="{=52YN6m2B}Delivered braced polearm damage!" />
+  <string id="ui_received_braced_polearm_damage" text="{=nx5W7jN0}Received braced polearm damage!" />
+  <string id="ui_log_title" text="{=xq9Vxpyc}&lt;a style=&quot;HeadshotTitle.Text&quot; &gt;&lt;b&gt;{TITLE}&lt;/b&gt;&lt;/a&gt;" />
+  <string id="ui_head_shot" text="{=sBU9vyF1}Head shot!" />
+  <string id="ui_received_number_damage_fall" text="{=WlVa7XwJ}Received {DAMAGE} fall damage." />
+  <string id="ui_received_number_damage_fall_to_horse" text="{=Cl3TziQE}Your mount received {DAMAGE} fall damage." />
+  <string id="ui_received_number_damage" text="{=tAeflOpj}Received {DAMAGE} {DAMAGE_TYPE} damage." />
+  <string id="ui_horse_received_number_damage" text="{=UrZvjCfE}Your mount received {DAMAGE} {DAMAGE_TYPE} damage." />
+  <string id="ui_delivered_number_damage" text="{=R3BwLVmT}Delivered {DAMAGE} {DAMAGE_TYPE} damage." />
+  <string id="ui_delivered_number_damage_to_horse" text="{=XUKRrgOr}Delivered {DAMAGE} {DAMAGE_TYPE} damage to mount." />
+  <string id="ui_delivered_number_damage_to_entity" text="{=QDU03vOW}Delivered {DAMAGE} {DAMAGE_TYPE} damage to object." />
+  <string id="ui_horse_charged_for_number_damage" text="{=UQabkhbG}Mount charged for {DAMAGE} {DAMAGE_TYPE} damage." />
+  <string id="combat_log_friendly_fire" text="{=L3tY2kTE}Friendly fire!" />
+  <string id="combat_log_crushed_through_attacker" text="{=ZZMbAjSU}Crushed through!" />
+  <string id="combat_log_crushed_through_victim" text="{=YRymCbaa}Got crushed through!" />
+  <string id="combat_log_chamber_blocked" text="{=adyGICWc}Chamber Blocked!" />
+  <string id="combat_log_damage_type.0" text="{=DU9SofaW}Cut" />
+  <string id="combat_log_damage_type.1" text="{=Umb8XsZH}Pierce" />
+  <string id="combat_log_damage_type.2" text="{=3syV6ymi}Blunt" />
+  <string id="combat_log_damage_type.3" text="{=GY4NaieE}Pure" />
+  <string id="combat_log_detail_missile_speed" text="{=f4ZeGAJi}Relative missile speed: {SPEED} m/s" />
+  <string id="combat_log_detail_move_speed" text="{=DHlVSaZW}Relative movement speed: {SPEED} m/s" />
+  <string id="combat_log_detail_distance" text="{=Ph6PhUwX}Distance: {DISTANCE} m" />
+  <string id="combat_log_detail_body_part" text="{=obB483C5}Body part hit: {BODY_PART}" />
+  <string id="combat_log_detail_absorbed_damage" text="{=PbLuHcJg}Absorbed damage: {ABSORBED_DAMAGE}" />
+  <string id="combat_log_detail_extra_damage" text="{=RDsOaEtS}Extra damage from skills, perks and effects: {MODIFIED_DAMAGE}" />
+  <string id="combat_log_detail_reduced_damage" text="{=Lz6ggWch}Damage reduction from perks and effects: {MODIFIED_DAMAGE}" />
+  <string id="body_part_type.0" text="{=g6cHDWJF}Head" />
+  <string id="body_part_type.1" text="{=ZMmrpMPk}Neck" />
+  <string id="body_part_type.2" text="{=fFLBT9wb}Chest" />
+  <string id="body_part_type.3" text="{=4wLU6s4S}Abdomen" />
+  <string id="body_part_type.4" text="{=U1em3vrJ}Shoulder" />
+  <string id="body_part_type.5" text="{=U1em3vrJ}Shoulder" />
+  <string id="body_part_type.6" text="{=f5y9qyDb}Arm" />
+  <string id="body_part_type.7" text="{=f5y9qyDb}Arm" />
+  <string id="body_part_type.8" text="{=3Kkya96j}Leg" />
+  <string id="body_part_type.9" text="{=f5y9qyDb}Arm" />
+  <string id="body_part_type.10" text="{=f5y9qyDb}Arm" />
+  <string id="body_part_type.11" text="{=3Kkya96j}Leg" />
+  <string id="str_mp_skin_category_name.None" text="{=yfa7tpbK}All" />
+  <string id="str_mp_skin_category_name.FullSkin" text="{=SN2ojCFr}Full Skin" />
+  <string id="str_mp_skin_category_name.Helmet" text="{=tUETZiIp}Helmet" />
+  <string id="str_mp_skin_category_name.Torso" text="{=3AInGztr}Torso" />
+  <string id="str_mp_skin_category_name.Shoulder" text="{=U1em3vrJ}Shoulder" />
+  <string id="str_mp_skin_category_name.Boots" text="{=Wxlhg1f1}Boots" />
+  <string id="str_mp_skin_category_name.Gauntlet" text="{=CoxEyDa8}Gauntlet" />
+  <string id="str_mp_skin_category_name.Mount" text="{=mountnoun}Mount" />
+  <string id="str_mp_skin_category_name.MountArmor" text="{=CFI2aDtg}Mount Armor" />
+  <string id="str_mp_skin_category_name.Spear" text="{=YoNYyLba}Spear" />
+  <string id="str_mp_skin_category_name.Javelin" text="{=cBZ6OlKW}Javelin" />
+  <string id="str_mp_skin_category_name.Bow" text="{=5rj7xQE4}Bow" />
+  <string id="str_mp_skin_category_name.Crossbow" text="{=TTWL7RLe}Crossbow" />
+  <string id="str_mp_skin_category_name.Sword" text="{=bY9U7w1Q}Sword" />
+  <string id="str_mp_skin_category_name.Axe" text="{=7MkoLtWC}Axe" />
+  <string id="str_mp_skin_category_name.Mace" text="{=VI4gQt8Q}Mace" />
+  <string id="str_mp_skin_category_name.ThrowingAxe" text="{=tE1VwKTZ}Throwing Axe" />
+  <string id="str_mp_skin_category_name.ThrowingKnife" text="{=3APdsKEi}Throwing Knive" />
+  <string id="str_mp_skin_category_name.Shield" text="{=Jd0Kq9lD}Shield" />
+  <string id="str_weapon_usage.OneHandedSword" text="{=PiHpR4QL}One Handed" />
+  <string id="str_weapon_usage.TwoHandedSword" text="{=t78atYqH}Two Handed" />
+  <string id="str_weapon_usage.Dagger" text="{=PiHpR4QL}One Handed" />
+  <string id="str_weapon_usage.ThrowingKnife" text="{=MW8rlyfL}Thrown" />
+  <string id="str_weapon_usage.OneHandedAxe" text="{=PiHpR4QL}One Handed" />
+  <string id="str_weapon_usage.TwoHandedAxe" text="{=t78atYqH}Two Handed" />
+  <string id="str_weapon_usage.ThrowingAxe" text="{=MW8rlyfL}Thrown" />
+  <string id="str_weapon_usage.OneHandedPolearm" text="{=PiHpR4QL}One Handed" />
+  <string id="str_weapon_usage.OneHandedPolearm_JavelinAlternative" text="{=PiHpR4QL}One Handed" />
+  <string id="str_weapon_usage.TwoHandedPolearm" text="{=t78atYqH}Two Handed" />
+  <string id="str_weapon_usage.TwoHandedPolearm_Couchable" text="{=MciIqod6}Couch Lance" />
+  <string id="str_weapon_usage.TwoHandedPolearm_Pike" text="{=t78atYqH}Two Handed" />
+  <string id="str_weapon_usage.Javelin" text="{=MW8rlyfL}Thrown" />
+  <string id="str_weapon_usage.Mace" text="{=PiHpR4QL}One Handed" />
+  <string id="str_weapon_usage.TwoHandedMace" text="{=t78atYqH}Two Handed" />
+  <string id="str_armor" text="{=ahiBhAqU}Armor" />
+  <string id="str_hitpoints" text="{=oBbiVeKE}Hit Points" />
+  <string id="str_movement_speed" text="{=Yvjap05b}Movement Speed" />
+  <string id="str_mp_player_stats.kill_count" text="{=irGCyJaY}Kill Count" />
+  <string id="str_mp_player_stats.assist_count" text="{=GcosVDAt}Assist Count" />
+  <string id="str_mp_player_stats.death_count" text="{=EX4bKRbV}Death Count" />
+  <string id="str_mp_player_stats.won_game_count" text="{=dxlkHhw5}Games Won" />
+  <string id="str_mp_player_stats.lost_game_count" text="{=BrjpmaJH}Games Lost" />
+  <string id="str_mp_player_stats.total_game_count" text="{=64n3piBf}Total Games" />
+  <string id="sf_facegen_title" text="{=aDabgVpn}Character Customization" />
+  <string id="sf_facegen_skin_color" text="{=3aX5gXmJ}Skin Color" />
+  <string id="sf_facegen_gender" text="{=fGFMqlGz}Gender" />
+  <string id="sf_facegen_race" text="{=Kl9aqIuX}Race" />
+  <string id="str_face_gen_change_cloth" text="{=AEcTBnkz}Change Clothing" />
+  <string id="str_body" text="{=HgpdpYuK}Body" />
+  <string id="str_face" text="{=VwyBNTs3}Face" />
+  <string id="str_eyes" text="{=9Ts5zKIj}Eyes" />
+  <string id="str_nose" text="{=pCRwBpzd}Nose" />
+  <string id="str_mouth" text="{=rbYITcao}Mouth" />
+  <string id="str_hair" text="{=wIgbfqQR}Hair" />
+  <string id="str_taint" text="{=JetpbYv9}Taint" />
+  <string id="str_face_gen_markings" text="{=2blpQ3OQ}Markings" />
+  <string id="str_pause_menu_disabled_hint.IronmanMode" text="{=bH0wXnXr}This option is disabled due to Ironman mode." />
+  <string id="str_pause_menu_disabled_hint.Education" text="{=H4PrQzvN}This option is disabled due to unfinished education of a clan member." />
+  <string id="str_pause_menu_disabled_hint.CharacterCreation" text="{=tFLVZdBz}This option is disabled due to unfinished character creation." />
+  <string id="str_pause_menu_disabled_hint.OngoingConversation" text="{=gQLDkSrf}This option is disabled due to an ongoing conversation." />
+  <string id="str_pause_menu_disabled_hint.SaveLimitReached" text="{=9S7liri5}This option is disabled due to having reached the save limit." />
+  <string id="str_pause_menu.ReturnToTheGame" text="{=e139gKZc}Return to the Game" />
+  <string id="str_pause_menu.Options" text="{=NqarFr4P}Options" />
+  <string id="str_pause_menu.Inventory" text="{=rbz1Bwbv}Inventory" />
+  <string id="str_pause_menu.ChangeTeam" text="{=bYCfMbYk}Change Your Team" />
+  <string id="str_pause_menu.StartAPoll" text="{=likop0am}Start A Poll" />
+  <string id="str_pause_menu.AdminPanel" text="{=xILeUbY3}Admin Panel" />
+  <string id="str_pause_menu.BanPlayer" text="{=pbp0GQdO}Ban Player" />
+  <string id="str_pause_menu.KickPlayer" text="{=cPbHqGrI}Kick Player" />
+  <string id="str_pause_menu.SaveAndExit" text="{=AbEh2y8o}Save And Exit" />
+  <string id="str_pause_menu.Save" text="{=bV75iwKa}Save" />
+  <string id="str_pause_menu.SaveAs" text="{=e0KdfaNe}Save As" />
+  <string id="str_pause_menu.QuitWithoutSaving" text="{=o5Ead68n}Quit Without Saving" />
+  <string id="str_polltype.0" text="{=FFNJTsDL}Kick a player" />
+  <string id="str_polltype.1" text="{=SVAmzGRM}Ban a player" />
+  <string id="str_polltype.2" text="{=vkEzdL3k}Change game type or scene" />
+  <string id="str_scoreboard_show_mouse_key" text="{=m3zVR2UH}Show Mouse: [{KEY_NAME}]" />
+  <string id="str_key_action" text="{=JCcbydcJ}{KEY} {ACTION}" />
+  <string id="str_hold_key_action" text="{=Oud3W58w}Hold {KEY} {ACTION}" />
+  <string id="str_select_item_to_replace" text="{=L9xEQ5b2}Select Item to Replace" />
+  <string id="str_replace_with" text="{=26SJhCRD}Replace With" />
+  <string id="str_ui_mount" text="{=mountverb}Mount" />
+  <string id="str_ui_dismount" text="{=wk4bgkCt}Dismount" />
+  <string id="str_ui_riding_skill_not_adequate_to_mount" text="{=PuX1G0h3}Riding Skill Not Adequate To Mount" />
+  <string id="str_ui_empty_quiver" text="{=mjhOYJWg}Quiver is empty." />
+  <string id="str_ui_equip" text="{=DKqLY1aJ}Equip" />
+  <string id="str_ui_fill" text="{=qNRc3pXu}Fill" />
+  <string id="str_ui_swap" text="{=5vZW8IJ5}Swap with {ITEM_NAME}" />
+  <string id="str_defeat" text="{=F6dUDgg3}Defeat" />
+  <string id="str_victory" text="{=R4Gqskgq}Victory" />
+  <string id="str_battle_result_retreat" text="{=MyrHcDkP}Retreated to the keep!" />
+  <string id="str_draw" text="{=ZYChhMrO}Draw" />
+  <string id="str_map_extend_bar_hint" text="{=Wl5xazIU}Extend/Shrink Map Bar" />
+  <string id="str_terrain" text="{=880uOrte}Terrain" />
+  <string id="str_terrain_types.0" text="{=KHx75GnA}Water" />
+  <string id="str_terrain_types.1" text="{=TGaU0hQi}Mountain" />
+  <string id="str_terrain_types.2" text="{=vLjgcdgB}Snow" />
+  <string id="str_terrain_types.3" text="{=05w8Tl7n}Steppe" />
+  <string id="str_terrain_types.4" text="{=7lvexPjZ}Plain" />
+  <string id="str_terrain_types.5" text="{=ecUwABe2}Desert" />
+  <string id="str_terrain_types.6" text="{=tnCNPJMO}Swamp" />
+  <string id="str_terrain_types.7" text="{=nt5MOuwo}Dune" />
+  <string id="str_terrain_types.8" text="{=kCMGJl1W}Bridge" />
+  <string id="str_terrain_types.9" text="{=UvIsHvrt}River" />
+  <string id="str_terrain_types.10" text="{=rTFaZCdY}Forest" />
+  <string id="str_terrain_types.11" text="{=wBn6eVGS}Shallow River" />
+  <string id="str_terrain_types.12" text="{=nXE6eV8W}Lake" />
+  <string id="str_terrain_types.13" text="{=YhDDXj0I}Canyon" />
+  <string id="str_terrain_types.14" text="{=zHKHwHMr}Rural Area" />
+  <string id="str_password_required" text="{=23INS6nf}Password Required" />
+  <string id="str_enter_password" text="{=U3LxBtL0}Enter password" />
+  <string id="str_close" text="{=yQtzabbe}Close" />
+  <string id="str_previous" text="{=WXAaWZVf}Previous" />
+  <string id="str_next" text="{=Rvr1bcu8}Next" />
+  <string id="str_unmute_notification" text="{=FoSTFipC}{PLAYER_NAME} is now un-muted." />
+  <string id="str_siege_siegeweapon" text="{=bkysJj7F}Siege Weapon" />
+  <string id="str_siege_bricole" text="{=TlP31w8l}Bricole" />
+  <string id="str_scoreboard_header.badge" text="{=4PrfimcK}Badge" />
+  <string id="str_mp_scoreboard_context_viewprofile" text="{=bjJkW9dO}View Profile" />
+  <string id="str_mp_scoreboard_context_report" text="{=EUHaR98k}Report" />
+  <string id="str_mp_scoreboard_context_request_friendship" text="{=rLozutts}Request Friendship" />
+  <string id="str_mp_scoreboard_context_mute_text" text="{=jtLGvCac}Mute Text" />
+  <string id="str_mp_scoreboard_context_unmute_text" text="{=66aByatH}Unmute Text" />
+  <string id="str_mp_scoreboard_context_mute_voice" text="{=T1JTpYXL}Mute Voice" />
+  <string id="str_mp_scoreboard_context_unmute_voice" text="{=21m0Bo08}Unmute Voice" />
+  <string id="str_mp_scoreboard_context_kick" text="{=scoreboardkick}Kick" />
+  <string id="str_mp_scoreboard_context_ban" text="{=HjqcmY6X}Ban" />
+  <string id="str_scoreboard_header.avatar" text="{=5tbWdY1j}Avatar" />
+  <string id="str_scoreboard_header.name" text="{=PDdh1sBj}Name" />
+  <string id="str_scoreboard_header.kill" text="{=Ayrvf5yp}Kill" />
+  <string id="str_scoreboard_header.death" text="{=W73My5KO}Death" />
+  <string id="str_scoreboard_header.assist" text="{=cJ5emwNF}Assist" />
+  <string id="str_scoreboard_header.score" text="{=SNLShTzq}Score" />
+  <string id="str_scoreboard_header.gold" text="{=V4iU0wRv}Gold" />
+  <string id="str_scoreboard_header.ping" text="{=7qySRF2T}Ping" />
+  <string id="str_scoreboard_header.soldiers" text="{=ig0lsiwY}Soldiers" />
+  <string id="str_scoreboard_header.winstreak" text="{=TOfBGa0Z}Win Streak" />
+  <string id="str_scoreboard_header.bounty" text="{=v5dpjybs}Bounty" />
+  <string id="str_scoreboard_header.mvp" text="{=YSKoiyjt}MVP" />
+  <string id="str_facegen_skin.face_width" text="{=PY6VznGu}Face Width" />
+  <string id="str_facegen_skin.face_depth" text="{=JwnoxhKI}Face Depth" />
+  <string id="str_facegen_skin.center_height" text="{=bnfUdx3O}Center Height" />
+  <string id="str_facegen_skin.face_ratio" text="{=BQzP1ivS}Face Ratio" />
+  <string id="str_facegen_skin.cheeks" text="{=2QzgefNF}Face Weight" />
+  <string id="str_facegen_skin.cheekbone_height" text="{=tvHQcaC1}Cheekbone Height" />
+  <string id="str_facegen_skin.cheekbone_width" text="{=1siBGYlP}Cheekbone Width" />
+  <string id="str_facegen_skin.cheekbone_depth" text="{=O9F9q1zx}Cheekbone Depth" />
+  <string id="str_facegen_skin.face_roundness" text="{=GaF4CvmX}Face Sharpness" />
+  <string id="str_facegen_skin.face_shape" text="{=dZ4xp6Lu}Temple Width" />
+  <string id="str_facegen_skin.cheekbone_scale" text="{=6yZnboe6}Eye Socket Size" />
+  <string id="str_facegen_skin.ear_size" text="{=LkiQDpi5}Ear Size" />
+  <string id="str_facegen_skin.ears" text="{=LkiQDpi5}Ear Size" />
+  <string id="str_facegen_skin.face_asymmetry" text="{=0P89VyAQ}Face Asymmetry" />
+  <string id="str_facegen_skin.eyebrow_depth" text="{=2Rf2ChRD}Eyebrow Depth" />
+  <string id="str_facegen_skin.brow_outer_height" text="{=8o1lZcjR}Brow Outer Height" />
+  <string id="str_facegen_skin.brow_middle_height" text="{=a8nb5HVc}Brow Middle Height" />
+  <string id="str_facegen_skin.brow_inner_height" text="{=bTpn4bZ8}Brow Inner Height" />
+  <string id="str_facegen_skin.eyebrow_position" text="{=b0L0jbIa}Eye Position" />
+  <string id="str_facegen_skin.eye_width" text="{=LmkYgWnF}Eye Size" />
+  <string id="str_facegen_skin.eyelid_up_position" text="{=xXQN7Go6}Monolid Eyes" />
+  <string id="str_facegen_skin.eyelid_height" text="{=pagmdsCK}Eyelid Height" />
+  <string id="str_facegen_skin.eye_depth" text="{=RlDVtPpB}Eye Depth" />
+  <string id="str_facegen_skin.eye_shape" text="{=01zQKaF3}Eye Shape" />
+  <string id="str_facegen_skin.eye_outer_corner_height" text="{=22MOa4Fc}Eye Outer Height" />
+  <string id="str_facegen_skin.eye_inner_corner_height" text="{=77arWi0m}Eye Inner Height" />
+  <string id="str_facegen_skin.eye_to_eye_distance" text="{=2d0H47C8}Eye To Eye Distance" />
+  <string id="str_facegen_skin.eye_asymetry" text="{=qF5pJt7e}Eye Asymmetry" />
+  <string id="str_facegen_skin.nose" text="{=5mSKBidd}Nose Shape" />
+  <string id="str_facegen_skin.mouth" text="{=h5OsTOFM}Lips Concave/Convex" />
+  <string id="str_facegen_skin.center_depth" text="{=LaaA8U4W}Nose Angle" />
+  <string id="str_facegen_skin.nose_asymetry" text="{=621DbiOw}Nose Asymetry" />
+  <string id="str_facegen_skin.nose_length" text="{=dojUqbv8}Nose Length" />
+  <string id="str_facegen_skin.nose_bridge" text="{=UbMCCh8L}Nose Bridge" />
+  <string id="str_facegen_skin.nose_tip_height" text="{=fnJQO5Os}Nose Tip Height" />
+  <string id="str_facegen_skin.nose_size" text="{=b74zosgq}Nose Size" />
+  <string id="str_facegen_skin.nose_width" text="{=U4xlUBHg}Nose Width" />
+  <string id="str_facegen_skin.nostril_height" text="{=TuAP5xXV}Nostril Height" />
+  <string id="str_facegen_skin.nostril_scale" text="{=BMPrnHpK}Nostril Size" />
+  <string id="str_facegen_skin.nose_bump" text="{=pQibMlbA}Nose Bump" />
+  <string id="str_facegen_skin.nose_definition" text="{=yClOSxT8}Nose Definition" />
+  <string id="str_facegen_skin.nose_shape" text="{=5mSKBidd}Nose Shape" />
+  <string id="str_facegen_skin.eye_asymmetry" text="{=FzJnNNam}Nose Asymmetry" />
+  <string id="str_facegen_skin.mouth_width" text="{=7BlOJvyo}Mouth Width" />
+  <string id="str_facegen_skin.mouth_nose_distance" text="{=ImWyFyld}Mouth Position" />
+  <string id="str_facegen_skin.lips_frown" text="{=OZHFucP5}Frown/Smile" />
+  <string id="str_facegen_skin.lip_thickness" text="{=3kqFHkZz}Lip Thickness" />
+  <string id="str_facegen_skin.lips_forward" text="{=W1nzgCTY}Mouth Forward" />
+  <string id="str_facegen_skin.mouth_curve" text="{=SdxEH6b1}Bottom Lip Shape" />
+  <string id="str_facegen_skin.mouth_curve2" text="{=aAD1iOuH}Top Mouth Size" />
+  <string id="str_facegen_skin.mouth_curve3" text="{=2G3QpSDk}Lips concave/convex" />
+  <string id="str_facegen_skin.jaw_line" text="{=0xJ3qIlJ}Jaw Line" />
+  <string id="str_facegen_skin.neck_slope" text="{=bbYwqrvo}Jaw Shape" />
+  <string id="str_facegen_skin.jaw_height" text="{=d3RJm2zW}Jaw Height" />
+  <string id="str_facegen_skin.chin_forward" text="{=fjD2tRXW}Chin Forward" />
+  <string id="str_facegen_skin.chin_shape" text="{=yyJejJbO}Chin Shape" />
+  <string id="str_facegen_skin.chin_length" text="{=GnKCsV44}Chin Length" />
+  <string id="str_facegen_skin.neck_thickness" text="{=jUsEkEBt}Jaw Asymmetry" />
+  <string id="str_facegen_skin.hide_ears" text="{=SVnbZdJq}Hide Ears" />
+  <string id="str_facegen_skin.old" text="{=0cpbEvsG}Old Face" />
+  <string id="str_facegen_skin.kid" text="{=Sbna6UGb}Kid Face" />
+  <string id="str_facegen_skin.eyebump" text="{=laIfauZH}Eyebump" />
+  <string id="str_facegen_skin.weight" text="{=4Dd2xgPm}Weight" />
+  <string id="str_facegen_skin.build" text="{=6DBVzw9r}Build" />
+  <string id="str_facegen_skin.face_sharpness" text="{=GaF4CvmX}Face Sharpness" />
+  <string id="str_facegen_skin.temple_width" text="{=dZ4xp6Lu}Temple Width" />
+  <string id="str_facegen_skin.eye_socket_size" text="{=6yZnboe6}Eye Socket Size" />
+  <string id="str_facegen_skin.ear_shape" text="{=ox8XcxfR}Ear Shape" />
+  <string id="str_facegen_skin.eye_position" text="{=b0L0jbIa}Eye Position" />
+  <string id="str_facegen_skin.eye_size" text="{=LmkYgWnF}Eye Size" />
+  <string id="str_facegen_skin.monolid_eyes" text="{=xXQN7Go6}Monolid Eyes" />
+  <string id="str_facegen_skin.nose_angle" text="{=LaaA8U4W}Nose Angle" />
+  <string id="str_facegen_skin.mouth_position" text="{=ImWyFyld}Mouth Position" />
+  <string id="str_facegen_skin.lip_shape_bottom" text="{=SdxEH6b1}Bottom Lip Shape" />
+  <string id="str_facegen_skin.lip_shape_top" text="{=vo5NpcUS}Top Lip Shape" />
+  <string id="str_facegen_skin.lip_shape_concave_convex" text="{=2G3QpSDk}Lips concave/convex" />
+  <string id="str_facegen_skin.head_scaling" text="{=brk0f05B}Head Scaling" />
+  <string id="str_facegen_skin.old_face" text="{=0cpbEvsG}Old Face" />
+  <string id="str_facegen_skin.kid_face" text="{=Sbna6UGb}Kid Face" />
+  <string id="str_facegen_skin.height" text="{=WLztEbPL}Height" />
+  <string id="str_facegen_skin.age" text="{=jaaQijQs}Age" />
+  <string id="str_taunt_name.MpHelp" text="{=20000001}Help!" />
+  <string id="str_taunt_name.MpSpot" text="{=20000002}Enemy Spotted!" />
+  <string id="str_taunt_name.MpThanks" text="{=20000003}Thanks!" />
+  <string id="str_taunt_name.MpSorry" text="{=20000004}Sorry!" />
+  <string id="str_taunt_name.MpAffirmative" text="{=20000005}Affirmative!" />
+  <string id="str_taunt_name.MpNegative" text="{=20000006}Negative!" />
+  <string id="str_taunt_name.MpRegroup" text="{=20000007}Regroup!" />
+  <string id="str_taunt_name.MpDefend" text="{=20000008}Defend!" />
+  <string id="str_taunt_name.MpAttack" text="{=20000009}Attack!" />
+  <string id="str_multiplayer_option.ServerName" text="{=OVcoYxj1}Server Name" />
+  <string id="str_multiplayer_option.GamePassword" text="{=3ZzxddkE}Game Password" />
+  <string id="str_multiplayer_option.AdminPassword" text="{=CJr1T7jh}Admin Password" />
+  <string id="str_multiplayer_option.WelcomeMessage" text="{=t2Oh6uty}Welcome Message" />
+  <string id="str_multiplayer_option.GameType" text="{=JPimShCw}Game Type" />
+  <string id="str_multiplayer_option.PremadeMatchGameMode" text="{=JPimShCw}Game Type" />
+  <string id="str_multiplayer_option.PremadeGameType" text="{=0ezfbORI}Premade Game Type" />
+  <string id="str_multiplayer_option.Map" text="{=w9m11T1y}Map" />
+  <string id="str_multiplayer_option.CultureTeam1" text="{=auDOtbza}Culture Team 1" />
+  <string id="str_multiplayer_option.CultureTeam2" text="{=V6BAHTnv}Culture Team 2" />
+  <string id="str_multiplayer_option.AddOfficialGameServerList" text="{=pnUSAxzf}Add Official Game Server List" />
+  <string id="str_multiplayer_option.EnableAntiCheat" text="{=IaaVNwwb}Enable BattlEye" />
+  <string id="str_multiplayer_option.UseRealisticBlocking" text="{=fJqJiJvl}Use Realistic Blocking" />
+  <string id="str_multiplayer_option.MaxNumberOfPlayers" text="{=zmlCRb1M}Max Number Of Players" />
+  <string id="str_multiplayer_option.MaxNumberOfPlayersForWarmup" text="{=sZxSeeXp}Numbers Of Players To End Warmup" />
+  <string id="str_multiplayer_option.MinNumberOfPlayersForMatchStart" text="{=bXIrqxKc}Min Number Of Players To Start Game" />
+  <string id="str_multiplayer_option.NumberOfBotsTeam1" text="{=qeSbaPWi}Number Of Bots Team 1" />
+  <string id="str_multiplayer_option.NumberOfBotsTeam2" text="{=L0lGQWt5}Number Of Bots Team 2" />
+  <string id="str_multiplayer_option.NumberOfBotsPerFormation" text="{=lauXoy6d}Number Of Bots Per Formation" />
+  <string id="str_multiplayer_option.FriendlyFireDamageMeleeSelfPercent" text="{=XQndveFG}Friendly Fire Melee Damage Self" />
+  <string id="str_multiplayer_option.FriendlyFireDamageMeleeFriendPercent" text="{=JW2nEe4X}Friendly Fire Melee Damage Friend" />
+  <string id="str_multiplayer_option.FriendlyFireDamageRangedSelfPercent" text="{=FgJpTBp1}Friendly Fire Ranged Damage Self" />
+  <string id="str_multiplayer_option.FriendlyFireDamageRangedFriendPercent" text="{=BFWD0pCE}Friendly Fire Ranged Damage Friend" />
+  <string id="str_multiplayer_option.SiegeTowerSpeedPercent" text="{=tvDuF1vU}Siege Tower Speed (percentage)" />
+  <string id="str_multiplayer_option.BatteringRamSpeedPercent" text="{=vqao3Z2N}Battering Ram Speed (percentage)" />
+  <string id="str_multiplayer_option.SpectatorCamera" text="{=UUKzc88q}Spectator Camera" />
+  <string id="str_multiplayer_option.ControlBlockDirection" text="{=tewykKdc}Control Block Direction" />
+  <string id="str_multiplayer_option.CombatSpeed" text="{=Pkw17hO0}Combat Speed" />
+  <string id="str_multiplayer_option.WarmupTimeLimit" text="{=c2tGH5II}Warmup Time Limit (minutes)" />
+  <string id="str_multiplayer_option.MapTimeLimit" text="{=4DcNDein}Map Time Limit (minutes)" />
+  <string id="str_multiplayer_option.RoundTotal" text="{=WnN8Ul7A}Amount of Rounds" />
+  <string id="str_multiplayer_option.RoundTimeLimit" text="{=lclQSt39}Round Time Limit (seconds)" />
+  <string id="str_multiplayer_option.RoundPreparationTimeLimit" text="{=0WHQKap4}Equipment Selection Time Limit (seconds)" />
+  <string id="str_multiplayer_option.FlagRemovalTime" text="{=1Ndyb5I1}Flag Removal Time (seconds)" />
+  <string id="str_multiplayer_option.TeamPointLimit" text="{=Q2EmU0TA}Team Point Limit" />
+  <string id="str_multiplayer_option.RespawnPeriod" text="{=8sG5bTtK}Respawn Period" />
+  <string id="str_multiplayer_option.RespawnPeriodTeam1" text="{=GoEo27il}Attackers Respawn Period" />
+  <string id="str_multiplayer_option.RespawnPeriodTeam2" text="{=wxzhtvZR}Defenders Respawn Period" />
+  <string id="str_multiplayer_option.UnlimitedGold" text="{=mwetB4R6}Unlimited Gold" />
+  <string id="str_multiplayer_option.GoldGainChangePercentageTeam1" text="{=IKn1YxU2}Gold Gain Percentage Attackers" />
+  <string id="str_multiplayer_option.GoldGainChangePercentageTeam2" text="{=jsqyGWGu}Gold Gain Percentage Defenders" />
+  <string id="str_multiplayer_option.MinScoreToWinMatch" text="{=SVeIOaab}Minimum Score To Win Match" />
+  <string id="str_multiplayer_option.MinScoreToWinDuel" text="{=7nLM1z2V}Minimum Score To Win Duel" />
+  <string id="str_multiplayer_option.RoundStartRespawnDuration" text="{=H7YWqwq6}Round Start Spawning Duration" />
+  <string id="str_multiplayer_option.AllowPollsToKickPlayers" text="{=aGTgzoqW}Allow Polls To Kick Players" />
+  <string id="str_multiplayer_option.AllowPollsToBanPlayers" text="{=1gU5rDws}Allow Polls To Ban Players" />
+  <string id="str_multiplayer_option.AllowPollsToChangeMaps" text="{=kVwwG63i}Allow Polls To Change Maps" />
+  <string id="str_multiplayer_option.PollAcceptThreshold" text="{=1GFrsDRm}Poll Accept Threshold" />
+  <string id="str_multiplayer_option.AutoTeamBalanceThreshold" text="{=lDPQa5gc}Auto Team Balance Threshold" />
+  <string id="str_multiplayer_option.AllowIndividualBanners" text="{=tAyw51tM}Allow Individual Banners" />
+  <string id="str_multiplayer_option.UseAnimationProgressDependentBlocking" text="{=kW4c2liv}Use Animation Progress Dependent Blocking" />
+  <string id="str_multiplayer_option.DisallowRangedWeapons" text="{=Gr994CTR}Disallow Ranged Weapons" />
+  <string id="str_multiplayer_option.ForceMinimumArmor" text="{=W3OXv9Tx}Force Minimum Armor" />
+  <string id="str_multiplayer_option.NumberofBotsPerFormation" text="{=43L45sjx}Number of Bots Per Formation" />
+  <string id="str_multiplayer_option.EnableMissionRecording" text="{=BBKp1Ajq}Enable Mission Recording" />
+  <string id="str_multiplayer_option.SingleSpawn" text="{=Suma3RVA}Single Spawn" />
+  <string id="str_game_mode" text="{=oGAzC0Ob}Game Mode" />
+  <string id="str_multiplayer_spectator_camera_type.LockToAnyAgent" text="{=w9Jf0FeQ}Lock To Any Agent" />
+  <string id="str_multiplayer_spectator_camera_type.LockToAnyPlayer" text="{=QIDj0u8w}Lock To Any Player" />
+  <string id="str_multiplayer_spectator_camera_type.LockToTeamMembers" text="{=F6WH1JaM}Lock To Team Members" />
+  <string id="str_multiplayer_spectator_camera_type.LockToTeamMembersView" text="{=1kCkzrpc}Lock To Team Members View" />
+  <string id="str_multiplayer_auto_team_balance_limit.Off" text="{=Ej6Gjmkc}Off" />
+  <string id="str_multiplayer_auto_team_balance_limit.Value" text="{=bwmlWKa2}Limit To {LIMIT_VALUE}" />
+  <string id="str_multiplayer_official_game_type_name.ClanMatch" text="{=YNkPy4ta}Clan Match" />
+  <string id="str_multiplayer_official_game_type_name.FreeForAll" text="{=BuLdsBpQ}Free For All" />
+  <string id="str_multiplayer_official_game_type_name.Duel" text="{=Svtb9MQv}Duel" />
+  <string id="str_multiplayer_official_game_type_name.TeamDeathmatch" text="{=U6h8eatq}Team Deathmatch" />
+  <string id="str_multiplayer_official_game_type_name.Siege" text="{=siegemultiplayergametype}Siege" />
+  <string id="str_multiplayer_official_game_type_name.Battle" text="{=R9DiQfax}Battle" />
+  <string id="str_multiplayer_official_game_type_name.Captain" text="{=captainasgame}Captain" />
+  <string id="str_multiplayer_official_game_type_name.Skirmish" text="{=VRdy76RQ}Skirmish" />
+  <string id="str_multiplayer_official_game_type_name.None" text="{=4NaOKslb}-" />
+  <string id="str_multiplayer_official_game_type_description.TeamDeathmatch" text="{=nUR7rs6y}Jump straight into the action in this medieval take on a classic PvP game mode. " />
+  <string id="str_multiplayer_official_game_type_description.Siege" text="{=I4wnvBGd}Experience the brutality of medieval sieges as either a defending or attacking force in this large-scale PvP game mode. Use an array of siege engines to drive back the enemy forces or to gain a foothold within the bailey as you attempt to defend or capture the castle keep." />
+  <string id="str_multiplayer_official_game_type_description.Battle" text="{=8K0DR83v}Work alongside your teammates in this fast-paced, tactical PvP game mode. Earn gold by killing enemies while attempting to break the enemy team's morale or destroy their forces completely." />
+  <string id="str_multiplayer_official_game_type_description.Captain" text="{=q8lsn0U6}Lead your own detachment of troops into battle in this team-based PvP game mode. Control the battlefield to demoralize the enemy team or annihilate their forces to emerge victorious." />
+  <string id="str_multiplayer_official_game_type_description.Skirmish" text="{=WfwkVjTA}Work alongside your teammates in this fast-paced, tactical PvP game mode. Manage your gold wisely to buy classes and respawns while attempting to break the enemy team's morale or destroy their forces completely." />
+  <string id="str_multiplayer_official_game_type_objective_info.TeamDeathmatch" text="{=jukzZmBb}Earn gold and points by killing enemies and assisting your teammates as you race against the opposing team to victory." />
+  <string id="str_multiplayer_official_game_type_objective_info.Siege" text="{=PiLml6Nl}Attackers hold the keep flag for 90 seconds before morale or time runs out. Capturing flags will increase morale.{newline}Defenders defend the castle until enemy morale runs out." />
+  <string id="str_multiplayer_official_game_type_objective_info.Battle" text="{=Zc2f5bhh}Kill all enemies or deplete the enemy team's morale or have the most morale when the round time expires." />
+  <string id="str_multiplayer_official_game_type_objective_info.Captain" text="{=Zc2f5bhh}Kill all enemies or deplete the enemy team's morale or have the most morale when the round time expires." />
+  <string id="str_multiplayer_official_game_type_objective_info.Skirmish" text="{=Zc2f5bhh}Kill all enemies or deplete the enemy team's morale or have the most morale when the round time expires." />
+  <string id="str_multiplayer_official_game_type_troops_info.TeamDeathmatch" text="{=4daqsVWG}Earn gold to buy higher tier respawns by assisting teammates and killing enemy troops." />
+  <string id="str_multiplayer_official_game_type_troops_info.Siege" text="{=n6N21Shz}Earn gold to buy higher tier respawns by assisting teammates, killing enemy troops and destroying siege engines." />
+  <string id="str_multiplayer_official_game_type_troops_info.Battle" text="{=kQh0O7gn}Choose your desired troop at the start of the round by using gold." />
+  <string id="str_multiplayer_official_game_type_troops_info.Captain" text="{=74tYdiOb}Select your troops wisely according to your team's needs. Troop counts are determined by troop strength." />
+  <string id="str_multiplayer_official_game_type_troops_info.Skirmish" text="{=YtSQB7rg}Choose your desired class at the start of the round and for the further respawns by using gold." />
+  <string id="str_multiplayer_official_game_type_explainer.TeamDeathmatch" text="{=xuo8gmaL}·   Buy respawns using gold{newline}·   Earn gold by killing enemies and assisting teammates{newline}·   Outkill the enemy team to win the game" />
+  <string id="str_multiplayer_official_game_type_explainer.Battle" text="{=ItmPmlWH}·   Buy one spawn using gold{newline}·   Hold control points on the map to deplete enemy morale{newline}·   Kill the entire enemy team or exhaust their morale to win" />
+  <string id="str_multiplayer_official_game_type_explainer.Captain" text="{=NdQZWHIy}·   Lead your own detachment of troops{newline}·   Hold control points on the map to deplete enemy morale{newline}·   Kill the entire enemy team or exhaust their morale to win" />
+  <string id="str_multiplayer_official_game_type_explainer.Siege" text="{=xoXWGYVI}·   Use various siege engines to attack or defend control points{newline}·   Spawn points advance as control points are captured{newline}·   Successfully assault and hold the keep flag or repel the enemy to win" />
+  <string id="str_multiplayer_official_game_type_explainer.Skirmish" text="{=RJEHDWmu}·   Buy limited respawns using gold{newline}·   Hold control points on the map to deplete enemy morale{newline}·   Kill the entire enemy team or exhaust their morale to win" />
+  <string id="str_multiplayer_official_game_type_explainer.Duel" text="{=9kEUK9iY}·   Choose your desired class from all available troop types{newline}·   Fight an opponent in single combat{newline}·   Defeat your opponent three times to win the duel and claim their bounty" />
+  <string id="str_multiplayer_official_game_type_player_info_for_versus" text="{=pa4yXyDa}{PLAYER_COUNT} vs {PLAYER_COUNT}" />
+  <string id="str_multiplayer_official_game_type_playtime_info_in_minutes" text="{=3ydKbDmI}{PLAY_TIME} minutes" />
+  <string id="str_multiplayer_official_game_type_rounds_info_for_best_of" text="{=jEh6EdF9}Best of {ROUND_COUNT}" />
+  <string id="str_multiplayer_game_stats_description.Skirmish" text="{=t1bNrw95}Skirmish Statistics" />
+  <string id="str_multiplayer_game_stats_description.Captain" text="{=5IR8g3YL}Captain Statistics" />
+  <string id="str_multiplayer_game_stats_description.Siege" text="{=LZmOy39a}Siege Statistics" />
+  <string id="str_multiplayer_game_stats_description.TeamDeathmatch" text="{=bdljU1ig}Team Deathmatch Statistics" />
+  <string id="str_multiplayer_game_stats_description.Duel" text="{=yekjRMT1}Duel Statistics" />
+  <string id="str_multiplayer_no_region_query_title" text="{=m5UdbzHr}No Region Selected" />
+  <string id="str_multiplayer_no_region_query_description" text="{=1zveWQFg}Go to matchmaking tab and select a region in order to queue for a battle" />
+  <string id="str_multiplayer_region_name_none" text="{=koX9okuG}None" />
+  <string id="str_multiplayer_region_name.EU" text="{=1fFnE9Vk}Europe" />
+  <string id="str_multiplayer_region_name.USE" text="{=GYc0Dcbn}North America East" />
+  <string id="str_multiplayer_region_name.USW" text="{=gUQI0PLa}North America West" />
+  <string id="str_multiplayer_region_name.CN" text="{=tp6B2QGw}East Asia" />
+  <string id="str_multiplayer_region_connection_quality.Unknown" text="{=cK5DE88I}N/A" />
+  <string id="str_multiplayer_region_connection_quality.Poor" text="{=poorConnection}Poor" />
+  <string id="str_multiplayer_region_connection_quality.Average" text="{=averageConnection}Average" />
+  <string id="str_multiplayer_region_connection_quality.Good" text="{=goodConnection}Good" />
+  <string id="str_multiplayer_quick_play" text="{=UPH3hI5P}Matchmaking" />
+  <string id="str_multiplayer_ranked" text="{=5odwu8qB}Ranked" />
+  <string id="str_multiplayer_custom_game" text="{=HL3EONMe}Custom Game" />
+  <string id="str_multiplayer_custom_server_list" text="{=Xj2FCkQl}Custom Server List" />
+  <string id="str_multiplayer_lobby_state.AtLobby" text="{=a2xfNmqa}At Lobby" />
+  <string id="str_multiplayer_lobby_state.InMultiplayerGame" text="{=iDMBz55E}In Multiplayer Game" />
+  <string id="str_multiplayer_lobby_state.NotFound" text="{=MnM0L4AV}Not In Multiplayer" />
+  <string id="str_multiplayer_lobby_state.InParty" text="{=QQX6oNbn}In a Party" />
+  <string id="str_multiplayer_badges" text="{=tYuSNFuD}Badges" />
+  <string id="str_multiplayer_badge_conditions" text="{=NE7PmH7n}Conditions" />
+  <string id="str_youve_been_removed" text="{=c1zu1b3M}You've been removed from the party." />
+  <string id="str_left_party" text="{=tAb8KAQb}You've left the party." />
+  <string id="str_party_disbanded" text="{=M97xvRgO}Party has been disbanded." />
+  <string id="str_kill_feed_message" text="{=UHIZLFBn}Killed {TROOP_NAME}" />
+  <string id="str_death_feed_message" text="{=aZVxHbwH}Killed by {TROOP_NAME}" />
+  <string id="str_assist_feed_message" text="{=Qhl77Oki}Assisted to kill {TROOP_NAME}" />
+  <string id="str_damage_delivered_message" text="{=qNga6uPw}Damage Delivered" />
+  <string id="str_projectile_damage" text="{=bAPQFzcW}Projectile Damage" />
+  <string id="str_gold_gain_first_assist" text="{=MS795wWa}First Assist" />
+  <string id="str_gold_gain_second_assist" text="{=BJMPBcDn}Second Assist" />
+  <string id="str_gold_gain_third_assist" text="{=M1RCJ9DM}Third Assist" />
+  <string id="str_gold_gain_first_ranged_kill" text="{=pHaRIFa8}First Ranged Kill" />
+  <string id="str_gold_gain_first_melee_kill" text="{=k4cMrbVf}First Melee Kill" />
+  <string id="str_gold_gain_fifth_kill" text="{=ycCmfxhJ}Fifth Kill" />
+  <string id="str_gold_gain_tenth_kill" text="{=WsbShtMt}Tenth Kill" />
+  <string id="str_gold_gain_default_kill" text="{=Ayrvf5yp}Kill" />
+  <string id="str_gold_gain_default_assist" text="{=cJ5emwNF}Assist" />
+  <string id="str_gold_gain_objective_completed" text="{=MnvK3eK2}Objective Completed" />
+  <string id="str_gold_gain_objective_destroyed" text="{=cSui4APH}Objective Destroyed" />
+  <string id="str_gold_gain_perk_bonus" text="{=Ke7eAS5B}Perk Bonus" />
+  <string id="str_multiplayer_game_type.FreeForAll" text="{=BuLdsBpQ}Free For All" />
+  <string id="str_multiplayer_game_type.TeamDeathmatch" text="{=U6h8eatq}Team Deathmatch" />
+  <string id="str_multiplayer_game_type.Duel" text="{=Svtb9MQv}Duel" />
+  <string id="str_multiplayer_game_type.Siege" text="{=siegemultiplayergametype}Siege" />
+  <string id="str_multiplayer_game_type.Battle" text="{=R9DiQfax}Battle" />
+  <string id="str_multiplayer_game_type.Captain" text="{=G1HobbjU}Captain Battle" />
+  <string id="str_multiplayer_game_type.Skirmish" text="{=TDy1GZHv}Skirmish Battle" />
+  <string id="str_multiplayer_chat_channel.All" text="{=yfa7tpbK}All" />
+  <string id="str_multiplayer_chat_channel.Team" text="{=bjcixGIE}Team" />
+  <string id="str_multiplayer_chat_channel.Party" text="{=mpparty}Party" />
+  <string id="str_multiplayer_chat_channel.System" text="{=dRlTmdKR}System" />
+  <string id="str_multiplayer_chat_channel.Private" text="{=HLhT64IP}Private" />
+  <string id="str_multiplayer_scene_name.mp_duel_001" text="{=uqzA4Q4a}Imperial Villa" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_007" text="{=vM7CssWE}Ruins of Jawwali" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_008" text="{=WxM16s2Y}Druimmor Forest" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_009" text="{=F6l8hFEA}Cliffs of Akkalat" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_010" text="{=KtRCqiVO}Pendaric" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_011" text="{=8EsaVlSX}Isle of Deriad" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_011_rw" text="{=8EsaVlSX}Isle of Deriad" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_011_rw_winter" text="{=t8lAbdCk}Isle of Deriad (Winter)" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_013" text="{=aALNy4Es}Streets of Syllianon" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_018" text="{=YntJTd09}Ebereth Hillfort" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_018_w" text="{=YntJTd09}Ebereth Hillfort" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_008_skin" text="{=IBAaKSbp}Port at Omor" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_010" text="{=fJHsYtKu}Echerion" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_010_winter" text="{=fJHsYtKu}Echerion" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_011s" text="{=t8lAbdCk}Isle of Deriad (Winter)" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_003_skinc" text="{=4jv2sW4U}Trading Post" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_002f" text="{=YvK6gI6q}Town Outskirts" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_007" text="{=Pzvtcbk6}Xauna" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_007_winter" text="{=Pzvtcbk6}Xauna" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_009" text="{=Ri6KKhfy}Zendyar" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_014" text="{=ldIXGrVi}Urikskalaar" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_map_020" text="{=uCrIJ8D4}Sharis" />
+  <string id="str_multiplayer_scene_name.mp_tdm_map_001" text="{=8bnYsGu6}Harbour of Ovsk (Winter)" />
+  <string id="str_multiplayer_scene_name.mp_tdm_map_001_spring" text="{=sXAATSgd}Harbour of Ovsk" />
+  <string id="str_multiplayer_scene_name.mp_tdm_map_004" text="{=jpeq1gF0}Nord Town" />
+  <string id="str_multiplayer_scene_name.mp_tdm_map_004a" text="{=jpeq1gF0}Nord Town" />
+  <string id="str_multiplayer_scene_name.mp_tdm_map_004a_w" text="{=jpeq1gF0}Nord Town" />
+  <string id="str_multiplayer_scene_name.mp_tdm_map_003" text="{=d1ogH1v1}Tsagaan Castle" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_004_rs" text="{=20000010}Tubilis Castle" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_005" text="{=YRabuUqx}Baravenos Encirclement" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_005_winter" text="{=YRabuUqx}Baravenos Encirclement" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_003" text="{=xhnV76OL}Skala Landing" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_007_battania" text="{=O5uDFhwu}Castle of fen Altai" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_007_battania_w" text="{=O5uDFhwu}Castle of fen Altai" />
+  <string id="str_multiplayer_scene_name.mp_duel_mode_map_004" text="{=180DfbQU}Proving Grounds" />
+  <string id="str_multiplayer_scene_name.mp_duel_mode_map_004_w" text="{=180DfbQU}Proving Grounds" />
+  <string id="str_multiplayer_scene_name.mp_duel_mode_map_004_night" text="{=mtlNshCB}Proving Grounds (Night)" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_009" text="{=4SWcDUJC}Ayzar Stronghold" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_012" text="{=4b2hRWiI}Domogtul Castle" />
+  <string id="str_multiplayer_scene_name.mp_battle_map_001" text="{=HyV2D9qZ}Cypegos Blockade" />
+  <string id="str_multiplayer_scene_name.mp_battle_map_002" text="{=xgr9rlx3}Osrac Insurrection" />
+  <string id="str_multiplayer_scene_name.mp_battle_map_003" text="{=TSoS5HJZ}Skolder Hideout" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_012_w" text="{=4b2hRWiI}Domogtul Castle" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_MLYX_003" text="{=20000011}New Skala Landing" />
+  <string id="str_multiplayer_scene_name.crpg_siege_acre" text="{=20000012}Acre" />
+  <string id="str_multiplayer_scene_name.crpg_siege_frederiksborg" text="{=20000013}Frederiksborg" />
+  <string id="str_multiplayer_scene_name.crpg_siege_hades" text="{=20000014}Hades" />
+  <string id="str_multiplayer_scene_name.crpg_siege_motteandbailey" text="{=20000015}Motteandbailey" />
+  <string id="str_multiplayer_scene_name.crpg_siege_neuenburg" text="{=20000016}Neuenburg" />
+  <string id="str_multiplayer_scene_name.crpg_siege_hailescastle" text="{=20000017}Hailes Castle" />
+  <string id="str_multiplayer_scene_name.crpg_siege_jameyyedcastle" text="{=20000018}Jameyyed Castle" />
+  <string id="str_multiplayer_scene_name.crpg_siege_stronghold" text="{=20000019}Stronghold" />
+  <string id="str_multiplayer_scene_name.crpg_siege_talmberg" text="{=20000020}Talmberg" />
+  <string id="str_multiplayer_scene_name.crpg_siege_silverskalitz" text="{=20000021}Silverskalitz" />
+  <string id="str_multiplayer_muted_message" text="{=sisK3HPI}You are muted." />
+  <string id="str_multiplayer_report_explanation" text="{=VecPWliR}Excessive reporting of a player may result in a ban." />
+  <string id="str_multiplayer_report_reason.0" text="{=ztGHtRNf}Cheating" />
+  <string id="str_multiplayer_report_reason.1" text="{=6usZYAVm}Communication Abuse" />
+	<string id="str_multiplayer_report_reason.2" text="{=pMmmfvkN}Inappropriate Play" />
+  <string id="str_multiplayer_report_reason.3" text="{=bgwo3QpS}Offensive Content" />
+  <string id="str_multiplayer_notifications_badge_earned" text="{=3EbTklMi}You earned a new badge: {BADGE_NAME}." />
+  <string id="str_multiplayer_notifications_friend_request" text="{=UEmw71kN}{REQUESTER} sent you a friend request." />
+  <string id="str_multiplayer_notifications_clan_announcement" text="{=4ompPd8W}Your clan shared a new announcement." />
+  <string id="str_multiplayer_notifications_update_required" text="{=yRSjcxBv}A new patch is released. Please update your client." />
+</strings>
