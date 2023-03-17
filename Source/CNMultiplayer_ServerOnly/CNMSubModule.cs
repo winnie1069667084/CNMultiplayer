@@ -40,7 +40,6 @@ namespace CNMultiplayer
             this.setup();
             Debug.Print("** CHAT COMMANDS BY MENTALROB LOADED **", 0, Debug.DebugColor.Green);
             ChatCommands.CommandManager cm = new ChatCommands.CommandManager();
-            Harmony.DEBUG = true;
         }
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
         {

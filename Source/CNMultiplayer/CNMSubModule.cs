@@ -1,5 +1,8 @@
 ﻿using HarmonyLib;
+using TaleWorlds.Core;
+using TaleWorlds.ModuleManager;
 using TaleWorlds.MountAndBlade;
+using TaleWorlds.MountAndBlade.Diamond.MultiplayerBadges;
 
 namespace CNMultiplayer
 {
@@ -9,7 +12,6 @@ namespace CNMultiplayer
         {
             base.OnSubModuleLoad();
             Harmony harmony = new Harmony("CNMultiplayer");
-            Harmony.DEBUG = true;
             harmony.PatchAll();
             //待学习调整：*本地化路径修改、*地图投票界面、WelcomeMessage、领军超8人炸服
         }

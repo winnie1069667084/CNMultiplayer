@@ -10,11 +10,13 @@ using TaleWorlds.MountAndBlade;
 
 namespace Patches
 {
-    [HarmonyPatch(typeof(MultiplayerStrikeMagnitudeModel), "ComputeRawDamage")]//调整伤害系数
+    [HarmonyPatch(typeof(MultiplayerStrikeMagnitudeModel), "ComputeRawDamage")]//调整伤害系数（仅限攻城模式）
     internal class Patch_ComputeRawDamage
     {
         public static bool Prefix(ref float __result, MultiplayerStrikeMagnitudeModel __instance, DamageTypes damageType, float magnitude, float armorEffectiveness, float absorbedDamageRatio)
         {
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
+            { return true; }
             float bluntDamageFactorByDamageType = __instance.GetBluntDamageFactorByDamageType(damageType);
             float num = 65f / (65f + armorEffectiveness);
             float num2 = magnitude * num;
@@ -47,6 +49,8 @@ namespace Patches
     {
         public static bool Prefix(ref float __result, DamageTypes damageType)
         {
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
+            { return true; }
             float result = 0f;
             switch (damageType)
             {

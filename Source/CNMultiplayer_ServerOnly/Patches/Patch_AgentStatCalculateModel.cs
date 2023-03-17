@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using HarmonyLib;
+using Mono.Cecil.Cil;
 
 namespace Patches
 {
-    [HarmonyPatch(typeof(AgentStatCalculateModel), "SetAiRelatedProperties")]//强化近战AI
+    [HarmonyPatch(typeof(AgentStatCalculateModel), "SetAiRelatedProperties")]//强化近战AI（仅限攻城模式）
     internal class Patch_SetAiRelatedProperties
     {
         public static bool Prefix(Agent agent, ref AgentDrivenProperties agentDrivenProperties, WeaponComponentData equippedItem, WeaponComponentData secondaryItem, AgentStatCalculateModel __instance)
         {
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
+            { return true; }
             MethodInfo method = typeof(AgentStatCalculateModel).GetMethod("GetMeleeSkill", BindingFlags.Instance | BindingFlags.NonPublic);
             MethodInfo method1 = typeof(AgentStatCalculateModel).GetMethod("CalculateAILevel", BindingFlags.Instance | BindingFlags.NonPublic);
             SkillObject skill = (equippedItem == null) ? DefaultSkills.Athletics : equippedItem.RelevantSkill;
