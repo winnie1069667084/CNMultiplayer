@@ -1,8 +1,5 @@
 ﻿using HarmonyLib;
-using TaleWorlds.Core;
-using TaleWorlds.ModuleManager;
 using TaleWorlds.MountAndBlade;
-using TaleWorlds.MountAndBlade.Diamond.MultiplayerBadges;
 
 namespace CNMultiplayer
 {
