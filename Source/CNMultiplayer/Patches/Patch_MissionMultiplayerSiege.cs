@@ -54,7 +54,7 @@ namespace Patches
                 {
                     num += -1;
                 }
-                foreach (FlagCapturePoint item in __instance.AllCapturePoints.Where((FlagCapturePoint flag) => flag != ____masterFlag && !flag.IsDeactivated && !flag.IsContested && __instance.GetFlagOwnerTeam(flag).Side == BattleSideEnum.Attacker))
+                foreach (FlagCapturePoint item in __instance.AllCapturePoints.Where((FlagCapturePoint flag) => flag != ____masterFlag && !flag.IsDeactivated && __instance.GetFlagOwnerTeam(flag).Side == BattleSideEnum.Attacker))
                 {
                     ____capturePointRemainingMoraleGains[item.FlagIndex]--;
                     num++;
@@ -73,8 +73,8 @@ namespace Patches
                         }
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 50);//移除旗帜的金币数(防守方)
-                            list.Add(new KeyValuePair<ushort, int>(512, 50));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 60);//移除旗帜的金币数(防守方)
+                            list.Add(new KeyValuePair<ushort, int>(512, 60));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -182,7 +182,7 @@ namespace Patches
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, 0.6f);//旗帜升降速度
+                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, 0.5f);//旗帜升降速度
                     }
                     bool flag;
                     flagCapturePoint.OnAfterTick(agent != null, out flag);

@@ -5653,6 +5653,18 @@
                        slot="Item3"
                        item="mp_khuzait_glaive" />			   
       </Perk>
+      <Perk game_mode="Captain"
+            name="{=WapSyVbv}Full Barding"
+            description="{=qwnHqTdO}Upgrades your horses armor."
+            icon="PerkFullBarding"
+            perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_khuzait_horse_war" />	
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_studded_steppe_barding" />
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
             name="{=hchDYAKL}Lancer"
@@ -8543,7 +8555,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=lWl3W0do}Padded Armor"
-            description="{=jTJa8tBY}You are wearing extra layers of padding below your armor.{newline} {newline}+10 armor{newline}-20% Blunt damage taken"
+            description="{=cap00019}You are wearing extra layers of padding below your armor.{newline} {newline}+5 armor{newline}-20% Blunt damage taken"
             icon="PerkArmorUpgrade"
             perk_list="1">
         <Effect type="DamageTaken"
