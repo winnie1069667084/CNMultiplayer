@@ -73,8 +73,8 @@ namespace Patches
                         }
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 75);//移除旗帜的金币数(防守方)
-                            list.Add(new KeyValuePair<ushort, int>(512, 75));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 50);//移除旗帜的金币数(防守方)
+                            list.Add(new KeyValuePair<ushort, int>(512, 50));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -134,7 +134,7 @@ namespace Patches
                     float num = float.MaxValue;
                     int count1 = 0, count2 = 0;
                     List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
-                    AgentProximityMap.ProximityMapSearchStruct proximityMapSearchStruct = AgentProximityMap.BeginSearch(Mission.Current, flagCapturePoint.Position.AsVec2, 8f, false);
+                    AgentProximityMap.ProximityMapSearchStruct proximityMapSearchStruct = AgentProximityMap.BeginSearch(Mission.Current, flagCapturePoint.Position.AsVec2, 6f, false);
                     while (proximityMapSearchStruct.LastFoundAgent != null)
                     {
                         Agent lastFoundAgent = proximityMapSearchStruct.LastFoundAgent;
@@ -162,7 +162,7 @@ namespace Patches
                             if (lastFoundAgent.Team.IsDefender && !lastFoundAgent.IsAIControlled)
                                 count2++;
                             float num2 = lastFoundAgent.Position.DistanceSquared(flagCapturePoint.Position);
-                            if (num2 <= 64f && num2 < num)
+                            if (num2 <= 36f && num2 < num)
                             {
                                 agent = lastFoundAgent;
                                 num = num2;
@@ -182,7 +182,7 @@ namespace Patches
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, 0.5f);//旗帜升降速度
+                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, 0.6f);//旗帜升降速度
                     }
                     bool flag;
                     flagCapturePoint.OnAfterTick(agent != null, out flag);
