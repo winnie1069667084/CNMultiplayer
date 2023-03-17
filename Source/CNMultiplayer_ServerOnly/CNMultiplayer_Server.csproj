@@ -21,14 +21,16 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>..\..\bin\Win64_Shipping_Server\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -220,6 +222,7 @@
     <Compile Include="Patches\ChatCommands\Patches\PatchChatBox.cs" />
     <Compile Include="Patches\ChatCommands\Patches\PatchMaxNumberOfPlayers.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />
+    <Compile Include="Patches\Patch_Module.cs" />
     <Compile Include="Patches\Patch_MultiplayerWarmupComponent.cs" />
     <Compile Include="Patches\Patch_SiegeEntity.cs" />
     <Compile Include="Patches\Patch_MissionMultiplayerSiege.cs" />

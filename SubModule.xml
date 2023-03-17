@@ -47,9 +47,6 @@
 				<GameType value = "MultiplayerGame"/>
 			</IncludedGameTypes>
     	</XmlNode>
-		<XmlNode>                
-			<XmlName id="CraftingTemplates" path="crafting_templates"/>
-		</XmlNode>
     	<XmlNode>
     		<XmlName id="Monsters" path="monsters"/>
     	</XmlNode>
@@ -65,11 +62,5 @@
 		<XmlNode>                
 	    	<XmlName id="GameText" path="global_strings"/>
 		</XmlNode>
-		<!--<XmlNode>                
-			<XmlName id="Items" path="items"/>
-		</XmlNode-->
-        <XmlNode>                
-			<XmlName id="CraftingPieces" path="crafting_pieces"/>
-		</XmlNode>		
     </Xmls>
 </Module>
