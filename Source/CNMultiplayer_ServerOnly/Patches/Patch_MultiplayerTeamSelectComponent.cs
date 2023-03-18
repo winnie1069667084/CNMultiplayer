@@ -21,7 +21,10 @@ namespace CNMultiplayer
     {
         public static bool Prefix(MultiplayerTeamSelectComponent __instance)
         {
-            __instance.BalanceTeams();
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Captain")
+            {
+                __instance.BalanceTeams();
+            }
             return true;
         }
     }
@@ -31,11 +34,15 @@ namespace CNMultiplayer
     {
         public static bool Prefix(MultiplayerTeamSelectComponent __instance)
         {
+
             if (MultiplayerOptions.OptionType.AutoTeamBalanceThreshold.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != 0)
             {
+                var sc = new Patch_BalanceTeams();
+                int iscore = sc.GetScoreForTeam(Mission.Current.AttackerTeam);
+                int jscore = sc.GetScoreForTeam(Mission.Current.DefenderTeam);
                 int i = __instance.GetPlayerCountForTeam(Mission.Current.AttackerTeam);
                 int j = __instance.GetPlayerCountForTeam(Mission.Current.DefenderTeam);
-                while (i > j + 1 + MultiplayerTeamSelectComponent.GetAutoTeamBalanceDifference((AutoTeamBalanceLimits)MultiplayerOptions.OptionType.AutoTeamBalanceThreshold.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)))
+                while (i > j + 1 + MultiplayerTeamSelectComponent.GetAutoTeamBalanceDifference((AutoTeamBalanceLimits)MultiplayerOptions.OptionType.AutoTeamBalanceThreshold.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)) && iscore >= jscore)
                 {
                     MissionPeer missionPeer = null;
                     foreach (NetworkCommunicator networkCommunicator in GameNetwork.NetworkPeers)
@@ -51,12 +58,12 @@ namespace CNMultiplayer
                     }
                     __instance.ChangeTeamServer(missionPeer.GetNetworkPeer(), Mission.Current.DefenderTeam);
                     GameNetwork.BeginBroadcastModuleEvent();
-                    GameNetwork.WriteMessage(new ServerMessage("[服务器]: 因为双方过大的人数差距，进攻方玩家 " + missionPeer.Name.ToString() + " 被自动平衡！", false));
+                    GameNetwork.WriteMessage(new ServerMessage("[服务器]: 进攻方玩家 " + missionPeer.Name + " 被自动平衡！", false));
                     GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
                     i--;
                     j++;
                 }
-                while (j > i + 1 + MultiplayerTeamSelectComponent.GetAutoTeamBalanceDifference((AutoTeamBalanceLimits)MultiplayerOptions.OptionType.AutoTeamBalanceThreshold.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)))
+                while (j > i + 1 + MultiplayerTeamSelectComponent.GetAutoTeamBalanceDifference((AutoTeamBalanceLimits)MultiplayerOptions.OptionType.AutoTeamBalanceThreshold.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)) && jscore>= iscore)
                 {
                     MissionPeer missionPeer2 = null;
                     foreach (NetworkCommunicator networkCommunicator2 in GameNetwork.NetworkPeers)
@@ -72,13 +79,27 @@ namespace CNMultiplayer
                     }
                     __instance.ChangeTeamServer(missionPeer2.GetNetworkPeer(), Mission.Current.AttackerTeam);
                     GameNetwork.BeginBroadcastModuleEvent();
-                    GameNetwork.WriteMessage(new ServerMessage("[服务器]: 因为双方过大的人数差距，防守方玩家 " + missionPeer2.Name.ToString() + " 被自动平衡！", false));
+                    GameNetwork.WriteMessage(new ServerMessage("[服务器]: 防守方玩家 " + missionPeer2.Name + " 被自动平衡！", false));
                     GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
                     i++;
                     j--;
                 }
             }
             return false;
+        }
+
+        public int GetScoreForTeam(Team team)
+        {
+            int num = 0;
+            foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
+            {
+                MissionPeer component = networkPeer.GetComponent<MissionPeer>();
+                if (component?.Team != null && component.Team == team)
+                {
+                    num += component.Score;
+                }
+            }
+            return num;
         }
     }
 }
