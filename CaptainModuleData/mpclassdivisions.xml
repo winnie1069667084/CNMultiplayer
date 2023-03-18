@@ -1127,6 +1127,29 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>-->
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000148}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000149}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_visored_helmet_over_mail_coif"
+                       target="Player" />	
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_white_coat_over_mail"
+                       target="Player" />
+      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_vlandia"
