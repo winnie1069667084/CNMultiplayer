@@ -4,6 +4,10 @@
     <Version value="v1.1.1.7"/>
 	<DefaultModule value="true"/>
 	<ModuleCategory value="MultiplayerOptional"/>
+	<DependedModules>
+    	<DependedModule Id="Native" />
+    	<DependedModule Id="Multiplayer" />
+  	</DependedModules>
 	<SubModules>
     	<SubModule>
       		<Name value="CNMultiplayer" />
