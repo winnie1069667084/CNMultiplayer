@@ -302,7 +302,15 @@
   <string id="str_facegen_skin.kid_face" text="{=Sbna6UGb}Kid Face" />
   <string id="str_facegen_skin.height" text="{=WLztEbPL}Height" />
   <string id="str_facegen_skin.age" text="{=jaaQijQs}Age" />
-
+  <string id="str_taunt_name.MpHelp" text="{=20000001}Help!" />
+  <string id="str_taunt_name.MpSpot" text="{=20000002}Enemy Spotted!" />
+  <string id="str_taunt_name.MpThanks" text="{=20000003}Thanks!" />
+  <string id="str_taunt_name.MpSorry" text="{=20000004}Sorry!" />
+  <string id="str_taunt_name.MpAffirmative" text="{=20000005}Affirmative!" />
+  <string id="str_taunt_name.MpNegative" text="{=20000006}Negative!" />
+  <string id="str_taunt_name.MpRegroup" text="{=20000007}Regroup!" />
+  <string id="str_taunt_name.MpDefend" text="{=20000008}Defend!" />
+  <string id="str_taunt_name.MpAttack" text="{=20000009}Attack!" />
   <string id="str_multiplayer_option.ServerName" text="{=OVcoYxj1}Server Name" />
   <string id="str_multiplayer_option.GamePassword" text="{=3ZzxddkE}Game Password" />
   <string id="str_multiplayer_option.AdminPassword" text="{=CJr1T7jh}Admin Password" />
@@ -485,6 +493,7 @@
   <string id="str_multiplayer_scene_name.mp_tdm_map_004a" text="{=jpeq1gF0}Nord Town" />
   <string id="str_multiplayer_scene_name.mp_tdm_map_004a_w" text="{=jpeq1gF0}Nord Town" />
   <string id="str_multiplayer_scene_name.mp_tdm_map_003" text="{=d1ogH1v1}Tsagaan Castle" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_004_rs" text="{=20000010}Tubilis Castle" />
   <string id="str_multiplayer_scene_name.mp_siege_map_005" text="{=YRabuUqx}Baravenos Encirclement" />
   <string id="str_multiplayer_scene_name.mp_siege_map_005_winter" text="{=YRabuUqx}Baravenos Encirclement" />
   <string id="str_multiplayer_scene_name.mp_siege_map_003" text="{=xhnV76OL}Skala Landing" />
@@ -499,26 +508,6 @@
   <string id="str_multiplayer_scene_name.mp_battle_map_002" text="{=xgr9rlx3}Osrac Insurrection" />
   <string id="str_multiplayer_scene_name.mp_battle_map_003" text="{=TSoS5HJZ}Skolder Hideout" />
   <string id="str_multiplayer_scene_name.mp_siege_map_012_w" text="{=4b2hRWiI}Domogtul Castle" />
-  <string id="str_multiplayer_muted_message" text="{=sisK3HPI}You are muted." />
-  <string id="str_multiplayer_report_explanation" text="{=VecPWliR}Excessive reporting of a player may result in a ban." />
-  <string id="str_multiplayer_report_reason.0" text="{=ztGHtRNf}Cheating" />
-  <string id="str_multiplayer_report_reason.1" text="{=6usZYAVm}Communication Abuse" />
-	<string id="str_multiplayer_report_reason.2" text="{=pMmmfvkN}Inappropriate Play" />
-  <string id="str_multiplayer_report_reason.3" text="{=bgwo3QpS}Offensive Content" />
-  <string id="str_multiplayer_notifications_badge_earned" text="{=3EbTklMi}You earned a new badge: {BADGE_NAME}." />
-  <string id="str_multiplayer_notifications_friend_request" text="{=UEmw71kN}{REQUESTER} sent you a friend request." />
-  <string id="str_multiplayer_notifications_clan_announcement" text="{=4ompPd8W}Your clan shared a new announcement." />
-  <string id="str_multiplayer_notifications_update_required" text="{=yRSjcxBv}A new patch is released. Please update your client." />
-  <string id="str_taunt_name.MpHelp" text="{=20000001}Help!" />
-  <string id="str_taunt_name.MpSpot" text="{=20000002}Enemy Spotted!" />
-  <string id="str_taunt_name.MpThanks" text="{=20000003}Thanks!" />
-  <string id="str_taunt_name.MpSorry" text="{=20000004}Sorry!" />
-  <string id="str_taunt_name.MpAffirmative" text="{=20000005}Affirmative!" />
-  <string id="str_taunt_name.MpNegative" text="{=20000006}Negative!" />
-  <string id="str_taunt_name.MpRegroup" text="{=20000007}Regroup!" />
-  <string id="str_taunt_name.MpDefend" text="{=20000008}Defend!" />
-  <string id="str_taunt_name.MpAttack" text="{=20000009}Attack!" />
-  <string id="str_multiplayer_scene_name.mp_siege_map_004_rs" text="{=20000010}Tubilis Castle" />
   <string id="str_multiplayer_scene_name.mp_siege_map_MLYX_003" text="{=20000011}New Skala Landing" />
   <string id="str_multiplayer_scene_name.crpg_siege_acre" text="{=20000012}Acre" />
   <string id="str_multiplayer_scene_name.crpg_siege_frederiksborg" text="{=20000013}Frederiksborg" />
@@ -530,4 +519,14 @@
   <string id="str_multiplayer_scene_name.crpg_siege_stronghold" text="{=20000019}Stronghold" />
   <string id="str_multiplayer_scene_name.crpg_siege_talmberg" text="{=20000020}Talmberg" />
   <string id="str_multiplayer_scene_name.crpg_siege_silverskalitz" text="{=20000021}Silverskalitz" />
+  <string id="str_multiplayer_muted_message" text="{=sisK3HPI}You are muted." />
+  <string id="str_multiplayer_report_explanation" text="{=VecPWliR}Excessive reporting of a player may result in a ban." />
+  <string id="str_multiplayer_report_reason.0" text="{=ztGHtRNf}Cheating" />
+  <string id="str_multiplayer_report_reason.1" text="{=6usZYAVm}Communication Abuse" />
+	<string id="str_multiplayer_report_reason.2" text="{=pMmmfvkN}Inappropriate Play" />
+  <string id="str_multiplayer_report_reason.3" text="{=bgwo3QpS}Offensive Content" />
+  <string id="str_multiplayer_notifications_badge_earned" text="{=3EbTklMi}You earned a new badge: {BADGE_NAME}." />
+  <string id="str_multiplayer_notifications_friend_request" text="{=UEmw71kN}{REQUESTER} sent you a friend request." />
+  <string id="str_multiplayer_notifications_clan_announcement" text="{=4ompPd8W}Your clan shared a new announcement." />
+  <string id="str_multiplayer_notifications_update_required" text="{=yRSjcxBv}A new patch is released. Please update your client." />
 </strings>

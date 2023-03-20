@@ -51,7 +51,6 @@
   <string id="str_options_type.MasterVolume" text="{=YDccwh2x}Master Volume" />
   <string id="str_options_type.MusicVolume" text="{=s533kEjf}Music Volume" />
   <string id="str_options_type.VoiceChatVolume" text="{=Lm5Wj9ty}Voice Chat Volume" />
-  <string id="str_options_type.VoiceOverVolume" text="{=iuQk8map}Voice-over Volume" />
   <string id="str_options_type.SoundVolume" text="{=x7kYOUfi}Effects Volume" />
   <string id="str_options_type.SoundDevice" text="{=DiK2cKUi}Sound Device" />
   <string id="str_options_type.MaxSimultaneousSoundEventCount" text="{=ZtxvyzjY}Sound Channels" />
@@ -404,7 +403,6 @@
   <string id="str_options_description.VoiceLanguage" text="{=3y9Q1m1n}Your preferred voice over language." />
   <string id="str_options_description.MasterVolume" text="{=9qZw55vR}Master volume level." />
   <string id="str_options_description.MusicVolume" text="{=P7E3rS3m}Music volume level." />
-  <string id="str_options_description.VoiceOverVolume" text="{=vvKU6wTA}Voice-over volume level." />
   <string id="str_options_description.VoiceChatVolume" text="{=nLhH8JhZ}Voice chat volume level." />
   <string id="str_options_description.SoundVolume" text="{=oI1gktYa}Sound effects volume level." />
   <string id="str_options_description.SoundDevice" text="{=ea8kNj32}Your preferred sound output device." />
@@ -478,7 +476,7 @@
   <string id="str_options_description.SelectedMonitor" text="{=Gl2S6WEW}Sets the monitor that the game window will be displayed." />
   <string id="str_options_description.SelectedAdapter" text="{=KjZas5Xs}Sets the display adapter that the game will run on." />
   <string id="str_options_description.VSync" text="{=3oUbmqJY}Synchronizes the game to the monitor's refresh rate. Eliminates tearing artifacts." />
-  <string id="str_options_description.GraphicsMode" text="{=9scrSz4i}Sets the graphics mode.{newline}Performance: Runs the game at 60 frames per second with dynamic resolution, lower quality settings and less units on battles.{newline}Fidelity: Runs the game at 30 frames per second at the native resolution, higher quality settings and more units on battles." />
+  <string id="str_options_description.GraphicsMode" text="{=9scrSz4i}Sets the graphics mode.{newline}Performance: Runs the game at 60 frames per second with dynamic resolution, lower quality settings and less units on battles.{newline}Fidelity: Runs the game at 30 frames per second at native 4K resolution, higher quality settings and more units on battles." />
   <string id="str_options_description.OneTwentyHzMode" text="{=QpUkFQnj}Locks the framerate to 40 Hz on the Fidelity Mode and unlocks it on the Performance Mode." />
   <string id="str_options_description.DynamicResolution" text="{=bfxMfZrk}Allow the render resolution to be scaled down to maintain the targeted frame rate.{newline}{newline}Uses AMD's &quot;FidelityFX Super Resolution 1.0&quot;{newline}{newline}Does not affect UI Quality" />
   <string id="str_options_description.DynamicResolutionTarget" text="{=OeJ53VmM}Target framerate to be maintained by the &quot;Dynamic Resolution Scaling&quot; setting.{newline}{newline}It is advised that you set it to the lowest framerate you're comfortable playing with. Setting a value that's too high will cause unnecessary resolution drops." />
@@ -622,10 +620,6 @@
   <string id="str_key_name.CombatHotKeyCategory_ControllerEquipDropWeapon4" text="{=3P7eDKEY}Equip Item 4" />
   <string id="str_key_name.CombatHotKeyCategory_CheerBarkSelectFirstCategory" text="{=PmbKYDON}Cheer" />
   <string id="str_key_name.CombatHotKeyCategory_CheerBarkSelectSecondCategory" text="{=5Xoilj6r}Shout" />
-  <string id="str_key_name.FaceGenHotkeyCategory_ControllerZoomIn" text="{=yV64UCaW}Zoom In" />
-  <string id="str_key_name.FaceGenHotkeyCategory_ControllerZoomOut" text="{=929oYf3G}Zoom Out" />
-  <string id="str_key_name.FaceGenHotkeyCategory_CameraAxisX" text="{=GzICf27a}Rotate" />
-  <string id="str_key_name.FaceGenHotkeyCategory_CameraAxisY" text="{=BKeTUf9V}Move Camera" />
   <string id="str_key_name.ScoreboardHotKeyCategory_ShowMouse" text="{=XtiGbj0W}Show Cursor" />
   <string id="str_key_name.ScoreboardHotKeyCategory_HoldShow" text="{=BfebVHWv}Show Scoreboard" />
   <string id="str_key_name.GenericCampaignPanelsGameKeyCategory_BannerWindow" text="{=k3LajvfJ}Banner Editor" />
@@ -918,18 +912,6 @@
   <string id="str_game_key_text.f10" text="{=LjNnWa7R}F10" />
   <string id="str_game_key_text.f11" text="{=7MU008BT}F11" />
   <string id="str_game_key_text.f12" text="{=zUXxshZK}F12" />
-  <string id="str_game_key_text.f13" text="{=OlajLkbl}F13" />
-  <string id="str_game_key_text.f14" text="{=rKvjSSri}F14" />
-  <string id="str_game_key_text.f15" text="{=wygub2sh}F15" />
-  <string id="str_game_key_text.f16" text="{=Q1kAeH3b}F16" />
-  <string id="str_game_key_text.f17" text="{=y5FGfFdf}F17" />
-  <string id="str_game_key_text.f18" text="{=ETxm7IBL}F18" />
-  <string id="str_game_key_text.f19" text="{=kKg8oyGu}F19" />
-  <string id="str_game_key_text.f20" text="{=rxTqpENB}F20" />
-  <string id="str_game_key_text.f21" text="{=swdKFkfu}F21" />
-  <string id="str_game_key_text.f22" text="{=aVcBbuKJ}F22" />
-  <string id="str_game_key_text.f23" text="{=Wr2DX9Go}F23" />
-  <string id="str_game_key_text.f24" text="{=fpYTcwqI}F24" />
   <string id="str_game_key_text.space" text="{=PksJtzwJ}Space" />
   <string id="str_game_key_text.escape" text="{=C7zwur4k}Escape" />
   <string id="str_game_key_text.enter" text="{=dkLG4JC4}Enter" />

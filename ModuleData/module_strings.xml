@@ -34,7 +34,6 @@
   <string id="str_initial_menu_option.Options" text="{=NqarFr4P}Options" />
   <string id="str_initial_menu_option.Credits" text="{=ODQmOrIw}Credits" />
   <string id="str_initial_menu_option.Exit" text="{=3CsACce8}Exit" />
-  <string id="str_main_menu" text="{=a0TiMLJ4}Main Menu" />
   <string id="str_abandon_army" text="{=929Lxhde}You will lose {INFLUENCE_COST} influence if you abandon the army." />
   <string id="str_five_stack_shortcut_upgrade_units" text="{=fivestackupgradeunits}Hold [{KEY_NAME}] to do x5" />
   <string id="str_five_stack_shortcut_recruit_units" text="{=fivestackrecruitunits}Hold [{KEY_NAME}] to do x5" />
@@ -47,9 +46,6 @@
   <string id="str_entire_stack_shortcut_take_items" text="{=entirestacktakeitems}Hold [{KEY_NAME}] to do all" />
   <string id="str_entire_stack_shortcut_transfer_troops" text="{=entirestacktransfertroops}Hold [{KEY_NAME}] to do all" />
   <string id="str_hotkey_with_hint" text="{=CyTa1Z5d}{TEXT} [{HOTKEY}]" />
-  <string id="str_YEAR_years" text="{=FuxkL78G}{YEAR} {?YEAR_IS_PLURAL}years{?}year{\?}" />
-  <string id="str_SEASON_seasons" text="{=ATsEQh7m}{SEASON} {?SEASON_IS_PLURAL}seasons{?}season{\?}" />
-  <string id="str_statistics" text="{=GmU1to3Y}Statistics" />
   <string id="str_click_to_exit" text="{=k9OYeP9y}Click to close" />
   <string id="str_click_to_exit_console" text="{=GHdrCWpF}Press {CONSOLE_KEY_NAME} to close" />
   <string id="str_default" text="{=fMSYE6Ii}Default" />
@@ -68,12 +64,12 @@
   <string id="str_DAY_days_capital" text="{=B1j4F6i7}{?DAY_IS_PLURAL}Days{?}Day{\?}" />
   <string id="str_missing_info_indicator" text="{=keqS2dGa}???" />
   <string id="str_you_have_encountered_settlement_to_raid_with_resisting_on_peace" text="{=1AcoIQVl}You have arrived at {SETTLEMENT} to raid it. Some of the residents have gathered to resist you. Raiding this village will cause a war with the {KINGDOM}." />
-  <string id="str_you_have_encountered_settlement_to_force_supplies_with_resisting_on_peace" text="{=OBXNbvkK}As you attempt to force the villagers to give you goods, some of the residents gather to resist you. Fighting them will cause a war with the {KINGDOM}." />
+  <string id="str_you_have_encountered_settlement_to_force_supplies_with_resisting_on_peace" text="{=OBXNbvkK}As you attempt to force the villagers to give you supplies, some of the residents gather to resist you. Fighting them will cause a war with the {KINGDOM}." />
   <string id="str_you_have_encountered_settlement_to_force_volunteers_with_resisting_on_peace" text="{=ySlVPZyF}As you attempt to force the notables to give you recruits, some of the residents gather to resist you. Fighting them will cause a war with the {KINGDOM}." />
   <string id="str_you_have_encountered_settlement_to_raid_no_resisting_on_peace" text="{=ZxcnmaXi}You have arrived at {SETTLEMENT} to raid it. You do not meet any resistance. Raiding this village will cause a war with the {KINGDOM}." />
   <string id="str_you_have_encountered_settlement_to_raid_with_resisting_on_war" text="{=aUNYlvbN}You have arrived at {SETTLEMENT} to raid it. Some of the residents have gathered to resist you." />
   <string id="str_you_have_encountered_enemy_party_while_raiding" text="{=7zaMwF08}While you were raiding {SETTLEMENT}, {PARTY} came to aid the village. You decided to..." />
-  <string id="str_you_have_encountered_settlement_to_force_supplies_with_resisting_on_war" text="{=6Bk1YjS4}As you attempt to force the villagers to give you goods, some of the residents gather to resist you." />
+  <string id="str_you_have_encountered_settlement_to_force_supplies_with_resisting_on_war" text="{=6Bk1YjS4}As you attempt to force the villagers to give you supplies, some of the residents gather to resist you." />
   <string id="str_you_have_encountered_settlement_to_force_volunteers_with_resisting_on_war" text="{=gfQmYDRq}As you attempt to force the notables to give you recruits, some of the residents gather to resist you." />
   <string id="str_you_have_encountered_settlement_to_siege" text="{=agkgu85j}You have arrived at {SETTLEMENT} to lay siege to it." />
   <string id="str_you_have_encountered_settlement_to_help_defenders" text="{=rGNrtXSx}You have arrived at {SETTLEMENT} to help defend the settlement from attackers." />
@@ -93,7 +89,7 @@
   <string id="str_you_are_trapped_by_enemies" text="{=dMKyWmJ6}You are trapped by enemies." />
   <string id="str_there_are_bandits_inside" text="{=MFLAvq4Z}There are bandits inside this place. Do you want to attack them?" />
   <string id="str_there_are_rebels_inside" text="{=OdFPHvtE}Rebels are attacking this settlement. Do you want to interfere?" />
-  <string id="str_last_seen_encyclopedia_entry" text="{=yjXoftYs}Last seen {?IS_IN_SETTLEMENT}at{?}near{\?} {SETTLEMENT}." />
+  <string id="str_last_seen_encyclopedia_entry" text="{=yjXoftYs}Last seen {?IS_IN_SETTLEMENT}at{?}near{\?} {SETTLEMENT} {?IS_TODAY}today{?}{DAY_VALUE} {?IS_MORE_THAN_ONE_DAY}days{?}day{\?} ago{\?}." />
   <string id="str_bound_settlement_encyclopedia" text="{=59PSpyu8}Bound settlement: {SETTLEMENT_LINK}" />
   <string id="str_bound_settlement" text="{=4KXvyxrK}Bound settlement" />
   <string id="str_trade_bound_settlement" text="{=2noOKM5N}Trade bound settlement" />
@@ -242,7 +238,6 @@
   <string id="str_faction_name_invalid_characters" text="{=NarcUcZA}Faction name has invalid characters." />
   <string id="str_kingdom_name_invalid_already_exist" text="{=LpVaZbRS}There is already another kingdom with this name." />
   <string id="str_staying_at_settlement" text="{=xKa6TwEX}Staying at {SETTLEMENT_NAME}" />
-  <string id="str_alley_leader_at_settlement" text="{=87vr9BHq}Leading an alley at {SETTLEMENT_NAME}" />
   <string id="str_governing_at_settlement" text="{=XNNvdkul}Governing at {SETTLEMENT_NAME}" />
   <string id="str_prisoner_at_settlement" text="{=ZhiB1EOM}Prisoner at {SETTLEMENT_NAME}" />
   <string id="str_on_prisoner_taken" text="{=Y20AQIvo}{PRISONER.NAME} has been captured by {CAPTOR_NAME}!" />
@@ -773,8 +768,6 @@
   <string id="role.Personal" text="{=UxAl9iyi}Personal" />
   <string id="role.Captain" text="{=captainasleader}Captain" />
   <string id="str_character_role_disabled_tooltip" text="{=pSz4xSqO}Hero's {SKILL_NAME} skill needs to be {MIN_SKILL_AMOUNT} or higher." />
-  <string id="str_hero_needs_trait_tooltip" text="{=SLNKWIj5}Hero's {TRAIT_NAME} trait needs to be {MAX_TRAIT_AMOUNT} or lower." />
-  <string id="str_hero_is_already_alley_leader" text="{=BdFaNDom}This hero is already an alley leader." />
   <string id="str_my_lord" text="{=icmyseoo}My lord" />
   <string id="str_my_lady" text="{=3FUaZk5A}My lady" />
   <string id="str_he_is_currently_at_town_name" text="{=Pia30xtc}{?ASKED_LORD.GENDER}She{?}He{\?} is currently at {TOWN_NAME}." />
@@ -1233,7 +1226,7 @@
   <!--Calculating-->
   <string id="str_trait_name_calculating.0" text="{=K2G3XJwZ}Hotheaded" />
   <string id="str_trait_name_calculating.1" text="{=g0gDsalr}Impulsive" />
-  <string id="str_trait_name_calculating.3" text="{=calculatinglevel3trait}Calculating" />
+  <string id="str_trait_name_calculating.3" text="{=5sMBbn7y}Calculating" />
   <string id="str_trait_name_calculating.4" text="{=mwegfVKr}Cerebral" />
   <string id="str_trait_tooltip" text="{=IiyN5krb}{TRAIT_NAME} ({TRAIT} {TRAIT_VALUE}){newline}{TRAIT_DESCRIPTION}" />
   <string id="str_trait_description_tooltip" text="{=gwKPbSVE}{TRAIT}{newline}{TRAIT_DESCRIPTION}" />
@@ -1412,7 +1405,7 @@
   <string id="str_party_over_limit_troops" text="{=rBieLPA7}You're over your troops limit.{newline}You will temporarily keep your troops but after some time they will quickly abandon your party. You will also slow down.{newline}Are you sure?" />
   <string id="str_party_over_limit_prisoners" text="{=IF7zS5ia}You're over your prisoners limit.{newline}You will temporarily keep your prisoners but after some time they will quickly escape your party. You will also slow down.{newline}Are you sure?" />
   <string id="str_other_party_over_limit_troops" text="{=9B5kxWb8}Other party is over their troops limit.{newline}They will temporarily keep their troops but after some time they will quickly abandon their party.{newline}Are you sure?" />
-  <string id="str_dismiss" text="{=XnsAbUE3}Dismiss" />
+  <string id="str_dismiss" text="{=50000001}Please update the MOD" />
   <string id="str_ransom_broker" text="{=W2WXkiAh}Ransom Broker" />
   <string id="str_dispatched" text="{=yaxwYglT}Dispatched" />
   <string id="str_garrisons" text="{=mJE0o9Zi}Garrisons" />
@@ -1422,11 +1415,9 @@
   <string id="str_item_tag_name" text="{=w758X31N}Item" />
   <string id="str_castle_text_1" text="{=F8g1TzoX}You are outside {SETTLEMENT_NAME}. You see the banner of {LORD.LINK} flying over the castle gate." />
   <string id="str_castle_text_yours" text="{=vn7A8aXV}You are outside {SETTLEMENT_NAME}. Your banner flies over the castle gate." />
-  <string id="str_gate_down_enemy_text_castle" text="{=8oaVYIlk}You are outside of {SETTLEMENT_NAME}. You cannot enter because the castle belongs to the enemy." />
-  <string id="str_gate_down_enemy_text_castle_low_loyalty" text="{=kMAD20Ny}You are outside of {SETTLEMENT_NAME}. You cannot enter because the castle belongs to the enemy. Usually when you approach an enemy city the roads are deserted. This time, however, you pass some onlookers, and even hear the occasional cheer. You suspect that few among the population are loyal to the {FACTION_INFORMAL_NAME}, and that the militia is unlikely to take up arms in the castle's defense." />
+  <string id="str_gate_down_enemy_text_castle" text="{=8oaVYIlk}You are outside {SETTLEMENT_NAME}. You cannot enter because the castle belongs to the enemy." />
   <string id="str_gate_down_criminal_text" text="{=ZqWOb1jM}You are outside the town of {SETTLEMENT_NAME}. You cannot enter because you are wanted by the {FACTION_TERM}." />
   <string id="str_settlement_not_allowed_text" text="{=gdraqMso}You are outside of {SETTLEMENT_NAME}. You are not allowed inside." />
-  <string id="str_settlement_not_allowed_text_low_loyalty" text="{=D2KdSGGJ}You are outside of {SETTLEMENT_NAME}. You are not allowed inside. Usually when you approach an enemy city the roads are deserted. This time, however, you pass some onlookers, and even hear the occasional cheer. You suspect that few among the population are loyal to the {FACTION_INFORMAL_NAME}, and that the militia is unlikely to take up arms in the city's defense." />
   <string id="str_you_spotted_an_ambush" text="{=qgHblOq4}You spotted an ambush." />
   <string id="str_nearby_villages" text="{=iUTXqFmm} and the nearby {?VILLAGE_COUNT}villages{?}village{\?}s of {VILLAGE_NAMES}" />
   <string id="str_come_across_battle" text="{=Txbga7js}You come across a battle between {ATTACKER} and {DEFENDER}" />
@@ -1491,7 +1482,7 @@
   <string id="str_pledge_notification_title" text="{=FuYivUV1}On {DAY_OF_YEAR}, {YEAR}, you pledged allegiance to {RULER.NAME}, hoping that {?RULER.GENDER}she{?}he{\?} will lead the fight to {?PLAYER_WANTS_RESTORE}restore{?}defeat{\?} the Empire." />
   <string id="str_supported_faction_defeated" text="{=36hbMBhb}On {DAY_OF_YEAR}, {YEAR}, the {FORMAL_NAME} was destroyed. It will not fulfil its destiny to {?PLAYER_WANTS_RESTORE}restore{?}destroy{\?} the Empire as you had hoped." />
   <string id="str_become_king_empire" text="{=Jw4oiIM4}On {DAY_OF_YEAR}, {YEAR}, {KING_NAME} was annointed {?IS_KING_MALE}Emperor{?}Empress{\?} of Calradia" />
-  <string id="str_become_king_nonempire" text="{=7b60SOvI}On {DAY_OF_YEAR}, {YEAR}, {KING_NAME} was crowned as {TITLE_NAME}." />
+  <string id="str_become_king_nonempire" text="{=7b60SOvI}On {DAY_OF_YEAR}, {YEAR}, {KING_NAME} was crowned as {TITLE_NAME} of the {FORMAL_KINGDOM_NAME}." />
   <string id="str_empire_conspiracy_begins_proempire" text="{=5lT70YJY}On {DAY_OF_YEAR}, {YEAR}, you heard rumors of a secret pact being forged between the rival imperial factions so that they can combine their forces against the enemies of the empire." />
   <string id="str_empire_conspiracy_begins_antiempire" text="{=0rsySqR6}On {DAY_OF_YEAR}, {YEAR}, you heard of a conspiracy working in the shadows to forge the enemies of the Empire into an alliance." />
   <string id="str_empire_conspiracy_supports_proempire" text="{=MWatMKoP}On {DAY_OF_YEAR}, {YEAR}, the secret pact between the imperial factions was revealed, as the armies of the former rivals took the field together." />
@@ -1531,20 +1522,13 @@
   <string id="str_village_raid_villagers_are_nonresistant" text="{=jSXE0Gbj}The villagers here are few and frightened, and they quickly scatter and run before you. The village is at your mercy." />
   <string id="str_villigers_grab_their_tools" text="{=R4eS65oX}Some of the angry villagers grab their tools and prepare to resist you. It looks like you'll have a fight on your hands if you continue." />
   <string id="str_villiger_recently_satisfied_demands" text="{=b7U3Gvuu}Some of the angry villagers say that they have recently satisfied your demands. It looks like you'll have a fight on your hands if you continue." />
-  <!--Common battle notification strings-->
-  <string id="str_allied_reinforcements_arrived" text="{=QlaGZAHq}New reinforcements have arrived!" />
-  <string id="str_enemy_reinforcements_arrived" text="{=goJ91547}Enemy reinfocements have arrived!" />
-  <string id="str_allied_troops_fall_back_to_keep_message" text="{=2AhTA1ba}Our troops are falling back to the castle." />
-  <string id="str_enemy_troops_fall_back_to_keep_message" text="{=T8w5VRAy}Enemy troops are falling back to the castle." />
-  <!--Sally out (ambush) mission notification strings-->
-  <string id="str_sally_out_besieger_objective_message" text="{=LAvXPBbs}Defend our siege engines!" />
-  <string id="str_sally_out_besieged_objective_message" text="{=aECQrlkM}Destroy enemy siege engines!" />
-  <string id="str_sally_out_enemy_becoming_strong_message" text="{=mPtUKcI3}The enemy is organizing. Consider a tactical retreat soon." />
-  <string id="str_sally_out_allied_troops_tactical_retreat_message" text="{=pb4KfhxC}Your captains are ordering a tactical retreat!" />
-  <string id="str_sally_out_allied_pullback_or_take_command_message" text="{=3gkb0YCn}Pull back now or take command of your forces!" />
-  <string id="str_sally_out_enemy_siege_engines_destroyed_message" text="{=mxuirhkW}You have destroyed all enemy siege engines! It is time to retreat to the castle." />
-  <string id="str_sally_out_allied_siege_engines_destroyed_message" text="{=tb6e1wjQ}Enemy destroyed all of our siege engines!" />
-  <!--*-->
+  <string id="str_new_reinforcements_have_arrived_for_ally_side" text="{=QlaGZAHq}New reinforcements have arrived!" />
+  <string id="str_new_reinforcements_have_arrived_for_enemy_side" text="{=bw9HPIwa}New reinforcements have arrived for enemy side!" />
+  <string id="str_besieger_sally_out_objective" text="{=AGXqmCuO}Prevent enemies from destroying our siege engines!" />
+  <string id="str_besieged_sally_out_objective" text="{=JzBQY5I6}Destroy the enemy siege engines!" />
+  <string id="str_besieger_becoming_strong" text="{=KsfgKbl1}The enemy is organizing. Retreat to the castle, if they become too strong!" />
+  <string id="str_besieged_siege_engines_destroyed_message" text="{=34SYOOUa}You have destroyed all enemy engines! It is time to retreat to the castle." />
+  <string id="str_besieger_siege_engines_destroyed_message" text="{=tb6e1wjQ}Enemy destroyed all of our siege engines!" />
   <string id="str_battle_result_score_sort_button.0" text="{=Ayrvf5yp}Kill" />
   <string id="str_battle_result_score_sort_button.1" text="{=uvjOVy5P}Dead" />
   <string id="str_battle_result_score_sort_button.2" text="{=bJ5SzaXp}Wounded" />
@@ -1801,7 +1785,7 @@
   <string id="str_inventory_filter_all" text="{=yfa7tpbK}All" />
   <string id="str_inventory_filter_armors" text="{=ahiBhAqU}Armor" />
   <string id="str_inventory_filter_shields_ranged" text="{=FxoVjLvl}Shields&amp;Ranged" />
-  <string id="str_inventory_filter_mounts" text="{=c4Pmtkle}Mounts&amp;Saddles" />
+  <string id="str_inventory_filter_mounts" text="{=GbWWelfl}Horses&amp;Harness" />
   <string id="str_inventory_filter_other" text="{=JflqTj4T}Misc." />
   <string id="str_inventory_filter_weapons" text="{=IvrBQHRp}Melee Weapons" />
   <string id="str_inventory_take_all" text="{=F5UPr9jh}Take All" />
@@ -1822,7 +1806,7 @@
   <!--Banner Edditor Hints-->
   <string id="str_quest" text="{=Vc9Mx6Jb}Quest" />
   <string id="str_inprogress" text="{=PVUeymMR}In Progress" />
-  <string id="str_merchant_name" text="{=U7etPQA2}{FIRSTNAME} the {JOB_NAME}" />
+  <string id="str_merchant_name" text="{=U7etPQA2}{HERO.FIRSTNAME} the {JOB_NAME}" />
   <!--Male only-->
   <string id="str_robbery_threat.1" text="{=J7DnK8Kv}Today's not your lucky day, friend. How about you hand over your silver? Be a real shame to have to cut anyone's throat.[if:convo_mocking_revenge]" />
   <string id="str_robbery_threat.2" text="{=Pc0zpaGa}Aye, what have we here? There's a tax for passage in these parts, traveler, paid either in coin or in blood.[if:convo_bared_teeth]" />
@@ -1833,20 +1817,15 @@
   <string id="str_robbery_threat.6" text="{=SdcpdfaV}Hey - you. What you got in your bags? What are you carrying?[if:convo_bared_teeth]" />
   <string id="str_robbery_threat.forest_bandits_1" text="{=KC5AZohd}Greetings, traveler. Welcome to our forest. We're going to have to collect a small toll.[rf:convo_mocking_revenge]" />
   <string id="str_robbery_threat.forest_bandits_2" text="{=1Zq8mzzJ}Well now. Let's see what sort of fly has stumbled into our web.[rf:convo_mocking_revenge]" />
-  <!-- Halt! Hand over your silver, or we'll feather you with arrows like a great stuffed goose. This is a recorded line that does not have the complete set added yet-->
   <string id="str_robbery_threat.sea_raiders_1" text="{=VpKIzJxz}Well there, traveller. We've just made landfall in these lands, hoping for a bit of luck with the raiding and pillaging, and aren't you a sight for sore eyes?[rf:convo_mocking_revenge]" />
-  <string id="str_robbery_threat.sea_raiders_2" text="{=OqCodBZJ}Stop there you dog! Show us what you've got!" />
-  <!-- Stop there, you! Now, the lads and I are on a bit of plundering venture, and we're going to need you to add your bit to our pile -->
+  <string id="str_robbery_threat.sea_raiders_1" text="{=OqCodBZJ}Stop there you dog! Show us what you've got!" />
   <string id="str_robbery_threat.desert_bandits_1" text="{=aJXhsjmT}Greetings, traveller. Unless you wish your bones to be left in the sand to be gnawed upon by jackals, give us what we want." />
   <string id="str_robbery_threat.desert_bandits_2" text="{=QA8Gm9PY}A hot day, is it not? Don't tire yourself fighting. Give us what we want and we'll leave.[rf:convo_mocking_revenge]" />
-  <!-- Stop! We are the lords of the wastelands, and you must pay for your passage or face our wrath. -->
   <string id="str_robbery_threat.steppe_bandits_1" text="{=k8ocninL}Stop there - easy now. The great eternal sky has given these lands to us. No one passes through here without our permission." />
   <string id="str_robbery_threat.steppe_bandits_2" text="{=MHJCuM3N}Halt! Your foreign feet on this sacred land offend our ancestors. What are we going to do about that?[rf:convo_mocking_revenge]" />
-  <!-- Stop there. These lands belong to us, not to any false khan or foreign king, and we expect payment from those who trespass upon them-->
   <string id="str_robbery_threat.mountain_bandits_1" text="{=m2YKBbdI}Hello there, little lost sheep. We are wolves of the mountains, and we would like a moment of your time...[rf:convo_mocking_revenge]" />
   <string id="str_robbery_threat.mountain_bandits_2" text="{=btil6Rdb}What have we here? Looks like the mountain spirits have answered our prayers, and granted us success in the hunt." />
   <string id="str_robbery_threat.mountain_bandits_3" text="{=6dNTZdPf}Stop there, in the name of the free men of the mountain! Now, what have you got for us?" />
-  <!-- Stop there, in the name of the free men of the mountain! Now, what have you got for us? -->
   <string id="str_robbery_pay_agreement.1" text="{=t6xdCj43}Oh, indeed we can, indeed we can. Provided you have a fat purse and are ready to lighten it, of course.[ib:hip][rf:convo_bemused]" />
   <string id="str_robbery_pay_agreement.2" text="{=uCikaIoq}Splendid. See, my lads and I, we're not cruel men. A bit greedy though, that can't be denied, so do be generous.[ib:hip][rf:convo_bemused]" />
   <string id="str_robbery_pay_agreement.3" text="{=cRMgjRMP}Good, good. I much prefer a straight-up deal to rummaging through your gut afterward to see what you might have hid there.[ib:hip][rf:convo_bemused]" />
@@ -1887,7 +1866,7 @@
   <string id="str_robbery_start_fight.6" text="{=bPzyoTEF}You'll regret that answer.[ib:aggressive][if:convo_insulted]" />
   <string id="str_robbery_start_fight.forest_bandits_1" text="{=FLrzc1uk}Ah, I'm afraid we'll have to cut your throat then - on principle, of course. For trespassing." />
   <string id="str_robbery_start_fight.forest_bandits_2" text="{=TgtdcMGS}A fly that wiggles and struggles a bit - we can handle that.." />
-  <string id="str_robbery_start_fight.sea_raiders_1" text="{=3fAm8FaM}So be it... As my father says, a journey's not worthy of the name if you don't get to kill anyone." />
+  <string id="str_robbery_start_fight.sea_raiders_1" text="{=3fAm8FaM}So be it... As my father says, a journey's not worthy of the name if you don't to kill anyone." />
   <string id="str_robbery_start_fight.sea_raiders_2" text="{=MpDMaBE9}Defy us, will you? We'll drink from your skull!" />
   <string id="str_robbery_start_fight.desert_bandits_1" text="{=xZxbFuDI}The jackals will feed well tonight, then." />
   <string id="str_robbery_start_fight.desert_bandits_2" text="{=asHzEWnG}We shall stain the sands with your blood, then." />
@@ -1986,7 +1965,6 @@
   <string id="str_formation_ai_behavior_text.BehaviorRetakeCastleKeyPosition" text="{=gA5fByM2}{TROOP_NAMES_BEGIN}{?IS_PLURAL} and {?}{\?}{TROOP_NAMES_END} are trying to retake {#IS_LEFT}{#}right wall{#}walls on multiple sides{\#}{?IS_MIDDLE}middle wall{?}{\?}{?IS_RIGHT}left wall{?}{\?}." />
   <string id="str_formation_ai_behavior_text.BehaviorRetreat" text="{=Q2JYjFQl}{TROOP_NAMES_BEGIN}{?IS_PLURAL} and {?}{\?}{TROOP_NAMES_END} are retreating." />
   <string id="str_formation_ai_behavior_text.BehaviorRetreatToKeep" text="{=29bsCzkn}{TROOP_NAMES_BEGIN}{?IS_PLURAL} and {?}{\?}{TROOP_NAMES_END} are retreating to safety." />
-  <string id="str_formation_ai_behavior_text.BehaviorRetreatToCastle" text="{=29bsCzkn}{TROOP_NAMES_BEGIN}{?IS_PLURAL} and {?}{\?}{TROOP_NAMES_END} are retreating to safety." />
   <string id="str_formation_ai_behavior_text.BehaviorSallyOut" text="{=PAa618xe}{TROOP_NAMES_BEGIN}{?IS_PLURAL} and {?}{\?}{TROOP_NAMES_END} are sallying out." />
   <string id="str_formation_ai_behavior_text.BehaviorScreenedSkirmish" text="{=3wS4uOvU}{TROOP_NAMES_BEGIN}{?IS_PLURAL} and {?}{\?}{TROOP_NAMES_END} are skirmishing from behind." />
   <string id="str_formation_ai_behavior_text.BehaviorShootFromCastleWalls" text="{=iCirZbD8}{TROOP_NAMES_BEGIN}{?IS_PLURAL} and {?}{\?}{TROOP_NAMES_END} are shooting from the castle walls." />
@@ -2059,7 +2037,6 @@
   <string id="str_formation_ai_sergeant_instruction_behavior_text.BehaviorRetakeCastleKeyPosition" text="{=b0Mv6mZy}Retake castle position!" />
   <string id="str_formation_ai_sergeant_instruction_behavior_text.BehaviorRetreat" text="{=VbeHEAsa}Retreat" />
   <string id="str_formation_ai_sergeant_instruction_behavior_text.BehaviorRetreatToKeep" text="{=VbeHEAsa}Retreat" />
-  <string id="str_formation_ai_sergeant_instruction_behavior_text.BehaviorRetreatToCastle" text="{=VbeHEAsa}Retreat" />
   <string id="str_formation_ai_sergeant_instruction_behavior_text.BehaviorSallyOut" text="{=1cd6u0qn}Open the gates and sally out!" />
   <string id="str_formation_ai_sergeant_instruction_behavior_text.BehaviorScreenedSkirmish" text="{=vw1bbcww}Skirmish behind ally {AI_SIDE} {CLASS}" />
   <string id="str_formation_ai_sergeant_instruction_behavior_text.BehaviorShootFromCastleWalls" text="{=cqI6P8fr}Shoot from castle walls" />
@@ -2202,7 +2179,6 @@
   <string id="str_settlement_morale_rebellious_prosperity" text="{=KZAQHSa2}Yet the prosperity is clearly not benefiting everyone equally. People seem angry, complaining endlessly about new rural migrants, rising prices, and those who are profiting more than others." />
   <string id="str_settlement_morale_rebellious_average" text="{=6bex2HUl}Though it seems most people are managing to get by, many seem angry, and you overhear a few passers-by muttering that their patience is giving out. You sense something may be stirring." />
   <string id="str_settlement_morale_rebellious_adversity" text="{=bzrOHiS8}People openly curse the authorities, as though they feel they have nothing to lose." />
-  <string id="str_settlement_rebellious_state" text="{=NkbszXv6}Settlement is rebelling." />
   <string id="str_encyclopedia_empty_list_error" text="{=VSZGbSEO}No matching items." />
   <string id="str_trade_rumors_text_buy" text="{=z3AvJZMt}Can buy at {SETTLEMENT_NAME} for: {BUY_PRICE}" />
   <string id="str_trade_rumors_text_sell" text="{=KcQiDE6b}Can sell at {SETTLEMENT_NAME} for: {SELL_PRICE}" />
@@ -2406,8 +2382,95 @@
   <string id="str_clan_party_leader_roles_and_effects" text="{=Myb3WrB9}Party Leader Roles &amp; Effects" />
   <string id="str_clan_auto_recruitment_hint" text="{=kZ7gLqMz}If auto recruitment is enabled, the garrison will recruit troops from notables in the town center and nearby villages. The costs will be paid by the settlement owner." />
   <string id="str_clan_in_army_hint" text="{=NKYem1X0}This party is in {ARMY_LEADER}{.o} army." />
+  <string id="str_campaign_tutorial_title.UpgradingTroops" text="{=GhVXQrYF}Upgrading Troops" />
+  <string id="str_campaign_tutorial_description.UpgradingTroopsStep1" text="{=UxacCAuS}Some of your soldiers now have enough experience for an upgrade.{newline}{newline}This will be indicated by a small indicator over the party screen button.{newline}{newline}To review and upgrade your troops click on this button." />
+  <string id="str_campaign_tutorial_description.UpgradingTroopsStep1_controller" text="{=fQ2MAgD4}Some of your soldiers now have enough experience for an upgrade.{newline}{newline}This will be indicated by a small indicator over the party screen button.{newline}{newline}To review and upgrade your troops press {CONSOLE_ACTION_KEY} while the cursor is on this button." />
+  <string id="str_campaign_tutorial_description.UpgradingTroopsStep2" text="{=pJR9zz06}Troops that are ready to upgrade are marked with a special icon.{newline}{newline}Some troops may have two possible upgrade paths." />
+  <string id="str_campaign_tutorial_title.BuyingFood" text="{=dLXZaEI1}Buying Foods" />
+  <string id="str_campaign_tutorial_description.BuyingFoodStep1" text="{=vdEoBkpr}You must maintain food supplies at all times. If you run out of food, your party will lose morale. Your troops may desert you because of low morale.{newline}{newline}You can see your food reserve on the info bar. Hover over it to see how much food your party consumes each day. Since your party needs food, go to marketplace now to purchase some." />
+  <string id="str_campaign_tutorial_description.BuyingFoodStep2" text="{=QVChn4mG}Food items are also trade goods. You can find trade goods easily with the &quot;Miscellaneous&quot; filter." />
+  <string id="str_campaign_tutorial_description.BuyingFoodStep3" text="{=iOLa5rjZ}Grain is usually the cheapest food you can buy.{newline}{newline}Other types of food may grant various bonuses when consumed.{newline}{newline}Buy some food now." />
+  <string id="str_campaign_tutorial_title.ChoosingPerkUpgrades" text="{=yrlPHYpa}Choosing Perk Upgrades" />
+  <string id="str_campaign_tutorial_description.ChoosingPerkUpgradesStep1" text="{=bZOVbBRG}When your skill points reach a required threshold, one or more perks will become available.{newline}{newline}This will be notified by a small indicator over the character screen button.{newline}{newline}Click on the character button to view available perk choices." />
+  <string id="str_campaign_tutorial_description.ChoosingPerkUpgradesStep1_controller" text="{=TZZaO7iI}When your skill points reach a required threshold, one or more perks will become available.{newline}{newline}This will be notified by a small indicator over the character screen button.{newline}{newline}Press {CONSOLE_ACTION_KEY} while the cursor is on the character button to view available perk choices." />
+  <string id="str_campaign_tutorial_description.ChoosingPerkUpgradesStep2" text="{=uWEUYE1m}You can choose an available perk by clicking on its button." />
+  <string id="str_campaign_tutorial_description.ChoosingPerkUpgradesStep2_controller" text="{=pKtXgb6b}You can choose an available perk by pressing {CONSOLE_ACTION_KEY} while the cursor is on its button." />
+  <string id="str_campaign_tutorial_description.ChoosingPerkUpgradesStep3" text="{=hZ9eNwFZ}Perks usually become available in pairs.{newline}{newline}Each one grants different bonuses so choose wisely." />
+  <string id="str_campaign_tutorial_title.ChoosingSkillFocus" text="{=q3mOBLFn}Choosing Skill Focus" />
+  <string id="str_campaign_tutorial_description.ChoosingSkillFocusStep1" text="{=E9f8YUbO}You gain a level every time your total skill points total reaches a target value. Leveling up grants focus points to spend.{newline}{newline}If you have free focus points you will see it by a small indicator over the character screen button. Click on the button to review different skills and choose one to increase focus." />
+  <string id="str_campaign_tutorial_description.ChoosingSkillFocusStep1_controller" text="{=N8YVPdBw}You gain a level every time your total skill points total reaches a target value. Leveling up grants focus points to spend.{newline}{newline}If you have free focus points you will see it by a small indicator over the character screen button. Press {CONSOLE_ACTION_KEY} while the cursor is on the character button to review different skills and choose one to increase focus." />
+  <string id="str_campaign_tutorial_description.ChoosingSkillFocusStep2" text="{=k9QvIYaR}Focus points are used to increase the learning rate at any skill." />
+  <string id="str_campaign_tutorial_title.GettingCompanions" text="{=9aymfBBG}Getting Companions" />
+  <string id="str_campaign_tutorial_description.GettingCompanionsStep1" text="{=e54212r1}In towns, you can find talented individuals that can aid you.{newline}{newline}These potential companions can be found hanging out in taverns.{newline}{newline}Go to tavern district now to find a potential companion." />
+  <string id="str_campaign_tutorial_description.GettingCompanionsStep2" text="{=WBupKtnu}You can see portraits of Important NPCs on the top bar.{newline}{newline}Click on the portrait and choose talk from the menu." />
+  <string id="str_campaign_tutorial_description.GettingCompanionsStep2_controller" text="{=0FssY1wG}You can see portraits of Important NPCs on the top bar.{newline}{newline}Press {CONSOLE_ACTION_KEY} while the cursor is on their portrait and choose talk from the menu." />
+  <string id="str_campaign_tutorial_description.GettingCompanionsStep3" text="{=JkVV4vUs}Click on the talk button to start conversation." />
+  <string id="str_campaign_tutorial_description.GettingCompanionsStep3_controller" text="{=dIOOcbqU}Press {CONSOLE_ACTION_KEY} while the cursor is on the talk button to start conversation." />
+  <string id="str_campaign_tutorial_title.RansomingPrisoners" text="{=HPe7HaZx}Ransoming Prisoners" />
+  <string id="str_campaign_tutorial_description.RansomingPrisonersStep1" text="{=Z7zWkAV8}You can ransom your prisoners off to the ransom broker.{newline}{newline}You can find him in the tavern area." />
+  <string id="str_campaign_tutorial_description.RansomingPrisonersStep2" text="{=IjMel5eg}You can sell off all prisoners at once.{newline}{newline}Or you can engage with the ransom broker to pick them individually." />
+  <string id="str_campaign_tutorial_title.TrackSettlementInEncyclopedia" text="{=WvKKats6}Tracking Settlement" />
+  <string id="str_campaign_tutorial_description.TrackSettlementInEncyclopedia" text="{=pftVKkgq}To keep track of a settlement on the campaign map, press the circle next to its name." />
+  <string id="str_campaign_tutorial_title.CivilianEquipment" text="{=4JFfP1lt}Civilian Equipment" />
+  <string id="str_campaign_tutorial_description.CivilianEquipment" text="{=EvAriC6s}Every character in Calradia has two equipment sets. Characters use their military set when they are expecting trouble. You can switch between their sets using the buttons over the character's model. Note that most of the armors and weapons are unusable while in civilian set because the civilian set is used when it is inappropriate or forbidden for your character to be heavily armed." />
+  <string id="str_campaign_tutorial_title.PartySpeed" text="{=xgO3cCgR}Overburdened" />
+  <string id="str_campaign_tutorial_description.PartySpeed" text="{=DtKKtcws}Notice your party speed has dropped because you are carrying too much.{newline}You should reduce the amount of weight you carry to speed up.{newline}You can also increase your party's carrying capacity by recruiting more troops or buying horses and camels." />
+  <string id="str_campaign_tutorial_title.ArmyCohesion" text="{=o5ho2Txg}Army Cohesion" />
+  <string id="str_campaign_tutorial_description.ArmyCohesionStep1" text="{=gKzLAjXr}Notice how your army cohesion has dropped to a low point, and it is more likely that your army will disperse.{newline}You can click on the army management button to boost your cohesion." />
+  <string id="str_campaign_tutorial_description.ArmyCohesionStep1_controller" text="{=qjMhakoM}Notice how your army cohesion has dropped to a low point, and it is more likely that your army will disperse.{newline}You can press {CONSOLE_ACTION_KEY} while the cursor is on the army management button to boost your cohesion." />
+  <string id="str_campaign_tutorial_description.ArmyCohesionStep2" text="{=xORASoex}You can click on &quot;+&quot; button to add 10 cohesion. Be aware that boosting it costs some influence." />
+  <string id="str_campaign_tutorial_description.ArmyCohesionStep2_controller" text="{=JD7OlpIl}You can press {CONSOLE_ACTION_KEY} while the cursor is on the &quot;+&quot; button to add 10 cohesion. Be aware that boosting it costs some influence." />
+  <string id="str_campaign_tutorial_title.CreateArmy" text="{=BfQrnvpC}Creating Army" />
+  <string id="str_campaign_tutorial_description.CreateArmyStep1" text="{=VvpPbvpm}You can call other lords to your banner. Click on the highlighted army icon on the lower right to do so." />
+  <string id="str_campaign_tutorial_description.CreateArmyStep1_controller" text="{=oKl1p2er}You can call other lords to your banner. Press {CONSOLE_ACTION_KEY} while the cursor is on the highlighted army icon on the lower right to do so." />
+  <string id="str_campaign_tutorial_description.CreateArmyStep2" text="{=bfIEbq8b}You can create an army by adding members from the list on the left. To finalize your choices, press &quot;Done&quot;." />
+  <string id="str_campaign_tutorial_description.CreateArmyStep3" text="{=5RSfkx7d}Gathering of your army may take some time." />
+  <string id="str_campaign_tutorial_title.RaidVillage" text="{=zN9iNaIW}Raiding Village" />
+  <string id="str_campaign_tutorial_description.RaidVillageStep1" text="{=XAbeeOQo}You can weaken the enemy by raiding its villages. This looks like a good target to raid." />
+  <string id="str_campaign_tutorial_description.RaidVillageStep2" text="{=QrfyFfk0}Press &quot;Take a hostile action&quot;" />
+  <string id="str_campaign_tutorial_title.AttackOrAvoidArmy" text="{=CKR7PhRI}Hostile Armies" />
+  <string id="str_campaign_tutorial_description.AttackOrAvoidArmy" text="{=vt1IbBFt}You have spotted an enemy army. Be cautious of it." />
+  <string id="str_campaign_tutorial_title.BesiegeTownOrCastle" text="{=kQMtOPye}Besiege" />
+  <string id="str_campaign_tutorial_description.BesiegeTownOrCastleStep1" text="{=v7HPTy2y}With a strong army at your behest, you can conquer an enemy castle or city. This looks like a good target to besiege." />
+  <string id="str_campaign_tutorial_description.BesiegeTownOrCastleStep2" text="{=id62me1x}Press &quot;Besiege&quot;" />
+  <string id="str_campaign_tutorial_title.Bombardment" text="{=QewGND2m}Preparations" />
+  <string id="str_campaign_tutorial_description.BombardmentStep1" text="{=b1BiRmgI}You are setting your siege camp. You have to wait for the preparations to be over." />
+  <string id="str_campaign_tutorial_description.BombardmentStep2" text="{=zb9fiIP6}You can choose to build siege machines by using the squares for ranged engines and the circles for rams and siege towers." />
   <string id="str_game_tip_title" text="{=ur8kO8iM}Game Tips" />
   <string id="str_game_tip.battle_0" text="{=fUNa6FAo}During battles, holding down {MISSION_INDICATORS_KEY} shows markers on enemy and allied formations." />
+  <!-- Encyclopedia Home Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaHomeTutorial" text="{=MxmOWsHj}Encyclopedia" />
+  <string id="str_campaign_tutorial_description.EncyclopediaHomeTutorial" text="{=77YzJbA2}Encyclopedia offers up-to-date information about settlements, heroes, clans, and factions. Select a category to see contents listed under the said category." />
+  <!-- Encyclopedia Settlements Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaSettlementsTutorial" text="{=wZPdOclh}Encyclopedia Settlements" />
+  <string id="str_campaign_tutorial_description.EncyclopediaSettlementsTutorial" text="{=VMcd4nma}The Encyclopedia has information on all the towns, castles, and villages of Calradia. Once visited or revealed, you can track up-to-date information from the encyclopedia." />
+  <!-- Encyclopedia Troops Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaTroopsTutorial" text="{=D4b6tzYx}Encyclopedia Units" />
+  <string id="str_campaign_tutorial_description.EncyclopediaTroopsTutorial" text="{=MCeCa7SE}Troop pages allow you to see the skills and equipment sets of the selected troop. Try investigating upgrade trees to plan your army composition ahead of time." />
+  <!-- Encyclopedia Kingdoms Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaKingdomsTutorial" text="{=1GgxLyhx}Encyclopedia Kingdoms" />
+  <string id="str_campaign_tutorial_description.EncyclopediaKingdomsTutorial" text="{=zF0xUaXd}Investigate kingdoms to keep up with the fiefs, clans, and wars of the kingdoms of the Calradia." />
+  <!-- Encyclopedia Clans Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaClansTutorial" text="{=3hfKI636}Encyclopedia Clans" />
+  <string id="str_campaign_tutorial_description.EncyclopediaClansTutorial" text="{=TVqGNr8b}Keeping up with Clans of Caldraia allows you to follow up on allies and foes alike. You can check their members, fiefs, and power levels upon reveal." />
+  <!-- Encyclopedia Concepts Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaConceptsTutorial" text="{=xDyzNFic}Encyclopedia Concepts" />
+  <string id="str_campaign_tutorial_description.EncyclopediaConceptsTutorial" text="{=sYkqpuFx}Bannerlord has many different elements that affect the world of Calradia. You can always use filters to learn more about the game concepts." />
+  <!-- Encyclopedia Track Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaTrackTutorial" text="{=lfkwsa5f}Track" />
+  <string id="str_campaign_tutorial_description.EncyclopediaTrackTutorial" text="{=GDPa0sQX}Tracking allows you to find the settlements on the world map. As long as the track button is active location selected settlements will be highlighted. You can click the point near the settlement text to disable tracking." />
+  <!-- Encyclopedia Search Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaSearchTutorial" text="{=NLKmdNbt}Search" />
+  <string id="str_campaign_tutorial_description.EncyclopediaSearchTutorial" text="{=BV5gL8SK}If you know what or who you are looking for you can use the search bar and type in. The search bar lists all the persons, settlements, and troops of the Calradia." />
+  <!-- Encyclopedia Filters Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaFiltersTutorial" text="{=OwqFpPwa}Filters" />
+  <string id="str_campaign_tutorial_description.EncyclopediaFiltersTutorial" text="{=JoYrhCGB}Trying to find something specific? Use filters on the left bar to narrow out the results." />
+  <!-- Encyclopedia Sort Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaSortTutorial" text="{=AtMSecCf}Sort" />
+  <string id="str_campaign_tutorial_description.EncyclopediaSortTutorial" text="{=1XkYGDEZ}The sorting menu lets you sort your results based on different variables." />
+  <!-- Encyclopedia Fog of War Tutorial -->
+  <string id="str_campaign_tutorial_title.EncyclopediaFogOfWarTutorial" text="{=yF9agd1M}Fog of War" />
+  <string id="str_campaign_tutorial_description.EncyclopediaFogOfWarTutorial" text="{=rVaufuNb}You have opened a page where your character has very little information. Arriving at settlements and meeting people of interest related to this page will reveal more and up to date information." />
   <!--Number Ordinals-->
   <string id="str_ordinal_number.0" text="{=gxsoJMb8}zeroth" />
   <string id="str_ordinal_number.1" text="{=oAoTaAWg}first" />
@@ -2496,5 +2559,4 @@
     <string id="str_item_plural.steppe_war_horse" text="{=*}steppe warhorses" />
     <string id="str_item_plural.desert_war_horse" text="{=*}desert warhorses" />
 -->
-    <string id="str_dismiss" text="{=50000001}Please update the MOD" />
 </strings>

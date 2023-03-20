@@ -199,7 +199,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patches\Patch_Module.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />
     <Compile Include="Patches\Patch_MultiplayerWarmupComponent.cs" />
     <Compile Include="Patches\Patch_MissionMultiplayerSiege.cs" />
