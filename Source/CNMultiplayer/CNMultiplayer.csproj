@@ -170,6 +170,9 @@
     <Reference Include="TaleWorlds.MountAndBlade.Diamond">
       <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Diamond.dll</HintPath>
     </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.GauntletUI">
+      <HintPath>..\..\..\Native\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.GauntletUI.dll</HintPath>
+    </Reference>
     <Reference Include="TaleWorlds.MountAndBlade.GauntletUI.Widgets">
       <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.GauntletUI.Widgets.dll</HintPath>
     </Reference>
@@ -196,7 +199,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="Patches\Patch_Module.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />
     <Compile Include="Patches\Patch_MultiplayerWarmupComponent.cs" />

@@ -1,3 +1,4 @@
+
 <Module>
     <Name value="CN Multiplayer"/>
     <Id value="CNMultiplayer"/>
@@ -26,7 +27,34 @@
 			</Tags>
     	</SubModule>
     </SubModules>
-	<Xmls>
+  	<Xmls>
+    	<XmlNode>
+    		<XmlName id="Items" path="mpitems"/>
+			<IncludedGameTypes>
+				<GameType value = "MultiplayerGame"/>
+			</IncludedGameTypes>
+    	</XmlNode>
+		<XmlNode>
+    		<XmlName id="MPCharacters" path="mpcharacters"/>
+			<IncludedGameTypes>
+				<GameType value = "MultiplayerGame"/>
+			</IncludedGameTypes>
+    	</XmlNode>
+		<XmlNode>
+    		<XmlName id="MPClassDivisions" path="mpclassdivisions"/>
+			<IncludedGameTypes>
+				<GameType value = "MultiplayerGame"/>
+			</IncludedGameTypes>
+    	</XmlNode>
+    	<XmlNode>
+    		<XmlName id="CraftingPieces" path="mp_crafting_pieces"/>
+			<IncludedGameTypes>
+				<GameType value = "MultiplayerGame"/>
+			</IncludedGameTypes>
+    	</XmlNode>
+    	<XmlNode>
+    		<XmlName id="Monsters" path="monsters"/>
+    	</XmlNode>
 		<XmlNode>                
 			<XmlName id="GameText" path="native_strings"/>
 		</XmlNode>

@@ -44,8 +44,6 @@ namespace CNMultiplayer
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
         {
             mission.AddMissionBehavior(new NotAllPlayersJoinFixBehavior());
-            var ld = new LoadXMLbyMode();
-            ld.ModeJudgment();
         }
 
         public override void OnMultiplayerGameStart(Game game, object starterObject)
