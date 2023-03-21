@@ -12,6 +12,7 @@
   -->
   <Monster id="human"
            action_set="as_human_warrior"
+           female_action_set="as_human_female_warrior"
            monster_usage="human"
            weight="80"
            hit_points="100"

@@ -221,7 +221,6 @@
     <Compile Include="Patches\ChatCommands\Helpers.cs" />
     <Compile Include="Patches\ChatCommands\Patches\PatchChatBox.cs" />
     <Compile Include="Patches\ChatCommands\Patches\PatchMaxNumberOfPlayers.cs" />
-    <Compile Include="Patches\Patch_FixBattleIndexBehavior.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />
     <Compile Include="Patches\Patch_MultiplayerWarmupComponent.cs" />
     <Compile Include="Patches\Patch_SiegeEntity.cs" />

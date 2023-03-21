@@ -47,16 +47,6 @@ namespace CNMultiplayer
             mission.AddMissionBehavior(new NotAllPlayersJoinFixBehavior());
         }
 
-        public override void OnMissionBehaviorInitialize(Mission mission)
-        {
-            base.OnMissionBehaviorInitialize(mission);//换图10次崩溃修复@Gotha
-            bool flag = mission.GetMissionBehavior<FixBattleIndexBehavior>() == null;
-            if (flag)
-            {
-                mission.AddMissionBehavior(new FixBattleIndexBehavior());
-            }
-        }
-
         public override void OnMultiplayerGameStart(Game game, object starterObject)
         {
             Debug.Print("** CHAT HANDLER ADDED **", 0, Debug.DebugColor.Green);

@@ -79,4 +79,73 @@ namespace Patches
             return false;
         }
     }
+
+    //[HarmonyPatch(typeof(MultiplayerMissions), "OpenSiegeMission")]//为攻城模式添加语音控件
+    internal class Patch_OpenSiegeMission
+    {
+        public static bool Prefix(string scene)
+        {
+            MissionState.OpenNew("MultiplayerSiege", new MissionInitializerRecord(scene)
+            {
+                SceneUpgradeLevel = 3,
+                SceneLevels = ""
+            }, delegate (Mission missionController)
+            {
+                if (GameNetwork.IsServer)
+                {
+                    return new MissionBehavior[]
+                    {
+                        MissionLobbyComponent.CreateBehavior(),
+                        new MissionMultiplayerSiege(),
+                        new MultiplayerWarmupComponent(),
+                        new MissionMultiplayerSiegeClient(),
+                        new MultiplayerTimerComponent(),
+                        new MultiplayerMissionAgentVisualSpawnComponent(),
+                        new ConsoleMatchStartEndHandler(),
+                        new SpawnComponent(new SiegeSpawnFrameBehavior(), new SiegeSpawningBehavior()),
+                        new MissionLobbyEquipmentNetworkComponent(),
+                        new MultiplayerTeamSelectComponent(),
+                        new MissionHardBorderPlacer(),
+                        new MissionBoundaryPlacer(),
+                        new MissionBoundaryCrossingHandler(),
+                        new MultiplayerPollComponent(),
+                        new MultiplayerAdminComponent(),
+                        new MultiplayerGameNotificationsComponent(),
+                        new MissionOptionsComponent(),
+                        new MissionScoreboardComponent(new SiegeScoreboardData()),
+                        new MissionAgentPanicHandler(),
+                        new AgentHumanAILogic(),
+                        new EquipmentControllerLeaveLogic(),
+                        new VoiceChatHandler(),
+                        new MultiplayerPreloadHelper()
+                    };
+                }
+                return new MissionBehavior[]
+                {
+                    MissionLobbyComponent.CreateBehavior(),
+                    new MultiplayerWarmupComponent(),
+                    new MissionMultiplayerSiegeClient(),
+                    new MultiplayerAchievementComponent(),
+                    new MultiplayerTimerComponent(),
+                    new MultiplayerMissionAgentVisualSpawnComponent(),
+                    new ConsoleMatchStartEndHandler(),
+                    new MissionLobbyEquipmentNetworkComponent(),
+                    new MultiplayerTeamSelectComponent(),
+                    new MissionHardBorderPlacer(),
+                    new MissionBoundaryPlacer(),
+                    new MissionBoundaryCrossingHandler(),
+                    new MultiplayerPollComponent(),
+                    new MultiplayerGameNotificationsComponent(),
+                    new MissionOptionsComponent(),
+                    new MissionScoreboardComponent(new SiegeScoreboardData()),
+                    new MissionMatchHistoryComponent(),
+                    new EquipmentControllerLeaveLogic(),
+                    new MissionRecentPlayersComponent(),
+                    new VoiceChatHandler(),
+                    new MultiplayerPreloadHelper()
+                };
+            }, true, true);
+            return false;
+        }
+    }
 }
