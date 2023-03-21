@@ -41,9 +41,20 @@ namespace CNMultiplayer
             Debug.Print("** CHAT COMMANDS BY MENTALROB LOADED **", 0, Debug.DebugColor.Green);
             ChatCommands.CommandManager cm = new ChatCommands.CommandManager();
         }
+
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
         {
             mission.AddMissionBehavior(new NotAllPlayersJoinFixBehavior());
+        }
+
+        public override void OnMissionBehaviorInitialize(Mission mission)
+        {
+            base.OnMissionBehaviorInitialize(mission);//换图10次崩溃修复@Gotha
+            bool flag = mission.GetMissionBehavior<FixBattleIndexBehavior>() == null;
+            if (flag)
+            {
+                mission.AddMissionBehavior(new FixBattleIndexBehavior());
+            }
         }
 
         public override void OnMultiplayerGameStart(Game game, object starterObject)
