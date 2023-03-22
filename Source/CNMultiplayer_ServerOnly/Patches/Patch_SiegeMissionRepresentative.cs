@@ -62,7 +62,7 @@ namespace Patches
                 {
                     num4 = MultiplayerClassDivisions.GetMPHeroClassForCharacter(__instance.ControlledAgent.Character).TroopCasualCost;
                     int num5 = victimClass.TroopCasualCost - num4;
-                    int num6 = MBMath.ClampInt(num5 / 4, 2, 20);
+                    int num6 = MBMath.ClampInt(num5 / 10, 2, 20);
                     num += num6;
                     list.Add(new KeyValuePair<ushort, int>(128, num6));
                 }

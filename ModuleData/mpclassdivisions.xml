@@ -11243,7 +11243,7 @@
                 driven_property="MaxSpeedMultiplier"
                 value="0.10" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="30" />
+                       value="40" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_battanian_noble_helmet_with_feather"
