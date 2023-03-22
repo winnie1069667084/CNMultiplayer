@@ -73,8 +73,8 @@ namespace Patches
                         }
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 60);//移除旗帜的金币数(防守方)
-                            list.Add(new KeyValuePair<ushort, int>(512, 60));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 100);//移除旗帜的金币数(防守方)
+                            list.Add(new KeyValuePair<ushort, int>(512, 100));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -107,7 +107,7 @@ namespace Patches
                     }
                 }
                 if (lockG)
-                    num = -7;//守城方失去G点的士气下降速度
+                    num = -10;//守城方失去G点的士气下降速度
             }
             else
             {

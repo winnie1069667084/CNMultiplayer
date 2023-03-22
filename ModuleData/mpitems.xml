@@ -7415,7 +7415,7 @@
              modifier_group="leather"
              material_type="Leather" />
     </ItemComponent>
-    <Flags />
+    <Flags UseTeamColor="true" />
   </Item>
   <Item multiplayer_item="true"
         id="mp_varangian_bra_padded"
