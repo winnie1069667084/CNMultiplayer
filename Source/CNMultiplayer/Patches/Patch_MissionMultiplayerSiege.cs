@@ -133,8 +133,9 @@ namespace Patches
                     Agent agent = null;
                     float num = float.MaxValue;
                     int count1 = 0, count2 = 0;
+                    float radius = 8f;//定义旗帜圆柱半径
                     List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
-                    AgentProximityMap.ProximityMapSearchStruct proximityMapSearchStruct = AgentProximityMap.BeginSearch(Mission.Current, flagCapturePoint.Position.AsVec2, 6f, false);
+                    AgentProximityMap.ProximityMapSearchStruct proximityMapSearchStruct = AgentProximityMap.BeginSearch(Mission.Current, flagCapturePoint.Position.AsVec2, radius, false);
                     while (proximityMapSearchStruct.LastFoundAgent != null)
                     {
                         Agent lastFoundAgent = proximityMapSearchStruct.LastFoundAgent;
@@ -161,8 +162,8 @@ namespace Patches
                                 count1++;
                             if (lastFoundAgent.Team.IsDefender && !lastFoundAgent.IsAIControlled)
                                 count2++;
-                            float num2 = lastFoundAgent.Position.DistanceSquared(flagCapturePoint.Position);
-                            if (num2 <= 36f && num2 < num)
+                            float num2 = lastFoundAgent.Position.AsVec2.DistanceSquared(flagCapturePoint.Position.AsVec2);
+                            if (num2 <= radius * radius && num2 < num)
                             {
                                 agent = lastFoundAgent;
                                 num = num2;
@@ -182,7 +183,8 @@ namespace Patches
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, 0.5f);//旗帜升降速度
+                        float flagv = MathF.Abs(count1 - count2)*0.1f;//定义旗帜升降速度
+                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.05f, 1f));
                     }
                     bool flag;
                     flagCapturePoint.OnAfterTick(agent != null, out flag);
