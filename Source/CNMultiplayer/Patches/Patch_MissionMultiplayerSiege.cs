@@ -73,8 +73,8 @@ namespace Patches
                         }
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 100);//移除旗帜的金币数(防守方)
-                            list.Add(new KeyValuePair<ushort, int>(512, 100));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 70);//移除旗帜的金币数(防守方)
+                            list.Add(new KeyValuePair<ushort, int>(512, 70));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -133,20 +133,21 @@ namespace Patches
                     Agent agent = null;
                     float num = float.MaxValue;
                     int count1 = 0, count2 = 0;
-                    float radius = 8f;//定义旗帜圆柱半径
+                    float radius = 12f;//定义旗帜半径
                     List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
                     AgentProximityMap.ProximityMapSearchStruct proximityMapSearchStruct = AgentProximityMap.BeginSearch(Mission.Current, flagCapturePoint.Position.AsVec2, radius, false);
                     while (proximityMapSearchStruct.LastFoundAgent != null)
                     {
                         Agent lastFoundAgent = proximityMapSearchStruct.LastFoundAgent;
-                        if (!lastFoundAgent.IsMount && lastFoundAgent.IsActive())
+                        float num2 = lastFoundAgent.Position.DistanceSquared(flagCapturePoint.Position);
+                        if (!lastFoundAgent.IsMount && lastFoundAgent.IsActive() && num2 <= radius * radius && !lastFoundAgent.IsAIControlled)
                         {
                             if (flagCapturePoint.IsFullyRaised && lastFoundAgent.Team == flagOwnerTeam && (____dtSumCheckMorales % 0.5f < 0.25f))
                             {
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (flagCapturePoint.IsContested && !lastFoundAgent.IsAIControlled && lastFoundAgent.MissionPeer.Representative.Gold < 200 && (____dtSumCheckMorales % 0.25f < 0.25f))
+                            if (flagCapturePoint.IsContested && lastFoundAgent.MissionPeer.Representative.Gold < 200 && (____dtSumCheckMorales % 0.33f < 0.25f))
                             {
                                 __instance.ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
@@ -158,12 +159,11 @@ namespace Patches
                                 }
                                 list.Clear();
                             }
-                            if (lastFoundAgent.Team.IsAttacker && !lastFoundAgent.IsAIControlled)//计算旗帜内双方人数(机器人不算在内)
+                            if (lastFoundAgent.Team.IsAttacker)//计算旗帜内双方人数
                                 count1++;
-                            if (lastFoundAgent.Team.IsDefender && !lastFoundAgent.IsAIControlled)
+                            if (lastFoundAgent.Team.IsDefender)
                                 count2++;
-                            float num2 = lastFoundAgent.Position.AsVec2.DistanceSquared(flagCapturePoint.Position.AsVec2);
-                            if (num2 <= radius * radius && num2 < num)
+                            if (num2 < num)
                             {
                                 agent = lastFoundAgent;
                                 num = num2;
@@ -179,12 +179,12 @@ namespace Patches
                     bool isContested = flagCapturePoint.IsContested;
                     if ((count1 != 0 || count2 != 0) && ((flagOwnerTeam.IsDefender && count1 > count2) || (flagOwnerTeam.IsAttacker && count2 > count1)))//旗帜升降逻辑
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Down;
-                    if ((count1 == 0 && count2 == 0 && !flagCapturePoint.IsFullyRaised) || (isContested && ((flagOwnerTeam.IsDefender && count2 >= count1) || (flagOwnerTeam.IsAttacker && count1 >= count2))))
+                    if ((!flagCapturePoint.IsFullyRaised && count1 == 0 && count2 == 0) || (isContested && ((flagOwnerTeam.IsDefender && count2 >= count1) || (flagOwnerTeam.IsAttacker && count1 >= count2))))
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        float flagv = MathF.Abs(count1 - count2)*0.1f;//定义旗帜升降速度
-                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.05f, 1f));
+                        float flagv = MathF.Abs(count1-count2)*0.15f;//定义旗帜升降速度
+                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.1f, 0.9f));
                     }
                     bool flag;
                     flagCapturePoint.OnAfterTick(agent != null, out flag);
