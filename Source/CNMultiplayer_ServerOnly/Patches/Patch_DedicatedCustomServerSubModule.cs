@@ -62,7 +62,7 @@ namespace Patches
             {
                 Random random = new Random();
                 string value = ____automatedMapPool[random.Next(0, ____automatedMapPool.Count)];
-                if (value != MultiplayerOptions.OptionType.Map.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions))
+                if (value != MultiplayerOptions.OptionType.Map.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) || ____automatedMapPool.Count == 1)
                 {
                     MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.Map).UpdateValue(value);
                     flag = false;
