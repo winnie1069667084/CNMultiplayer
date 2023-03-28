@@ -7,9 +7,7 @@ using System.Reflection;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
-using TaleWorlds.MountAndBlade.Network.Messages;
 using TaleWorlds.MountAndBlade.Objects;
-
 namespace Patches
 {
 
@@ -18,7 +16,7 @@ namespace Patches
     {
         public static bool Prefix(float dt, MissionMultiplayerSiege __instance, ref int[] ____morales, ref float ____dtSumCheckMorales, int[] ____capturePointRemainingMoraleGains, MissionMultiplayerSiegeClient ____gameModeSiegeClient)//修改士气检查间隔
         {
-            MethodInfo method = typeof(MissionMultiplayerSiege).GetMethod("GetMoraleGain", BindingFlags.Instance | BindingFlags.NonPublic);
+            MethodInfo method = AccessTools.Method(typeof(MissionMultiplayerSiege), "GetMoraleGain");
             ____dtSumCheckMorales += dt;
             if (____dtSumCheckMorales >= 4f)
             {
@@ -47,12 +45,11 @@ namespace Patches
         {
             int num = 0;
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
-            bool flag2 = ____masterFlagBestAgent != null && ____masterFlagBestAgent.Team.Side == side;
             if (side == BattleSideEnum.Attacker)
             {
-                if (____masterFlag.IsFullyRaised && __instance.GetFlagOwnerTeam(____masterFlag).Side == BattleSideEnum.Defender && !flag2)
+                if (____masterFlag.IsFullyRaised && __instance.GetFlagOwnerTeam(____masterFlag).Side == BattleSideEnum.Defender)
                 {
-                    num += -1;
+                    num--;
                 }
                 foreach (FlagCapturePoint item in __instance.AllCapturePoints.Where((FlagCapturePoint flag) => flag != ____masterFlag && !flag.IsDeactivated && __instance.GetFlagOwnerTeam(flag).Side == BattleSideEnum.Attacker))
                 {
@@ -147,7 +144,7 @@ namespace Patches
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (flagCapturePoint.IsContested && lastFoundAgent.MissionPeer.Representative.Gold < 200 && (____dtSumCheckMorales % 0.33f < 0.25f))
+                            if (!flagCapturePoint.IsFullyRaised && lastFoundAgent.MissionPeer.Representative.Gold < 200 && (____dtSumCheckMorales % 0.66f < 0.25f))
                             {
                                 __instance.ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
@@ -183,26 +180,21 @@ namespace Patches
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        float flagv = MathF.Abs(count1-count2)*0.15f;//定义旗帜升降速度
-                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.1f, 0.9f));
+                        float flagv = 0.125f + MathF.Abs(count1-count2)*0.125f;//定义旗帜升降速度
+                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.125f, 1f));
                     }
-                    bool flag;
-                    flagCapturePoint.OnAfterTick(agent != null, out flag);
-                    if (flag)
+                    flagCapturePoint.OnAfterTick(agent != null, out var ownerTeamChanged);
+                    if (ownerTeamChanged)
                     {
                         Team team = agent.Team;
-                        uint color = (team != null) ? team.Color : 4284111450U;
-                        uint color2 = (team != null) ? team.Color2 : uint.MaxValue;
+                        uint color = (uint)(((int?)team?.Color) ?? (-10855846));
+                        uint color2 = (uint)(((int?)team?.Color2) ?? (-1));
                         flagCapturePoint.SetTeamColorsSynched(color, color2);
                         ____capturePointOwners[flagCapturePoint.FlagIndex] = team;
                         GameNetwork.BeginBroadcastModuleEvent();
                         GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(flagCapturePoint.FlagIndex, team));
-                        GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
-                        MissionMultiplayerSiegeClient gameModeSiegeClient = ____gameModeSiegeClient;
-                        if (gameModeSiegeClient != null)
-                        {
-                            gameModeSiegeClient.OnCapturePointOwnerChanged(flagCapturePoint, team);
-                        }
+                        GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
+                        ____gameModeSiegeClient?.OnCapturePointOwnerChanged(flagCapturePoint, team);
                         ___NotificationsComponent.FlagXCapturedByTeamX(flagCapturePoint, agent.Team);
                     }
                 }
