@@ -144,7 +144,7 @@ namespace Patches
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (!flagCapturePoint.IsFullyRaised && lastFoundAgent.MissionPeer.Representative.Gold < 200 && (____dtSumCheckMorales % 0.66f < 0.25f))
+                            if (!flagCapturePoint.IsFullyRaised && lastFoundAgent.MissionPeer.Representative.Gold < 150 && (____dtSumCheckMorales % 0.75f < 0.25f))
                             {
                                 __instance.ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
@@ -180,8 +180,8 @@ namespace Patches
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        float flagv = 0.125f + MathF.Abs(count1-count2)*0.125f;//定义旗帜升降速度
-                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.125f, 1f));
+                        float flagv = 0.1f + MathF.Abs(count1-count2)*0.1f;//定义旗帜升降速度
+                        flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.1f, 1f));
                     }
                     flagCapturePoint.OnAfterTick(agent != null, out var ownerTeamChanged);
                     if (ownerTeamChanged)
