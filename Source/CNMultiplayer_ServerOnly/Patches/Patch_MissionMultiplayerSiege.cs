@@ -95,16 +95,18 @@ namespace Patches
 
             if (__instance.GetFlagOwnerTeam(____masterFlag).Side == BattleSideEnum.Attacker && !____masterFlag.IsContested)
             {
-                bool lockG = true;
+                int flagnum = 0;
                 for (int i = 0; i < __instance.AllCapturePoints.Count; i++)
                 {
                     if (__instance.AllCapturePoints[i] != ____masterFlag && !__instance.AllCapturePoints[i].IsDeactivated)
                     {
-                        lockG = false;//锁G点
+                        flagnum++;
                     }
                 }
-                if (lockG)
-                    num = -10;//守城方失去G点的士气下降速度
+                if (flagnum == 1)//地图上剩余旗帜数量小于等于2，且攻城方控制G时，守城方将受到士气惩罚
+                    num = -5;
+                if (flagnum == 0)
+                    num = -10;
             }
             else
             {
@@ -144,7 +146,7 @@ namespace Patches
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (!flagCapturePoint.IsFullyRaised && lastFoundAgent.MissionPeer.Representative.Gold < 150 && (____dtSumCheckMorales % 0.75f < 0.25f))
+                            if (!flagCapturePoint.IsFullyRaised && lastFoundAgent.MissionPeer.Representative.Gold < 200 && (____dtSumCheckMorales % 0.67f < 0.25f))
                             {
                                 __instance.ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
@@ -180,7 +182,7 @@ namespace Patches
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        float flagv = 0.1f + MathF.Abs(count1-count2)*0.1f;//定义旗帜升降速度
+                        float flagv = MathF.Abs(count1-count2)*0.1f;//定义旗帜升降速度
                         flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.1f, 1f));
                     }
                     flagCapturePoint.OnAfterTick(agent != null, out var ownerTeamChanged);
@@ -291,9 +293,16 @@ namespace Patches
                     {
                         __instance.ChangeCurrentGoldForPeer(missionPeer, missionPeer.Representative.Gold + num);//守城方重生金币100
                     }
-                    else
+                    if (missionPeer.Team.Side == BattleSideEnum.Attacker)
                     {
-                        __instance.ChangeCurrentGoldForPeer(missionPeer, missionPeer.Representative.Gold + num + 50);//攻城方重生金币150
+                        if (missionPeer.Representative.Gold <= 50)
+                        {
+                            __instance.ChangeCurrentGoldForPeer(missionPeer, 150);//死亡时金币数低于50的攻城方玩家，重生后金币锁定150
+                        }
+                        else
+                        {
+                            __instance.ChangeCurrentGoldForPeer(missionPeer, missionPeer.Representative.Gold + num);//攻城方重生金币100
+                        }
                     }
                 }
                 bool isFriendly = ((affectorAgent != null) ? affectorAgent.Team : null) != null && affectedAgent.Team != null && affectorAgent.Team.Side == affectedAgent.Team.Side;
@@ -338,6 +347,16 @@ namespace Patches
                 }
             }
             return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(MissionMultiplayerSiege), "OnBehaviorInitialize")]//攻城模式初始士气修改
+    internal class Patch_OnBehaviorInitialize
+    {
+        public static void Postfix(int[] ____morales)
+        {
+            ____morales[0] = 260;//防守方初始士气
+            ____morales[1] = 260;//进攻方初始士气
         }
     }
 }
