@@ -59,13 +59,7 @@
 			<XmlName id="GameText" path="native_strings"/>
 		</XmlNode>
 		<XmlNode>                
-	    	<XmlName id="GameText" path="multiplayer_strings"/>
-		</XmlNode>
-		<XmlNode>                
 	    	<XmlName id="GameText" path="module_strings"/>
-		</XmlNode>
-		<XmlNode>                
-	    	<XmlName id="GameText" path="global_strings"/>
 		</XmlNode>
     </Xmls>
 </Module>
