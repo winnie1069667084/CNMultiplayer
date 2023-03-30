@@ -70,8 +70,8 @@ namespace Patches
                         }
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 70);//移除旗帜的金币数(防守方)
-                            list.Add(new KeyValuePair<ushort, int>(512, 70));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 120);//移除旗帜的金币数(防守方)
+                            list.Add(new KeyValuePair<ushort, int>(512, 120));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -132,7 +132,7 @@ namespace Patches
                     Agent agent = null;
                     float num = float.MaxValue;
                     int count1 = 0, count2 = 0;
-                    float radius = 12f;//定义旗帜半径
+                    float radius = 15f;//定义旗帜半径
                     List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
                     AgentProximityMap.ProximityMapSearchStruct proximityMapSearchStruct = AgentProximityMap.BeginSearch(Mission.Current, flagCapturePoint.Position.AsVec2, radius, false);
                     while (proximityMapSearchStruct.LastFoundAgent != null)
@@ -141,12 +141,12 @@ namespace Patches
                         float num2 = lastFoundAgent.Position.DistanceSquared(flagCapturePoint.Position);
                         if (!lastFoundAgent.IsMount && lastFoundAgent.IsActive() && num2 <= radius * radius && !lastFoundAgent.IsAIControlled)
                         {
-                            if (flagCapturePoint.IsFullyRaised && lastFoundAgent.Team == flagOwnerTeam && (____dtSumCheckMorales % 0.5f < 0.25f))
+                            if (flagCapturePoint.IsFullyRaised && lastFoundAgent.Team == flagOwnerTeam && (____dtSumCheckMorales % 0.66f < 0.25f))
                             {
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (!flagCapturePoint.IsFullyRaised && ((lastFoundAgent.MissionPeer.Representative.Gold < 200 && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < 100 && lastFoundAgent.Team.IsDefender)) && (____dtSumCheckMorales % 0.67f < 0.25f))
+                            if (!flagCapturePoint.IsFullyRaised && ((lastFoundAgent.MissionPeer.Representative.Gold < 200 && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < 100 && lastFoundAgent.Team.IsDefender)) && (____dtSumCheckMorales % 0.5f < 0.25f))
                             {
                                 __instance.ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
@@ -211,10 +211,10 @@ namespace Patches
         public static bool Prefix(NetworkCommunicator networkPeer, MissionMultiplayerSiege __instance, MultiplayerWarmupComponent ____warmupComponent, MissionMultiplayerSiegeClient ____gameModeSiegeClient, Team[] ____capturePointOwners)
         {
             MissionPeer missionpeer = networkPeer.GetComponent<MissionPeer>();
-            int num = 170;
+            int num = 180;
             if (____warmupComponent != null && ____warmupComponent.IsInWarmup)
             {
-                num = 170;
+                num = 180;
             }
             __instance.ChangeCurrentGoldForPeer(missionpeer, num);
             MissionMultiplayerSiegeClient gameModeSiegeClient = ____gameModeSiegeClient;
@@ -355,8 +355,8 @@ namespace Patches
     {
         public static void Postfix(int[] ____morales)
         {
-            ____morales[0] = 260;//防守方初始士气
-            ____morales[1] = 260;//进攻方初始士气
+            ____morales[0] = 230;//防守方初始士气
+            ____morales[1] = 230;//进攻方初始士气
         }
     }
 }

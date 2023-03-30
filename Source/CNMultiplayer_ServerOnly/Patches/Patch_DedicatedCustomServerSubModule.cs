@@ -43,22 +43,14 @@ namespace Patches
             return true;
         }
 
-        [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "SelectRandomMap")]//避免下次随机地图与当前地图重复
+        [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "SelectRandomMap")]//循环地图池中的地图
         internal class Patch_SelectRandomMap
         {
-            public static bool Prefix(List<string> ____automatedMapPool)
+            public static bool Prefix(List<string> ____automatedMapPool, int ____remainedAutomatedBattleCount)
             {
-                var flag = true;
-                while (flag)
-                {
-                    Random random = new Random();
-                    string value = ____automatedMapPool[random.Next(0, ____automatedMapPool.Count)];
-                    if (value != MultiplayerOptions.OptionType.Map.GetValueText((MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)) || ____automatedMapPool.Count == 1)
-                    {
-                        MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.Map).UpdateValue(value);
-                        flag = false;
-                    }
-                }
+                int cycle = ____remainedAutomatedBattleCount % ____automatedMapPool.Count;
+                string value = ____automatedMapPool[cycle];
+                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.Map).UpdateValue(value);
                 return false;
             }
         }

@@ -737,10 +737,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_coat_of_plates_over_mail"
                        target="Player" />			   
         <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
                              target="Troops">
@@ -1127,6 +1123,71 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>-->
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_western_crowned_plated_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_white_coat_over_mail"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000151}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_western_crowned_plated_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_coat_of_plates_over_mail"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000152}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_visored_helmet_over_mail_coif"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_white_coat_over_mail"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000153}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_visored_helmet_over_mail_coif"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_coat_of_plates_over_mail"
+                       target="Player" />			   
+      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_vlandia"
@@ -2107,6 +2168,35 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_western_crowned_plated_helmet"
+                       target="Player" />		   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000151}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_vlandian_faceguard_helmet_b"
+                       target="Player" />		   
+      </Perk>
     </Perks>
   </MPClassDivision>
   <!-- EMPIRE -->
@@ -3021,6 +3111,71 @@
                     value="0.05" />
           </Effects>
         </ConditionalEffect>
+      </Perk>
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_helmet_with_metal_strips"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_imperial_lamellar_over_leather"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000151}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_helmet_with_metal_strips"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_lamellar_with_scale_skirt"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000152}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_battle_crown_west"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_imperial_lamellar_over_leather"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000153}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_battle_crown_west"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_lamellar_with_scale_skirt"
+                       target="Player" />			   
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -4023,6 +4178,25 @@
                     value="0.15" />
           </Effects>
         </ConditionalEffect>
+      </Perk>
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_battle_crown_north"
+                       target="Player" />		   
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -5860,6 +6034,29 @@
                     value="0.15" />
           </Effects>
         </ConditionalEffect>
+      </Perk>
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_brass_lamellar_over_mail"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_brass_lamellar_shoulder"
+                       target="Player" />					   
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -7783,6 +7980,25 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_aserai_battle_crown"
+                       target="Player" />					   
+      </Perk>
     </Perks>
   </MPClassDivision>
   <!-- Sturgia -->
@@ -9020,6 +9236,87 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>-->
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_sturgian_helmet_b_open"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_northern_brass_lamellar_over_mail"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000151}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_sturgian_helmet_b_open"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_northern_coat_of_plates"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_northern_plated_gloves"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_northern_plated_boots"
+                       target="Player" />					   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000152}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_sturgian_lord_helmet_b"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_northern_brass_lamellar_over_mail"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000153}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_sturgian_lord_helmet_b"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_northern_coat_of_plates"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_northern_plated_gloves"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_northern_plated_boots"
+                       target="Player" />				   
+      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_sturgia"
@@ -9654,6 +9951,25 @@
                     value="0.15" />
           </Effects>
         </ConditionalEffect>
+      </Perk>
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_sturgian_helmet_b_close"
+                       target="Player" />		   
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -10832,6 +11148,71 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>-->
+	  <!-- Third perks-->
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_battanian_noble_helmet_with_feather"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_battania_noble_armor"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000151}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_battanian_noble_helmet_with_feather"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_battanian_scale_armor_a"
+                       target="Player" />					   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000152}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_battanian_plated_noble_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_battania_noble_armor"
+                       target="Player" />			   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000153}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_battanian_plated_noble_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_battanian_scale_armor_a"
+                       target="Player" />				   
+      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_battania"
