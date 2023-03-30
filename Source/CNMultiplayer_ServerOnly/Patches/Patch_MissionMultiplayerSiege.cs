@@ -146,7 +146,7 @@ namespace Patches
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (!flagCapturePoint.IsFullyRaised && lastFoundAgent.MissionPeer.Representative.Gold < 200 && (____dtSumCheckMorales % 0.67f < 0.25f))
+                            if (!flagCapturePoint.IsFullyRaised && ((lastFoundAgent.MissionPeer.Representative.Gold < 200 && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < 100 && lastFoundAgent.Team.IsDefender)) && (____dtSumCheckMorales % 0.67f < 0.25f))
                             {
                                 __instance.ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
@@ -211,10 +211,10 @@ namespace Patches
         public static bool Prefix(NetworkCommunicator networkPeer, MissionMultiplayerSiege __instance, MultiplayerWarmupComponent ____warmupComponent, MissionMultiplayerSiegeClient ____gameModeSiegeClient, Team[] ____capturePointOwners)
         {
             MissionPeer missionpeer = networkPeer.GetComponent<MissionPeer>();
-            int num = 200;
+            int num = 150;
             if (____warmupComponent != null && ____warmupComponent.IsInWarmup)
             {
-                num = 200;
+                num = 150;
             }
             __instance.ChangeCurrentGoldForPeer(missionpeer, num);
             MissionMultiplayerSiegeClient gameModeSiegeClient = ____gameModeSiegeClient;
