@@ -18117,7 +18117,7 @@
         <WeaponFlags Consumable="true"
                      AmmoSticksWhenShot="true"
                      MultiplePenetration="true"
-                     CanPenetrateShield="true" />
+                     CanPenetrateShield="false" />
       </Weapon>
     </ItemComponent>
     <Flags CannotBePickedUp="true" />
@@ -18159,7 +18159,7 @@
                      Burning="true"
                      MultiplePenetration="true"
                      LeavesTrail="true"
-                     CanPenetrateShield="true" />
+                     CanPenetrateShield="false" />
       </Weapon>
     </ItemComponent>
     <Flags CannotBePickedUp="true" />
@@ -18205,8 +18205,8 @@
                      AmmoCanBreakOnBounceBack="true" />
       </Weapon>
     </ItemComponent>
-    <Flags QuickFadeOut="true"
-           CannotBePickedUp="true"
+    <Flags QuickFadeOut="false"
+           CannotBePickedUp="false"
            DropOnWeaponChange="true"
            DropOnAnyAction="true" />
   </Item>
@@ -18253,8 +18253,8 @@
                      AmmoBreaksOnBounceBack="true" />
       </Weapon>
     </ItemComponent>
-    <Flags QuickFadeOut="true"
-           CannotBePickedUp="true"
+    <Flags QuickFadeOut="false"
+           CannotBePickedUp="false"
            DropOnWeaponChange="true"
            DropOnAnyAction="true" />
   </Item>
@@ -18300,8 +18300,8 @@
                      AmmoCanBreakOnBounceBack="true" />
       </Weapon>
     </ItemComponent>
-    <Flags QuickFadeOut="true"
-           CannotBePickedUp="true"
+    <Flags QuickFadeOut="false"
+           CannotBePickedUp="false"
            DropOnWeaponChange="true"
            DropOnAnyAction="true" />
   </Item>
@@ -18347,8 +18347,8 @@
                      AmmoCanBreakOnBounceBack="true" />
       </Weapon>
     </ItemComponent>
-    <Flags QuickFadeOut="true"
-           CannotBePickedUp="true"
+    <Flags QuickFadeOut="false"
+           CannotBePickedUp="false"
            DropOnWeaponChange="true"
            DropOnAnyAction="true" />
   </Item>
