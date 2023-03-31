@@ -18117,7 +18117,7 @@
         <WeaponFlags Consumable="true"
                      AmmoSticksWhenShot="true"
                      MultiplePenetration="true"
-                     CanPenetrateShield="false" />
+                     CanPenetrateShield="true" />
       </Weapon>
     </ItemComponent>
     <Flags CannotBePickedUp="true" />
@@ -18159,7 +18159,7 @@
                      Burning="true"
                      MultiplePenetration="true"
                      LeavesTrail="true"
-                     CanPenetrateShield="false" />
+                     CanPenetrateShield="true" />
       </Weapon>
     </ItemComponent>
     <Flags CannotBePickedUp="true" />
