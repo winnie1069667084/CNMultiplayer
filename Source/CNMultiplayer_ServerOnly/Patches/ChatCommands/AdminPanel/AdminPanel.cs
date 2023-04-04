@@ -361,8 +361,8 @@ namespace ChatCommands
             MissionListener listener = new MissionListener();
             Mission.Current.AddListener(listener);
 
-            MultiplayerIntermissionVotingManager.Instance.IsCultureVoteEnabled = false;
-            MultiplayerIntermissionVotingManager.Instance.IsMapVoteEnabled = false;
+            //MultiplayerIntermissionVotingManager.Instance.IsCultureVoteEnabled = false;
+            //MultiplayerIntermissionVotingManager.Instance.IsMapVoteEnabled = false;
 
             EndingCurrentMissionThenStartingNewMission = true;
 

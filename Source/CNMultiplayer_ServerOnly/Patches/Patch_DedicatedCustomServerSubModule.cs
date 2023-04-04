@@ -48,9 +48,9 @@ namespace Patches
             private static int randomint = int.MaxValue;
             public static bool Prefix(List<string> ____automatedMapPool)
             {
-                if (isRandom)
+                if (isRandom || randomint < 0)
                 {
-                    randomint = new Random().Next(100*____automatedMapPool.Count, int.MaxValue);
+                    randomint = new Random().Next(1000*____automatedMapPool.Count, int.MaxValue);
                     isRandom = false;
                 }
                 int cycle = randomint % ____automatedMapPool.Count;
