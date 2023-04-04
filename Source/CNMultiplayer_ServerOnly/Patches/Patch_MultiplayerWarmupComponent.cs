@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
+using ChatCommands;
 
 namespace Patches
 {
@@ -49,6 +50,36 @@ namespace Patches
             }
             __result = false;
             return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "AfterStart")]//热身阶段加入大量bot（仅限攻城模式）
+    internal class Patch_AfterStart
+    {
+        public static int NumberOfBotsTeam1;
+        public static int NumberOfBotsTeam2;
+        static void Postfix()
+        {
+            NumberOfBotsTeam1 = MultiplayerOptions.OptionType.NumberOfBotsTeam1.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
+            NumberOfBotsTeam2 = MultiplayerOptions.OptionType.NumberOfBotsTeam2.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) == "Siege")
+            {
+                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam1).UpdateValue(50);
+                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam2).UpdateValue(50);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "EndWarmup")]//热身结束后恢复bot数量（仅限攻城模式）
+    internal class Patch_EndWarmup
+    {
+        static void Postfix()
+        {
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) == "Siege")
+            {
+                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam1).UpdateValue(Patch_AfterStart.NumberOfBotsTeam1);
+                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam2).UpdateValue(Patch_AfterStart.NumberOfBotsTeam2);
+            }
         }
     }
 }

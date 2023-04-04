@@ -202,7 +202,6 @@
     <Compile Include="Patches\Patch_MissionMultiplayerSiegeClient.cs" />
     <Compile Include="Patches\Patch_MultiplayerMissionViews.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />
-    <Compile Include="Patches\Patch_MultiplayerWarmupComponent.cs" />
     <Compile Include="Patches\Patch_MissionMultiplayerSiege.cs" />
     <Compile Include="Patches\Patch_MultiplayerMissions.cs" />
     <Compile Include="Patches\Patch_MultiplayerStrikeMagnitudeModel.cs" />
