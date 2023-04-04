@@ -64,10 +64,6 @@ namespace Patches
                     foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
                     {
                         MissionPeer component = networkPeer.GetComponent<MissionPeer>();
-                        if (component != null && component.Team?.Side == BattleSideEnum.Attacker)
-                        {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 35);//移除旗帜的金币数(进攻方)
-                        }
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
                             __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 120);//移除旗帜的金币数(防守方)
