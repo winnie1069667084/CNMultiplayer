@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using TaleWorlds.Engine;
-using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.DedicatedCustomServer;
 
@@ -43,14 +41,22 @@ namespace Patches
             return true;
         }
 
-        [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "SelectRandomMap")]//循环地图池中的地图
+        [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "SelectRandomMap")]//循环地图池中的地图(随机初次启动服务器的地图)
         internal class Patch_SelectRandomMap
         {
-            public static bool Prefix(List<string> ____automatedMapPool, int ____remainedAutomatedBattleCount)
+            private static bool isRandom = true;
+            private static int randomint = int.MaxValue;
+            public static bool Prefix(List<string> ____automatedMapPool)
             {
-                int cycle = ____remainedAutomatedBattleCount % ____automatedMapPool.Count;
+                if (isRandom)
+                {
+                    randomint = new Random().Next(100*____automatedMapPool.Count, int.MaxValue);
+                    isRandom = false;
+                }
+                int cycle = randomint % ____automatedMapPool.Count;
                 string value = ____automatedMapPool[cycle];
                 MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.Map).UpdateValue(value);
+                randomint--;
                 return false;
             }
         }
