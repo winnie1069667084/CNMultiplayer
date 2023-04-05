@@ -223,7 +223,6 @@
     <Compile Include="Patches\ChatCommands\Patches\PatchMaxNumberOfPlayers.cs" />
     <Compile Include="Patches\Patch_SpawningBehaviorBase.cs" />
     <Compile Include="Patches\Patch_DedicatedCustomServerSubModule.cs" />
-    <Compile Include="Patches\Patch_MissionMultiplayerSiegeClient.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />
     <Compile Include="Patches\Patch_MultiplayerWarmupComponent.cs" />
     <Compile Include="Patches\Patch_SiegeEntity.cs" />

@@ -44,10 +44,18 @@ namespace Patches
         public static bool Prefix(BattleSideEnum side, ref int __result, MissionMultiplayerSiege __instance, Agent ____masterFlagBestAgent, FlagCapturePoint ____masterFlag, ref int[] ____capturePointRemainingMoraleGains, ref MissionMultiplayerSiegeClient ____gameModeSiegeClient, ref MultiplayerGameNotificationsComponent ___NotificationsComponent)
         {
             int num = 0;
+            int flagnum = 0;//计算当前战场上除G外的剩余旗帜数量
+            for (int i = 0; i < __instance.AllCapturePoints.Count; i++)
+            {
+                if (__instance.AllCapturePoints[i] != ____masterFlag && !__instance.AllCapturePoints[i].IsDeactivated)
+                {
+                    flagnum++;
+                }
+            }
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             if (side == BattleSideEnum.Attacker)
             {
-                if (____masterFlag.IsFullyRaised && __instance.GetFlagOwnerTeam(____masterFlag).Side == BattleSideEnum.Defender)
+                if ((____masterFlag.IsFullyRaised && __instance.GetFlagOwnerTeam(____masterFlag).Side == BattleSideEnum.Defender) || flagnum > 1)
                 {
                     num--;
                 }
@@ -64,10 +72,10 @@ namespace Patches
                     foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
                     {
                         MissionPeer component = networkPeer.GetComponent<MissionPeer>();
-                        if (component != null && component.Team?.Side == BattleSideEnum.Defender && component.Representative.Gold <= 600)
+                        if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 100);//移除旗帜的金币数(防守方)
-                            list.Add(new KeyValuePair<ushort, int>(512, 100));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 250/flagnum);//移除旗帜的金币数(防守方)，阶梯金币数与战场上剩余的旗帜数量挂钩
+                            list.Add(new KeyValuePair<ushort, int>(512, 250/flagnum));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -75,6 +83,10 @@ namespace Patches
                                 GameNetwork.EndModuleEventAsServer();
                             }
                             list.Clear();
+                        }
+                        if (component != null && component.Team?.Side == BattleSideEnum.Attacker)
+                        {
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 35);//移除旗帜的金币数(进攻方)
                         }
                     }
                     item.RemovePointAsServer();
@@ -91,14 +103,6 @@ namespace Patches
 
             if (__instance.GetFlagOwnerTeam(____masterFlag).Side == BattleSideEnum.Attacker && !____masterFlag.IsContested)
             {
-                int flagnum = 0;
-                for (int i = 0; i < __instance.AllCapturePoints.Count; i++)
-                {
-                    if (__instance.AllCapturePoints[i] != ____masterFlag && !__instance.AllCapturePoints[i].IsDeactivated)
-                    {
-                        flagnum++;
-                    }
-                }
                 if (flagnum == 1)//地图上剩余旗帜数量小于等于2，且攻城方控制G时，守城方将受到士气惩罚
                     num = -5;
                 if (flagnum == 0)
@@ -128,7 +132,7 @@ namespace Patches
                     Agent agent = null;
                     float num = float.MaxValue;
                     int count1 = 0, count2 = 0;
-                    float radius = 15f;//定义旗帜半径
+                    float radius = 14f;//定义旗帜半径
                     List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
                     AgentProximityMap.ProximityMapSearchStruct proximityMapSearchStruct = AgentProximityMap.BeginSearch(Mission.Current, flagCapturePoint.Position.AsVec2, radius, false);
                     while (proximityMapSearchStruct.LastFoundAgent != null)
@@ -137,7 +141,7 @@ namespace Patches
                         float num2 = lastFoundAgent.Position.DistanceSquared(flagCapturePoint.Position);
                         if (!lastFoundAgent.IsMount && lastFoundAgent.IsActive() && num2 <= radius * radius && !lastFoundAgent.IsAIControlled)
                         {
-                            if (flagCapturePoint.IsFullyRaised && lastFoundAgent.Team == flagOwnerTeam && (____dtSumCheckMorales % 0.66f < 0.25f))
+                            if (flagCapturePoint.IsFullyRaised && lastFoundAgent.Team == flagOwnerTeam && (____dtSumCheckMorales % 0.75f < 0.25f))
                             {
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
