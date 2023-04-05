@@ -64,7 +64,7 @@ namespace Patches
                     foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
                     {
                         MissionPeer component = networkPeer.GetComponent<MissionPeer>();
-                        if (component != null && component.Team?.Side == BattleSideEnum.Defender)
+                        if (component != null && component.Team?.Side == BattleSideEnum.Defender && component.Representative.Gold <= 600)
                         {
                             __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 120);//移除旗帜的金币数(防守方)
                             list.Add(new KeyValuePair<ushort, int>(512, 120));
@@ -142,7 +142,7 @@ namespace Patches
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (!flagCapturePoint.IsFullyRaised && ((lastFoundAgent.MissionPeer.Representative.Gold < 200 && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < 100 && lastFoundAgent.Team.IsDefender)) && (____dtSumCheckMorales % 0.5f < 0.25f))
+                            if (!flagCapturePoint.IsFullyRaised && ((lastFoundAgent.MissionPeer.Representative.Gold < 200 && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < 120 && lastFoundAgent.Team.IsDefender)) && (____dtSumCheckMorales % 0.5f < 0.25f))
                             {
                                 __instance.ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
