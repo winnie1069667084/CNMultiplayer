@@ -74,8 +74,8 @@ namespace Patches
                         MissionPeer component = networkPeer.GetComponent<MissionPeer>();
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 250/flagnum);//移除旗帜的金币数(防守方)，阶梯金币数与战场上剩余的旗帜数量挂钩
-                            list.Add(new KeyValuePair<ushort, int>(512, 250/flagnum));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 300/flagnum);//移除旗帜的金币数(防守方)，阶梯金币数与战场上剩余的旗帜数量挂钩
+                            list.Add(new KeyValuePair<ushort, int>(512, 300/flagnum));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -355,8 +355,8 @@ namespace Patches
     {
         public static void Postfix(int[] ____morales)
         {
-            ____morales[0] = 230;//防守方初始士气
-            ____morales[1] = 230;//进攻方初始士气
+            ____morales[0] = 275;//防守方初始士气
+            ____morales[1] = 275;//进攻方初始士气
         }
     }
 }

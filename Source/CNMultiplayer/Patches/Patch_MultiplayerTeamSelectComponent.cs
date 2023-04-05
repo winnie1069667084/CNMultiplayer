@@ -2,7 +2,7 @@
 using TaleWorlds.MountAndBlade;
 using NetworkMessages.FromServer;
 
-namespace CNMultiplayer
+namespace Patches
 {
     [HarmonyPatch(typeof(MultiplayerTeamSelectComponent), "GetAutoTeamBalanceDifference")]
     internal class Patch_GetAutoTeamBalanceDifference//修改两个阵营允许的最大人数差（只能用HarmonyHelper才能生效）
