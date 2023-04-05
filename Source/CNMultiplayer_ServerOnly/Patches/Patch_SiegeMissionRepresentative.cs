@@ -149,21 +149,21 @@ namespace Patches
             }
             if (text == null)
             {
-                __result = 100;
+                __result = 50;
                 return false;
             }
             string a = text.Replace("mp_siege_objective_", "");
             if (a == "wall_breach" || a == "castle_gate")
             {
-                __result = 600;
+                __result = 300;
                 return false;
             }
             if (!(a == "battering_ram") && !(a == "siege_tower"))
             {
-                __result = 100;
+                __result = 50;
                 return false;
             }
-            __result = 600;
+            __result = 300;
             return false;
         }
     }
