@@ -90,8 +90,8 @@ namespace Patches
                         MissionPeer component = networkPeer.GetComponent<MissionPeer>();
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 300/flagnum);//移除旗帜的金币数(防守方)，阶梯金币数与战场上剩余的旗帜数量挂钩
-                            list.Add(new KeyValuePair<ushort, int>(512, 300/flagnum));
+                            __instance.ChangeCurrentGoldForPeer(component, __instance.GetCurrentGoldForPeer(component) + 450/flagnum);//移除旗帜的金币数(防守方)，阶梯金币数与战场上剩余的旗帜数量挂钩
+                            list.Add(new KeyValuePair<ushort, int>(512, 450/flagnum));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
