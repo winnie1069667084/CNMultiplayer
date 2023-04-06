@@ -1,4 +1,4 @@
-453
+446
 flora_entity agriculture_chickpeas
 flora_entity agriculture_garlic
 flora_entity agriculture_leek
@@ -16,11 +16,7 @@ mesh arrow_new_icon
 mesh aserai_grandbazaar_wall
 mesh banner_empire_keep
 mesh barn_fence_a
-mesh barrier
 mesh battania_keep_door_case_a
-mesh bd_barrel_a
-mesh bd_barrel_b
-mesh bd_bucket_a
 mesh bd_cloth_a
 mesh bd_cloth_b
 mesh bd_cloth_hanging_e
@@ -30,11 +26,8 @@ mesh bd_cloth_wall_c
 mesh bd_ladder_b
 mesh bd_pole_6m
 mesh bd_rope_sturgia_a
-mesh bd_sack_b
-mesh bd_sack_c
 mesh bd_stand_a
 mesh bd_straw_a
-mesh bd_wood_c
 mesh bd_wood_heap_c
 mesh castle_scaffold_a
 mesh castle_scaffold_a_00

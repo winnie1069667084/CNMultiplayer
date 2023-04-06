@@ -1,4 +1,4 @@
-623
+606
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -41,7 +41,6 @@ mesh aserai_castle_gatehouse_a_l3_18
 mesh aserai_castle_gatehouse_a_l3_19
 mesh aserai_castle_gatehouse_a_l3_20
 mesh aserai_castle_gatehouse_a_l3_stairs
-mesh aserai_castle_stairs_b_l2
 mesh aserai_castle_stairs_c_l2
 mesh aserai_castle_wall_a_l3
 mesh aserai_castle_wall_a_l3_01
@@ -60,24 +59,12 @@ mesh aserai_castle_wall_a_roof_7
 mesh aserai_grandbazaar_wall
 mesh banner_empire_keep
 mesh barrier
-mesh bd_barrel_a
-mesh bd_barrel_b
-mesh bd_barrel_d
-mesh bd_barrel_e
-mesh bd_barrel_f
-mesh bd_cart_a
-mesh bd_cart_spoke
-mesh bd_cartbroken_a
-mesh bd_cartbroken_b
-mesh bd_cartbroken_c
-mesh bd_hay_cart_a
-mesh bd_sack_c
-mesh castle_plank_ramp_a
 mesh castle_scaffold_a
 mesh castle_scaffold_a_00
 mesh castle_scaffold_a_01
 mesh castle_scaffold_a_02
 mesh castle_scaffold_a_03
+mesh civilian_ladder_6m
 mesh dragon_banner_center
 mesh dragon_banner_dragonhead
 mesh dragon_banner_handle
@@ -99,7 +86,6 @@ mesh siege_barricade_a_state_5
 mesh siege_tower_5m_logs
 mesh sturgia_shield_a
 mesh vlandia_grandbazaar_ground_a
-mesh winery_wine_cart_empty
 mesh wooden_platform_2_a
 mesh wooden_platform_2_c
 mesh wooden_platform_2_fence_a
@@ -220,10 +206,7 @@ prefab bd_cart_heap_e
 prefab bd_cart_heap_g
 prefab bd_cart_heap_i
 prefab bd_cart_wheel_a
-prefab bd_cartbroken_a
-prefab bd_cartbroken_b
 prefab bd_cartbroken_c
-prefab bd_cartbroken_d
 prefab bd_chair_c_unsittable
 prefab bd_chair_d_tavern_unsittable
 prefab bd_chair_d_unsittable
@@ -242,7 +225,6 @@ prefab bd_fabric_b
 prefab bd_fabric_c
 prefab bd_flag_2
 prefab bd_goblet_sturgia_a
-prefab bd_hay_cart_a
 prefab bd_heap_b
 prefab bd_heap_c
 prefab bd_heap_d
@@ -379,6 +361,8 @@ prefab fishnet_a
 prefab fishnet_b
 prefab fishnet_d
 prefab fishnet_e
+prefab flag_pole_big_sergeant_A
+prefab flag_pole_big_sergeant_C
 prefab flag_pole_big_sergeant_E
 prefab flag_pole_big_sergeant_F
 prefab flag_pole_big_sergeant_main
@@ -532,7 +516,6 @@ prefab side
 prefab sidewalk_stone_a
 prefab siege_barricade_a
 prefab siege_barricade_c
-prefab siege_barricade_group_b
 prefab siege_ladder_11m_spawner
 prefab siege_ladder_6m_spawner
 prefab siege_ladder_7m_spawner
