@@ -186,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CNMSubModule.cs" />
+    <Compile Include="CNM_MissionMultiplayerSiege.cs" />
     <Compile Include="Patches\ChatCommands\AdminManager.cs" />
     <Compile Include="Patches\ChatCommands\AdminPanel\AdminPanel.cs" />
     <Compile Include="Patches\ChatCommands\BanManager.cs" />
@@ -226,7 +227,6 @@
     <Compile Include="Patches\Patch_MissionPeer.cs" />
     <Compile Include="Patches\Patch_MultiplayerWarmupComponent.cs" />
     <Compile Include="Patches\Patch_SiegeEntity.cs" />
-    <Compile Include="Patches\Patch_MissionMultiplayerSiege.cs" />
     <Compile Include="Patches\Patch_MultiplayerMissions.cs" />
     <Compile Include="Patches\Patch_NotAllPlayersJoinFixBehavior.cs" />
     <Compile Include="Patches\Patch_MissionCustomGameServerComponent.cs" />
