@@ -18,7 +18,7 @@ namespace Patches
             if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
             { return true; }
             float bluntDamageFactorByDamageType = __instance.GetBluntDamageFactorByDamageType(damageType);
-            float num = 70f / (70f + armorEffectiveness);
+            float num = 75f / (75f + armorEffectiveness);
             float num2 = magnitude * num;
             float num3 = bluntDamageFactorByDamageType * num2;
             if (damageType != DamageTypes.Blunt)

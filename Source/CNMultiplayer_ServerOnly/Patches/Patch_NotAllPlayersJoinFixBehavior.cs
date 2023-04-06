@@ -12,7 +12,7 @@ namespace Patches
     public class NotAllPlayersJoinFixBehavior : MissionNetwork
     {
         public CustomBattleServer DedicatedCustomServer { get; private set; }
-        protected int _checkTimeInterval = 45;//检查间隔
+        protected int _checkTimeInterval = 30;//检查间隔
         protected long _lastCheckedAt = 0;
         public override void OnBehaviorInitialize()
         {
