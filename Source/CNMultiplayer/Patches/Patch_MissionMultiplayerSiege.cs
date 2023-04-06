@@ -41,17 +41,18 @@ namespace Patches
     [HarmonyPatch(typeof(MissionMultiplayerSiege), "GetMoraleGain")]//攻城模式士气获取逻辑修改
     internal class Patch_GetMoraleGain
     {
-        public static bool Prefix(BattleSideEnum side, ref int __result, MissionMultiplayerSiege __instance, Agent ____masterFlagBestAgent, FlagCapturePoint ____masterFlag, ref int[] ____capturePointRemainingMoraleGains, ref MissionMultiplayerSiegeClient ____gameModeSiegeClient, ref MultiplayerGameNotificationsComponent ___NotificationsComponent)
+        public static bool Prefix(BattleSideEnum side, ref int __result, MissionMultiplayerSiege __instance, Agent ____masterFlagBestAgent, FlagCapturePoint ____masterFlag, ref int[] ____capturePointRemainingMoraleGains, ref MissionMultiplayerSiegeClient ____gameModeSiegeClient, ref MultiplayerGameNotificationsComponent ___NotificationsComponent, ref Team[] ____capturePointOwners)
         {
             int num = 0;
-            int flagnum = 0;//计算当前战场上除G外的剩余旗帜数量
-            for (int i = 0; i < __instance.AllCapturePoints.Count; i++)
+            int flagnum = 0;
+            for (int i = 0; i < __instance.AllCapturePoints.Count; i++)//计算当前战场上除G外的剩余旗帜数量
             {
                 if (__instance.AllCapturePoints[i] != ____masterFlag && !__instance.AllCapturePoints[i].IsDeactivated)
                 {
                     flagnum++;
                 }
             }
+
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             if (side == BattleSideEnum.Attacker)
             {
@@ -68,6 +69,21 @@ namespace Patches
                         continue;
                     }
 
+                    if (item.FlagIndex <= __instance.AllCapturePoints.Count - 2)//旗帜移除后解锁后续旗帜
+                    {
+                        var flagIndex = item.FlagIndex + 2;
+                        if (____capturePointOwners[item.FlagIndex + 1] == Team.Invalid)
+                            flagIndex--;
+                        foreach (FlagCapturePoint flagpoint in __instance.AllCapturePoints.Where((FlagCapturePoint flag) => flag.FlagIndex == flagIndex))
+                        {
+                            flagpoint.SetTeamColorsSynched(Mission.Current.DefenderTeam.Color, Mission.Current.DefenderTeam.Color2);
+                        }
+                        ____capturePointOwners[flagIndex] = Mission.Current.DefenderTeam;
+                        GameNetwork.BeginBroadcastModuleEvent();
+                        GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(flagIndex, Mission.Current.DefenderTeam));
+                        GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
+                        ____gameModeSiegeClient?.OnCapturePointOwnerChanged(__instance.AllCapturePoints[flagIndex], Mission.Current.DefenderTeam);
+                    }
                     //num += 90;//此处可以修改旗帜移除后攻城方获得的士气
                     foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
                     {
@@ -357,6 +373,23 @@ namespace Patches
         {
             ____morales[0] = 275;//防守方初始士气
             ____morales[1] = 275;//进攻方初始士气
+        }
+    }
+
+    [HarmonyPatch(typeof(MissionMultiplayerSiege), "AfterStart")]//旗帜所属队伍分配
+    internal class Patch_MissionMultiplayerSiege_AfterStart
+    {
+        public static void Postfix(MissionMultiplayerSiege __instance, ref Team[] ____capturePointOwners, MissionMultiplayerSiegeClient ____gameModeSiegeClient)
+        {
+            foreach (FlagCapturePoint flagCapturePoint in __instance.AllCapturePoints)//开局禁用DEFG旗帜
+            {
+                if (flagCapturePoint.FlagIndex >= 2)
+                {
+                    ____capturePointOwners[flagCapturePoint.FlagIndex] = Team.Invalid;
+                    flagCapturePoint.SetTeamColors(4284111450U, uint.MaxValue);
+                    ____gameModeSiegeClient?.OnCapturePointOwnerChanged(flagCapturePoint, Team.Invalid);
+                }
+            }
         }
     }
 }
