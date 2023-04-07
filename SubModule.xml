@@ -46,12 +46,6 @@
 				<GameType value = "MultiplayerGame"/>
 			</IncludedGameTypes>
     	</XmlNode>
-		<XmlNode>
-    		<XmlName id="MPClassDivisions" path="mpclassdivisions"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
-    	</XmlNode>
     	<XmlNode>
     		<XmlName id="CraftingPieces" path="mp_crafting_pieces"/>
 			<IncludedGameTypes>
