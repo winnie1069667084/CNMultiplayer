@@ -513,14 +513,12 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_empire_spatha" />
         <equipment slot="Item1"
-                   id="Item.mp_empire_long_spatha" />
-        <equipment slot="Item2"
                    id="Item.mp_reinforced_flat_kite_shield" />
         <equipment slot="Head"
                    id="Item.mp_ironlame_nasalhelm_over_imperial_mail" />
-		<equipment slot="Cape"
-                   id="Item.mp_empire_warrior_padded_armor_shoulder" />		   
         <equipment slot="Body"
                    id="Item.mp_legionary_mail" />
         <equipment slot="Leg"
@@ -2287,18 +2285,20 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
-        <equipment slot="Item1"
+        <equipment slot="Item0"
                    id="Item.mp_aserai_heavy_mace" />
-        <equipment slot="Item2"
+        <equipment slot="Item1"
                    id="Item.mp_emirs_oval_shield" />
         <equipment slot="Head"
-                   id="Item.mp_closed_desert_helmet_with_mail" />
+                   id="Item.mp_emirs_helmet" />
         <equipment slot="Body"
-                   id="Item.mp_desert_lamellar" />
+                   id="Item.mp_desert_scale_armor" />
 	 <equipment slot="Gloves"
                    id="Item.mp_plated_strip_gauntlets" />
         <equipment slot="Leg"
                    id="Item.mp_plated_strip_boots" />
+        <equipment slot="Cape"
+                   id="Item.mp_desert_scale_shoulders" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
@@ -2504,17 +2504,19 @@
     <Equipments>
       <EquipmentRoster>
         <equipment slot="Item0"
-                   id="Item.mp_light_crossbow" />
-        <equipment slot="Item1"
-                   id="Item.mp_bolts_western" />
-        <equipment slot="Item2"
                    id="Item.mp_vlandian_short_sword" />
+        <equipment slot="Item1"
+                   id="Item.mp_ironrim_kite_shield" />
+        <equipment slot="Item2"
+                   id="Item.mp_vlandian_throwing_axe_extra" />
         <equipment slot="Head"
-                   id="Item.mp_kettle_helmet_over_padded_cloth" />
+                   id="Item.mp_segmented_skullcap_over_mail_coif" />
         <equipment slot="Body"
-                   id="Item.mp_vlandia_bandit_a" />
+                   id="Item.mp_banded_leather_over_mail" />
         <equipment slot="Leg"
-                   id="Item.mp_empire_horseman_boots" />
+                   id="Item.mp_leather_cavalier_boots" />
+        <equipment slot="Gloves"
+                   id="Item.mp_guarded_padded_vambrace" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
@@ -2609,19 +2611,19 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
-        <equipment slot="Item0"
+       <equipment slot="Item0"
                    id="Item.mp_crossbow" />
-        <equipment slot="Item1"
-                   id="Item.mp_bolts_imperial" />
-        <equipment slot="Item2"
+       <equipment slot="Item1"
                    id="Item.mp_empire_mace" />
-		<equipment slot="Head"
+        <equipment slot="Item2"
+                   id="Item.mp_bolts_imperial" />
+	<equipment slot="Head"
                    id="Item.mp_empire_lord_helmet" />
-        <equipment slot="Body"
+       <equipment slot="Body"
                    id="Item.mp_imperial_scale_armor" />
-        <equipment slot="Leg"
+       <equipment slot="Leg"
                    id="Item.mp_decorated_imperial_boots" />
-        <equipment slot="Gloves"
+       <equipment slot="Gloves"
                    id="Item.mp_decorated_imperial_gauntlets" />
       </EquipmentRoster>
     </Equipments>
