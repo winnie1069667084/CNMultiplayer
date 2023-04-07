@@ -7,6 +7,7 @@ using ChatCommands;
 using Newtonsoft.Json;
 using System.IO;
 using TaleWorlds.Core;
+using TaleWorlds.ObjectSystem;
 
 namespace CNMultiplayer
 {
@@ -45,6 +46,8 @@ namespace CNMultiplayer
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
         {
             mission.AddMissionBehavior(new NotAllPlayersJoinFixBehavior());
+            MBObjectManager.Instance.ClearAllObjectsWithType(typeof(MultiplayerClassDivisions.MPHeroClass)); //目前只实现了根据游戏模式加载MPClassDivisions
+            new LoadXMLbyMode().ModeJudgment();
         }
 
         public override void OnMultiplayerGameStart(Game game, object starterObject)

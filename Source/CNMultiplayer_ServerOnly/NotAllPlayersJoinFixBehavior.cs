@@ -7,7 +7,7 @@ using TaleWorlds.MountAndBlade.Diamond;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.PlayerServices;
 
-namespace Patches
+namespace CNMultiplayer
 {
     public class NotAllPlayersJoinFixBehavior : MissionNetwork
     {

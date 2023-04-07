@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-16"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+ <tags>
+  <tag language="简体中文"/>
+ </tags>
+ <strings>
+  <string id="20000001" text="旗子没了！守旗！"/>
+  <string id="20000002" text="有人偷点！"/>
+  <string id="20000003" text="多上步兵！谢谢！"/>
+  <string id="20000004" text="失误了，对不起！"/>
+  <string id="20000005" text="收到！马上来！"/>
+  <string id="20000006" text="你真该死啊！"/>
+  <string id="20000007" text="来点人跟我走！"/>
+  <string id="20000008" text="摆盾墙堵窄口！"/>
+  <string id="20000009" text="步兵集合冲点！"/>
+  <string id="20000010" text="突比力斯堡"/>
+  <string id="20000011" text="新岩临城"/>
+  <string id="20000012" text="艾卡尔"/>
+  <string id="20000013" text="腓特烈堡"/>
+  <string id="20000014" text="哈得斯"/>
+  <string id="20000015" text="林间城寨"/>
+  <string id="20000016" text="纽伦堡"/>
+  <string id="20000017" text="黑尔斯堡"/>
+  <string id="20000018" text="贾梅耶德堡"/>
+  <string id="20000019" text="要塞"/>
+  <string id="20000020" text="塔尔木堡"/>
+  <string id="20000021" text="银之斯卡里茨"/>
+ </strings>
+</base>
