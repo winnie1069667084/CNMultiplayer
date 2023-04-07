@@ -155,7 +155,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="-8" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -226,7 +226,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_old_kite_sparring_shield" />			   
-      </Perk>
+      </Perk>-->
       <!-- Second perks -->
       <Perk game_mode="all"
             name="{=HMbGb1V2}Village Militia"
@@ -524,7 +524,7 @@
                        slot="Item1"
                        item="mp_western_bastard_sword" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000118}Change Chinese to see the description"
             description="{=00000119}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
@@ -553,7 +553,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="cleaver_2hsword_t3" />
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
             name="{=rJFGyaBS}Moloch"
@@ -903,7 +903,7 @@
                        item="mp_hood"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -978,7 +978,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="broad_arming_sword_t4" />			   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
@@ -1199,15 +1199,239 @@
                    cost="120"
                    casual_cost="140"
                    battle_cost="130"
-                   icon="Crossbowman_Light"
-                   armor="3"
-                   melee_ai="40"
-                   ranged_ai="80"
-                   movement_speed="0.74"
+                   icon="Special_JavelinThrower"
+                   armor="26"
+                   melee_ai="330"
+                   ranged_ai="0"
+                   movement_speed="0.82"
                    combat_movement_speed="0.7"
                    acceleration="3.0">
-    <Perks>
+	<Perks>
       <!-- First perks-->
+      <Perk game_mode="TeamDeathmatch, Siege, Battle"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=IUsT27oV}Provides +9 armor."
+			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_hood"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_segmented_skullcap_over_mail_coif"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_banded_leather_over_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_guarded_padded_vambrace"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_leather_cavalier_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_vlandian_short_sword" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_ironrim_kite_shield" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_vlandian_throwing_axe_extra" />
+      </Perk>
+      <Perk game_mode="TeamDeathmatch, Siege, Battle"
+            name="{=FLBYsvxp}Long Sword"
+            description="{=00000073}Change Chinese to see the description"
+			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
+            icon="PerkBetterSwords"
+            perk_list="1">	   
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_segmented_skullcap_over_mail_coif"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_banded_leather_over_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_guarded_padded_vambrace"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_leather_cavalier_boots"
+                       target="Player" />	
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_vlandian_long_sword" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_ironrim_kite_shield" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_vlandian_throwing_axe_extra" />
+      </Perk>
+      <Perk game_mode="TeamDeathmatch, Siege, Battle"
+            name="{=7MkoLtWC}Axe"
+            description="{=RW2X4CgM}Grants axe, effective at cutting flesh and destroying shields."
+            icon="PerkAxes"
+            hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
+            perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_segmented_skullcap_over_mail_coif"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_banded_leather_over_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_guarded_padded_vambrace"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_leather_cavalier_boots"
+                       target="Player" />	
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_vlandian_axe" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_ironrim_kite_shield" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_vlandian_throwing_axe_extra" />
+      </Perk>
+	  <Perk game_mode="Skirmish, Captain, Duel"
+            name="{=uaY0BfoI}Range Crossbow"
+            description="{=HgJetcmG}Grants a crossbow with a reinforced bow arm, increasing effective range."
+            icon="PerkHeavyCrossbows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_crossbow" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-13" />
+      </Perk>
+      <Perk game_mode="Skirmish, Captain, Duel"
+            name="{=f2A3Mhpd}Fast Crossbow"
+            description="{=TcaKHUUK}Grants a crossbow that is easier to draw. Reloading is quicker."
+            icon="PerkFasterRelease"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_crossbow_faster_reload" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-13" />
+      </Perk>
+      <Perk game_mode="Skirmish, Captain, Duel"
+            name="{=C9ufRSsL}Sword and Shield"
+            description="{=Yh1C24vG}Grants Sword and Shield, makes blocking easier, making you effective in melee. Also increases your movement speed.{newline} {newline}Grants Long Sword {newline}Grants Kite Shield {newline}Grants +5% movement speed"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <Effect type="DrivenProperty"
+                driven_property="MaxSpeedMultiplier"
+                value="0.05" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_western_kite_shield" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_vlandian_long_sword" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-13" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="TeamDeathmatch, Siege, Battle"
+            name="{=nGJvuvD3}Axe Thrower"
+            description="{=00000075}You are able throw axes much quicker with greater precision, throwing axes also deal extra damage to shields.{newline} {newline} Grants Throwing Axes{newline} {newline}+30% Damage to Shields"
+            icon="PerkThrowingAxes"
+            perk_list="2">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_vlandian_throwing_axe" />
+      </Perk>
+      <Perk game_mode="TeamDeathmatch, Siege, Battle"
+            name="{=Awc23bFS}Marauder"
+            description="{=00000074}Your years of being a Marauder has given you a strong arm, you throw much faster.{newline} {newline}Grants Stronger Javelins{newline} {newline}+10% Missle Release Speed {newline}+10% Ready Speed"
+            icon="PerkThrowingAxes"
+            perk_list="2">
+        <Effect type="ThrowingWeaponSpeed"
+                value="0.2" />
+        <Effect type="DrivenProperty"
+                value="0.2"
+                driven_property="ThrustOrRangedReadySpeedMultiplier" />
+      </Perk>	   
+      <Perk game_mode="TeamDeathmatch, Siege, Battle"
+            name="{=rTPnyeJ3}Shield Wall"
+            description="{=8B7pGxj4}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline}-30% Damage taken from Ranged Weapons"
+            icon="PerkStrongerShield"
+            perk_list="2">
+        <Effect type="DamageTaken"
+                value="-0.30"
+                hit_type="Ranged" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_tall_heater_shield_light" />
+      </Perk>
+	  <Perk game_mode="Skirmish, Duel"
+            name="{=dTpTyUtb}Replenished"
+            description="{=R2X605jB}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 10 Extra Bolts{newline} {newline}+25% Reload Speed"
+            icon="PerkWellSupplied"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                driven_property="ReloadSpeed"
+                value="0.125" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_western_extra" />
+      </Perk>
+      <Perk game_mode="Captain"
+            name="{=dTpTyUtb}Replenished"
+            description="{=xRK4nurx}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 20 Extra Bolts{newline} {newline}+25% Reload Speed"
+            icon="PerkWellSupplied"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                driven_property="ReloadSpeed"
+                value="0.125" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_western_extra_captain" />
+      </Perk>
+      <Perk game_mode="Skirmish, Captain, Duel"
+            name="{=vyI2KVKM}Bullseye"
+            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
+            icon="PerkSharpshooters"
+            perk_list="2">
+        <Effect type="RangedHeadShotDamage"
+                value="0.1" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_strong" />
+      </Perk>
+      <Perk game_mode="Skirmish, Captain, Duel"
+            name="{=xnDWqYKW}Hunter"
+            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
+            icon="PerkHunter"
+            perk_list="2">
+        <Effect type="MountDamage"
+                value="0.50"
+                hit_type="Ranged" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_strong" />
+      </Perk>
+    </Perks>			   
+    <!--<Perks>
+       First perks
       <Perk game_mode="all"
             name="{=uaY0BfoI}Range Crossbow"
             description="{=HgJetcmG}Grants a crossbow with a reinforced bow arm, increasing effective range."
@@ -1241,10 +1465,10 @@
                        slot="Item2"
                        item="mp_vlandian_long_sword" />
       </Perk>
-      <!-- Second perks-->
+       Second perks
       <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
             name="{=dTpTyUtb}Replenished"
-            description="{=R2X605jB}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 10 Extra Bolts{newline} {newline}+25% Reload Speed"
+            description="{=00000056}Change Chinese to see the description"
             icon="PerkWellSupplied"
             perk_list="2">
         <Effect type="DrivenProperty"
@@ -1289,7 +1513,7 @@
                        slot="Item1"
                        item="mp_bolts_strong" />
       </Perk>
-    </Perks>
+    </Perks>-->
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_vlandia"
                    hero="mp_heavy_ranged_vlandia_hero"
@@ -1651,6 +1875,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
                        item="mp_vlandia_horse_war_tougher" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_chain_barding" />
       </Perk>
       <Perk game_mode="Captain"
             name="{=VR2SwarS}Tougher Horse"
@@ -1695,6 +1922,12 @@
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="13" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_vlandia_horse_war" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_chain_barding" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_hood"
@@ -1786,13 +2019,7 @@
                        item="mp_western_long_spear" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_vlandian_noble_two_handed_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Horse"
-                       item="null" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="null" />
+                       item="mp_vlandian_noble_two_handed_sword" />			   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -2149,7 +2376,7 @@
                        slot="Item1"
                        item="mp_lighter_reinforced_kite_shield" />
       </Perk>
-	  <Perk game_mode="TeamDeathmatch, Siege, Battle"
+	  <!--<Perk game_mode="TeamDeathmatch, Siege, Battle"
             name="{=00000140}Change Chinese to see the description"
             description="{=00000141}Change Chinese to see the description"
             icon="PerkAxes"
@@ -2166,7 +2393,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="empire_mace_1_t2" />			   
-      </Perk>
+      </Perk>-->
       <Perk game_mode="Captain"
             name="{=rTPnyeJ3}Shield Wall"
             description="{=X8hLXbIc}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline} {newline}-15% Damage taken from Ranged Weapons"
@@ -2274,7 +2501,7 @@
                        slot="Item1"
                        item="mp_pilum" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000130}Menavlion"
             description="{=00000131}Change Chinese to see the description"
             icon="PerkPolearms"
@@ -2285,7 +2512,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_pilum" />			   
-      </Perk>
+      </Perk>-->
       <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
             description="{=IUsT27oV}Provides +9 armor."
@@ -2599,7 +2826,7 @@
                        slot="Item3"
                        item="mp_pilum" />			   
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000008}Change Chinese to see the description"
             description="{=00000009}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -2670,7 +2897,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="mp_pilum" />
-      </Perk>
+      </Perk>-->
       <Perk game_mode="Duel"
             name="{=o9a3hgVH}Duel Sword"
             description="{=Rl0GV742}Grants a Two Handed Sword for dueling"
@@ -2955,22 +3182,154 @@
   <MPClassDivision id="mp_light_ranged_empire"
                    hero="mp_light_ranged_empire_hero"
                    troop="mp_light_ranged_empire_troop"
-                   hero_idle_anim="act_empire_mp_archer_militia_idle"
+                   hero_idle_anim="act_vlandia_mp_sharpshooter_idle"
                    troop_idle_anim="act_idle_bow_1"
                    multiplier="0.68"
                    cost="110"
-                   casual_cost="120"
+                   casual_cost="180"
                    battle_cost="130"
-                   icon="Archer_Light"
-                   melee_ai="40"
-                   ranged_ai="80"
-                   armor="3"
+                   icon="Crossbowman_Heavy"
+                   melee_ai="330"
+                   ranged_ai="0"
+                   armor="35"
                    movement_speed="0.74"
                    combat_movement_speed="0.7"
                    acceleration="3.0">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="all"
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=0e17RZrZ}Arbalest"
+            description="{=5FPhltaZ}Replaces Crossbow with Arbalest, best in Calradia. Has a reinforced bow arm, increasing effective range."
+            icon="PerkHeavyCrossbows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_heavier_crossbow" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_imperial" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_empire_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_lord_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_imperial_scale_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_decorated_imperial_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_decorated_imperial_boots"
+                       target="Player" />			   
+      </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=yRTNfCfm}Faster Crossbow"
+            description="{=eSBNJlzS}Replaces Crossbow with Heavy Crossbow that is easier to draw. Reloading is quicker."
+            icon="PerkFasterRelease"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_heavier_crossbow_faster_draw" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_imperial" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_empire_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_lord_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_imperial_scale_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_decorated_imperial_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_decorated_imperial_boots"
+                       target="Player" />			   
+      </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=IUsT27oV}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_varangian_bra_royal"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_crossbow" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_imperial" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_empire_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_empire_lord_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_imperial_scale_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_decorated_imperial_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_decorated_imperial_boots"
+                       target="Player" />			   
+        <!--<RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
+                             target="Troops">
+          <Group>
+            <Item slot="Head"
+                  item="mp_guards_kettle_over_mail_coif" />
+            <Item slot="Body"
+                  item="mp_banded_leather_over_mail" />
+            <Item slot="Cape"
+                  item="mp_padded_leather_shoulders" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_kettle_hat_over_mail_coif" />
+            <Item slot="Body"
+                  item="mp_banded_leather_over_mail" />
+            <Item slot="Leg"
+                  item="mp_strapped_mail_chausses" />
+            <Item slot="Cape"
+                  item="mp_hood" />
+            <Item slot="Gloves"
+                  item="mp_mail_mitten" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_kettle_helmet_over_padded_cap" />
+            <Item slot="Body"
+                  item="mp_hauberk" />
+            <Item slot="Leg"
+                  item="mp_strapped_mail_chausses" />
+            <Item slot="Cape"
+                  item="mp_hood" />
+          </Group>
+        </RandomOnSpawnEffect>-->
+      </Perk>
+	  <Perk game_mode="Skirmish, Duel"
             name="{=wv9g9Kyr}Faster Bow"
             description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
             icon="PerkShortBows"
@@ -2984,7 +3343,29 @@
                        item="mp_fast_short_bow"
                        target="Troops" />
       </Perk>
-      <Perk game_mode="all"
+	  <Perk game_mode="Captain"
+            name="{=wv9g9Kyr}Faster Bow"
+            description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
+            icon="PerkShortBows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_fast_short_bow"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_empire_gladius"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_barbed"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_fast_short_bow"
+                       target="Troops" />
+      </Perk>
+      <Perk game_mode="Skirmish, Duel"
             name="{=i6OSr5QM}Range Bow"
             description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
             icon="PerkLongBows"
@@ -2998,7 +3379,29 @@
                        item="mp_short_bow"
                        target="Troops" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Captain"
+            name="{=i6OSr5QM}Range Bow"
+            description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
+            icon="PerkLongBows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_short_bow"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_empire_gladius"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_barbed"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_short_bow"
+                       target="Troops" />
+      </Perk>
+      <Perk game_mode="Skirmish, Duel"
             name="{=3eb3ZyiU}Superior Bow"
             description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
             icon="PerkRecurveBow"
@@ -3012,8 +3415,60 @@
                        item="mp_superior_bow"
                        target="Troops" />
       </Perk>
+      <Perk game_mode="Captain"
+            name="{=3eb3ZyiU}Superior Bow"
+            description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
+            icon="PerkRecurveBow"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_superior_bow"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_empire_gladius"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_barbed"
+                       target="Player" />		 
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_superior_bow"
+                       target="Troops" />
+      </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=xnDWqYKW}Hunter"
+            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
+            icon="PerkHunter"
+            perk_list="2">
+        <Effect type="MountDamage"
+                value="0.50"
+                hit_type="Ranged" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_imperial" />
+      </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=aVGSZhCN}Pavise Shield"
+            description="{=loPT6GUc}Grants Pavise Shield, makes blocking easier, effective against ranged units."
+            icon="PerkPaviseShield"
+            perk_list="2">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_reinforced_flat_kite_shield" />
+      </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=dTpTyUtb}Replenished"
+            description="{=00000005}Change Chinese to see the description"
+            icon="PerkWellSupplied"
+            perk_list="2">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_bolts_western_extra_captain" />
+      </Perk>
+	  <Perk game_mode="Skirmish, Duel"
             name="{=qZctRzJS}Mobility"
             description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
             icon="PerkFleetFooted"
@@ -3043,11 +3498,13 @@
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
             perk_list="2">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-22" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_arrows_barbed_extra" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Skirmish, Duel"
             name="{=vyI2KVKM}Bullseye"
             description="{=OAUd9UU8}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to headshots"
             icon="PerkSharpshooters"
@@ -3058,7 +3515,20 @@
                        slot="Item2"
                        item="mp_arrows_barbed_strong" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="Captain"
+            name="{=vyI2KVKM}Bullseye"
+            description="{=OAUd9UU8}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to headshots"
+            icon="PerkSharpshooters"
+            perk_list="2">
+        <Effect type="RangedHeadShotDamage"
+                value="0.1" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-22" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_barbed_strong" />
+      </Perk>
+      <Perk game_mode="Skirmish, Duel"
             name="{=s5qRvBOp}Marksman"
             description="{=YVwl3BgB}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy duration"
             icon="PerkStrongArrows"
@@ -3090,6 +3560,8 @@
             perk_list="2">
         <OnSpawnEffect type="TroopCountOnSpawn"
                        value="2.0" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-22" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -3445,6 +3917,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
                        item="mp_empire_horse_war_charger" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_imperial_scale_barding" />
       </Perk>
       <Perk game_mode="all"
             name="{=ZEdfJJP2}Flanker"
@@ -3464,7 +3939,13 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="13" />		   
+                       value="13" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_empire_horse_war" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_imperial_scale_barding" />			   
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_studded_imperial_neckguard"
@@ -3522,13 +4003,7 @@
                        item="mp_western_long_spear" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_empire_battle_axe" />	
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Horse"
-                       item="null" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="null" />		   
+                       item="mp_empire_battle_axe" />			   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -3805,7 +4280,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3864,7 +4339,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="khuzait_mace_1_t2" />			   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch, Duel"
             name="{=oBBE3ggU}Conscript"
@@ -4055,21 +4530,18 @@
                        slot="Item3"
                        item="mp_jereed_captain" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000089}Change Chinese to see the description"
             description="{=00000090}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
             icon="PerkTwoHandedSwords"
             perk_list="1">
-	      <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
+	    <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
                        item="ridged_2hsword_t4" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_spear" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="null" />
+                       item="mp_khuzait_spear" />
       </Perk>
 	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000120}Change Chinese to see the description"
@@ -4077,31 +4549,25 @@
 			hero_idle_anim="act_aserai_mp_guard_idle"
             icon="PerkTwoHandedSwords"
             perk_list="1">
-	      <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
+	    <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
                        item="war_razor_2hsword_t4" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_spear" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="null" />
-      </Perk>
+                       item="mp_khuzait_spear" />
+      </Perk>-->
 	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=6hwZwODh}Glaive"
             description="{=00000059}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
             icon="PerkPolearms"
             perk_list="1">
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_khuzait_glaive" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="null" />
+                       item="mp_khuzait_spear" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="null" />
+                       item="mp_khuzait_glaive" />			   
       </Perk>
       <Perk game_mode="Duel"
             name="{=o9a3hgVH}Duel Sword"
@@ -4217,18 +4683,394 @@
                    troop_idle_anim="act_idle_bow_1"
                    multiplier="0.68"
                    cost="110"
-                   casual_cost="120"
+                   casual_cost="150"
                    battle_cost="130"
-                   icon="Archer_Light"
-                   melee_ai="40"
-                   ranged_ai="80"
-                   armor="3"
-                   movement_speed="0.74"
+                   icon="Infantry_Heavy"
+                   melee_ai="330"
+                   ranged_ai="0"
+                   armor="45"
+                   movement_speed="0.80"
                    combat_movement_speed="0.7"
                    acceleration="3.0">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="all"
+      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+            name="{=iHljS6n5}Masked Nightmare"
+            description="{=00000003}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_khuzait_heavy_sabre" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+            name="{=VI4gQt8Q}Mace"
+            description="{=7I7fd6OQ}Grants Heavy Mace, effective against armored opponents."
+            icon="PerkMaces"
+            perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_plumed_nomad_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_khuzait_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />	   
+      </Perk>
+      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+            name="{=IFqtwpb0}Pikeman"
+            description="{=O3vdRYyZ}Your experience as a Pikeman allows you to use the Pike more effectively, thrusting faster.{newline} {newline}Grants Pike{newline} {newline}+20% Thrust Ready Speed"
+            icon="PerkPikes"
+            perk_list="1">
+        <Effect type="DrivenProperty"
+                value="0.2"
+                driven_property="ThrustOrRangedReadySpeedMultiplier" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_plumed_nomad_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />		
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_khuzait_heavy_sabre" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_khuzait_pike" />
+      </Perk>
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="khuzait_noble_sword_1_t5" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="khuzait_noble_sword_2_t5" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="khuzait_noble_sword_3_t5" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="khuzait_sword_4_t4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="winds_fury_sword_t3" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="khuzait_sword_5_t4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="ridged_sabre_sword_t4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000104}Masked Nightmare"
+            description="{=00000105}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_lamellar_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_eastern_lamellar_armor"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="the_scalpel_sword_t3" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_stronger_eastern_wicker_shield" />
+      </Perk>-->
+	  <Perk game_mode="Skirmish, Duel, Captain"
             name="{=wv9g9Kyr}Faster Bow"
             description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
             icon="PerkShortBows"
@@ -4242,7 +5084,7 @@
                        item="mp_fast_short_bow"
                        target="Troops" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Skirmish, Duel, Captain"
             name="{=i6OSr5QM}Range Bow"
             description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
             icon="PerkLongBows"
@@ -4256,7 +5098,7 @@
                        item="mp_short_bow"
                        target="Troops" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Skirmish, Duel, Captain"
             name="{=3eb3ZyiU}Superior Bow"
             description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
             icon="PerkRecurveBow"
@@ -4271,22 +5113,36 @@
                        target="Troops" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
+	  <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+            name="{=jf8luKVV}Brawny"
+            description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
+            icon="PerkBrawny"
             perk_list="2">
+        <Effect type="SpeedBonus"
+                value="0.35"
+                hit_type="Melee" />
         <Effect type="DrivenProperty"
-                value="0.25"
-                driven_property="BipedalRangedReadySpeedMultiplier" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponRotationalAccuracyPenaltyInRadians"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponWorstMobileAccuracyPenalty"
-                is_ratio="true" />
+      </Perk>
+	  <!--<Perk game_mode="Battle, TeamDeathmatch, Duel"
+            name="{=00000089}Change Chinese to see the description"
+            description="{=00000090}Change Chinese to see the description"
+            icon="PerkSword"
+            perk_list="2">
+	    <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="ridged_2hsword_t4" />
+      </Perk>-->
+      <Perk game_mode="Battle, TeamDeathmatch, Duel"
+            name="{=6hwZwODh}Glaive"
+            description="{=00000059}Change Chinese to see the description"
+            icon="PerkPolearms"
+            perk_list="2">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_khuzait_glaive" />
       </Perk>
       <Perk game_mode="Captain"
             name="{=eQLORdgE}Extra Arrows"
@@ -4295,9 +5151,43 @@
             perk_list="2">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_arrows_steppe_extra" />
+                       item="mp_arrows_steppe_extra"
+					   target="Troops" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_khuzait_mace"
+					   target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_steppe_extra"
+					   target="Player" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+            name="{=YeRH0SUc}Steppe Infantry"
+            description="{=00000064}Change Chinese to see the description"
+            icon="PerkFleetFooted"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="0.07"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <Effect type="DamageDealt"
+                value="0.10"
+                hit_type="Melee" />
+      </Perk>
+      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+            name="{=blqDgCtL}Big Game Hunter"
+            description="{=00000068}Change Chinese to see the description"
+            icon="PerkThrowingSpears"
+            perk_list="2">
+        <Effect type="MountDamage"
+                value="0.5"
+                hit_type="Ranged" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_khuzait_throwing_spear" />
+      </Perk>
+      <Perk game_mode="Captain"
             name="{=xnDWqYKW}Hunter"
             description="{=URPm3XjU}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
             icon="PerkHunter"
@@ -4306,25 +5196,17 @@
                 value="0.50"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_steppe_strong" />
-      </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyBeginTime"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyEndTime"
-                is_ratio="true" />
+                       slot="Item2"
+                       item="mp_arrows_steppe_strong"
+					   target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_arrows_steppe_strong" />
+                       item="mp_khuzait_mace"
+					   target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_arrows_steppe_strong" 
+					   target="Troops" />
       </Perk>
       <Perk game_mode="Captain"
             name="{=ydALXo9b}Reinforcements"
@@ -4333,7 +5215,58 @@
             perk_list="2">
         <OnSpawnEffect type="TroopCountOnSpawn"
                        value="2.0" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_khuzait_mace"
+					   target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_steppe"
+					   target="Player" />
       </Perk>
+	  <!--<Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000101}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="2">
+		<ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="DrivenProperty"
+                    driven_property="MaxSpeedMultiplier"
+                    value="0.05" />
+          </Effects>
+        </ConditionalEffect>		
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="tug_of_wooden_arrow_t1" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="tug_of_bone_arrow_t2" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="tug_of_whistling_arrow_t3" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="tug_of_the_roaming_horse_t1" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="tug_of_the_boundless_horde_t2" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="tug_of_the_endless_steppe_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_khuzait"
@@ -4793,6 +5726,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
                        item="mp_khuzait_horse_tougher" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_steppe_half_barding" />
       </Perk>
       <Perk game_mode="Captain"
             name="{=hchDYAKL}Lancer"
@@ -4830,6 +5766,12 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_khuzait_heavy_glaive" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_khuzait_horse_war" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_steppe_half_barding" />			   
       </Perk>
       <Perk game_mode="Captain"
             name="{=6hwZwODh}Glaive"
@@ -4851,6 +5793,9 @@
             description="{=qwnHqTdO}Upgrades your horses armor."
             icon="PerkFullBarding"
             perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_khuzait_horse_war" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="HorseHarness"
                        item="mp_studded_steppe_barding" />
@@ -4876,14 +5821,11 @@
                        slot="Item1"
                        item="mp_footmans_wicker_shield" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_khuzait_long_spear" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_khuzait_glaive" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Horse"
-                       item="null" />	
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="null" />	
+                       item="mp_khuzait_glaive" />			   
       </Perk>
       <Perk game_mode="Captain"
             name="{=WapSyVbv}Full Barding"
@@ -5163,7 +6105,7 @@
                        slot="Item0"
                        item="mp_aserai_axe" />		   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="all"
             name="{=00000134}Change Chinese to see the description"
             description="{=00000135}Change Chinese to see the description"
             icon="PerkBetterSwords"
@@ -5172,7 +6114,7 @@
                        slot="Item0"
                        item="aserai_sword_1_t2" />		   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000144}Change Chinese to see the description"
             description="{=00000145}Change Chinese to see the description"
             icon="PerkAxes"
@@ -5180,7 +6122,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="aserai_axe_1_t2" />		   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
@@ -5759,7 +6701,7 @@
 				</Group>
 			</RandomOnSpawnEffect>
 		</Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000114}Change Chinese to see the description"
             description="{=00000115}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
@@ -5786,7 +6728,7 @@
                        slot="Body"
                        item="mp_aserai_archer_armor"
                        target="Player" />
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
             name="{=rJFGyaBS}Moloch"
@@ -5873,18 +6815,332 @@
                    troop_idle_anim="act_idle_bow_1"
                    multiplier="0.68"
                    cost="110"
-                   casual_cost="120"
+                   casual_cost="150"
                    battle_cost="130"
-                   icon="Archer_Light"
-                   melee_ai="40"
-                   ranged_ai="80"
-                   armor="3"
-                   movement_speed="0.74"
+                   icon="Infantry_Heavy"
+                   melee_ai="330"
+                   ranged_ai="0"
+                   armor="40"
+                   movement_speed="0.80"
                    combat_movement_speed="0.7"
                    acceleration="3.0">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="all"
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=BbV2Pwzb}Reinforced Armor"
+            description="{=00000069}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_aserai_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />				   
+      </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=IFqtwpb0}Pikeman"
+            description="{=O3vdRYyZ}Your experience as a Pikeman allows you to use the Pike more effectively, thrusting faster.{newline} {newline}Grants Pike{newline} {newline}+20% Thrust Ready Speed"
+            icon="PerkPikes"
+            perk_list="1">
+        <Effect type="DrivenProperty"
+                value="0.2"
+                driven_property="ThrustOrRangedReadySpeedMultiplier" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_aserai_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />		
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_aserai_pike" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_emirs_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+      </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=v2WKbNZo}Rapid Throws"
+            description="{=00000065}Change Chinese to see the description"
+            icon="PerkMoreThrowingSpears"
+            perk_list="1">
+        <Effect type="DrivenProperty"
+                value="0.1"
+                driven_property="ThrustOrRangedReadySpeedMultiplier" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_aserai_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />				
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_emirs_helmet"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />			   
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+      </Perk>
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000102}Reinforced Armor"
+            description="{=00000103}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="aserai_noble_sword_1_t5" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />		   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000102}Reinforced Armor"
+            description="{=00000103}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="aserai_noble_sword_2_t5" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />		   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000102}Reinforced Armor"
+            description="{=00000103}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="aserai_noble_sword_4_t5" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />		   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000102}Reinforced Armor"
+            description="{=00000103}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="aserai_sword_4_t4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />		   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000102}Reinforced Armor"
+            description="{=00000103}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="ridged_sabre_sword_t4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />		   
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=00000102}Reinforced Armor"
+            description="{=00000103}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_scale_armor"
+                       target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="the_scalpel_sword_t3" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_emirs_oval_shield" />		   
+      </Perk>-->
+	  <Perk game_mode="Skirmish, Captain, Duel"
             name="{=wv9g9Kyr}Faster Bow"
             description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
             icon="PerkShortBows"
@@ -5898,7 +7154,7 @@
                        item="mp_fast_short_bow"
                        target="Troops" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Skirmish, Captain, Duel"
             name="{=i6OSr5QM}Range Bow"
             description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
             icon="PerkLongBows"
@@ -5912,7 +7168,7 @@
                        item="mp_short_bow"
                        target="Troops" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Skirmish, Captain, Duel"
             name="{=3eb3ZyiU}Superior Bow"
             description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
             icon="PerkRecurveBow"
@@ -5927,7 +7183,62 @@
                        target="Troops" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=rTPnyeJ3}Shield Wall"
+            description="{=00000066}Change Chinese to see the description"
+            icon="PerkStrongerShield"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                driven_property="AttributeShieldMissileCollisionBodySizeAdder"
+                value="0.2"
+                is_ratio="true" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_heavy_oval_shield" />
+      </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=sQCpO6sp}Melee Expert"
+            description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
+            icon="PerkGeneral"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.10"
+                    hit_type="Melee" />
+            <Effect type="DrivenProperty"
+                    driven_property="MaxSpeedMultiplier"
+                    value="0.05" />
+          </Effects>
+        </ConditionalEffect>
+      </Perk>
+	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=jf8luKVV}Brawny"
+            description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
+            icon="PerkBrawny"
+            perk_list="2">
+        <Effect type="SpeedBonus"
+                value="0.35"
+                hit_type="Melee" />
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+      </Perk>
+      <Perk game_mode="TeamDeathmatch, Battle"
+            name="{=PNZmPprx}Two Handed Sword"
+            description="{=00000067}Change Chinese to see the description"
+            icon="PerkTwoHandedSwords"
+            perk_list="2">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_aserai_two_handed_sword" />
+      </Perk>
+	  <Perk game_mode="Skirmish, Duel"
             name="{=qZctRzJS}Mobility"
             description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
             icon="PerkFleetFooted"
@@ -5960,8 +7271,18 @@
         <Effect type="DamageTaken"
                 value="-0.35"
                 hit_type="Ranged" />
+		  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+						 slot="Item2"
+						 item="mp_aserai_sword"
+						 target="Player" />
+		  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+						 slot="Item1"
+						 item="mp_arrows_barbed"
+						 target="Player" />
+		  <OnSpawnEffect type="ArmorOnSpawn"
+						 value="-27" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="Skirmish, Duel"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
             icon="PerkStrongArrows"
@@ -5985,8 +7306,18 @@
             perk_list="2">
         <OnSpawnEffect type="TroopCountOnSpawn"
                        value="2.0" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+					   slot="Item2"
+					   item="mp_aserai_sword"
+					   target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+					   slot="Item1"
+					   item="mp_arrows_barbed"
+					   target="Player" />
+		<OnSpawnEffect type="ArmorOnSpawn"
+					   value="-27" />
       </Perk>
-      <Perk game_mode="all"
+      <Perk game_mode="Skirmish, Duel"
             name="{=dTpTyUtb}Replenished"
             description="{=jpc34Myp}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants More Arrows{newline} {newline}+25% Reload Speed"
             icon="PerkWellSupplied"
@@ -5998,6 +7329,67 @@
                        slot="Item1"
                        item="mp_arrows_barbed_extra" />
       </Perk>
+      <Perk game_mode="Captain"
+            name="{=dTpTyUtb}Replenished"
+            description="{=jpc34Myp}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants More Arrows{newline} {newline}+25% Reload Speed"
+            icon="PerkWellSupplied"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                driven_property="ReloadSpeed"
+                value="0.125" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_arrows_barbed_extra" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+					   slot="Item2"
+					   item="mp_aserai_sword"
+					   target="Player" />
+		<OnSpawnEffect type="ArmorOnSpawn"
+					   value="-27" />
+      </Perk>
+	  <!--<Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000101}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="2">	
+		<ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="DrivenProperty"
+                    driven_property="MaxSpeedMultiplier"
+                    value="0.05" />
+          </Effects>
+        </ConditionalEffect>	
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="banner_of_faris_falcon_t1" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="banner_of_emirs_hawk_t2" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="banner_of_sultans_eagle_t3" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="banner_of_desert_winds_t1" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="banner_of_shifting_sands_t2" />
+          </Group>
+		  <Group>
+            <Item slot="Item0"
+                  item="banner_of_dust_devils_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_aserai"
@@ -6417,6 +7809,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
                        item="mp_aserai_horse_war_faster" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_half_mail_and_plate_barding" />
       </Perk>
       <Perk game_mode="all"
             name="{=cfSgK0nk}Agile Horse"
@@ -6425,13 +7820,19 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
-                       item="mp_aserai_horse_war_agile" />		   
+                       item="mp_aserai_horse_war_agile" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_half_mail_and_plate_barding" />			   
       </Perk>
       <Perk game_mode="all"
             name="{=WapSyVbv}Full Barding"
             description="{=qwnHqTdO}Upgrades your horses armor."
             icon="PerkFullBarding"
             perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_aserai_horse_war" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="HorseHarness"
                        item="mp_mail_and_plate_barding" />
@@ -6457,13 +7858,7 @@
                        item="mp_aserai_long_spear" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_aserai_two_handed_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Horse"
-                       item="null" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="null" />
+                       item="mp_aserai_two_handed_sword" />			   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -6710,7 +8105,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6754,7 +8149,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="northern_battle_axe_t3" />			   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=HbngeqNq}Spearman"
@@ -7181,7 +8576,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000108}Change Chinese to see the description"
             description="{=00000109}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7234,7 +8629,7 @@
                        slot="Leg"
                        item="mp_northern_plated_boots"
                        target="Player" />		   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
             name="{=DeWp2GjP}Shield Breaker"
@@ -7542,7 +8937,7 @@
                        slot="Item3"
                        item="mp_battania_noble_two_handed_sword" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000106}Change Chinese to see the description"
             description="{=00000107}Change Chinese to see the description"
             icon="PerkArmorUpgrade"
@@ -7651,7 +9046,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="dawnbreaker_sword_t3" />		   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=4bzbhbaP}Feller"
@@ -8307,6 +9702,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
                        item="mp_sturgia_horse_tougher" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_northern_ring_barding" />			   
       </Perk>
       <Perk game_mode="all"
             name="{=cfSgK0nk}Agile Horse"
@@ -8316,12 +9714,18 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
                        item="mp_sturgia_horse_agile" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_northern_ring_barding" />			   
       </Perk>
       <Perk game_mode="all"
             name="{=WapSyVbv}Full Barding"
             description="{=qwnHqTdO}Upgrades your horses armor."
             icon="PerkFullBarding"
             perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_sturgia_horse_war" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="HorseHarness"
                        item="mp_chain_horse_harness" />
@@ -8351,13 +9755,7 @@
                        item="mp_sturgia_long_spear" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_vlandian_bastard_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Horse"
-                       item="null" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="null" />
+                       item="mp_vlandian_bastard_axe" />			   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
@@ -8646,7 +10044,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000102}Change Chinese to see the description"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -8660,7 +10058,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="broad_falchion_sword_t3" />			   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="Siege, Battle, TeamDeathmatch"
             name="{=00000027}Change Chinese to see the description"
@@ -8745,7 +10143,7 @@
                        slot="Item1"
                        item="mp_battania_targe_b" />			   
       </Perk>
-	  <Perk game_mode="Siege, Battle, TeamDeathmatch"
+	  <!--<Perk game_mode="Siege, Battle, TeamDeathmatch"
             name="{=00000138}Change Chinese to see the description"
             description="{=00000139}Change Chinese to see the description"
             icon="PerkBloodRage"
@@ -8800,7 +10198,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_battania_targe_b" />			   
-      </Perk>
+      </Perk>-->
       <Perk game_mode="Siege, Battle, TeamDeathmatch"
             name="{=LB32tvzS}Die Hard"
             description="{=00000045}Change Chinese to see the description"
@@ -8969,7 +10367,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000110}Change Chinese to see the description"
             description="{=00000111}Change Chinese to see the description"
             icon="PerkTwoHandedSwords"
@@ -9006,7 +10404,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="cleaver_2hsword_t3" />
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
             name="{=0TtCRwmr}Athletic"
@@ -9504,6 +10902,25 @@
                        slot="Item1"
                        item="mp_battnia_heavy_mace" />
       </Perk>
+      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+            name="{=9XtgLuAL}Axe Specialist"
+            description="{=00000038}Change Chinese to see the description"
+            icon="PerkHeavyAxe"
+            perk_list="1">
+        <Effect type="ShieldDamage"
+                value="0.4" />
+		<Effect type="DamageDealt"
+                value="0.15"
+                hit_type="Melee"
+                damage_type="Cut" />
+		<OnSpawnEffect type="ArmorOnSpawn"
+                       value="5" />			
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_battania_axe" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="5" />
+      </Perk>
 	  <Perk game_mode="Skirmish, Duel"
             name="{=9XtgLuAL}Axe Specialist"
             description="{=ITnsSkJr}You are experienced in all disciplines of axe combat, with a deep hate for wood.{newline} {newline}Grants Axe{newline} {newline}+20% Damage Dealt to Shields"
@@ -9549,7 +10966,7 @@
                        slot="Item3"
                        item="mp_battania_noble_two_handed_sword" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <!--<Perk game_mode="Siege, TeamDeathmatch, Battle"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9593,7 +11010,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="battania_noble_sword_3_t5" />			   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=sQCpO6sp}Melee Expert"
@@ -10139,7 +11556,10 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
-                       item="mp_battania_pony_agile" />		   
+                       item="mp_battania_pony_agile" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_battania_horse_harness" />			   
       </Perk>
       <Perk game_mode="all"
             name="{=VR2SwarS}Tougher Horse"
@@ -10148,7 +11568,10 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
-                       item="mp_battania_horse_war" />		   
+                       item="mp_battania_horse_war" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_battania_horse_harness" />			   
       </Perk>
       <Perk game_mode="all"
             name="{=jk3I7cqY}Cured Leather Armor"
@@ -10159,7 +11582,13 @@
                 value="-0.20"
                 damage_type="Pierce" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="4" />		   
+                       value="4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_battania_pony" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_battania_horse_harness" />			   
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_battania_civil_cape"
@@ -10227,13 +11656,7 @@
                        item="mp_battania_long_spear" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_battania_bastard_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Horse"
-                       item="null" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="null" />
+                       item="mp_battania_bastard_sword" />			   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="Siege, TeamDeathmatch, Battle"
@@ -10429,1902 +11852,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_battania_cavalry_spear" />
-      </Perk>
-    </Perks>
-  </MPClassDivision>
-
-  <!--阿塞莱资深步兵-->
-    <MPClassDivision id="mp_heavy_infantry_aserai"
-                   hero="mp_heavy_infantry_aserai_hero"
-                   troop="mp_heavy_infantry_aserai_troop"
-                   hero_idle_anim="act_aserai_aserai_mp_archer_idle"
-                   troop_idle_anim="act_idle_bow_1"
-                   multiplier="0.68"
-                   cost="110"
-                   casual_cost="150"
-                   battle_cost="130"
-                   icon="Infantry_Heavy"
-                   melee_ai="330"
-                   ranged_ai="0"
-                   armor="40"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.7"
-                   acceleration="3.0">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=00000069}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />				   
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=IFqtwpb0}Pikeman"
-            description="{=O3vdRYyZ}Your experience as a Pikeman allows you to use the Pike more effectively, thrusting faster.{newline} {newline}Grants Pike{newline} {newline}+20% Thrust Ready Speed"
-            icon="PerkPikes"
-            perk_list="1">
-        <Effect type="DrivenProperty"
-                value="0.2"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />		
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_aserai_pike" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_emirs_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=v2WKbNZo}Rapid Throws"
-            description="{=00000065}Change Chinese to see the description"
-            icon="PerkMoreThrowingSpears"
-            perk_list="1">
-        <Effect type="DrivenProperty"
-                value="0.1"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />				
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_jereed" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_emirs_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />			   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="aserai_noble_sword_1_t5" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />		   
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="aserai_noble_sword_2_t5" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />		   
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="aserai_noble_sword_4_t5" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />		   
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="aserai_sword_4_t4" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />		   
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="ridged_sabre_sword_t4" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />		   
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_scale_armor"
-                       target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="the_scalpel_sword_t3" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_emirs_oval_shield" />		   
-      </Perk>
-	  <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=wv9g9Kyr}Faster Bow"
-            description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
-            icon="PerkShortBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=i6OSr5QM}Range Bow"
-            description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
-            icon="PerkLongBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=3eb3ZyiU}Superior Bow"
-            description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
-            icon="PerkRecurveBow"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Troops" />
-      </Perk>
-      <!-- Second perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=rTPnyeJ3}Shield Wall"
-            description="{=00000066}Change Chinese to see the description"
-            icon="PerkStrongerShield"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="AttributeShieldMissileCollisionBodySizeAdder"
-                value="0.2"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_heavy_oval_shield" />
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=sQCpO6sp}Melee Expert"
-            description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
-            icon="PerkGeneral"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee" />
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=jf8luKVV}Brawny"
-            description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
-            icon="PerkBrawny"
-            perk_list="2">
-        <Effect type="SpeedBonus"
-                value="0.35"
-                hit_type="Melee" />
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-      </Perk>
-      <Perk game_mode="TeamDeathmatch, Battle"
-            name="{=PNZmPprx}Two Handed Sword"
-            description="{=00000067}Change Chinese to see the description"
-            icon="PerkTwoHandedSwords"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_two_handed_sword" />
-      </Perk>
-	  <Perk game_mode="Skirmish, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="0.25"
-                    driven_property="BipedalRangedReadySpeedMultiplier" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponWorstMobileAccuracyPenalty"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=XUo9YBoQ}Pin Cushion"
-            description="{=TGcbxiOD}You have been shot at so much, you have learned to mitigate ranged weapon damage to yourself.{newline} {newline}-35% Damage taken from Ranged Weapons"
-            icon="PerkArmorUpgrade"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.35"
-                hit_type="Ranged" />
-		  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						 slot="Item2"
-						 item="mp_aserai_sword"
-						 target="Player" />
-		  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						 slot="Item1"
-						 item="mp_arrows_barbed"
-						 target="Player" />
-		  <OnSpawnEffect type="ArmorOnSpawn"
-						 value="-27" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyBeginTime"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyEndTime"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_barbed_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-					   slot="Item2"
-					   item="mp_aserai_sword"
-					   target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-					   slot="Item1"
-					   item="mp_arrows_barbed"
-					   target="Player" />
-		<OnSpawnEffect type="ArmorOnSpawn"
-					   value="-27" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel"
-            name="{=dTpTyUtb}Replenished"
-            description="{=jpc34Myp}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants More Arrows{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_barbed_extra" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=dTpTyUtb}Replenished"
-            description="{=jpc34Myp}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants More Arrows{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_barbed_extra" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-					   slot="Item2"
-					   item="mp_aserai_sword"
-					   target="Player" />
-		<OnSpawnEffect type="ArmorOnSpawn"
-					   value="-27" />
-      </Perk>
-	  <!--<Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000101}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="2">	
-		<ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-          </Effects>
-        </ConditionalEffect>	
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
-          <Group>
-            <Item slot="Item0"
-                  item="banner_of_faris_falcon_t1" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="banner_of_emirs_hawk_t2" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="banner_of_sultans_eagle_t3" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="banner_of_desert_winds_t1" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="banner_of_shifting_sands_t2" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="banner_of_dust_devils_t3" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>-->
-    </Perks>
-  </MPClassDivision>
-
-  <!--库塞特达尔罕-->
-  <MPClassDivision id="mp_heavier_infantry_khuzait"
-                   hero="mp_heavier_infantry_khuzait_hero"
-                   troop="mp_heavier_infantry_khuzait_troop"
-                   hero_idle_anim="act_khuzait_mp_steppe_bow_idle"
-                   troop_idle_anim="act_idle_bow_1"
-                   multiplier="0.68"
-                   cost="110"
-                   casual_cost="150"
-                   battle_cost="130"
-                   icon="Infantry_Heavy"
-                   melee_ai="330"
-                   ranged_ai="0"
-                   armor="45"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.7"
-                   acceleration="3.0">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
-            name="{=iHljS6n5}Masked Nightmare"
-            description="{=00000003}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_heavy_sabre" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
-            name="{=VI4gQt8Q}Mace"
-            description="{=7I7fd6OQ}Grants Heavy Mace, effective against armored opponents."
-            icon="PerkMaces"
-            perk_list="1">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_plumed_nomad_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />	   
-      </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
-            name="{=IFqtwpb0}Pikeman"
-            description="{=O3vdRYyZ}Your experience as a Pikeman allows you to use the Pike more effectively, thrusting faster.{newline} {newline}Grants Pike{newline} {newline}+20% Thrust Ready Speed"
-            icon="PerkPikes"
-            perk_list="1">
-        <Effect type="DrivenProperty"
-                value="0.2"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_plumed_nomad_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />		
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_khuzait_heavy_sabre" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_stronger_eastern_wicker_shield" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_pike" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="khuzait_noble_sword_1_t5" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="khuzait_noble_sword_2_t5" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="khuzait_noble_sword_3_t5" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="khuzait_sword_4_t4" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="winds_fury_sword_t3" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="khuzait_sword_5_t4" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="ridged_sabre_sword_t4" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=00000104}Masked Nightmare"
-            description="{=00000105}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="the_scalpel_sword_t3" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
-	  <Perk game_mode="Skirmish, Duel, Captain"
-            name="{=wv9g9Kyr}Faster Bow"
-            description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
-            icon="PerkShortBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel, Captain"
-            name="{=i6OSr5QM}Range Bow"
-            description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
-            icon="PerkLongBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel, Captain"
-            name="{=3eb3ZyiU}Superior Bow"
-            description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
-            icon="PerkRecurveBow"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Troops" />
-      </Perk>
-      <!-- Second perks-->
-	  <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=jf8luKVV}Brawny"
-            description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
-            icon="PerkBrawny"
-            perk_list="2">
-        <Effect type="SpeedBonus"
-                value="0.35"
-                hit_type="Melee" />
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-      </Perk>
-	  <!--<Perk game_mode="Battle, TeamDeathmatch, Duel"
-            name="{=00000089}Change Chinese to see the description"
-            description="{=00000090}Change Chinese to see the description"
-            icon="PerkSword"
-            perk_list="2">
-	    <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="ridged_2hsword_t4" />
-      </Perk>-->
-      <Perk game_mode="Battle, TeamDeathmatch, Duel"
-            name="{=6hwZwODh}Glaive"
-            description="{=00000059}Change Chinese to see the description"
-            icon="PerkPolearms"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_glaive" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=eQLORdgE}Extra Arrows"
-            description="{=0yGhTKey}Grants Extra Arrows."
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_steppe_extra"
-					   target="Troops" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_mace"
-					   target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_steppe_extra"
-					   target="Player" />
-      </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=YeRH0SUc}Steppe Infantry"
-            description="{=00000064}Change Chinese to see the description"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.07"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-        <Effect type="DamageDealt"
-                value="0.10"
-                hit_type="Melee" />
-      </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=blqDgCtL}Big Game Hunter"
-            description="{=00000068}Change Chinese to see the description"
-            icon="PerkThrowingSpears"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.5"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_khuzait_throwing_spear" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=xnDWqYKW}Hunter"
-            description="{=URPm3XjU}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
-            icon="PerkHunter"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.50"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_steppe_strong"
-					   target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_mace"
-					   target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_steppe_strong" 
-					   target="Troops" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_mace"
-					   target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_steppe"
-					   target="Player" />
-      </Perk>
-	  <!--<Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000101}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="2">
-		<ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-          </Effects>
-        </ConditionalEffect>		
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
-          <Group>
-            <Item slot="Item0"
-                  item="tug_of_wooden_arrow_t1" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="tug_of_bone_arrow_t2" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="tug_of_whistling_arrow_t3" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="tug_of_the_roaming_horse_t1" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="tug_of_the_boundless_horde_t2" />
-          </Group>
-		  <Group>
-            <Item slot="Item0"
-                  item="tug_of_the_endless_steppe_t3" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>-->
-    </Perks>
-  </MPClassDivision>
-
-  <!--瓦兰迪亚飞斧手-->
-  <MPClassDivision id="mp_skirmisher_vlandia"
-                   hero="mp_skirmisher_vlandia_hero"
-                   troop="mp_skirmisher_vlandia_troop"
-                   hero_idle_anim="act_vlandia_mp_arbelist_idle"
-                   troop_idle_anim="act_idle_crossbow_1"
-                   multiplier="0.68"
-                   cost="120"
-                   casual_cost="140"
-                   battle_cost="130"
-                   icon="Special_JavelinThrower"
-                   armor="26"
-                   melee_ai="330"
-                   ranged_ai="0"
-                   movement_speed="0.82"
-                   combat_movement_speed="0.7"
-                   acceleration="3.0">
-	<Perks>
-      <!-- First perks-->
-      <Perk game_mode="TeamDeathmatch, Siege, Battle"
-            name="{=DlKYZgA3}Improved Armor"
-            description="{=IUsT27oV}Provides +9 armor."
-			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_hood"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_segmented_skullcap_over_mail_coif"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_banded_leather_over_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_guarded_padded_vambrace"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_leather_cavalier_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_short_sword" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_ironrim_kite_shield" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_throwing_axe_extra" />
-      </Perk>
-      <Perk game_mode="TeamDeathmatch, Siege, Battle"
-            name="{=FLBYsvxp}Long Sword"
-            description="{=00000073}Change Chinese to see the description"
-			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
-            icon="PerkBetterSwords"
-            perk_list="1">	   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_segmented_skullcap_over_mail_coif"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_banded_leather_over_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_guarded_padded_vambrace"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_leather_cavalier_boots"
-                       target="Player" />	
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_long_sword" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_ironrim_kite_shield" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_throwing_axe_extra" />
-      </Perk>
-      <Perk game_mode="TeamDeathmatch, Siege, Battle"
-            name="{=7MkoLtWC}Axe"
-            description="{=RW2X4CgM}Grants axe, effective at cutting flesh and destroying shields."
-            icon="PerkAxes"
-            hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
-            perk_list="1">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_segmented_skullcap_over_mail_coif"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_banded_leather_over_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_guarded_padded_vambrace"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_leather_cavalier_boots"
-                       target="Player" />	
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_axe" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_ironrim_kite_shield" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_throwing_axe_extra" />
-      </Perk>
-	  <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=uaY0BfoI}Range Crossbow"
-            description="{=HgJetcmG}Grants a crossbow with a reinforced bow arm, increasing effective range."
-            icon="PerkHeavyCrossbows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_crossbow" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="-13" />
-      </Perk>
-      <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=f2A3Mhpd}Fast Crossbow"
-            description="{=TcaKHUUK}Grants a crossbow that is easier to draw. Reloading is quicker."
-            icon="PerkFasterRelease"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_crossbow_faster_reload" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="-13" />
-      </Perk>
-      <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=C9ufRSsL}Sword and Shield"
-            description="{=Yh1C24vG}Grants Sword and Shield, makes blocking easier, making you effective in melee. Also increases your movement speed.{newline} {newline}Grants Long Sword {newline}Grants Kite Shield {newline}Grants +5% movement speed"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <Effect type="DrivenProperty"
-                driven_property="MaxSpeedMultiplier"
-                value="0.05" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_western_kite_shield" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_long_sword" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="-13" />
-      </Perk>
-      <!-- Second perks-->
-      <Perk game_mode="TeamDeathmatch, Siege, Battle"
-            name="{=nGJvuvD3}Axe Thrower"
-            description="{=00000075}You are able throw axes much quicker with greater precision, throwing axes also deal extra damage to shields.{newline} {newline} Grants Throwing Axes{newline} {newline}+30% Damage to Shields"
-            icon="PerkThrowingAxes"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_vlandian_throwing_axe" />
-      </Perk>
-      <Perk game_mode="TeamDeathmatch, Siege, Battle"
-            name="{=Awc23bFS}Marauder"
-            description="{=00000074}Your years of being a Marauder has given you a strong arm, you throw much faster.{newline} {newline}Grants Stronger Javelins{newline} {newline}+10% Missle Release Speed {newline}+10% Ready Speed"
-            icon="PerkThrowingAxes"
-            perk_list="2">
-        <Effect type="ThrowingWeaponSpeed"
-                value="0.2" />
-        <Effect type="DrivenProperty"
-                value="0.2"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-      </Perk>	   
-      <Perk game_mode="TeamDeathmatch, Siege, Battle"
-            name="{=rTPnyeJ3}Shield Wall"
-            description="{=8B7pGxj4}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline}-30% Damage taken from Ranged Weapons"
-            icon="PerkStrongerShield"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.30"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_tall_heater_shield_light" />
-      </Perk>
-	  <Perk game_mode="Skirmish, Duel"
-            name="{=dTpTyUtb}Replenished"
-            description="{=R2X605jB}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 10 Extra Bolts{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=dTpTyUtb}Replenished"
-            description="{=xRK4nurx}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 20 Extra Bolts{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra_captain" />
-      </Perk>
-      <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=vyI2KVKM}Bullseye"
-            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
-            icon="PerkSharpshooters"
-            perk_list="2">
-        <Effect type="RangedHeadShotDamage"
-                value="0.1" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_strong" />
-      </Perk>
-      <Perk game_mode="Skirmish, Captain, Duel"
-            name="{=xnDWqYKW}Hunter"
-            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
-            icon="PerkHunter"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.50"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_strong" />
-      </Perk>
-    </Perks>			   
-    <!--<Perks>
-       First perks
-      <Perk game_mode="all"
-            name="{=uaY0BfoI}Range Crossbow"
-            description="{=HgJetcmG}Grants a crossbow with a reinforced bow arm, increasing effective range."
-            icon="PerkHeavyCrossbows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_crossbow" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=f2A3Mhpd}Fast Crossbow"
-            description="{=TcaKHUUK}Grants a crossbow that is easier to draw. Reloading is quicker."
-            icon="PerkFasterRelease"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_crossbow_faster_reload" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=C9ufRSsL}Sword and Shield"
-            description="{=Yh1C24vG}Grants Sword and Shield, makes blocking easier, making you effective in melee. Also increases your movement speed.{newline} {newline}Grants Long Sword {newline}Grants Kite Shield {newline}Grants +5% movement speed"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <Effect type="DrivenProperty"
-                driven_property="MaxSpeedMultiplier"
-                value="0.05" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_western_kite_shield" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_long_sword" />
-      </Perk>
-       Second perks
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=dTpTyUtb}Replenished"
-            description="{=00000056}Change Chinese to see the description"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=dTpTyUtb}Replenished"
-            description="{=xRK4nurx}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 20 Extra Bolts{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra_captain" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=vyI2KVKM}Bullseye"
-            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
-            icon="PerkSharpshooters"
-            perk_list="2">
-        <Effect type="RangedHeadShotDamage"
-                value="0.1" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_strong" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=xnDWqYKW}Hunter"
-            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
-            icon="PerkHunter"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.50"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_strong" />
-      </Perk>
-    </Perks>-->
-  </MPClassDivision>
-
-  <!--帝国弩手军士-->
-  <MPClassDivision id="mp_heavy_crossbow_empire"
-                   hero="mp_heavy_crossbow_empire_hero"
-                   troop="mp_heavy_crossbow_empire_troop"
-                   hero_idle_anim="act_vlandia_mp_sharpshooter_idle"
-                   troop_idle_anim="act_idle_bow_1"
-                   multiplier="0.68"
-                   cost="110"
-                   casual_cost="180"
-                   battle_cost="130"
-                   icon="Crossbowman_Heavy"
-                   melee_ai="330"
-                   ranged_ai="0"
-                   armor="35"
-                   movement_speed="0.74"
-                   combat_movement_speed="0.7"
-                   acceleration="3.0">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=0e17RZrZ}Arbalest"
-            description="{=5FPhltaZ}Replaces Crossbow with Arbalest, best in Calradia. Has a reinforced bow arm, increasing effective range."
-            icon="PerkHeavyCrossbows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_heavier_crossbow" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_imperial" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_empire_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_empire_lord_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_imperial_scale_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_decorated_imperial_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_decorated_imperial_boots"
-                       target="Player" />			   
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=yRTNfCfm}Faster Crossbow"
-            description="{=eSBNJlzS}Replaces Crossbow with Heavy Crossbow that is easier to draw. Reloading is quicker."
-            icon="PerkFasterRelease"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_heavier_crossbow_faster_draw" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_imperial" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_empire_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_empire_lord_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_imperial_scale_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_decorated_imperial_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_decorated_imperial_boots"
-                       target="Player" />			   
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=DlKYZgA3}Improved Armor"
-            description="{=IUsT27oV}Provides +9 armor."
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_varangian_bra_royal"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_crossbow" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_imperial" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_empire_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_empire_lord_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_imperial_scale_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_decorated_imperial_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_decorated_imperial_boots"
-                       target="Player" />			   
-        <!--<RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_guards_kettle_over_mail_coif" />
-            <Item slot="Body"
-                  item="mp_banded_leather_over_mail" />
-            <Item slot="Cape"
-                  item="mp_padded_leather_shoulders" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_kettle_hat_over_mail_coif" />
-            <Item slot="Body"
-                  item="mp_banded_leather_over_mail" />
-            <Item slot="Leg"
-                  item="mp_strapped_mail_chausses" />
-            <Item slot="Cape"
-                  item="mp_hood" />
-            <Item slot="Gloves"
-                  item="mp_mail_mitten" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_kettle_helmet_over_padded_cap" />
-            <Item slot="Body"
-                  item="mp_hauberk" />
-            <Item slot="Leg"
-                  item="mp_strapped_mail_chausses" />
-            <Item slot="Cape"
-                  item="mp_hood" />
-          </Group>
-        </RandomOnSpawnEffect>-->
-      </Perk>
-	  <Perk game_mode="Skirmish, Duel"
-            name="{=wv9g9Kyr}Faster Bow"
-            description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
-            icon="PerkShortBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Troops" />
-      </Perk>
-	  <Perk game_mode="Captain"
-            name="{=wv9g9Kyr}Faster Bow"
-            description="{=8pBro9eG}Made from flexible wood, this bow can be drawn a lot quicker."
-            icon="PerkShortBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_empire_gladius"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_fast_short_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel"
-            name="{=i6OSr5QM}Range Bow"
-            description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
-            icon="PerkLongBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=i6OSr5QM}Range Bow"
-            description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
-            icon="PerkLongBows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_empire_gladius"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_short_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel"
-            name="{=3eb3ZyiU}Superior Bow"
-            description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
-            icon="PerkRecurveBow"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Troops" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=3eb3ZyiU}Superior Bow"
-            description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
-            icon="PerkRecurveBow"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_empire_gladius"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed"
-                       target="Player" />		 
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_superior_bow"
-                       target="Troops" />
-      </Perk>
-      <!-- Second perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=xnDWqYKW}Hunter"
-            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
-            icon="PerkHunter"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.50"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_imperial" />
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=aVGSZhCN}Pavise Shield"
-            description="{=loPT6GUc}Grants Pavise Shield, makes blocking easier, effective against ranged units."
-            icon="PerkPaviseShield"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_reinforced_flat_kite_shield" />
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=dTpTyUtb}Replenished"
-            description="{=00000005}Change Chinese to see the description"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra_captain" />
-      </Perk>
-	  <Perk game_mode="Skirmish, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="0.25"
-                    driven_property="BipedalRangedReadySpeedMultiplier" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponWorstMobileAccuracyPenalty"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=eQLORdgE}Extra Arrows"
-            description="{=0yGhTKey}Grants Extra Arrows."
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="-22" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed_extra" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel"
-            name="{=vyI2KVKM}Bullseye"
-            description="{=OAUd9UU8}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to headshots"
-            icon="PerkSharpshooters"
-            perk_list="2">
-        <Effect type="RangedHeadShotDamage"
-                value="0.1" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=vyI2KVKM}Bullseye"
-            description="{=OAUd9UU8}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to headshots"
-            icon="PerkSharpshooters"
-            perk_list="2">
-        <Effect type="RangedHeadShotDamage"
-                value="0.1" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="-22" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed_strong" />
-      </Perk>
-      <Perk game_mode="Skirmish, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=YVwl3BgB}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyBeginTime"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyEndTime"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="-22" />
       </Perk>
     </Perks>
   </MPClassDivision>

@@ -34,20 +34,8 @@
 				<GameType value = "MultiplayerGame"/>
 			</IncludedGameTypes>
     	</XmlNode>
-		<XmlNode>                
-			<XmlName id="Items" path="items"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
-		</XmlNode> 
 		<XmlNode>
     		<XmlName id="MPCharacters" path="mpcharacters"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
-    	</XmlNode>
-		<XmlNode>
-    		<XmlName id="MPClassDivisions" path="mpclassdivisions"/>
 			<IncludedGameTypes>
 				<GameType value = "MultiplayerGame"/>
 			</IncludedGameTypes>
@@ -58,15 +46,6 @@
 				<GameType value = "MultiplayerGame"/>
 			</IncludedGameTypes>
     	</XmlNode>
-		<XmlNode>                
-			<XmlName id="CraftingPieces" path="crafting_pieces"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<XmlNode>                
-			<XmlName id="CraftingTemplates" path="crafting_templates"/>
-		</XmlNode>
     	<XmlNode>
     		<XmlName id="Monsters" path="monsters"/>
     	</XmlNode>
