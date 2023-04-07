@@ -186,6 +186,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CNMSubModule.cs" />
+    <Compile Include="CNM_MissionMultiplayerSiege.cs" />
+    <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="Patches\ChatCommands\AdminManager.cs" />
     <Compile Include="Patches\ChatCommands\AdminPanel\AdminPanel.cs" />
     <Compile Include="Patches\ChatCommands\BanManager.cs" />

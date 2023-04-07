@@ -1,4 +1,4 @@
-1015
+1012
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -55,7 +55,6 @@ flora_entity wheats_yellow
 mesh arrow_new_icon
 mesh ballista_cover_defender_a
 mesh ballista_cover_defender_a_state1
-mesh barrier
 mesh battania_castle_corner_c_l1_01
 mesh battania_castle_corner_c_l1_02
 mesh battania_castle_corner_c_l1_03
@@ -82,7 +81,6 @@ mesh bd_sack_c
 mesh castle_plank_ramp_a
 mesh castle_plank_wall_c
 mesh editor_plane_low
-mesh european_castle_stairs_b_l1
 mesh european_castle_tower_round_a_l3
 mesh european_castle_tower_round_a_l3_stairs
 mesh european_castle_wall_a_l3
@@ -119,7 +117,6 @@ mesh terrain_green_rock_big_a
 mesh terrain_green_rock_big_c
 mesh torch_flame_base
 mesh torch_wall_a
-mesh wooden_platform_2_heap_a
 mesh wooden_platform_c
 mesh wooden_platform_plank_b
 mesh wooden_platform_plank_c

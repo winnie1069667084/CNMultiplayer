@@ -199,9 +199,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CNM_MissionMultiplayerSiege.cs" />
+    <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="Patches\Patch_MultiplayerMissionViews.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />
-    <Compile Include="Patches\Patch_MissionMultiplayerSiege.cs" />
     <Compile Include="Patches\Patch_MultiplayerMissions.cs" />
     <Compile Include="Patches\Patch_MultiplayerStrikeMagnitudeModel.cs" />
     <Compile Include="Patches\Patch_AgentStatCalculateModel.cs" />

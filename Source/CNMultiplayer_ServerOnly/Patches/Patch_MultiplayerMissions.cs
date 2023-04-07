@@ -1,15 +1,8 @@
 ﻿using HarmonyLib;
-using NetworkMessages.FromServer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
+using CNMultiplayer;
 
 namespace Patches
 {
@@ -80,7 +73,7 @@ namespace Patches
         }
     }
 
-    //[HarmonyPatch(typeof(MultiplayerMissions), "OpenSiegeMission")]//为攻城模式添加语音控件
+    [HarmonyPatch(typeof(MultiplayerMissions), "OpenSiegeMission")]
     internal class Patch_OpenSiegeMission
     {
         public static bool Prefix(string scene)
@@ -96,7 +89,7 @@ namespace Patches
                     return new MissionBehavior[]
                     {
                         MissionLobbyComponent.CreateBehavior(),
-                        new MissionMultiplayerSiege(),
+                        new CNM_MissionMultiplayerSiege(), //调用CNM_MissionMultiplayerSiege
                         new MultiplayerWarmupComponent(),
                         new MissionMultiplayerSiegeClient(),
                         new MultiplayerTimerComponent(),
@@ -116,7 +109,7 @@ namespace Patches
                         new MissionAgentPanicHandler(),
                         new AgentHumanAILogic(),
                         new EquipmentControllerLeaveLogic(),
-                        new VoiceChatHandler(),
+                        //new VoiceChatHandler(), //为攻城模式添加语音控件
                         new MultiplayerPreloadHelper()
                     };
                 }
@@ -141,7 +134,7 @@ namespace Patches
                     new MissionMatchHistoryComponent(),
                     new EquipmentControllerLeaveLogic(),
                     new MissionRecentPlayersComponent(),
-                    new VoiceChatHandler(),
+                    //new VoiceChatHandler(), //为攻城模式添加语音控件
                     new MultiplayerPreloadHelper()
                 };
             }, true, true);
