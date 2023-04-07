@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Xml;
+using TaleWorlds.Engine;
 using TaleWorlds.ModuleManager;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
@@ -8,16 +9,24 @@ namespace CNMultiplayer
 {
     internal class LoadXMLbyMode
     {
+        private static string modulename;
+
         public void ModeJudgment()
         {
+            foreach (string name in Utilities.GetModulesNames())
+            {
+                if (name != "Native")
+                    modulename = name;
+                    continue;
+            }
             string gametype = MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
             switch (gametype)
             {
                 case "Siege":
-                    LoadXMLs("CNMultiplayer", "Siege");
+                    LoadXMLs(modulename, gametype);
                     break;
                 case "Captain":
-                    LoadXMLs("CNMultiplayer", "Captain");
+                    LoadXMLs(modulename, gametype);
                     break;
                 default:
                     LoadXMLs("Native", "");
