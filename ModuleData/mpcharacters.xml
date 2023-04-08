@@ -141,7 +141,7 @@
         <equipment slot="Item2"
                    id="Item.mp_tall_heater_shield" />
         <equipment slot="Head"
-                   id="Item.mp_full_helm_over_padded_cap" />
+                   id="Item.mp_full_helm_over_padded_cap" />	   
         <equipment slot="Body"
                    id="Item.mp_vlandia_chainmail" />
         <equipment slot="Leg"
@@ -1606,6 +1606,8 @@
                    id="Item.mp_leather_round_shield_light" />
         <equipment slot="Head"
                    id="Item.mp_sturgia_heavy_cavalry_helmet" />
+		<equipment slot="Cape"
+                   id="Item.mp_rough_bearskin" />
         <equipment slot="Body"
                    id="Item.mp_nordic_hauberk" />
         <equipment slot="Leg"
@@ -2399,7 +2401,7 @@
                    id="Item.mp_stronger_eastern_wicker_shield" />
         <equipment slot="Head"
                    id="Item.mp_plumed_nomad_helmet" />
-	 <equipment slot="Cape"
+	    <equipment slot="Cape"
                    id="Item.mp_lamellar_shoulders" />		   
         <equipment slot="Body"
                    id="Item.mp_eastern_lamellar_armor" />
@@ -2611,19 +2613,19 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
-       <equipment slot="Item0"
+        <equipment slot="Item0"
                    id="Item.mp_crossbow" />
-       <equipment slot="Item1"
+        <equipment slot="Item1"
                    id="Item.mp_empire_mace" />
         <equipment slot="Item2"
                    id="Item.mp_bolts_imperial" />
-	<equipment slot="Head"
+	    <equipment slot="Head"
                    id="Item.mp_empire_lord_helmet" />
-       <equipment slot="Body"
+        <equipment slot="Body"
                    id="Item.mp_imperial_scale_armor" />
-       <equipment slot="Leg"
+        <equipment slot="Leg"
                    id="Item.mp_decorated_imperial_boots" />
-       <equipment slot="Gloves"
+        <equipment slot="Gloves"
                    id="Item.mp_decorated_imperial_gauntlets" />
       </EquipmentRoster>
     </Equipments>

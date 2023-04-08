@@ -155,7 +155,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="-8" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -173,7 +173,7 @@
                        slot="Item2"
                        item="mp_old_kite_sparring_shield" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000136}Change Chinese to see the description"
             description="{=00000137}Change Chinese to see the description"
             icon="PerkToughness"
@@ -191,7 +191,7 @@
                        slot="Item2"
                        item="mp_old_kite_sparring_shield" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000136}Change Chinese to see the description"
             description="{=00000137}Change Chinese to see the description"
             icon="PerkToughness"
@@ -209,7 +209,7 @@
                        slot="Item2"
                        item="mp_old_kite_sparring_shield" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000142}Change Chinese to see the description"
             description="{=00000143}Change Chinese to see the description"
             icon="PerkToughness"
@@ -321,7 +321,7 @@
                 value="10"
                 is_disabled_in_warmup="true" />
       </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=urUwa4bf}Looter"
             description="{=00000029}Change Chinese to see the description"
             icon="PerkGold"
@@ -499,7 +499,7 @@
                        slot="Item0"
                        item="mp_vlandian_halberd_lol" />
       </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=00000023}Change Chinese to see the description"
             description="{=00000024}Change Chinese to see the description"
             icon="PerkTwoHandedSwords"
@@ -511,7 +511,7 @@
                        slot="Item1"
                        item="mp_vlandian_pike" />
       </Perk>
-	  <Perk game_mode="Battle, Siege, TeamDeathmatch"
+	  <Perk game_mode="all"
             name="{=00000001}Change Chinese to see the description"
             description="{=00000002}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
@@ -524,7 +524,7 @@
                        slot="Item1"
                        item="mp_western_bastard_sword" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000118}Change Chinese to see the description"
             description="{=00000119}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
@@ -534,7 +534,7 @@
                        slot="Item0"
                        item="western_2hsword_t4" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000126}Change Chinese to see the description"
             description="{=00000127}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
@@ -544,7 +544,7 @@
                        slot="Item0"
                        item="western_2hsword_t3" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000122}Change Chinese to see the description"
             description="{=00000123}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
@@ -727,7 +727,7 @@
                    acceleration="2.4">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
             description="{=00000003}Change Chinese to see the description"
             icon="PerkToughness"
@@ -869,7 +869,7 @@
                        slot="Item1"
                        item="mp_vlandian_mace" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
             description="{=00000004}Change Chinese to see the description"
             icon="PerkHeavyAxe"
@@ -881,29 +881,29 @@
         <Effect type="ShieldDamage"
                 value="0.4" />
 		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="5" />		
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_vlandian_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_hood"
-                       target="Player" />
-      </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
-            name="{=VI4gQt8Q}Mace"
-            description="{=pblXb1ae}Grants Mace, effective against armored opponents."
-            icon="PerkMaces"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_vlandian_mace" />
+                       value="5" />	
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_hood"
                        target="Player" />			   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_vlandian_axe" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
+            name="{=VI4gQt8Q}Mace"
+            description="{=pblXb1ae}Grants Mace, effective against armored opponents."
+            icon="PerkMaces"
+            perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_hood"
+                       target="Player" />	
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_vlandian_mace" />			   
+      </Perk>
+	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -913,16 +913,12 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_coat_of_plates_over_mail"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="vlandia_sword_4_t4" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -932,16 +928,12 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_coat_of_plates_over_mail"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="vlandia_noble_sword_3_t5" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -951,16 +943,12 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_coat_of_plates_over_mail"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="vlandia_sword_2_t3" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -970,10 +958,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_coat_of_plates_over_mail"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
@@ -1004,7 +988,7 @@
                        slot="Item1"
                        item="mp_western_long_spear" />
       </Perk>
-	  <Perk game_mode="TeamDeathmatch, Siege, Battle"
+	  <Perk game_mode="all"
             name="{=jf8luKVV}Brawny"
             description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
             icon="PerkBrawny"
@@ -1124,7 +1108,7 @@
         </RandomOnSpawnEffect>
       </Perk>-->
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1132,7 +1116,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1146,7 +1130,7 @@
                        item="mp_white_coat_over_mail"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000151}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1160,7 +1144,7 @@
                        item="mp_coat_of_plates_over_mail"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000152}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1174,7 +1158,7 @@
                        item="mp_white_coat_over_mail"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000153}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1753,7 +1737,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000087}Change Chinese to see the description"
             description="{=00000088}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1851,7 +1835,7 @@
                 value="3"
                 is_disabled_in_warmup="true" />
       </Perk>
-	  <Perk game_mode="Battle, Siege, TeamDeathmatch"
+	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=00000081}Change Chinese to see the description"
             icon="PerkGeneral"
@@ -1942,7 +1926,7 @@
         </RandomOnSpawnEffect>
       </Perk>
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1950,7 +1934,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -1960,7 +1944,7 @@
                        item="mp_western_crowned_plated_helmet"
                        target="Player" />		   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000151}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -2026,7 +2010,7 @@
                        slot="Item3"
                        item="mp_empire_javelin_captain" />
       </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
             description="{=00000006}Change Chinese to see the description"
             icon="PerkHorseHunters"
@@ -2116,7 +2100,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="TeamDeathmatch, Siege, Battle"
+      <Perk game_mode="all"
             name="{=00000048}Change Chinese to see the description"
             description="{=00000049}Change Chinese to see the description"
             icon="PerkBetterSwords"
@@ -2149,7 +2133,7 @@
                        slot="Item1"
                        item="mp_lighter_reinforced_kite_shield" />
       </Perk>
-	  <Perk game_mode="TeamDeathmatch, Siege, Battle"
+	  <Perk game_mode="all"
             name="{=00000140}Change Chinese to see the description"
             description="{=00000141}Change Chinese to see the description"
             icon="PerkAxes"
@@ -2158,7 +2142,7 @@
                        slot="Item2"
                        item="tzkurion_axe_t3" />			   
       </Perk>
-	  <Perk game_mode="TeamDeathmatch, Siege, Battle"
+	  <Perk game_mode="all"
             name="{=VI4gQt8Q}Mace"
             description="{=pblXb1ae}Grants Mace, effective against armored opponents."
             icon="PerkMaces"
@@ -2199,7 +2183,7 @@
                    hitpoints="100">
     <Perks>
       <!-- First perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000071}Change Chinese to see the description"
             description="{=00000072}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
@@ -2274,7 +2258,7 @@
                        slot="Item1"
                        item="mp_pilum" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000130}Menavlion"
             description="{=00000131}Change Chinese to see the description"
             icon="PerkPolearms"
@@ -2505,7 +2489,7 @@
                        slot="Item1"
                        item="mp_empire_heavy_axe" />
 	  </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
             description="{=00000085}Change Chinese to see the description"
             icon="PerkHeavyAxe"
@@ -2521,7 +2505,7 @@
                        slot="Item2"
                        item="mp_pilum" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=DrWY4I8X}Mace Specialist"
             description="{=00000032}Change Chinese to see the description"
             icon="PerkMaces"
@@ -2581,7 +2565,7 @@
                        slot="Item2"
                        item="mp_stronger_reinforced_kite_shield" />
 	</Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=C9ufRSsL}Sword and Shield"
             description="{=00000086}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -2599,7 +2583,7 @@
                        slot="Item2"
                        item="mp_pilum" />			   
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000008}Change Chinese to see the description"
             description="{=00000009}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -2617,7 +2601,7 @@
                        slot="Item2"
                        item="mp_pilum" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000008}Change Chinese to see the description"
             description="{=00000009}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -2635,7 +2619,7 @@
                        slot="Item2"
                        item="mp_pilum" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000008}Change Chinese to see the description"
             description="{=00000009}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -2653,7 +2637,7 @@
                        slot="Item2"
                        item="mp_pilum" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000008}Change Chinese to see the description"
             description="{=00000009}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -2880,7 +2864,7 @@
         </ConditionalEffect>
       </Perk>
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -2888,7 +2872,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -2902,7 +2886,7 @@
                        item="mp_imperial_lamellar_over_leather"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000151}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -2916,7 +2900,7 @@
                        item="mp_lamellar_with_scale_skirt"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000152}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -2930,7 +2914,7 @@
                        item="mp_imperial_lamellar_over_leather"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000153}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3105,7 +3089,7 @@
                    acceleration="3.1">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000025}Change Chinese to see the description"
             description="{=00000026}Change Chinese to see the description"
             icon="PerkRecurveBows"
@@ -3199,7 +3183,7 @@
                        slot="Item2"
                        item="mp_empire_long_spatha" />
       </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=vyI2KVKM}Bullseye"
             description="{=00000041}Change Chinese to see the description"
             icon="PerkSharpshooters"
@@ -3491,7 +3475,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="TeamDeathmatch, Siege, Battle"
+	  <Perk game_mode="all"
             name="{=00000087}Change Chinese to see the description"
             description="{=00000093}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3594,7 +3578,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=98Uh0FjL}Dragoon"
             description="{=00000034}Change Chinese to see the description"
             icon="PerkFightingMadness"
@@ -3649,7 +3633,7 @@
                        slot="Item1"
                        item="mp_empire_battle_axe" />
       </Perk>
-	  <Perk game_mode="Battle, Siege, TeamDeathmatch"
+	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=00000082}Change Chinese to see the description"
             icon="PerkGeneral"
@@ -3678,7 +3662,7 @@
                        slot="Item2"
                        item="mp_stronger_reinforced_kite_shield" />
       </Perk>
-	  <Perk game_mode="Battle, Siege, TeamDeathmatch"
+	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
             description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
             icon="PerkGeneral"
@@ -3699,7 +3683,7 @@
         </ConditionalEffect>
       </Perk>
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3707,7 +3691,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3799,7 +3783,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3814,7 +3798,7 @@
                        slot="Item0"
                        item="simple_back_sword_t2" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3829,7 +3813,7 @@
                        slot="Item0"
                        item="khuzait_sword_1_t2" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3844,7 +3828,7 @@
                        slot="Item0"
                        item="simple_sabre_sword_t2" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000142}Change Chinese to see the description"
             description="{=00000143}Change Chinese to see the description"
             icon="PerkToughness"
@@ -3860,7 +3844,7 @@
                        item="khuzait_mace_1_t2" />			   
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="all"
             name="{=oBBE3ggU}Conscript"
             description="{=n5d7CnPo}Your experience as Village Militia made you hardened. You take less damage.{newline} {newline}Grants Throwing Stones{newline} {newline}-15% Damage taken"
             icon="PerkGeneral"
@@ -3891,7 +3875,7 @@
                 value="20"
                 is_disabled_in_warmup="true" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch"
+      <Perk game_mode="Battle, NewBattle, Classicall"
             name="{=urUwa4bf}Looter"
             description="{=00000029}Change Chinese to see the description"
             icon="PerkGold"
@@ -3910,7 +3894,7 @@
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
       </Perk>
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="all"
             name="{=DYUfnBHb}Farmer"
             description="{=00000051}Change Chinese to see the description"
             icon="PerkPikes"
@@ -3950,7 +3934,7 @@
                    acceleration="2.0">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
             description="{=00000010}Change Chinese to see the description"
             icon="PerkToughness"
@@ -4003,7 +3987,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="all"
             name="{=VI4gQt8Q}Mace"
             description="{=7I7fd6OQ}Grants Heavy Mace, effective against armored opponents."
             icon="PerkMaces"
@@ -4026,7 +4010,7 @@
                        slot="Item3"
                        item="mp_jereed_captain" />
       </Perk>
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="all"
             name="{=4YTJJaTG}Heavy Sabre"
             description="{=7dQz83TL}Grants a heavy Sabre, longer and deals more damage."
             icon="PerkSword"
@@ -4049,7 +4033,7 @@
                        slot="Item3"
                        item="mp_jereed_captain" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000089}Change Chinese to see the description"
             description="{=00000090}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
@@ -4065,7 +4049,7 @@
                        slot="Item1"
                        item="null" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000120}Change Chinese to see the description"
             description="{=00000121}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
@@ -4081,7 +4065,7 @@
                        slot="Item1"
                        item="null" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=6hwZwODh}Glaive"
             description="{=00000059}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
@@ -4107,7 +4091,7 @@
                        item="mp_aserai_two_handed_sword" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
             description="{=00000039}Change Chinese to see the description"
             icon="PerkHorseHunters"
@@ -4155,7 +4139,7 @@
                        slot="Item0"
                        item="mp_khuzait_long_spear" />
       </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=YeRH0SUc}Steppe Infantry"
             description="{=00000044}Change Chinese to see the description"
             icon="PerkFleetFooted"
@@ -4849,7 +4833,7 @@
                        slot="HorseHarness"
                        item="mp_studded_steppe_barding" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000087}Change Chinese to see the description"
             description="{=00000094}Change Chinese to see the description"
             icon="PerkToughness"
@@ -4987,7 +4971,7 @@
                        item="mp_spiked_helmet_with_facemask"
                        target="Player" />					   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=00000095}Change Chinese to see the description"
             icon="PerkGeneral"
@@ -5067,7 +5051,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
             description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
             icon="PerkGeneral"
@@ -5088,7 +5072,7 @@
         </ConditionalEffect>
       </Perk>
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -5096,7 +5080,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -5157,7 +5141,7 @@
                        slot="Item0"
                        item="mp_aserai_axe" />		   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000134}Change Chinese to see the description"
             description="{=00000135}Change Chinese to see the description"
             icon="PerkBetterSwords"
@@ -5166,7 +5150,7 @@
                        slot="Item0"
                        item="aserai_sword_1_t2" />		   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000144}Change Chinese to see the description"
             description="{=00000145}Change Chinese to see the description"
             icon="PerkAxes"
@@ -5422,7 +5406,7 @@
                    hitpoints="100">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000057}Change Chinese to see the description"
             description="{=00000058}Change Chinese to see the description"
             icon="PerkBardiche"
@@ -5472,7 +5456,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="23" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000112}Change Chinese to see the description"
             description="{=00000113}Change Chinese to see the description"
             hero_idle_anim="act_aserai_mp_guard_idle_2hperk"
@@ -5513,7 +5497,7 @@
                        slot="Item0"
                        item="mp_aserai_two_handed_sword" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000011}Change Chinese to see the description"
             description="{=00000012}Change Chinese to see the description"
             hero_idle_anim="act_aserai_mp_guard_idle_2hperk"
@@ -5564,7 +5548,7 @@
                        slot="Item2"
                        item="mp_aserai_long_spear" />		  
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000013}Change Chinese to see the description"
             description="{=00000014}Change Chinese to see the description"
             icon="PerkHoldTheLine"
@@ -5753,7 +5737,7 @@
 				</Group>
 			</RandomOnSpawnEffect>
 		</Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000114}Change Chinese to see the description"
             description="{=00000115}Change Chinese to see the description"
             hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
@@ -6041,7 +6025,7 @@
                        item="mp_tribesman_long_bow"
                        target="Troops" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
             description="{=00000019}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6430,7 +6414,7 @@
                        slot="HorseHarness"
                        item="mp_mail_and_plate_barding" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000087}Change Chinese to see the description"
             description="{=00000092}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6498,7 +6482,7 @@
                        slot="Item2"
                        item="mp_aserai_heavy_lance" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle, Duel"
+      <Perk game_mode="all, Duel"
             name="{=v3TAosde}Royal Archer"
             description="{=00000036}Change Chinese to see the description"
             icon="PerkRecurveBows"
@@ -6530,7 +6514,7 @@
                        slot="Item2"
                        item="mp_arrows_barbed_mounted" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=00000081}Change Chinese to see the description"
             icon="PerkGeneral"
@@ -6559,7 +6543,7 @@
                        slot="Item2"
                        item="mp_aserai_heavy_mace" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
             description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
             icon="PerkGeneral"
@@ -6580,7 +6564,7 @@
         </ConditionalEffect>
       </Perk>
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6588,7 +6572,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6704,7 +6688,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6719,7 +6703,7 @@
                        slot="Item0"
                        item="sturgia_sword_3_t3" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000136}Change Chinese to see the description"
             description="{=00000137}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6734,7 +6718,7 @@
                        slot="Item0"
                        item="sturgia_axe_2_t2" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000136}Change Chinese to see the description"
             description="{=00000137}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7126,7 +7110,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000042}Change Chinese to see the description"
             description="{=00000043}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7175,7 +7159,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000108}Change Chinese to see the description"
             description="{=00000109}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7202,7 +7186,7 @@
                        item="mp_northern_plated_boots"
                        target="Player" />		   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000128}Change Chinese to see the description"
             description="{=00000129}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7338,7 +7322,7 @@
                    acceleration="2.4">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=lWl3W0do}Padded Armor"
             description="{=00000047}Change Chinese to see the description"
             icon="PerkArmorUpgrade"
@@ -7416,7 +7400,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
             description="{=00000004}Change Chinese to see the description"
             icon="PerkHeavyAxe"
@@ -7431,11 +7415,7 @@
                        value="5" />					
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_sturgia_noble_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_rough_bearskin"
-                       target="Player" />			   
+                       item="mp_sturgia_noble_axe" />			   
       </Perk>
 	  <Perk game_mode="Skirmish, Duel"
             name="{=9XtgLuAL}Axe Specialist"
@@ -7504,16 +7484,12 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="5" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000015}Change Chinese to see the description"
             description="{=00000016}Change Chinese to see the description"
             hero_idle_anim="act_sturgia_mp_varyag_sword_and_shield_perk"
             icon="PerkHoldTheLine"
             perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_rough_bearskin"
-                       target="Player" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_sturgia_mace" />
@@ -7536,7 +7512,7 @@
                        slot="Item3"
                        item="mp_battania_noble_two_handed_sword" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000106}Change Chinese to see the description"
             description="{=00000107}Change Chinese to see the description"
             icon="PerkArmorUpgrade"
@@ -7554,7 +7530,7 @@
                        slot="Item1"
                        item="sturgia_sword_5_t5" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000106}Padded Armor"
             description="{=00000107}Change Chinese to see the description"
             icon="PerkArmorUpgrade"
@@ -7572,7 +7548,7 @@
                        slot="Item1"
                        item="sturgia_sword_4_t4" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000106}Padded Armor"
             description="{=00000107}Change Chinese to see the description"
             icon="PerkArmorUpgrade"
@@ -7590,7 +7566,7 @@
                        slot="Item1"
                        item="sturgia_noble_sword_1_t5" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000106}Change Chinese to see the description"
             description="{=00000107}Change Chinese to see the description"
             icon="PerkArmorUpgrade"
@@ -7608,7 +7584,7 @@
                        slot="Item1"
                        item="ambassador_sword_t3" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000106}Change Chinese to see the description"
             description="{=00000107}Change Chinese to see the description"
             hero_idle_anim="act_sturgia_mp_varyag_sword_and_shield_perk"
@@ -7627,7 +7603,7 @@
                        slot="Item1"
                        item="mp_sturgia_northern_sword" />		   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000106}Change Chinese to see the description"
             description="{=00000107}Change Chinese to see the description"
             hero_idle_anim="act_sturgia_mp_varyag_sword_and_shield_perk"
@@ -7647,7 +7623,7 @@
                        item="dawnbreaker_sword_t3" />		   
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=4bzbhbaP}Feller"
             description="{=00000077}You cut down everything and everyone that dares to be in your way {newline} {newline}+17% Cut Damage with Melee Weapons"
             icon="PerkFightingMadness"
@@ -7708,7 +7684,7 @@
                        slot="Item1"
                        item="mp_vlandian_bastard_axe" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
             description="{=00000039}Change Chinese to see the description"
             icon="PerkHorseHunters"
@@ -7836,7 +7812,7 @@
         </RandomOnSpawnEffect>
       </Perk>-->
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7844,7 +7820,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7858,7 +7834,7 @@
                        item="mp_northern_brass_lamellar_over_mail"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000151}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7880,7 +7856,7 @@
                        item="mp_northern_plated_boots"
                        target="Player" />					   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000152}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7894,7 +7870,7 @@
                        item="mp_northern_brass_lamellar_over_mail"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000153}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -8320,7 +8296,7 @@
                        slot="HorseHarness"
                        item="mp_chain_horse_harness" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000087}Change Chinese to see the description"
             description="{=00000097}Change Chinese to see the description"
             icon="PerkToughness"
@@ -8451,7 +8427,7 @@
                        slot="Item0"
                        item="mp_vlandian_bastard_axe" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000076}Change Chinese to see the description"
             description="{=00000050}Change Chinese to see the description"
             icon="PerkTwoHandedAxe"
@@ -8499,7 +8475,7 @@
                        slot="Item0"
                        item="mp_vlandian_bastard_axe" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=00000081}Change Chinese to see the description"
             icon="PerkGeneral"
@@ -8528,7 +8504,7 @@
                        slot="Item1"
                        item="mp_sturgia_mace" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
             description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
             icon="PerkGeneral"
@@ -8549,7 +8525,7 @@
         </ConditionalEffect>
       </Perk>
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -8557,7 +8533,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -8640,7 +8616,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000102}Change Chinese to see the description"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -8963,7 +8939,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000110}Change Chinese to see the description"
             description="{=00000111}Change Chinese to see the description"
             icon="PerkTwoHandedSwords"
@@ -8972,7 +8948,7 @@
                        slot="Item0"
                        item="battania_2hsword_5_t5" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000116}Change Chinese to see the description"
             description="{=00000117}Change Chinese to see the description"
             icon="PerkTwoHandedSwords"
@@ -8981,7 +8957,7 @@
                        slot="Item0"
                        item="early_retirement_2hsword_t3" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000124}Change Chinese to see the description"
             description="{=00000125}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
@@ -8991,7 +8967,7 @@
                        slot="Item0"
                        item="northern_spear_2_t3" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000122}Change Chinese to see the description"
             description="{=00000123}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
@@ -9256,7 +9232,7 @@
                        slot="Item3"
                        item="mp_javelin_extraammo_captain" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=ZxqXs36U}Strong Arm"
             description="{=00000055}Change Chinese to see the description"
             icon="PerkPilums"
@@ -9355,7 +9331,7 @@
                    hitpoints="100">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
             description="{=00000020}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9472,7 +9448,7 @@
                        slot="Item1"
                        item="mp_battnia_heavy_mace" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
             description="{=00000038}Change Chinese to see the description"
             icon="PerkHeavyAxe"
@@ -9543,7 +9519,7 @@
                        slot="Item3"
                        item="mp_battania_noble_two_handed_sword" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9558,7 +9534,7 @@
                        slot="Item1"
                        item="battania_sword_5_t5" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9573,7 +9549,7 @@
                        slot="Item1"
                        item="battania_noble_sword_2_t5" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9726,7 +9702,7 @@
         </RandomOnSpawnEffect>
       </Perk>-->
 	  <!-- Third perks-->
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9734,7 +9710,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="0" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9748,7 +9724,7 @@
                        item="mp_battania_noble_armor"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000151}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9762,7 +9738,7 @@
                        item="mp_battanian_scale_armor_a"
                        target="Player" />					   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000152}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -9776,7 +9752,7 @@
                        item="mp_battania_noble_armor"
                        target="Player" />			   
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000153}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10180,7 +10156,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000087}Change Chinese to see the description"
             description="{=00000098}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10230,7 +10206,7 @@
                        item="null" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
             description="{=00000052}Change Chinese to see the description"
             icon="PerkLongSpear"
@@ -10290,7 +10266,7 @@
                        slot="Item0"
                        item="mp_battania_twohanded_hammer" />
       </Perk>
-      <Perk game_mode="Siege, TeamDeathmatch, Battle"
+      <Perk game_mode="all"
             name="{=00000053}Change Chinese to see the description"
             description="{=00000054}Change Chinese to see the description"
             hero_mount_idle_anim="act_battania_mp_mounted_warrior_mount_idle_perks"
@@ -10355,7 +10331,7 @@
                        slot="Item3"
                        item="mp_battania_javelin_captain" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=00000099}Change Chinese to see the description"
             icon="PerkGeneral"
@@ -10384,7 +10360,7 @@
                        slot="Item2"
                        item="mp_battnia_heavy_mace" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=sQCpO6sp}Melee Expert"
             description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
             icon="PerkGeneral"
@@ -10475,10 +10451,10 @@
             description="{=00000065}Change Chinese to see the description"
             icon="PerkMoreThrowingSpears"
             perk_list="1">
-            <Effect type="DrivenProperty"
+        <Effect type="DrivenProperty"
                 value="0.1"
                 driven_property="ThrustOrRangedReadySpeedMultiplier" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_jereed" />
       </Perk>
@@ -10487,13 +10463,13 @@
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
             perk_list="1">
-            <OnSpawnEffect type="ArmorOnSpawn"
+        <OnSpawnEffect type="ArmorOnSpawn"
                        value="10" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_closed_desert_helmet_with_mail"
                        target="Player" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="aserai_noble_sword_1_t5" />
       </Perk>
@@ -10508,7 +10484,7 @@
                        slot="Head"
                        item="mp_closed_desert_helmet_with_mail"
                        target="Player" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="aserai_noble_sword_2_t5" />
       </Perk>
@@ -10523,7 +10499,7 @@
                        slot="Head"
                        item="mp_closed_desert_helmet_with_mail"
                        target="Player" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="aserai_noble_sword_4_t5" />
       </Perk>
@@ -10538,7 +10514,7 @@
                        slot="Head"
                        item="mp_closed_desert_helmet_with_mail"
                        target="Player" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="aserai_sword_4_t4" />
       </Perk>
@@ -10553,7 +10529,7 @@
                        slot="Head"
                        item="mp_closed_desert_helmet_with_mail"
                        target="Player" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="ridged_sabre_sword_t4" />   
       </Perk>
@@ -10568,7 +10544,7 @@
                        slot="Head"
                        item="mp_closed_desert_helmet_with_mail"
                        target="Player" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="the_scalpel_sword_t3" />
       </Perk>
@@ -10688,7 +10664,7 @@
                    acceleration="3.0">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=iHljS6n5}Masked Nightmare"
             description="{=00000003}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10700,53 +10676,17 @@
                        item="mp_spiked_helmet_with_facemask"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_khuzait_heavy_sabre" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=VI4gQt8Q}Mace"
             description="{=7I7fd6OQ}Grants Heavy Mace, effective against armored opponents."
             icon="PerkMaces"
             perk_list="1">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_plumed_nomad_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_khuzait_heavy_mace" />
@@ -10754,34 +10694,14 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />	   
       </Perk>
-      <Perk game_mode="Battle, Siege, TeamDeathmatch"
+      <Perk game_mode="all"
             name="{=IFqtwpb0}Pikeman"
             description="{=O3vdRYyZ}Your experience as a Pikeman allows you to use the Pike more effectively, thrusting faster.{newline} {newline}Grants Pike{newline} {newline}+20% Thrust Ready Speed"
             icon="PerkPikes"
             perk_list="1">
         <Effect type="DrivenProperty"
                 value="0.2"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_plumed_nomad_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />		
+                driven_property="ThrustOrRangedReadySpeedMultiplier" />		
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_khuzait_heavy_sabre" />
@@ -10792,7 +10712,7 @@
                        slot="Item0"
                        item="mp_khuzait_pike" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10802,22 +10722,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -10826,7 +10730,7 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10836,22 +10740,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -10860,7 +10748,7 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10870,22 +10758,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -10894,7 +10766,7 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10904,22 +10776,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -10928,7 +10784,7 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10938,22 +10794,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -10962,7 +10802,7 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -10972,22 +10812,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -10996,7 +10820,7 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -11006,22 +10830,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -11030,7 +10838,7 @@
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
       </Perk>
-	  <Perk game_mode="Siege, TeamDeathmatch, Battle"
+	  <Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -11040,22 +10848,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_lamellar_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_eastern_lamellar_armor"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_gauntlets"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -11291,7 +11083,7 @@
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="9" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_hood"
                        target="Player" />
@@ -11302,7 +11094,7 @@
 			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
             icon="PerkBetterSwords"
             perk_list="1">	   
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_vlandian_long_sword" />
       </Perk>
@@ -11350,90 +11142,6 @@
                        item="mp_tall_heater_shield_light" />
       </Perk>
     </Perks>			   
-    <!--<Perks>
-       First perks
-      <Perk game_mode="all"
-            name="{=uaY0BfoI}Range Crossbow"
-            description="{=HgJetcmG}Grants a crossbow with a reinforced bow arm, increasing effective range."
-            icon="PerkHeavyCrossbows"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_crossbow" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=f2A3Mhpd}Fast Crossbow"
-            description="{=TcaKHUUK}Grants a crossbow that is easier to draw. Reloading is quicker."
-            icon="PerkFasterRelease"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_crossbow_faster_reload" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=C9ufRSsL}Sword and Shield"
-            description="{=Yh1C24vG}Grants Sword and Shield, makes blocking easier, making you effective in melee. Also increases your movement speed.{newline} {newline}Grants Long Sword {newline}Grants Kite Shield {newline}Grants +5% movement speed"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <Effect type="DrivenProperty"
-                driven_property="MaxSpeedMultiplier"
-                value="0.05" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_western_kite_shield" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_long_sword" />
-      </Perk>
-       Second perks
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=dTpTyUtb}Replenished"
-            description="{=00000056}Change Chinese to see the description"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=dTpTyUtb}Replenished"
-            description="{=xRK4nurx}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 20 Extra Bolts{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra_captain" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=vyI2KVKM}Bullseye"
-            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
-            icon="PerkSharpshooters"
-            perk_list="2">
-        <Effect type="RangedHeadShotDamage"
-                value="0.1" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_strong" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=xnDWqYKW}Hunter"
-            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
-            icon="PerkHunter"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.50"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_strong" />
-      </Perk>
-    </Perks>-->
   </MPClassDivision>
 
   <!--帝国弩手军士-->
