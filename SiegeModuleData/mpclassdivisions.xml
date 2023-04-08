@@ -8078,4 +8078,61 @@
       </Perk>
     </Perks>
   </MPClassDivision>
+
+  <!--帝国私属骑兵-->
+  <MPClassDivision id="mp_horse_archer_empire"
+                   hero="mp_horse_archer_empire_hero"
+                   troop="mp_horse_archer_empire_troop"
+                   hero_mount_idle_anim="act_khuzait_mp_mounted_archer_mount_idle"
+                   troop_mount_idle_anim="act_horse_idle_1"
+                   multiplier="0.43"
+                   cost="150"
+                   casual_cost="220"
+                   battle_cost="160"
+                   icon="HorseArcher_Light"
+                   melee_ai="330"
+                   ranged_ai="0"
+                   armor="20"
+                   movement_speed="0.73"
+                   combat_movement_speed="0.6"
+                   acceleration="2.8">
+    <Perks>
+      <!-- First perks-->
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=WEUSMkCp}Mounted Archery"
+            description="{=NezswS6S}You are an expert with the bow on a horse, your accuracy is much better.{newline} {newline}-50% Movement Accuracy Penalty{newline}-50% turning Accuracy Penalty"
+            icon="PerkStrongArrows"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="-0.5"
+                driven_property="WeaponWorstMobileAccuracyPenalty"
+                is_ratio="true" />
+        <Effect type="DrivenProperty"
+                value="-0.5"
+                driven_property="WeaponRotationalAccuracyPenaltyInRadians"
+                is_ratio="true" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=dTpTyUtb}Replenished"
+            description="{=00000154}You are well supplied and an expert at spending it well.{newline} {newline}Grants 20 Extra Arrows"
+            icon="PerkWellSupplied"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                driven_property="ReloadSpeed"
+                value="0.125" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="barbed_arrows" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=PzgDEcZ5}Mounted Marksman"
+            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
+            icon="PerkSharpshooters"
+            perk_list="2">
+        <Effect type="RangedHeadShotDamage"
+                value="0.1" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
 </MPClassDivisions>

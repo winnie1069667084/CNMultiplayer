@@ -2341,18 +2341,20 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
-        <equipment slot="Item1"
+        <equipment slot="Item0"
                    id="Item.mp_aserai_heavy_mace" />
-        <equipment slot="Item2"
+        <equipment slot="Item1"
                    id="Item.mp_emirs_oval_shield" />
         <equipment slot="Head"
-                   id="Item.mp_closed_desert_helmet_with_mail" />
+                   id="Item.mp_emirs_helmet" />
         <equipment slot="Body"
-                   id="Item.mp_desert_lamellar" />
+                   id="Item.mp_desert_scale_armor" />
 	 <equipment slot="Gloves"
                    id="Item.mp_plated_strip_gauntlets" />
         <equipment slot="Leg"
                    id="Item.mp_plated_strip_boots" />
+        <equipment slot="Cape"
+                   id="Item.mp_desert_scale_shoulders" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
@@ -2560,17 +2562,19 @@
     <Equipments>
       <EquipmentRoster>
         <equipment slot="Item0"
-                   id="Item.mp_light_crossbow" />
-        <equipment slot="Item1"
-                   id="Item.mp_bolts_western" />
-        <equipment slot="Item2"
                    id="Item.mp_vlandian_short_sword" />
+        <equipment slot="Item1"
+                   id="Item.mp_ironrim_kite_shield" />
+        <equipment slot="Item2"
+                   id="Item.mp_vlandian_throwing_axe_extra" />
         <equipment slot="Head"
-                   id="Item.mp_kettle_helmet_over_padded_cloth" />
+                   id="Item.mp_segmented_skullcap_over_mail_coif" />
         <equipment slot="Body"
-                   id="Item.mp_vlandia_bandit_a" />
+                   id="Item.mp_banded_leather_over_mail" />
         <equipment slot="Leg"
-                   id="Item.mp_empire_horseman_boots" />
+                   id="Item.mp_leather_cavalier_boots" />
+        <equipment slot="Gloves"
+                   id="Item.mp_guarded_padded_vambrace" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
@@ -2681,6 +2685,128 @@
                    id="Item.mp_decorated_imperial_boots" />
         <equipment slot="Gloves"
                    id="Item.mp_decorated_imperial_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <!--帝国私属骑兵-->
+  <NPCCharacter id="mp_horse_archer_empire_hero"
+                default_group="HorseArcher"
+                level="15"
+                name="{=10000012}Bucellarii"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
+      <BodyProperties version="4"
+                      age="41.23"
+                      weight="0.3963"
+                      build="0.3951"
+                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="51.79"
+                         weight="0.6728"
+                         build="1"
+                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="150" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="75" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.composite_steppe_bow" />
+        <equipment slot="Item1"
+                   id="Item.barbed_arrows" />
+        <equipment slot="Item3"
+                   id="Item.empire_sword_5_t4" />
+        <equipment slot="Gloves"
+                   id="Item.plated_strip_gauntlets" />
+        <equipment slot="Head"
+                   id="Item.plumed_helmet" />
+        <equipment slot="Cape"
+                   id="Item.studded_imperial_neckguard" />
+        <equipment slot="Body"
+                   id="Item.imperial_mail_vest" />
+        <equipment slot="Leg"
+                   id="Item.mail_cavalier_boots" />
+        <equipment slot="Horse"
+                   id="Item.t2_empire_horse" />
+        <equipment slot="HorseHarness"
+                   id="Item.mp_steppe_harness" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_horse_archer_empire_troop"
+                default_group="HorseArcher"
+                level="15"
+                name="{=10000012}Bucellarii"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
+      <BodyProperties version="4"
+                      age="41.23"
+                      weight="0.3963"
+                      build="0.3951"
+                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="51.79"
+                         weight="0.6728"
+                         build="1"
+                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="150" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="75" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.composite_steppe_bow" />
+        <equipment slot="Item1"
+                   id="Item.barbed_arrows" />
+        <equipment slot="Item3"
+                   id="Item.empire_sword_5_t4" />
+        <equipment slot="Gloves"
+                   id="Item.plated_strip_gauntlets" />
+        <equipment slot="Head"
+                   id="Item.plumed_helmet" />
+        <equipment slot="Cape"
+                   id="Item.studded_imperial_neckguard" />
+        <equipment slot="Body"
+                   id="Item.imperial_mail_vest" />
+        <equipment slot="Leg"
+                   id="Item.mail_cavalier_boots" />
+        <equipment slot="Horse"
+                   id="Item.t2_empire_horse" />
+        <equipment slot="HorseHarness"
+                   id="Item.mp_steppe_harness" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
