@@ -4700,7 +4700,7 @@
         </RandomOnSpawnEffect>
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000132}Change Chinese to see the description"
+            name="{=00000156}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
             perk_list="1">

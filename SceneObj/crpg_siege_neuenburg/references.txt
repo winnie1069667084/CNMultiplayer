@@ -1,4 +1,4 @@
-631
+628
 flora_entity flora_shrub_a
 flora_entity flora_tree_plane_01_hero
 flora_entity flora_tree_plane_02_hero
@@ -10,7 +10,6 @@ mesh battania_dungeon_door_a1
 mesh batteringram_a_body
 mesh bd_aserai_plate_cupper
 mesh bd_barrel_a
-mesh bd_barrel_b
 mesh bd_barrel_c
 mesh bd_battania_statue_a
 mesh bd_bucket_a
@@ -26,10 +25,8 @@ mesh bd_rope_b
 mesh bd_rope_sturgia_a
 mesh bd_sack_a
 mesh bd_sack_b
-mesh bd_sack_c
 mesh bd_washtub_a
 mesh bd_wheelbarrow_a
-mesh bd_wood_c
 mesh chicken_mesh
 mesh cliff_soil_c
 mesh cliff_soil_d
