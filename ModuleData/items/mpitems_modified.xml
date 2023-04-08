@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!-- #region Armors -->
   <!-- #region Aserai Armors -->
@@ -103,6 +103,7 @@
         name="{=spcj3XIw}Wrapped Kefiyyeh"
         mesh="aserai_civil_e_hscarf"
         culture="Culture.aserai"
+        value="1"
         weight="0.1"
         appearance="0.5"
         Type="HeadArmor">
@@ -19533,51 +19534,4 @@
     </ItemComponent>
     <Flags Civilian="true" />
   </Item>
-
-  <!-- New CraftedItem -->
-  <CraftedItem multiplayer_item="true"
-               id="mp_super_vlandian_noble_two_handed_sword"
-               name="{=40000001}Noble Great Sword"
-               crafting_template="TwoHandedSword"
-               value="1"
-               is_merchandise="false"
-               culture="Culture.neutral_culture">
-    <Pieces>
-      <Piece id="mp_vlandian_noble_two_handed_sword_blade"
-             Type="Blade"
-             scale_factor="149" />
-      <Piece id="mp_vlandian_noble_two_handed_sword_guard"
-             Type="Guard"
-             scale_factor="100" />
-      <Piece id="mp_vlandian_noble_two_handed_sword_grip"
-             Type="Handle"
-             scale_factor="110" />
-      <Piece id="mp_vlandian_noble_two_handed_sword_pommel"
-             Type="Pommel"
-             scale_factor="110" />
-    </Pieces>
-    <!-- Length: 11000 Weight: 1.87 -->
-  </CraftedItem>
-
-  <!--<CraftedItem multiplayer_item="true"
-               id="northern_2hsword_t4"
-               name="{=1WxLaeQE}Fine Steel Two Handed Sword"
-               crafting_template="TwoHandedSword"
-               culture="Culture.sturgia"
-               modifier_group="sword">
-    <Pieces>
-      <Piece id="sturgian_blade_4"
-             Type="Blade"
-             scale_factor="100" />
-      <Piece id="sturgian_guard_12"
-             Type="Guard"
-             scale_factor="100" />
-      <Piece id="sturgian_grip_22"
-             Type="Handle"
-             scale_factor="100" />
-      <Piece id="sturgian_pommel_10"
-             Type="Pommel"
-             scale_factor="100" />
-    </Pieces>
-  </CraftedItem>-->
 </Items>

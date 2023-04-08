@@ -2,7 +2,7 @@
 <Module>
     <Name value="CN Multiplayer"/>
     <Id value="CNMultiplayer"/>
-    <Version value="v1.1.2.5"/>
+    <Version value="v1.1.2.6"/>
 	<DefaultModule value="true"/>
 	<ModuleCategory value="MultiplayerOptional"/>
 	<DependedModules>
@@ -28,47 +28,26 @@
     	</SubModule>
     </SubModules>
   	<Xmls>
-    	<XmlNode>
-    		<XmlName id="Items" path="mpitems"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
-    	</XmlNode>
-		<XmlNode>                
-			<XmlName id="Items" path="items"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
-		</XmlNode> 
 		<XmlNode>
-    		<XmlName id="MPCharacters" path="mpcharacters"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
+			<XmlName id="GameText" path="strings"/>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="Items" path="items"/>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="Items" path="items/spitems"/>
+		</XmlNode>
+		<XmlNode>
+    		<XmlName id="MPCharacters" path="characters"/>
     	</XmlNode>
     	<XmlNode>
-    		<XmlName id="CraftingPieces" path="mp_crafting_pieces"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
+    		<XmlName id="CraftingPieces" path="crafting_pieces"/>
     	</XmlNode>
-		<XmlNode>                
-			<XmlName id="CraftingPieces" path="crafting_pieces"/>
-			<IncludedGameTypes>
-				<GameType value = "MultiplayerGame"/>
-			</IncludedGameTypes>
+		<XmlNode>
+			<XmlName id="CraftingPieces" path="../../Native/ModuleData/crafting_pieces"/>
 		</XmlNode>
-		<XmlNode>                
-			<XmlName id="CraftingTemplates" path="crafting_templates"/>
-		</XmlNode>
-    	<XmlNode>
-    		<XmlName id="Monsters" path="monsters"/>
-    	</XmlNode>
-		<XmlNode>                
-			<XmlName id="GameText" path="native_strings"/>
-		</XmlNode>
-		<XmlNode>                
-	    	<XmlName id="GameText" path="module_strings"/>
+		<XmlNode>
+			<XmlName id="CraftingTemplates" path="../../Native/ModuleData/crafting_templates"/>
 		</XmlNode>
     </Xmls>
 </Module>
