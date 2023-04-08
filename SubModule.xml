@@ -43,11 +43,5 @@
     	<XmlNode>
     		<XmlName id="CraftingPieces" path="crafting_pieces"/>
     	</XmlNode>
-		<XmlNode>
-			<XmlName id="CraftingPieces" path="../../Native/ModuleData/crafting_pieces"/>
-		</XmlNode>
-		<XmlNode>
-			<XmlName id="CraftingTemplates" path="../../Native/ModuleData/crafting_templates"/>
-		</XmlNode>
     </Xmls>
 </Module>
