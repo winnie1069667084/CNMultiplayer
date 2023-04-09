@@ -553,9 +553,9 @@ namespace CNMultiplayer
         {
             foreach (FlagCapturePoint flagCapturePoint in AllCapturePoints)
             {
-                if (!flagCapturePoint.IsDeactivated)
+                Team flagOwnerTeam = GetFlagOwnerTeam(flagCapturePoint);
+                if (!flagCapturePoint.IsDeactivated && flagOwnerTeam != Team.Invalid)
                 {
-                    Team flagOwnerTeam = GetFlagOwnerTeam(flagCapturePoint);
                     Agent agent = null;
                     float num = float.MaxValue;
                     int count1 = 0, count2 = 0;
