@@ -68,6 +68,8 @@ namespace CNMultiplayer
 
         private const int MoraleDecayInTick = -1; //攻城方基础士气衰减
 
+        private const int FlagLockNum = 2; //锁点数量
+
         private int[] _morales;
 
         private FlagCapturePoint _masterFlag;
@@ -363,7 +365,7 @@ namespace CNMultiplayer
             base.Mission.Teams.Add(BattleSideEnum.Defender, object2.BackgroundColor2, object2.ForegroundColor2, banner2);
             foreach (FlagCapturePoint allCapturePoint in AllCapturePoints)
             {
-                if (allCapturePoint.FlagIndex >= 2) //开局禁用CDEFG旗帜
+                if (allCapturePoint.FlagIndex >= FlagLockNum) //开局禁用CDEFG旗帜
                 {
                     _capturePointOwners[allCapturePoint.FlagIndex] = Team.Invalid;
                     allCapturePoint.SetTeamColors(4284111450U, uint.MaxValue);
@@ -470,10 +472,10 @@ namespace CNMultiplayer
                         continue;
                     }
 
-                    if (item.FlagIndex <= AllCapturePoints.Count - 2)//旗帜移除后解锁后续旗帜
+                    if (item.FlagIndex <= AllCapturePoints.Count - FlagLockNum)//旗帜移除后解锁后续旗帜
                     {
-                        var flagIndex = item.FlagIndex + 2;
-                        if (_capturePointOwners[item.FlagIndex + 1] == Team.Invalid)
+                        var flagIndex = item.FlagIndex + FlagLockNum;
+                        if (_capturePointOwners[item.FlagIndex + FlagLockNum - 1] == Team.Invalid)
                             flagIndex--;
                         foreach (FlagCapturePoint flagpoint in AllCapturePoints.Where((FlagCapturePoint flag) => flag.FlagIndex == flagIndex))
                         {
