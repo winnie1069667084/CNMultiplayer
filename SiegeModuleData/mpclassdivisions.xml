@@ -40,29 +40,6 @@
                        slot="Cape"
                        item="mp_peasant_hood"
                        target="Player" />		   
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Body"
-                  item="mp_cloth_tunic" />
-            <Item slot="Gloves"
-                  item="mp_leather_gloves" />
-          </Group>
-          <Group>
-            <Item slot="Body"
-                  item="mp_aketon" />
-            <Item slot="Head"
-                  item="mp_arming_coif" />
-            <Item slot="Gloves"
-                  item="mp_leather_gloves" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_padded_leather_cape" />
-            <Item slot="Gloves"
-                  item="mp_padded_mitten" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
       <Perk game_mode="all"
             name="{=t68bkisr}Hammer"
@@ -216,6 +193,53 @@
         <Effect type="GoldGainOnKill"
                 value="2"
                 is_disabled_in_warmup="true" />
+      </Perk>
+      <!-- Third perks -->
+	<Perk game_mode="all"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">		   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=00000159}Bareman"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="3">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       target="Troops"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="null" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -1369,6 +1393,53 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="empire_mace_1_t2" />			   
+      </Perk>
+      <!-- Third perks -->
+	<Perk game_mode="all"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">		   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=00000159}Bareman"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="3">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       target="Troops"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="null" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -2709,6 +2780,53 @@
                        slot="Item2"
                        item="mp_khuzait_short_spear" />
       </Perk>
+      <!-- Third perks -->
+	<Perk game_mode="all"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">		   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=00000159}Bareman"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="3">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       target="Troops"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="null" />
+      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_infantry_khuzait"
@@ -3577,33 +3695,6 @@
                        slot="Cape"
                        item="mp_desert_leather_shoulderpad"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_desert_helmet" />
-            <Item slot="Gloves"
-                  item="mp_buttoned_leather_bracers" />
-            <Item slot="Cape"
-                  item="mp_desert_leather_shoulderpad" />
-          </Group>
-          <Group>
-            <Item slot="Gloves"
-                  item="mp_guarded_padded_vambrace" />
-            <Item slot="Body"
-                  item="mp_leather_strips_over_padded_robe" />
-            <Item slot="Cape"
-                  item="mp_eastern_studded_shoulders" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_loose_wrapped_desert_helmet" />
-            <Item slot="Gloves"
-                  item="mp_buttoned_leather_bracers" />
-            <Item slot="Cape"
-                  item="mp_desert_leather_shoulderpad" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
       <Perk game_mode="all"
             name="{=P1VHoGL2}Tribesmen"
@@ -3635,6 +3726,53 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_aserai_long_spear" />
+      </Perk>
+      <!-- Third perks -->
+	<Perk game_mode="all"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">		   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=00000159}Bareman"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="3">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       target="Troops"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="null" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -4783,6 +4921,53 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_sturgia_old_shield_a" />
+      </Perk>
+      <!-- Third perks -->
+	<Perk game_mode="all"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">		   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=00000159}Bareman"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="3">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-17" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       target="Troops"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="null" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -6167,6 +6352,53 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_battania_targe_b" />			   
+      </Perk>
+      <!-- Third perks -->
+	<Perk game_mode="all"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">		   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=00000159}Bareman"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="3">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-15" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       target="Troops"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="null" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -8431,6 +8663,7 @@
             name="{=8nObGQqW}Rhomphaia"
             description="{=384xoQfD}Replaces Falx with Rhomphaia, longer but deals less damage and slower. Deals extra damage against shields."
             icon="PerkBetterSwords"
+            hero_idle_anim="act_empire_mp_menavlion_infantry_idle"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"

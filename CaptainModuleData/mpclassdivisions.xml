@@ -198,7 +198,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=8zwWEfSs}Medium Infantry"
-            description="{=trR3odix}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops"
+            description="{=cap00004}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Spear{newline}Grants Shield{newline}+5 Additional Troops"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkLargerShields"
             perk_list="1">
@@ -226,7 +226,7 @@
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=rJFGyaBS}Moloch"
-            description="{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields"
+            description="{=cap00001}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+50% Speed Bonus Damage on Foot {newline}+50% Bonus Damage on Shields"
             icon="PerkFightingMadness"
             perk_list="2">
         <ConditionalEffect>
@@ -236,7 +236,7 @@
           </Conditions>
           <Effects>
             <Effect type="SpeedBonus"
-                    value="1.25"
+                    value="1.50"
                     is_ratio="true" />
             <Effect type="ShieldDamage"
                     value="0.50" />
@@ -330,7 +330,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=6M5TbvlU}Armor crafted from higher grade materials.{newline} {newline}+ 13 armor"
+            description="{=cap00012}Armor crafted from higher grade materials.{newline} {newline}+ 5 armor"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -825,7 +825,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}Change Chinese to see the description"
+            description="{=cap00003}grants billhock{newline}speed bonus on mount +50%"
             icon="PerkPolearms"
             perk_list="2">
         <ConditionalEffect>
@@ -1046,13 +1046,13 @@
                    troop="mp_skirmisher_empire_troop"
                    hero_idle_anim="act_empire_mp_recruit_idle"
                    troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.86"
+                   multiplier="0.83"
                    cost="100"
                    icon="Special_JavelinThrower"
                    melee_ai="230"
                    ranged_ai="280"
                    armor="10"
-                   movement_speed="0.83"
+                   movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="1.8">
     <Perks>
@@ -1308,7 +1308,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=mbIhGIcV}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}+75% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
+            description="{=cap00005}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}+125% Damage to Mounts with Melee Weapons{newline}+75% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
             icon="PerkHorseHunters"
             perk_list="2">
         <ConditionalEffect>
@@ -1366,7 +1366,7 @@
                    icon="Infantry_Heavy"
                    melee_ai="300"
                    ranged_ai="50"
-                   armor="45"
+                   armor="50"
                    movement_speed="0.78"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
@@ -1433,14 +1433,14 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=Do4Mmbs9}Plated Armor"
-            description="{=YjmSNwpY}You improved your armor with sturdy metal plates.{newline} {newline}+10 armor{newline}-10% Cut damage taken"
+            description="{=cap00020}You improved your armor with sturdy metal plates.{newline} {newline}+5 armor{newline}-10% Cut damage taken"
             icon="PerkArmorUpgrade"
             perk_list="2">
         <Effect type="DamageTaken"
                 value="-0.10"
                 damage_type="Cut" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
+                       value="5" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_empire_warrior_padded_armor_shoulder"
@@ -1888,7 +1888,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
+            description="{=cap00006}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount{newline}grants heavy menavlion"
             icon="PerkPolearms"
             perk_list="2">
         <ConditionalEffect>
@@ -1934,6 +1934,9 @@
             perk_list="2">
         <OnSpawnEffect type="TroopCountOnSpawn"
                        value="2.0" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_empire_menavlion" /> 
       </Perk>
       <Perk game_mode="all"
             name="{=fAnbXffX}Cavalry Spear"
@@ -2806,8 +2809,11 @@
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
             perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
+		<OnSpawnEffect type="TroopCountOnSpawn"
                        value="2.0" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+						slot="Item0"
+						item="mp_khuzait_glaive" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -3156,7 +3162,7 @@
                    troop="mp_skirmisher_aserai_troop"
                    hero_idle_anim="act_aserai_mp_skrimisher_idle"
                    troop_idle_anim="act_idle_1h_with_shield_1"
-                   multiplier="0.80"
+                   multiplier="0.75"
                    cost="130"
                    casual_cost="120"
                    battle_cost="130"
@@ -3164,7 +3170,7 @@
                    melee_ai="250"
                    ranged_ai="320"
                    armor="10"
-                   movement_speed="0.83"
+                   movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="3.0">
     <Perks>
@@ -3316,7 +3322,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=8zwWEfSs}Medium Infantry"
-            description="{=HYxbTcNS}Replaces the Tabar with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Heavy Scimitar{newline}Grants Shield{newline}+2 Additional Troops"
+            description="{=cap00009}Replaces the Tabar with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants axe and spear{newline}Grants Shield{newline}+5 Additional Troops"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkLargerShields"
             perk_list="1">
@@ -3327,7 +3333,7 @@
                        slot="Item1"
                        item="mp_steel_round_shield" />
         <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
+                       value="5.0" />
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="23" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -3842,7 +3848,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=GFZifSoP}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
+            description="{=cap00021}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount{newline}grants heavy twohanded axe"
             icon="PerkBardiche"
             perk_list="2">
         <ConditionalEffect>
@@ -3876,6 +3882,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="mp_javelin_extraammo" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_aserai_twohanded_axe" />
       </Perk>
       <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
             name="{=5f6TSkM1}Mounted Skirmish"
@@ -4134,13 +4143,13 @@
                    troop="mp_skirmisher_sturgia_troop"
                    hero_idle_anim="act_sturgia_mp_brigand_idle"
                    troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.76"
+                   multiplier="0.71"
                    cost="110"
                    icon="Special_JavelinThrower"
                    melee_ai="250"
                    ranged_ai="320"
                    armor="10"
-                   movement_speed="0.83"
+                   movement_speed="0.81"
                    combat_movement_speed="0.9"
                    acceleration="3.0">
     <Perks>
@@ -4322,7 +4331,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=WqJdn2ET}Berserker Skin"
-            description="{=H6y5zvHY}A thick layer of muscles protects you from cuts and bruises.{newline} {newline}+7 armor{newline}-30% Blunt damage taken"
+            description="{=cap00023}A thick layer of muscles protects you from cuts and bruises.{newline} {newline}+18 armor{newline}-30% Blunt damage taken"
             icon="PerkToughness"
             perk_list="1">
         <Effect type="DamageTaken"
@@ -4486,11 +4495,11 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=lWl3W0do}Padded Armor"
-            description="{=jTJa8tBY}You are wearing extra layers of padding below your armor.{newline} {newline}+10 armor{newline}-20% Blunt damage taken"
+            description="{=cap00019}You are wearing extra layers of padding below your armor.{newline} {newline}+5 armor{newline}-10% Blunt damage taken"
             icon="PerkArmorUpgrade"
             perk_list="1">
         <Effect type="DamageTaken"
-                value="-0.20"
+                value="-0.10"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="5" />
@@ -4904,8 +4913,8 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkLongSpear"
+            description="{=cap00022}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
+            icon="PerkTwoHandedAxe"
             hero_mount_idle_anim="act_sturgia_mp_raider_mount_shieldperk_idle"
             perk_list="2">
         <ConditionalEffect>
@@ -5270,7 +5279,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
-            description="{=IUsT27oV}Provides +9 armor."
+            description="{=cap00016}Provides +15 armor."
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -5465,13 +5474,13 @@
                    troop="mp_skirmisher_battania_troop"
                    hero_idle_anim="act_battania_mp_wildling_idle"
                    troop_idle_anim="act_idle_1h_with_shield_1"
-                   multiplier="0.76"
+                   multiplier="0.71"
                    cost="130"
                    icon="Special_JavelinThrower"
                    melee_ai="250"
                    ranged_ai="320"
                    armor="22"
-                   movement_speed="0.83"
+                   movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="3.0">
     <Perks>
@@ -5627,7 +5636,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=6M5TbvlU}Armor crafted from higher grade materials.{newline} {newline}+ 13 armor"
+            description="{=cap00012}Armor crafted from higher grade materials.{newline} {newline}+ 5 armor"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -6140,8 +6149,8 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=ueWfi5aP}You are an expert at charging in to break defensive lines.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkLongSpear"
+            description="{=cap00013}You are an expert at charging in to break defensive lines.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount{newline}grants twohanded hammer"
+            icon="PerkMaces"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -6174,7 +6183,7 @@
       </Perk>
       <Perk game_mode="Captain"
             name="{=tZgHdSOX}Half Barding"
-            description="{=hvINBQ1p}Provides armor for your mount and additional protection against ranged weapons.{newline} {newline}+17 Armor to Mount{newline}-20% Damage taken by Mount from Ranged Weapons"
+            description="{=cap00014}Provides armor for your mount and additional protection against ranged weapons.{newline} {newline}+17 Armor to Mount{newline}-20% Damage taken by Mount from Ranged Weapons"
             hero_mount_idle_anim="act_battania_mp_mounted_warrior_mount_idle_perks"
             icon="PerkHalfBarding"
             perk_list="2">
