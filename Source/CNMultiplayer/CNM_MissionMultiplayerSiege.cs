@@ -24,7 +24,7 @@ namespace CNMultiplayer
 
         public const int MaxMorale = 1440;
 
-        public const int StartingMorale = 275; //双方初始士气
+        public const int StartingMorale = 360; //双方初始士气
 
         public const int MaxMoraleGainPerFlag = 90;
 
@@ -58,11 +58,11 @@ namespace CNMultiplayer
 
         private const int DefenderFlagGoldHoldMax = 150; //守城方持有旗帜金币最大值
 
-        private const float radius = 14f; //定义旗帜半径
+        private const float radius = 20f; //定义旗帜半径
 
         private const float ObjectiveCheckPeriod = 0.25f;
 
-        private const float MoraleTickTimeInSeconds = 4f; //士气Tick
+        private const float MoraleTickTimeInSeconds = 3f; //士气Tick
 
         private const int MoraleBoostOnFlagRemoval = 0; //攻城方移除旗帜的士气奖励
 
