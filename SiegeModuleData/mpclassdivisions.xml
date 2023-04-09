@@ -89,7 +89,7 @@
                        item="mp_old_kite_sparring_shield" />			   
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000156}Change Chinese to see the description"
+            name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
             perk_list="1">
@@ -3812,7 +3812,7 @@
       </Perk>
 	  <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
-            description="{=00000132}Provides +23 armor."
+            description="{=00000156}Provides +23 armor."
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -4700,7 +4700,7 @@
         </RandomOnSpawnEffect>
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000156}Change Chinese to see the description"
+            name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
             perk_list="1">
@@ -8307,6 +8307,103 @@
                 value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  
+  <!--阿塞莱先锋法里斯-->
+  <MPClassDivision id="mp_royal_cavalry_aserai"
+                   hero="mp_royal_cavalry_aserai_hero"
+                   troop="mp_royal_cavalry_aserai_troop"
+                   hero_mount_idle_anim="act_aserai_mp_mamluke_mount_idle"
+                   troop_mount_idle_anim="act_horse_idle_1"
+                   multiplier="0.24"
+                   cost="200"
+                   casual_cost="300"
+                   icon="Special_RoyalCavalry"
+                   melee_ai="330"
+                   ranged_ai="0"
+                   armor="59"
+                   movement_speed="0.60"
+                   combat_movement_speed="0.7"
+                   acceleration="2.8">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=7sWKjye0}Faster Horse"
+            description="{=OjaeHZVO}Replaces mount with a faster horse."
+            icon="PerkFasterHorses"
+            perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_aserai_horse_war_faster" />			   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=cfSgK0nk}Agile Horse"
+            description="{=6bdcoGI1}Replaces mount with a faster and more maneuverable horse."
+            icon="PerkAgileHorses"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_aserai_horse_war_agile" />		   
+      </Perk>
+      <Perk game_mode="all"
+            name="{=WapSyVbv}Full Barding"
+            description="{=qwnHqTdO}Upgrades your horses armor."
+            icon="PerkFullBarding"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_mail_and_plate_barding" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=5f6TSkM1}Mounted Skirmish"
+            description="{=00000157}You are an expert at ranged combat while moving around on your mount.{newline} {newline}-35% Movement Accuracy Penalty{newline}-35% Turning Accuracy Penalty"
+            icon="PerkJavelins"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="-0.35"
+                driven_property="WeaponWorstMobileAccuracyPenalty"
+                is_ratio="true" />
+        <Effect type="DrivenProperty"
+                value="-0.35"
+                driven_property="WeaponRotationalAccuracyPenaltyInRadians"
+                is_ratio="true" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=hchDYAKL}Lancer"
+            description="{=ewUPfiVM}You are an expert at fighting on horseback.{newline} {newline}Grants Heavy Lance{newline} {newline}+33% Speed Bonus with Pierce Attacks from mount"
+            icon="PerkCouchedHeavySpears"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnMount" />
+          </Conditions>
+          <Effects>
+            <Effect type="SpeedBonus"
+                    value="1.33"
+                    hit_type="Melee"
+                    damage_type="Pierce"
+                    is_ratio="true" />
+          </Effects>
+        </ConditionalEffect>
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_aserai_heavy_lance" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=PFTzVdJg}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="2">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="aserai_scale_shoulder_b"
+                       target="Player" />
       </Perk>
     </Perks>
   </MPClassDivision>
