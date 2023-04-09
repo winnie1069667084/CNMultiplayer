@@ -8407,4 +8407,146 @@
       </Perk>
     </Perks>
   </MPClassDivision>
+
+  <!--巴丹尼亚资深镰兵-->
+  <MPClassDivision id="mp_heavy_shock_infantry_battania"
+                   hero="mp_heavy_shock_infantry_battania_hero"
+                   troop="mp_heavy_shock_infantry_battania_troop"
+                   hero_idle_anim="act_battania_mp_savage_idle"
+                   troop_idle_anim="act_idle_unarmed_1"
+                   multiplier="0.64"
+                   cost="140"
+                   casual_cost="140"
+                   icon="Special_Falxman"
+                   melee_ai="330"
+                   ranged_ai="0"
+                   armor="33"
+                   movement_speed="0.80"
+                   combat_movement_speed="0.9"
+                   acceleration="1.6"
+                   hitpoints="100">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=8nObGQqW}Rhomphaia"
+            description="{=384xoQfD}Replaces Falx with Rhomphaia, longer but deals less damage and slower. Deals extra damage against shields."
+            icon="PerkBetterSwords"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="battania_polearm_1_t5" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=Awc23bFS}Marauder"
+            description="{=00000158}Your years of being a Marauder has given you a strong arm, you throw much faster.{newline} {newline}Grants Stronger Javelins{newline} {newline}+10% Missle Release Speed {newline}+10% Ready Speed {newline}Grants Extra Throwing Axes"
+            icon="PerkThrowingAxes"
+            perk_list="1">
+        <Effect type="ThrowingWeaponSpeed"
+                value="0.2" />
+        <Effect type="DrivenProperty"
+                value="0.2"
+                driven_property="ThrustOrRangedReadySpeedMultiplier" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="highland_throwing_axe_1_t2" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="highland_throwing_axe_1_t2" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=BbV2Pwzb}Reinforced Armor"
+            description="{=00000018}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_battania_shoulder_strap_cloak"
+                       target="Player" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=0TtCRwmr}Athletic"
+            description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=vHIIkFQF}Blood Rage"
+            description="{=h5Oj84Wu}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+7% Damage per 20 Hitpoints lost{newline}-7% Damage Taken from Melee Attacks per 20 Hitpoints lost"
+            icon="PerkBloodRage"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="80" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.07"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.07"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="60" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.07"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.07"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="40" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.07"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.07"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="20" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.07"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.07"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+      </Perk>
+      <Perk game_mode="all"
+            name="{=AW8XDIIP}Thick Skin"
+            description="{=VPmy8IN2}A thick layer of muscles protects you from bruises.{newline} {newline}-30% Blunt damage taken"
+            icon="PerkToughness"
+            perk_list="2">
+        <Effect type="DamageTaken"
+                value="-0.30"
+                damage_type="Blunt" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
 </MPClassDivisions>

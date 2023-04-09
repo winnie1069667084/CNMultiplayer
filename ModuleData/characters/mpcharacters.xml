@@ -3030,4 +3030,110 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
+
+  <!--巴丹尼亚资深镰兵-->
+  <NPCCharacter id="mp_heavy_shock_infantry_battania_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000014}Veteran Falxman"
+                occupation="Soldier"
+                culture="Culture.battania">
+    <face>
+      <!--face_key value="31;0.266;0.5247;141000340;100000000047000;7001000000000;0;8400408000000;0;0;380000" max_value="63.19;0.466;0.9994;BFC0B4D3C34D4;FFFFFAFFAAA7FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;F7FF70FFFFEFF;0;0;589181"/-->
+      <BodyProperties version="4"
+                      age="31"
+                      weight="0.266"
+                      build="0.5247"
+                      key="00000001410003400100000000047000000700100000000000000000000000000008400408000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="45.19"
+                         weight="0.466"
+                         build="0.9994"
+                         key="000BFC0B4D3C34D4FFFFFAFFAAA7FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000F7FF70FFFFEFF000000000000000000000000000000000000000001B89181" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_battania_polearm_falx" />
+        <equipment slot="Item1"
+                   id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Body"
+                   id="Item.kilt_over_plated_leather" />
+        <equipment slot="Leg"
+                   id="Item.battania_fur_boots" />
+	 <equipment slot="Head"
+                   id="Item.ridged_northernhelm" />
+	 <equipment slot="Gloves"
+                   id="Item.highland_gloves" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_heavy_shock_infantry_battania_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000014}Veteran Falxman"
+                occupation="Soldier"
+                culture="Culture.battania">
+    <face>
+      <!--face_key value="31;0.266;0.5247;141000340;100000000047000;7001000000000;0;8400408000000;0;0;380000" max_value="63.19;0.466;0.9994;BFC0B4D3C34D4;FFFFFAFFAAA7FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;F7FF70FFFFEFF;0;0;589181"/-->
+      <BodyProperties version="4"
+                      age="31"
+                      weight="0.266"
+                      build="0.5247"
+                      key="00000001410003400100000000047000000700100000000000000000000000000008400408000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="45.19"
+                         weight="0.466"
+                         build="0.9994"
+                         key="000BFC0B4D3C34D4FFFFFAFFAAA7FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000F7FF70FFFFEFF000000000000000000000000000000000000000001B89181" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_battania_polearm_falx" />
+        <equipment slot="Item1"
+                   id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Body"
+                   id="Item.kilt_over_plated_leather" />
+        <equipment slot="Leg"
+                   id="Item.battania_fur_boots" />
+	 <equipment slot="Head"
+                   id="Item.ridged_northernhelm" />
+	 <equipment slot="Gloves"
+                   id="Item.highland_gloves" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
 </MPCharacters>
