@@ -56,6 +56,8 @@ namespace CNMultiplayer
 
         private const int AttackerRespawnGoldLowest = 150; //攻城方保底金币
 
+        private const int DefenderRespawnGoldLowest = 125; //守城方保底金币
+
         private const int AttackerFlagGoldHoldMax = 250; //攻城方持有旗帜金币最大值
 
         private const int DefenderFlagGoldHoldMax = 150; //守城方持有旗帜金币最大值
@@ -72,7 +74,7 @@ namespace CNMultiplayer
 
         private const int DefenderMoraleDecayInTick = -10; //守城方失去G的士气衰减
 
-        private const int FlagLockNum = 2; //锁点数量
+        private const int FlagLockNum = 3; //锁点数量
 
         private int[] _morales;
 
@@ -475,7 +477,7 @@ namespace CNMultiplayer
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             if (side == BattleSideEnum.Attacker)
             {
-                if (_masterFlag.IsFullyRaised && GetFlagOwnerTeam(_masterFlag).Side == BattleSideEnum.Defender)
+                if (_masterFlag.IsFullyRaised && GetFlagOwnerTeam(_masterFlag).Side != BattleSideEnum.Attacker)
                 {
                     num += MoraleDecayInTick;
                 }
@@ -500,7 +502,7 @@ namespace CNMultiplayer
                                 GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(i, Mission.Current.DefenderTeam));
                                 GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
                                 _gameModeSiegeClient?.OnCapturePointOwnerChanged(AllCapturePoints[i], Mission.Current.DefenderTeam);
-                                continue;
+                                break;
                             }
                         }
                     }
@@ -778,13 +780,17 @@ namespace CNMultiplayer
                         }
                     }
                 }
-                if (missionPeer.Team.Side == BattleSideEnum.Defender || (missionPeer.Team.Side == BattleSideEnum.Attacker && missionPeer.Representative.Gold > AttackerRespawnGoldLowest - num))
+                if ((missionPeer.Team.Side == BattleSideEnum.Defender && missionPeer.Representative.Gold > DefenderRespawnGoldLowest - num) || (missionPeer.Team.Side == BattleSideEnum.Attacker && missionPeer.Representative.Gold > AttackerRespawnGoldLowest - num))
                 {
                     ChangeCurrentGoldForPeer(missionPeer, missionPeer.Representative.Gold + num);
                 }
-                else
+                else if (missionPeer.Team.Side == BattleSideEnum.Attacker)
                 {
                     ChangeCurrentGoldForPeer(missionPeer, AttackerRespawnGoldLowest);
+                }
+                else if (missionPeer.Team.Side == BattleSideEnum.Defender)
+                {
+                    ChangeCurrentGoldForPeer(missionPeer, DefenderRespawnGoldLowest);
                 }
             }
             bool isFriendly = affectorAgent?.Team != null && affectedAgent.Team != null && affectorAgent.Team.Side == affectedAgent.Team.Side;
