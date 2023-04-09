@@ -383,7 +383,7 @@ namespace CNMultiplayer
             base.Mission.Teams.Add(BattleSideEnum.Defender, object2.BackgroundColor2, object2.ForegroundColor2, banner2);
             foreach (FlagCapturePoint allCapturePoint in AllCapturePoints)
             {
-                if (allCapturePoint.FlagIndex >= FlagLockNum) //开局禁用FlagLockNum个旗帜
+                if (allCapturePoint.FlagIndex >= FlagLockNum) //开局启用FlagLockNum个旗帜
                 {
                     _capturePointOwners[allCapturePoint.FlagIndex] = Team.Invalid;
                     allCapturePoint.SetTeamColors(4284111450U, uint.MaxValue);
