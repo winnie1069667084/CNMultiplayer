@@ -32,6 +32,8 @@ namespace CNMultiplayer
 
         public const int GoldBonusOnFlagRemoval = 35; //攻城方移除旗帜金币奖励
 
+        public const int DefenderGoldBonusOnFlagRemoval = 150; //守城方移除旗帜金币补偿
+
         public const string MasterFlagTag = "keep_capture_point";
 
         public override bool IsGameModeHidingAllAgentVisuals => true;
@@ -67,6 +69,8 @@ namespace CNMultiplayer
         private const int MoraleBoostOnFlagRemoval = 0; //攻城方移除旗帜的士气奖励
 
         private const int MoraleDecayInTick = -1; //攻城方基础士气衰减
+
+        private const int DefenderMoraleDecayInTick = -10; //守城方失去G的士气衰减
 
         private const int FlagLockNum = 2; //锁点数量
 
@@ -192,6 +196,18 @@ namespace CNMultiplayer
             _morales[1] = StartingMorale;
             _morales[0] = StartingMorale;
             AllCapturePoints = Mission.Current.MissionObjects.FindAllWithType<FlagCapturePoint>().ToMBList();
+            for (int i = 0; i < AllCapturePoints.Count - 1; i++)//依照FlagIndex对AllCapturePoints进行交换排序
+            {
+                for (int j = i + 1; j < AllCapturePoints.Count; j++)
+                {
+                    if (AllCapturePoints[i].FlagIndex > AllCapturePoints[j].FlagIndex)
+                    {
+                        var temp = AllCapturePoints[i];
+                        AllCapturePoints[i] = AllCapturePoints[j];
+                        AllCapturePoints[j] = temp;
+                    }
+                }
+            }
             foreach (FlagCapturePoint allCapturePoint in AllCapturePoints)
             {
                 allCapturePoint.SetTeamColorsSynched(4284111450u, uint.MaxValue);
@@ -365,7 +381,7 @@ namespace CNMultiplayer
             base.Mission.Teams.Add(BattleSideEnum.Defender, object2.BackgroundColor2, object2.ForegroundColor2, banner2);
             foreach (FlagCapturePoint allCapturePoint in AllCapturePoints)
             {
-                if (allCapturePoint.FlagIndex >= FlagLockNum) //开局禁用CDEFG旗帜
+                if (allCapturePoint.FlagIndex >= FlagLockNum) //开局禁用FlagLockNum个旗帜
                 {
                     _capturePointOwners[allCapturePoint.FlagIndex] = Team.Invalid;
                     allCapturePoint.SetTeamColors(4284111450U, uint.MaxValue);
@@ -448,18 +464,18 @@ namespace CNMultiplayer
         private int GetMoraleGain(BattleSideEnum side)
         {
             int num = 0;
-            int flagnum = 0;
-            for (int i = 0; i < AllCapturePoints.Count; i++)//计算当前战场上除G外的剩余旗帜数量
+            int FlagInvalidNum = 0;
+            for (int i = 0; i < AllCapturePoints.Count; i++)//计算当前战场上的剩余中立旗帜数量
             {
-                if (AllCapturePoints[i] != _masterFlag && !AllCapturePoints[i].IsDeactivated)
+                if (!AllCapturePoints[i].IsDeactivated && GetFlagOwnerTeam(AllCapturePoints[i]) == Team.Invalid)
                 {
-                    flagnum++;
+                    FlagInvalidNum++;
                 }
             }
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             if (side == BattleSideEnum.Attacker)
             {
-                if ((_masterFlag.IsFullyRaised && GetFlagOwnerTeam(_masterFlag).Side == BattleSideEnum.Defender) || flagnum > 1)
+                if (_masterFlag.IsFullyRaised && GetFlagOwnerTeam(_masterFlag).Side == BattleSideEnum.Defender)
                 {
                     num += MoraleDecayInTick;
                 }
@@ -471,32 +487,30 @@ namespace CNMultiplayer
                     {
                         continue;
                     }
-
-                    if (item.FlagIndex <= AllCapturePoints.Count - FlagLockNum)//旗帜移除后解锁后续旗帜
+                    num += MoraleBoostOnFlagRemoval;
+                    if (FlagInvalidNum != 0)//旗帜移除后解锁后续旗帜
                     {
-                        var flagIndex = item.FlagIndex + FlagLockNum;
-                        if (_capturePointOwners[item.FlagIndex + FlagLockNum - 1] == Team.Invalid)
-                            flagIndex--;
-                        foreach (FlagCapturePoint flagpoint in AllCapturePoints.Where((FlagCapturePoint flag) => flag.FlagIndex == flagIndex))
+                        for (int i = item.FlagIndex+1; i < AllCapturePoints.Count; i++)
                         {
-                            flagpoint.SetTeamColorsSynched(Mission.Current.DefenderTeam.Color, Mission.Current.DefenderTeam.Color2);
+                            if (GetFlagOwnerTeam(AllCapturePoints[i]) == Team.Invalid)
+                            {
+                                AllCapturePoints[i].SetTeamColorsSynched(Mission.Current.DefenderTeam.Color, Mission.Current.DefenderTeam.Color2);
+                                _capturePointOwners[i] = Mission.Current.DefenderTeam;
+                                GameNetwork.BeginBroadcastModuleEvent();
+                                GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(i, Mission.Current.DefenderTeam));
+                                GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
+                                _gameModeSiegeClient?.OnCapturePointOwnerChanged(AllCapturePoints[i], Mission.Current.DefenderTeam);
+                                continue;
+                            }
                         }
-                        _capturePointOwners[flagIndex] = Mission.Current.DefenderTeam;
-                        GameNetwork.BeginBroadcastModuleEvent();
-                        GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(flagIndex, Mission.Current.DefenderTeam));
-                        GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
-                        _gameModeSiegeClient?.OnCapturePointOwnerChanged(AllCapturePoints[flagIndex], Mission.Current.DefenderTeam);
                     }
-
-                    num += MoraleBoostOnFlagRemoval;//此处可以修改旗帜移除后攻城方获得的士气
-
                     foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
                     {
                         MissionPeer component = networkPeer.GetComponent<MissionPeer>();
                         if (component != null && component.Team?.Side == BattleSideEnum.Defender)
                         {
-                            ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + 450 / flagnum);//移除旗帜的金币数(防守方)，阶梯金币数与战场上剩余的旗帜数量挂钩
-                            list.Add(new KeyValuePair<ushort, int>(512, 450 / flagnum));
+                            ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + DefenderGoldBonusOnFlagRemoval);//移除旗帜的金币补偿(防守方)
+                            list.Add(new KeyValuePair<ushort, int>(512, DefenderGoldBonusOnFlagRemoval));
                             if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
                             {
                                 GameNetwork.BeginModuleEventAsServer(component.Peer);
@@ -505,10 +519,8 @@ namespace CNMultiplayer
                             }
                             list.Clear();
                         }
-                        if (component != null && component.Team?.Side == BattleSideEnum.Attacker)
-                        {
+                        else if (component != null && component.Team?.Side == BattleSideEnum.Attacker)
                             ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + GoldBonusOnFlagRemoval);//移除旗帜的金币数(进攻方)
-                        }
                     }
                     item.RemovePointAsServer();
                     (SpawnComponent.SpawnFrameBehavior as SiegeSpawnFrameBehavior).OnFlagDeactivated(item);
@@ -523,10 +535,7 @@ namespace CNMultiplayer
 
             if (GetFlagOwnerTeam(_masterFlag).Side == BattleSideEnum.Attacker && !_masterFlag.IsContested)
             {
-                if (flagnum == 1)//地图上剩余旗帜数量小于等于2，且攻城方控制G时，守城方将受到士气惩罚
-                    num = -5;
-                else if (flagnum == 0)
-                    num = -10;
+                num = DefenderMoraleDecayInTick;
             }
             else
             {
@@ -588,7 +597,7 @@ namespace CNMultiplayer
                             }
                             if (lastFoundAgent.Team.IsAttacker)//计算旗帜内双方人数
                                 count1++;
-                            if (lastFoundAgent.Team.IsDefender)
+                            else if (lastFoundAgent.Team.IsDefender)
                                 count2++;
                             if (num2 < num)
                             {
@@ -606,7 +615,7 @@ namespace CNMultiplayer
                         captureTheFlagFlagDirection = CaptureTheFlagFlagDirection.Up;
                     if (captureTheFlagFlagDirection != CaptureTheFlagFlagDirection.None)
                     {
-                        float flagv = MathF.Abs(count1 - count2) * 0.1f;//定义旗帜升降速度
+                        float flagv = MathF.Abs(count1 - count2) * 0.15f;//定义旗帜升降速度
                         flagCapturePoint.SetMoveFlag(captureTheFlagFlagDirection, MBMath.ClampFloat(flagv, 0.1f, 1f));
                     }
                     flagCapturePoint.OnAfterTick(agent != null, out var ownerTeamChanged);
