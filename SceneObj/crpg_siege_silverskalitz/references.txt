@@ -53,7 +53,8 @@ flora_entity wheat_group_fall
 flora_entity wheat_group_spring
 flora_entity wheats_yellow
 mesh arrow_new_icon
-mesh ballista_cover_attacker_a_state1
+mesh ballista_cover_attacker_b
+mesh ballista_cover_attacker_b_state1
 mesh ballista_cover_defender_a
 mesh ballista_cover_defender_a_state1
 mesh battania_castle_corner_c_l1_01
@@ -169,7 +170,6 @@ prefab awning_big_a
 prefab baby
 prefab ballista_a_spawnerMP
 prefab ballista_b_spawnerMP
-prefab ballista_cover_attacker_b
 prefab barn_fence_a
 prefab barn_fence_b
 prefab barn_fence_c

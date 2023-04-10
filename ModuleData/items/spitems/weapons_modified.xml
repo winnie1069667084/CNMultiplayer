@@ -187,4 +187,58 @@
            DropOnWeaponChange="true"
            DropOnAnyAction="true" />
   </Item>
+  
+  <!--战镰-->
+  <CraftedItem id="battania_2hsword_4_t4"
+               name="{=QLcP8bIs}Falx"
+               crafting_template="TwoHandedSword"
+               culture="Culture.battania"
+               modifier_group="sword">
+    <Pieces>
+      <Piece id="battania_blade_6"
+             Type="Blade"
+             scale_factor="110" />
+      <Piece id="sturgian_guard_6"
+             Type="Guard"
+             scale_factor="100" />
+      <Piece id="sturgian_grip_20"
+             Type="Handle"
+             scale_factor="100" />
+      <Piece id="battania_pommel_9"
+             Type="Pommel"
+             scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  
+  <!--北民装饰双手斧-->
+  <CraftedItem id="sturgia_2haxe_2_t5"
+               name="{=cKtkyroA}Northlander Decorated Two Handed Axe"
+               crafting_template="TwoHandedAxe"
+               culture="Culture.sturgia"
+               modifier_group="axe">
+    <Pieces>
+      <Piece id="axe_craft_22_head"
+             Type="Blade"
+             scale_factor="100" />
+      <Piece id="axe_craft_4_handle"
+             Type="Handle"
+             scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  
+  <!--重型行刑斧-->
+  <CraftedItem id="aserai_2haxe_3_t5"
+               name="{=hTPJXK1w}Heavy Executioner Axe"
+               crafting_template="TwoHandedAxe"
+               culture="Culture.aserai"
+               modifier_group="axe">
+    <Pieces>
+      <Piece id="axe_craft_38_head"
+             Type="Blade"
+             scale_factor="100" />
+      <Piece id="axe_craft_1_handle"
+             Type="Handle"
+             scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
 </Items>
