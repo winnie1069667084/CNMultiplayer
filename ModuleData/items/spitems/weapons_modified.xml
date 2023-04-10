@@ -188,6 +188,50 @@
            DropOnAnyAction="true" />
   </Item>
   
+  <!--宽槽双手阔剑-->
+  <CraftedItem id="vlandia_2hsword_1_t5"
+               name="{=9ZiUK3JJ}Wide Fullered Broad Two Hander"
+               crafting_template="TwoHandedSword"
+               culture="Culture.vlandia"
+               modifier_group="sword">
+    <Pieces>
+      <Piece id="vlandian_blade_3"
+             Type="Blade"
+             scale_factor="100" />
+      <Piece id="vlandian_guard_7"
+             Type="Guard"
+             scale_factor="100" />
+      <Piece id="vlandian_grip_8"
+             Type="Handle"
+             scale_factor="100" />
+      <Piece id="vlandian_pommel_4"
+             Type="Pommel"
+             scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  
+  <!--精炼钢双手剑-->
+  <CraftedItem id="vlandia_2hsword_2_t5"
+               name="{=VAO11FSu}Thamaskene Steel Two Hander"
+               crafting_template="TwoHandedSword"
+               culture="Culture.vlandia"
+               modifier_group="sword">
+    <Pieces>
+      <Piece id="vlandian_blade_3"
+             Type="Blade"
+             scale_factor="110" />
+      <Piece id="vlandian_guard_8"
+             Type="Guard"
+             scale_factor="100" />
+      <Piece id="vlandian_grip_7"
+             Type="Handle"
+             scale_factor="100" />
+      <Piece id="vlandian_pommel_9"
+             Type="Pommel"
+             scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  
   <!--战镰-->
   <CraftedItem id="battania_2hsword_4_t4"
                name="{=QLcP8bIs}Falx"
@@ -222,6 +266,28 @@
              scale_factor="100" />
       <Piece id="axe_craft_4_handle"
              Type="Handle"
+             scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  
+  <!--偃月刀-->
+  <CraftedItem id="khuzait_polearm_1_t4"
+               name="{=6hwZwODh}Glaive"
+               crafting_template="TwoHandedPolearm"
+               culture="Culture.khuzait"
+               modifier_group="polearm">
+    <Pieces>
+      <Piece id="spear_blade_19"
+             Type="Blade"
+             scale_factor="100" />
+      <Piece id="spear_banner_16"
+             Type="Guard"
+             scale_factor="100" />
+      <Piece id="spear_handle_15"
+             Type="Handle"
+             scale_factor="100" />
+      <Piece id="default_polearm_pommel"
+             Type="Pommel"
              scale_factor="100" />
     </Pieces>
   </CraftedItem>

@@ -8585,7 +8585,7 @@
                    icon="Special_Swordsman"
                    melee_ai="330"
                    ranged_ai="0"
-                   armor="75"
+                   armor="80"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8613,9 +8613,14 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageDealt"
+                    value="0.15"
+                    hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
                     value="0.05" />
+			<Effect type="ShieldDamage"
+                    value="0.2" />		
           </Effects>
         </ConditionalEffect>
       </Perk>
@@ -8634,7 +8639,7 @@
                    icon="Special_Swordsman"
                    melee_ai="330"
                    ranged_ai="0"
-                   armor="75"
+                   armor="80"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8662,9 +8667,14 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageDealt"
+                    value="0.15"
+                    hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
                     value="0.05" />
+			<Effect type="ShieldDamage"
+                    value="0.2" />		
           </Effects>
         </ConditionalEffect>
       </Perk>
@@ -8683,7 +8693,7 @@
                    icon="Special_Swordsman"
                    melee_ai="330"
                    ranged_ai="0"
-                   armor="75"
+                   armor="80"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8712,9 +8722,14 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageDealt"
+                    value="0.15"
+                    hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
                     value="0.05" />
+			<Effect type="ShieldDamage"
+                    value="0.2" />		
           </Effects>
         </ConditionalEffect>
       </Perk>
@@ -8733,7 +8748,7 @@
                    icon="Special_Swordsman"
                    melee_ai="330"
                    ranged_ai="0"
-                   armor="75"
+                   armor="80"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8762,9 +8777,14 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageDealt"
+                    value="0.15"
+                    hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
                     value="0.05" />
+			<Effect type="ShieldDamage"
+                    value="0.2" />		
           </Effects>
         </ConditionalEffect>
       </Perk>
@@ -8783,7 +8803,7 @@
                    icon="Special_Swordsman"
                    melee_ai="330"
                    ranged_ai="0"
-                   armor="75"
+                   armor="80"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8812,9 +8832,14 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageDealt"
+                    value="0.15"
+                    hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
                     value="0.05" />
+			<Effect type="ShieldDamage"
+                    value="0.2" />		
           </Effects>
         </ConditionalEffect>
       </Perk>
@@ -8833,7 +8858,7 @@
                    icon="Special_Swordsman"
                    melee_ai="330"
                    ranged_ai="0"
-                   armor="75"
+                   armor="80"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8852,7 +8877,7 @@
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
-            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed"
+            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+15% Damage with Melee Weapons"
             icon="PerkGeneral"
             perk_list="2">
         <ConditionalEffect>
@@ -8861,9 +8886,14 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageDealt"
+                    value="0.15"
+                    hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
                     value="0.05" />
+			<Effect type="ShieldDamage"
+                    value="0.2" />		
           </Effects>
         </ConditionalEffect>
       </Perk>

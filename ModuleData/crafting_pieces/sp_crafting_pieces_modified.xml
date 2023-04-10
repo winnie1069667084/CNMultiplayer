@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CraftingPieces>
+  <CraftingPiece id="vlandian_blade_3"
+                 name="{=mak3naEe}Wide Fullered Broad Two Hander Blade"
+                 tier="5"
+                 piece_type="Blade"
+                 mesh="vlandian_blade_3"
+                 culture="Culture.vlandia"
+                 length="99.4"
+                 weight="1.35">
+    <BladeData stack_amount="3"
+               physics_material="metal_weapon"
+               body_name="bo_sword_one_handed"
+               holster_mesh="vlandian_blade_2_scabbard_2">
+      <Thrust damage_type="Pierce"
+              damage_factor="3.2" />
+      <Swing damage_type="Cut"
+             damage_factor="3.6" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron6"
+                count="4" />
+    </Materials>
+  </CraftingPiece>
+  
   <CraftingPiece id="battania_blade_6"
                  name="{=IUlApNGp}Long Falx Blade"
                  tier="4"
@@ -13,7 +36,7 @@
                physics_material="metal_weapon"
                body_name="bo_sword_one_handed">
       <Swing damage_type="Cut"
-             damage_factor="5.2" />
+             damage_factor="4.7" />
     </BladeData>
     <Flags>
       <Flag name="BonusAgainstShield" />
@@ -39,7 +62,7 @@
                physics_material="metal_weapon"
                body_name="bo_axe_longer_b">
       <Swing damage_type="Cut"
-             damage_factor="4.5" />
+             damage_factor="4.0" />
     </BladeData>
     <Flags>
       <Flag name="CanBePickedUpFromCorpse"
@@ -50,6 +73,27 @@
                 count="2" />
       <Material id="Iron4"
                 count="2" />
+    </Materials>
+  </CraftingPiece>
+  
+  <CraftingPiece id="spear_blade_19"
+                 name="{=OBeOZ27b}Glaive Head"
+                 tier="4"
+                 piece_type="Blade"
+                 mesh="spear_blade_19"
+                 length="37.4"
+                 weight="0.4408">
+    <BladeData stack_amount="3"
+               physics_material="wood_weapon"
+               body_name="bo_spear_b">
+      <Thrust damage_type="Pierce"
+              damage_factor="1.7" />
+      <Swing damage_type="Cut"
+             damage_factor="3.3" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron4"
+                count="1" />
     </Materials>
   </CraftingPiece>
   
@@ -68,7 +112,7 @@
                physics_material="metal_weapon"
                body_name="bo_axe_longer_b">
       <Swing damage_type="Cut"
-             damage_factor="4.6" />
+             damage_factor="4.1" />
     </BladeData>
     <Flags>
       <Flag name="CanBePickedUpFromCorpse"
