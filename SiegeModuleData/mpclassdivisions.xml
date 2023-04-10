@@ -6441,7 +6441,7 @@
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Body"
-                       item="mp_battanian_scale_armor_a"
+                       item="mp_battania_light_armor_e"
                        target="Player" />			   
       </Perk>
 	  <Perk game_mode="all"
@@ -6455,7 +6455,7 @@
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Body"
-                       item="mp_battanian_scale_armor_a"
+                       item="mp_battania_light_armor_e"
                        target="Player" />				   
       </Perk>
     </Perks>
