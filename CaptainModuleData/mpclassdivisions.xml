@@ -165,7 +165,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="30"
-                   movement_speed="0.82"
+                   movement_speed="0.83"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -1210,7 +1210,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="30"
-                   movement_speed="0.82"
+                   movement_speed="0.83"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -1793,7 +1793,7 @@
                    troop="mp_light_cavalry_empire_troop"
                    hero_mount_idle_anim="act_empire_mp_courser_mount_smallshieldperk_idle"
                    troop_mount_idle_anim="act_horse_idle_1"
-                   multiplier="0.44"
+                   multiplier="0.38"
                    cost="140"
                    casual_cost="200"
                    battle_cost="150"
@@ -3295,7 +3295,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="30"
-                   movement_speed="0.83"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
