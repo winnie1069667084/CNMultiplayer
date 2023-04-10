@@ -20,7 +20,7 @@
                    melee_ai="230"
                    ranged_ai="30"
                    armor="7"
-                   movement_speed="0.82"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="1.8">
     <Perks>
@@ -165,7 +165,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="30"
-                   movement_speed="0.80"
+                   movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -323,7 +323,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="50"
-                   movement_speed="0.78"
+                   movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
@@ -713,7 +713,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="29"
-                   movement_speed="0.77"
+                   movement_speed="0.81"
                    combat_movement_speed="0.6"
                    acceleration="2.4">
     <Perks>
@@ -871,8 +871,8 @@
                    icon="Cavalry_Heavy"
                    melee_ai="330"
                    ranged_ai="50"
-                   armor="57"
-                   movement_speed="0.77"
+                   armor="67"
+                   movement_speed="0.79"
                    combat_movement_speed="0.6"
                    acceleration="2.8"
                    hitpoints="100">
@@ -1210,7 +1210,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="30"
-                   movement_speed="0.80"
+                   movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -1367,7 +1367,7 @@
                    melee_ai="300"
                    ranged_ai="50"
                    armor="50"
-                   movement_speed="0.78"
+                   movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
@@ -1801,7 +1801,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="26"
-                   movement_speed="0.76"
+                   movement_speed="0.81"
                    combat_movement_speed="0.7"
                    acceleration="2.8">
     <Perks>
@@ -1966,8 +1966,8 @@
                    icon="Cavalry_Heavy"
                    melee_ai="330"
                    ranged_ai="50"
-                   armor="62"
-                   movement_speed="0.73"
+                   armor="72"
+                   movement_speed="0.78"
                    combat_movement_speed="0.6"
                    acceleration="2.4"
                    hitpoints="100">
@@ -2137,7 +2137,7 @@
                    melee_ai="230"
                    ranged_ai="30"
                    armor="15"
-                   movement_speed="0.82"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="1.8">
     <Perks>
@@ -2280,7 +2280,7 @@
                    melee_ai="300"
                    ranged_ai="150"
                    armor="35"
-                   movement_speed="0.79"
+                   movement_speed="0.81"
                    combat_movement_speed="0.8"
                    acceleration="2.0">
     <Perks>
@@ -2671,7 +2671,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="19"
-                   movement_speed="0.79"
+                   movement_speed="0.81"
                    combat_movement_speed="0.7"
                    acceleration="2.8">
     <Perks>
@@ -2913,8 +2913,8 @@
                    icon="Cavalry_Heavy"
                    melee_ai="330"
                    ranged_ai="150"
-                   armor="56"
-                   movement_speed="0.74"
+                   armor="66"
+                   movement_speed="0.79"
                    combat_movement_speed="0.7"
                    acceleration="3.2"
                    hitpoints="100">
@@ -3051,7 +3051,7 @@
                    melee_ai="240"
                    ranged_ai="40"
                    armor="15"
-                   movement_speed="0.82"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
@@ -3761,7 +3761,7 @@
                    melee_ai="250"
                    ranged_ai="150"
                    armor="15"
-                   movement_speed="0.77"
+                   movement_speed="0.81"
                    combat_movement_speed="0.7"
                    acceleration="2.8">
     <Perks>
@@ -3928,8 +3928,8 @@
                    icon="Cavalry_Heavy"
                    melee_ai="330"
                    ranged_ai="160"
-                   armor="59"
-                   movement_speed="0.75"
+                   armor="69"
+                   movement_speed="0.79"
                    combat_movement_speed="0.7"
                    acceleration="2.8">
     <Perks>
@@ -4030,7 +4030,7 @@
                    melee_ai="240"
                    ranged_ai="40"
                    armor="17"
-                   movement_speed="0.82"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
@@ -4305,7 +4305,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="2"
-                   movement_speed="0.83"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -4473,7 +4473,7 @@
                    melee_ai="310"
                    ranged_ai="50"
                    armor="50"
-                   movement_speed="0.78"
+                   movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
@@ -4763,7 +4763,7 @@
                    melee_ai="240"
                    ranged_ai="30"
                    armor="15"
-                   movement_speed="0.76"
+                   movement_speed="0.81"
                    combat_movement_speed="0.6"
                    acceleration="2.8">
     <Perks>
@@ -4996,8 +4996,8 @@
                    icon="Cavalry_Heavy"
                    melee_ai="330"
                    ranged_ai="50"
-                   armor="58"
-                   movement_speed="0.77"
+                   armor="68"
+                   movement_speed="0.79"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -5102,7 +5102,7 @@
                    melee_ai="240"
                    ranged_ai="40"
                    armor="25"
-                   movement_speed="0.82"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
@@ -5252,7 +5252,7 @@
                    melee_ai="250"
                    ranged_ai="50"
                    armor="2"
-                   movement_speed="0.83"
+                   movement_speed="0.84"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -5628,7 +5628,7 @@
                    melee_ai="300"
                    ranged_ai="50"
                    armor="50"
-                   movement_speed="0.78"
+                   movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="2.4"
                    hitpoints="100">
@@ -6067,7 +6067,7 @@
                    melee_ai="250"
                    ranged_ai="150"
                    armor="16"
-                   movement_speed="0.79"
+                   movement_speed="0.81"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
