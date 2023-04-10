@@ -96,7 +96,7 @@ namespace Patches
                         new MultiplayerMissionAgentVisualSpawnComponent(),
                         new ConsoleMatchStartEndHandler(),
                         new SpawnComponent(new SiegeSpawnFrameBehavior(), new SiegeSpawningBehavior()),
-                        //new MissionLobbyEquipmentNetworkComponent(),//服务器移除大厅自定义皮肤
+                        new MissionLobbyEquipmentNetworkComponent(),
                         new MultiplayerTeamSelectComponent(),
                         new MissionHardBorderPlacer(),
                         new MissionBoundaryPlacer(),
