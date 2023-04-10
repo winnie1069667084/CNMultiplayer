@@ -1,18 +1,10 @@
-﻿using Messages.FromClient.ToLobbyServer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
-using HarmonyLib;
-using Mono.Cecil.Cil;
 
 namespace Patches
 {
-    [HarmonyPatch(typeof(AgentStatCalculateModel), "SetAiRelatedProperties")]//强化近战AI（仅限攻城模式）
+    //[HarmonyPatch(typeof(AgentStatCalculateModel), "SetAiRelatedProperties")]//强化近战AI（仅限攻城模式）
     internal class Patch_SetAiRelatedProperties
     {
         public static bool Prefix(Agent agent, ref AgentDrivenProperties agentDrivenProperties, WeaponComponentData equippedItem, WeaponComponentData secondaryItem, AgentStatCalculateModel __instance)
