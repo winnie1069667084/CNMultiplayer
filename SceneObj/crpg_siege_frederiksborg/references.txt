@@ -1,4 +1,4 @@
-783
+784
 flora_entity 
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -670,6 +670,7 @@ prefab siege_barricade_c
 prefab siege_barricade_group_a
 prefab siege_ladder_11m_spawner
 prefab siege_ladder_6m_spawner
+prefab siege_ladder_7m_spawner
 prefab siege_ladder_8m_spawner
 prefab sign_tavern
 prefab smoked_fire_with_light
