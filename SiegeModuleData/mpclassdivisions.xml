@@ -8688,7 +8688,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=00000018}Provides +9 armor."
+            description="{=00000010}Provides +9 armor."
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"

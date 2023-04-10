@@ -1,9 +1,4 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
@@ -24,18 +19,18 @@ namespace Patches
             if (damageType != DamageTypes.Blunt)
             {
                 float num4;
-                if (damageType != DamageTypes.Cut)
+                switch (damageType)
                 {
-                    if (damageType != DamageTypes.Pierce)
-                    {
+                    case DamageTypes.Cut:
+                        num4 = MathF.Max(0f, magnitude * (1f - 0.6f * armorEffectiveness / (20f + 0.4f * armorEffectiveness)));
+                        break;
+                    case DamageTypes.Pierce:
+                        num4 = MathF.Max(0f, magnitude * (30f / (30f + armorEffectiveness)));
+                        break;
+                    default:
                         Debug.FailedAssert("Given damage type is invalid.", "C:\\Develop\\MB3\\Source\\Bannerlord\\TaleWorlds.MountAndBlade\\ComponentInterfaces\\MultiplayerStrikeMagnitudeModel.cs", "ComputeRawDamage", 45);
                         __result = 0f;
-                    }
-                    num4 = MathF.Max(0f, magnitude * (30f / (30f + armorEffectiveness)));
-                }
-                else
-                {
-                    num4 = MathF.Max(0f, magnitude * (1f - 0.6f * armorEffectiveness / (20f + 0.4f * armorEffectiveness)));
+                        return false;
                 }
                 num3 += (1f - bluntDamageFactorByDamageType) * num4;
             }
