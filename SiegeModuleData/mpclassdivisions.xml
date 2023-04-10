@@ -6211,6 +6211,66 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
+      <Perk game_mode="all"
+            name="{=00000046}Improved Armor"
+            description="{=00000018}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_battania_pike" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="wolf_shoulder"
+                       target="Player" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
+                             target="Troops">
+          <Group>
+            <Item slot="Head"
+                  item="mp_battania_earmuff_helmet_a" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_battania_earmuff_helmet_b" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_battania_earmuff_helmet_b_brnz" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
+      <Perk game_mode="all"
+            name="{=00000046}Improved Armor"
+            description="{=00000018}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_battania_pike" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="rough_bearskin"
+                       target="Player" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
+                             target="Troops">
+          <Group>
+            <Item slot="Head"
+                  item="mp_battania_earmuff_helmet_a" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_battania_earmuff_helmet_b" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_battania_earmuff_helmet_b_brnz" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
 	  <Perk game_mode="all"
             name="{=00000110}Change Chinese to see the description"
             description="{=00000111}Change Chinese to see the description"
