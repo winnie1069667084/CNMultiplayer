@@ -16,7 +16,7 @@ namespace Patches
         }
     }
 
-    [HarmonyPatch(typeof(MultiplayerTeamSelectComponent), "UpdateTeams")]
+    //[HarmonyPatch(typeof(MultiplayerTeamSelectComponent), "UpdateTeams")]
     internal class Patch_UpdateTeams//调用自动平衡系统
     {
         public static bool Prefix(MultiplayerTeamSelectComponent __instance)
@@ -29,7 +29,7 @@ namespace Patches
         }
     }
 
-    [HarmonyPatch(typeof(MultiplayerTeamSelectComponent), "BalanceTeams")]
+    //[HarmonyPatch(typeof(MultiplayerTeamSelectComponent), "BalanceTeams")]
     internal class Patch_BalanceTeams//自动平衡系统
     {
         public static bool Prefix(MultiplayerTeamSelectComponent __instance)

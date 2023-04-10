@@ -585,7 +585,7 @@ namespace CNMultiplayer
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (((lastFoundAgent.MissionPeer.Representative.Gold < AttackerFlagGoldHoldMax && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < DefenderFlagGoldHoldMax && lastFoundAgent.Team.IsDefender)) && (_dtSumCheckMorales % 0.5f < ObjectiveCheckPeriod))//设定占旗获取金币速率
+                            if (((lastFoundAgent.MissionPeer.Representative.Gold < AttackerFlagGoldHoldMax && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < DefenderFlagGoldHoldMax && lastFoundAgent.Team.IsDefender)) && (_dtSumCheckMorales % 0.66f < ObjectiveCheckPeriod))//设定占旗获取金币速率
                             {
                                 ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));

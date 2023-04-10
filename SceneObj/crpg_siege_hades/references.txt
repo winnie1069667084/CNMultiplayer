@@ -1,4 +1,4 @@
-446
+447
 flora_entity agriculture_chickpeas
 flora_entity agriculture_garlic
 flora_entity agriculture_leek
@@ -260,6 +260,7 @@ prefab fishnet_b
 prefab fishnet_c
 prefab fishnet_d
 prefab fishnet_e
+prefab flag_pole_big_sergeant_C
 prefab flag_pole_big_sergeant_E
 prefab flag_pole_big_sergeant_F
 prefab flag_pole_big_sergeant_main
