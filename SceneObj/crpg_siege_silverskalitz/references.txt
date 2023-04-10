@@ -1,4 +1,4 @@
-1012
+1009
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -53,6 +53,7 @@ flora_entity wheat_group_fall
 flora_entity wheat_group_spring
 flora_entity wheats_yellow
 mesh arrow_new_icon
+mesh ballista_cover_attacker_a_state1
 mesh ballista_cover_defender_a
 mesh ballista_cover_defender_a_state1
 mesh battania_castle_corner_c_l1_01
@@ -108,10 +109,6 @@ mesh foods_basket_c
 mesh icon_man
 mesh mangonel_rock_pile
 mesh rock_004
-mesh siege_barricade_a_state_2
-mesh siege_barricade_a_state_3
-mesh siege_barricade_a_state_4
-mesh siege_barricade_a_state_5
 mesh sturgia_village_house_entrance
 mesh terrain_green_rock_big_a
 mesh terrain_green_rock_big_c
@@ -172,7 +169,6 @@ prefab awning_big_a
 prefab baby
 prefab ballista_a_spawnerMP
 prefab ballista_b_spawnerMP
-prefab ballista_cover_attacker_a
 prefab ballista_cover_attacker_b
 prefab barn_fence_a
 prefab barn_fence_b
@@ -495,6 +491,7 @@ prefab fishnet_c
 prefab fishnet_d
 prefab fishnet_e
 prefab flag_5
+prefab flag_pole_big_sergeant_D
 prefab flag_pole_big_sergeant_E
 prefab flag_pole_big_sergeant_F
 prefab flag_pole_big_sergeant_main
