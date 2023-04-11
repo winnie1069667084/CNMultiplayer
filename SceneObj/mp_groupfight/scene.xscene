@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<scene name="mp_groupfight" version="2">
+	<flora_bounding_rect min="33.737, 49.064" max="190.134, 170.353"/>
+	<levels>
+		<level name="base" mask="1"/>
+	</levels>
+	<environment_properties>
+		<property name="nav_mesh_auto_generated_" value="false"/>
+		<property name="physics_world_min" value="0.000, 0.000"/>
+		<property name="physics_world_max_" value="200.000, 200.000"/>
+		<property name="north_angle" value="0.000"/>
+		<property name="is_indoors" value="false"/>
+		<property name="disable_flora_billboards" value="false"/>
+		<property name="ground_color" value="0.000, 0.000, 0.000"/>
+		<property name="prt_multiplier" value="1.000"/>
+		<property name="prt_point_light_multiplier" value="1.000"/>
+		<property name="fog_start_distance" value="50.000"/>
+		<property name="prt_color_contrast" value="1.000"/>
+		<property name="scene_scale_multiplier" value="1.000"/>
+		<property name="prt_intensity_contrast" value="1.000"/>
+		<property name="prt_fallback_probe_index" value="-1, -1, -1"/>
+		<property name="enforced_color_grade" value=""/>
+		<atmosphere_properties>
+			<property name="atmosphere_name" value="scene_atmosphere"/>
+			<property name="wind" value="1.000, 0.000"/>
+			<property name="scene_fog_falloff_offset" value="0.000"/>
+		</atmosphere_properties>
+		<water_properties version="1">
+			<property name="water_level" value="-100.000"/>
+			<property name="water_strength" value="5.000"/>
+			<property name="water_wind_dependency" value="1.000"/>
+			<property name="water_material" value="water_default"/>
+			<property name="water_shallow_color" value="1.000, 1.000, 1.000"/>
+			<property name="water_deep_color" value="1.000, 1.000, 1.000"/>
+			<property name="water_exists" value="false"/>
+			<property name="place_water_probe" value="true"/>
+		</water_properties>
+		<out_of_bounds_effects_properties>
+			<property name="vignette_color" value="0.000, 0.500, 1.000"/>
+			<property name="vignette_alpha" value="0.000"/>
+		</out_of_bounds_effects_properties>
+	</environment_properties>
+	<entities>
+		<game_entity prefab="border_soft">
+			<transform position="33.737, 55.788, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="border_soft">
+			<transform position="167.436, 49.064, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="border_soft">
+			<transform position="190.134, 98.224, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="border_soft">
+			<transform position="176.741, 164.287, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity name="ground_plane" old_prefab_name="">
+			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
+			<physics shape="bo_editor_plane"/>
+			<components>
+				<meta_mesh_component name="editor_plane_low">
+					<mesh name="editor_plane_low" argument="1.000, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity name="envmap_probe" old_prefab_name="" mobility="1">
+			<visibility_masks>
+				<visibility_mask name="no_shadow" value="true"/>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<transform position="20.000, 0.000, 5.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<scripts>
+				<script name="ReflectionCapturer">
+					<variables>
+						<variable name="IsGlobal" value="true"/>
+						<variable name="IsParallaxCorrected" value="false"/>
+						<variable name="AmbientMultiplier" value="1.000"/>
+						<variable name="AttenuationCoef" value="20.000"/>
+						<variable name="BoxOffset" value="0.000, 0.000, 0.000, 0.000"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="empire_hippodrome_grandstand_d">
+			<transform position="107.828, 127.722, 0.000" rotation_euler="0.000, 0.000, 3.110" scale="1.072, 1.072, 1.072"/>
+		</game_entity>
+		<game_entity prefab="border_soft">
+			<transform position="40.067, 170.353, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="120.990, 109.874, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="93.526, 110.661, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="93.619, 113.950, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="121.084, 113.163, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="120.692, 99.996, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="93.228, 100.784, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_round1">
+			<transform position="119.995, 119.440, 0.661" rotation_euler="0.000, 0.000, 0.030"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_round1">
+			<transform position="95.098, 120.169, 0.661" rotation_euler="0.000, 0.000, 1.522"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="113.931, 120.792, 0.661" rotation_euler="0.000, 0.000, 3.113"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="104.820, 121.116, 0.661" rotation_euler="0.000, 0.000, 3.125"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="108.059, 121.028, 0.661" rotation_euler="0.000, 0.000, 3.120"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="110.960, 120.912, 0.661" rotation_euler="0.000, 0.000, 3.093"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="101.642, 121.160, 0.661" rotation_euler="0.000, 0.000, 3.113"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="106.835, 92.905, 0.661" rotation_euler="0.000, 0.000, -0.021"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="109.737, 92.789, 0.661" rotation_euler="0.000, 0.000, -0.048"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_round1">
+			<transform position="94.307, 94.382, 0.661" rotation_euler="0.000, 0.000, -3.111"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="112.707, 92.669, 0.661" rotation_euler="0.000, 0.000, -0.028"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="103.597, 92.993, 0.661" rotation_euler="0.000, 0.000, -0.016"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="100.418, 93.037, 0.661" rotation_euler="0.000, 0.000, -0.028"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_round1">
+			<transform position="119.220, 93.649, 0.661" rotation_euler="0.000, 0.000, -1.619"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_end">
+			<transform position="120.855, 105.037, 1.018" rotation_euler="0.000, 0.000, -0.033"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_end">
+			<transform position="120.982, 108.142, 1.018" rotation_euler="0.000, 0.000, -0.033"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_end">
+			<transform position="93.381, 105.630, 1.018" rotation_euler="0.000, 0.000, -0.033"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d_end">
+			<transform position="93.426, 108.757, 1.018" rotation_euler="0.000, 0.000, -0.033"/>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_b">
+			<transform position="75.954, 107.974, 8.229" rotation_euler="0.000, 0.000, -1.608" scale="2.273, 2.273, 2.273"/>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_b">
+			<transform position="139.174, 105.982, 8.229" rotation_euler="0.000, 0.000, -1.608" scale="2.273, 2.273, 2.273"/>
+		</game_entity>
+		<game_entity prefab="flag_pole_big_sergeant_C">
+			<transform position="76.179, 107.946, 11.893" rotation_euler="0.000, 0.000, -1.342"/>
+		</game_entity>
+		<game_entity prefab="skirmish_start_spawn">
+			<transform position="131.959, 107.367, 0.021" rotation_euler="0.000, 0.000, 3.110"/>
+			<children>
+				<game_entity _index_="0">
+					<tags>
+						<tag name="spawnpoint"/>
+						<tag name="attacker"/>
+					</tags>
+				</game_entity>
+				<game_entity _index_="1">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+					<transform position="4.812, -3.306, 0.000"/>
+				</game_entity>
+				<game_entity _index_="2">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+				</game_entity>
+				<game_entity _index_="3">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+					<transform position="4.501, 11.784, 0.000"/>
+				</game_entity>
+				<game_entity _index_="4">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+					<transform position="4.747, -10.159, 0.000"/>
+				</game_entity>
+				<game_entity _index_="5">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+					<transform position="4.780, -5.844, 0.000"/>
+				</game_entity>
+				<game_entity _index_="6">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+					<transform position="4.854, 2.823, 0.000"/>
+				</game_entity>
+				<game_entity _index_="7">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+					<transform position="4.703, -0.417, 0.000"/>
+				</game_entity>
+				<game_entity _index_="8">
+					<tags>
+						<tag name="attacker"/>
+						<tag name="spawnpoint"/>
+					</tags>
+					<transform position="4.712, 8.658, 0.000"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="skirmish_start_spawn">
+			<transform position="82.042, 106.466, 0.021" rotation_euler="0.000, 0.000, -0.033"/>
+			<children>
+				<game_entity _index_="0">
+					<tags>
+						<tag name="spawnpoint"/>
+						<tag name="defender"/>
+					</tags>
+				</game_entity>
+				<game_entity _index_="1">
+					<transform position="4.812, -3.306, 0.000"/>
+				</game_entity>
+				<game_entity _index_="3">
+					<transform position="4.501, 11.784, 0.000"/>
+				</game_entity>
+				<game_entity _index_="4">
+					<transform position="4.747, -10.159, 0.000"/>
+				</game_entity>
+				<game_entity _index_="5">
+					<transform position="4.780, -5.844, 0.000"/>
+				</game_entity>
+				<game_entity _index_="6">
+					<transform position="4.854, 2.823, 0.000"/>
+				</game_entity>
+				<game_entity _index_="7">
+					<transform position="4.703, -0.417, 0.000"/>
+				</game_entity>
+				<game_entity _index_="8">
+					<transform position="4.712, 8.658, 0.000"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="spawn_visual">
+			<transform position="161.738, 105.373, 0.502" rotation_euler="0.000, 0.000, -0.053"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="-3.969, -1.182, -0.502"/>
+				</game_entity>
+				<game_entity _index_="1">
+					<transform position="-2.468, 2.268, -0.502"/>
+				</game_entity>
+				<game_entity _index_="3">
+					<transform position="-2.180, -1.822, -0.502"/>
+				</game_entity>
+				<game_entity _index_="4">
+					<transform position="-2.824, -3.409, -0.502"/>
+				</game_entity>
+				<game_entity _index_="5">
+					<transform position="-3.835, 0.789, -0.502"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_b">
+			<transform position="106.446, 84.705, 4.045" rotation_euler="0.000, 0.000, -0.038" scale="2.273, 2.273, 2.886"/>
+		</game_entity>
+		<game_entity prefab="flag_pole_big_sergeant_A">
+			<transform position="106.538, 84.920, 8.697" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="flag_pole_big_sergeant_B">
+			<transform position="139.079, 106.100, 11.893" rotation_euler="0.000, 0.000, 1.691"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="120.767, 103.283, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="93.303, 104.071, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_hippodrome_grandstand_d">
+			<transform position="106.432, 86.227, 0.000" rotation_euler="0.000, 0.000, -0.033" scale="1.072, 1.072, 1.072"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="117.178, 120.695, 0.661" rotation_euler="0.000, 0.000, 3.113"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="115.954, 92.571, 0.661" rotation_euler="0.000, 0.000, -0.028"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="98.348, 121.252, 0.661" rotation_euler="0.000, 0.000, 3.113"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="97.124, 93.129, 0.661" rotation_euler="0.000, 0.000, -0.028"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="121.178, 116.433, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="93.713, 117.221, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="93.136, 97.539, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_d2">
+			<transform position="120.600, 96.750, 0.661" rotation_euler="0.000, 0.000, 1.540"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_plank_d">
+			<transform position="120.968, 106.604, -0.089" rotation_euler="0.000, 0.000, 1.535"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_plank_d">
+			<transform position="93.491, 107.328, -0.093" rotation_euler="0.000, 0.000, 1.553"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="121.511, 87.083, 0.248" rotation_euler="0.000, 0.000, 0.463" scale="1.414, 1.006, 1.006"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="121.513, 87.074, 1.457" rotation_euler="0.000, 0.000, 0.463" scale="1.414, 1.006, 1.006"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="90.087, 89.019, 0.313" rotation_euler="0.000, 0.000, -0.647" scale="1.391, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="90.060, 88.996, 1.694" rotation_euler="0.000, 0.000, -0.647" scale="1.391, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="92.756, 126.823, 0.313" rotation_euler="0.000, 0.000, 0.456" scale="1.391, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="92.729, 126.800, 1.694" rotation_euler="0.000, 0.000, 0.456" scale="1.391, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="124.116, 124.919, 1.694" rotation_euler="0.000, 0.000, -0.649" scale="1.391, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_b_short1">
+			<transform position="124.144, 124.942, 0.313" rotation_euler="0.000, 0.000, -0.649" scale="1.391, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_garden_wall_b_short1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod1.2" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.0" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod2.1" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod4" factor="4290361785"/>
+					<mesh name="empire_garden_wall_b_short1.lod5" factor="4290361785"/>
+				</meta_mesh_component>
+			</components>
+			<additional_features>
+				<feature name="apply_factor_color_to_all_components" value="true">
+					<factor value="0.723, 0.723, 0.723, 1.000"/>
+				</feature>
+			</additional_features>
+		</game_entity>
+		<game_entity prefab="crow">
+			<transform position="106.709, 85.986, 8.697" rotation_euler="0.000, 0.000, -3.033"/>
+			<skeleton>
+				<bones>
+					<bone frame="-0.015572, -0.769605, 0.638330, 0.000000, 0.034226, 0.637623, 0.769588, 0.000000, -0.999293, 0.033831, 0.016412, 0.000000, -0.000000, 0.096099, 0.142053, 1.000000"/>
+					<bone frame="-0.210493, 0.213164, 0.954072, 0.000000, 0.709735, 0.704468, -0.000810, 0.000000, -0.672286, 0.676968, -0.299575, 0.000000, -0.000000, 0.018227, 0.038616, 1.000000" _index_="2"/>
+					<bone frame="0.074857, 0.664860, -0.743208, 0.000000, 0.761275, 0.443291, 0.473237, 0.000000, 0.644094, -0.601210, -0.472958, 0.000000, 0.048111, 0.000000, 0.000000, 1.000000" _index_="3"/>
+					<bone frame="-0.259089, -0.947758, -0.186083, 0.000000, -0.935894, 0.293962, -0.194136, 0.000000, 0.238696, 0.123855, -0.963164, 0.000000, -0.048007, 0.015167, 0.034035, 1.000000" _index_="4"/>
+					<bone frame="-0.999692, 0.000000, -0.024821, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.024821, 0.000000, -0.999692, 0.000000, 0.000000, 0.000000, 0.044112, 1.000000" _index_="5"/>
+					<bone frame="-0.840227, -0.003348, 0.542224, 0.000000, 0.123509, 0.972513, 0.197393, 0.000000, -0.527981, 0.232825, -0.816719, 0.000000, 0.000000, 0.000000, 0.070889, 1.000000" _index_="6"/>
+					<bone frame="0.905208, -0.131772, 0.404023, 0.000000, 0.016543, 0.960918, 0.276338, 0.000000, -0.424646, -0.243460, 0.872011, 0.000000, 0.000000, -0.000000, 0.095645, 1.000000" _index_="7"/>
+					<bone frame="0.472050, 0.235798, 0.849452, 0.000000, -0.279862, 0.953805, -0.109242, 0.000000, -0.835970, -0.186162, 0.516234, 0.000000, 0.001110, 0.000633, 0.039837, 1.000000" _index_="8"/>
+					<bone frame="-0.489498, 0.008469, 0.871963, 0.000000, -0.001130, 0.999946, -0.010347, 0.000000, -0.872004, -0.006050, -0.489462, 0.000000, -0.024104, -0.000158, -0.004355, 1.000000" _index_="9"/>
+					<bone frame="0.029056, 0.371035, 0.928164, 0.000000, -0.700859, 0.669631, -0.245746, 0.000000, -0.712707, -0.643372, 0.279500, 0.000000, -0.019745, -0.000370, 0.044614, 1.000000" _index_="10"/>
+					<bone frame="-0.451784, -0.000000, -0.892127, 0.000000, -0.000000, 1.000000, 0.000000, 0.000000, 0.892127, 0.000000, -0.451784, 0.000000, -0.021754, -0.001190, -0.020680, 1.000000" _index_="11"/>
+					<bone frame="-0.134493, -0.000000, -0.990915, 0.000000, -0.000000, 1.000000, 0.000000, 0.000000, 0.990915, 0.000000, -0.134493, 0.000000, -0.025211, -0.000840, 0.024614, 1.000000" _index_="12"/>
+					<bone frame="-0.244404, 0.949748, 0.195565, 0.000000, -0.936111, -0.283698, 0.207872, 0.000000, 0.252908, -0.132266, 0.958407, 0.000000, 0.048007, 0.015167, 0.034035, 1.000000" _index_="13"/>
+					<bone frame="-0.999692, -0.000000, -0.024813, 0.000000, 0.000000, 1.000000, -0.000000, 0.000000, 0.024813, -0.000000, -0.999692, 0.000000, -0.000000, 0.000000, -0.044112, 1.000000" _index_="14"/>
+					<bone frame="-0.840231, -0.003356, 0.542218, 0.000000, 0.123504, 0.972511, 0.197404, 0.000000, -0.527975, 0.232831, -0.816720, 0.000000, -0.000000, 0.000000, -0.070889, 1.000000" _index_="15"/>
+					<bone frame="0.905210, -0.131775, 0.404018, 0.000000, 0.016546, 0.960917, 0.276341, 0.000000, -0.424643, -0.243462, 0.872012, 0.000000, 0.000000, 0.000000, -0.095644, 1.000000" _index_="16"/>
+					<bone frame="0.460061, 0.233867, 0.856534, 0.000000, -0.276915, 0.954363, -0.111842, 0.000000, -0.843600, -0.185733, 0.503827, 0.000000, -0.001110, -0.000634, -0.039838, 1.000000" _index_="17"/>
+					<bone frame="-0.489501, 0.008469, 0.871962, 0.000000, -0.001130, 0.999946, -0.010347, 0.000000, -0.872002, -0.006050, -0.489465, 0.000000, 0.024104, 0.000157, 0.004355, 1.000000" _index_="18"/>
+					<bone frame="0.011954, 0.365216, 0.930846, 0.000000, -0.694051, 0.673174, -0.255206, 0.000000, -0.719826, -0.643004, 0.261526, 0.000000, 0.019745, 0.000370, -0.044614, 1.000000" _index_="19"/>
+					<bone frame="-0.451785, 0.000000, -0.892127, 0.000000, 0.000000, 1.000000, -0.000000, 0.000000, 0.892127, -0.000000, -0.451785, 0.000000, 0.021754, 0.001190, 0.020680, 1.000000" _index_="20"/>
+					<bone frame="-0.134491, 0.000000, -0.990915, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.990915, -0.000000, -0.134491, 0.000000, 0.025211, 0.000840, -0.024614, 1.000000" _index_="21"/>
+					<bone frame="0.107587, -0.092101, -0.989920, 0.000000, -0.757426, -0.652563, -0.021605, 0.000000, -0.643996, 0.752116, -0.139967, 0.000000, 0.053806, -0.034031, 0.026306, 1.000000" _index_="23"/>
+					<bone frame="0.973310, 0.147426, -0.175877, 0.000000, 0.055892, 0.591019, 0.804719, 0.000000, 0.222583, -0.793071, 0.567005, 0.000000, -0.002737, 0.079557, 0.005605, 1.000000" _index_="24"/>
+					<bone frame="0.969963, 0.062557, 0.235073, 0.000000, 0.184577, 0.440166, -0.878741, 0.000000, -0.158442, 0.895735, 0.415398, 0.000000, 0.005736, 0.008046, -0.045848, 1.000000" _index_="25"/>
+					<bone frame="-0.103987, 0.182344, -0.977720, 0.000000, -0.780354, -0.624442, -0.033462, 0.000000, -0.616632, 0.759488, 0.207226, 0.000000, 0.053806, -0.034031, -0.026306, 1.000000" _index_="27"/>
+					<bone frame="0.972288, -0.147667, 0.181247, 0.000000, -0.043757, 0.646623, 0.761553, 0.000000, -0.229655, -0.748380, 0.622243, 0.000000, 0.002686, 0.079623, 0.004517, 1.000000" _index_="28"/>
+					<bone frame="0.959548, -0.036091, -0.279222, 0.000000, -0.226179, 0.491780, -0.840830, 0.000000, 0.167662, 0.869971, 0.463724, 0.000000, -0.005688, 0.009767, -0.045521, 1.000000" _index_="29"/>
+				</bones>
+			</skeleton>
+		</game_entity>
+		<game_entity prefab="crow">
+			<transform position="81.921, 107.293, 9.798" rotation_euler="0.000, 0.000, 1.707"/>
+			<skeleton>
+				<bones>
+					<bone frame="-0.000087, -0.680775, 0.732492, 0.000000, 0.000197, 0.732492, 0.680775, 0.000000, -1.000000, 0.000203, 0.000071, 0.000000, -0.000000, 0.096099, 0.142053, 1.000000"/>
+					<bone frame="0.000000, 0.454400, 0.890798, 0.000000, 0.000000, 0.890798, -0.454400, 0.000000, -1.000000, 0.000000, 0.000000, 0.000000, -0.000000, 0.018227, 0.038616, 1.000000" _index_="2"/>
+					<bone frame="0.008048, -0.106288, -0.994303, 0.000000, 0.966007, 0.257761, -0.019735, 0.000000, 0.258390, -0.960345, 0.104749, 0.000000, 0.048111, 0.000000, 0.000000, 1.000000" _index_="3"/>
+					<bone frame="-0.259089, -0.947758, -0.186083, 0.000000, -0.935894, 0.293962, -0.194136, 0.000000, 0.238696, 0.123855, -0.963164, 0.000000, -0.048007, 0.015167, 0.034035, 1.000000" _index_="4"/>
+					<bone frame="-0.999692, 0.000000, -0.024821, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.024821, 0.000000, -0.999692, 0.000000, 0.000000, 0.000000, 0.044112, 1.000000" _index_="5"/>
+					<bone frame="-0.840227, -0.003348, 0.542224, 0.000000, 0.123509, 0.972513, 0.197393, 0.000000, -0.527981, 0.232825, -0.816719, 0.000000, 0.000000, 0.000000, 0.070889, 1.000000" _index_="6"/>
+					<bone frame="0.905208, -0.131772, 0.404023, 0.000000, 0.016543, 0.960918, 0.276338, 0.000000, -0.424646, -0.243460, 0.872011, 0.000000, 0.000000, -0.000000, 0.095645, 1.000000" _index_="7"/>
+					<bone frame="0.472050, 0.235798, 0.849452, 0.000000, -0.279862, 0.953805, -0.109242, 0.000000, -0.835970, -0.186162, 0.516234, 0.000000, 0.001110, 0.000633, 0.039837, 1.000000" _index_="8"/>
+					<bone frame="-0.489498, 0.008469, 0.871963, 0.000000, -0.001130, 0.999946, -0.010347, 0.000000, -0.872004, -0.006050, -0.489462, 0.000000, -0.024104, -0.000158, -0.004355, 1.000000" _index_="9"/>
+					<bone frame="0.029056, 0.371035, 0.928164, 0.000000, -0.700859, 0.669631, -0.245746, 0.000000, -0.712707, -0.643372, 0.279500, 0.000000, -0.019745, -0.000370, 0.044614, 1.000000" _index_="10"/>
+					<bone frame="-0.451784, -0.000000, -0.892127, 0.000000, -0.000000, 1.000000, 0.000000, 0.000000, 0.892127, 0.000000, -0.451784, 0.000000, -0.021754, -0.001190, -0.020680, 1.000000" _index_="11"/>
+					<bone frame="-0.134493, -0.000000, -0.990915, 0.000000, -0.000000, 1.000000, -0.000000, 0.000000, 0.990915, -0.000000, -0.134493, 0.000000, -0.025211, -0.000840, 0.024614, 1.000000" _index_="12"/>
+					<bone frame="-0.244404, 0.949748, 0.195565, 0.000000, -0.936111, -0.283698, 0.207872, 0.000000, 0.252908, -0.132266, 0.958407, 0.000000, 0.048007, 0.015167, 0.034035, 1.000000" _index_="13"/>
+					<bone frame="-0.999692, -0.000000, -0.024813, 0.000000, 0.000000, 1.000000, -0.000000, 0.000000, 0.024813, -0.000000, -0.999692, 0.000000, -0.000000, 0.000000, -0.044112, 1.000000" _index_="14"/>
+					<bone frame="-0.840231, -0.003356, 0.542218, 0.000000, 0.123504, 0.972511, 0.197404, 0.000000, -0.527975, 0.232831, -0.816720, 0.000000, -0.000000, 0.000000, -0.070889, 1.000000" _index_="15"/>
+					<bone frame="0.905210, -0.131775, 0.404018, 0.000000, 0.016546, 0.960917, 0.276341, 0.000000, -0.424643, -0.243462, 0.872012, 0.000000, 0.000000, 0.000000, -0.095644, 1.000000" _index_="16"/>
+					<bone frame="0.460061, 0.233867, 0.856534, 0.000000, -0.276915, 0.954363, -0.111842, 0.000000, -0.843600, -0.185733, 0.503827, 0.000000, -0.001110, -0.000634, -0.039838, 1.000000" _index_="17"/>
+					<bone frame="-0.489501, 0.008469, 0.871962, 0.000000, -0.001130, 0.999946, -0.010347, 0.000000, -0.872002, -0.006050, -0.489465, 0.000000, 0.024104, 0.000157, 0.004355, 1.000000" _index_="18"/>
+					<bone frame="0.011954, 0.365216, 0.930846, 0.000000, -0.694051, 0.673174, -0.255206, 0.000000, -0.719826, -0.643004, 0.261526, 0.000000, 0.019745, 0.000370, -0.044614, 1.000000" _index_="19"/>
+					<bone frame="-0.451785, 0.000000, -0.892127, 0.000000, 0.000000, 1.000000, -0.000000, 0.000000, 0.892127, -0.000000, -0.451785, 0.000000, 0.021754, 0.001190, 0.020680, 1.000000" _index_="20"/>
+					<bone frame="-0.134491, 0.000000, -0.990915, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.990915, -0.000000, -0.134491, 0.000000, 0.025211, 0.000840, -0.024614, 1.000000" _index_="21"/>
+					<bone frame="0.095076, -0.149027, -0.984252, 0.000000, -0.864015, -0.503414, -0.007239, 0.000000, -0.494408, 0.851096, -0.176624, 0.000000, 0.053806, -0.034031, 0.026306, 1.000000" _index_="23"/>
+					<bone frame="0.973237, 0.128844, -0.190289, 0.000000, 0.031127, 0.746503, 0.664653, 0.000000, 0.227688, -0.652788, 0.722513, 0.000000, -0.002737, 0.079557, 0.005605, 1.000000" _index_="24"/>
+					<bone frame="0.967554, 0.027131, 0.251202, 0.000000, 0.190330, 0.575618, -0.795260, 0.000000, -0.166173, 0.817269, 0.551778, 0.000000, 0.005736, 0.008046, -0.045848, 1.000000" _index_="25"/>
+					<bone frame="-0.094362, 0.146593, -0.984686, 0.000000, -0.870643, -0.491809, 0.010216, 0.000000, -0.482780, 0.858274, 0.174038, 0.000000, 0.053806, -0.034031, -0.026306, 1.000000" _index_="27"/>
+					<bone frame="0.972520, -0.129863, 0.193235, 0.000000, -0.020508, 0.778973, 0.626722, 0.000000, -0.231913, -0.613463, 0.754904, 0.000000, 0.002686, 0.079623, 0.004517, 1.000000" _index_="28"/>
+					<bone frame="0.964193, -0.028369, -0.263681, 0.000000, -0.190575, 0.617319, -0.763281, 0.000000, 0.184429, 0.786201, 0.589808, 0.000000, -0.005688, 0.009767, -0.045521, 1.000000" _index_="29"/>
+				</bones>
+			</skeleton>
+		</game_entity>
+		<game_entity prefab="crow">
+			<transform position="132.671, 106.630, 9.776" rotation_euler="0.000, 0.000, -1.682"/>
+			<skeleton>
+				<bones>
+					<bone frame="0.071280, -0.722240, 0.687959, 0.000000, -0.058907, 0.685462, 0.725721, 0.000000, -0.995715, -0.092256, 0.006315, 0.000000, -0.000000, 0.096099, 0.142053, 1.000000"/>
+					<bone frame="0.140690, 0.380531, 0.914003, 0.000000, 0.509851, 0.763514, -0.396357, 0.000000, -0.848680, 0.521769, -0.086595, 0.000000, -0.000000, 0.018227, 0.038616, 1.000000" _index_="2"/>
+					<bone frame="0.105694, 0.535679, -0.837781, 0.000000, 0.955395, 0.178941, 0.234947, 0.000000, 0.275769, -0.825245, -0.492872, 0.000000, 0.048111, 0.000000, 0.000000, 1.000000" _index_="3"/>
+					<bone frame="-0.259089, -0.947758, -0.186083, 0.000000, -0.935894, 0.293962, -0.194136, 0.000000, 0.238696, 0.123855, -0.963164, 0.000000, -0.048007, 0.015167, 0.034035, 1.000000" _index_="4"/>
+					<bone frame="-0.999692, 0.000000, -0.024821, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.024821, 0.000000, -0.999692, 0.000000, 0.000000, 0.000000, 0.044112, 1.000000" _index_="5"/>
+					<bone frame="-0.840227, -0.003348, 0.542224, 0.000000, 0.123509, 0.972513, 0.197393, 0.000000, -0.527981, 0.232825, -0.816719, 0.000000, 0.000000, 0.000000, 0.070889, 1.000000" _index_="6"/>
+					<bone frame="0.905208, -0.131772, 0.404023, 0.000000, 0.016543, 0.960918, 0.276338, 0.000000, -0.424646, -0.243460, 0.872011, 0.000000, 0.000000, -0.000000, 0.095645, 1.000000" _index_="7"/>
+					<bone frame="0.472050, 0.235798, 0.849452, 0.000000, -0.279862, 0.953805, -0.109242, 0.000000, -0.835970, -0.186162, 0.516234, 0.000000, 0.001110, 0.000633, 0.039837, 1.000000" _index_="8"/>
+					<bone frame="-0.489498, 0.008469, 0.871963, 0.000000, -0.001130, 0.999946, -0.010347, 0.000000, -0.872004, -0.006050, -0.489462, 0.000000, -0.024104, -0.000158, -0.004355, 1.000000" _index_="9"/>
+					<bone frame="0.029056, 0.371035, 0.928164, 0.000000, -0.700859, 0.669631, -0.245746, 0.000000, -0.712707, -0.643372, 0.279500, 0.000000, -0.019745, -0.000370, 0.044614, 1.000000" _index_="10"/>
+					<bone frame="-0.451784, 0.000000, -0.892127, 0.000000, 0.000000, 1.000000, -0.000000, 0.000000, 0.892127, -0.000000, -0.451784, 0.000000, -0.021754, -0.001190, -0.020680, 1.000000" _index_="11"/>
+					<bone frame="-0.134493, -0.000000, -0.990915, 0.000000, -0.000000, 1.000000, 0.000000, 0.000000, 0.990915, 0.000000, -0.134493, 0.000000, -0.025211, -0.000840, 0.024614, 1.000000" _index_="12"/>
+					<bone frame="-0.244404, 0.949748, 0.195565, 0.000000, -0.936111, -0.283698, 0.207872, 0.000000, 0.252908, -0.132266, 0.958407, 0.000000, 0.048007, 0.015167, 0.034035, 1.000000" _index_="13"/>
+					<bone frame="-0.999692, -0.000000, -0.024813, 0.000000, 0.000000, 1.000000, -0.000000, 0.000000, 0.024813, -0.000000, -0.999692, 0.000000, -0.000000, 0.000000, -0.044112, 1.000000" _index_="14"/>
+					<bone frame="-0.840231, -0.003356, 0.542218, 0.000000, 0.123504, 0.972511, 0.197404, 0.000000, -0.527975, 0.232831, -0.816720, 0.000000, -0.000000, 0.000000, -0.070889, 1.000000" _index_="15"/>
+					<bone frame="0.905210, -0.131775, 0.404018, 0.000000, 0.016546, 0.960917, 0.276341, 0.000000, -0.424643, -0.243462, 0.872012, 0.000000, 0.000000, 0.000000, -0.095644, 1.000000" _index_="16"/>
+					<bone frame="0.460061, 0.233867, 0.856534, 0.000000, -0.276915, 0.954363, -0.111842, 0.000000, -0.843600, -0.185733, 0.503827, 0.000000, -0.001110, -0.000634, -0.039838, 1.000000" _index_="17"/>
+					<bone frame="-0.489501, 0.008469, 0.871962, 0.000000, -0.001130, 0.999946, -0.010347, 0.000000, -0.872002, -0.006050, -0.489465, 0.000000, 0.024104, 0.000157, 0.004355, 1.000000" _index_="18"/>
+					<bone frame="0.011954, 0.365216, 0.930846, 0.000000, -0.694051, 0.673174, -0.255206, 0.000000, -0.719826, -0.643004, 0.261526, 0.000000, 0.019745, 0.000370, -0.044614, 1.000000" _index_="19"/>
+					<bone frame="-0.451785, 0.000000, -0.892127, 0.000000, 0.000000, 1.000000, -0.000000, 0.000000, 0.892127, -0.000000, -0.451785, 0.000000, 0.021754, 0.001190, 0.020680, 1.000000" _index_="20"/>
+					<bone frame="-0.134491, 0.000000, -0.990915, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.990915, -0.000000, -0.134491, 0.000000, 0.025211, 0.000840, -0.024614, 1.000000" _index_="21"/>
+					<bone frame="0.129702, -0.227877, -0.965013, 0.000000, -0.825282, -0.564279, 0.022327, 0.000000, -0.549624, 0.793512, -0.261251, 0.000000, 0.053806, -0.034031, 0.026306, 1.000000" _index_="23"/>
+					<bone frame="0.973230, 0.139740, -0.182471, 0.000000, 0.044082, 0.665696, 0.744920, 0.000000, 0.225565, -0.733022, 0.641715, 0.000000, -0.002737, 0.079557, 0.005605, 1.000000" _index_="24"/>
+					<bone frame="0.958480, 0.005577, 0.285105, 0.000000, 0.244508, 0.498403, -0.831751, 0.000000, -0.146736, 0.866927, 0.476346, 0.000000, 0.005736, 0.008046, -0.045848, 1.000000" _index_="25"/>
+					<bone frame="-0.071086, 0.055149, -0.995944, 0.000000, -0.824465, -0.565243, 0.027547, 0.000000, -0.561431, 0.823079, 0.085650, 0.000000, 0.053806, -0.034031, -0.026306, 1.000000" _index_="27"/>
+					<bone frame="0.972444, -0.133811, 0.190911, 0.000000, -0.024558, 0.755533, 0.654650, 0.000000, -0.231839, -0.641299, 0.731427, 0.000000, 0.002686, 0.079623, 0.004517, 1.000000" _index_="28"/>
+					<bone frame="0.970031, -0.068161, -0.233225, 0.000000, -0.146243, 0.602752, -0.784413, 0.000000, 0.194043, 0.795012, 0.574720, 0.000000, -0.005688, 0.009767, -0.045521, 1.000000" _index_="29"/>
+				</bones>
+			</skeleton>
+		</game_entity>
+		<game_entity prefab="quest_default_prefab">
+			<transform position="81.676, 112.978, 0.056" rotation_euler="0.000, 0.000, -0.303" scale="0.073, 0.073, 0.073"/>
+		</game_entity>
+		<game_entity name="empty_object" old_prefab_name="">
+			<transform position="81.668, 112.954, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.142, 0.142, 0.142"/>
+			<components>
+				<meta_mesh_component name="hog_mesh"/>
+			</components>
+		</game_entity>
+	</entities>
+	<terrain enabled="true" node_dimension_x="2" node_dimension_y="2" node_size="100.000" lod_multiplier="1.000" min_height="-100.000" max_height="500.000" vista_normalmap="" vista_diffuse_name="" vista_diffuse_blend_type="0" vista_diffuse_blend_amount="0.000" vista_layer_detail_distance="35.000" vista_albedo_multiplier="0.670" vista_detail_albedo_name="" vista_detail_normal_name="" vista_detail_tile="20.000" vista_tileset="" colormap_detail_level="0" ao_intensity="4.000">
+		<outer_mesh>
+			<variable name="outer_mesh_name" value=""/>
+			<variable name="diffuse1_texture_name" value=""/>
+			<variable name="diffuse2_texture_name" value=""/>
+			<variable name="diffuse3_texture_name" value=""/>
+			<variable name="areamap_texture_name" value=""/>
+			<variable name="splatmap_texture_name" value=""/>
+			<variable name="splatmap_normal_name" value=""/>
+			<variable name="horizon_mesh_diffuse_1_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_diffuse_2_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_diffuse_3_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_areamap_tile_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_areamap_power" value="1.000"/>
+			<variable name="horizon_mesh_height" value="1.000"/>
+		</outer_mesh>
+		<layers version="1">
+			<layer name="default">
+				<summer is_enabled="true" name="default" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="sand" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="0" bigdetailmap_weight="0.000" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+					<textures>
+						<texture type="diffusemap" name="desert_floor_a"/>
+						<texture type="areamap" name="desert_floor_a"/>
+						<texture type="normalmap" name="desert_floor_a_n"/>
+						<texture type="specularmap" name="desert_floor_a_s"/>
+						<texture type="splattingmap" name="none"/>
+						<texture type="displacementmap" name="desert_floor_a_h"/>
+					</textures>
+					<layer_flags>
+						<flag name="use_parallax" value="false"/>
+						<flag name="use_displacement_mapping" value="false"/>
+						<flag name="use_randomized_normalmap" value="false"/>
+						<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+						<flag name="use_transparency_of_ground_slope" value="false"/>
+						<flag name="use_dxt5_normal" value="false"/>
+						<flag name="use_six_side_uv_mapping" value="false"/>
+					</layer_flags>
+					<meshes/>
+				</summer>
+				<fall is_enabled="true" name="default" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</fall>
+				<winter is_enabled="true" name="default" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</winter>
+				<spring is_enabled="true" name="default" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</spring>
+			</layer>
+			<layer name="soil_b">
+				<summer is_enabled="true" name="soil_b" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="soil" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="0" bigdetailmap_weight="0.000" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+					<textures>
+						<texture type="diffusemap" name="ground_soil_b_d"/>
+						<texture type="areamap" name="desert_floor_a"/>
+						<texture type="normalmap" name="ground_soil_b_n"/>
+						<texture type="specularmap" name="ground_soil_b_s"/>
+						<texture type="splattingmap" name="none"/>
+						<texture type="displacementmap" name="ground_soil_b_h"/>
+					</textures>
+					<layer_flags>
+						<flag name="use_parallax" value="false"/>
+						<flag name="use_displacement_mapping" value="false"/>
+						<flag name="use_randomized_normalmap" value="false"/>
+						<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+						<flag name="use_transparency_of_ground_slope" value="false"/>
+						<flag name="use_dxt5_normal" value="false"/>
+						<flag name="use_six_side_uv_mapping" value="false"/>
+					</layer_flags>
+					<meshes/>
+				</summer>
+				<fall is_enabled="true" name="soil_b" is_flora_layer="false" is_mesh_blend_layer="true">
+					<meshes/>
+				</fall>
+				<winter is_enabled="true" name="soil_b" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</winter>
+				<spring is_enabled="true" name="soil_b" is_flora_layer="false" is_mesh_blend_layer="true">
+					<meshes/>
+				</spring>
+			</layer>
+		</layers>
+		<nodes>
+			<node idx="0" idy="0" occluders_enabled="true" layer_is_used_mask_summer="1" layer_is_used_mask_fall="1" layer_is_used_mask_winter="1" layer_is_used_mask_spring="1" layer_is_used_mask="true" height_complexity="0.002" min_height="0.000" max_height="0.006">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="0"/>
+						<variable layer="3" value="0"/>
+						<variable layer="4" value="0"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="0" idy="1" occluders_enabled="true" layer_is_used_mask_summer="1" layer_is_used_mask_fall="1" layer_is_used_mask_winter="1" layer_is_used_mask_spring="1" layer_is_used_mask="true" height_complexity="0.001" min_height="0.000" max_height="0.003">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="0"/>
+						<variable layer="3" value="0"/>
+						<variable layer="4" value="0"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="1" idy="0" occluders_enabled="true" layer_is_used_mask_summer="1" layer_is_used_mask_fall="1" layer_is_used_mask_winter="1" layer_is_used_mask_spring="1" layer_is_used_mask="true" height_complexity="0.000" min_height="0.000" max_height="0.000">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="0"/>
+						<variable layer="3" value="0"/>
+						<variable layer="4" value="0"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="1" idy="1" occluders_enabled="true" layer_is_used_mask_summer="1" layer_is_used_mask_fall="1" layer_is_used_mask_winter="1" layer_is_used_mask_spring="1" layer_is_used_mask="true" height_complexity="0.000" min_height="0.000" max_height="0.000">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="0"/>
+						<variable layer="3" value="0"/>
+						<variable layer="4" value="0"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+		</nodes>
+	</terrain>
+	<editor_data editor_camera_position="81.160, 87.628, 17.856" editor_camera_elevation="-0.723" editor_camera_bearing="-80.196" editor_camera_forward="0.245, 0.730, -0.638" author="" comment=""/>
+	<camera_data near_plane="0.100" far_plane="100000.000"/>
+	<Paths/>
+</scene>
+
