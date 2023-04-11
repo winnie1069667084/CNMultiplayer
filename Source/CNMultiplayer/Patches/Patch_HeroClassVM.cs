@@ -10,7 +10,7 @@ namespace Patches
     {
         public static bool Prefix(HeroClassVM __instance, MissionMultiplayerGameModeBaseClient ____gameMode)
         {
-            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege" || !GameNetwork.IsClient)
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
             { return true; }
             bool flag = true;
             MissionPeer component = GameNetwork.MyPeer.GetComponent<MissionPeer>();

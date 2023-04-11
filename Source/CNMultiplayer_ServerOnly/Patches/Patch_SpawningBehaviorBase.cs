@@ -30,11 +30,12 @@ namespace Patches
             agentBuildData2.Equipment(Equipment.GetRandomEquipmentElements(troopCharacter, !(Game.Current.GameType is MultiplayerGame), false, agentBuildData2.AgentEquipmentSeed));
             agentBuildData2.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData2.AgentRace, agentBuildData2.AgentIsFemale, troopCharacter.GetBodyPropertiesMin(false), troopCharacter.GetBodyPropertiesMax(), (int)agentBuildData2.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData2.AgentEquipmentSeed, troopCharacter.HairTags, troopCharacter.BeardTags, troopCharacter.TattooTags));
             Agent agent = Mission.Current.SpawnAgent(agentBuildData2, false);
+            MultiplayerClassDivisions.MPHeroClass mPHeroClassForCharacter = MultiplayerClassDivisions.GetMPHeroClassForCharacter(agent.Character);
             agent.AIStateFlags |= Agent.AIStateFlag.Alarmed;
-            agent.AgentDrivenProperties.ArmorHead = troopCharacter.Level * 2;//为AI添加护甲，为level的2倍
-            agent.AgentDrivenProperties.ArmorTorso = troopCharacter.Level * 2;
-            agent.AgentDrivenProperties.ArmorArms = troopCharacter.Level * 2;
-            agent.AgentDrivenProperties.ArmorLegs = troopCharacter.Level * 2;
+            agent.AgentDrivenProperties.ArmorHead = mPHeroClassForCharacter.ArmorValue;//为AI添加护甲，与MPClassDivision相匹配
+            agent.AgentDrivenProperties.ArmorTorso = mPHeroClassForCharacter.ArmorValue;
+            agent.AgentDrivenProperties.ArmorArms = mPHeroClassForCharacter.ArmorValue;
+            agent.AgentDrivenProperties.ArmorLegs = mPHeroClassForCharacter.ArmorValue;
             return false;
         }
 
