@@ -6155,8 +6155,8 @@
                    icon="Special_Falxman"
                    melee_ai="330"
                    ranged_ai="0"
-                   armor="17"
-                   movement_speed="0.80"
+                   armor="2"
+                   movement_speed="0.81"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
                    hitpoints="100">
