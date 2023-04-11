@@ -467,13 +467,6 @@ namespace CNMultiplayer
         {
             int num = 0;
             int FlagInvalidNum = 0;
-            for (int i = 0; i < AllCapturePoints.Count; i++)//计算当前战场上的剩余中立旗帜数量
-            {
-                if (!AllCapturePoints[i].IsDeactivated && GetFlagOwnerTeam(AllCapturePoints[i]) == Team.Invalid)
-                {
-                    FlagInvalidNum++;
-                }
-            }
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             if (side == BattleSideEnum.Attacker)
             {
@@ -490,6 +483,13 @@ namespace CNMultiplayer
                         continue;
                     }
                     num += MoraleBoostOnFlagRemoval;
+                    for (int i = 0; i < AllCapturePoints.Count; i++)//计算当前战场上的剩余中立旗帜数量
+                    {
+                        if (!AllCapturePoints[i].IsDeactivated && GetFlagOwnerTeam(AllCapturePoints[i]) == Team.Invalid)
+                        {
+                            FlagInvalidNum++;
+                        }
+                    }
                     if (FlagInvalidNum != 0)//旗帜移除后解锁后续旗帜
                     {
                         for (int i = item.FlagIndex+1; i < AllCapturePoints.Count; i++)
