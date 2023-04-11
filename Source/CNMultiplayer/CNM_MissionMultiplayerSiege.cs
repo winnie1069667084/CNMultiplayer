@@ -32,7 +32,7 @@ namespace CNMultiplayer
 
         public const int GoldBonusOnFlagRemoval = 35; //攻城方移除旗帜金币奖励
 
-        public const int DefenderGoldBonusOnFlagRemoval = 150; //守城方移除旗帜金币补偿
+        public const int DefenderGoldBonusOnFlagRemoval = 125; //守城方移除旗帜金币补偿
 
         public const string MasterFlagTag = "keep_capture_point";
 
@@ -60,13 +60,13 @@ namespace CNMultiplayer
 
         private const int AttackerFlagGoldHoldMax = 250; //攻城方持有旗帜金币最大值
 
-        private const int DefenderFlagGoldHoldMax = 150; //守城方持有旗帜金币最大值
+        private const int DefenderFlagGoldHoldMax = 125; //守城方持有旗帜金币最大值
 
-        private const float radius = 20f; //定义旗帜半径
+        private const float radius = 25f; //定义旗帜半径
 
         private const float ObjectiveCheckPeriod = 0.25f;
 
-        private const float MoraleTickTimeInSeconds = 3f; //士气Tick
+        private const float MoraleTickTimeInSeconds = 3.5f; //士气Tick
 
         private const int MoraleBoostOnFlagRemoval = 0; //攻城方移除旗帜的士气奖励
 
@@ -585,7 +585,7 @@ namespace CNMultiplayer
                                 lastFoundAgent.Health = Math.Min(lastFoundAgent.Health + 1f, lastFoundAgent.HealthLimit);//设定占旗回血量
                             }
 
-                            if (((lastFoundAgent.MissionPeer.Representative.Gold < AttackerFlagGoldHoldMax && lastFoundAgent.Team.IsAttacker) || (lastFoundAgent.MissionPeer.Representative.Gold < DefenderFlagGoldHoldMax && lastFoundAgent.Team.IsDefender)) && (_dtSumCheckMorales % 0.66f < ObjectiveCheckPeriod))//设定占旗获取金币速率
+                            if ((lastFoundAgent.MissionPeer.Representative.Gold < AttackerFlagGoldHoldMax && lastFoundAgent.Team.IsAttacker && _dtSumCheckMorales % 0.5f < ObjectiveCheckPeriod) || (lastFoundAgent.MissionPeer.Representative.Gold < DefenderFlagGoldHoldMax && lastFoundAgent.Team.IsDefender && _dtSumCheckMorales % 1f < ObjectiveCheckPeriod))//设定占旗获取金币速率
                             {
                                 ChangeCurrentGoldForPeer(lastFoundAgent.MissionPeer, lastFoundAgent.MissionPeer.Representative.Gold + 1);//设定占旗获取金币数
                                 list.Add(new KeyValuePair<ushort, int>(512, 1));
