@@ -2028,7 +2028,7 @@
     <ItemComponent>
       <Armor head_armor="15"
              has_gender_variations="false"
-             hair_cover_type="all"
+             hair_cover_type="1"
              modifier_group="leather"
              material_type="Leather" />
     </ItemComponent>
@@ -6882,7 +6882,7 @@
     <ItemComponent>
       <Armor head_armor="16"
              has_gender_variations="false"
-             hair_cover_type="all"
+             hair_cover_type="1"
              modifier_group="leather"
              material_type="Leather" />
     </ItemComponent>
