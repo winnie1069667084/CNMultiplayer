@@ -43,7 +43,10 @@ namespace Patches
         {
             bool[] arr = { true, false };
             Random ran = new Random();
-            return arr[ran.Next(2)];
+            if (ran.Next(10) > 7)
+                return true;
+            else
+                return false;
         }
     }
 }

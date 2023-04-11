@@ -5,6 +5,8 @@ using HarmonyLib;
 using System.Reflection;
 using static TaleWorlds.MountAndBlade.MultiplayerClassDivisions;
 using System.Linq;
+using System.Collections.Generic;
+using TaleWorlds.MountAndBlade.GauntletUI.Mission.Multiplayer;
 
 namespace Patches
 {
@@ -15,6 +17,7 @@ namespace Patches
         {
             if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
             { return true; }
+            var _lastSelectedHeroClass = AccessTools.Field(typeof(MissionGauntletClassLoadout), "_lastSelectedHeroClass");
             bool flag = true;
             MissionPeer component = GameNetwork.MyPeer.GetComponent<MissionPeer>();
             int Sum = GetTroopTypeCountForTeam(component.Team)[0];
@@ -27,7 +30,12 @@ namespace Patches
             {
                 flag = false;
                 if (__instance.IsSelected)
+                {
                     __instance.IsSelected = false;
+                    //astSelectedHeroClass.SetValue(__instance, MultiplayerClassDivisions.GetMPHeroClasses(__instance.HeroClass.Culture).ToList<MultiplayerClassDivisions.MPHeroClass>()[0]);
+                }
+                //int num = MultiplayerClassDivisions.GetMPHeroClasses(__instance.HeroClass.Culture).ToList<MultiplayerClassDivisions.MPHeroClass>().IndexOf(__instance.HeroClass);
+                //List<IReadOnlyPerkObject> list = __instance.Perks.Select((HeroPerkVM x) => x.SelectedPerk).ToList<IReadOnlyPerkObject>();
             }
             __instance.IsEnabled = ____gameMode.IsInWarmup || !____gameMode.IsGameModeUsingGold || (____gameMode.GetGoldAmount() >= __instance.Gold && flag);
             return false;
