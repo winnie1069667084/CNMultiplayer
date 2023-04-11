@@ -3388,7 +3388,7 @@
         <equipment slot="Item0"
                    id="Item.khuzait_polearm_1_t4" />	   
         <equipment slot="Head"
-                   id="Item.mp_spiked_helmet_with_facemask" />
+                   id="Item.mp_khuzait_noble_helmet_with_fur" />
 		<equipment slot="Cape"
                    id="Item.mp_varangian_bra_royal" />		   
         <equipment slot="Body"
@@ -3440,7 +3440,7 @@
         <equipment slot="Item0"
                    id="Item.khuzait_polearm_1_t4" />	   
         <equipment slot="Head"
-                   id="Item.mp_spiked_helmet_with_facemask" />
+                   id="Item.mp_khuzait_noble_helmet_with_fur" />
 		<equipment slot="Cape"
                    id="Item.mp_varangian_bra_royal" />		   
         <equipment slot="Body"
