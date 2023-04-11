@@ -82,6 +82,7 @@ mesh bd_sack_b
 mesh bd_sack_c
 mesh castle_plank_ramp_a
 mesh castle_plank_wall_c
+mesh civilian_ladder_6m
 mesh editor_plane_low
 mesh european_castle_tower_round_a_l3
 mesh european_castle_tower_round_a_l3_stairs
@@ -452,7 +453,6 @@ prefab european_castle_wall_a_l3
 prefab european_castle_wall_a_l3_old
 prefab european_castle_wall_d_l2
 prefab european_castle_wall_fence_b
-prefab european_castle_wooden_cover_a
 prefab european_castle_wooden_cover_b
 prefab european_city_house_f
 prefab european_city_house_g
