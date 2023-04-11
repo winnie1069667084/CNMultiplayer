@@ -2,6 +2,9 @@
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
 using HarmonyLib;
+using System.Reflection;
+using static TaleWorlds.MountAndBlade.MultiplayerClassDivisions;
+using System.Linq;
 
 namespace Patches
 {
@@ -12,6 +15,7 @@ namespace Patches
         {
             if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
             { return true; }
+            MethodInfo RefreshCharacter = AccessTools.Method(typeof(MultiplayerClassLoadoutVM), "RefreshCharacter");
             bool flag = true;
             MissionPeer component = GameNetwork.MyPeer.GetComponent<MissionPeer>();
             int Sum = GetTroopTypeCountForTeam(component.Team)[0];
@@ -23,6 +27,8 @@ namespace Patches
             if ((Id == "Ranged" && Ranged > Sum / 4) || (Id == "Cavalry" && Cavalry > Sum / 4) || (Id == "HorseArcher" && HorseArcher > Sum / 4))
             {
                 flag = false;
+                if (__instance.IsSelected)
+                    __instance.IsSelected = false;
             }
             __instance.IsEnabled = ____gameMode.IsInWarmup || !____gameMode.IsGameModeUsingGold || (____gameMode.GetGoldAmount() >= __instance.Gold && flag);
             return false;
