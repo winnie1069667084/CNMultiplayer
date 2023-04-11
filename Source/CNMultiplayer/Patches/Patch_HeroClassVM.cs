@@ -15,7 +15,6 @@ namespace Patches
         {
             if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
             { return true; }
-            MethodInfo RefreshCharacter = AccessTools.Method(typeof(MultiplayerClassLoadoutVM), "RefreshCharacter");
             bool flag = true;
             MissionPeer component = GameNetwork.MyPeer.GetComponent<MissionPeer>();
             int Sum = GetTroopTypeCountForTeam(component.Team)[0];
