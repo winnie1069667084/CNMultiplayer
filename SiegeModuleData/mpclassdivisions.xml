@@ -8585,7 +8585,7 @@
                    icon="Special_Swordsman"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="70"
+                   armor="65"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8614,7 +8614,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageDealt"
-                    value="0.15"
+                    value="0.10"
                     hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
