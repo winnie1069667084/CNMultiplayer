@@ -89,7 +89,7 @@
       <Thrust damage_type="Pierce"
               damage_factor="1.7" />
       <Swing damage_type="Cut"
-             damage_factor="3.3" />
+             damage_factor="3.0" />
     </BladeData>
     <Materials>
       <Material id="Iron4"
@@ -121,6 +121,29 @@
     <Materials>
       <Material id="Iron5"
                 count="3" />
+      <Material id="Iron4"
+                count="2" />
+    </Materials>
+  </CraftingPiece>
+  
+  <CraftingPiece id="spear_blade_44"
+                 name="{=PmPxx2gK}Bent Razor Head"
+                 tier="4"
+                 piece_type="Blade"
+                 mesh="spear_blade_44"
+                 length="80"
+                 weight="0.43"
+                 excluded_item_usage_features="shield:thrust">
+    <BladeData stack_amount="3"
+               physics_material="wood_weapon"
+               body_name="bo_spear_b">
+      <Swing damage_type="Cut"
+             damage_factor="3.3" />
+    </BladeData>
+    <Flags>
+      <Flag name="CanHook" />
+    </Flags>
+    <Materials>
       <Material id="Iron4"
                 count="2" />
     </Materials>

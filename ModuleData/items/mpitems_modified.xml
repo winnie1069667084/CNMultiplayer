@@ -13392,7 +13392,7 @@
         item_holsters="quiver_bolts:quiver_bolts_2:quiver_back_middle:quiver_back_top">
     <ItemComponent>
       <Weapon weapon_class="Bolt"
-              stack_amount="8"
+              stack_amount="25"
               thrust_speed="0"
               thrust_damage_type="Pierce"
               thrust_damage="0"
@@ -13431,7 +13431,7 @@
         item_holsters="quiver_bolts:quiver_bolts_2:quiver_back_middle:quiver_back_top">
     <ItemComponent>
       <Weapon weapon_class="Bolt"
-              stack_amount="12"
+              stack_amount="35"
               thrust_speed="0"
               thrust_damage_type="Pierce"
               thrust_damage="0"
@@ -13470,7 +13470,7 @@
         item_holsters="quiver_bolts:quiver_bolts_2:quiver_back_middle:quiver_back_top">
     <ItemComponent>
       <Weapon weapon_class="Bolt"
-              stack_amount="24"
+              stack_amount="45"
               thrust_speed="0"
               thrust_damage_type="Pierce"
               thrust_damage="0"
@@ -13509,7 +13509,7 @@
         item_holsters="quiver_bolts:quiver_bolts_2:quiver_back_middle:quiver_back_top">
     <ItemComponent>
       <Weapon weapon_class="Bolt"
-              stack_amount="8"
+              stack_amount="25"
               thrust_speed="0"
               thrust_damage_type="Pierce"
               thrust_damage="4"
@@ -13548,7 +13548,7 @@
         item_holsters="quiver_bolts:quiver_bolts_2:quiver_back_middle:quiver_back_top">
     <ItemComponent>
       <Weapon weapon_class="Bolt"
-              stack_amount="18"
+              stack_amount="25"
               thrust_speed="0"
               thrust_damage_type="Pierce"
               thrust_damage="0"
@@ -13589,7 +13589,7 @@
         holster_position_shift="0.0,0.0,-0.0">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="35"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13627,7 +13627,7 @@
         holster_position_shift="0.0,0.0,-0.0">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="30"
+              stack_amount="50"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13665,7 +13665,7 @@
         holster_position_shift="0.0,0.0,-0.0">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="35"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13705,7 +13705,7 @@
         holster_position_shift="0.0,0.0,-0.0">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="32"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13743,7 +13743,7 @@
         holster_position_shift="0.0,0.0,-0.0">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="30"
+              stack_amount="47"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13781,7 +13781,7 @@
         holster_position_shift="0.0,0.0,-0.0">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="20"
+              stack_amount="32"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13820,7 +13820,7 @@
         holster_position_shift="0.0,0.0,0.15">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="35"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13859,7 +13859,7 @@
         holster_position_shift="0.0,0.0,0.15">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="30"
+              stack_amount="50"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13897,7 +13897,7 @@
         holster_position_shift="0.0,0.0,0.15">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="35"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13936,7 +13936,7 @@
         holster_position_shift="0,0,0.15">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="35"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -13977,7 +13977,7 @@
         holster_position_shift="0,0,0.15">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="30"
+              stack_amount="50"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -14017,7 +14017,7 @@
         holster_position_shift="0,0,0.15">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="32"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
@@ -14056,7 +14056,7 @@
         holster_position_shift="0.0,0.0,0.15">
     <ItemComponent>
       <Weapon weapon_class="Arrow"
-              stack_amount="15"
+              stack_amount="35"
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"

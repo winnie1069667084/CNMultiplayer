@@ -307,4 +307,26 @@
              scale_factor="100" />
     </Pieces>
   </CraftedItem>
+  
+  <!--长柄逆刃刀-->
+  <CraftedItem id="battania_polearm_1_t5"
+               name="{=V4b2ZRTH}Rhomphaia"
+               crafting_template="TwoHandedPolearm"
+               culture="Culture.battania"
+               modifier_group="polearm">
+    <Pieces>
+      <Piece id="spear_blade_44"
+             Type="Blade"
+             scale_factor="90" />
+      <Piece id="spear_guard_7"
+             Type="Guard"
+             scale_factor="90" />
+      <Piece id="spear_handle_8"
+             Type="Handle"
+             scale_factor="90" />
+      <Piece id="default_polearm_pommel"
+             Type="Pommel"
+             scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
 </Items>

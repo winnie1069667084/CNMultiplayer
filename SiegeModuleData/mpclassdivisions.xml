@@ -195,7 +195,7 @@
                 is_disabled_in_warmup="true" />
       </Perk>
       <!-- Third perks -->
-	<Perk game_mode="all"
+	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
             icon="PerkToughness"
@@ -8585,7 +8585,7 @@
                    icon="Special_Swordsman"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="60"
+                   armor="70"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8639,7 +8639,7 @@
                    icon="Special_Swordsman"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="60"
+                   armor="65"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8668,7 +8668,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageDealt"
-                    value="0.15"
+                    value="0.10"
                     hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
@@ -8693,7 +8693,7 @@
                    icon="Special_Swordsman"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="60"
+                   armor="65"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8723,7 +8723,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageDealt"
-                    value="0.15"
+                    value="0.10"
                     hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
@@ -8732,6 +8732,25 @@
                     value="0.2" />		
           </Effects>
         </ConditionalEffect>
+      </Perk>
+	  <!-- Third perks-->
+	  <Perk game_mode="all"
+            name="{=00000150}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="ArmorOnSpawn"
+                       value="0" />				   
+      </Perk>
+	  <Perk game_mode="all"
+            name="{=00000151}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_spiked_helmet_with_facemask"
+                       target="Player" />		   
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -8748,7 +8767,7 @@
                    icon="Special_Swordsman"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="60"
+                   armor="65"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8778,7 +8797,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageDealt"
-                    value="0.15"
+                    value="0.10"
                     hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
@@ -8803,7 +8822,7 @@
                    icon="Special_Swordsman"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="60"
+                   armor="65"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8833,7 +8852,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageDealt"
-                    value="0.15"
+                    value="0.10"
                     hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
@@ -8846,7 +8865,7 @@
     </Perks>
   </MPClassDivision>
   
-  <!--巴旦尼亚英雄-->
+  <!--巴旦尼亚高地英雄-->
   <MPClassDivision id="mp_special_infantry_battania"
                    hero="mp_special_infantry_battania_hero"
                    troop="mp_special_infantry_battania_troop"
@@ -8858,7 +8877,7 @@
                    icon="Special_Swordsman"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="60"
+                   armor="65"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8874,6 +8893,15 @@
                        slot="Item0"
                        item="battania_2hsword_4_t4" />			   
       </Perk>
+	  <Perk game_mode="all"
+            name="{=00000165}Change Chinese to see the description"
+            description="{=00000166}Change Chinese to see the description"
+            icon="PerkBetterSwords"
+            perk_list="1">				   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="reaper_falx" />			   
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
@@ -8887,7 +8915,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageDealt"
-                    value="0.15"
+                    value="0.10"
                     hit_type="Melee" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
