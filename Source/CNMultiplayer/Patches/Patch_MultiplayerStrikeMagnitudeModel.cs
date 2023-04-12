@@ -50,7 +50,7 @@ namespace Patches
             switch (damageType)
             {
                 case DamageTypes.Blunt:
-                    result = 0.90f;
+                    result = 0.85f;
                     break;
                 case DamageTypes.Cut:
                     result = 0.1f;
