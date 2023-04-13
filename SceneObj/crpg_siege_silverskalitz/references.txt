@@ -1,4 +1,4 @@
-1009
+1008
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -82,7 +82,6 @@ mesh bd_sack_b
 mesh bd_sack_c
 mesh castle_plank_ramp_a
 mesh castle_plank_wall_c
-mesh civilian_ladder_6m
 mesh editor_plane_low
 mesh european_castle_tower_round_a_l3
 mesh european_castle_tower_round_a_l3_stairs

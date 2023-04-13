@@ -62,7 +62,7 @@ namespace CNMultiplayer
 
         private const int DefenderFlagGoldHoldMax = 125; //守城方持有旗帜金币最大值
 
-        private const float radius = 25f; //定义旗帜半径
+        private const float radius = 20f; //定义旗帜半径
 
         private const float ObjectiveCheckPeriod = 0.25f;
 

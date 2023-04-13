@@ -1,4 +1,4 @@
-606
+607
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -23,6 +23,18 @@ mesh aserai_castle_corner_d_l3_05
 mesh aserai_castle_corner_d_l3_06
 mesh aserai_castle_corner_d_l3_07
 mesh aserai_castle_corner_d_l3_08
+mesh aserai_castle_corner_e_l3
+mesh aserai_castle_corner_e_l3_01
+mesh aserai_castle_corner_e_l3_02
+mesh aserai_castle_corner_e_l3_03
+mesh aserai_castle_corner_e_l3_04
+mesh aserai_castle_corner_e_l3_05
+mesh aserai_castle_corner_e_l3_06
+mesh aserai_castle_corner_e_l3_07
+mesh aserai_castle_corner_e_l3_08
+mesh aserai_castle_corner_e_l3_09
+mesh aserai_castle_corner_e_l3_10
+mesh aserai_castle_corner_stairs_l1
 mesh aserai_castle_gatehouse_a_l3
 mesh aserai_castle_gatehouse_a_l3_01
 mesh aserai_castle_gatehouse_a_l3_02
@@ -64,7 +76,6 @@ mesh castle_scaffold_a_00
 mesh castle_scaffold_a_01
 mesh castle_scaffold_a_02
 mesh castle_scaffold_a_03
-mesh civilian_ladder_6m
 mesh dragon_banner_center
 mesh dragon_banner_dragonhead
 mesh dragon_banner_handle
@@ -96,11 +107,9 @@ prefab _barrier_04x04m
 prefab _barrier_08x04m
 prefab _barrier_12x04m
 prefab _barrier_16x04m
-prefab _sound_emitter
 prefab _to_carry_arm_kitchen_pot_c
 prefab _to_carry_kitchen_pitcher_a
 prefab _to_carry_kitchen_pot_c
-prefab ambient_sound_emitter
 prefab ammo_pos_a
 prefab ammo_pos_b
 prefab ammo_pos_c
@@ -136,8 +145,6 @@ prefab arena_arabian_wall_a
 prefab arrow_barrel
 prefab aserai_castle_barn_a_l3
 prefab aserai_castle_corner_d_l3
-prefab aserai_castle_corner_e_l3
-prefab aserai_castle_corner_stairs_l1
 prefab aserai_castle_gate_inner_l1
 prefab aserai_castle_gate_outer_l1
 prefab aserai_castle_keep_a_l3
@@ -460,7 +467,6 @@ prefab mat_wicker_c
 prefab merchandise_fish_c
 prefab merchandise_ironware_horseshoe
 prefab merlon_1
-prefab merlon_10
 prefab merlon_2
 prefab merlon_3
 prefab merlon_4
@@ -468,7 +474,6 @@ prefab merlon_5
 prefab merlon_6
 prefab merlon_7
 prefab merlon_8
-prefab merlon_9
 prefab middle_position
 prefab module_aserai_caravanserai_column
 prefab module_aserai_caravanserai_door_topwall
@@ -519,8 +524,6 @@ prefab siege_barricade_c
 prefab siege_ladder_11m_spawner
 prefab siege_ladder_6m_spawner
 prefab siege_ladder_7m_spawner
-prefab sound
-prefab sound_reverb
 prefab spawn_visual
 prefab stairs_bo
 prefab state1
@@ -532,8 +535,6 @@ prefab stone_pile_wall_desert_g
 prefab sturgia_castle_log_b
 prefab sword
 prefab tavern_aserai_panel_a
-prefab tent_vlandia_a
-prefab tent_vlandia_c
 prefab terrain_green_rock_a
 prefab terrain_green_rock_b
 prefab terrain_green_rock_big_a
