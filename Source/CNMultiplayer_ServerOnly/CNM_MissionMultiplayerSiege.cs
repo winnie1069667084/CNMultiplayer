@@ -32,7 +32,7 @@ namespace CNMultiplayer
 
         public const int GoldBonusOnFlagRemoval = 35; //攻城方移除旗帜金币奖励
 
-        public const int DefenderGoldBonusOnFlagRemoval = 125; //守城方移除旗帜金币补偿
+        public const int DefenderGoldBonusOnFlagRemoval = 35; //守城方移除旗帜金币补偿
 
         public const string MasterFlagTag = "keep_capture_point";
 
@@ -58,9 +58,9 @@ namespace CNMultiplayer
 
         private const int DefenderRespawnGoldLowest = 125; //守城方保底金币
 
-        private const int AttackerFlagGoldHoldMax = 250; //攻城方持有旗帜金币最大值
+        private const int AttackerFlagGoldHoldMax = 200; //攻城方持有旗帜金币最大值
 
-        private const int DefenderFlagGoldHoldMax = 125; //守城方持有旗帜金币最大值
+        private const int DefenderFlagGoldHoldMax = 100; //守城方持有旗帜金币最大值
 
         private const float radius = 20f; //定义旗帜半径
 

@@ -53,7 +53,7 @@ namespace Patches
         }
     }
 
-    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "AfterStart")]//热身阶段加入大量bot（仅限攻城模式）
+    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "AfterStart")]//热身阶段加入大量bot（仅限攻城模式）
     internal class Patch_AfterStart
     {
         public static int NumberOfBotsTeam1;
@@ -64,13 +64,13 @@ namespace Patches
             NumberOfBotsTeam2 = MultiplayerOptions.OptionType.NumberOfBotsTeam2.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
             if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) == "Siege" && NumberOfBotsTeam1 != 0 && NumberOfBotsTeam2 != 0)
             {
-                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam1).UpdateValue(10);
-                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam2).UpdateValue(10);
+                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam1).UpdateValue(5);
+                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam2).UpdateValue(5);
             }
         }
     }
 
-    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "EndWarmup")]//热身结束后恢复bot数量（仅限攻城模式）
+    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "EndWarmup")]//热身结束后恢复bot数量（仅限攻城模式）
     internal class Patch_EndWarmup
     {
         static void Postfix()
