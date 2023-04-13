@@ -41,7 +41,7 @@
   -->
 	<module_sound name="siege/warmup" is_2d="true" sound_category="mission_ambient_bed" path="music/siege/Boyce Avenue - Game of Thrones (Main Theme).mp3" />
 	<module_sound name="siege/start" is_2d="true" sound_category="mission_ambient_bed" path="music/siege/Andreas Waldetoft _ Paradox Interactive - The Crusade Starts.ogg" />
-	<module_sound name="siege/music1" is_2d="true" sound_category="mission_ambient_bed" path="music/siege/Andreas Waldetoft,Paradox Interactive,Nina Åkerblom Nielsen - Charge Of The Knights.mp3" />
+	<module_sound name="siege/music1" is_2d="true" sound_category="mission_ambient_bed" path="music/siege/Andreas Waldetoft_Paradox Interactive - Charge Of The Knights.mp3" />
     <module_sound name="siege/music2" is_2d="true" sound_category="mission_ambient_bed" path="music/siege/Andreas Waldetoft - Thor.mp3" />
     <module_sound name="siege/music3" is_2d="true" sound_category="mission_ambient_bed" path="music/siege/Andreas Waldetoft - Legacy Of Rome.mp3" />
 	<module_sound name="siege/music4" is_2d="true" sound_category="mission_ambient_bed" path="music/siege/Andreas Waldetoft - Charge Of The War Elephants.mp3" />
