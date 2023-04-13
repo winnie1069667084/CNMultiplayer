@@ -23,10 +23,14 @@ namespace Patches
             string Id = __instance.TroopTypeId;
             if ((Id == "Ranged" && Ranged > Sum / 4) || (Id == "Cavalry" && Cavalry > Sum / 4) || (Id == "HorseArcher" && HorseArcher > Sum / 4))
             {
-                GameNetwork.BeginModuleEventAsClient();
-                GameNetwork.WriteMessage(new RequestTroopIndexChange(0));
-                GameNetwork.EndModuleEventAsClient();
                 flag = false;
+                MultiplayerClassDivisions.MPHeroClass mPHeroClassForPeer = MultiplayerClassDivisions.GetMPHeroClassForPeer(component);
+                if (LockTroop(component, mPHeroClassForPeer))
+                {
+                    GameNetwork.BeginModuleEventAsClient();
+                    GameNetwork.WriteMessage(new RequestTroopIndexChange(0));
+                    GameNetwork.EndModuleEventAsClient();
+                }
             }
             __instance.IsEnabled = ____gameMode.IsInWarmup || !____gameMode.IsGameModeUsingGold || (____gameMode.GetGoldAmount() >= __instance.Gold && flag);
             return false;
@@ -56,6 +60,20 @@ namespace Patches
                 }
             }
             return num;
+        }
+
+        public static bool LockTroop(MissionPeer component, MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer)
+        {
+            bool flag = false;
+            int Sum = GetTroopTypeCountForTeam(component.Team)[0];
+            int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
+            int Ranged = GetTroopTypeCountForTeam(component.Team)[2];
+            int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
+            int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
+            BasicCharacterObject Character = mpheroClassForPeer.TroopCharacter;
+            if ((Character.IsRanged && !Character.IsMounted && Ranged > Sum / 4) || (Character.IsMounted && !Character.IsRanged && Cavalry > Sum / 4) || (Character.IsMounted && Character.IsRanged && HorseArcher > Sum / 4))
+                flag = true;
+            return flag;
         }
     }
 }

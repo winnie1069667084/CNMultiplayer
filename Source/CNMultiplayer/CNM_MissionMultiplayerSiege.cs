@@ -32,7 +32,7 @@ namespace CNMultiplayer
 
         public const int GoldBonusOnFlagRemoval = 35; //攻城方移除旗帜金币奖励
 
-        public const int DefenderGoldBonusOnFlagRemoval = 35; //守城方移除旗帜金币补偿
+        public const int DefenderGoldBonusOnFlagRemoval = 100; //守城方移除旗帜金币补偿
 
         public const string MasterFlagTag = "keep_capture_point";
 
@@ -46,17 +46,17 @@ namespace CNMultiplayer
 
         public event OnObjectiveGoldGainedDelegate OnObjectiveGoldGained;
 
-        private const int FirstSpawnGold = 180; //初始金币
+        private const int FirstSpawnGold = 300; //初始金币
 
-        private const int FirstSpawnGoldForEarlyJoin = 180; //初始金币
+        private const int FirstSpawnGoldForEarlyJoin = 300; //初始金币
 
         private const int ChangeTeamGold = 150; //换边金币
 
         private const int RespawnGold = 100; //基础重生金币
 
-        private const int AttackerRespawnGoldLowest = 150; //攻城方保底金币
+        private const int AttackerRespawnGold = 40; //攻城方重生奖励金币
 
-        private const int DefenderRespawnGoldLowest = 125; //守城方保底金币
+        private const int DefenderRespawnGold = 20; //守城方重生奖励金币
 
         private const int AttackerFlagGoldHoldMax = 200; //攻城方持有旗帜金币最大值
 
@@ -780,6 +780,19 @@ namespace CNMultiplayer
                         }
                     }
                 }
+                if ((missionPeer.Team.Side == BattleSideEnum.Defender && missionPeer.Representative.Gold > DefenderFlagGoldHoldMax) || (missionPeer.Team.Side == BattleSideEnum.Attacker && missionPeer.Representative.Gold > AttackerFlagGoldHoldMax))
+                {
+                    ChangeCurrentGoldForPeer(missionPeer, missionPeer.Representative.Gold + num);
+                }
+                else if (missionPeer.Team.Side == BattleSideEnum.Attacker)
+                {
+                    ChangeCurrentGoldForPeer(missionPeer, MBMath.ClampInt(missionPeer.Representative.Gold + num + AttackerRespawnGold, num, num + AttackerFlagGoldHoldMax));
+                }
+                else if (missionPeer.Team.Side == BattleSideEnum.Defender)
+                {
+                    ChangeCurrentGoldForPeer(missionPeer, MBMath.ClampInt(missionPeer.Representative.Gold + num + DefenderRespawnGold, num, num + DefenderFlagGoldHoldMax));
+                }
+                /*保底经济系统
                 if ((missionPeer.Team.Side == BattleSideEnum.Defender && missionPeer.Representative.Gold > DefenderRespawnGoldLowest - num) || (missionPeer.Team.Side == BattleSideEnum.Attacker && missionPeer.Representative.Gold > AttackerRespawnGoldLowest - num))
                 {
                     ChangeCurrentGoldForPeer(missionPeer, missionPeer.Representative.Gold + num);
@@ -792,6 +805,7 @@ namespace CNMultiplayer
                 {
                     ChangeCurrentGoldForPeer(missionPeer, DefenderRespawnGoldLowest);
                 }
+                */
             }
             bool isFriendly = affectorAgent?.Team != null && affectedAgent.Team != null && affectorAgent.Team.Side == affectedAgent.Team.Side;
             MultiplayerClassDivisions.MPHeroClass mPHeroClassForCharacter = MultiplayerClassDivisions.GetMPHeroClassForCharacter(affectedAgent.Character);

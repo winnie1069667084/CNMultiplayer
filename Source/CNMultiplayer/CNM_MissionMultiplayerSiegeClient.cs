@@ -7,6 +7,8 @@ namespace CNMultiplayer
 {
     public class CNM_MissionMultiplayerSiegeClient : MissionMultiplayerSiegeClient, ICommanderInfo, IMissionBehavior
     {
+        //暂时禁用临时音乐系统
+        /*
         public override void OnBehaviorInitialize()
         {
             base.OnBehaviorInitialize();
@@ -52,6 +54,7 @@ namespace CNMultiplayer
                 Vec3 vec = cameraFrame.origin + cameraFrame.rotation.u;
                 SoundEvent eventRef = SoundEvent.CreateEvent(SoundEvent.GetEventIdFromString(eventString), Mission.Current.Scene);
                 eventRef.SetPosition(vec);
+                eventRef.SetParameter("mpMusicSwitcher", 1f);
                 eventRef.Play();
                 DelayedStop(eventRef, duration);
                 _soundState[musicIndex, 1] = eventRef.GetSoundId();
@@ -65,5 +68,6 @@ namespace CNMultiplayer
         }
         private int[,] _soundState;
         private int m, n;
+        */
     }
 }
