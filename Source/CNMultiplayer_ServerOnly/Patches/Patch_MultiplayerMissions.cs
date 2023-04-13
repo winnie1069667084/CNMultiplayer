@@ -96,7 +96,7 @@ namespace Patches
                         new MultiplayerTimerComponent(),
                         new MultiplayerMissionAgentVisualSpawnComponent(),
                         new ConsoleMatchStartEndHandler(),
-                        new SpawnComponent(new SiegeSpawnFrameBehavior(), new SiegeSpawningBehavior()),
+                        //new SpawnComponent(new SiegeSpawnFrameBehavior(), new SiegeSpawningBehavior()),
                         new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNM_SiegeSpawningBehavior()),//调用CNM_SiegeSpawningBehavior
                         new MissionLobbyEquipmentNetworkComponent(),
                         new MultiplayerTeamSelectComponent(),

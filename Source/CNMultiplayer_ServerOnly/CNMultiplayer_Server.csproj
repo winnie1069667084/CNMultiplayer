@@ -229,6 +229,7 @@
     <Compile Include="Patches\ChatCommands\Patches\PatchChatBox.cs" />
     <Compile Include="Patches\ChatCommands\Patches\PatchMaxNumberOfPlayers.cs" />
     <Compile Include="CNM_SiegeSpawningBehavior.cs" />
+    <Compile Include="Patches\Patch_SpawnComponent.cs" />
     <Compile Include="Patches\Patch_SpawningBehaviorBase.cs" />
     <Compile Include="Patches\Patch_DedicatedCustomServerSubModule.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />

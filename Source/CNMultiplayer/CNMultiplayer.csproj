@@ -201,6 +201,7 @@
   <ItemGroup>
     <Compile Include="CNM_MissionLobbyEquipmentUIHandler.cs" />
     <Compile Include="CNM_MissionMultiplayerSiegeClient.cs" />
+    <Compile Include="CNM_SiegeSpawningBehavior.cs" />
     <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="CNM_MissionMultiplayerSiege.cs" />
     <Compile Include="Patches\Patch_HeroClassVM.cs" />

@@ -2,6 +2,7 @@
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
 using HarmonyLib;
+using NetworkMessages.FromClient;
 
 namespace Patches
 {
@@ -22,11 +23,10 @@ namespace Patches
             string Id = __instance.TroopTypeId;
             if ((Id == "Ranged" && Ranged > Sum / 4) || (Id == "Cavalry" && Cavalry > Sum / 4) || (Id == "HorseArcher" && HorseArcher > Sum / 4))
             {
+                GameNetwork.BeginModuleEventAsClient();
+                GameNetwork.WriteMessage(new RequestTroopIndexChange(0));
+                GameNetwork.EndModuleEventAsClient();
                 flag = false;
-                if (__instance.IsSelected)
-                {
-                    __instance.IsSelected = false;
-                }
             }
             __instance.IsEnabled = ____gameMode.IsInWarmup || !____gameMode.IsGameModeUsingGold || (____gameMode.GetGoldAmount() >= __instance.Gold && flag);
             return false;
@@ -41,22 +41,20 @@ namespace Patches
                 if (component?.Team != null && component.Team == team && component.IsControlledAgentActive)
                 {
                     BasicCharacterObject Character = MultiplayerClassDivisions.GetMPHeroClassForPeer(component).HeroCharacter;
-                    num[0]++;   
+                    num[0]++;
                     if (Character.IsInfantry)
                     {
                         num[1]++;
                         continue;
                     }
-                    if (Character.IsRanged)
+                    if (Character.IsRanged && !Character.IsMounted)
                         num[2]++;
-                    if (Character.IsMounted)
+                    if (Character.IsMounted && !Character.IsRanged)
                         num[3]++;
                     if (Character.IsRanged && Character.IsMounted)
                         num[4]++;
                 }
             }
-            num[2] -= num[4];
-            num[3] -= num[4];
             return num;
         }
     }
