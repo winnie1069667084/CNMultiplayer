@@ -11,7 +11,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="HeadArmor">
@@ -31,7 +31,7 @@
         mesh="aserai_civil_c_head"
         culture="Culture.aserai"
         value="1"
-        weight="0.1"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -49,7 +49,7 @@
         mesh="aserai_civil_d_hscarf"
         culture="Culture.aserai"
         value="1"
-        weight="0.1"
+        weight="0"
         appearance="0.6"
         Type="HeadArmor">
     <ItemComponent>
@@ -67,7 +67,7 @@
         mesh="aserai_civil_hscarf_b"
         culture="Culture.aserai"
         value="1"
-        weight="0.1"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -86,7 +86,7 @@
         mesh="aserai_civil_hscarf_a"
         culture="Culture.aserai"
         value="1"
-        weight="0.1"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -104,7 +104,7 @@
         mesh="aserai_civil_e_hscarf"
         culture="Culture.aserai"
         value="1"
-        weight="0.1"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -123,7 +123,7 @@
         mesh="aserai_helmet_o"
         culture="Culture.aserai"
         value="1"
-        weight="0.5"
+        weight="0"
         appearance="0.3"
         Type="HeadArmor">
     <ItemComponent>
@@ -143,7 +143,7 @@
         mesh="aserai_helmet_n"
         culture="Culture.aserai"
         value="1"
-        weight="1.2"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -162,7 +162,7 @@
         mesh="aserai_lord_helmet_a"
         culture="Culture.aserai"
         value="1"
-        weight="3.7"
+        weight="0"
         appearance="0.9"
         Type="HeadArmor">
     <ItemComponent>
@@ -180,7 +180,7 @@
         mesh="aserai_lord_helmet_b"
         culture="Culture.aserai"
         value="1"
-        weight="3.7"
+        weight="0"
         appearance="0.9"
         Type="HeadArmor">
     <ItemComponent>
@@ -198,7 +198,7 @@
         mesh="aserai_lord_helmet_c"
         culture="Culture.aserai"
         value="1"
-        weight="3.7"
+        weight="0"
         appearance="0.9"
         Type="HeadArmor">
     <ItemComponent>
@@ -217,7 +217,7 @@
         mesh="sturgia_leather_brass_shoulder"
         culture="Culture.sturgia"
         value="1"
-        weight="2.2"
+        weight="0"
         appearance="0.9"
         Type="Cape">
     <ItemComponent>
@@ -232,7 +232,7 @@
         mesh="aserai_bigchain_shoulder_fabric"
         culture="Culture.aserai"
         value="1"
-        weight="1.8"
+        weight="0"
         appearance="0.1"
         Type="Cape">
     <ItemComponent>
@@ -252,7 +252,7 @@
         mesh="sturgia_costume_i_yellow"
         culture="Culture.aserai"
         value="1"
-        weight="8.8"
+        weight="0"
         difficulty="0"
         appearance="0.7"
         Type="BodyArmor">
@@ -274,7 +274,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -303,7 +303,7 @@
         mesh="cloak_fur_c"
         culture="Culture.battania"
         value="1"
-        weight="2.3"
+        weight="0"
         appearance="0.7"
         Type="Cape">
     <ItemComponent>
@@ -325,7 +325,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="7.8"
+        weight="0"
         difficulty="0"
         appearance="0.4"
         Type="BodyArmor">
@@ -348,7 +348,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         appearance="0.3"
         Type="HandArmor">
     <ItemComponent>
@@ -369,7 +369,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="LegArmor">
@@ -393,7 +393,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="HeadArmor">
@@ -410,7 +410,7 @@
         mesh="sturgia_helmet_m"
         culture="Culture.sturgia"
         value="1"
-        weight="0.3"
+        weight="0"
         appearance="0.3"
         Type="HeadArmor">
     <ItemComponent>
@@ -429,7 +429,7 @@
         mesh="sturgia_costume_h"
         culture="Culture.sturgia"
         value="1"
-        weight="1.9"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -454,7 +454,7 @@
         mesh="khuzait_civil_coat_b"
         culture="Culture.khuzait"
         value="1"
-        weight="2.7"
+        weight="0"
         appearance="0.2"
         Type="BodyArmor">
     <ItemComponent>
@@ -482,7 +482,7 @@
         mesh="vlandia_helmet_l_b"
         culture="Culture.aserai"
         value="1"
-        weight="1.3"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -502,7 +502,7 @@
         mesh="vlandia_helmet_o_e"
         culture="Culture.vlandia"
         value="1"
-        weight="1.0"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -521,7 +521,7 @@
         mesh="vlandia_helmet_o_a"
         culture="Culture.vlandia"
         value="1"
-        weight="2.6"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -542,7 +542,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -561,7 +561,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -586,7 +586,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="8.2"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -618,7 +618,7 @@
         value="1"
         subtype="body_armor"
         is_merchandise="false"
-        weight="2.7"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="Cape">
@@ -638,7 +638,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="11.4"
+        weight="0"
         appearance="0.7"
         Type="BodyArmor">
     <ItemComponent>
@@ -665,7 +665,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.1"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -685,7 +685,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -708,7 +708,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.6"
+        weight="0"
         appearance="0.5"
         Type="Cape">
     <ItemComponent>
@@ -728,7 +728,7 @@
         value="1"
         subtype="body_armor"
         is_merchandise="false"
-        weight="7.8"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -753,7 +753,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         appearance="0.7"
         Type="LegArmor">
     <ItemComponent>
@@ -772,7 +772,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.0"
+        weight="0"
         appearance="0.7"
         Type="HeadArmor">
     <ItemComponent>
@@ -799,7 +799,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="10"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="0"
@@ -820,7 +820,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="20"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="12"
@@ -841,7 +841,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="30"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="37"
@@ -861,7 +861,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="40"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="55"
@@ -882,7 +882,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -906,7 +906,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         difficulty="0"
         appearance="0.2"
         Type="BodyArmor">
@@ -927,7 +927,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -948,7 +948,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -971,7 +971,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="12.3"
+        weight="0"
         difficulty="0"
         appearance="0.2"
         Type="BodyArmor">
@@ -1002,7 +1002,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="9"
@@ -1020,7 +1020,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -1040,7 +1040,7 @@
         subtype="head_armor"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         difficulty="0"
         appearance="0.9"
         Type="headArmor">
@@ -1061,7 +1061,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="9"
@@ -1081,7 +1081,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="0.3"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -1102,7 +1102,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="3"
@@ -1121,7 +1121,7 @@
         subtype="head_armor"
         value="1"
         is_merchandise="false"
-        weight="3.9"
+        weight="0"
         difficulty="0"
         appearance="0.9"
         Type="headArmor">
@@ -1142,7 +1142,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="9"
@@ -1160,7 +1160,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="10"
@@ -1178,7 +1178,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="9"
@@ -1198,7 +1198,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -1220,7 +1220,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="3.0"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="HeadArmor">
@@ -1242,7 +1242,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         appearance="0.5"
         difficulty="0"
         Type="HeadArmor">
@@ -1263,7 +1263,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="4"
@@ -1282,7 +1282,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="8"
@@ -1301,7 +1301,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="7"
@@ -1320,7 +1320,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="3"
@@ -1338,7 +1338,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="5"
@@ -1357,7 +1357,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="3.1"
+        weight="0"
         appearance="0.7"
         Type="HeadArmor">
     <ItemComponent>
@@ -1378,7 +1378,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="5"
@@ -1395,7 +1395,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="5"
@@ -1413,7 +1413,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="4"
@@ -1432,7 +1432,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="5"
@@ -1451,7 +1451,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="3"
@@ -1470,7 +1470,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="9"
@@ -1489,7 +1489,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="8"
@@ -1509,7 +1509,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="9"
@@ -1528,7 +1528,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1"
+        weight="0"
         Type="headArmor">
     <ItemComponent>
       <Armor head_armor="2"
@@ -1548,7 +1548,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="8"
@@ -1567,7 +1567,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="3"
@@ -1586,7 +1586,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="4"
@@ -1604,7 +1604,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="5"
@@ -1622,7 +1622,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="18"
@@ -1640,7 +1640,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="8"
@@ -1658,7 +1658,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="5"
@@ -1678,7 +1678,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.8"
+        weight="0"
         difficulty="0"
         Type="HeadArmor">
     <ItemComponent>
@@ -1698,7 +1698,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.7"
+        weight="0"
         appearance="0.7"
         Type="HeadArmor">
     <ItemComponent>
@@ -1719,7 +1719,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.8"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -1741,7 +1741,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         difficulty="0"
         Type="HeadArmor">
     <ItemComponent>
@@ -1762,7 +1762,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1"
+        weight="0"
         difficulty="0"
         Type="HeadArmor">
     <ItemComponent>
@@ -1783,7 +1783,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.8"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="HeadArmor">
@@ -1804,7 +1804,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         difficulty="0"
         Type="HeadArmor">
     <ItemComponent>
@@ -1825,7 +1825,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.7"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="30"
@@ -1844,7 +1844,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.8"
+        weight="0"
         appearance="1.9"
         Type="HeadArmor">
     <ItemComponent>
@@ -1864,7 +1864,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -1884,7 +1884,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="16"
@@ -1904,7 +1904,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="17"
@@ -1924,7 +1924,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="17"
@@ -1943,7 +1943,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         appearance="1.6"
         Type="HeadArmor">
     <ItemComponent>
@@ -1963,7 +1963,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="1.9"
+        weight="0"
         difficulty="0"
         appearance="1"
         Type="HeadArmor">
@@ -1985,7 +1985,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.9"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="27"
@@ -2004,7 +2004,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="18"
@@ -2023,7 +2023,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -2042,7 +2042,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -2061,7 +2061,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -2079,7 +2079,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -2099,7 +2099,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="21"
@@ -2118,7 +2118,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="19"
@@ -2136,7 +2136,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.1"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="17"
@@ -2154,7 +2154,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -2171,7 +2171,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         appearance="0.6"
         Type="HeadArmor">
     <ItemComponent>
@@ -2191,7 +2191,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="18"
@@ -2210,7 +2210,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -2229,7 +2229,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="19"
@@ -2249,7 +2249,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="18"
@@ -2267,7 +2267,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -2286,7 +2286,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="14"
@@ -2305,7 +2305,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="34"
@@ -2324,7 +2324,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="32"
@@ -2343,7 +2343,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="2.5"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="HeadArmor">
@@ -2364,7 +2364,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="2.5"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="HeadArmor">
@@ -2385,7 +2385,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.9"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="20"
@@ -2404,7 +2404,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="33"
@@ -2421,7 +2421,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="14"
@@ -2440,7 +2440,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="19"
@@ -2458,7 +2458,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="14"
@@ -2476,7 +2476,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.1"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="37"
@@ -2495,7 +2495,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="16"
@@ -2514,7 +2514,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="28"
@@ -2534,7 +2534,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="HeadArmor">
@@ -2555,7 +2555,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="18"
@@ -2574,7 +2574,7 @@
         name="{=7dAy51ln}Cervelliere over Arming Coif"
         mesh="vlandia_helmet_n_f"
         culture="Culture.vlandia"
-        weight="0.9"
+        weight="0"
         value="1"
         is_merchandise="false"
         appearance="0.3"
@@ -2595,7 +2595,7 @@
         subtype="head_armor"
         mesh="vlandia_helmet_u_a"
         culture="Culture.neutral_culture"
-        weight="3.2"
+        weight="0"
         value="1"
         is_merchandise="false"
         Type="HeadArmor">
@@ -2617,7 +2617,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.7"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="40"
@@ -2637,7 +2637,7 @@
         subtype="head_armor"
         value="1"
         is_merchandise="false"
-        weight="3.9"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="39"
@@ -2655,7 +2655,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.7"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="30"
@@ -2674,7 +2674,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.9"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="32"
@@ -2694,7 +2694,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.6"
+        weight="0"
         difficulty="0"
         appearance="1"
         Type="HeadArmor">
@@ -2716,7 +2716,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.7"
+        weight="0"
         difficulty="0"
         appearance="1"
         Type="HeadArmor">
@@ -2737,7 +2737,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="36"
@@ -2756,7 +2756,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="34"
@@ -2775,7 +2775,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="19"
@@ -2795,7 +2795,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="31"
@@ -2812,7 +2812,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="38"
@@ -2830,7 +2830,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="37"
@@ -2849,7 +2849,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="30"
@@ -2869,7 +2869,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="36"
@@ -2889,7 +2889,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="33"
@@ -2906,7 +2906,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="6.7"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="38"
@@ -2925,7 +2925,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="4.5"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -2946,7 +2946,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="7"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="40"
@@ -2965,7 +2965,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.8"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="29"
@@ -2984,7 +2984,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="34"
@@ -3004,7 +3004,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.0"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="33"
@@ -3023,7 +3023,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -3042,7 +3042,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="9.1"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="32"
@@ -3061,7 +3061,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.4"
+        weight="0"
         difficulty="0"
         appearance="0.8"
         Type="headArmor">
@@ -3081,7 +3081,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.4"
+        weight="0"
         appearance="1.6"
         Type="HeadArmor">
     <ItemComponent>
@@ -3102,7 +3102,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.1"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -3124,7 +3124,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.1"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -3146,7 +3146,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="2.3"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -3167,7 +3167,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="2.7"
+        weight="0"
         difficulty="0"
         appearance="4"
         Type="HeadArmor">
@@ -3189,7 +3189,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.8"
+        weight="0"
         difficulty="0"
         appearance="9"
         Type="HeadArmor">
@@ -3210,7 +3210,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.8"
+        weight="0"
         appearance="8"
         Type="HeadArmor">
     <ItemComponent>
@@ -3231,7 +3231,7 @@
         subtype="head_armor"
         value="1"
         is_merchandise="false"
-        weight="4.4"
+        weight="0"
         Type="headArmor">
     <ItemComponent>
       <Armor head_armor="40"
@@ -3250,7 +3250,7 @@
         subtype="head_armor"
         value="1"
         is_merchandise="false"
-        weight="2.9"
+        weight="0"
         Type="headArmor">
     <ItemComponent>
       <Armor head_armor="32"
@@ -3269,7 +3269,7 @@
         subtype="head_armor"
         value="1"
         is_merchandise="false"
-        weight="3.1"
+        weight="0"
         Type="headArmor">
     <ItemComponent>
       <Armor head_armor="35"
@@ -3287,7 +3287,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         difficulty="0"
         appearance="0.9"
         Type="headArmor">
@@ -3309,7 +3309,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="31"
@@ -3327,7 +3327,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="41"
@@ -3345,7 +3345,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="30"
@@ -3363,7 +3363,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="39"
@@ -3382,7 +3382,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="34"
@@ -3402,7 +3402,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.3"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="35"
@@ -3422,7 +3422,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="33"
@@ -3442,7 +3442,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="15"
@@ -3461,7 +3461,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="16"
@@ -3480,7 +3480,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="16"
@@ -3500,7 +3500,7 @@
         subtype="head_armor"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         difficulty="0"
         appearance="0.9"
         Type="headArmor">
@@ -3520,7 +3520,7 @@
         mesh="nasal_helmet_reinforced"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="HeadArmor">
@@ -3540,7 +3540,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="28"
@@ -3559,7 +3559,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="6"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="26"
@@ -3579,7 +3579,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.8"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="48"
@@ -3599,7 +3599,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="6.5"
+        weight="0"
         Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="30"
@@ -3623,7 +3623,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="2"
@@ -3640,7 +3640,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="2"
@@ -3657,7 +3657,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="2"
@@ -3672,7 +3672,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="5"
@@ -3687,7 +3687,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="13"
@@ -3704,7 +3704,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="8"
@@ -3719,7 +3719,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="13"
@@ -3734,7 +3734,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.3"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="5"
@@ -3750,7 +3750,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="4"
@@ -3767,7 +3767,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="2"
@@ -3783,7 +3783,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="5"
@@ -3800,7 +3800,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="2.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="7"
@@ -3816,7 +3816,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="8"
@@ -3832,7 +3832,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.0"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="9"
@@ -3849,7 +3849,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.3"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="6"
@@ -3866,7 +3866,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="2"
@@ -3882,7 +3882,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="6"
@@ -3898,7 +3898,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="3"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="5"
@@ -3913,7 +3913,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="4"
@@ -3929,7 +3929,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="5"
@@ -3944,7 +3944,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="11"
@@ -3960,7 +3960,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5.5"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="11"
@@ -3976,7 +3976,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="8"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="8"
@@ -3993,7 +3993,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="2"
@@ -4010,7 +4010,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="3"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="3"
@@ -4026,7 +4026,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="3"
@@ -4043,7 +4043,7 @@
         value="1"
         is_merchandise="false"
         culture="Culture.neutral_culture"
-        weight="4"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="15"
@@ -4059,7 +4059,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="Cape">
@@ -4077,7 +4077,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         appearance="1"
         Type="Cape">
     <ItemComponent>
@@ -4098,7 +4098,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="4.5"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="Cape">
@@ -4117,7 +4117,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="4.5"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="Cape">
@@ -4135,7 +4135,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4.1"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="14"
@@ -4151,7 +4151,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="2.2"
+        weight="0"
         appearance="3"
         Type="Cape">
     <ItemComponent>
@@ -4169,7 +4169,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.6"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="6"
@@ -4185,7 +4185,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5.0"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="15"
@@ -4201,7 +4201,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5.0"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="14"
@@ -4216,7 +4216,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="5.0"
+        weight="0"
         appearance="2"
         Type="Cape">
     <ItemComponent>
@@ -4235,7 +4235,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="4.0"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="13"
@@ -4252,7 +4252,7 @@
         value="1"
         is_merchandise="false"
         subtype="body_armor"
-        weight="4.0"
+        weight="0"
         difficulty="0"
         appearance="0.7"
         Type="Cape">
@@ -4272,7 +4272,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="7"
+        weight="0"
         Type="Cape">
     <ItemComponent>
       <Armor body_armor="15"
@@ -4292,7 +4292,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         appearance="0.2"
         Type="BodyArmor">
     <ItemComponent>
@@ -4312,7 +4312,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="2"
@@ -4331,7 +4331,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="2"
@@ -4351,7 +4351,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -4373,7 +4373,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -4394,7 +4394,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="4"
@@ -4417,7 +4417,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="0.3"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -4440,7 +4440,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="6.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="4"
@@ -4460,7 +4460,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="6.8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="8"
@@ -4480,7 +4480,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="14"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="8"
@@ -4501,7 +4501,7 @@
         value="1"
         is_merchandise="false"
         subtype="body_armor"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -4523,7 +4523,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="12"
@@ -4542,7 +4542,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="8.1"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="18"
@@ -4562,7 +4562,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.9"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -4583,7 +4583,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="BodyArmor">
@@ -4607,7 +4607,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="2.0"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -4627,7 +4627,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="21"
@@ -4648,7 +4648,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="2"
@@ -4669,7 +4669,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="2.3"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -4691,7 +4691,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="2.4"
+        weight="0"
         appearance="0.1"
         Type="BodyArmor">
     <ItemComponent>
@@ -4712,7 +4712,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="2.4"
+        weight="0"
         appearance="0.1"
         Type="BodyArmor">
     <ItemComponent>
@@ -4734,7 +4734,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -4756,7 +4756,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -4777,7 +4777,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -4798,7 +4798,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         appearance="0.6"
         Type="BodyArmor">
     <ItemComponent>
@@ -4820,7 +4820,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="2.1"
+        weight="0"
         difficulty="0"
         appearance="0.4"
         Type="BodyArmor">
@@ -4843,7 +4843,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -4864,7 +4864,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="2.4"
+        weight="0"
         appearance="0.1"
         Type="BodyArmor">
     <ItemComponent>
@@ -4884,7 +4884,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="12.0"
+        weight="0"
         appearance="0.2"
         Type="BodyArmor">
     <ItemComponent>
@@ -4902,7 +4902,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -4922,7 +4922,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -4946,7 +4946,7 @@
         value="1"
         is_merchandise="false"
         subtype="body_armor"
-        weight="0.4"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -4968,7 +4968,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="2.6"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="BodyArmor">
@@ -4991,7 +4991,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -5013,7 +5013,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="2"
@@ -5034,7 +5034,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="9.0"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="7"
@@ -5054,7 +5054,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="14"
@@ -5074,7 +5074,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="7.2"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="12"
@@ -5095,7 +5095,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="12"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="9"
@@ -5115,7 +5115,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="2.1"
+        weight="0"
         appearance="1"
         Type="BodyArmor">
     <ItemComponent>
@@ -5138,7 +5138,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11.4"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="18"
@@ -5158,7 +5158,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="18"
@@ -5179,7 +5179,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="13.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="15"
@@ -5200,7 +5200,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="7"
@@ -5221,7 +5221,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="10"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="7"
@@ -5243,7 +5243,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="12"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="8"
@@ -5264,7 +5264,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="2"
@@ -5285,7 +5285,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="4"
@@ -5305,7 +5305,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="4"
@@ -5327,7 +5327,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="23"
@@ -5348,7 +5348,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="11"
@@ -5368,7 +5368,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="13"
@@ -5388,7 +5388,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="14"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="8"
@@ -5407,7 +5407,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="2.5"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -5429,7 +5429,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="14"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="9"
@@ -5450,7 +5450,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="22"
@@ -5471,7 +5471,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="2.2"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="BodyArmor">
@@ -5494,7 +5494,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="19"
@@ -5515,7 +5515,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="2.9"
+        weight="0"
         appearance="0.1"
         Type="BodyArmor">
     <ItemComponent>
@@ -5537,7 +5537,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="10.8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="25"
@@ -5558,7 +5558,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="11.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="19"
@@ -5579,7 +5579,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.4"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -5602,7 +5602,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.2"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -5625,7 +5625,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -5646,7 +5646,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -5667,7 +5667,7 @@
         name="{=l5PPS5lG}Infantryman Mail over Leather"
         mesh="empire_armor_c"
         culture="Culture.neutral_culture"
-        weight="8.6"
+        weight="0"
         value="1"
         is_merchandise="false"
         Type="BodyArmor">
@@ -5688,7 +5688,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -5707,7 +5707,7 @@
         subtype="body_armor"
         mesh="cop_a"
         culture="Culture.neutral_culture"
-        weight="10.7"
+        weight="0"
         value="1"
         is_merchandise="false"
         Type="BodyArmor">
@@ -5728,7 +5728,7 @@
         mesh="empire_armor_b"
         subtype="body_armor"
         culture="Culture.neutral_culture"
-        weight="9.5"
+        weight="0"
         value="1"
         is_merchandise="false"
         Type="BodyArmor">
@@ -5748,7 +5748,7 @@
         subtype="body_armor"
         mesh="battania_woodland_outfit"
         culture="Culture.neutral_culture"
-        weight="1.2"
+        weight="0"
         value="1"
         is_merchandise="false"
         Type="BodyArmor">
@@ -5771,7 +5771,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="27"
@@ -5790,7 +5790,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="10.8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="19"
@@ -5809,7 +5809,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         difficulty="0"
         appearance="0.2"
         Type="BodyArmor">
@@ -5833,7 +5833,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="13.1"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="25"
@@ -5854,7 +5854,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -5877,7 +5877,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="8.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="18"
@@ -5898,7 +5898,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="8.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="15"
@@ -5917,7 +5917,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11.8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="22"
@@ -5937,7 +5937,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="12.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="20"
@@ -5955,7 +5955,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="7.3"
+        weight="0"
         appearance="0.7"
         Type="BodyArmor">
     <ItemComponent>
@@ -5977,7 +5977,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="7.9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="19"
@@ -5997,7 +5997,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="11.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="14"
@@ -6016,7 +6016,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="10.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="19"
@@ -6037,7 +6037,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="1.9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="18"
@@ -6059,7 +6059,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="18.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="38"
@@ -6079,7 +6079,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="24.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="22"
@@ -6100,7 +6100,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="21.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="18"
@@ -6121,7 +6121,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="22.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="22"
@@ -6142,7 +6142,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="7.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="18"
@@ -6162,7 +6162,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="10.5"
+        weight="0"
         appearance="0.6"
         Type="BodyArmor">
     <ItemComponent>
@@ -6183,7 +6183,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="23"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="36"
@@ -6204,7 +6204,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="25"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="37"
@@ -6222,7 +6222,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="1"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -6243,7 +6243,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="3.3"
+        weight="0"
         appearance="0.1"
         Type="BodyArmor">
     <ItemComponent>
@@ -6264,7 +6264,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="8.7"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="BodyArmor">
@@ -6286,7 +6286,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="13.4"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="29"
@@ -6305,7 +6305,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="15.1"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="29"
@@ -6324,7 +6324,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="2.9"
+        weight="0"
         appearance="0.5"
         Type="BodyArmor">
     <ItemComponent>
@@ -6345,7 +6345,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="21.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="37"
@@ -6366,7 +6366,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="20.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="34"
@@ -6386,7 +6386,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="12.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="29"
@@ -6405,7 +6405,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="14"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="27"
@@ -6424,7 +6424,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="21.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="39"
@@ -6443,7 +6443,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="14.0"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="31"
@@ -6462,7 +6462,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -6487,7 +6487,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="4.1"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -6510,7 +6510,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="14"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="21"
@@ -6531,7 +6531,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="HeadArmor">
@@ -6552,7 +6552,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="3.1"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -6572,7 +6572,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="13.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="29"
@@ -6591,7 +6591,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="13.9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="30"
@@ -6610,7 +6610,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="20.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="20"
@@ -6629,7 +6629,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="12.4"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="10"
@@ -6649,7 +6649,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="23.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="43"
@@ -6670,7 +6670,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="13.9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="26"
@@ -6691,7 +6691,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="BodyArmor">
@@ -6713,7 +6713,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="14.9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="28"
@@ -6734,7 +6734,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="14.4"
+        weight="0"
         appearance="0.6"
         Type="BodyArmor">
     <ItemComponent>
@@ -6754,7 +6754,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="24.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="39"
@@ -6773,7 +6773,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="27.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="43"
@@ -6792,7 +6792,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="23"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="37"
@@ -6813,7 +6813,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="22"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="35"
@@ -6833,7 +6833,7 @@
         culture="Culture.looters"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         difficulty="0"
         appearance="0.1"
         Type="BodyArmor">
@@ -6854,7 +6854,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -6875,7 +6875,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -6896,7 +6896,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="HeadArmor">
@@ -6917,7 +6917,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.7"
+        weight="0"
         difficulty="0"
         appearance="0.9"
         Type="headArmor">
@@ -6938,7 +6938,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="1.2"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -6960,7 +6960,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.7"
+        weight="0"
         difficulty="0"
         appearance="0.9"
         Type="headArmor">
@@ -6981,7 +6981,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         difficulty="0"
         appearance="0.7"
         Type="HeadArmor">
@@ -7001,7 +7001,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.7"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -7021,7 +7021,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.1"
+        weight="0"
         appearance="0.5"
         Type="HeadArmor">
     <ItemComponent>
@@ -7041,7 +7041,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.5"
+        weight="0"
         difficulty="0"
         appearance="0.9"
         Type="headArmor">
@@ -7062,7 +7062,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="HeadArmor">
@@ -7083,7 +7083,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="25.1"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="45"
@@ -7103,7 +7103,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="28.6"
+        weight="0"
         difficulty="0"
         appearance="2.4"
         Type="BodyArmor">
@@ -7126,7 +7126,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="16.6"
+        weight="0"
         difficulty="0"
         appearance="1.7"
         Type="BodyArmor">
@@ -7149,7 +7149,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="14.7"
+        weight="0"
         difficulty="0"
         appearance="1.7"
         Type="BodyArmor">
@@ -7172,7 +7172,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="8.2"
+        weight="0"
         difficulty="0"
         appearance="1.4"
         Type="BodyArmor">
@@ -7195,7 +7195,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="17.0"
+        weight="0"
         appearance="2"
         Type="BodyArmor">
     <ItemComponent>
@@ -7216,7 +7216,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="18.0"
+        weight="0"
         appearance="4"
         Type="BodyArmor">
     <ItemComponent>
@@ -7236,7 +7236,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         appearance="1"
         Type="BodyArmor">
     <ItemComponent>
@@ -7259,7 +7259,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="23.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="34"
@@ -7280,7 +7280,7 @@
         value="1"
         is_merchandise="false"
         subtype="body_armor"
-        weight="2.2"
+        weight="0"
         difficulty="0"
         appearance="0.7"
         Type="BodyArmor">
@@ -7301,7 +7301,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="12.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="29"
@@ -7319,7 +7319,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         appearance="0.7"
         Type="BodyArmor">
     <ItemComponent>
@@ -7340,7 +7340,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="24"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="41"
@@ -7360,7 +7360,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="19.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="33"
@@ -7380,7 +7380,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="21.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="45"
@@ -7399,7 +7399,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="12.2"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="31"
@@ -7419,7 +7419,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="18.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="37"
@@ -7439,7 +7439,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="10.7"
+        weight="0"
         difficulty="0"
         appearance="1.5"
         Type="BodyArmor">
@@ -7462,7 +7462,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="2.4"
+        weight="0"
         difficulty="0"
         appearance="1.7"
         Type="BodyArmor">
@@ -7485,7 +7485,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="18.0"
+        weight="0"
         appearance="6"
         Type="BodyArmor">
     <ItemComponent>
@@ -7506,7 +7506,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="28.0"
+        weight="0"
         difficulty="0"
         appearance="6.0"
         Type="BodyArmor">
@@ -7528,7 +7528,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="22.0"
+        weight="0"
         difficulty="0"
         appearance="5.5"
         Type="BodyArmor">
@@ -7550,7 +7550,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         difficulty="0"
         appearance="1.1"
         Type="BodyArmor">
@@ -7574,7 +7574,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         difficulty="0"
         appearance="1.7"
         Type="BodyArmor">
@@ -7597,7 +7597,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="2.5"
+        weight="0"
         appearance="4"
         Type="Cape">
     <ItemComponent>
@@ -7615,7 +7615,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="2.7"
+        weight="0"
         appearance="7"
         Type="Cape">
     <ItemComponent>
@@ -7633,7 +7633,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         appearance="3"
         Type="Cape">
     <ItemComponent>
@@ -7651,7 +7651,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="14"
+        weight="0"
         appearance="6"
         Type="Cape">
     <ItemComponent>
@@ -7669,7 +7669,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="9.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="29"
@@ -7689,7 +7689,7 @@
         subtype="body_armor"
         value="1"
         is_merchandise="false"
-        weight="22.1"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="43"
@@ -7708,7 +7708,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="20.3"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="37"
@@ -7727,7 +7727,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="25.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="36"
@@ -7746,7 +7746,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="22.5"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="44"
@@ -7766,7 +7766,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="25.8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="40"
@@ -7787,7 +7787,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="18.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="36"
@@ -7808,7 +7808,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="30"
@@ -7827,7 +7827,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="23.8"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="43"
@@ -7846,7 +7846,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="18.9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="33"
@@ -7865,7 +7865,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="22.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="54"
@@ -7885,7 +7885,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="10.6"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="33"
@@ -7905,7 +7905,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="16.7"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="44"
@@ -7926,7 +7926,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="22.2"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="42"
@@ -7947,7 +7947,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="25"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="43"
@@ -7968,7 +7968,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="10.7"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="BodyArmor">
@@ -7991,7 +7991,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="20.9"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="41"
@@ -8012,7 +8012,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="27.2"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="44"
@@ -8031,7 +8031,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="26"
+        weight="0"
         Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="45"
@@ -8054,7 +8054,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.3"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="11"
@@ -8071,7 +8071,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="5"
@@ -8088,7 +8088,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         appearance="0.9"
         Type="HandArmor">
     <ItemComponent>
@@ -8106,7 +8106,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.1"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="2"
@@ -8121,7 +8121,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="5"
@@ -8138,7 +8138,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="1.6"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HandArmor">
@@ -8156,7 +8156,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="8"
@@ -8172,7 +8172,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         difficulty="0"
         appearance="0.7"
         Type="HandArmor">
@@ -8190,7 +8190,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         difficulty="0"
         appearance="0.3"
         Type="HandArmor">
@@ -8208,7 +8208,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="10"
@@ -8225,7 +8225,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="6"
@@ -8240,7 +8240,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="3"
@@ -8256,7 +8256,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         appearance="0.3"
         Type="HandArmor">
     <ItemComponent>
@@ -8274,7 +8274,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="10"
@@ -8291,7 +8291,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="4"
@@ -8308,7 +8308,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.2"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="2"
@@ -8323,7 +8323,7 @@
         culture="Culture.khuzait"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HandArmor">
@@ -8342,7 +8342,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="7"
@@ -8359,7 +8359,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="3"
@@ -8374,7 +8374,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="4"
@@ -8391,7 +8391,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="10"
@@ -8410,7 +8410,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.7"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="19"
@@ -8425,7 +8425,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.3"
+        weight="0"
         appearance="0.9"
         Type="LegArmor">
     <ItemComponent>
@@ -8443,7 +8443,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.3"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="16"
@@ -8460,7 +8460,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="17"
@@ -8477,7 +8477,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="20"
@@ -8493,7 +8493,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.7"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="18"
@@ -8510,7 +8510,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="18"
@@ -8527,7 +8527,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="15"
@@ -8545,7 +8545,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="2.85"
+        weight="0"
         difficulty="0"
         appearance="1.65"
         Type="HeadArmor">
@@ -8567,7 +8567,7 @@
         culture="Culture.empire"
         value="1"
         is_merchandise="false"
-        weight="3.3"
+        weight="0"
         appearance="2"
         Type="HeadArmor">
     <ItemComponent>
@@ -8588,7 +8588,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="1.9"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="HeadArmor">
@@ -8612,7 +8612,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="4"
@@ -8628,7 +8628,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="10"
@@ -8644,7 +8644,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.3"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="8"
@@ -8661,7 +8661,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="5"
@@ -8677,7 +8677,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="3"
@@ -8693,7 +8693,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.4"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="9"
@@ -8710,7 +8710,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="7"
@@ -8727,7 +8727,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.1"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="11"
@@ -8744,7 +8744,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="4"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="9"
@@ -8761,7 +8761,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.1"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="10"
@@ -8778,7 +8778,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="7"
@@ -8794,7 +8794,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="4"
@@ -8810,7 +8810,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="7"
@@ -8827,7 +8827,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.5"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="12"
@@ -8842,7 +8842,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.9"
+        weight="0"
         appearance="0.1"
         Type="LegArmor">
     <ItemComponent>
@@ -8860,7 +8860,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="6"
@@ -8876,7 +8876,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="9"
@@ -8893,7 +8893,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="9"
@@ -8910,7 +8910,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.6"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="16"
@@ -8927,7 +8927,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="10"
@@ -8945,7 +8945,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="1.8"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="15"
@@ -8961,7 +8961,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.5"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="20"
@@ -8977,7 +8977,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.9"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="17"
@@ -8994,7 +8994,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="3.0"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="15"
@@ -9010,7 +9010,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         difficulty="0"
         appearance="0.5"
         Type="LegArmor">
@@ -9028,7 +9028,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.9"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="13"
@@ -9044,7 +9044,7 @@
         culture="Culture.neutral_culture"
         value="1"
         is_merchandise="false"
-        weight="2.7"
+        weight="0"
         Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="14"
@@ -18496,7 +18496,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.1"
+        weight="0"
         appearance="1.4"
         Type="HeadArmor">
     <ItemComponent>
@@ -18517,7 +18517,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="1"
         Type="HeadArmor">
@@ -18538,7 +18538,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         appearance="2"
         Type="HeadArmor">
     <ItemComponent>
@@ -18558,7 +18558,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="3.6"
+        weight="0"
         appearance="1"
         Type="HeadArmor">
     <ItemComponent>
@@ -18578,7 +18578,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.6"
+        weight="0"
         appearance="1.9"
         Type="HeadArmor">
     <ItemComponent>
@@ -18598,7 +18598,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.1"
+        weight="0"
         appearance="1"
         Type="HeadArmor">
     <ItemComponent>
@@ -18619,7 +18619,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.4"
+        weight="0"
         difficulty="0"
         appearance="2"
         Type="HeadArmor">
@@ -18641,7 +18641,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         difficulty="0"
         appearance="1"
         Type="HeadArmor">
@@ -18664,7 +18664,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="0.7"
+        weight="0"
         difficulty="0"
         appearance="1.2"
         Type="HeadArmor">
@@ -18685,7 +18685,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.3"
+        weight="0"
         appearance="1.4"
         Type="HeadArmor">
     <ItemComponent>
@@ -18705,7 +18705,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.85"
+        weight="0"
         appearance="1.45"
         Type="HeadArmor">
     <ItemComponent>
@@ -18725,7 +18725,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         appearance="2"
         Type="HeadArmor">
     <ItemComponent>
@@ -18746,7 +18746,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="3.3"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -18768,7 +18768,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.2"
+        weight="0"
         difficulty="0"
         appearance="1"
         Type="HeadArmor">
@@ -18790,7 +18790,7 @@
         culture="Culture.vlandia"
         value="1"
         is_merchandise="false"
-        weight="2.3"
+        weight="0"
         difficulty="0"
         appearance="1.5"
         Type="HeadArmor">
@@ -18812,7 +18812,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="22.4"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="BodyArmor">
@@ -18835,7 +18835,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="11.4"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="BodyArmor">
@@ -18858,7 +18858,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -18880,7 +18880,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.2"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -18902,7 +18902,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="2.9"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -18924,7 +18924,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -18946,7 +18946,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.1"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -18968,7 +18968,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.3"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -18990,7 +18990,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.3"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -19012,7 +19012,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.2"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -19034,7 +19034,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.3"
+        weight="0"
         difficulty="0"
         appearance="3"
         Type="HeadArmor">
@@ -19056,7 +19056,7 @@
         value="1"
         is_merchandise="false"
         subtype="body_armor"
-        weight="0.55"
+        weight="0"
         difficulty="0"
         appearance="1.5"
         Type="Cape">
@@ -19075,7 +19075,7 @@
         value="1"
         is_merchandise="false"
         subtype="body_armor"
-        weight="0.8"
+        weight="0"
         difficulty="0"
         appearance="1.5"
         Type="Cape">
@@ -19092,7 +19092,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         appearance="1"
         Type="Cape">
     <ItemComponent>
@@ -19109,7 +19109,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="1.0"
+        weight="0"
         appearance="0.6"
         Type="BodyArmor">
     <ItemComponent>
@@ -19131,7 +19131,7 @@
         culture="Culture.aserai"
         value="1"
         is_merchandise="false"
-        weight="4.2"
+        weight="0"
         appearance="3"
         Type="Cape">
     <ItemComponent>
@@ -19150,7 +19150,7 @@
         value="1"
         is_merchandise="false"
         subtype="head_armor"
-        weight="3.4"
+        weight="0"
         difficulty="0"
         appearance="4.6"
         Type="HeadArmor">
@@ -19172,7 +19172,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="14.5"
+        weight="0"
         difficulty="0"
         appearance="1.6"
         Type="BodyArmor">
@@ -19195,7 +19195,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="8.3"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="BodyArmor">
@@ -19217,7 +19217,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="24"
+        weight="0"
         appearance="3"
         Type="BodyArmor">
     <ItemComponent>
@@ -19238,7 +19238,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="6.2"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="BodyArmor">
@@ -19260,7 +19260,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="28"
+        weight="0"
         appearance="3"
         Type="BodyArmor">
     <ItemComponent>
@@ -19281,7 +19281,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="8.3"
+        weight="0"
         difficulty="0"
         appearance="1.8"
         Type="BodyArmor">
@@ -19304,7 +19304,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -19328,7 +19328,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -19352,7 +19352,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="0.8"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -19376,7 +19376,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="0.4"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -19400,7 +19400,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="0.6"
+        weight="0"
         difficulty="0"
         appearance="0.6"
         Type="BodyArmor">
@@ -19423,7 +19423,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="2.4"
+        weight="0"
         appearance="1.6"
         Type="HeadArmor">
     <ItemComponent>
@@ -19443,7 +19443,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="3.2"
+        weight="0"
         appearance="3.4"
         Type="HeadArmor">
     <ItemComponent>
@@ -19463,7 +19463,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="3.8"
+        weight="0"
         appearance="2"
         Type="HeadArmor">
     <ItemComponent>
@@ -19483,7 +19483,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="3.15"
+        weight="0"
         appearance="1.6"
         Type="HeadArmor">
     <ItemComponent>
@@ -19503,7 +19503,7 @@
         culture="Culture.sturgia"
         value="1"
         is_merchandise="false"
-        weight="3.8"
+        weight="0"
         appearance="3"
         Type="HeadArmor">
     <ItemComponent>
@@ -19523,7 +19523,7 @@
         culture="Culture.battania"
         value="1"
         is_merchandise="false"
-        weight="0.5"
+        weight="0"
         appearance="1"
         Type="HandArmor">
     <ItemComponent>
