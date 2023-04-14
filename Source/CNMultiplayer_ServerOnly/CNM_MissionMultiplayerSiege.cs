@@ -54,13 +54,13 @@ namespace CNMultiplayer
 
         private const int RespawnGold = 100; //基础重生金币
 
-        private const int AttackerRespawnGold = 40; //攻城方重生奖励金币
+        private const int AttackerRespawnGold = 50; //攻城方重生奖励金币
 
-        private const int DefenderRespawnGold = 20; //守城方重生奖励金币
+        private const int DefenderRespawnGold = 25; //守城方重生奖励金币
 
-        private const int AttackerFlagGoldHoldMax = 200; //攻城方持有旗帜金币最大值
+        private const int AttackerFlagGoldHoldMax = 400; //攻城方持有旗帜金币最大值
 
-        private const int DefenderFlagGoldHoldMax = 100; //守城方持有旗帜金币最大值
+        private const int DefenderFlagGoldHoldMax = 200; //守城方持有旗帜金币最大值
 
         private const float radius = 20f; //定义旗帜半径
 

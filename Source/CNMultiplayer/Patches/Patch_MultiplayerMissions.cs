@@ -92,11 +92,9 @@ namespace Patches
                         new CNM_MissionMultiplayerSiege(), //调用CNM_MissionMultiplayerSiege
                         new MultiplayerWarmupComponent(),
                         new MissionMultiplayerSiegeClient(),
-                        //new CNM_MissionMultiplayerSiegeClient(),
                         new MultiplayerTimerComponent(),
                         new MultiplayerMissionAgentVisualSpawnComponent(),
                         new ConsoleMatchStartEndHandler(),
-                        new SpawnComponent(new SiegeSpawnFrameBehavior(), new SiegeSpawningBehavior()),
                         new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNM_SiegeSpawningBehavior()),//调用CNM_SiegeSpawningBehavior
                         new MissionLobbyEquipmentNetworkComponent(),
                         new MultiplayerTeamSelectComponent(),
@@ -120,7 +118,6 @@ namespace Patches
                     MissionLobbyComponent.CreateBehavior(),
                     new MultiplayerWarmupComponent(),
                     new MissionMultiplayerSiegeClient(),
-                    //new CNM_MissionMultiplayerSiegeClient(),
                     new MultiplayerAchievementComponent(),
                     new MultiplayerTimerComponent(),
                     new MultiplayerMissionAgentVisualSpawnComponent(),
