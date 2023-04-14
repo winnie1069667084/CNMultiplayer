@@ -1,4 +1,4 @@
-607
+608
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -96,6 +96,7 @@ mesh siege_barricade_a_state_4
 mesh siege_barricade_a_state_5
 mesh siege_tower_5m_logs
 mesh sturgia_shield_a
+mesh terrain_green_rock_big_c
 mesh vlandia_grandbazaar_ground_a
 mesh wooden_platform_2_a
 mesh wooden_platform_2_c
