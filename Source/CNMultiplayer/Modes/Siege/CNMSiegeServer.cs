@@ -10,9 +10,9 @@ using TaleWorlds.MountAndBlade.MissionRepresentatives;
 using TaleWorlds.MountAndBlade.Objects;
 using TaleWorlds.ObjectSystem;
 
-namespace CNMultiplayer
+namespace CNMultiplayer.Modes.Siege
 {
-    public class CNM_MissionMultiplayerSiege : MissionMultiplayerGameModeBase, IAnalyticsFlagInfo, IMissionBehavior
+    public class CNMSiegeServer : MissionMultiplayerGameModeBase, IAnalyticsFlagInfo, IMissionBehavior
     {
         public delegate void OnDestructableComponentDestroyedDelegate(DestructableComponent destructableComponent, ScriptComponentBehavior attackerScriptComponentBehaviour, MissionPeer[] contributors);
 

@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.IO;
 using TaleWorlds.Core;
 using TaleWorlds.ObjectSystem;
+using CNMultiplayer_Server.Modes.Siege;
 
 namespace CNMultiplayer
 {
@@ -41,6 +42,7 @@ namespace CNMultiplayer
             this.setup();
             Debug.Print("** CHAT COMMANDS BY MENTALROB LOADED **", 0, Debug.DebugColor.Green);
             ChatCommands.CommandManager cm = new ChatCommands.CommandManager();
+            Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
         }
 
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)

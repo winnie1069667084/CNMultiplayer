@@ -207,6 +207,9 @@
     <Compile Include="CNM_SiegeSpawningBehavior.cs" />
     <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="CNM_MissionMultiplayerSiege.cs" />
+    <Compile Include="Modes\Siege\CNMSiegeGameMode.cs" />
+    <Compile Include="Modes\Siege\CNMSiegeServer.cs" />
+    <Compile Include="Modes\Siege\CNMSiegeSpawningBehavior.cs" />
     <Compile Include="Patches\Patch_HeroClassVM.cs" />
     <Compile Include="Patches\Patch_MultiplayerMissionViews.cs" />
     <Compile Include="Patches\Patch_MissionPeer.cs" />

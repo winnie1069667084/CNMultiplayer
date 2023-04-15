@@ -1,16 +1,13 @@
-﻿using HarmonyLib;
-using NetworkMessages.FromServer;
-using System;
+﻿using NetworkMessages.FromServer;
 using System.Collections.Generic;
 using System.Linq;
 using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
 
-namespace CNMultiplayer
+namespace CNMultiplayer_Server.Modes.Siege
 {
-    public class CNM_SiegeSpawningBehavior : SpawningBehaviorBase
+    public class CNMSiegeSpawningBehavior : SpawningBehaviorBase
     {
         public override void Initialize(SpawnComponent spawnComponent)
         {

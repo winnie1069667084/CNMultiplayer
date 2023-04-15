@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
+using CNMultiplayer.Modes.Siege;
 
 namespace CNMultiplayer
 {
@@ -12,6 +13,7 @@ namespace CNMultiplayer
             Harmony harmony = new Harmony("CNMultiplayer");
             harmony.PatchAll();
             //待学习调整：*地图投票界面、WelcomeMessage、*不同模式加载不同XML
+            Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
         }
 
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
