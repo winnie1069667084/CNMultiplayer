@@ -244,5 +244,8 @@
     <Compile Include="Patches\ServerPatches\PatchMissionLobbyComponent.cs" />
     <Compile Include="Patches\ServerPatches\PatchMissionNetworkComponent.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

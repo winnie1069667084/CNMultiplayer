@@ -12,7 +12,7 @@ using TaleWorlds.ObjectSystem;
 
 namespace CNMultiplayer.Modes.Siege
 {
-    public class CNMSiegeServer : MissionMultiplayerGameModeBase, IAnalyticsFlagInfo, IMissionBehavior
+    public class CNMSiegeServer : MissionMultiplayerGameModeBase, IAnalyticsFlagInfo
     {
         public delegate void OnDestructableComponentDestroyedDelegate(DestructableComponent destructableComponent, ScriptComponentBehavior attackerScriptComponentBehaviour, MissionPeer[] contributors);
 
@@ -364,14 +364,9 @@ namespace CNMultiplayer.Modes.Siege
         }
 
         public override MissionLobbyComponent.MultiplayerGameType GetMissionType()
-        {
-            return MissionLobbyComponent.MultiplayerGameType.Siege;
-        }
+            => MissionLobbyComponent.MultiplayerGameType.FreeForAll; // Helps to avoid a few crashes.
 
-        public override bool UseRoundController()
-        {
-            return false;
-        }
+        public override bool UseRoundController() => false;
 
         public override void AfterStart()
         {
