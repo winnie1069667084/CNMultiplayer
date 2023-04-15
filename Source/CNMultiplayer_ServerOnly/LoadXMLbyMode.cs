@@ -22,7 +22,7 @@ namespace CNMultiplayer
             string gametype = MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
             switch (gametype)
             {
-                case "Siege":
+                case "CNMSiege":
                     LoadXMLs(modulename, gametype);
                     break;
                 case "Captain":
