@@ -187,7 +187,6 @@
   <ItemGroup>
     <Compile Include="CNMSubModule.cs" />
     <Compile Include="Modes\Siege\CNMSiegeServer.cs" />
-    <Compile Include="CNM_MissionMultiplayerSiegeClient.cs" />
     <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="Modes\Siege\CNMSiegeGameMode.cs" />
     <Compile Include="Patches\ChatCommands\AdminManager.cs" />

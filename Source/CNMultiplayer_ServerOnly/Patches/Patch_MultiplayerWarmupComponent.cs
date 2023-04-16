@@ -5,7 +5,7 @@ using ChatCommands;
 
 namespace Patches
 {
-    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "CheckForWarmupProgressEnd")]//热身结束条件修改
+    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "CheckForWarmupProgressEnd")]//热身结束条件修改
     internal class Patch_CheckForWarmupProgressEnd
     {
         static bool Prefix(ref bool __result, MissionMultiplayerGameModeBase ____gameMode, MultiplayerTimerComponent ____timerComponent)
@@ -28,7 +28,7 @@ namespace Patches
         }
     }
 
-    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "CanMatchStartAfterWarmup")]//热身结束条件修改
+    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "CanMatchStartAfterWarmup")]//热身结束条件修改
     internal class Patch_CanMatchStartAfterWarmup
     {
         static bool Prefix(ref bool __result)
