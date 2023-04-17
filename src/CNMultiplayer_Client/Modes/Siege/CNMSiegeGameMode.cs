@@ -1,17 +1,15 @@
-﻿#define CNM_CLIENT
-
-using TaleWorlds.Core;
+﻿using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
 
-#if CNM_CLIENT
+#if CLIENT
 using TaleWorlds.MountAndBlade.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
 #endif
 
 namespace CNMultiplayer_Client.Modes.Siege
 {
-    #if CNM_CLIENT
+    #if CLIENT
     [ViewCreatorModule] // Exposes methods with ViewMethod attribute.
     #endif
     internal class CNMSiegeGameMode : MissionBasedMultiplayerGameMode
@@ -21,7 +19,7 @@ namespace CNMultiplayer_Client.Modes.Siege
         public CNMSiegeGameMode()
             : base(GameName)
         { }
-        #if CNM_CLIENT
+        #if CLIENT
         [ViewMethod(GameName)]
         public static MissionView[] OpenCNMSiege(Mission mission)
         {

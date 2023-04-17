@@ -4,7 +4,7 @@ using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(SpawningBehaviorBase), "SpawnBot")]//修改Bot重生规则（仅限攻城模式）
     internal class Patch_SpawnBot

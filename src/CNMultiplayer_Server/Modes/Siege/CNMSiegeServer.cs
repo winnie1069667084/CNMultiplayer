@@ -9,6 +9,7 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.MissionRepresentatives;
 using TaleWorlds.MountAndBlade.Objects;
 using TaleWorlds.ObjectSystem;
+using static TaleWorlds.MountAndBlade.MovementOrder;
 
 namespace CNMultiplayer_Server.Modes.Siege
 {
@@ -26,9 +27,9 @@ namespace CNMultiplayer_Server.Modes.Siege
 
         public const int MoraleGainPerFlag = 1; //被占领的旗帜提供的士气值
 
-        public const int GoldBonusOnFlagRemoval = 35; //攻城方移除旗帜金币奖励
+        public const int AttackerGoldBonusOnFlagRemoval = 75; //攻城方移除旗帜金币奖励
 
-        public const int DefenderGoldBonusOnFlagRemoval = 100; //守城方移除旗帜金币补偿
+        public const int DefenderGoldBonusOnFlagRemoval = 150; //守城方移除旗帜金币补偿
 
         public const string MasterFlagTag = "keep_capture_point";
 
@@ -815,24 +816,15 @@ namespace CNMultiplayer_Server.Modes.Siege
 
         private void GainGoldForPlayers() //移除旗帜给予玩家金币奖励
         {
-            List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
             {
                 MissionPeer component = networkPeer.GetComponent<MissionPeer>();
                 if (component?.Team?.Side == BattleSideEnum.Defender)
                 {
                     ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + DefenderGoldBonusOnFlagRemoval);
-                    list.Add(new KeyValuePair<ushort, int>(512, DefenderGoldBonusOnFlagRemoval));
-                    if (!component.Peer.Communicator.IsServerPeer && component.Peer.Communicator.IsConnectionActive)
-                    {
-                        GameNetwork.BeginModuleEventAsServer(component.Peer);
-                        GameNetwork.WriteMessage(new GoldGain(list));
-                        GameNetwork.EndModuleEventAsServer();
-                    }
-                    list.Clear();
                 }
                 else if (component?.Team?.Side == BattleSideEnum.Attacker)
-                    ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + GoldBonusOnFlagRemoval);
+                    ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + AttackerGoldBonusOnFlagRemoval);
             }
         }
 

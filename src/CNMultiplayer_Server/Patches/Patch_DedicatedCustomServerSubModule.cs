@@ -5,7 +5,7 @@ using System.Reflection;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.DedicatedCustomServer;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "TickAutomatedBattles")]//config中设置“disable_map_voting" 和 “disable_culture_voting”时启用随机阵营或地图
     internal class Patch_TickAutomatedBattles

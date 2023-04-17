@@ -4,7 +4,7 @@ using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
 using HarmonyLib;
 using NetworkMessages.FromClient;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(HeroClassVM), "UpdateEnabled")]//根据战场兵种比例锁定兵种，限定射手、骑兵、骑射手分别不超过总兵力的1/4。
     internal class Patch_UpdateEnabled

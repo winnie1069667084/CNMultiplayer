@@ -1,11 +1,10 @@
 ﻿using HarmonyLib;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
-using ChatCommands;
 
-namespace Patches
+namespace HarmonyPatches
 {
-    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "CheckForWarmupProgressEnd")]//热身结束条件修改
+    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "CheckForWarmupProgressEnd")]//热身结束条件修改
     internal class Patch_CheckForWarmupProgressEnd
     {
         static bool Prefix(ref bool __result, MissionMultiplayerGameModeBase ____gameMode, MultiplayerTimerComponent ____timerComponent)
@@ -28,7 +27,7 @@ namespace Patches
         }
     }
 
-    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "CanMatchStartAfterWarmup")]//热身结束条件修改
+    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "CanMatchStartAfterWarmup")]//热身结束条件修改
     internal class Patch_CanMatchStartAfterWarmup
     {
         static bool Prefix(ref bool __result)
@@ -53,7 +52,7 @@ namespace Patches
         }
     }
 
-    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "AfterStart")]//热身阶段加入大量bot（仅限攻城模式）
+    /*[HarmonyPatch(typeof(MultiplayerWarmupComponent), "AfterStart")]//热身阶段加入大量bot（仅限攻城模式）
     internal class Patch_AfterStart
     {
         public static int NumberOfBotsTeam1;
@@ -70,7 +69,7 @@ namespace Patches
         }
     }
 
-    //[HarmonyPatch(typeof(MultiplayerWarmupComponent), "EndWarmup")]//热身结束后恢复bot数量（仅限攻城模式）
+    [HarmonyPatch(typeof(MultiplayerWarmupComponent), "EndWarmup")]//热身结束后恢复bot数量（仅限攻城模式）
     internal class Patch_EndWarmup
     {
         static void Postfix()
@@ -81,5 +80,5 @@ namespace Patches
                 MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam2).UpdateValue(Patch_AfterStart.NumberOfBotsTeam2);
             }
         }
-    }
+    }*/
 }

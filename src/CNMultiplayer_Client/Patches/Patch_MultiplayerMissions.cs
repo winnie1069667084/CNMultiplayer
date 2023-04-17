@@ -3,7 +3,7 @@ using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(MultiplayerMissions), "OpenSkirmishMission")]//移除遭遇战语音控件
     internal class Patch_OpenSkirmishMission

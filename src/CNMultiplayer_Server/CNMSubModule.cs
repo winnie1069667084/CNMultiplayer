@@ -20,7 +20,7 @@ namespace CNMultiplayer_Server
             string configPath = Path.Combine(basePath, "chatCommands.json");
             if (!File.Exists(configPath))
             {
-                Config config = new Config{ AdminPassword = Helpers.RandomString(6) };
+                Config config = new Config{ AdminPassword = ChatCommands.Helpers.RandomString(6) };
                 ConfigManager.SetConfig(config);
                 string json = JsonConvert.SerializeObject(config);
                 File.WriteAllText(configPath, json);

@@ -1,11 +1,10 @@
 ﻿using HarmonyLib;
 using System;
-using System.Reflection;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
-namespace Patches
+namespace HarmonyPatches
 {
     //[HarmonyPatch(typeof(AgentStatCalculateModel), "SetAiRelatedProperties")]//强化近战AI（仅限攻城模式）
     /*

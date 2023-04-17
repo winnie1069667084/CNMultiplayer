@@ -1,13 +1,8 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Objects.Siege;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(MultiplayerBatteringRamSpawner), "AssignParameters")]//修改攻城车血量
     internal class Patch_RamAssignParameters

@@ -6,7 +6,7 @@ using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.MissionRepresentatives;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(SiegeMissionRepresentative), "GetGoldGainsFromKillDataAndUpdateFlags")]//攻城模式击杀金币系统修改
     internal class Patch_GetGoldGainsFromKillDataAndUpdateFlags

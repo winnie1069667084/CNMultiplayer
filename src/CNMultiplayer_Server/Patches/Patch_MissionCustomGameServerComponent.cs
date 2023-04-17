@@ -3,7 +3,7 @@ using NetworkMessages.FromServer;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.DedicatedCustomServer;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(MissionCustomGameServerComponent), "HandleLateNewClientAfterSynchronized")] //玩家加入服务器提示
     internal class Patch_HandleLateNewClientAfterSynchronized

@@ -1,8 +1,6 @@
 ﻿using HarmonyLib;
 using NetworkMessages.FromServer;
-using System.Diagnostics;
 using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Network.Messages;
 using Debug = TaleWorlds.Library.Debug;

@@ -1,11 +1,9 @@
 ﻿using HarmonyLib;
-using System;
 using System.Collections.Generic;
 using System.Reflection.Emit;
-using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(MissionPeer), nameof(MissionPeer.SelectedPerks), MethodType.Getter)]//使用Transpiler修复第三perk @星辰 - 陈小一
     class PatchFoo
@@ -39,7 +37,7 @@ namespace Patches
         }
     }
 
-    //[HarmonyPatch(typeof(MissionPeer), "SelectedPerks", MethodType.Getter)]//使用Prefix修复第三perk @Winnie
+    /*[HarmonyPatch(typeof(MissionPeer), "SelectedPerks", MethodType.Getter)]//使用Prefix修复第三perk @Winnie
     class SelectedPerksPatch
     {
         public static bool Prefix(MissionPeer __instance, ref IReadOnlyList<MPPerkObject> __result, ref List<int[]> ____perks, ValueTuple<int, List<MPPerkObject>> ____selectedPerks)
@@ -65,5 +63,5 @@ namespace Patches
             __result = ____selectedPerks.Item2;
             return false;
         }
-    }
+    }*/
 }

@@ -3,7 +3,7 @@ using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
-namespace Patches
+namespace HarmonyPatches
 {
     [HarmonyPatch(typeof(MultiplayerStrikeMagnitudeModel), "ComputeRawDamage")]//调整伤害系数（仅限攻城模式）
     internal class Patch_ComputeRawDamage
