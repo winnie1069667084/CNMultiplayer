@@ -8,7 +8,7 @@ namespace HarmonyPatches
     [HarmonyPatch(typeof(MissionPeer), nameof(MissionPeer.SelectedPerks), MethodType.Getter)]//使用Transpiler修复第三perk @星辰 - 陈小一
     class PatchFoo
     {
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        internal static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             bool willPatch = true;
             bool isLastStepPush3 = false;

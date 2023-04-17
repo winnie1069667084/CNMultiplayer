@@ -7,7 +7,7 @@ namespace HarmonyPatches
     [HarmonyPatch(typeof(MultiplayerWarmupComponent), "CheckForWarmupProgressEnd")]//热身结束条件修改
     internal class Patch_CheckForWarmupProgressEnd
     {
-        static bool Prefix(ref bool __result, MissionMultiplayerGameModeBase ____gameMode, MultiplayerTimerComponent ____timerComponent)
+        internal static bool Prefix(ref bool __result, MissionMultiplayerGameModeBase ____gameMode, MultiplayerTimerComponent ____timerComponent)
         {
             int num = GetCurrentMissionPlayersNum();
             __result = ____gameMode.CheckForWarmupEnd() || ____timerComponent.GetRemainingTime(false) <= 30f || num >= MultiplayerOptions.OptionType.MinNumberOfPlayersForMatchStart.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
@@ -30,7 +30,7 @@ namespace HarmonyPatches
     [HarmonyPatch(typeof(MultiplayerWarmupComponent), "CanMatchStartAfterWarmup")]//热身结束条件修改
     internal class Patch_CanMatchStartAfterWarmup
     {
-        static bool Prefix(ref bool __result)
+        internal static bool Prefix(ref bool __result)
         {
             int num = Patch_CheckForWarmupProgressEnd.GetCurrentMissionPlayersNum();
             bool[] array = new bool[2];

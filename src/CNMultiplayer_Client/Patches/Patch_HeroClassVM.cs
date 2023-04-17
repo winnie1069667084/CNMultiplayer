@@ -11,7 +11,7 @@ namespace HarmonyPatches
     {
         public static bool Prefix(HeroClassVM __instance, MissionMultiplayerGameModeBaseClient ____gameMode)
         {
-            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "CNMSiege")
             { return true; }
             bool flag = true;
             MissionPeer component = GameNetwork.MyPeer.GetComponent<MissionPeer>();

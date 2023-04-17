@@ -6,7 +6,7 @@ using TaleWorlds.MountAndBlade;
 
 namespace HarmonyPatches
 {
-    [HarmonyPatch(typeof(SpawningBehaviorBase), "SpawnBot")]//修改Bot重生规则（仅限攻城模式）
+    [HarmonyPatch(typeof(SpawningBehaviorBase), "SpawnBot")] //修改Bot重生规则
     internal class Patch_SpawnBot
     {
         private const float FemaleAiPossibility = 0.25f;//女性AI比例

@@ -10,7 +10,7 @@ namespace HarmonyPatches
     {
         public static bool Prefix(ref float __result, MultiplayerStrikeMagnitudeModel __instance, DamageTypes damageType, float magnitude, float armorEffectiveness, float absorbedDamageRatio)
         {
-            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "CNMSiege")
             { return true; }
             float bluntDamageFactorByDamageType = __instance.GetBluntDamageFactorByDamageType(damageType);
             float num = 100f / (100f + armorEffectiveness);
@@ -44,7 +44,7 @@ namespace HarmonyPatches
     {
         public static bool Prefix(ref float __result, DamageTypes damageType)
         {
-            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "Siege")
+            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) != "CNMSiege")
             { return true; }
             float result = 0f;
             switch (damageType)
