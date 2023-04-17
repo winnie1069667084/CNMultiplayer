@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CNMSubModule.cs" />
+    <Compile Include="Common\CNMSpawningBehaviorBase.cs" />
     <Compile Include="Helpers\ReflectionHelper.cs" />
     <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="Modes\Siege\CNMSiegeGameMode.cs" />

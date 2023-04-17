@@ -16,8 +16,17 @@ namespace HarmonyPatches
         }
     }
 
-    [HarmonyPatch(typeof(MissionCustomGameServerComponent), "AddScoresToStats")] //End_Mission后不统计大厅分数
-    internal class Patch_AddScoresToStats
+    [HarmonyPatch(typeof(MissionCustomGameServerComponent), "OnEndMission")] //End_Mission不与大厅沟通玩家分数
+    internal class Patch_OnEndMission
+    {
+        public static bool Prefix()
+        {
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(MissionCustomGameServerComponent), "OnDuelEnded")] //决斗结束后不与大厅沟通玩家分数
+    internal class Patch_OnDuelEnded
     {
         public static bool Prefix()
         {

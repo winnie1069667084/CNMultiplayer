@@ -62,7 +62,7 @@ namespace CNMultiplayer_Client.Modes.Siege
 
         private const float ObjectiveCheckPeriod = 0.25f;
 
-        private const float MoraleTickTimeInSeconds = 1f; //士气Tick
+        private const float MoraleTickTimeInSeconds = 3.5f; //士气Tick
 
         private const float HealTick = 1f; //旗帜回血Tick
 
@@ -70,7 +70,7 @@ namespace CNMultiplayer_Client.Modes.Siege
 
         private const float DefenderFlagGoldTick = 1.5f; //守城方旗帜金币Tick
 
-        private const float FlagSpeedPerPlayer = 1f; //每人提供的旗帜升降速度
+        private const float FlagSpeedPerPlayer = 0.15f; //每人提供的旗帜升降速度
 
         private const float FlagSpeedMax = 1f; //最大旗帜升降速度
 
