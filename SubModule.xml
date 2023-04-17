@@ -11,9 +11,9 @@
   	</DependedModules>
 	<SubModules>
     	<SubModule>
-      		<Name value="CNMultiplayer" />
-      		<DLLName value="CNMultiplayer.dll" />
-      		<SubModuleClassType value="CNMultiplayer.CNMSubModule" />
+      		<Name value="CNMultiplayer_Client" />
+      		<DLLName value="CNMultiplayer_Client.dll" />
+      		<SubModuleClassType value="CNMultiplayer_Client.CNMSubModule" />
       		<Tags>
 				<Tag key="DedicatedServerType" value="none" />
 			</Tags>
@@ -21,7 +21,7 @@
     	<SubModule>
       		<Name value="CNMultiplayer_Server" />
       		<DLLName value="CNMultiplayer_Server.dll" />
-      		<SubModuleClassType value="CNMultiplayer.CNMSubModule" />
+      		<SubModuleClassType value="CNMultiplayer_Server.CNMSubModule" />
       		<Tags>
 				<Tag key="DedicatedServerType" value="custom" />
 			</Tags>
