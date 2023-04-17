@@ -1,4 +1,4 @@
-611
+607
 flora_entity dry_leafs_mix_a_red
 flora_entity flora_dry_plant__mix_big_volume
 flora_entity flora_tree_acacia_01
@@ -52,7 +52,6 @@ mesh brushwood_c
 mesh castle_plank_ramp_a
 mesh castle_plank_wall_a
 mesh castle_plank_wall_b
-mesh castle_plank_wall_c
 mesh castle_scaffold_a
 mesh castle_scaffold_a_01
 mesh castle_scaffold_a_02
@@ -63,11 +62,8 @@ mesh cliff_soil_d
 mesh editor_cylinder
 mesh editor_plane_low
 mesh empire_dungeon_door_a_closed_2sided
-mesh flag_pole_big
-mesh flag_stand_white2
 mesh forest_ruinous_tree_c
 mesh icon_man
-mesh log_pine_m
 mesh mangonel_rock_pile
 mesh merchandise_wooden_stick
 mesh pandora

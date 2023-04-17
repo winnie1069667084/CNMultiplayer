@@ -1,4 +1,4 @@
-608
+607
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -336,7 +336,6 @@ prefab empire_keep_d_dome_a
 prefab empire_keep_d_window_e
 prefab empire_lord_pot_brass
 prefab empire_lord_pot_c
-prefab empire_lord_pot_o
 prefab empire_pot_holder_01
 prefab empire_pot_holder_02
 prefab empire_statue_bust_a
