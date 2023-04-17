@@ -1,9 +1,9 @@
 ﻿using HarmonyLib;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
-using CNMultiplayer_Client.Modes.Siege;
+using CNMultiplayer.Modes.Siege;
 
-namespace CNMultiplayer_Client
+namespace CNMultiplayer
 {
     public class CNMSubModule : MBSubModuleBase
     {

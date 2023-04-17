@@ -3,7 +3,7 @@ using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
-namespace CNMultiplayer_Server.Common
+namespace CNMultiplayer.Common
 {
     internal abstract class CNMSpawningBehaviorBase : SpawningBehaviorBase
     {

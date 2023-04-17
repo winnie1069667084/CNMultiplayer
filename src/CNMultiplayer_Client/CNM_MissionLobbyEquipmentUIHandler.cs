@@ -6,7 +6,7 @@ using TaleWorlds.MountAndBlade.View;
 using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
 using TaleWorlds.MountAndBlade;
 
-namespace CNMultiplayer_Client
+namespace CNMultiplayer
 {
     [OverrideView(typeof(MissionLobbyEquipmentUIHandler))]
     public class CNM_MissionLobbyEquipmentUIHandler : MissionGauntletClassLoadout

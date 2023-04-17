@@ -4,7 +4,7 @@ using System.Reflection;
 /// <summary>
 /// Provides helper methods for reflection to use only when is no other choice.
 /// </summary>
-namespace CNMultiplayer_Client.Helpers
+namespace CNMultiplayer.Helpers
 {
     internal static class ReflectionHelper
     {

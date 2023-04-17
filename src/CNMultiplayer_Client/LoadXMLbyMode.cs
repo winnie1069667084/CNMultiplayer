@@ -5,7 +5,7 @@ using TaleWorlds.ModuleManager;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
 
-namespace CNMultiplayer_Client
+namespace CNMultiplayer
 {
     internal class LoadXMLbyMode
     {

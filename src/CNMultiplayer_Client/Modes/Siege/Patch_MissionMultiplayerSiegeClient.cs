@@ -1,5 +1,5 @@
 ﻿#if CLIENT
-using CNMultiplayer_Client.Modes.Siege;
+using CNMultiplayer.Modes.Siege;
 using HarmonyLib;
 using NetworkMessages.FromServer;
 using System;

@@ -7,7 +7,7 @@
     <ProjectGuid>{2FEA3489-A7B8-42B6-87C7-D7385C8EA7E6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CNMultiplayer_Client</RootNamespace>
+    <RootNamespace>CNMultiplayer</RootNamespace>
     <AssemblyName>CNMultiplayer_Client</AssemblyName>
     <ModuleName>CNMultiplayer</ModuleName>
     <MB_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount %26 Blade II Bannerlord</MB_PATH>
@@ -30,12 +30,13 @@
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <DefineConstants>TRACE;CLIENT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x64</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -83,6 +84,7 @@
   <ItemGroup>
     <Compile Include="CNMSubModule.cs" />
     <Compile Include="CNM_MissionLobbyEquipmentUIHandler.cs" />
+    <Compile Include="Common\CNMSpawningBehaviorBase.cs" />
     <Compile Include="Helpers\ReflectionHelper.cs" />
     <Compile Include="LoadXMLbyMode.cs" />
     <Compile Include="Modes\Siege\CNMSiegeGameMode.cs" />

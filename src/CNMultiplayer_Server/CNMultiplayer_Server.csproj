@@ -7,7 +7,7 @@
     <ProjectGuid>{51B99242-CBB6-4BD5-B2DC-7371B3D3FDA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CNMultiplayer_Server</RootNamespace>
+    <RootNamespace>CNMultiplayer</RootNamespace>
     <AssemblyName>CNMultiplayer_Server</AssemblyName>
     <ModuleName>CNMultiplayer</ModuleName>
     <MB_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount %26 Blade II Bannerlord</MB_PATH>
@@ -31,12 +31,13 @@
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <DefineConstants>TRACE;SERVER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x64</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">

@@ -7,10 +7,10 @@ using Newtonsoft.Json;
 using System.IO;
 using TaleWorlds.Core;
 using TaleWorlds.ObjectSystem;
-using CNMultiplayer_Server.Modes.Siege;
-using CNMultiplayer_Server.Common;
+using CNMultiplayer.Modes.Siege;
+using CNMultiplayer.Common;
 
-namespace CNMultiplayer_Server
+namespace CNMultiplayer
 {
     public class CNMSubModule : MBSubModuleBase
     {

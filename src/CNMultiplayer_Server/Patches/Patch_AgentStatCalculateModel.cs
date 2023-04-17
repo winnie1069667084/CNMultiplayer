@@ -6,8 +6,7 @@ using TaleWorlds.MountAndBlade;
 
 namespace HarmonyPatches
 {
-    //[HarmonyPatch(typeof(AgentStatCalculateModel), "SetAiRelatedProperties")]//强化近战AI（仅限攻城模式）
-    /*
+    /*[HarmonyPatch(typeof(AgentStatCalculateModel), "SetAiRelatedProperties")]//强化近战AI（仅限攻城模式）
     internal class Patch_SetAiRelatedProperties//变态AI
     {
         public static bool Prefix(Agent agent, ref AgentDrivenProperties agentDrivenProperties, WeaponComponentData equippedItem, WeaponComponentData secondaryItem, AgentStatCalculateModel __instance)

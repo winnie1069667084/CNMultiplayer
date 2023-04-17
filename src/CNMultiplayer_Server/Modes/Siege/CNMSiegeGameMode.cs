@@ -7,7 +7,7 @@ using TaleWorlds.MountAndBlade.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
 #endif
 
-namespace CNMultiplayer_Server.Modes.Siege
+namespace CNMultiplayer.Modes.Siege
 {
     #if CLIENT
     [ViewCreatorModule] // Exposes methods with ViewMethod attribute.

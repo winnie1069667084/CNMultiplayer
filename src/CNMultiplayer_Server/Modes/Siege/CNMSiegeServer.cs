@@ -9,9 +9,8 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.MissionRepresentatives;
 using TaleWorlds.MountAndBlade.Objects;
 using TaleWorlds.ObjectSystem;
-using static TaleWorlds.MountAndBlade.MovementOrder;
 
-namespace CNMultiplayer_Server.Modes.Siege
+namespace CNMultiplayer.Modes.Siege
 {
     public class CNMSiegeServer : MissionMultiplayerGameModeBase, IAnalyticsFlagInfo
     {

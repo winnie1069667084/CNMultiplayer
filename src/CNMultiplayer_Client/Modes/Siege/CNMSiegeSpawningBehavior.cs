@@ -5,7 +5,7 @@ using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
 
-namespace CNMultiplayer_Client.Modes.Siege
+namespace CNMultiplayer.Modes.Siege
 {
     public class CNMSiegeSpawningBehavior : SpawningBehaviorBase
     {

@@ -10,7 +10,7 @@ using TaleWorlds.MountAndBlade.MissionRepresentatives;
 using TaleWorlds.MountAndBlade.Objects;
 using TaleWorlds.ObjectSystem;
 
-namespace CNMultiplayer_Client.Modes.Siege
+namespace CNMultiplayer.Modes.Siege
 {
     public class CNMSiegeServer : MissionMultiplayerGameModeBase, IAnalyticsFlagInfo
     {
