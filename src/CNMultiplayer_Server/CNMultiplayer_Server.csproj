@@ -106,15 +106,12 @@
     <Compile Include="Patches\ChatCommands\Commands\ChangeMapFacs.cs" />
     <Compile Include="Patches\ChatCommands\Commands\ChangeMission.cs" />
     <Compile Include="Patches\ChatCommands\Commands\Command.cs" />
-    <Compile Include="Patches\ChatCommands\Commands\Credits.cs" />
-    <Compile Include="Patches\ChatCommands\Commands\Equip.cs" />
     <Compile Include="Patches\ChatCommands\Commands\Factions.cs" />
     <Compile Include="Patches\ChatCommands\Commands\FadeOut.cs" />
     <Compile Include="Patches\ChatCommands\Commands\GodMode.cs" />
     <Compile Include="Patches\ChatCommands\Commands\Gold.cs" />
     <Compile Include="Patches\ChatCommands\Commands\Heal.cs" />
     <Compile Include="Patches\ChatCommands\Commands\HealAll.cs" />
-    <Compile Include="Patches\ChatCommands\Commands\HealMe.cs" />
     <Compile Include="Patches\ChatCommands\Commands\Help.cs" />
     <Compile Include="Patches\ChatCommands\Commands\id.cs" />
     <Compile Include="Patches\ChatCommands\Commands\Kick.cs" />
