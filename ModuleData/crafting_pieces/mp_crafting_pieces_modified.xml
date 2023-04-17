@@ -455,4 +455,27 @@
       <Flag name="BonusAgainstShield" />
     </Flags>
   </CraftingPiece>
+  
+  <CraftingPiece id="mp_light_javelin_blade"
+                 name="{=!}Mp Light Javelin Blade"
+                 tier="2"
+                 piece_type="Blade"
+                 mesh="spear_blade_9"
+                 length="23.328"
+                 weight="0.45"
+                 excluded_item_usage_features="swing">
+    <BladeData stack_amount="5"
+               physics_material="wood_weapon"
+               body_name="bo_spear_b"
+               holster_mesh="throwing_spear_quiver_3_1"
+               holster_body_name="bo_throwing_spear_quiver_3_1">
+      <Thrust damage_type="Pierce"
+              damage_factor="1.13" />
+    </BladeData>
+    <Flags>
+      <Flag name="CanBePickedUpFromCorpse"
+            type="ItemFlags" />
+     
+    </Flags>
+  </CraftingPiece>
 </CraftingPieces>
