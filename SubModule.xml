@@ -26,6 +26,14 @@
 				<Tag key="DedicatedServerType" value="custom" />
 			</Tags>
     	</SubModule>
+		<SubModule>
+			<Name value="ServerPatches" />
+			<DLLName value="ServerPatches.dll" />
+			<SubModuleClassType value="ServerPatches.ServerPatches" />
+			<Tags>
+				<Tag key="DedicatedServerType" value="custom" />
+			</Tags>
+		</SubModule>
     </SubModules>
   	<Xmls>
 		<XmlNode>
