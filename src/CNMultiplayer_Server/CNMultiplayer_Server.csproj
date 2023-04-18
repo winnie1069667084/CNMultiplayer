@@ -35,6 +35,10 @@
     <EmbeddedResource Remove="Patches\ServerPatches\**" />
     <None Remove="Patches\ServerPatches\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Patches\Patch_MultiplayerWarmupComponent.cs" />
+    <Compile Remove="Patches\Patch_SpawningBehaviorBase.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.1.3.16165" />
