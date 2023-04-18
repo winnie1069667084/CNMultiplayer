@@ -9,6 +9,7 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.MissionRepresentatives;
 using TaleWorlds.MountAndBlade.Objects;
 using TaleWorlds.ObjectSystem;
+using MathF = TaleWorlds.Library.MathF;
 
 namespace CNMultiplayer.Modes.Siege
 {
@@ -396,7 +397,7 @@ namespace CNMultiplayer.Modes.Siege
             if (_dtSumCheckMorales >= MoraleTickTimeInSeconds)
             {
                 _dtSumCheckMorales -= MoraleTickTimeInSeconds;
-                int attackerMorale = MathF.Max(_morales[(int)BattleSideEnum.Attacker] + GetMoraleGain(BattleSideEnum.Attacker), 0);
+                int attackerMorale = Math.Max(_morales[(int)BattleSideEnum.Attacker] + GetMoraleGain(BattleSideEnum.Attacker), 0);
                 int defenderMorale = MBMath.ClampInt(_morales[(int)BattleSideEnum.Defender] + GetMoraleGain(BattleSideEnum.Defender), 0, StartingMorale);
                 GameNetwork.BeginBroadcastModuleEvent();
                 GameNetwork.WriteMessage(new SiegeMoraleChangeMessage(attackerMorale, defenderMorale, _capturePointRemainingMoraleGains));
