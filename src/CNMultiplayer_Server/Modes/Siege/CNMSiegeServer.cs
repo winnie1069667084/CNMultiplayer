@@ -415,12 +415,12 @@ namespace CNMultiplayer.Modes.Siege
 
         public override Team GetWinnerTeam()
         {
-            Team winnerteam = null;
+            Team? winnerteam = null;
             if (_morales[(int)BattleSideEnum.Attacker] <= 0 && _morales[(int)BattleSideEnum.Defender] > 0)
                 winnerteam = Mission.Teams.Defender;
             else if (_morales[(int)BattleSideEnum.Defender] <= 0 && _morales[(int)BattleSideEnum.Attacker] > 0)
                 winnerteam = Mission.Teams.Attacker;
-            winnerteam = winnerteam ?? Mission.Teams.Defender;
+            winnerteam ??= Mission.Teams.Defender;
             _missionScoreboardComponent.ChangeTeamScore(winnerteam, 1);
             return winnerteam;
         }

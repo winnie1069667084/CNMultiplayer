@@ -4,10 +4,11 @@ using System.Linq;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
+using CNMultiplayer.Common;
 
 namespace CNMultiplayer.Modes.Siege
 {
-    public class CNMSiegeSpawningBehavior : SpawningBehaviorBase
+    internal class CNMSiegeSpawningBehavior : CNMSpawningBehaviorBase
     {
         public override void Initialize(SpawnComponent spawnComponent)
         {
@@ -23,9 +24,10 @@ namespace CNMultiplayer.Modes.Siege
 
         public override void OnTick(float dt)
         {
-            if (IsSpawningEnabled && _spawnCheckTimer.Check(base.Mission.CurrentTime))
+            if (IsSpawningEnabled && _spawnCheckTimer.Check(Mission.CurrentTime))
             {
                 SpawnAgents();
+                SpawnBotAgents();
             }
             base.OnTick(dt);
         }
@@ -75,52 +77,16 @@ namespace CNMultiplayer.Modes.Siege
                 AgentBuildData agentBuildData = new AgentBuildData(heroCharacter).MissionPeer(component).Equipment(equipment).Team(component.Team)
                     .TroopOrigin(new BasicBattleAgentOrigin(heroCharacter))
                     .IsFemale(component.Peer.IsFemale)
-                    .BodyProperties(GetBodyProperties(component, (component.Team == base.Mission.AttackerTeam) ? @object : object2))
+                    .BodyProperties(GetBodyProperties(component, (component.Team == Mission.AttackerTeam) ? @object : object2))
                     .VisualsIndex(0)
-                    .ClothingColor1((component.Team == base.Mission.AttackerTeam) ? basicCultureObject.Color : basicCultureObject.ClothAlternativeColor)
-                    .ClothingColor2((component.Team == base.Mission.AttackerTeam) ? basicCultureObject.Color2 : basicCultureObject.ClothAlternativeColor2);
+                    .ClothingColor1((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color : basicCultureObject.ClothAlternativeColor)
+                    .ClothingColor2((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color2 : basicCultureObject.ClothAlternativeColor2);
                 if (GameMode.ShouldSpawnVisualsForServer(networkPeer))
                 {
-                    base.AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(component, agentBuildData, component.SelectedTroopIndex);
+                    AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(component, agentBuildData, component.SelectedTroopIndex);
                 }
 
                 GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData);
-            }
-
-            if (base.Mission.AttackerTeam != null)
-            {
-                int num = 0;
-                foreach (Agent activeAgent in base.Mission.AttackerTeam.ActiveAgents)
-                {
-                    if (activeAgent.Character != null && activeAgent.MissionPeer == null)
-                    {
-                        num++;
-                    }
-                }
-
-                if (num < MultiplayerOptions.OptionType.NumberOfBotsTeam1.GetIntValue())
-                {
-                    SpawnBot(base.Mission.AttackerTeam, @object);
-                }
-            }
-
-            if (base.Mission.DefenderTeam == null)
-            {
-                return;
-            }
-
-            int num2 = 0;
-            foreach (Agent activeAgent2 in base.Mission.DefenderTeam.ActiveAgents)
-            {
-                if (activeAgent2.Character != null && activeAgent2.MissionPeer == null)
-                {
-                    num2++;
-                }
-            }
-
-            if (num2 < MultiplayerOptions.OptionType.NumberOfBotsTeam2.GetIntValue())
-            {
-                SpawnBot(base.Mission.DefenderTeam, object2);
             }
         }
 
@@ -159,8 +125,7 @@ namespace CNMultiplayer.Modes.Siege
 
         private new void OnAllAgentsFromPeerSpawnedFromVisuals(MissionPeer peer)
         {
-            bool flag = peer.Team == base.Mission.AttackerTeam;
-            _ = base.Mission.DefenderTeam;
+            bool flag = peer.Team == Mission.AttackerTeam;
             MultiplayerClassDivisions.MPHeroClass mPHeroClass = MultiplayerClassDivisions.GetMPHeroClasses(MBObjectManager.Instance.GetObject<BasicCultureObject>(flag ? MultiplayerOptions.OptionType.CultureTeam1.GetStrValue() : MultiplayerOptions.OptionType.CultureTeam2.GetStrValue())).ElementAt(peer.SelectedTroopIndex);
             GameMode.ChangeCurrentGoldForPeer(peer, GameMode.GetCurrentGoldForPeer(peer) - mPHeroClass.TroopCasualCost);
         }
@@ -169,7 +134,7 @@ namespace CNMultiplayer.Modes.Siege
         {
             bool flag = false;
             int Sum = GetTroopTypeCountForTeam(component.Team)[0];
-            int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
+            //int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
             int Ranged = GetTroopTypeCountForTeam(component.Team)[2];
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];

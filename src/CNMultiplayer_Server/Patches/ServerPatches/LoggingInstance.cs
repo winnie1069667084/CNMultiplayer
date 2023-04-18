@@ -15,7 +15,7 @@ namespace ServerPatches
         private LogLevel logLevel;
 
         // Probably needed for thread safety
-        Mutex logLock = new Mutex();
+        readonly Mutex logLock = new Mutex();
 
         public enum LogLevel
         {
@@ -89,7 +89,7 @@ namespace ServerPatches
 
         private string CreateMessage(string message, LogLevel level)
         {
-            return $"[{DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff")}] - " + level.ToString() + " - " + message + "\n";
+            return $"[{DateTime.Now:MM/dd/yyyy HH:mm:ss.fff}] - " + level.ToString() + " - " + message + "\n";
         }
     }
 }

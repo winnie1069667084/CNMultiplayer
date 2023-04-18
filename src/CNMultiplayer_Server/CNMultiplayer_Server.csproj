@@ -16,10 +16,12 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);SERVER</DefineConstants>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants);SERVER</DefineConstants>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
@@ -28,6 +30,11 @@
   <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
     <Error Text="Environment variable MB_SERVER_PATH should be set to your Bannerlord server installation path" Condition="'$(MB_SERVER_PATH)' == ''" />
   </Target>
+  <ItemGroup>
+    <Compile Remove="Patches\ServerPatches\**" />
+    <EmbeddedResource Remove="Patches\ServerPatches\**" />
+    <None Remove="Patches\ServerPatches\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.1.3.16165" />

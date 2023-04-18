@@ -1,6 +1,7 @@
 ﻿using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
+using CNMultiplayer.Modes.Warmup;
 
 #if CLIENT
 using TaleWorlds.MountAndBlade.View.MissionViews;
@@ -64,7 +65,7 @@ namespace CNMultiplayer.Modes.Siege
                 MissionLobbyComponent.CreateBehavior(),
                 new CNMSiegeServer(),
                 new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()),
-                new MultiplayerWarmupComponent(),
+                new CNMWarmupComponent(() => (new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior())),
                 new MissionMultiplayerSiegeClient(),
                 new MultiplayerTimerComponent(),
                 new MultiplayerMissionAgentVisualSpawnComponent(),
@@ -88,7 +89,7 @@ namespace CNMultiplayer.Modes.Siege
             : new MissionBehavior[] // Client side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),
-                new MultiplayerWarmupComponent(),
+                new CNMWarmupComponent(() => (new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior())),
                 new MissionMultiplayerSiegeClient(),
                 new MultiplayerAchievementComponent(),
                 new MultiplayerTimerComponent(),

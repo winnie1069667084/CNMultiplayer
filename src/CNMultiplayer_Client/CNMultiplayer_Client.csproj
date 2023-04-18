@@ -16,10 +16,12 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);CLIENT</DefineConstants>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants);CLIENT</DefineConstants>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
