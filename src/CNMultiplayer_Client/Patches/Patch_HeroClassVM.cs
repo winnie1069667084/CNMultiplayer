@@ -1,8 +1,8 @@
-﻿using TaleWorlds.Core;
+﻿using HarmonyLib;
+using NetworkMessages.FromClient;
+using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
-using HarmonyLib;
-using NetworkMessages.FromClient;
 
 namespace HarmonyPatches
 {

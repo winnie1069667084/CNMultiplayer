@@ -49,7 +49,7 @@ namespace ChatCommands.Commands
                 return true;
             }
 
-            if(targetPeer.ControlledAgent != null)
+            if (targetPeer.ControlledAgent != null)
             {
                 targetPeer.ControlledAgent.FadeOut(false, false);
             }

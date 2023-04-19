@@ -10,7 +10,7 @@ namespace CNMultiplayer.Modes.Warmup
 {
     internal class CNMWarmupSpawningBehavior : CNMSpawningBehaviorBase
     {
-        public CNMWarmupSpawningBehavior() 
+        public CNMWarmupSpawningBehavior()
         {
             IsSpawningEnabled = true;
         }

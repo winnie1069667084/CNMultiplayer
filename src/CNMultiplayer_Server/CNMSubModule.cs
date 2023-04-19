@@ -1,14 +1,14 @@
-﻿using System;
-using TaleWorlds.MountAndBlade;
-using TaleWorlds.Library;
+﻿using ChatCommands;
+using CNMultiplayer.Common;
+using CNMultiplayer.Modes.Siege;
 using HarmonyLib;
-using ChatCommands;
 using Newtonsoft.Json;
+using System;
 using System.IO;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
+using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
-using CNMultiplayer.Modes.Siege;
-using CNMultiplayer.Common;
 
 namespace CNMultiplayer
 {
@@ -20,7 +20,7 @@ namespace CNMultiplayer
             string configPath = Path.Combine(basePath, "chatCommands.json");
             if (!File.Exists(configPath))
             {
-                Config config = new Config{ AdminPassword = ChatCommands.Helpers.RandomString(6) };
+                Config config = new Config { AdminPassword = ChatCommands.Helpers.RandomString(6) };
                 ConfigManager.SetConfig(config);
                 string json = JsonConvert.SerializeObject(config);
                 File.WriteAllText(configPath, json);

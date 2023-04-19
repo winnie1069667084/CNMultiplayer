@@ -35,15 +35,18 @@ namespace ChatCommands.Commands
             string[] banlist = BanManager.BanList();
             string username = string.Join(" ", args);
             int index = -1;
-            for (int i = 0; i < banlist.Length; i++) {
+            for (int i = 0; i < banlist.Length; i++)
+            {
                 string ban = banlist[i];
-                if (ban.Contains(username)) {
+                if (ban.Contains(username))
+                {
                     index = i;
                     break;
                 }
             }
 
-            if (index == -1) {
+            if (index == -1)
+            {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
                 GameNetwork.WriteMessage(new ServerMessage("Username not found"));
                 GameNetwork.EndModuleEventAsServer();
@@ -53,7 +56,7 @@ namespace ChatCommands.Commands
             BanManager.UpdateList(newBanlist);
 
             GameNetwork.BeginModuleEventAsServer(networkPeer);
-            GameNetwork.WriteMessage(new ServerMessage("User "+ username + " is unbanned."));
+            GameNetwork.WriteMessage(new ServerMessage("User " + username + " is unbanned."));
             GameNetwork.EndModuleEventAsServer();
 
             return true;

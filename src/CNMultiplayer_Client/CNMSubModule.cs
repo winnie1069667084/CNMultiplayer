@@ -1,7 +1,7 @@
-﻿using HarmonyLib;
+﻿using CNMultiplayer.Modes.Siege;
+using HarmonyLib;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
-using CNMultiplayer.Modes.Siege;
 
 namespace CNMultiplayer
 {

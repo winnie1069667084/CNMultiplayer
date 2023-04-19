@@ -23,14 +23,16 @@ namespace ChatCommands.Commands
 
         public bool Execute(NetworkCommunicator networkPeer, string[] args)
         {
-            if (args.Length == 0 || args.Length > 1) {
+            if (args.Length == 0 || args.Length > 1)
+            {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
                 GameNetwork.WriteMessage(new ServerMessage("Please only provide a password. Usage: !login <password>"));
                 GameNetwork.EndModuleEventAsServer();
             }
             String password = args[0];
             Config config = ConfigManager.GetConfig();
-            if (!password.Equals(config.AdminPassword)) {
+            if (!password.Equals(config.AdminPassword))
+            {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
                 GameNetwork.WriteMessage(new ServerMessage("Given password is wrong."));
                 GameNetwork.EndModuleEventAsServer();

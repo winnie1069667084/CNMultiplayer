@@ -1,10 +1,10 @@
-﻿using NetworkMessages.FromServer;
+﻿using CNMultiplayer.Common;
+using NetworkMessages.FromServer;
 using System.Collections.Generic;
 using System.Linq;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
-using CNMultiplayer.Common;
 
 namespace CNMultiplayer.Modes.Siege
 {

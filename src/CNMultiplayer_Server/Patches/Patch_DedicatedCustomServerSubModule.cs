@@ -50,7 +50,7 @@ namespace HarmonyPatches
             {
                 if (isRandom || randomint < 0)
                 {
-                    randomint = new Random().Next(1000*____automatedMapPool.Count, int.MaxValue);
+                    randomint = new Random().Next(1000 * ____automatedMapPool.Count, int.MaxValue);
                     isRandom = false;
                 }
                 int cycle = randomint % ____automatedMapPool.Count;

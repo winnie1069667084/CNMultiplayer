@@ -29,10 +29,10 @@ namespace ChatCommands.Commands
         {
             List<string> availableFactions = AdminPanel.Instance.GetAllFactions();
 
-            if(args.Length > 0)
+            if (args.Length > 0)
             {
-                Tuple<bool,string> found = AdminPanel.Instance.FindSingleFaction(args[0]);
-                if(found.Item1)
+                Tuple<bool, string> found = AdminPanel.Instance.FindSingleFaction(args[0]);
+                if (found.Item1)
                 {
                     GameNetwork.BeginModuleEventAsServer(networkPeer);
                     GameNetwork.WriteMessage(new ServerMessage(found.Item2));
@@ -44,7 +44,7 @@ namespace ChatCommands.Commands
                     GameNetwork.WriteMessage(new ServerMessage("No faction found"));
                     GameNetwork.EndModuleEventAsServer();
                 }
-                
+
             }
 
             GameNetwork.BeginModuleEventAsServer(networkPeer);
@@ -65,7 +65,7 @@ namespace ChatCommands.Commands
             MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.CultureTeam2).GetValue(out team2Faction);
 
             GameNetwork.BeginModuleEventAsServer(networkPeer);
-            GameNetwork.WriteMessage(new ServerMessage("Current Factions: " + team1Faction +" "+team2Faction));
+            GameNetwork.WriteMessage(new ServerMessage("Current Factions: " + team1Faction + " " + team2Faction));
             GameNetwork.EndModuleEventAsServer();
 
             return true;

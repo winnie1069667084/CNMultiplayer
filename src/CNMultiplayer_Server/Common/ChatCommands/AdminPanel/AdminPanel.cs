@@ -1,11 +1,11 @@
-﻿using System;
+﻿using NetworkMessages.FromServer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using TaleWorlds.MountAndBlade.DedicatedCustomServer;
-using TaleWorlds.MountAndBlade;
 using TaleWorlds.Core;
-using NetworkMessages.FromServer;
+using TaleWorlds.MountAndBlade;
+using TaleWorlds.MountAndBlade.DedicatedCustomServer;
 using TaleWorlds.MountAndBlade.Network.Messages;
 
 namespace ChatCommands
@@ -93,7 +93,7 @@ namespace ChatCommands
         {
             get
             {
-                if(instance == null)
+                if (instance == null)
                 {
                     instance = new AdminPanel();
                 }
@@ -112,7 +112,7 @@ namespace ChatCommands
         // Prevent multiple missions from being started at once
         public bool EndingCurrentMissionThenStartingNewMission = false;
 
-        string GetOptionString(MultiplayerOptions.OptionType optionType) 
+        string GetOptionString(MultiplayerOptions.OptionType optionType)
         {
             string toReturn;
             MultiplayerOptions.Instance.GetOptionFromOptionType(optionType).GetValue(out toReturn);
@@ -153,11 +153,11 @@ namespace ChatCommands
             return GetAllAvailableMaps().Where(str => str.Contains(searchString)).ToList();
         }
 
-        public Tuple<bool,string> FindSingleMap(string searchString)
+        public Tuple<bool, string> FindSingleMap(string searchString)
         {
             List<string> foundMaps = FindMaps(searchString);
 
-            if(foundMaps.Count == 1)
+            if (foundMaps.Count == 1)
             {
                 return new Tuple<bool, string>(true, foundMaps[0]);
             }
@@ -172,7 +172,7 @@ namespace ChatCommands
                     }
                 }
 
-                return new Tuple<bool,string>(false,"More than one map found matching '"+searchString+"'");
+                return new Tuple<bool, string>(false, "More than one map found matching '" + searchString + "'");
             }
             else
             {
@@ -251,15 +251,15 @@ namespace ChatCommands
         {
 
             Tuple<bool, string> gameTypeSearch = FindSingleGameType(searchString);
-            if(gameTypeSearch.Item1)
+            if (gameTypeSearch.Item1)
             {
                 return MultiplayerGameTypes.GetGameTypeInfo(gameTypeSearch.Item2).Scenes.ToList().Union(GetMapsInPool()).ToList();
             }
             return new List<string>();
         }
-        
 
-        public Tuple<bool,string> FindMapForGameType(string gameType, string searchString)
+
+        public Tuple<bool, string> FindMapForGameType(string gameType, string searchString)
         {
             List<string> foundMaps = GetMapsForGameType(gameType);
 
@@ -339,7 +339,7 @@ namespace ChatCommands
 
         public void StartMission(MissionData missionData)
         {
-            if(!EndingCurrentMissionThenStartingNewMission)
+            if (!EndingCurrentMissionThenStartingNewMission)
             {
                 if (!MissionIsRunning)
                 {
@@ -392,8 +392,8 @@ namespace ChatCommands
 
         public void SetBots(int team1, int team2)
         {
-            MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam1 ).UpdateValue(team1);
-            MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam2 ).UpdateValue(team2);
+            MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam1).UpdateValue(team1);
+            MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.NumberOfBotsTeam2).UpdateValue(team2);
         }
     }
 }

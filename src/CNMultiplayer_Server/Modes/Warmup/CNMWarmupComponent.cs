@@ -1,10 +1,9 @@
-﻿using System.Linq;
-using System;
-using System.Reflection;
-using CNMultiplayer.Common;
+﻿using CNMultiplayer.Common;
 using CNMultiplayer.Helpers;
+using System;
+using System.Linq;
+using System.Reflection;
 using TaleWorlds.MountAndBlade;
-using CNMultiplayer.Modes.Warmup;
 
 namespace CNMultiplayer.Modes.Warmup
 {

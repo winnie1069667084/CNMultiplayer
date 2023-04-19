@@ -28,9 +28,10 @@ namespace ChatCommands.Commands
             GameNetwork.WriteMessage(new ServerMessage("-==== Command List ===-"));
             GameNetwork.EndModuleEventAsServer();
 
-            foreach (string command in commands) {
+            foreach (string command in commands)
+            {
                 Command commandExecutable = CommandManager.Instance.commands[command];
-                if(commandExecutable.CanUse(networkPeer))
+                if (commandExecutable.CanUse(networkPeer))
                 {
                     GameNetwork.BeginModuleEventAsServer(networkPeer);
                     GameNetwork.WriteMessage(new ServerMessage(command + ": " + commandExecutable.Description()));

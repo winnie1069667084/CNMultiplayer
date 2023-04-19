@@ -23,13 +23,14 @@ namespace ChatCommands.Commands
 
         public bool Execute(NetworkCommunicator networkPeer, string[] args)
         {
-            if (networkPeer.ControlledAgent != null) {
+            if (networkPeer.ControlledAgent != null)
+            {
                 networkPeer.ControlledAgent.BaseHealthLimit = 2000;
                 networkPeer.ControlledAgent.HealthLimit = 2000;
                 networkPeer.ControlledAgent.Health = 2000;
                 networkPeer.ControlledAgent.SetMinimumSpeed(10);
                 networkPeer.ControlledAgent.SetMaximumSpeedLimit(10, false);
-                
+
             }
             return true;
         }

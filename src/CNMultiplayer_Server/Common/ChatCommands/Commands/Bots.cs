@@ -59,7 +59,7 @@ namespace ChatCommands.Commands
             AdminPanel.Instance.SetBots(numBotsTeam1, numBotsTeam2);
 
             GameNetwork.BeginModuleEventAsServer(networkPeer);
-            GameNetwork.WriteMessage(new ServerMessage("Team1 Bots: "+numBotsTeam1.ToString()));
+            GameNetwork.WriteMessage(new ServerMessage("Team1 Bots: " + numBotsTeam1.ToString()));
             GameNetwork.EndModuleEventAsServer();
 
             GameNetwork.BeginModuleEventAsServer(networkPeer);

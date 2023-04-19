@@ -22,10 +22,11 @@ namespace ChatCommands.Commands
         {
             return "Set gold to a player. Usage !gold <Player Name> <amount>";
         }
-       
+
         public bool Execute(NetworkCommunicator networkPeer, string[] args)
         {
-            if (args.Length < 2) {
+            if (args.Length < 2)
+            {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
                 GameNetwork.WriteMessage(new ServerMessage("Please provide a username an a amount."));
                 GameNetwork.EndModuleEventAsServer();
@@ -33,27 +34,30 @@ namespace ChatCommands.Commands
             }
 
             NetworkCommunicator targetPeer = null;
-            foreach (NetworkCommunicator peer in GameNetwork.NetworkPeers) {
-                if(peer.UserName.Contains(string.Join(" ", args.Skip(0)
+            foreach (NetworkCommunicator peer in GameNetwork.NetworkPeers)
+            {
+                if (peer.UserName.Contains(string.Join(" ", args.Skip(0)
                     .Take(args.Length - 1)
-                    .ToArray()  ))) {
+                    .ToArray())))
+                {
                     targetPeer = peer;
                     break;
                 }
             }
-            if (targetPeer == null) {
+            if (targetPeer == null)
+            {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
                 GameNetwork.WriteMessage(new ServerMessage("Target player not found"));
                 GameNetwork.EndModuleEventAsServer();
                 return true;
             }
             int goldAmount;
-            if(int.TryParse(args[1], out goldAmount))
+            if (int.TryParse(args[1], out goldAmount))
             {
                 MissionPeer mp = targetPeer.GetComponent<MissionPeer>();
                 mp.Representative.UpdateGold(goldAmount);
             }
-            
+
             return true;
         }
     }

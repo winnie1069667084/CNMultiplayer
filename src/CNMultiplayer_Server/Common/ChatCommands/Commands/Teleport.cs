@@ -51,10 +51,11 @@ namespace ChatCommands.Commands
             }
 
 
-            if (networkPeer.ControlledAgent != null && targetPeer.ControlledAgent != null) {
+            if (networkPeer.ControlledAgent != null && targetPeer.ControlledAgent != null)
+            {
                 Vec3 targetPos = targetPeer.ControlledAgent.Position;
                 targetPos.x = targetPos.x + 1;
-                networkPeer.ControlledAgent.TeleportToPosition( targetPos );
+                networkPeer.ControlledAgent.TeleportToPosition(targetPos);
             }
 
 

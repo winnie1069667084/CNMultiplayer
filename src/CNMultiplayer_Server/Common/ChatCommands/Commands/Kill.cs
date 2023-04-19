@@ -50,7 +50,8 @@ namespace ChatCommands.Commands
                 return true;
             }
 
-            if (!targetPeer.ControlledAgent.Equals(null)) {
+            if (!targetPeer.ControlledAgent.Equals(null))
+            {
                 Agent agent = targetPeer.ControlledAgent;
                 Blow blow = new Blow(agent.Index);
                 blow.DamageType = TaleWorlds.Core.DamageTypes.Pierce;

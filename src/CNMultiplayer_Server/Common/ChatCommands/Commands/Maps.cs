@@ -30,7 +30,7 @@ namespace ChatCommands.Commands
         {
             List<string> availableMaps = new List<string>();
 
-            if(args.Length == 1)
+            if (args.Length == 1)
             {
                 availableMaps = AdminPanel.Instance.GetMapsForGameType(args[0]);
             }
@@ -54,7 +54,7 @@ namespace ChatCommands.Commands
             MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.Map).GetValue(out currentMapId);
 
             GameNetwork.BeginModuleEventAsServer(networkPeer);
-            GameNetwork.WriteMessage(new ServerMessage("Current Map: "+currentMapId));
+            GameNetwork.WriteMessage(new ServerMessage("Current Map: " + currentMapId));
             GameNetwork.EndModuleEventAsServer();
 
             return true;

@@ -1,6 +1,6 @@
 ﻿using HarmonyLib;
-using TaleWorlds.MountAndBlade;
 using NetworkMessages.FromServer;
+using TaleWorlds.MountAndBlade;
 
 namespace HarmonyPatches
 {
@@ -63,7 +63,7 @@ namespace HarmonyPatches
                     i--;
                     j++;
                 }
-                while (j > i + 1 + MultiplayerTeamSelectComponent.GetAutoTeamBalanceDifference((AutoTeamBalanceLimits)MultiplayerOptions.OptionType.AutoTeamBalanceThreshold.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)) && jscore>= iscore)
+                while (j > i + 1 + MultiplayerTeamSelectComponent.GetAutoTeamBalanceDifference((AutoTeamBalanceLimits)MultiplayerOptions.OptionType.AutoTeamBalanceThreshold.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)) && jscore >= iscore)
                 {
                     MissionPeer missionPeer2 = null;
                     foreach (NetworkCommunicator networkCommunicator2 in GameNetwork.NetworkPeers)

@@ -34,11 +34,11 @@ namespace ChatCommands.Commands
                 GameNetwork.EndModuleEventAsServer();
                 return true;
             }
-             
+
             string searchString = args[0];
             Tuple<bool, string> searchResult = AdminPanel.Instance.FindSingleMap(searchString);
 
-            if(searchResult.Item1)
+            if (searchResult.Item1)
             {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
                 GameNetwork.WriteMessage(new ServerMessage("Changing map to " + searchResult.Item2));

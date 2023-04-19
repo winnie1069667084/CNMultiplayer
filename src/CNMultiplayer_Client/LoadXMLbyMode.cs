@@ -17,7 +17,7 @@ namespace CNMultiplayer
             {
                 if (name != "Native")
                     modulename = name;
-                    continue;
+                continue;
             }
             string gametype = MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
             switch (gametype)

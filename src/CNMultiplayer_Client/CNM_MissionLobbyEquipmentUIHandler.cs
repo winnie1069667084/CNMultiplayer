@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using TaleWorlds.Core;
-using TaleWorlds.MountAndBlade.GauntletUI.Mission.Multiplayer;
-using TaleWorlds.MountAndBlade.View.MissionViews.Multiplayer;
-using TaleWorlds.MountAndBlade.View;
-using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
 using TaleWorlds.MountAndBlade;
+using TaleWorlds.MountAndBlade.GauntletUI.Mission.Multiplayer;
+using TaleWorlds.MountAndBlade.View;
+using TaleWorlds.MountAndBlade.View.MissionViews.Multiplayer;
+using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
 
 namespace CNMultiplayer
 {
@@ -17,7 +17,7 @@ namespace CNMultiplayer
             // Reflection to retrieve private field _dataSource
             MultiplayerClassLoadoutVM dataSource = (MultiplayerClassLoadoutVM)typeof(MissionGauntletClassLoadout).GetField("_dataSource", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(this);
             // OnGoldUpdated is calling HeroClassVM.UpdateEnabled()
-            if(agent.Team == GameNetwork.MyPeer.GetComponent<MissionPeer>().Team && !agent.IsAIControlled)
+            if (agent.Team == GameNetwork.MyPeer.GetComponent<MissionPeer>().Team && !agent.IsAIControlled)
                 dataSource?.OnGoldUpdated();
         }
 

@@ -107,8 +107,8 @@ namespace HarmonyPatches
             agentDrivenProperties.AiDecideOnAttackContinueAction = -0.5f * (1f - num);
             agentDrivenProperties.AiDecideOnAttackingContinue = 0.1f * num;
             agentDrivenProperties.AIParryOnAttackingContinueAbility = MBMath.Lerp(0.05f, 0.95f, MBMath.ClampFloat(num * num * num, 0f, 1f));
-            agentDrivenProperties.AIDecideOnRealizeEnemyBlockingAttackAbility = 1f * MBMath.ClampFloat(num , 0f, 1f); //加强AI格挡概率
-            agentDrivenProperties.AIRealizeBlockingFromIncorrectSideAbility = 1f * MBMath.ClampFloat(num , 0f, 1f); //加强AI应对变招的防御概率
+            agentDrivenProperties.AIDecideOnRealizeEnemyBlockingAttackAbility = 1f * MBMath.ClampFloat(num, 0f, 1f); //加强AI格挡概率
+            agentDrivenProperties.AIRealizeBlockingFromIncorrectSideAbility = 1f * MBMath.ClampFloat(num, 0f, 1f); //加强AI应对变招的防御概率
             agentDrivenProperties.AiAttackingShieldDefenseChance = 0.2f + 0.3f * num;
             agentDrivenProperties.AiAttackingShieldDefenseTimer = -0.3f + 0.3f * num;
             agentDrivenProperties.AiRandomizedDefendDirectionChance = 1f - TaleWorlds.Library.MathF.Log(num * 7f + 1f, 2f) * 0.33333f;

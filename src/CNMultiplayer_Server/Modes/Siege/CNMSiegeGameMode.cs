@@ -1,7 +1,7 @@
-﻿using TaleWorlds.Core;
+﻿using CNMultiplayer.Modes.Warmup;
+using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
-using CNMultiplayer.Modes.Warmup;
 
 #if CLIENT
 using TaleWorlds.MountAndBlade.View.MissionViews;
@@ -10,9 +10,9 @@ using TaleWorlds.MountAndBlade.View;
 
 namespace CNMultiplayer.Modes.Siege
 {
-    #if CLIENT
+#if CLIENT
     [ViewCreatorModule] // Exposes methods with ViewMethod attribute.
-    #endif
+#endif
     internal class CNMSiegeGameMode : MissionBasedMultiplayerGameMode
     {
         private const string GameName = "CNMSiege";
@@ -20,7 +20,7 @@ namespace CNMultiplayer.Modes.Siege
         public CNMSiegeGameMode()
             : base(GameName)
         { }
-        #if CLIENT
+#if CLIENT
         [ViewMethod(GameName)]
         public static MissionView[] OpenCNMSiege(Mission mission)
         {
@@ -53,7 +53,7 @@ namespace CNMultiplayer.Modes.Siege
                 new SpectatorCameraView(), // None Native
             };
         }
-        #endif
+#endif
 
         public override void StartMultiplayerGame(string scene)
         {
@@ -85,7 +85,7 @@ namespace CNMultiplayer.Modes.Siege
                 new EquipmentControllerLeaveLogic(),
                 new MultiplayerPreloadHelper()
             }
-            
+
             : new MissionBehavior[] // Client side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),

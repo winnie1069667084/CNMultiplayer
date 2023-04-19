@@ -24,9 +24,9 @@ namespace ChatCommands.Commands
             return "Changes the map and the team factions. !chagemapfacs <map id> <team1 faction> <team2 faction>";
         }
 
-        bool ArgValid(Tuple<bool,string> args, NetworkCommunicator networkPeer, string messagePrefix="")
+        bool ArgValid(Tuple<bool, string> args, NetworkCommunicator networkPeer, string messagePrefix = "")
         {
-            if(!args.Item1)
+            if (!args.Item1)
             {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
                 GameNetwork.WriteMessage(new ServerMessage(messagePrefix + args.Item2));
@@ -49,14 +49,14 @@ namespace ChatCommands.Commands
 
             string mapSearchString = args[0];
             Tuple<bool, string> mapSearchResult = AdminPanel.Instance.FindSingleMap(mapSearchString);
-            if(!ArgValid(mapSearchResult,networkPeer))
+            if (!ArgValid(mapSearchResult, networkPeer))
             {
                 return true;
             }
 
             string faction1SearchString = args[1];
             Tuple<bool, string> faction1SearchResult = AdminPanel.Instance.FindSingleFaction(faction1SearchString);
-            if (!ArgValid(faction1SearchResult, networkPeer,"Faction1: "))
+            if (!ArgValid(faction1SearchResult, networkPeer, "Faction1: "))
             {
                 return true;
             }

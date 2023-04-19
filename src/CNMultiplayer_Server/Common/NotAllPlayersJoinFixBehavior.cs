@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.DedicatedCustomServer;
 using TaleWorlds.MountAndBlade.Diamond;
-using TaleWorlds.MountAndBlade;
 using TaleWorlds.PlayerServices;
 
 namespace CNMultiplayer.Common

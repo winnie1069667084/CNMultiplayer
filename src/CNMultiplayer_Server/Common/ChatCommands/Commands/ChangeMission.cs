@@ -56,7 +56,7 @@ namespace ChatCommands.Commands
             }
 
             string mapSearchString = args[1];
-            Tuple<bool, string> mapSearchResult = AdminPanel.Instance.FindMapForGameType(gameTypeSearchResult.Item2,mapSearchString);
+            Tuple<bool, string> mapSearchResult = AdminPanel.Instance.FindMapForGameType(gameTypeSearchResult.Item2, mapSearchString);
             if (!ArgValid(mapSearchResult, networkPeer))
             {
                 return true;
