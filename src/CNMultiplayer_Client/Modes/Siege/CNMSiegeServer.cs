@@ -354,7 +354,7 @@ namespace CNMultiplayer.Modes.Siege
         }
 
         public override MissionLobbyComponent.MultiplayerGameType GetMissionType()
-            => MissionLobbyComponent.MultiplayerGameType.Siege; // Helps to avoid a few crashes.
+            => MissionLobbyComponent.MultiplayerGameType.FreeForAll; // Helps to avoid a few crashes.
 
         public override bool UseRoundController() => false;
 
