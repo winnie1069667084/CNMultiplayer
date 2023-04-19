@@ -15,4 +15,13 @@ namespace HarmonyPatches
             GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
         }
     }
+
+    [HarmonyPatch(typeof(MissionCustomGameServerComponent), "OnDuelEnded")] //决斗结束后不与大厅沟通玩家分数
+    internal class Patch_OnDuelEnded
+    {
+        public static bool Prefix()
+        {
+            return false;
+        }
+    }
 }
