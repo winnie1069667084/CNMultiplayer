@@ -69,8 +69,8 @@ namespace CNMultiplayer.Modes.Captain
                 MissionLobbyComponent.CreateBehavior(),
                 new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain),
                 new MultiplayerRoundController(),
-                new SpawnComponent(new FlagDominationSpawnFrameBehavior(), new FlagDominationSpawningBehavior()),
-                new CNMWarmupComponent(() => (new FlagDominationSpawnFrameBehavior(), new FlagDominationSpawningBehavior())),
+                new SpawnComponent(new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior()),
+                new CNMWarmupComponent(() => (new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior())),
                 new MissionMultiplayerGameModeFlagDominationClient(),
                 new MultiplayerTimerComponent(),
                 new MultiplayerMissionAgentVisualSpawnComponent(),
@@ -95,7 +95,7 @@ namespace CNMultiplayer.Modes.Captain
             : new MissionBehavior[] // Client side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),
-                new CNMWarmupComponent(() => (new FlagDominationSpawnFrameBehavior(), new FlagDominationSpawningBehavior())),
+                new CNMWarmupComponent(() => (new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior())),
                 new MissionMultiplayerGameModeFlagDominationClient(),
                 new MultiplayerAchievementComponent(),
                 new MultiplayerTimerComponent(),
