@@ -2,7 +2,6 @@
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
-using System.Collections.Generic;
 
 #if CLIENT
 using TaleWorlds.MountAndBlade.View.MissionViews;
