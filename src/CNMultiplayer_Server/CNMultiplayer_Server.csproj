@@ -36,7 +36,6 @@
     <None Remove="Patches\ServerPatches\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Patches\Patch_MultiplayerWarmupComponent.cs" />
     <Compile Remove="Patches\Patch_SpawningBehaviorBase.cs" />
   </ItemGroup>
 

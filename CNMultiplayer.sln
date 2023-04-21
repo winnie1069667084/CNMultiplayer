@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{72AAAD43-BB1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNMultiplayer_Server", "src\CNMultiplayer_Server\CNMultiplayer_Server.csproj", "{E93B0D2C-49C0-4B14-B05F-C8A88EE013FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNMultiplayer_Client", "src\CNMultiplayer_Client\CNMultiplayer_Client.csproj", "{3EFAE943-4710-4D53-8AF0-41CF43982A92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNMultiplayer_Client", "src\CNMultiplayer_Client\CNMultiplayer_Client.csproj", "{3EFAE943-4710-4D53-8AF0-41CF43982A92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

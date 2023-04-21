@@ -20,7 +20,7 @@ namespace HarmonyPatches
             foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
             {
                 MissionPeer component = networkPeer.GetComponent<MissionPeer>();
-                if (((component != null) ? component.Team : null) != null && component.Team.Side != BattleSideEnum.None)
+                if ((component?.Team) != null && component.Team.Side != BattleSideEnum.None)
                     num++;
             }
             return num;
@@ -37,11 +37,11 @@ namespace HarmonyPatches
             foreach (NetworkCommunicator networkCommunicator in GameNetwork.NetworkPeers)
             {
                 MissionPeer component = networkCommunicator.GetComponent<MissionPeer>();
-                if (((component != null) ? component.Team : null) != null && component.Team.Side != BattleSideEnum.None)
+                if ((component?.Team) != null && component.Team.Side != BattleSideEnum.None)
                 {
                     array[(int)component.Team.Side] = true;
                 }
-                if (array[1] && array[0] && num >= MultiplayerOptions.OptionType.MinNumberOfPlayersForMatchStart.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions))
+                if (/*array[1] && array[0] &&*/ num >= MultiplayerOptions.OptionType.MinNumberOfPlayersForMatchStart.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions))
                 {
                     __result = true;
                     return false;

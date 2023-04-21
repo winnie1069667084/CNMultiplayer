@@ -1,6 +1,7 @@
 ﻿using ChatCommands;
 using CNMultiplayer.Common;
 using CNMultiplayer.Modes.Siege;
+using CNMultiplayer.Modes.Captain;
 using HarmonyLib;
 using Newtonsoft.Json;
 using System;
@@ -42,6 +43,7 @@ namespace CNMultiplayer
             Debug.Print("** CHAT COMMANDS BY MENTALROB LOADED **", 0, Debug.DebugColor.Green);
             _ = new ChatCommands.CommandManager();
             Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
+            Module.CurrentModule.AddMultiplayerGameMode(new CNMCaptainGameMode());
         }
 
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)

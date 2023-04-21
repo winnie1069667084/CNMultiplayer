@@ -22,5 +22,7 @@
   <string id="str_multiplayer_scene_name.crpg_siege_talmberg" text="{=20000020}Talmberg" />
   <string id="str_multiplayer_scene_name.crpg_siege_silverskalitz" text="{=20000021}Silverskalitz" />
   <string id="str_multiplayer_official_game_type_name.CNMSiege" text="{=cnmsiegemultiplayergametype}CNMSiege" />
+  <string id="str_multiplayer_official_game_type_name.CNMCaptain" text="{=cnmcaptainasgame}CNMCaptain" />
   <string id="str_multiplayer_official_game_type_explainer.CNMSiege" text="{=cnmsiegeexplainer}·   Use various siege engines to attack or defend control points{newline}·   Spawn points advance as control points are captured{newline}·   Successfully assault and hold the keep flag or repel the enemy to win" />
+  <string id="str_multiplayer_official_game_type_explainer.CNMCaptain" text="{=cnmcaptainexplainer}·   Lead your own detachment of troops{newline}·   Hold control points on the map to deplete enemy morale{newline}·   Kill the entire enemy team or exhaust their morale to win" />
 </strings>
