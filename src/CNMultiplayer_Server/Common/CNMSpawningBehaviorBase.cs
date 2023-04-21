@@ -198,8 +198,10 @@ namespace CNMultiplayer.Common
                         Mat3 rotation = matrixFrame.rotation;
                         rotation.MakeUnit();
                         bool flag3 = !basicCharacterObject.Equipment[EquipmentIndex.ArmorItemEndSlot].IsEmpty;
-                        int num3 = TaleWorlds.Library.MathF.Min(num, 1);
-                        MatrixFrame matrixFrame2 = Formation.GetFormationFramesForBeforeFormationCreation((float)num3 * Formation.GetDefaultUnitDiameter(flag3) + (float)(num3 - 1) * Formation.GetDefaultMinimumInterval(flag3), num, flag3, new WorldPosition(Mission.Current.Scene, matrixFrame.origin), rotation)[num2 - 1].ToGroundMatrixFrame(); //大量AI导致崩溃的地方
+                        int num3 = TaleWorlds.Library.MathF.Min(num, 10);
+                        //修复Captain大量AI导致的崩溃
+                        var formationFrames = Formation.GetFormationFramesForBeforeFormationCreation((float)num3 * Formation.GetDefaultUnitDiameter(flag3) + (float)(num3 - 1) * Formation.GetDefaultMinimumInterval(flag3), num, flag3, new WorldPosition(Mission.Current.Scene, matrixFrame.origin), rotation);
+                        MatrixFrame matrixFrame2 = formationFrames[(num2 - 1) % (formationFrames.Count - 1)].ToGroundMatrixFrame();
                         agentBuildData.InitialPosition(in matrixFrame2.origin);
                         value = matrixFrame2.rotation.f.AsVec2.Normalized();
                         agentBuildData.InitialDirection(in value);

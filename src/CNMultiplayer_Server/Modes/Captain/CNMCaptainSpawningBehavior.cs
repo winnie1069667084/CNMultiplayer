@@ -1,16 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using NetworkMessages.FromServer;
-using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.LinQuick;
-using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
+using CNMultiplayer.Common;
 
-namespace CNMultiplayer.Modes.Captain
+namespace TaleWorlds.MountAndBlade
 {
-    public class CNMCaptainSpawningBehavior : SpawningBehaviorBase
+    internal class CNMCaptainSpawningBehavior : CNMSpawningBehaviorBase
     {
         private const int EnforcedSpawnTimeInSeconds = 15;
 
@@ -452,6 +451,6 @@ namespace CNMultiplayer.Modes.Captain
             }
             GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData, totalCount, useCosmetics: false);
         }
+
     }
 }
-
