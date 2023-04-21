@@ -93,37 +93,7 @@
                        slot="Item3"
                        item="mp_western_short_spear" />
       </Perk>
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch"
-            name="{=DYUfnBHb}Farmer"
-            description="{=HBqsJ7a5}You took a random tool from your farm into war. You are used to handling animals.{newline} {newline}Grants Random Farming Tool{newline} {newline}+50% Damage to Mounts"
-            icon="PerkSickle"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.50" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
-          <Group>
-            <Item slot="Item3"
-                  item="mp_western_pitchfork_metal" />
-          </Group>
-          <Group>
-            <Item slot="Item3"
-                  item="mp_western_pitchfork_wood" />
-          </Group>
-          <Group>
-            <Item slot="Item3"
-                  item="mp_western_scythe" />
-          </Group>
-          <Group>
-            <Item slot="Item3"
-                  item="mp_western_2h_sickle" />
-          </Group>
-          <Group>
-            <Item slot="Item3"
-                  item="mp_western_2h_shovel" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=DYUfnBHb}Farmer"
             description="{=HBqsJ7a5}You took a random tool from your farm into war. You are used to handling animals.{newline} {newline}Grants Random Farming Tool{newline} {newline}+50% Damage to Mounts"
             icon="PerkSickle"
@@ -134,16 +104,7 @@
                        slot="Item1"
                        item="mp_throwing_stone" />
       </Perk>
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch"
-            name="{=urUwa4bf}Looter"
-            description="{=UkukckV4}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+10 Gold per Kill"
-            icon="PerkGold"
-            perk_list="2">
-        <Effect type="GoldGainOnKill"
-                value="10"
-                is_disabled_in_warmup="true" />
-      </Perk>
-      <Perk game_mode="Captain, Duel"
+      <Perk game_mode="all"
             name="{=7ZHPR7pJ}Looted Shields"
             description="{=ebGVm8Ve}Grants a random shield of varying grades."
             icon="PerkShieldUpgrade"
@@ -180,23 +141,7 @@
                        slot="Item0"
                        item="mp_vlandian_polearm" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=8zwWEfSs}Medium Infantry"
-            description="{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear"
-            hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkLargerShields"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_long_sword" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_western_kite_shield" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_western_spear" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=8zwWEfSs}Medium Infantry"
             description="{=cap00004}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Spear{newline}Grants Shield{newline}+5 Additional Troops"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -243,17 +188,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=0TtCRwmr}Athletic"
-            description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=0TtCRwmr}Athletic"
             description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
             icon="PerkFleetFooted"
@@ -416,22 +351,7 @@
                        slot="Item3"
                        item="mp_western_long_spear" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=PNZmPprx}Two Handed Sword"
-            description="{=3J2Py6eg}Two Handed Sword, effective at dueling and thrusting, two handed.{newline} {newline}Grants Two Handed Sword{newline}+5% movement speed"
-            hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
-            troop_idle_anim="act_idle_2h_1_left_stance"
-            icon="PerkTwoHandedSwords"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_noble_two_handed_sword" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=rTPnyeJ3}Shield Wall"
             description="{=EjyFIpP6}Your Shield has more durability and allow you to cover more area with your shield. You also take less damage from Piercing weapons.{newline} {newline}Grants Stronger Shield{newline}+20% Shield Area vs Ranged Weapons{newline}-30% Damage taken from Piercing Weapons"
             icon="PerkStrongerShield"
@@ -522,19 +442,7 @@
                        item="mp_vlandian_long_sword" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=dTpTyUtb}Replenished"
-            description="{=R2X605jB}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 10 Extra Bolts{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
             description="{=xRK4nurx}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 20 Extra Bolts{newline} {newline}+25% Reload Speed"
             icon="PerkWellSupplied"
@@ -674,19 +582,7 @@
                        slot="Item3"
                        item="mp_pavise_shield" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=dTpTyUtb}Replenished"
-            description="{=R2X605jB}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 10 Extra Bolts{newline} {newline}+25% Reload Speed"
-            icon="PerkWellSupplied"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_bolts_western_extra" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
             description="{=xRK4nurx}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 20 Extra Bolts{newline} {newline}+25% Reload Speed"
             icon="PerkWellSupplied"
@@ -746,22 +642,7 @@
                        item="mp_halfchain_barding" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=YnnrpaFO}Extra Chainmail"
-            description="{=XXj8htD5}Adds an extra layer of chainmail below your armor. Protects you from thrusts and missiles.{newline} {newline}+4 armor{newline}-20% Pierce damage taken"
-            icon="PerkArmorUpgrade"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.20"
-                damage_type="Pierce" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="4" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_padded_leather_shoulders"
-                       target="Player" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=YnnrpaFO}Extra Chainmail"
             description="{=XXj8htD5}Adds an extra layer of chainmail below your armor. Protects you from thrusts and missiles.{newline} {newline}+4 armor{newline}-20% Pierce damage taken"
             icon="PerkArmorUpgrade"
@@ -806,24 +687,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkCouchedHeavySpears"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.5"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
             description="{=cap00003}grants billhock{newline}speed bonus on mount +50%"
             icon="PerkPolearms"
@@ -985,58 +849,13 @@
                        slot="Item0"
                        item="mp_vlandian_heavy_lance" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch"
-            name="{=7qB0WKMW}Generous Lord"
-            description="{=mDU16Bih}You let the peasants do the dirty work and pay them for their services while you get all the glory for the kills.{newline} {newline}Allies get +20 Gold for Assists to your Kills."
-            icon="PerkGold"
-            perk_list="2">
-        <Effect type="RewardGoldOnAssist"
-                value="20"
-                is_disabled_in_warmup="true" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
             perk_list="2">
         <OnSpawnEffect type="TroopCountOnSpawn"
                        value="2.0" />
-      </Perk>
-      <Perk game_mode="Duel"
-            name="{=IHKXNP9H}Tournament Master"
-            description="{=chvOaryz}Replaces your lance with a random one of any culture."
-            icon="PerkTwoHandedLances"
-            perk_list="2">
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
-          <Group>
-            <Item slot="Item0"
-                  item="mp_vlandian_heavy_lance" />
-          </Group>
-          <Group>
-            <Item slot="Item0"
-                  item="mp_khuzait_lance_long" />
-          </Group>
-          <Group>
-            <Item slot="Item0"
-                  item="mp_khuzait_lance_heavy" />
-          </Group>
-          <Group>
-            <Item slot="Item0"
-                  item="mp_aserai_long_lance" />
-          </Group>
-          <Group>
-            <Item slot="Item0"
-                  item="mp_aserai_heavy_lance" />
-          </Group>
-          <Group>
-            <Item slot="Item0"
-                  item="mp_sturgia_long_lance" />
-          </Group>
-          <Group>
-            <Item slot="Item0"
-                  item="mp_sturgia_heavy_lance" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -1057,24 +876,7 @@
                    acceleration="1.8">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=p06HSYkq}Specialist"
-            description="{=aZIG2v6p}You are one of the best among your troops, you throw more accurately.{newline} {newline}+50% Initial Ranged Accuracy{newline}+80% Faster Ranged Accuracy Increase"
-            icon="PerkHeavierJavelins"
-            perk_list="1">
-        <Effect type="DrivenProperty"
-                value="-0.5"
-                driven_property="WeaponWorstUnsteadyAccuracyPenalty"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponBestAccuracyWaitTime"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_javelin" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=p06HSYkq}Specialist"
             description="{=aZIG2v6p}You are one of the best among your troops, you throw more accurately.{newline} {newline}+50% Initial Ranged Accuracy{newline}+80% Faster Ranged Accuracy Increase"
             icon="PerkHeavierJavelins"
@@ -1091,18 +893,7 @@
                        slot="Item0"
                        item="mp_empire_javelin_captain" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=ZxqXs36U}Strong Arm"
-            description="{=pI8Ak491}Your time spent in nature made you unnaturally strong,  your throws deal more damage.{newline} {newline}Grants Pilum{newline} {newline}+20% Throwing Damage"
-            icon="PerkPilums"
-            perk_list="1">
-        <Effect type="ThrowingWeaponDamage"
-                value="0.1" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_pilum" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ZxqXs36U}Strong Arm"
             description="{=pI8Ak491}Your time spent in nature made you unnaturally strong,  your throws deal more damage.{newline} {newline}Grants Pilum{newline} {newline}+20% Throwing Damage"
             icon="PerkPilums"
@@ -1113,21 +904,7 @@
                        slot="Item3"
                        item="mp_pilum" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=v2WKbNZo}Rapid Throws"
-            description="{=Ha8HVTck}You are able throw javelins much quicker.{newline} {newline}Grants additional Javelins{newline} {newline}+5% Missle Release Speed {newline} +10% Ready Speed"
-            icon="PerkMoreThrowingSpears"
-            perk_list="1">
-        <Effect type="ThrowingWeaponSpeed"
-                value="0.05" />
-        <Effect type="DrivenProperty"
-                value="0.1"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_javelin_extraammo" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=v2WKbNZo}Rapid Throws"
             description="{=Ha8HVTck}You are able throw javelins much quicker.{newline} {newline}Grants additional Javelins{newline} {newline}+5% Missle Release Speed {newline} +10% Ready Speed"
             icon="PerkMoreThrowingSpears"
@@ -1172,19 +949,7 @@
                        slot="Item2"
                        item="mp_empire_spatha" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=rTPnyeJ3}Shield Wall"
-            description="{=8B7pGxj4}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline}-30% Damage taken from Ranged Weapons"
-            icon="PerkStrongerShield"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.30"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_lighter_reinforced_kite_shield" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=rTPnyeJ3}Shield Wall"
             description="{=X8hLXbIc}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline} {newline}-15% Damage taken from Ranged Weapons"
             icon="PerkStrongerShield"
@@ -1285,28 +1050,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=mbIhGIcV}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}+75% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
-            icon="PerkHorseHunters"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="0.50"
-                    hit_type="Melee"
-                    damage_type="Pierce" />
-            <Effect type="MountDamage"
-                    value="0.75"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
             description="{=cap00005}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}+125% Damage to Mounts with Melee Weapons{newline}+75% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
             icon="PerkHorseHunters"
@@ -1327,15 +1071,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=DeWp2GjP}Shield Breaker"
-            description="{=pqaYbQBy}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+20% Damage to Shields"
-            icon="PerkShieldSplitterAxes"
-            perk_list="2">
-        <Effect type="ShieldDamage"
-                value="0.20" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=DeWp2GjP}Shield Breaker"
             description="{=JxDrcvDO}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+100% Damage to Shields"
             icon="PerkShieldSplitterAxes"
@@ -1406,32 +1142,8 @@
                        slot="Item2"
                        item="mp_stronger_reinforced_kite_shield" />
       </Perk>
-      <Perk game_mode="Duel"
-            name="{=o9a3hgVH}Duel Sword"
-            description="{=Rl0GV742}Grants a Two Handed Sword for dueling"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_vlandian_two_handed_sword" />
-      </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=Do4Mmbs9}Plated Armor"
-            description="{=2BpUBMJS}You improved your armor with sturdy metal plates.{newline} {newline}+10 armor{newline}-20% Cut damage taken"
-            icon="PerkArmorUpgrade"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.20"
-                damage_type="Cut" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_empire_warrior_padded_armor_shoulder"
-                       target="Player" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=Do4Mmbs9}Plated Armor"
             description="{=cap00020}You improved your armor with sturdy metal plates.{newline} {newline}+5 armor{newline}-10% Cut damage taken"
             icon="PerkArmorUpgrade"
@@ -1581,32 +1293,7 @@
                        target="Troops" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="0.25"
-                    driven_property="BipedalRangedReadySpeedMultiplier" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponWorstMobileAccuracyPenalty"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=eQLORdgE}Extra Arrows"
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
@@ -1626,32 +1313,7 @@
                        slot="Item2"
                        item="mp_arrows_barbed_strong" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=YVwl3BgB}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyBeginTime"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyEndTime"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -1764,18 +1426,7 @@
                        slot="Item2"
                        item="mp_empire_long_spatha" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=vyI2KVKM}Bullseye"
-            description="{=gcmyaxK9}You know where to hit your targets, your shots deal additional damage, especially your headshots.{newline} {newline}+5% Damage with Missiles {newline}+5% extra Damage on Headshots"
-            icon="PerkSharpshooters"
-            perk_list="2">
-        <Effect type="RangedHeadShotDamage"
-                value="0.05" />
-        <Effect type="DamageDealt"
-                value="0.05"
-                hit_type="Ranged" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=vyI2KVKM}Bullseye"
             description="{=nzHUV2oZ}You know where to hit your targets, your shots deal additional damage, especially your headshots.{newline} {newline}+15% Damage with Missiles {newline}+5% extra Damage on Headshots"
             icon="PerkSharpshooters"
@@ -1869,24 +1520,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkCouchedHeavySpears"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.5"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
             description="{=cap00006}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount{newline}grants heavy menavlion"
             icon="PerkPolearms"
@@ -1906,28 +1540,7 @@
                        slot="Item0"
                        item="mp_empire_heavy_menavlion" /> 
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=QDxixJH9}Auxiliary"
-            description="{=wv6Jpubk}You take an assisting role in combat and gain gold for every assist as reward.{newline} {newline}+20 Gold per Assist"
-            icon="PerkGold"
-            perk_list="2">
-        <Effect type="GoldGainOnAssist"
-                value="20"
-                is_disabled_in_warmup="true" />
-      </Perk>
-      <Perk game_mode="Duel"
-            name="{=JbWbiO6O}Bow and Arrows"
-            description="{=uTfm0blH}Grants Short Bow, enables to shoot from horseback."
-            icon="PerkRecurveBows"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_hunting_bow" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_steppe_mounted" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -2206,18 +1819,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Skirmish, Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch, Duel"
-            name="{=oBBE3ggU}Conscript"
-            description="{=n5d7CnPo}Your experience as Village Militia made you hardened. You take less damage.{newline} {newline}Grants Throwing Stones{newline} {newline}-15% Damage taken"
-            icon="PerkGeneral"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.15" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_throwing_stone" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=oBBE3ggU}Conscript"
             description="{=ILVb8Klx}Your experience as Village Militia made you hardened. You take less damage.{newline} {newline}Grants Throwing Stones{newline} {newline}-5% Damage taken"
             icon="PerkGeneral"
@@ -2228,25 +1830,7 @@
                        slot="Item2"
                        item="mp_throwing_stone" />
       </Perk>
-      <Perk game_mode="Skirmish"
-            name="{=urUwa4bf}Looter"
-            description="{=68e7N73f}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+20 Gold per Kill"
-            icon="PerkGold"
-            perk_list="2">
-        <Effect type="GoldGainOnKill"
-                value="20"
-                is_disabled_in_warmup="true" />
-      </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Siege, TeamDeathmatch"
-            name="{=urUwa4bf}Looter"
-            description="{=UkukckV4}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+10 Gold per Kill"
-            icon="PerkGold"
-            perk_list="2">
-        <Effect type="GoldGainOnKill"
-                value="10"
-                is_disabled_in_warmup="true" />
-      </Perk>
-      <Perk game_mode="Captain, Duel"
+      <Perk game_mode="all"
             name="{=0TtCRwmr}Athletic"
             description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
             icon="PerkFleetFooted"
@@ -2342,15 +1926,6 @@
                        slot="Item2"
                        item="mp_khuzait_heavy_sabre" />
       </Perk>
-      <Perk game_mode="Duel"
-            name="{=o9a3hgVH}Duel Sword"
-            description="{=Rl0GV742}Grants a Two Handed Sword for dueling"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_aserai_two_handed_sword" />
-      </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
@@ -2376,20 +1951,7 @@
                        slot="Item0"
                        item="mp_khuzait_long_spear" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=YeRH0SUc}Steppe Infantry"
-            description="{=pn9OIMbK}You are a fighter of the steppe, in combat you stay mobile and dangerous to open up the back of your enemies.{newline} {newline}Grants Short Spear{newline} {newline}+7% Movement Speed{newline}+5% Melee Damage"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-        <Effect type="DamageDealt"
-                value="0.05"
-                hit_type="Melee" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=YeRH0SUc}Steppe Infantry"
             description="{=a6HqLFC7}You are a fighter of the steppe, in combat you stay mobile and dangerous to open up the back of your enemies.{newline} {newline}Grants Short Spear{newline} {newline}+5% Melee Damage"
             icon="PerkFleetFooted"
@@ -2473,24 +2035,7 @@
                        target="Troops" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.25"
-                driven_property="BipedalRangedReadySpeedMultiplier" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponWorstMobileAccuracyPenalty"
-                is_ratio="true" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=eQLORdgE}Extra Arrows"
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
@@ -2511,24 +2056,7 @@
                        slot="Item1"
                        item="mp_arrows_steppe_strong" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyBeginTime"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyEndTime"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_steppe_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -2594,24 +2122,7 @@
                        item="mp_strong_recurve_bow" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyBeginTime"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyEndTime"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_steppe_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=eQLORdgE}Extra Arrows"
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
@@ -2620,24 +2131,7 @@
                        slot="Item2"
                        item="mp_arrows_steppe_extra" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.25"
-                driven_property="BipedalRangedReadySpeedMultiplier" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponWorstMobileAccuracyPenalty"
-                is_ratio="true" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -2728,23 +2222,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-		<Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-			  name="{=4O4xjMMd}Nomad Archer"
-			  description="{=tiw9b4f6}You are an experienced with the bow on a horse, your accuracy is much better.{newline} {newline}Grants Hunting Bow and Arrows{newline}-40% Movement Accuracy Penalty"
-			  icon="PerkRecurveBows"
-			  perk_list="2">
-			<Effect type="DrivenProperty"
-					value="-0.4"
-					driven_property="WeaponWorstMobileAccuracyPenalty"
-					is_ratio="true" />
-			<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						   slot="Item3"
-						   item="mp_hunting_bow" />
-			<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						   slot="Item2"
-						   item="mp_arrows_steppe_mounted" />
-		</Perk>
-		<Perk game_mode="Captain"
+		<Perk game_mode="all"
 			  name="{=4O4xjMMd}Nomad Archer"
 			  description="{=tiw9b4f6}You are an experienced with the bow on a horse, your accuracy is much better.{newline} {newline}Grants Hunting Bow and Arrows{newline}-40% Movement Accuracy Penalty"
 			  icon="PerkRecurveBows"
@@ -2763,16 +2241,7 @@
 						   slot="Item0"
 						   item="mp_khuzait_glaive" />
 		</Perk>
-		<Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-			  name="{=W4iKIM2s}Small Shield"
-			  description="{=sOARp3Dc}Grants Shield, makes blocking easier, effective against ranged units."
-			  icon="PerkHardened"
-			  perk_list="2">
-			<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						   slot="Item2"
-						   item="mp_steppe_guardian_shield" />
-		</Perk>
-		<Perk game_mode="Captain"
+		<Perk game_mode="all"
 			  name="{=W4iKIM2s}Small Shield"
 			  description="{=sOARp3Dc}Grants Shield, makes blocking easier, effective against ranged units."
 			  icon="PerkHardened"
@@ -2784,27 +2253,7 @@
 						   slot="Item0"
 						   item="mp_khuzait_glaive" />
 		</Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=ueWfi5aP}You are an expert at charging in to break defensive lines.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkLongSpear"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.5"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_cavalry_spear" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -3193,19 +2642,7 @@
                        slot="Item1"
                        item="mp_aserai_axe" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=Yjs1ySjJ}Shield and Spear"
-            description="{=YYt0iLC7}Grants Spear, effective against cavalry.{newline} Grants stronger shield."
-            icon="PerkExtraTroop"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_aserai_spear" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_emirs_oval_shield" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=cap00010}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -3217,19 +2654,7 @@
 						 item="mp_emirs_oval_shield" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=v2WKbNZo}Rapid Throws"
-            description="{=dIbTJvfA}You are able throw javelins quicker.{newline} {newline}Grants 2 additional Jereeds{newline} {newline} +10% Ready Speed"
-            icon="PerkMoreThrowingSpears"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.1"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_jereed_extra" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=v2WKbNZo}Rapid Throws"
             description="{=D1eUvgh1}You are able throw javelins quicker.{newline} {newline}Grants 5 additional Jereeds{newline}  {newline} +10% Ready Speed"
             icon="PerkMoreThrowingSpears"
@@ -3262,17 +2687,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=6CDEbd1S}Impaler"
-            description="{=vhyTjeAR}Your strong arm allows you to throw faster with much more deadly force.{newline} {newline}+5% Missle Release Speed{newline} {newline}+20% Throwing Weapon Damage"
-            icon="PerkHeavierJavelins"
-            perk_list="2">
-        <Effect type="ThrowingWeaponDamage"
-                value="0.2" />
-        <Effect type="ThrowingWeaponSpeed"
-                value="0.05" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=6CDEbd1S}Impaler"
             description="{=Kt605dRo}Your strong arm allows you to throw faster with much more deadly force.{newline} {newline}+5% Missle Release Speed{newline} {newline}+15% Throwing Weapon Damage"
             icon="PerkHeavierJavelins"
@@ -3310,17 +2725,7 @@
                        slot="Item0"
                        item="mp_aserai_strong_twohanded_axe" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=PNZmPprx}Two Handed Sword"
-            description="{=vBvDZCtw}Replaces Tabar with Two Handed Sword, effective at dueling and thrusting."
-            hero_idle_anim="act_aserai_mp_guard_idle_2hperk"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_aserai_two_handed_sword" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=8zwWEfSs}Medium Infantry"
             description="{=cap00009}Replaces the Tabar with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants axe and spear{newline}Grants Shield{newline}+5 Additional Troops"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -3384,26 +2789,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=rJFGyaBS}Moloch"
-            description="{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields"
-            icon="PerkFightingMadness"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.4"
-                    is_ratio="true" />
-            <Effect type="ShieldDamage"
-                    value="0.25" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=rJFGyaBS}Moloch"
             description="{=FK3jA1pT}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+33% Speed Bonus Damage on Foot {newline}+100% Bonus Damage on Shields"
             icon="PerkFightingMadness"
@@ -3422,16 +2808,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=du7l3z5b}Sturdy"
-            description="{=sfK8Dkso}You were born tougher than most, you are harder to kill.{newline} {newline}-20% Damage Taken from Melee Attacks."
-            icon="PerkToughness"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.2"
-                hit_type="Melee" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=du7l3z5b}Sturdy"
             description="{=oZ9KbXPI}You were born tougher than most, you are harder to kill.{newline} {newline}-15% Damage Taken from Melee Attacks."
             icon="PerkToughness"
@@ -3440,17 +2817,7 @@
                 value="-0.15"
                 hit_type="Melee" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=0TtCRwmr}Athletic"
-            description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=0TtCRwmr}Athletic"
             description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
             icon="PerkFleetFooted"
@@ -3523,32 +2890,7 @@
                        target="Troops" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="0.25"
-                    driven_property="BipedalRangedReadySpeedMultiplier" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponWorstMobileAccuracyPenalty"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=XUo9YBoQ}Pin Cushion"
             description="{=TGcbxiOD}You have been shot at so much, you have learned to mitigate ranged weapon damage to yourself.{newline} {newline}-35% Damage taken from Ranged Weapons"
             icon="PerkArmorUpgrade"
@@ -3557,24 +2899,7 @@
                 value="-0.35"
                 hit_type="Ranged" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyBeginTime"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="2.0"
-                driven_property="WeaponUnsteadyEndTime"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_barbed_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -3685,7 +3010,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=eQLORdgE}Extra Arrows"
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
@@ -3693,31 +3018,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_arrows_barbed_extra" />
-      </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyBeginTime"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyEndTime"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_barbed_strong" />
       </Perk>
       <Perk game_mode="all"
             name="{=6W3s9mVH}Fighter"
@@ -3829,24 +3129,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=GFZifSoP}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkLongSpear"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.5"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
             description="{=cap00021}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount{newline}grants heavy twohanded axe"
             icon="PerkBardiche"
@@ -3866,7 +3149,7 @@
                        slot="Item0"
                        item="mp_aserai_strong_twohanded_axe" />
       </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=maaVSxDj}You are an expert with throwing weapons on a mount, you have better accuracy.{newline} {newline}Grants Javelins{newline} {newline}-25% Movement Accuracy Penalty{newline}-25% Turning Accuracy Penalty"
             icon="PerkJavelins"
@@ -3885,23 +3168,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_aserai_twohanded_axe" />
-      </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=5f6TSkM1}Mounted Skirmish"
-            description="{=maaVSxDj}You are an expert with throwing weapons on a mount, you have better accuracy.{newline} {newline}Grants Javelins{newline} {newline}-25% Movement Accuracy Penalty{newline}-25% Turning Accuracy Penalty"
-            icon="PerkJavelins"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="-0.25"
-                driven_property="WeaponWorstMobileAccuracyPenalty"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.25"
-                driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_javelin" />
       </Perk>
       <Perk game_mode="all"
             name="{=RF7uVEGp}Bamboo Spear"
@@ -4044,16 +3310,7 @@
                        slot="Item0"
                        item="mp_sturgia_axe" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=FLBYsvxp}Long Sword"
-            description="{=tbQZitYG}Replaces Short Sword, longer and deals more damage."
-            icon="PerkLongerSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_northern_sword" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=D36uGqf8}Combined Arms"
             description="{=zNe4nkar}Replaces Short Swords, with axes, swords and some maces."
             icon="PerkBrawny"
@@ -4217,18 +3474,7 @@
                        item="mp_sturgia_old_shield_b" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=nGJvuvD3}Axe Thrower"
-            description="{=bIRS8ZSU}You are able throw axes much quicker with greater precision, throwing axes also deal extra damage to shields.{newline} {newline} Grants Throwing Axes{newline} {newline}+30% Damage to Shields"
-            icon="PerkThrowingAxes"
-            perk_list="2">
-        <Effect type="ShieldDamage"
-                value="0.30" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_throwing_axe" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=nGJvuvD3}Axe Thrower"
             description="{=bIRS8ZSU}You are able throw axes much quicker with greater precision, throwing axes also deal extra damage to shields.{newline} {newline} Grants Throwing Axes{newline} {newline}+30% Damage to Shields"
             icon="PerkThrowingAxes"
@@ -4239,21 +3485,7 @@
                        slot="Item0"
                        item="mp_sturgia_throwing_axe_captain" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=Awc23bFS}Marauder"
-            description="{=THpbhFDV}Your years of being a Marauder has given you a strong arm, you throw much faster.{newline} {newline}Grants Stronger Javelins{newline} {newline}+10% Missle Release Speed {newline}+10% Ready Speed"
-            icon="PerkMoreThrowingSpears"
-            perk_list="2">
-        <Effect type="ThrowingWeaponSpeed"
-                value="0.1" />
-        <Effect type="DrivenProperty"
-                value="0.1"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_harpoon_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=Awc23bFS}Marauder"
             description="{=THpbhFDV}Your years of being a Marauder has given you a strong arm, you throw much faster.{newline} {newline}Grants Stronger Javelins{newline} {newline}+10% Missle Release Speed {newline}+10% Ready Speed"
             icon="PerkMoreThrowingSpears"
@@ -4267,19 +3499,7 @@
                        slot="Item0"
                        item="mp_sturgia_harpoon_strong_captain" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=blqDgCtL}Big Game Hunter"
-            description="{=cQHeVV3V}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+50% Ranged Damage to Mounts"
-            icon="PerkThrowingSpears"
-            perk_list="2">
-        <Effect type="MountDamage"
-                value="0.5"
-                hit_type="Ranged" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_ash_throwing_spear" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=blqDgCtL}Big Game Hunter"
             description="{=cQHeVV3V}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+50% Ranged Damage to Mounts"
             icon="PerkThrowingSpears"
@@ -4370,15 +3590,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=DeWp2GjP}Shield Breaker"
-            description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
-            icon="PerkShieldSplitterAxes"
-            perk_list="2">
-        <Effect type="ShieldDamage"
-                value="0.70" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=DeWp2GjP}Shield Breaker"
             description="{=JxDrcvDO}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+100% Damage to Shields"
             icon="PerkShieldSplitterAxes"
@@ -4478,22 +3690,7 @@
                    acceleration="2.4">
     <Perks>
       <!-- First perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=lWl3W0do}Padded Armor"
-            description="{=7mssfSVp}You are wearing extra layers of padding below your armor.{newline} {newline}+10 armor{newline}-33% Blunt damage taken"
-            icon="PerkArmorUpgrade"
-            perk_list="1">
-        <Effect type="DamageTaken"
-                value="-0.33"
-                damage_type="Blunt" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_rough_bearskin"
-                       target="Player" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=lWl3W0do}Padded Armor"
             description="{=cap00019}You are wearing extra layers of padding below your armor.{newline} {newline}+5 armor{newline}-10% Blunt damage taken"
             icon="PerkArmorUpgrade"
@@ -4554,15 +3751,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_leather_round_shield" />
-      </Perk>
-      <Perk game_mode="Duel"
-            name="{=o9a3hgVH}Duel Sword"
-            description="{=Rl0GV742}Grants a Two Handed Sword for dueling"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_battania_noble_two_handed_sword" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -4684,32 +3872,7 @@
                        item="mp_sturgia_northern_sword" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=eLoZTNYa}You are an expert at fighting while moving around with your bow.{newline} {newline}+25% Faster Movement When moving and aiming{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="0.25"
-                    driven_property="BipedalRangedReadySpeedMultiplier" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponWorstMobileAccuracyPenalty"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=eQLORdgE}Extra Arrows"
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
@@ -4729,18 +3892,7 @@
                        slot="Item1"
                        item="mp_arrows_bodkin_strong" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=vyI2KVKM}Bullseye"
-            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
-            icon="PerkSharpshooters"
-            perk_list="2">
-        <Effect type="RangedHeadShotDamage"
-                value="0.1" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_bodkin_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -4893,25 +4045,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkLongSpear"
-            hero_mount_idle_anim="act_sturgia_mp_raider_mount_shieldperk_idle"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.5"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
             description="{=cap00022}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
             icon="PerkTwoHandedAxe"
@@ -4950,29 +4084,7 @@
                        slot="Item2"
                        item="mp_northern_scouts_shield" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch"
-            name="{=Vf4mofBO}Blood Money"
-            description="{=Jstm1A5q}You know how to earn some extra gold on the side.{newline} {newline}+20 Gold per Kill"
-            icon="PerkGold"
-            hero_mount_idle_anim="act_sturgia_mp_raider_mount_shieldperk_idle"
-            perk_list="2">
-        <Effect type="GoldGainOnKill"
-                value="20"
-                is_disabled_in_warmup="true" />
-      </Perk>
-      <Perk game_mode="Duel"
-            name="{=JbWbiO6O}Bow and Arrows"
-            description="{=uTfm0blH}Grants Short Bow, enables to shoot from horseback."
-            icon="PerkRecurveBows"
-            perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_hunting_bow" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_steppe_mounted" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -5305,17 +4417,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=0TtCRwmr}Athletic"
-            description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=0TtCRwmr}Athletic"
             description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
             icon="PerkFleetFooted"
@@ -5325,69 +4427,7 @@
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=vHIIkFQF}Blood Rage"
-            description="{=h5Oj84Wu}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+7% Damage per 20 Hitpoints lost{newline}-7% Damage Taken from Melee Attacks per 20 Hitpoints lost"
-            icon="PerkBloodRage"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="80" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.07"
-                    hit_type="Melee" />
-            <Effect type="DamageTaken"
-                    value="-0.07"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="60" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.07"
-                    hit_type="Melee" />
-            <Effect type="DamageTaken"
-                    value="-0.07"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="40" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.07"
-                    hit_type="Melee" />
-            <Effect type="DamageTaken"
-                    value="-0.07"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="20" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.07"
-                    hit_type="Melee" />
-            <Effect type="DamageTaken"
-                    value="-0.07"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=vHIIkFQF}Blood Rage"
             description="{=2NofSpJ0}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+5% Damage per 20 Hitpoints lost{newline}-5% Damage Taken from Melee Attacks per 20 Hitpoints lost"
             icon="PerkBloodRage"
@@ -5449,16 +4489,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=AW8XDIIP}Thick Skin"
-            description="{=VPmy8IN2}A thick layer of muscles protects you from bruises.{newline} {newline}-30% Blunt damage taken"
-            icon="PerkToughness"
-            perk_list="2">
-        <Effect type="DamageTaken"
-                value="-0.30"
-                damage_type="Blunt" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=AW8XDIIP}Thick Skin"
             description="{=FLKxfaGn}A thick layer of muscles protects you from bruises.{newline} {newline}-20% Blunt damage taken"
             icon="PerkToughness"
@@ -5528,21 +4559,7 @@
         </ConditionalEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=v2WKbNZo}Rapid Throws"
-            description="{=Ha8HVTck}You are able throw javelins much quicker.{newline} {newline}Grants additional Javelins{newline} {newline}+5% Missle Release Speed {newline} +10% Ready Speed"
-            icon="PerkMoreThrowingSpears"
-            perk_list="2">
-        <Effect type="ThrowingWeaponSpeed"
-                value="0.05" />
-        <Effect type="DrivenProperty"
-                value="0.1"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_javelin_extraammo" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=v2WKbNZo}Rapid Throws"
             description="{=Ha8HVTck}You are able throw javelins much quicker.{newline} {newline}Grants additional Javelins{newline} {newline}+5% Missle Release Speed {newline} +10% Ready Speed"
             icon="PerkMoreThrowingSpears"
@@ -5556,19 +4573,7 @@
                        slot="Item0"
                        item="mp_javelin_extraammo_captain" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=ZxqXs36U}Strong Arm"
-            description="{=G4nZNi6t}Your time spent in nature made you unnaturally strong,  your throws deal more damage.{newline} {newline}Grants Throwing Spear{newline} {newline}+20% Throwing Damage"
-            icon="PerkPilums"
-            hero_idle_anim="act_battania_mp_wildling_strong_arm_perk_idle"
-            perk_list="2">
-        <Effect type="ThrowingWeaponDamage"
-                value="0.1" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_ash_throwing_spear" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ZxqXs36U}Strong Arm"
             description="{=G4nZNi6t}Your time spent in nature made you unnaturally strong,  your throws deal more damage.{newline} {newline}Grants Throwing Spear{newline} {newline}+20% Throwing Damage"
             icon="PerkPilums"
@@ -5579,24 +4584,7 @@
                        slot="Item3"
                        item="mp_ash_throwing_spear" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=lQTHNi5P}Chieftain"
-            description="{=b4CYRWEr}You are one of the best among your troops, you throw more accurately.{newline} {newline}+60% Initial Ranged Accuracy{newline}+70% Faster Ranged Accuracy Increase"
-            icon="PerkHeavierJavelins"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="-0.6"
-                driven_property="WeaponWorstUnsteadyAccuracyPenalty"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.7"
-                driven_property="WeaponBestAccuracyWaitTime"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_battania_javelin" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=lQTHNi5P}Chieftain"
             description="{=b4CYRWEr}You are one of the best among your troops, you throw more accurately.{newline} {newline}+60% Initial Ranged Accuracy{newline}+70% Faster Ranged Accuracy Increase"
             icon="PerkHeavierJavelins"
@@ -5688,15 +4676,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_battania_axe" />
-      </Perk>
-      <Perk game_mode="Duel"
-            name="{=o9a3hgVH}Duel Sword"
-            description="{=Rl0GV742}Grants a Two Handed Sword for dueling"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_battania_noble_two_handed_sword" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -5818,32 +4797,7 @@
                        item="mp_battania_woodcutters_axe" />
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=qZctRzJS}Mobility"
-            description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
-            icon="PerkFleetFooted"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="0.25"
-                    driven_property="BipedalRangedReadySpeedMultiplier" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponWorstMobileAccuracyPenalty"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=eQLORdgE}Extra Arrows"
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
@@ -5863,32 +4817,7 @@
                        slot="Item2"
                        item="mp_arrows_bodkin_strong" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyBeginTime"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyEndTime"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_bodkin_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=ydALXo9b}Reinforcements"
             description="{=d3NMiZmW}Grants +2 additional troops."
             icon="PerkExtraTroop"
@@ -5982,32 +4911,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=s5qRvBOp}Marksman"
-            description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyBeginTime"
-                    is_ratio="true" />
-            <Effect type="DrivenProperty"
-                    value="2.0"
-                    driven_property="WeaponUnsteadyEndTime"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_bodkin_strong" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=eQLORdgE}Extra Arrows"
             description="{=0yGhTKey}Grants Extra Arrows."
             icon="PerkWellSupplied"
@@ -6127,27 +5031,7 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=ueWfi5aP}You are an expert at charging in to break defensive lines.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkLongSpear"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.5"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_battania_cavalry_spear" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
             description="{=cap00013}You are an expert at charging in to break defensive lines.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount{newline}grants twohanded hammer"
             icon="PerkMaces"
@@ -6167,21 +5051,7 @@
                        slot="Item0"
                        item="mp_battania_twohanded_hammer" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=tZgHdSOX}Half Barding"
-            description="{=hvINBQ1p}Provides armor for your mount and additional protection against ranged weapons.{newline} {newline}+17 Armor to Mount{newline}-20% Damage taken by Mount from Ranged Weapons"
-            hero_mount_idle_anim="act_battania_mp_mounted_warrior_mount_idle_perks"
-            icon="PerkHalfBarding"
-            perk_list="2">
-        <Effect type="MountDamageTaken"
-                value="-0.2"
-                hit_type="Ranged"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="mp_battania_horse_harness_halfscaled" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=tZgHdSOX}Half Barding"
             description="{=cap00014}Provides armor for your mount and additional protection against ranged weapons.{newline} {newline}+17 Armor to Mount{newline}-20% Damage taken by Mount from Ranged Weapons"
             hero_mount_idle_anim="act_battania_mp_mounted_warrior_mount_idle_perks"
@@ -6198,24 +5068,7 @@
                        slot="Item0"
                        item="mp_battania_polearm_falx" />
       </Perk>
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
-            name="{=5f6TSkM1}Mounted Skirmish"
-            description="{=DciUJ0pY}You are an expert at ranged combat while moving around on your mount.{newline} {newline}Grants Javelins{newline} {newline}-25% Movement Accuracy Penalty{newline}-25% Turning Accuracy Penalty"
-            icon="PerkJavelins"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="-0.25"
-                driven_property="WeaponWorstMobileAccuracyPenalty"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.25"
-                driven_property="WeaponRotationalAccuracyPenaltyInRadians"
-                is_ratio="true" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_battania_javelin" />
-      </Perk>
-      <Perk game_mode="Captain"
+      <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=zzGL0N0t}You are an expert at ranged combat while moving around on your mount.{newline} {newline}Grants Javelins{newline} {newline}-50% Movement Accuracy Penalty{newline}-50% Turning Accuracy Penalty"
             icon="PerkJavelins"
