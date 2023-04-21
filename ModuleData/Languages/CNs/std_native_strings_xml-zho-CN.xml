@@ -26,7 +26,7 @@
   <string id="20000020" text="塔尔木堡"/>
   <string id="20000021" text="银之斯卡里茨"/>
   <string id="cnmsiegemultiplayergametype" text="CNM攻城战"/>
-  <string id="cnmcaptainasgame" text="CNM领军战"/>
+  <string id="cnmcaptainasgame" text="大规模领军"/>
   <string id="cnmsiegeexplainer" text="·使用各类围城器械攻击或防守旗帜{newline}·在旗帜附近获取金币或回血{newline}·重生点随着旗帜的移除而向前推进{newline}·控制主旗帜或挫败敌人的士气来获取胜利"/>
   <string id="cnmcaptainexplainer" text="·指挥你的小队{newline}·占据地图上的旗帜来打击敌方士气{newline}·消灭敌人全队或耗尽敌方士气来获取胜利"/>"/>
  </strings>
