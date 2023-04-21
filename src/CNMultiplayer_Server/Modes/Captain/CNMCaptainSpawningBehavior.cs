@@ -1,51 +1,107 @@
-﻿using CNMultiplayer.Common;
-using NetworkMessages.FromServer;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using NetworkMessages.FromServer;
+using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.LinQuick;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
-using MathF = TaleWorlds.Library.MathF;
 
 namespace CNMultiplayer.Modes.Captain
 {
-    internal class CNMCaptainSpawningBehavior : CNMSpawningBehaviorBase
+    public class CNMCaptainSpawningBehavior : SpawningBehaviorBase
     {
-        private List<KeyValuePair<MissionPeer, Timer>> _enforcedSpawnTimers;
+        private const int EnforcedSpawnTimeInSeconds = 15;
 
-        private MultiplayerRoundController? _roundController;
+        private float _spawningTimer;
+
+        private bool _spawningTimerTicking;
 
         private bool _haveBotsBeenSpawned;
 
+        private bool _roundInitialSpawnOver;
+
         private MissionMultiplayerFlagDomination _flagDominationMissionController;
+
+        private MultiplayerRoundController _roundController;
+
+        private List<KeyValuePair<MissionPeer, Timer>> _enforcedSpawnTimers;
 
         public CNMCaptainSpawningBehavior()
         {
-            this._enforcedSpawnTimers = new List<KeyValuePair<MissionPeer, Timer>>();
+            _enforcedSpawnTimers = new List<KeyValuePair<MissionPeer, Timer>>();
         }
 
         public override void Initialize(SpawnComponent spawnComponent)
         {
             base.Initialize(spawnComponent);
-            this._flagDominationMissionController = base.Mission.GetMissionBehavior<MissionMultiplayerFlagDomination>();
-            this._roundController = base.Mission.GetMissionBehavior<MultiplayerRoundController>();
-            this._roundController.OnRoundStarted += this.RequestStartSpawnSession;
-            this._roundController.OnRoundEnding += base.RequestStopSpawnSession;
-            this._roundController.OnRoundEnding += base.SetRemainingAgentsInvulnerable;
-            if (MultiplayerOptions.OptionType.NumberOfBotsPerFormation.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) == 0)
+            _flagDominationMissionController = base.Mission.GetMissionBehavior<MissionMultiplayerFlagDomination>();
+            _roundController = base.Mission.GetMissionBehavior<MultiplayerRoundController>();
+            _roundController.OnRoundStarted += RequestStartSpawnSession;
+            _roundController.OnRoundEnding += base.RequestStopSpawnSession;
+            _roundController.OnRoundEnding += base.SetRemainingAgentsInvulnerable;
+            if (MultiplayerOptions.OptionType.NumberOfBotsPerFormation.GetIntValue() == 0)
             {
-                this._roundController.EnableEquipmentUpdate();
+                _roundController.EnableEquipmentUpdate();
             }
-            base.OnAllAgentsFromPeerSpawnedFromVisuals += this.OnAllAgentsFromPeerSpawnedFromVisuals;
-            base.OnPeerSpawnedFromVisuals += this.OnPeerSpawnedFromVisuals;
+            base.OnAllAgentsFromPeerSpawnedFromVisuals += OnAllAgentsFromPeerSpawnedFromVisuals;
+            base.OnPeerSpawnedFromVisuals += OnPeerSpawnedFromVisuals;
         }
 
-        protected override bool IsRoundInProgress()
+        public override void Clear()
         {
-            return _roundController.IsRoundInProgress;
+            base.Clear();
+            _roundController.OnRoundStarted -= RequestStartSpawnSession;
+            _roundController.OnRoundEnding -= base.SetRemainingAgentsInvulnerable;
+            _roundController.OnRoundEnding -= base.RequestStopSpawnSession;
+            base.OnAllAgentsFromPeerSpawnedFromVisuals -= OnAllAgentsFromPeerSpawnedFromVisuals;
+            base.OnPeerSpawnedFromVisuals -= OnPeerSpawnedFromVisuals;
+        }
+
+        public override void OnTick(float dt)
+        {
+            if (_spawningTimerTicking)
+            {
+                _spawningTimer += dt;
+            }
+            if (IsSpawningEnabled)
+            {
+                if (!_roundInitialSpawnOver && IsRoundInProgress())
+                {
+                    foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
+                    {
+                        MissionPeer component = networkPeer.GetComponent<MissionPeer>();
+                        if (component?.Team != null && component.Team.Side != BattleSideEnum.None)
+                        {
+                            SpawnComponent.SetEarlyAgentVisualsDespawning(component);
+                        }
+                    }
+                    _roundInitialSpawnOver = true;
+                    base.Mission.AllowAiTicking = true;
+                }
+                SpawnAgents();
+                if (_roundInitialSpawnOver && _flagDominationMissionController.GameModeUsesSingleSpawning && _spawningTimer > (float)MultiplayerOptions.OptionType.RoundPreparationTimeLimit.GetIntValue())
+                {
+                    IsSpawningEnabled = false;
+                    _spawningTimer = 0f;
+                    _spawningTimerTicking = false;
+                }
+            }
+            base.OnTick(dt);
+        }
+
+        public override void RequestStartSpawnSession()
+        {
+            if (!IsSpawningEnabled)
+            {
+                Mission.Current.SetBattleAgentCount(-1);
+                IsSpawningEnabled = true;
+                _haveBotsBeenSpawned = false;
+                _spawningTimerTicking = true;
+                ResetSpawnCounts();
+                ResetSpawnTimers();
+            }
         }
 
         protected override void SpawnAgents()
@@ -228,102 +284,12 @@ namespace CNMultiplayer.Modes.Captain
             }
         }
 
-        protected void SpawnBotVisualsInPlayerFormation(MissionPeer missionPeer, int visualsIndex, Team agentTeam, BasicCultureObject cultureLimit, string troopName, Formation formation, bool updateExistingAgentVisuals, int totalCount, IEnumerable<ValueTuple<EquipmentIndex, EquipmentElement>> alternativeEquipments)
+        private new void OnPeerSpawnedFromVisuals(MissionPeer peer)
         {
-            BasicCharacterObject @object = MBObjectManager.Instance.GetObject<BasicCharacterObject>(troopName);
-            AgentBuildData agentBuildData = new AgentBuildData(@object).Team(agentTeam).OwningMissionPeer(missionPeer).VisualsIndex(visualsIndex)
-                .TroopOrigin(new BasicBattleAgentOrigin(@object))
-                .EquipmentSeed(this.MissionLobbyComponent.GetRandomFaceSeedForCharacter(@object, visualsIndex))
-                .Formation(formation)
-                .IsFemale(@object.IsFemale)
-                .ClothingColor1((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color : cultureLimit.ClothAlternativeColor)
-                .ClothingColor2((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color2 : cultureLimit.ClothAlternativeColor2);
-            Equipment randomEquipmentElements = Equipment.GetRandomEquipmentElements(@object, !(Game.Current.GameType is MultiplayerGame), false, MBRandom.RandomInt());
-            if (alternativeEquipments != null)
+            if (peer.ControlledFormation != null)
             {
-                foreach (ValueTuple<EquipmentIndex, EquipmentElement> valueTuple in alternativeEquipments)
-                {
-                    randomEquipmentElements[valueTuple.Item1] = valueTuple.Item2;
-                }
+                peer.ControlledAgent.Team.AssignPlayerAsSergeantOfFormation(peer, peer.ControlledFormation.FormationIndex);
             }
-            agentBuildData.Equipment(randomEquipmentElements);
-            agentBuildData.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData.AgentRace, agentBuildData.AgentIsFemale, @object.GetBodyPropertiesMin(false), @object.GetBodyPropertiesMax(), (int)agentBuildData.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData.AgentEquipmentSeed, @object.HairTags, @object.BeardTags, @object.TattooTags));
-            NetworkCommunicator networkPeer = missionPeer.GetNetworkPeer();
-            if (this.GameMode.ShouldSpawnVisualsForServer(networkPeer))
-            {
-                base.AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(missionPeer, agentBuildData, -1, true, totalCount);
-            }
-            this.GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData, totalCount, false);
-        }
-
-        private void AllBotFormationsSpawned()
-        {
-            if (base.Mission.NumOfFormationsSpawnedTeamOne != 0 || base.Mission.NumOfFormationsSpawnedTeamTwo != 0)
-            {
-                GameNetwork.BeginBroadcastModuleEvent();
-                GameNetwork.WriteMessage(new SetSpawnedFormationCount(base.Mission.NumOfFormationsSpawnedTeamOne, base.Mission.NumOfFormationsSpawnedTeamTwo));
-                GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
-            }
-        }
-
-        protected void SpawnBotInBotFormation(int visualsIndex, Team agentTeam, BasicCultureObject cultureLimit, BasicCharacterObject character, Formation formation)
-        {
-            AgentBuildData agentBuildData = new AgentBuildData(character).Team(agentTeam).TroopOrigin(new BasicBattleAgentOrigin(character)).VisualsIndex(visualsIndex)
-                .EquipmentSeed(this.MissionLobbyComponent.GetRandomFaceSeedForCharacter(character, visualsIndex))
-                .Formation(formation)
-                .IsFemale(character.IsFemale)
-                .ClothingColor1((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color : cultureLimit.ClothAlternativeColor)
-                .ClothingColor2((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color2 : cultureLimit.ClothAlternativeColor2);
-            agentBuildData.Equipment(Equipment.GetRandomEquipmentElements(character, !(Game.Current.GameType is MultiplayerGame), false, agentBuildData.AgentEquipmentSeed));
-            agentBuildData.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData.AgentRace, agentBuildData.AgentIsFemale, character.GetBodyPropertiesMin(false), character.GetBodyPropertiesMax(), (int)agentBuildData.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData.AgentEquipmentSeed, character.HairTags, character.BeardTags, character.TattooTags));
-            base.Mission.SpawnAgent(agentBuildData, false).AIStateFlags |= Agent.AIStateFlag.Alarmed;
-        }
-
-        private void CreateEnforcedSpawnTimerForPeer(MissionPeer peer, int durationInSeconds)
-        {
-            if (this._enforcedSpawnTimers.Any((KeyValuePair<MissionPeer, Timer> pair) => pair.Key == peer))
-            {
-                return;
-            }
-            this._enforcedSpawnTimers.Add(new KeyValuePair<MissionPeer, Timer>(peer, new Timer(base.Mission.CurrentTime, (float)durationInSeconds, true)));
-            Debug.Print(string.Concat(new object[] { "EST for ", peer.Name, " set to ", durationInSeconds, " seconds." }), 0, Debug.DebugColor.Yellow, 64UL);
-        }
-
-        private void BotFormationSpawned(Team team)
-        {
-            if (team == base.Mission.AttackerTeam)
-            {
-                base.Mission.NumOfFormationsSpawnedTeamOne++;
-                return;
-            }
-            if (team == base.Mission.DefenderTeam)
-            {
-                base.Mission.NumOfFormationsSpawnedTeamTwo++;
-            }
-        }
-
-        private bool CheckIfEnforcedSpawnTimerExpiredForPeer(MissionPeer peer)
-        {
-            KeyValuePair<MissionPeer, Timer> keyValuePair = this._enforcedSpawnTimers.FirstOrDefault((KeyValuePair<MissionPeer, Timer> pr) => pr.Key == peer);
-            if (keyValuePair.Key == null)
-            {
-                return false;
-            }
-            if (peer.ControlledAgent != null)
-            {
-                this._enforcedSpawnTimers.RemoveAll((KeyValuePair<MissionPeer, Timer> p) => p.Key == peer);
-                Debug.Print("EST for " + peer.Name + " is no longer valid (spawned already).", 0, Debug.DebugColor.Yellow, 64UL);
-                return false;
-            }
-            Timer value = keyValuePair.Value;
-            if (peer.HasSpawnedAgentVisuals && value.Check(Mission.Current.CurrentTime))
-            {
-                this.SpawnComponent.SetEarlyAgentVisualsDespawning(peer, true);
-                this._enforcedSpawnTimers.RemoveAll((KeyValuePair<MissionPeer, Timer> p) => p.Key == peer);
-                Debug.Print("EST for " + peer.Name + " has expired.", 0, Debug.DebugColor.Yellow, 64UL);
-                return true;
-            }
-            return false;
         }
 
         private new void OnAllAgentsFromPeerSpawnedFromVisuals(MissionPeer peer)
@@ -337,7 +303,7 @@ namespace CNMultiplayer.Modes.Captain
                 {
                     GameNetwork.BeginBroadcastModuleEvent();
                     GameNetwork.WriteMessage(new BotsControlledChange(networkPeer, peer.BotsUnderControlAlive, peer.BotsUnderControlTotal));
-                    GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
+                    GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
                     base.Mission.GetMissionBehavior<MissionMultiplayerGameModeFlagDominationClient>().OnBotsControlledChanged(peer, peer.BotsUnderControlAlive, peer.BotsUnderControlTotal);
                 }
                 if (peer.Team == base.Mission.AttackerTeam)
@@ -350,24 +316,142 @@ namespace CNMultiplayer.Modes.Captain
                 }
                 GameNetwork.BeginBroadcastModuleEvent();
                 GameNetwork.WriteMessage(new SetSpawnedFormationCount(base.Mission.NumOfFormationsSpawnedTeamOne, base.Mission.NumOfFormationsSpawnedTeamTwo));
-                GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
+                GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
             }
-            if (this._flagDominationMissionController.UseGold())
+            if (_flagDominationMissionController.UseGold())
             {
                 bool flag = peer.Team == base.Mission.AttackerTeam;
-                Team defenderTeam = base.Mission.DefenderTeam;
-                MultiplayerClassDivisions.MPHeroClass mpheroClass = MultiplayerClassDivisions.GetMPHeroClasses(MBObjectManager.Instance.GetObject<BasicCultureObject>(flag ? MultiplayerOptions.OptionType.CultureTeam1.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) : MultiplayerOptions.OptionType.CultureTeam2.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions))).ElementAt(peer.SelectedTroopIndex);
-                int num = ((this._flagDominationMissionController.GetMissionType() == MissionLobbyComponent.MultiplayerGameType.Battle) ? mpheroClass.TroopBattleCost : mpheroClass.TroopCost);
-                this._flagDominationMissionController.ChangeCurrentGoldForPeer(peer, this._flagDominationMissionController.GetCurrentGoldForPeer(peer) - num);
+                _ = base.Mission.DefenderTeam;
+                MultiplayerClassDivisions.MPHeroClass mPHeroClass = MultiplayerClassDivisions.GetMPHeroClasses(MBObjectManager.Instance.GetObject<BasicCultureObject>(flag ? MultiplayerOptions.OptionType.CultureTeam1.GetStrValue() : MultiplayerOptions.OptionType.CultureTeam2.GetStrValue())).ElementAt(peer.SelectedTroopIndex);
+                int num = ((_flagDominationMissionController.GetMissionType() == MissionLobbyComponent.MultiplayerGameType.Battle) ? mPHeroClass.TroopBattleCost : mPHeroClass.TroopCost);
+                _flagDominationMissionController.ChangeCurrentGoldForPeer(peer, _flagDominationMissionController.GetCurrentGoldForPeer(peer) - num);
             }
         }
 
-        private new void OnPeerSpawnedFromVisuals(MissionPeer peer)
+        private void BotFormationSpawned(Team team)
         {
-            if (peer.ControlledFormation != null)
+            if (team == base.Mission.AttackerTeam)
             {
-                peer.ControlledAgent.Team.AssignPlayerAsSergeantOfFormation(peer, peer.ControlledFormation.FormationIndex);
+                base.Mission.NumOfFormationsSpawnedTeamOne++;
             }
+            else if (team == base.Mission.DefenderTeam)
+            {
+                base.Mission.NumOfFormationsSpawnedTeamTwo++;
+            }
+        }
+
+        private void AllBotFormationsSpawned()
+        {
+            if (base.Mission.NumOfFormationsSpawnedTeamOne != 0 || base.Mission.NumOfFormationsSpawnedTeamTwo != 0)
+            {
+                GameNetwork.BeginBroadcastModuleEvent();
+                GameNetwork.WriteMessage(new SetSpawnedFormationCount(base.Mission.NumOfFormationsSpawnedTeamOne, base.Mission.NumOfFormationsSpawnedTeamTwo));
+                GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
+            }
+        }
+
+        public override bool AllowEarlyAgentVisualsDespawning(MissionPeer lobbyPeer)
+        {
+            if (MultiplayerOptions.OptionType.NumberOfBotsPerFormation.GetIntValue() == 0)
+            {
+                if (!_roundController.IsRoundInProgress)
+                {
+                    return false;
+                }
+                if (!lobbyPeer.HasSpawnTimerExpired && lobbyPeer.SpawnTimer.Check(Mission.Current.CurrentTime))
+                {
+                    lobbyPeer.HasSpawnTimerExpired = true;
+                }
+                return lobbyPeer.HasSpawnTimerExpired;
+            }
+            return false;
+        }
+
+        protected override bool IsRoundInProgress()
+        {
+            return _roundController.IsRoundInProgress;
+        }
+
+        private void CreateEnforcedSpawnTimerForPeer(MissionPeer peer, int durationInSeconds)
+        {
+            if (!_enforcedSpawnTimers.Any((KeyValuePair<MissionPeer, Timer> pair) => pair.Key == peer))
+            {
+                _enforcedSpawnTimers.Add(new KeyValuePair<MissionPeer, Timer>(peer, new Timer(base.Mission.CurrentTime, durationInSeconds)));
+                Debug.Print("EST for " + peer.Name + " set to " + durationInSeconds + " seconds.", 0, Debug.DebugColor.Yellow, 64uL);
+            }
+        }
+
+        private bool CheckIfEnforcedSpawnTimerExpiredForPeer(MissionPeer peer)
+        {
+            KeyValuePair<MissionPeer, Timer> keyValuePair = _enforcedSpawnTimers.FirstOrDefault((KeyValuePair<MissionPeer, Timer> pr) => pr.Key == peer);
+            if (keyValuePair.Key == null)
+            {
+                return false;
+            }
+            if (peer.ControlledAgent != null)
+            {
+                _enforcedSpawnTimers.RemoveAll((KeyValuePair<MissionPeer, Timer> p) => p.Key == peer);
+                Debug.Print("EST for " + peer.Name + " is no longer valid (spawned already).", 0, Debug.DebugColor.Yellow, 64uL);
+                return false;
+            }
+            Timer value = keyValuePair.Value;
+            if (peer.HasSpawnedAgentVisuals && value.Check(Mission.Current.CurrentTime))
+            {
+                SpawnComponent.SetEarlyAgentVisualsDespawning(peer);
+                _enforcedSpawnTimers.RemoveAll((KeyValuePair<MissionPeer, Timer> p) => p.Key == peer);
+                Debug.Print("EST for " + peer.Name + " has expired.", 0, Debug.DebugColor.Yellow, 64uL);
+                return true;
+            }
+            return false;
+        }
+
+        public override void OnClearScene()
+        {
+            base.OnClearScene();
+            _enforcedSpawnTimers.Clear();
+            _roundInitialSpawnOver = false;
+        }
+
+        protected void SpawnBotInBotFormation(int visualsIndex, Team agentTeam, BasicCultureObject cultureLimit, BasicCharacterObject character, Formation formation)
+        {
+            AgentBuildData agentBuildData = new AgentBuildData(character).Team(agentTeam).TroopOrigin(new BasicBattleAgentOrigin(character)).VisualsIndex(visualsIndex)
+                .EquipmentSeed(MissionLobbyComponent.GetRandomFaceSeedForCharacter(character, visualsIndex))
+                .Formation(formation)
+                .IsFemale(character.IsFemale)
+                .ClothingColor1((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color : cultureLimit.ClothAlternativeColor)
+                .ClothingColor2((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color2 : cultureLimit.ClothAlternativeColor2);
+            agentBuildData.Equipment(Equipment.GetRandomEquipmentElements(character, !(Game.Current.GameType is MultiplayerGame), isCivilianEquipment: false, agentBuildData.AgentEquipmentSeed));
+            agentBuildData.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData.AgentRace, agentBuildData.AgentIsFemale, character.GetBodyPropertiesMin(), character.GetBodyPropertiesMax(), (int)agentBuildData.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData.AgentEquipmentSeed, character.HairTags, character.BeardTags, character.TattooTags));
+            base.Mission.SpawnAgent(agentBuildData).AIStateFlags |= Agent.AIStateFlag.Alarmed;
+        }
+
+        protected void SpawnBotVisualsInPlayerFormation(MissionPeer missionPeer, int visualsIndex, Team agentTeam, BasicCultureObject cultureLimit, string troopName, Formation formation, bool updateExistingAgentVisuals, int totalCount, IEnumerable<(EquipmentIndex, EquipmentElement)> alternativeEquipments)
+        {
+            BasicCharacterObject @object = MBObjectManager.Instance.GetObject<BasicCharacterObject>(troopName);
+            AgentBuildData agentBuildData = new AgentBuildData(@object).Team(agentTeam).OwningMissionPeer(missionPeer).VisualsIndex(visualsIndex)
+                .TroopOrigin(new BasicBattleAgentOrigin(@object))
+                .EquipmentSeed(MissionLobbyComponent.GetRandomFaceSeedForCharacter(@object, visualsIndex))
+                .Formation(formation)
+                .IsFemale(@object.IsFemale)
+                .ClothingColor1((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color : cultureLimit.ClothAlternativeColor)
+                .ClothingColor2((agentTeam.Side == BattleSideEnum.Attacker) ? cultureLimit.Color2 : cultureLimit.ClothAlternativeColor2);
+            Equipment randomEquipmentElements = Equipment.GetRandomEquipmentElements(@object, !(Game.Current.GameType is MultiplayerGame), isCivilianEquipment: false, MBRandom.RandomInt());
+            if (alternativeEquipments != null)
+            {
+                foreach (var alternativeEquipment in alternativeEquipments)
+                {
+                    randomEquipmentElements[alternativeEquipment.Item1] = alternativeEquipment.Item2;
+                }
+            }
+            agentBuildData.Equipment(randomEquipmentElements);
+            agentBuildData.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData.AgentRace, agentBuildData.AgentIsFemale, @object.GetBodyPropertiesMin(), @object.GetBodyPropertiesMax(), (int)agentBuildData.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData.AgentEquipmentSeed, @object.HairTags, @object.BeardTags, @object.TattooTags));
+            NetworkCommunicator networkPeer = missionPeer.GetNetworkPeer();
+            if (GameMode.ShouldSpawnVisualsForServer(networkPeer))
+            {
+                base.AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(missionPeer, agentBuildData, -1, isBot: true, totalCount);
+            }
+            GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData, totalCount, useCosmetics: false);
         }
     }
 }
+
