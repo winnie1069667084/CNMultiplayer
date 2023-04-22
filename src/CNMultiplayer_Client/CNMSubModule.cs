@@ -12,7 +12,6 @@ namespace CNMultiplayer
         {
             base.OnSubModuleLoad();
             Harmony harmony = new Harmony("CNMultiplayer");
-            Harmony.DEBUG = true;
             harmony.PatchAll();
             //待学习调整：*地图投票界面、WelcomeMessage、*不同模式加载不同XML
             Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
