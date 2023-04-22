@@ -25,6 +25,8 @@
   <string id="20000019" text="要塞"/>
   <string id="20000020" text="塔尔木堡"/>
   <string id="20000021" text="银之斯卡里茨"/>
+  <string id="20000022" text="昔白戈阻塞地"/>
+  <string id="20000023" text="护盾兄弟会藏身处"/>
   <string id="cnmsiegemultiplayergametype" text="CNM攻城战"/>
   <string id="cnmcaptainasgame" text="大规模领军"/>
   <string id="cnmsiegeexplainer" text="·使用各类围城器械攻击或防守旗帜{newline}·在旗帜附近获取金币或回血{newline}·重生点随着旗帜的移除而向前推进{newline}·控制主旗帜或挫败敌人的士气来获取胜利"/>
