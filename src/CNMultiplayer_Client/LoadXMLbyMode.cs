@@ -25,9 +25,6 @@ namespace CNMultiplayer
                 case "CNMSiege":
                     LoadXMLs(modulename, gametype);
                     break;
-                case "Captain":
-                    LoadXMLs(modulename, gametype);
-                    break;
                 case "CNMCaptain":
                     LoadXMLs(modulename, gametype);
                     break;
