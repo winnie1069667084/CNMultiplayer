@@ -201,7 +201,7 @@ namespace CNMultiplayer.Common
                         int num3 = TaleWorlds.Library.MathF.Min(num, 10);
                         //修复Captain大量AI导致的崩溃
                         var formationFrames = Formation.GetFormationFramesForBeforeFormationCreation((float)num3 * Formation.GetDefaultUnitDiameter(flag3) + (float)(num3 - 1) * Formation.GetDefaultMinimumInterval(flag3), num, flag3, new WorldPosition(Mission.Current.Scene, matrixFrame.origin), rotation);
-                        MatrixFrame matrixFrame2 = formationFrames[(num2 - 1) % (formationFrames.Count - 1)].ToGroundMatrixFrame();
+                        MatrixFrame matrixFrame2 = formationFrames[(num2 - 1) % formationFrames.Count].ToGroundMatrixFrame();
                         agentBuildData.InitialPosition(in matrixFrame2.origin);
                         value = matrixFrame2.rotation.f.AsVec2.Normalized();
                         agentBuildData.InitialDirection(in value);
