@@ -15,32 +15,12 @@ namespace CNMultiplayer
 {
     public class CNMSubModule : MBSubModuleBase
     {
-        private void Setup()
-        {
-            string basePath = Environment.CurrentDirectory + "/../../Modules/Native";
-            string configPath = Path.Combine(basePath, "chatCommands.json");
-            if (!File.Exists(configPath))
-            {
-                Config config = new Config { AdminPassword = ChatCommands.Helpers.RandomString(6) };
-                ConfigManager.SetConfig(config);
-                string json = JsonConvert.SerializeObject(config);
-                File.WriteAllText(configPath, json);
-            }
-            else
-            {
-                string configString = File.ReadAllText(configPath);
-                Config config = JsonConvert.DeserializeObject<Config>(configString);
-                ConfigManager.SetConfig(config);
-            }
-        }
-
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
             Harmony harmony = new Harmony("CNMultiplayer");
             harmony.PatchAll();
             this.Setup();
-            Debug.Print("** CHAT COMMANDS BY MENTALROB LOADED **", 0, Debug.DebugColor.Green);
             _ = new ChatCommands.CommandManager();
             Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
             Module.CurrentModule.AddMultiplayerGameMode(new CNMCaptainGameMode());
@@ -65,12 +45,30 @@ namespace CNMultiplayer
         {
             Debug.Print("** CHAT HANDLER ADDED **", 0, Debug.DebugColor.Green);
             game.AddGameHandler<ChatHandler>();
-            // game.AddGameHandler<ManipulatedChatBox>();
-
         }
+
         public override void OnGameEnd(Game game)
         {
             game.RemoveGameHandler<ChatHandler>();
+        }
+
+        private void Setup()
+        {
+            string basePath = Environment.CurrentDirectory + "/../../Modules/Native";
+            string configPath = Path.Combine(basePath, "chatCommands.json");
+            if (!File.Exists(configPath))
+            {
+                Config config = new Config { AdminPassword = ChatCommands.Helpers.RandomString(6) };
+                ConfigManager.SetConfig(config);
+                string json = JsonConvert.SerializeObject(config);
+                File.WriteAllText(configPath, json);
+            }
+            else
+            {
+                string configString = File.ReadAllText(configPath);
+                Config config = JsonConvert.DeserializeObject<Config>(configString);
+                ConfigManager.SetConfig(config);
+            }
         }
     }
 }

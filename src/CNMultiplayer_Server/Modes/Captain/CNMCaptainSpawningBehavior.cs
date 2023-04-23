@@ -127,14 +127,15 @@ namespace TaleWorlds.MountAndBlade
                         {
                             while (formation == null || formation.PlayerOwner != null)
                             {
-                                FormationClass formationClass = (FormationClass)(num2 % (100 - 1));
+                                //防止过多的Captain AI数组越界
+                                FormationClass formationClass = (FormationClass)(num2 % (int)team2.FormationsIncludingEmpty.Count);
                                 formation = team2.GetFormation(formationClass);
                                 num2++;
                             }
                         }
                         if (formation != null)
                         {
-                            formation.BannerCode = list[(num2 - 1) % (list.Count - 1)]; //防止过多的Captain AI数组越界
+                            formation.BannerCode = list[(num2 - 1) % list.Count]; //防止过多的Captain AI数组越界
                         }
                         MultiplayerClassDivisions.MPHeroClass randomElementWithPredicate = MultiplayerClassDivisions.GetMPHeroClasses().GetRandomElementWithPredicate((MultiplayerClassDivisions.MPHeroClass x) => x.Culture == teamCulture);
                         BasicCharacterObject heroCharacter = randomElementWithPredicate.HeroCharacter;
@@ -214,7 +215,7 @@ namespace TaleWorlds.MountAndBlade
                 if (MultiplayerOptions.OptionType.NumberOfBotsPerFormation.GetIntValue() > 0 && formation2 == null)
                 {
                     //超8人崩服的bug在这
-                    FormationClass formationIndex = component.Team.FormationsIncludingEmpty.First((Formation x) => x.PlayerOwner == null && !x.ContainsAgentVisuals && x.CountOfUnits == 0).FormationIndex;
+                    FormationClass formationIndex = component.Team.FormationsIncludingSpecialAndEmpty.First((Formation x) => x.PlayerOwner == null && !x.ContainsAgentVisuals && x.CountOfUnits == 0).FormationIndex;
                     formation2 = team.GetFormation(formationIndex);
                     formation2.ContainsAgentVisuals = true;
                     if (string.IsNullOrEmpty(formation2.BannerCode))
