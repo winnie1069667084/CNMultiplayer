@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Diamond;
 
 namespace CNMultiplayer.Patches

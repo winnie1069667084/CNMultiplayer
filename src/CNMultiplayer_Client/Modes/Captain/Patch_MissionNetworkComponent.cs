@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TaleWorlds.MountAndBlade;
-using HarmonyLib;
+﻿using HarmonyLib;
 using NetworkMessages.FromServer;
+using System;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
+using TaleWorlds.MountAndBlade;
 
 namespace HarmonyPatches
 {
