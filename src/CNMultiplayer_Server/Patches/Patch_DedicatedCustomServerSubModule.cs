@@ -61,13 +61,4 @@ namespace HarmonyPatches
             return false;
         }
     }
-
-    [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "TickShuttingDown")]
-    internal class Patch_TickShuttingDown
-    {
-        public static bool Prefix()
-        {
-            return false;
-        }
-    }
 }
