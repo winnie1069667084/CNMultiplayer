@@ -10,9 +10,11 @@ using TaleWorlds.MountAndBlade.View;
 
 namespace CNMultiplayer.Modes.Captain
 {
+
 #if CLIENT
     [ViewCreatorModule] // Exposes methods with ViewMethod attribute.
 #endif
+
     internal class CNMCaptainGameMode : MissionBasedMultiplayerGameMode
     {
         private const string GameName = "CNMCaptain";
@@ -20,6 +22,7 @@ namespace CNMultiplayer.Modes.Captain
         public CNMCaptainGameMode()
             : base(GameName)
         { }
+
 #if CLIENT
         [ViewMethod(GameName)]
         public static MissionView[] OpenCNMCaptain(Mission mission)
@@ -53,45 +56,14 @@ namespace CNMultiplayer.Modes.Captain
                 new MissionAgentContourControllerView(),
                 new MissionBoundaryWallView(),
                 new SpectatorCameraView(), // None Native
-
             };
         }
-#endif
 
         public override void StartMultiplayerGame(string scene)
         {
             MissionState.OpenNew(GameName, new MissionInitializerRecord(scene)
             { SceneUpgradeLevel = 3, SceneLevels = string.Empty },
-            _ => (GameNetwork.IsServer)
-            ? new MissionBehavior[] // Server side behavior
-            {
-                MissionLobbyComponent.CreateBehavior(),
-                new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain),
-                new MultiplayerRoundController(),
-                new SpawnComponent(new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior()),
-                new CNMWarmupComponent(() => (new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior())),
-                new MissionMultiplayerGameModeFlagDominationClient(),
-                new MultiplayerTimerComponent(),
-                new MultiplayerMissionAgentVisualSpawnComponent(),
-                new ConsoleMatchStartEndHandler(),
-                new MissionLobbyEquipmentNetworkComponent(),
-                new MultiplayerTeamSelectComponent(),
-                new MissionHardBorderPlacer(),
-                new MissionBoundaryPlacer(),
-                new MissionBoundaryCrossingHandler(),
-                new MultiplayerPollComponent(),
-                new MultiplayerAdminComponent(),
-                new MultiplayerGameNotificationsComponent(),
-                new MissionOptionsComponent(),
-                new MissionScoreboardComponent(new CaptainScoreboardData()),
-                new MissionAgentPanicHandler(),
-                new AgentVictoryLogic(),
-                new AgentHumanAILogic(),
-                new EquipmentControllerLeaveLogic(),
-                new MultiplayerPreloadHelper()
-            }
-
-            : new MissionBehavior[] // Client side behavior
+            _ => new MissionBehavior[] // Client side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),
                 new CNMWarmupComponent(() => (new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior())),
@@ -117,5 +89,40 @@ namespace CNMultiplayer.Modes.Captain
                 new MultiplayerPreloadHelper()
             });
         }
+
+#elif SERVER
+        public override void StartMultiplayerGame(string scene)
+        {
+            MissionState.OpenNew(GameName, new MissionInitializerRecord(scene)
+            { SceneUpgradeLevel = 3, SceneLevels = string.Empty },
+            _ => new MissionBehavior[] // Server side behavior
+            {
+                MissionLobbyComponent.CreateBehavior(),
+                new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain),
+                new MultiplayerRoundController(),
+                new SpawnComponent(new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior()),
+                new CNMWarmupComponent(() => (new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior())),
+                new MissionMultiplayerGameModeFlagDominationClient(),
+                new MultiplayerTimerComponent(),
+                new MultiplayerMissionAgentVisualSpawnComponent(),
+                new ConsoleMatchStartEndHandler(),
+                new MissionLobbyEquipmentNetworkComponent(),
+                new MultiplayerTeamSelectComponent(),
+                new MissionHardBorderPlacer(),
+                new MissionBoundaryPlacer(),
+                new MissionBoundaryCrossingHandler(),
+                new MultiplayerPollComponent(),
+                new MultiplayerAdminComponent(),
+                new MultiplayerGameNotificationsComponent(),
+                new MissionOptionsComponent(),
+                new MissionScoreboardComponent(new CaptainScoreboardData()),
+                new MissionAgentPanicHandler(),
+                new AgentVictoryLogic(),
+                new AgentHumanAILogic(),
+                new EquipmentControllerLeaveLogic(),
+                new MultiplayerPreloadHelper()
+            });
+        }
+#endif
     }
 }

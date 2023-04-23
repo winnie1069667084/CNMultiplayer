@@ -31,6 +31,11 @@
     <Error Text="Environment variable MB_SERVER_PATH should be set to your Bannerlord server installation path" Condition="'$(MB_SERVER_PATH)' == ''" />
   </Target>
   <ItemGroup>
+    <Compile Remove="Patches\ServerPatches\**" />
+    <EmbeddedResource Remove="Patches\ServerPatches\**" />
+    <None Remove="Patches\ServerPatches\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Remove="Patches\Patch_SpawningBehaviorBase.cs" />
   </ItemGroup>
 
