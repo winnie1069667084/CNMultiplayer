@@ -15,7 +15,7 @@ namespace CNMultiplayer
         {
             foreach (string name in Utilities.GetModulesNames())
             {
-                if (name != "Native")
+                if (name != "Native" && name != "Multiplayer")
                     modulename = name;
                 continue;
             }
