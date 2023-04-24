@@ -195,9 +195,13 @@ namespace TaleWorlds.MountAndBlade
             }
             foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
             {
+                if (!networkPeer.IsSynchronized)
+                {
+                    continue;
+                }
                 MissionPeer component = networkPeer.GetComponent<MissionPeer>();
                 Team peerTeam = component.Team;
-                if (!networkPeer.IsSynchronized || peerTeam == null || peerTeam.Side == BattleSideEnum.None || (numberOfBotsPerFormation == 0 && CheckIfEnforcedSpawnTimerExpiredForPeer(component)))
+                if (peerTeam == null || peerTeam.Side == BattleSideEnum.None || (numberOfBotsPerFormation == 0 && CheckIfEnforcedSpawnTimerExpiredForPeer(component)))
                 {
                     continue;
                 }
