@@ -180,14 +180,7 @@ namespace TaleWorlds.MountAndBlade
                             }
                             BotFormationSpawned(team);
                             formation.SetControlledByAI(isControlledByAI: true);
-                            if (formation.IsRanged())
-                            {
-                                formation.SetMovementOrder(MovementOrder.MovementOrderAdvance);
-                            }
-                            else
-                            {
-                                formation.SetMovementOrder(MovementOrder.MovementOrderCharge);
-                            }
+                            formation.SetMovementOrder(MovementOrder.MovementOrderCharge);
                         }
                     }
                     if (teamBotsNum > 0 && team.FormationsIncludingEmpty.AnyQ((Formation f) => f.CountOfUnits > 0))
