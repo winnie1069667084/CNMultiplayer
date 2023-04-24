@@ -1877,6 +1877,9 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="9" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="item3"
+                       item="mp_jereed_captain"/>
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_eastern_studded_shoulders"
                        target="Player" />
@@ -1916,6 +1919,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_khuzait_heavy_mace" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain" />
       </Perk>
       <Perk game_mode="all"
             name="{=4YTJJaTG}Heavy Sabre"
@@ -1925,6 +1931,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_khuzait_heavy_sabre" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
