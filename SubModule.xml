@@ -7,6 +7,7 @@
 	<ModuleCategory value="MultiplayerOptional"/>
 	<DependedModules>
     	<DependedModule Id="Native" />
+		<DependedModule Id="Multiplayer" />
   	</DependedModules>
 	<SubModules>
     	<SubModule>
