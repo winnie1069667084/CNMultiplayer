@@ -24,6 +24,9 @@ namespace CNMultiplayer
                 case "CNMCaptain":
                     LoadXMLs(modulename, gametype);
                     break;
+                case "IndividualDeathMatch":
+                    LoadXMLs(modulename, gametype);
+                    break;
                 default:
                     LoadXMLs("Native", "");
                     break;

@@ -29,7 +29,9 @@
   <string id="20000023" text="护盾兄弟会藏身处"/>
   <string id="cnmsiegemultiplayergametype" text="CNM攻城战"/>
   <string id="cnmcaptainasgame" text="大规模领军"/>
+  <string id="idmasgame" text="个人竞技"/>
   <string id="cnmsiegeexplainer" text="·使用各类围城器械攻击或防守旗帜{newline}·在旗帜附近获取金币或回血{newline}·重生点随着旗帜的移除而向前推进{newline}·控制主旗帜或挫败敌人的士气来获取胜利"/>
-  <string id="cnmcaptainexplainer" text="·指挥你的小队{newline}·占据地图上的旗帜来打击敌方士气{newline}·消灭敌人全队或耗尽敌方士气来获取胜利"/>"/>
+  <string id="cnmcaptainexplainer" text="·指挥你的小队{newline}·占据地图上的旗帜来打击敌方士气{newline}·消灭敌人全队或耗尽敌方士气来获取胜利"/>
+  <string id="idmexplainer" text="·不择手段的击杀任何人{newline}·从敌人的身上赚取金币以使用更强力兵种{newline}·总得分是衡量你战斗水平的唯一指标"/>
  </strings>
 </base>

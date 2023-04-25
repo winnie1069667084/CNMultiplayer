@@ -25,6 +25,8 @@
   <string id="str_multiplayer_scene_name.mp_sergeant_map_005" text="{=20000023}Skolder Hideout" />
   <string id="str_multiplayer_official_game_type_name.CNMSiege" text="{=cnmsiegemultiplayergametype}CNMSiege" />
   <string id="str_multiplayer_official_game_type_name.CNMCaptain" text="{=cnmcaptainasgame}CNMCaptain" />
+  <string id="str_multiplayer_official_game_type_name.IndividualDeathMatch" text="{=idmasgame}Individual Death Match" />
   <string id="str_multiplayer_official_game_type_explainer.CNMSiege" text="{=cnmsiegeexplainer}·   Use various siege engines to attack or defend control points{newline}·   Spawn points advance as control points are captured{newline}·   Successfully assault and hold the keep flag or repel the enemy to win" />
   <string id="str_multiplayer_official_game_type_explainer.CNMCaptain" text="{=cnmcaptainexplainer}·   Lead your own detachment of troops{newline}·   Hold control points on the map to deplete enemy morale{newline}·   Kill the entire enemy team or exhaust their morale to win" />
+  <string id="str_multiplayer_official_game_type_explainer.IndividualDeathMatch" text="{=idmexplainer}·   Kill anyone by hook or by crook{newline}·   Earn gold from enemies to use more powerful classes{newline}·   The total score is the only measure of your combat skill" />
 </strings>
