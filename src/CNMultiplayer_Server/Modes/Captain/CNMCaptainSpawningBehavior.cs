@@ -148,7 +148,7 @@ namespace TaleWorlds.MountAndBlade
                         {
                             formation.BannerCode = list[(num - 1) % list.Count]; //防止过多的Captain AI数组越界
                         }
-                        MultiplayerClassDivisions.MPHeroClass mPBotsHero = MultiplayerClassDivisions.GetMPHeroClasses().GetRandomElementWithPredicate((MultiplayerClassDivisions.MPHeroClass x) => x.Culture == teamCulture);
+                        MultiplayerClassDivisions.MPHeroClass mPBotsHero = MultiplayerClassDivisions.GetMPHeroClasses().GetRandomElementWithPredicate((MultiplayerClassDivisions.MPHeroClass x) => x.Culture == teamCulture && !x.HeroCharacter.IsMounted);
                         BasicCharacterObject heroCharacter = mPBotsHero.HeroCharacter;
                         AgentBuildData agentBuildData = new AgentBuildData(heroCharacter)
                             .Team(team)
