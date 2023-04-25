@@ -11,10 +11,10 @@ namespace TaleWorlds.MountAndBlade
 {
     internal class CNMCaptainSpawningBehavior : CNMSpawningBehaviorBase
     {
-        public CNMCaptainSpawningBehavior()
+        public CNMCaptainSpawningBehavior(MultiplayerRoundController roundController)
         {
             _enforcedSpawnTimers = new List<KeyValuePair<MissionPeer, Timer>>();
-            _roundController = new MultiplayerRoundController();
+            _roundController = roundController;
             _flagDominationMissionController = new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain);
         }
 
