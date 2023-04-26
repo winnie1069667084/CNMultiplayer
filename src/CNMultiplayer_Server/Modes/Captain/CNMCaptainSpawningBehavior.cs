@@ -85,6 +85,7 @@ namespace TaleWorlds.MountAndBlade
                     _roundInitialSpawnOver = true;
                     Mission.AllowAiTicking = true;
                 }
+                SetNewNumOfBotsPerFormationAndSync();
                 SpawnAgents();
                 if (_roundInitialSpawnOver && _flagDominationMissionController.GameModeUsesSingleSpawning && _spawningTimer > (float)MultiplayerOptions.OptionType.RoundPreparationTimeLimit.GetIntValue())
                 {
@@ -111,7 +112,6 @@ namespace TaleWorlds.MountAndBlade
 
         protected override void SpawnAgents()
         {
-            SetNewNumOfBotsPerFormation();
             BasicCultureObject cultureTeam1 = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam1.GetStrValue());
             BasicCultureObject cultureTeam2 = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam2.GetStrValue());
             int numberOfBotsTeam1 = MultiplayerOptions.OptionType.NumberOfBotsTeam1.GetIntValue();
@@ -295,13 +295,16 @@ namespace TaleWorlds.MountAndBlade
             }
         }
 
-        private void SetNewNumOfBotsPerFormation()
+        private void SetNewNumOfBotsPerFormationAndSync()
         {
             // 动态带兵数量，在原版1~3倍兵力间浮动，计算公式1500/（总玩家数 + 总AI数）
             int playerCount = GetCurrentPlayerCount();
             int botCount = MultiplayerOptions.OptionType.NumberOfBotsTeam1.GetIntValue() + MultiplayerOptions.OptionType.NumberOfBotsTeam2.GetIntValue();
             int newNumOfBotsPerFormation = (int)MathF.Clamp(CNMCaptainSumOfAgents / (playerCount + botCount), 25, InitialNumOfBotsPerFormation);
             MultiplayerOptions.OptionType.NumberOfBotsPerFormation.SetValue(newNumOfBotsPerFormation);
+            GameNetwork.BeginBroadcastModuleEvent();
+            GameNetwork.WriteMessage(new MultiplayerOptionsImmediate());
+            GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.IncludeUnsynchronizedClients, null);
         }
 
         private int GetCurrentPlayerCount()
@@ -436,7 +439,6 @@ namespace TaleWorlds.MountAndBlade
             base.OnClearScene();
             _enforcedSpawnTimers.Clear();
             _roundInitialSpawnOver = false;
-            SetNewNumOfBotsPerFormation();
         }
 
         protected void SpawnBotInBotFormation(int visualsIndex, Team agentTeam, BasicCultureObject cultureLimit, BasicCharacterObject character, Formation formation)
