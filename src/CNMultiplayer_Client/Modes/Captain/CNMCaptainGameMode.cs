@@ -100,6 +100,7 @@ namespace CNMultiplayer.Modes.Captain
             : new MissionBehavior[] // Client side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),
+                new CNMMissionNetworkComponent(),
                 warmupComponent,
                 new MissionMultiplayerGameModeFlagDominationClient(),
                 new MultiplayerAchievementComponent(),

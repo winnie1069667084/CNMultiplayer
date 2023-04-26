@@ -32,7 +32,7 @@ namespace CNMultiplayer.Common
         public override void AfterStart()
         {
             base.AfterStart();
-            if (_roundController != null || !_warmupComponent.IsInWarmup)
+            if (_roundController is null || !_warmupComponent.IsInWarmup)
             {
                 OnUpdateTeams += BalanceTeams;
             }
