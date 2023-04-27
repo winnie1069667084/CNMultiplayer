@@ -300,6 +300,10 @@ namespace TaleWorlds.MountAndBlade
             // 动态带兵数量，在原版1~3倍兵力间浮动，计算公式1500/（总玩家数 + 总AI数）
             int playerCount = GetCurrentPlayerCount();
             int botCount = MultiplayerOptions.OptionType.NumberOfBotsTeam1.GetIntValue() + MultiplayerOptions.OptionType.NumberOfBotsTeam2.GetIntValue();
+            if ((playerCount + botCount) == 0)
+            {
+                return;
+            }
             int newNumOfBotsPerFormation = (int)MathF.Clamp(CNMCaptainSumOfAgents / (playerCount + botCount), 25, InitialNumOfBotsPerFormation);
             MultiplayerOptions.OptionType.NumberOfBotsPerFormation.SetValue(newNumOfBotsPerFormation);
             GameNetwork.BeginBroadcastModuleEvent();
