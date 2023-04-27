@@ -120,12 +120,12 @@ namespace TaleWorlds.MountAndBlade
             if (!_haveBotsBeenSpawned && (numberOfBotsTeam1 > 0 || numberOfBotsTeam2 > 0))
             {
                 Mission.Current.AllowAiTicking = false;
-                List<string> list = new List<string> 
+                List<string> list = new List<string>
                 { "11.8.1.4345.4345.770.774.1.0.0.133.7.5.512.512.784.769.1.0.0",
                   "11.8.1.4345.4345.770.774.1.0.0.156.7.5.512.512.784.769.1.0.0",
-                  "11.8.1.4345.4345.770.774.1.0.0.155.7.5.512.512.784.769.1.0.0", 
-                  "11.8.1.4345.4345.770.774.1.0.0.158.7.5.512.512.784.769.1.0.0", 
-                  "11.8.1.4345.4345.770.774.1.0.0.118.7.5.512.512.784.769.1.0.0", 
+                  "11.8.1.4345.4345.770.774.1.0.0.155.7.5.512.512.784.769.1.0.0",
+                  "11.8.1.4345.4345.770.774.1.0.0.158.7.5.512.512.784.769.1.0.0",
+                  "11.8.1.4345.4345.770.774.1.0.0.118.7.5.512.512.784.769.1.0.0",
                   "11.8.1.4345.4345.770.774.1.0.0.149.7.5.512.512.784.769.1.0.0" };
                 foreach (Team team in Mission.Teams)
                 {
@@ -300,6 +300,10 @@ namespace TaleWorlds.MountAndBlade
             // 动态带兵数量，在原版1~3倍兵力间浮动，计算公式1500/（总玩家数 + 总AI数）
             int playerCount = GetCurrentPlayerCount();
             int botCount = MultiplayerOptions.OptionType.NumberOfBotsTeam1.GetIntValue() + MultiplayerOptions.OptionType.NumberOfBotsTeam2.GetIntValue();
+            if ((playerCount + botCount) == 0)
+            {
+                return;
+            }
             int newNumOfBotsPerFormation = (int)MathF.Clamp(CNMCaptainSumOfAgents / (playerCount + botCount), 25, InitialNumOfBotsPerFormation);
             MultiplayerOptions.OptionType.NumberOfBotsPerFormation.SetValue(newNumOfBotsPerFormation);
             GameNetwork.BeginBroadcastModuleEvent();
