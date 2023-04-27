@@ -2,11 +2,12 @@
 <Module>
     <Name value="CN Multiplayer"/>
     <Id value="CNMultiplayer"/>
-    <Version value="v1.1.3.8"/>
+    <Version value="v1.1.3.10"/>
 	<DefaultModule value="true"/>
 	<ModuleCategory value="MultiplayerOptional"/>
 	<DependedModules>
     	<DependedModule Id="Native" />
+		<DependedModule Id="Multiplayer" />
   	</DependedModules>
 	<SubModules>
     	<SubModule>

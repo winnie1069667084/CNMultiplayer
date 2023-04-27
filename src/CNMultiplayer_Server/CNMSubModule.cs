@@ -1,6 +1,7 @@
 ﻿using ChatCommands;
 using CNMultiplayer.Common;
 using CNMultiplayer.Modes.Captain;
+using CNMultiplayer.Modes.IndividualDeathMatch;
 using CNMultiplayer.Modes.Siege;
 using HarmonyLib;
 using Newtonsoft.Json;
@@ -24,6 +25,7 @@ namespace CNMultiplayer
             _ = new ChatCommands.CommandManager();
             Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
             Module.CurrentModule.AddMultiplayerGameMode(new CNMCaptainGameMode());
+            Module.CurrentModule.AddMultiplayerGameMode(new IDMGameMode());
         }
 
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)

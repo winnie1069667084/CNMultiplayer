@@ -239,10 +239,7 @@ namespace CNMultiplayer.Common
             if (SpawningDelayTimer >= SpawningEndDelay && !_hasCalledSpawningEnded)
             {
                 Mission.Current.AllowAiTicking = true;
-                if (this.OnSpawningEnded != null)
-                {
-                    this.OnSpawningEnded();
-                }
+                OnSpawningEnded?.Invoke();
                 _hasCalledSpawningEnded = true;
             }
             SpawningDelayTimer += dt;

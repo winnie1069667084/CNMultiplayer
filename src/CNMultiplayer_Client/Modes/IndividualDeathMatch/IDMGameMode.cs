@@ -1,62 +1,49 @@
-﻿using CNMultiplayer.Modes.Warmup;
+﻿using CNMultiplayer.Common;
+using CNMultiplayer.Modes.Warmup;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
-using CNMultiplayer.Common;
 
 #if CLIENT
-using TaleWorlds.MountAndBlade.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
+using TaleWorlds.MountAndBlade.View.MissionViews;
 #endif
 
-namespace CNMultiplayer.Modes.Captain
+namespace CNMultiplayer.Modes.IndividualDeathMatch
 {
-
 #if CLIENT
     [ViewCreatorModule] // Exposes methods with ViewMethod attribute.
 #endif
-
-    internal class CNMCaptainGameMode : MissionBasedMultiplayerGameMode
+    internal class IDMGameMode : MissionBasedMultiplayerGameMode
     {
-        private const string GameName = "CNMCaptain";
+        private const string GameName = "IndividualDeathMatch";
 
-        public CNMCaptainGameMode()
-            : base(GameName)
-        { }
+        public IDMGameMode() : base(GameName) { }
 
 #if CLIENT
         [ViewMethod(GameName)]
-        public static MissionView[] OpenCNMCaptain(Mission mission)
+        public static MissionView[] OpenIDM(Mission mission)
         {
             return new[]
             {
                 ViewCreator.CreateMissionServerStatusUIHandler(),
-                ViewCreator.CreateMultiplayerFactionBanVoteUIHandler(), // None Native
                 ViewCreator.CreateMissionMultiplayerPreloadView(mission),
+                ViewCreator.CreateMissionMultiplayerFFAView(),
                 ViewCreator.CreateMissionKillNotificationUIHandler(),
                 ViewCreator.CreateMissionAgentStatusUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentEquipmentController(mission),
-                ViewCreator.CreateMultiplayerMissionOrderUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentCheerBarkControllerView(mission),
-                ViewCreator.CreateMissionMultiplayerEscapeMenu("Captain"),
-                ViewCreator.CreateOrderTroopPlacerView(mission),
+                ViewCreator.CreateMissionMultiplayerEscapeMenu("FreeForAll"),
                 ViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
-                ViewCreator.CreateMissionAgentLabelUIHandler(mission),
-                ViewCreator.CreateMultiplayerTeamSelectUIHandler(),
-                ViewCreator.CreateMissionScoreBoardUIHandler(mission, isSingleTeam: false),
-                ViewCreator.CreateMultiplayerEndOfRoundUIHandler(),
+                ViewCreator.CreateMissionScoreBoardUIHandler(mission, true),
                 ViewCreator.CreateLobbyEquipmentUIHandler(),
                 ViewCreator.CreatePollProgressUIHandler(),
                 ViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
-                ViewCreator.CreateMultiplayerMissionDeathCardUIHandler(),
-                ViewCreator.CreateMissionFlagMarkerUIHandler(), // Draw flags when pressing ALT.
+                ViewCreator.CreateMultiplayerMissionDeathCardUIHandler(null),
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
                 ViewCreator.CreateMissionBoundaryCrossingView(),
-                new MissionItemContourControllerView(), // Draw contour of item on the ground when pressing ALT.
-                new MissionAgentContourControllerView(),
-                new MissionBoundaryWallView(),
-                new SpectatorCameraView(), // None Native
+                new MissionBoundaryWallView()
             };
         }
 #endif
@@ -72,14 +59,12 @@ namespace CNMultiplayer.Modes.Captain
             ? new MissionBehavior[] // Server side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),
-                new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain),
-                roundController,
-                new SpawnComponent(new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior(roundController)),
-                warmupComponent,
-                new MissionMultiplayerGameModeFlagDominationClient(),
+                new IDMServer(),
+                new MissionMultiplayerFFAClient(),
                 new MultiplayerTimerComponent(),
                 new MultiplayerMissionAgentVisualSpawnComponent(),
                 new ConsoleMatchStartEndHandler(),
+                new SpawnComponent(new FFASpawnFrameBehavior(), new CNMWarmupSpawningBehavior()),
                 new MissionLobbyEquipmentNetworkComponent(),
                 new CNMTeamSelectComponent(warmupComponent, roundController),
                 new MissionHardBorderPlacer(),
@@ -89,9 +74,8 @@ namespace CNMultiplayer.Modes.Captain
                 new MultiplayerAdminComponent(),
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
-                new MissionScoreboardComponent(new CaptainScoreboardData()),
+                new MissionScoreboardComponent(new FFAScoreboardData()),
                 new MissionAgentPanicHandler(),
-                new AgentVictoryLogic(),
                 new AgentHumanAILogic(),
                 new EquipmentControllerLeaveLogic(),
                 new MultiplayerPreloadHelper()
@@ -100,11 +84,9 @@ namespace CNMultiplayer.Modes.Captain
             : new MissionBehavior[] // Client side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),
-                warmupComponent,
-                new MissionMultiplayerGameModeFlagDominationClient(),
+                new MissionMultiplayerFFAClient(),
                 new MultiplayerAchievementComponent(),
                 new MultiplayerTimerComponent(),
-                new MultiplayerRoundComponent(),
                 new MultiplayerMissionAgentVisualSpawnComponent(),
                 new ConsoleMatchStartEndHandler(),
                 new MissionLobbyEquipmentNetworkComponent(),
@@ -115,11 +97,9 @@ namespace CNMultiplayer.Modes.Captain
                 new MultiplayerPollComponent(),
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
-                new MissionScoreboardComponent(new CaptainScoreboardData()),
-                new MissionMatchHistoryComponent(),
+                new MissionScoreboardComponent(new FFAScoreboardData()),
                 new EquipmentControllerLeaveLogic(),
                 new MissionRecentPlayersComponent(),
-                new AgentVictoryLogic(),
                 new MultiplayerPreloadHelper()
             }
             );

@@ -40,25 +40,25 @@ namespace HarmonyPatches
             }
             return true;
         }
+    }
 
-        [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "SelectRandomMap")]//循环地图池中的地图(随机初次启动服务器的地图)
-        internal class Patch_SelectRandomMap
+    [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "SelectRandomMap")]//循环地图池中的地图(随机初次启动服务器的地图)
+    internal class Patch_SelectRandomMap
+    {
+        private static bool isRandom = true;
+        private static int randomint = int.MaxValue;
+        public static bool Prefix(List<string> ____automatedMapPool)
         {
-            private static bool isRandom = true;
-            private static int randomint = int.MaxValue;
-            public static bool Prefix(List<string> ____automatedMapPool)
+            if (isRandom || randomint < 0)
             {
-                if (isRandom || randomint < 0)
-                {
-                    randomint = new Random().Next(1000 * ____automatedMapPool.Count, int.MaxValue);
-                    isRandom = false;
-                }
-                int cycle = randomint % ____automatedMapPool.Count;
-                string value = ____automatedMapPool[cycle];
-                MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.Map).UpdateValue(value);
-                randomint--;
-                return false;
+                randomint = new Random().Next(1000 * ____automatedMapPool.Count, int.MaxValue);
+                isRandom = false;
             }
+            int cycle = randomint % ____automatedMapPool.Count;
+            string value = ____automatedMapPool[cycle];
+            MultiplayerOptions.Instance.GetOptionFromOptionType(MultiplayerOptions.OptionType.Map).UpdateValue(value);
+            randomint--;
+            return false;
         }
     }
 }
