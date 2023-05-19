@@ -18,7 +18,7 @@ namespace TaleWorlds.MountAndBlade
             _flagDominationMissionController = new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain);
         }
 
-        public const int CNMCaptainSumOfAgents = 1500; //最大agent数
+        public const int CNMCaptainSumOfAgents = 2000; //最大agent数
 
         public static int InitialNumOfBotsPerFormation = MultiplayerOptions.OptionType.NumberOfBotsPerFormation.GetIntValue();
 
@@ -304,7 +304,7 @@ namespace TaleWorlds.MountAndBlade
             {
                 return;
             }
-            int newNumOfBotsPerFormation = (int)MathF.Clamp(CNMCaptainSumOfAgents / (playerCount + botCount), 25, InitialNumOfBotsPerFormation);
+            int newNumOfBotsPerFormation = (int)MathF.Clamp(CNMCaptainSumOfAgents / (playerCount + botCount), 20, InitialNumOfBotsPerFormation);
             MultiplayerOptions.OptionType.NumberOfBotsPerFormation.SetValue(newNumOfBotsPerFormation);
             GameNetwork.BeginBroadcastModuleEvent();
             GameNetwork.WriteMessage(new MultiplayerOptionsImmediate());
