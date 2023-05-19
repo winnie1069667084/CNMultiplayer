@@ -53,6 +53,7 @@ namespace CNMultiplayer.Modes.Captain
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
                 ViewCreator.CreateMissionBoundaryCrossingView(),
+                ViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(),
                 new MissionItemContourControllerView(), // Draw contour of item on the ground when pressing ALT.
                 new MissionAgentContourControllerView(),
                 new MissionBoundaryWallView(),
@@ -94,6 +95,7 @@ namespace CNMultiplayer.Modes.Captain
                 new AgentVictoryLogic(),
                 new AgentHumanAILogic(),
                 new EquipmentControllerLeaveLogic(),
+                new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             }
 
@@ -120,6 +122,7 @@ namespace CNMultiplayer.Modes.Captain
                 new EquipmentControllerLeaveLogic(),
                 new MissionRecentPlayersComponent(),
                 new AgentVictoryLogic(),
+                new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             }
             );
