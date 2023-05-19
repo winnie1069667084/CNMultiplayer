@@ -51,6 +51,7 @@ namespace CNMultiplayer.Modes.Siege
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
                 ViewCreator.CreateMissionBoundaryCrossingView(),
+                ViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(),
                 new MissionItemContourControllerView(), // Draw contour of item on the ground when pressing ALT.
                 new MissionAgentContourControllerView(),
                 new MissionBoundaryWallView(),
@@ -90,6 +91,7 @@ namespace CNMultiplayer.Modes.Siege
                 new MissionAgentPanicHandler(),
                 new AgentHumanAILogic(),
                 new EquipmentControllerLeaveLogic(),
+                new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             }
 
@@ -114,6 +116,7 @@ namespace CNMultiplayer.Modes.Siege
                 new MissionMatchHistoryComponent(),
                 new EquipmentControllerLeaveLogic(),
                 new MissionRecentPlayersComponent(),
+                new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             });
         }
