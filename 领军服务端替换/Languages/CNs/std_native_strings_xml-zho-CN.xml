@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-16"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+ <tags>
+  <tag language="简体中文"/>
+ </tags>
+ <strings>
+  <string id="20000001" text="旗子没了！守旗！"/>
+  <string id="20000002" text="有人偷点！"/>
+  <string id="20000003" text="多上步兵！谢谢！"/>
+  <string id="20000004" text="失误了，对不起！"/>
+  <string id="20000005" text="收到！马上来！"/>
+  <string id="20000006" text="你真该死啊！"/>
+  <string id="20000007" text="来点人跟我走！"/>
+  <string id="20000008" text="摆盾墙堵窄口！"/>
+  <string id="20000009" text="步兵集合冲点！"/>
+  <string id="20000010" text="突比力斯堡"/>
+  <string id="20000011" text="新岩临城"/>
+  <string id="20000012" text="艾卡尔"/>
+  <string id="20000013" text="腓特烈堡"/>
+  <string id="20000014" text="哈得斯"/>
+  <string id="20000015" text="林间城寨"/>
+  <string id="20000016" text="纽伦堡"/>
+  <string id="20000017" text="黑尔斯堡"/>
+  <string id="20000018" text="贾梅耶德堡"/>
+  <string id="20000019" text="要塞"/>
+  <string id="20000020" text="塔尔木堡"/>
+  <string id="20000021" text="银之斯卡里茨"/>
+  <string id="20000022" text="昔白戈阻塞地"/>
+  <string id="20000023" text="护盾兄弟会藏身处"/>
+  <string id="cnmsiegemultiplayergametype" text="CNM攻城战"/>
+  <string id="cnmcaptainasgame" text="大规模领军"/>
+  <string id="idmasgame" text="个人竞技"/>
+  <string id="cnmsiegeexplainer" text="·使用各类围城器械攻击或防守旗帜{newline}·在旗帜附近获取金币或回血{newline}·重生点随着旗帜的移除而向前推进{newline}·控制主旗帜或挫败敌人的士气来获取胜利"/>
+  <string id="cnmcaptainexplainer" text="·指挥你的小队{newline}·占据地图上的旗帜来打击敌方士气{newline}·消灭敌人全队或耗尽敌方士气来获取胜利"/>
+  <string id="idmexplainer" text="·不择手段的击杀任何人{newline}·从敌人的身上赚取金币以使用更强力兵种{newline}·总得分是衡量你战斗水平的唯一指标"/>
+ </strings>
+</base>

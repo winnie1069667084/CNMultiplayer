@@ -849,14 +849,6 @@
                        slot="Item0"
                        item="mp_vlandian_heavy_lance" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <!-- EMPIRE -->
@@ -1313,14 +1305,6 @@
                        slot="Item2"
                        item="mp_arrows_barbed_strong" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_empire"
@@ -1539,17 +1523,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_empire_heavy_menavlion" /> 
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_menavlion" /> 
       </Perk>
       <Perk game_mode="all"
             name="{=fAnbXffX}Cavalry Spear"
@@ -1877,6 +1850,9 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="9" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain"/>
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_eastern_studded_shoulders"
                        target="Player" />
@@ -1916,6 +1892,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_khuzait_heavy_mace" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain" />
       </Perk>
       <Perk game_mode="all"
             name="{=4YTJJaTG}Heavy Sabre"
@@ -1925,6 +1904,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_khuzait_heavy_sabre" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -2056,14 +2038,6 @@
                        slot="Item1"
                        item="mp_arrows_steppe_strong" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_khuzait"
@@ -2130,14 +2104,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_arrows_steppe_extra" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
       </Perk>
       <Perk game_mode="all"
             name="{=vyI2KVKM}Bullseye"
@@ -2253,17 +2219,6 @@
 						   slot="Item0"
 						   item="mp_khuzait_glaive" />
 		</Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-		<OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						slot="Item0"
-						item="mp_khuzait_glaive" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_horse_archer_khuzait"
@@ -2642,17 +2597,6 @@
                        slot="Item1"
                        item="mp_aserai_axe" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=cap00010}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="1">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-		  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						 slot="Item3"
-						 item="mp_emirs_oval_shield" />
-      </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=v2WKbNZo}Rapid Throws"
@@ -2898,14 +2842,6 @@
         <Effect type="DamageTaken"
                 value="-0.35"
                 hit_type="Ranged" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
       </Perk>
       <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
@@ -3892,14 +3828,6 @@
                        slot="Item1"
                        item="mp_arrows_bodkin_strong" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_cavalry_sturgia"
@@ -4083,17 +4011,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_northern_scouts_shield" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_twohanded_axe" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -4817,14 +4734,6 @@
                        slot="Item2"
                        item="mp_arrows_bodkin_strong" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_battania"
@@ -5094,6 +5003,752 @@
                        slot="Item3"
                        item="mp_battania_long_sword" />
 	  </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_aserai_veteran_infantry"
+                   hero="mp_aserai_veteran_infantry_hero"
+                   troop="mp_aserai_veteran_infantry_troop"
+                   hero_idle_anim="act_aserai_mp_tribal_warrior_idle"
+                   troop_idle_anim="act_idle_1h_with_shield_1"
+                   multiplier="0.55"
+                   cost="160"
+                   casual_cost="150"
+                   battle_cost="150"
+                   icon="Infantry_Heavy"
+                   melee_ai="300"
+                   ranged_ai="50"
+                   armor="50"
+                   movement_speed="0.80"
+                   combat_movement_speed="0.9"
+                   acceleration="2.4"
+                   hitpoints="100">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=FLBYsvxp}Long Sword"
+            description="{=BHXqTA0N}Replaces Flyssa with Kaskara, longer and deals more damage."
+            icon="PerkBetterSwords"
+            perk_list="1">
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=P1VHoGL2}Tribesmen"
+            description="{=F2J9upsv}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+5% Damage with Melee Weapons"
+            icon="PerkGeneral"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DrivenProperty"
+                    driven_property="MaxSpeedMultiplier"
+                    value="0.05" />
+          </Effects>
+        </ConditionalEffect>
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_mamluke_palace_guard"
+                   hero="mp_mamluke_palace_guard_hero"
+                   troop="mp_mamluke_palace_guard_troop"
+                   hero_idle_anim="act_aserai_mp_guard_idle"
+                   troop_idle_anim="act_idle_spear_1"
+                   multiplier="0.46"
+                   cost="130"
+                   icon="Special_Axeman"
+                   melee_ai="300"
+                   ranged_ai="50"
+                   armor="45"
+                   movement_speed="0.82"
+                   combat_movement_speed="0.9"
+                   acceleration="2.4"
+                   hitpoints="100">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=IUsT27oV}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="7" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=rJFGyaBS}Moloch"
+            description="{=FK3jA1pT}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+33% Speed Bonus Damage on Foot {newline}+100% Bonus Damage on Shields"
+            icon="PerkFightingMadness"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="SpeedBonus"
+                    value="1.33"
+                    is_ratio="true" />
+            <Effect type="ShieldDamage"
+                    value="1.0" />
+          </Effects>
+        </ConditionalEffect>
+      </Perk>
+      <Perk game_mode="all"
+            name="{=du7l3z5b}Sturdy"
+            description="{=oZ9KbXPI}You were born tougher than most, you are harder to kill.{newline} {newline}-15% Damage Taken from Melee Attacks."
+            icon="PerkToughness"
+            perk_list="2">
+        <Effect type="DamageTaken"
+                value="-0.15"
+                hit_type="Melee" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=0TtCRwmr}Athletic"
+            description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="0.07"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_aserai_vanguard_faris"
+                   hero="mp_aserai_vanguard_faris_hero"
+                   troop="mp_aserai_vanguard_faris_hero"
+                   hero_mount_idle_anim="act_aserai_mp_mamluke_mount_idle"
+                   troop_mount_idle_anim="act_horse_idle_1"
+                   multiplier="0.20"
+                   cost="200"
+                   casual_cost="300"
+                   icon="Cavalry_Heavy"
+                   melee_ai="330"
+                   ranged_ai="160"
+                   armor="79"
+                   movement_speed="0.79"
+                   combat_movement_speed="0.7"
+                   acceleration="2.8">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=7sWKjye0}Faster Horse"
+            description="{=OjaeHZVO}Replaces mount with a faster horse."
+            icon="PerkFasterHorses"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_aserai_horse_war_faster" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=cfSgK0nk}Agile Horse"
+            description="{=6bdcoGI1}Replaces mount with a faster and more maneuverable horse."
+            icon="PerkAgileHorses"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Horse"
+                       item="mp_aserai_horse_war_agile" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=WapSyVbv}Full Barding"
+            description="{=qwnHqTdO}Upgrades your horses armor."
+            icon="PerkFullBarding"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="HorseHarness"
+                       item="mp_mail_and_plate_barding" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_sturgian_ulfhednar"
+                   hero="mp_sturgian_ulfhednar_hero"
+                   troop="mp_sturgian_ulfhednar_troop"
+                   hero_idle_anim="act_sturgia_mp_ulfhednar_idle"
+                   troop_idle_anim="act_idle_2h_1"
+                   multiplier="0.47"
+                   cost="130"
+                   casual_cost="140"
+                   icon="Special_Axeman"
+                   melee_ai="250"
+                   ranged_ai="50"
+                   armor="42"
+                   movement_speed="0.82"
+                   combat_movement_speed="0.9"
+                   acceleration="2.4"
+                   hitpoints="100">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=KXwN1PW4}Great Axe"
+            description="{=RV6BCPvg}Replaces Axe with a longer and heavier axe. Extra effective against shields."
+            icon="PerkTwoHandedAxe"
+            perk_list="1">
+      </Perk>
+      <Perk game_mode="all"
+            name="{=HoVaJ0BH}Two Handed Maul"
+            description="{=DZ2g8IZr}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
+            icon="PerkTwoHandedMaul"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_sturgia_twohanded_hammer" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=DeWp2GjP}Shield Breaker"
+            description="{=JxDrcvDO}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+100% Damage to Shields"
+            icon="PerkShieldSplitterAxes"
+            perk_list="2">
+        <Effect type="ShieldDamage"
+                value="1.0" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=vHIIkFQF}Blood Rage"
+            description="{=2NofSpJ0}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+5% Damage per 20 Hitpoints lost{newline}-5% Damage Taken from Melee Attacks per 20 Hitpoints lost"
+            icon="PerkBloodRage"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="80" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="60" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="40" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="20" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+      </Perk>
+      <Perk game_mode="all"
+            name="{=0TtCRwmr}Athletic"
+            description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_sturgian_veteran_bowman"
+                   hero="mp_sturgian_veteran_bowman_hero"
+                   troop="mp_sturgian_veteran_bowman_troop"
+                   hero_idle_anim="act_sturgia_mp_hunter_idle"
+                   troop_idle_anim=""
+                   multiplier="0.52"
+                   cost="120"
+                   casual_cost="130"
+                   battle_cost="140"
+                   icon="Archer_Heavy"
+                   melee_ai="40"
+                   ranged_ai="180"
+                   armor="30"
+                   movement_speed="0.76"
+                   combat_movement_speed="0.9"
+                   acceleration="2.4">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=aeWqECxF}Faster Longbow"
+            description="{=qzm0fL63}Grants Longbow, made from flexible wood, this bow can be drawn a lot quicker."
+            icon="PerkShortBows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_hunting_long_bow"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_hunting_long_bow"
+                       target="Troops" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=E7WWiQCf}Range Longbow"
+            description="{=QJo0xake}Grants Longbow, made from strong wood, makes this bow shoot especially fast and far."
+            icon="PerkLongBows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_lowland_long_bow"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_lowland_long_bow"
+                       target="Troops" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=C9ufRSsL}Sword and Shield"
+            description="{=b6D2xgke}Grants Sword and Shield, makes blocking easier, making you effective in melee. {newline} {newline}Grants Northern Sword{newline}Grants Round Shield {newline}Grants +5% movement speed"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <Effect type="DrivenProperty"
+                driven_property="MaxSpeedMultiplier"
+                value="0.05" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_northern_round_shield" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_sturgia_northern_sword" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=eQLORdgE}Extra Arrows"
+            description="{=0yGhTKey}Grants Extra Arrows."
+            icon="PerkWellSupplied"
+            perk_list="2">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_arrows_barbed_extra" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=CePmep0z}Poacher"
+            description="{=MW6PtdCh}Your experience as a Poacher allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
+            icon="PerkHorseHunters"
+            perk_list="2">
+        <Effect type="MountDamage"
+                value="0.50" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_arrows_bodkin_strong" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_khuzait_darkhan"
+                   hero="mp_khuzait_darkhan_hero"
+                   troop="mp_khuzait_darkhan_troop"
+                   hero_idle_anim="act_khuzait_mp_spear_infantry_idle"
+                   troop_idle_anim="act_idle_1h_with_shield_1"
+                   multiplier="0.50"
+                   cost="130"
+                   icon="Infantry_Heavy"
+                   melee_ai="300"
+                   ranged_ai="150"
+                   armor="55"
+                   movement_speed="0.80"
+                   combat_movement_speed="0.9"
+                   acceleration="2.0">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=VI4gQt8Q}Mace"
+            description="{=7I7fd6OQ}Grants Heavy Mace, effective against armored opponents."
+            icon="PerkMaces"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_khuzait_heavy_mace" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=4YTJJaTG}Heavy Sabre"
+            description="{=7dQz83TL}Grants a heavy Sabre, longer and deals more damage."
+            icon="PerkSword"
+            perk_list="1">
+      </Perk>
+    </Perks>
+  </MPClassDivision> 
+  <MPClassDivision id="mp_khuzait_khans_guard"
+                   hero="mp_khuzait_khans_guard_hero"
+                   troop="mp_khuzait_khans_guard_troop"
+                   hero_mount_idle_anim="act_khuzait_mp_mounted_archer_mount_idle"
+                   troop_mount_idle_anim="act_horse_idle_1"
+                   multiplier="0.22"
+                   cost="150"
+                   casual_cost="220"
+                   battle_cost="160"
+                   icon="HorseArcher_Heavy"
+                   melee_ai="150"
+                   ranged_ai="160"
+                   armor="52"
+                   movement_speed="0.73"
+                   combat_movement_speed="0.6"
+                   acceleration="2.8">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=d7Z3ka1m}Better Bow"
+            description="{=10u6mqIX}Replaces Nomad Short Bow with Recurved Bow, deals more damage, but is slower."
+            icon="PerkRecurveBow"
+            perk_list="1">
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=PzgDEcZ5}Mounted Marksman"
+            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
+            icon="PerkSharpshooters"
+            perk_list="2">
+        <Effect type="RangedHeadShotDamage"
+                value="0.1" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_steppe_strong" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_bucellarii"
+                   hero="mp_bucellarii_hero"
+                   troop="mp_bucellarii_troop"
+                   hero_mount_idle_anim="act_khuzait_mp_mounted_archer_mount_idle"
+                   troop_mount_idle_anim="act_horse_idle_1"
+                   multiplier="0.40"
+                   cost="150"
+                   casual_cost="220"
+                   battle_cost="160"
+                   icon="HorseArcher_Light"
+                   melee_ai="150"
+                   ranged_ai="160"
+                   armor="32"
+                   movement_speed="0.73"
+                   combat_movement_speed="0.6"
+                   acceleration="2.8">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=d7Z3ka1m}Better Bow"
+            description="{=10u6mqIX}Replaces Nomad Short Bow with Recurved Bow, deals more damage, but is slower."
+            icon="PerkRecurveBow"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_recurve_bow" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=PzgDEcZ5}Mounted Marksman"
+            description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
+            icon="PerkSharpshooters"
+            perk_list="2">
+        <Effect type="RangedHeadShotDamage"
+                value="0.1" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_arrows_steppe_strong" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_imperial_elite_menavliaton"
+                   hero="mp_imperial_elite_menavliaton_hero"
+                   troop="mp_imperial_elite_menavliaton_troop"
+                   hero_idle_anim="act_empire_mp_menavlion_infantry_idle"
+                   troop_idle_anim="act_idle_spear_1"
+                   multiplier="0.51"
+                   cost="120"
+                   casual_cost="130"
+                   icon="Special_Axeman"
+                   melee_ai="250"
+                   ranged_ai="50"
+                   armor="45"
+                   movement_speed="0.82"
+                   combat_movement_speed="0.9"
+                   acceleration="2.4"
+                   hitpoints="100">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=IUsT27oV}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_pilum" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=E1bKcoaT}Cavalry Breaker"
+            description="{=cap00005}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}+125% Damage to Mounts with Melee Weapons{newline}+75% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
+            icon="PerkHorseHunters"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="SpeedBonus"
+                    value="0.75"
+                    hit_type="Melee"
+                    damage_type="Pierce" />
+            <Effect type="MountDamage"
+                    hit_type="Melee"
+                    value="1.25" />
+          </Effects>
+        </ConditionalEffect>
+      </Perk>
+      <Perk game_mode="all"
+            name="{=DeWp2GjP}Shield Breaker"
+            description="{=JxDrcvDO}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+100% Damage to Shields"
+            icon="PerkShieldSplitterAxes"
+            perk_list="2">
+        <Effect type="ShieldDamage"
+                value="1.0" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=Pnzm9fvH}Armor Padding"
+            description="{=M5BDshPv}Your padded armor lowers the impact of blunt weapons.{newline} {newline}-40% Damage Taken from Blunt Weapons"
+            icon="PerkArmorUpgrade"
+            perk_list="2">
+        <Effect type="DamageTaken"
+                value="-0.4"
+                damage_type="Blunt" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_battanian_fian_champion"
+                   hero="mp_battanian_fian_champion_hero"
+                   troop="mp_battanian_fian_champion_troop"
+                   hero_idle_anim="act_battania_mp_fian_idle"
+                   troop_idle_anim="act_idle_bow_1"
+                   multiplier="0.35"
+                   cost="160"
+                   casual_cost="170"
+                   battle_cost="180"
+                   icon="Archer_Heavy"
+                   melee_ai="330"
+                   ranged_ai="330"
+                   armor="52"
+                   movement_speed="0.77"
+                   combat_movement_speed="0.9"
+                   acceleration="2.4">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=aeWqECxF}Faster Longbow"
+            description="{=rc3a4QFp}Grants longbow, made from flexible wood, this bow can be drawn a lot quicker."
+            icon="PerkShortBows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_woodland_long_bow"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_woodland_long_bow"
+                       target="Troops" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=E7WWiQCf}Range Longbow"
+            description="{=XyrRqfb6}Grants longbow, made from strong wood, makes this bow shoot especially fast and far."
+            icon="PerkLongBows"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_yeow_long_bow"
+                       target="Player" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_yeow_long_bow"
+                       target="Troops" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=eQLORdgE}Extra Arrows"
+            description="{=0yGhTKey}Grants Extra Arrows."
+            icon="PerkWellSupplied"
+            perk_list="2">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_arrows_bodkin_extra" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=xnDWqYKW}Hunter"
+            description="{=URPm3XjU}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
+            icon="PerkHunter"
+            perk_list="2">
+        <Effect type="MountDamage"
+                value="0.50"
+                hit_type="Ranged" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_arrows_bodkin_strong" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=Ty7PjLFt}Frontliner"
+            description="{=AApw8sqj}Your experience as a Frontliner allows you fight better in melee.{newline} {newline}Grants Better Twohanded Sword{newline} {newline}+5% Movement Speed {newline}-60% Moving Accuracy Penalty"
+            icon="PerkLongerSwords"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="DrivenProperty"
+                    driven_property="MaxSpeedMultiplier"
+                    value="0.05" />
+            <Effect type="DrivenProperty"
+                    value="-0.6"
+                    driven_property="WeaponWorstMobileAccuracyPenalty"
+                    is_ratio="true" />
+          </Effects>
+        </ConditionalEffect>
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_battania_noble_two_handed_sword" />
+      </Perk>
+    </Perks>
+  </MPClassDivision>
+  <MPClassDivision id="mp_battanian_veteran_falxman"
+                   hero="mp_battanian_veteran_falxman_hero"
+                   troop="mp_battanian_veteran_falxman_troop"
+                   hero_idle_anim="act_battania_mp_savage_idle"
+                   troop_idle_anim="act_idle_unarmed_1"
+                   multiplier="0.54"
+                   cost="110"
+                   casual_cost="120"
+                   icon="Special_Falxman"
+                   melee_ai="250"
+                   ranged_ai="50"
+                   armor="35"
+                   movement_speed="0.82"
+                   combat_movement_speed="0.9"
+                   acceleration="2.4"
+                   hitpoints="100">
+    <Perks>
+      <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=cap00016}Provides +15 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="15" />
+      </Perk>
+      <!-- Second perks-->
+      <Perk game_mode="all"
+            name="{=0TtCRwmr}Athletic"
+            description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="0.07"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+      </Perk>
+      <Perk game_mode="all"
+            name="{=vHIIkFQF}Blood Rage"
+            description="{=2NofSpJ0}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+5% Damage per 20 Hitpoints lost{newline}-5% Damage Taken from Melee Attacks per 20 Hitpoints lost"
+            icon="PerkBloodRage"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="80" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="60" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="40" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="Health"
+                       max="20" />
+          </Conditions>
+          <Effects>
+            <Effect type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            <Effect type="DamageTaken"
+                    value="-0.05"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+      </Perk>
+      <Perk game_mode="all"
+            name="{=AW8XDIIP}Thick Skin"
+            description="{=FLKxfaGn}A thick layer of muscles protects you from bruises.{newline} {newline}-20% Blunt damage taken"
+            icon="PerkToughness"
+            perk_list="2">
+        <Effect type="DamageTaken"
+                value="-0.20"
+                damage_type="Blunt" />
+      </Perk>
     </Perks>
   </MPClassDivision>
 </MPClassDivisions>
