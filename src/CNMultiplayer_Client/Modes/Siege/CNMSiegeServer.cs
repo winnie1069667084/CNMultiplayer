@@ -63,7 +63,7 @@ namespace CNMultiplayer.Modes.Siege
 
         private const float ObjectiveCheckPeriod = 0.25f;
 
-        private const float MoraleTickTimeInSeconds = 3.5f; //士气Tick
+        private const float MoraleTickTimeInSeconds = 2f; //士气Tick
 
         private const float HealTick = 1f; //旗帜回血Tick
 
