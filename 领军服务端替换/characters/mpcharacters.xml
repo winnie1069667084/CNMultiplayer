@@ -5852,1127 +5852,1343 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
- <!--Aserai Veteran Infantry-->
-  <NPCCharacter id="mp_aserai_veteran_infantry_hero"
+  <!--瓦兰迪亚飞斧手-->
+  <NPCCharacter id="mp_skirmisher_vlandia_hero"
                 default_group="Infantry"
-                level="25"
-                name="{=capc0011}Aserai Veteran Infantry"
-                occupation="Soldier"
-                culture="Culture.aserai">
-    <face>
-      <!--face_key value="40.96;0.5333;0.5864;1CC40E4EFC0000;100000000080000;0;6650003;9800509000000;0;0;300000" max_value="87.1;0.5864;1;2DFC0FDA003754;FFFFFFFFAE79FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;F9FFA0FFFFEFF;0;0;409183"/-->
-      <BodyProperties version="4"
-                      age="40.96"
-                      weight="0.5333"
-                      build="0.5864"
-                      key="001CC40E4EFC00000100000000080000000000000000000000000000066500030009800509000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="47.1"
-                         weight="0.5864"
-                         build="1"
-                         key="002DFC0FDA003754FFFFFFFFAE79FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF000F9FFA0FFFFEFF000000000000000000000000000000000000000001189183" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="50" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-		<equipment slot="Item0"
-			       id="Item.aserai_sword_4_t4" />
-        <equipment slot="Item1"
-				   id="Item.mp_heavy_oval_shield" />
-		<equipment slot="Item2"
-				   id="Item.eastern_spear_4_t4" />
-		<equipment slot="Item3"
-				   id="Item.mp_jereed_captain" />
-		<equipment slot="Head"
-				   id="Item.closed_desert_helmet_with_mail" />
-		<equipment slot="Body"
-				   id="Item.desert_lamellar" />
-		<equipment slot="Leg"
-				   id="Item.plated_strip_boots" />
-		<equipment slot="Cape"
-				   id="Item.a_aserai_scale_b_shoulder_c" />
-		<equipment slot="Gloves"
-				   id="Item.reinforced_mail_mitten" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_aserai_veteran_infantry_troop"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0011}Aserai Veteran Infantry"
-                occupation="Soldier"
-                culture="Culture.aserai">
-    <face>
-      <!--face_key value="40.96;0.5333;0.5864;1CC40E4EFC0000;100000000080000;0;6650003;9800509000000;0;0;300000" max_value="87.1;0.5864;1;2DFC0FDA003754;FFFFFFFFAE79FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;F9FFA0FFFFEFF;0;0;409183"/-->
-      <BodyProperties version="4"
-                      age="40.96"
-                      weight="0.5333"
-                      build="0.5864"
-                      key="001CC40E4EFC00000100000000080000000000000000000000000000066500030009800509000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="47.1"
-                         weight="0.5864"
-                         build="1"
-                         key="002DFC0FDA003754FFFFFFFFAE79FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF000F9FFA0FFFFEFF000000000000000000000000000000000000000001189183" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="200" />
-      <skill id="TwoHanded"
-             value="150" />
-      <skill id="Polearm"
-             value="200" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-		<equipment slot="Item0"
-			       id="Item.aserai_sword_4_t4" />
-        <equipment slot="Item1"
-				   id="Item.mp_heavy_oval_shield" />
-		<equipment slot="Item2"
-				   id="Item.eastern_spear_4_t4" />
-		<equipment slot="Item3"
-				   id="Item.mp_jereed_captain" />
-		<equipment slot="Head"
-				   id="Item.closed_desert_helmet_with_mail" />
-		<equipment slot="Body"
-				   id="Item.desert_lamellar" />
-		<equipment slot="Leg"
-				   id="Item.plated_strip_boots" />
-		<equipment slot="Cape"
-				   id="Item.a_aserai_scale_b_shoulder_c" />
-		<equipment slot="Gloves"
-				   id="Item.reinforced_mail_mitten" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
- <!--Aserai Mamluke Palace Guard-->
-  <NPCCharacter id="mp_mamluke_palace_guard_hero"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0010}Aserai Mamluke Palace Guard"
-                occupation="Soldier"
-                culture="Culture.aserai">
-    <face>
-      <!--face_key value="40.96;0.5333;0.5864;1CC40E4EFC0000;100000000080000;0;6650003;9800509000000;0;0;300000" max_value="87.1;0.5864;1;2DFC0FDA003754;FFFFFFFFAE79FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;F9FFA0FFFFEFF;0;0;409183"/-->
-      <BodyProperties version="4"
-                      age="40.96"
-                      weight="0.5333"
-                      build="0.5864"
-                      key="001CC40E4EFC00000100000000080000000000000000000000000000066500030009800509000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="47.1"
-                         weight="0.5864"
-                         build="1"
-                         key="002DFC0FDA003754FFFFFFFFAE79FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF000F9FFA0FFFFEFF000000000000000000000000000000000000000001189183" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="50" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.aserai_2haxe_2_t4" />
-			<equipment slot="Head"
-					   id="Item.brass_aserai_helmet_closed" />
-			<equipment slot="Body"
-					   id="Item.aserai_armor_02_b" />
-			<equipment slot="Gloves"
-					   id="Item.reinforced_leather_vambraces" />
-			<equipment slot="Leg"
-					   id="Item.mail_cavalier_boots" />
-			<equipment slot="Cape"
-					   id="Item.aserai_scale_shoulder_e" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_mamluke_palace_guard_troop"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0010}Aserai Mamluke Palace Guard"
-                occupation="Soldier"
-                culture="Culture.aserai">
-    <face>
-      <!--face_key value="40.96;0.5333;0.5864;1CC40E4EFC0000;100000000080000;0;6650003;9800509000000;0;0;300000" max_value="87.1;0.5864;1;2DFC0FDA003754;FFFFFFFFAE79FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;F9FFA0FFFFEFF;0;0;409183"/-->
-      <BodyProperties version="4"
-                      age="40.96"
-                      weight="0.5333"
-                      build="0.5864"
-                      key="001CC40E4EFC00000100000000080000000000000000000000000000066500030009800509000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="47.1"
-                         weight="0.5864"
-                         build="1"
-                         key="002DFC0FDA003754FFFFFFFFAE79FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF000F9FFA0FFFFEFF000000000000000000000000000000000000000001189183" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="200" />
-      <skill id="TwoHanded"
-             value="250" />
-      <skill id="Polearm"
-             value="200" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.aserai_2haxe_2_t4" />
-			<equipment slot="Head"
-					   id="Item.brass_aserai_helmet_closed" />
-			<equipment slot="Body"
-					   id="Item.aserai_armor_02_b" />
-			<equipment slot="Gloves"
-					   id="Item.reinforced_leather_vambraces" />
-			<equipment slot="Leg"
-					   id="Item.mail_cavalier_boots" />
-			<equipment slot="Cape"
-					   id="Item.aserai_scale_shoulder_e" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
- <!--Aserai Vanguard Faris-->
-  <NPCCharacter id="mp_aserai_vanguard_faris_hero"
-                default_group="Cavalry"
-                level="25"
-                name="{=capc0009}Aserai Vanguard Faris"
-                occupation="Soldier"
-                culture="Culture.aserai">
-    <face>
-      <!--face_key value="40.96;0.5333;0.5864;1CC40E4EFC0000;100000000080000;0;6650003;9800509000000;0;0;300000" max_value="87.1;0.5864;1;2DFC0FDA003754;FFFFFFFFAE79FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;F9FFA0FFFFEFF;0;0;409183"/-->
-      <BodyProperties version="4"
-                      age="40.96"
-                      weight="0.5333"
-                      build="0.5864"
-                      key="001CC40E4EFC00000100000000080000000000000000000000000000066500030009800509000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="47.1"
-                         weight="0.5864"
-                         build="1"
-                         key="002DFC0FDA003754FFFFFFFFAE79FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF000F9FFA0FFFFEFF000000000000000000000000000000000000000001189183" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="150" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="150" />
-      <skill id="Crossbow"
-             value="50" />
-      <skill id="Bow"
-             value="50" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.aserai_lance_1_t5" />
-			<equipment slot="Item1"
-					   id="Item.mp_bound_adarga" />
-			<equipment slot="Item2"
-					   id="Item.eastern_javelin_3_t4" />
-			<equipment slot="Item3"
-					   id="Item.aserai_sword_4_t4" />
-			<equipment slot="Head"
-					   id="Item.brass_aserai_helmet_b_closed" />
-			<equipment slot="Cape"
-					   id="Item.aserai_scale_shoulder_b" />
-			<equipment slot="Body"
-					   id="Item.aserai_full_scale_armor_on_chain" />
-			<equipment slot="Leg"
-					   id="Item.plated_strip_boots" />
-			<equipment slot="Gloves"
-					   id="Item.reinforced_leather_vambraces" />
-			<equipment slot="Horse"
-					   id="Item.mp_aserai_horse_war" />
-			<equipment slot="HorseHarness"
-					   id="Item.mp_half_mail_and_plate_barding" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_aserai_vanguard_faris_troop"
-                default_group="Cavalry"
-                level="30"
-                name="{=capc0009}Aserai Vanguard Faris"
-                occupation="Soldier"
-                culture="Culture.aserai">
-    <face>
-      <!--face_key value="40.96;0.5333;0.5864;1CC40E4EFC0000;100000000080000;0;6650003;9800509000000;0;0;300000" max_value="87.1;0.5864;1;2DFC0FDA003754;FFFFFFFFAE79FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;F9FFA0FFFFEFF;0;0;409183"/-->
-      <BodyProperties version="4"
-                      age="40.96"
-                      weight="0.5333"
-                      build="0.5864"
-                      key="001CC40E4EFC00000100000000080000000000000000000000000000066500030009800509000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="47.1"
-                         weight="0.5864"
-                         build="1"
-                         key="002DFC0FDA003754FFFFFFFFAE79FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF000F9FFA0FFFFEFF000000000000000000000000000000000000000001189183" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="250" />
-      <skill id="OneHanded"
-             value="150" />
-      <skill id="TwoHanded"
-             value="100" />
-      <skill id="Polearm"
-             value="250" />
-      <skill id="Crossbow"
-             value="50" />
-      <skill id="Bow"
-             value="50" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.aserai_lance_1_t5" />
-			<equipment slot="Item1"
-					   id="Item.mp_bound_adarga" />
-			<equipment slot="Item2"
-					   id="Item.eastern_javelin_3_t4" />
-			<equipment slot="Item3"
-					   id="Item.aserai_sword_4_t4" />
-			<equipment slot="Head"
-					   id="Item.brass_aserai_helmet_b_closed" />
-			<equipment slot="Cape"
-					   id="Item.aserai_scale_shoulder_b" />
-			<equipment slot="Body"
-					   id="Item.aserai_full_scale_armor_on_chain" />
-			<equipment slot="Leg"
-					   id="Item.plated_strip_boots" />
-			<equipment slot="Gloves"
-					   id="Item.reinforced_leather_vambraces" />
-			<equipment slot="Horse"
-					   id="Item.mp_aserai_horse_war" />
-			<equipment slot="HorseHarness"
-					   id="Item.mp_half_mail_and_plate_barding" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-<!--Sturgian Heroic Line Breaker-->
-  <NPCCharacter id="mp_sturgian_ulfhednar_hero"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0008}Sturgian Heroic Line Breaker"
-                occupation="Soldier"
-                culture="Culture.sturgia">
-    <face>
-      <!--face_key value="26.15;0.2617;0.3315;E000000;47000;0;0;5460305000000;0;0;280000" max_value="73.19;0.8;0.8667;BFC059A0038D4;FFFFFFFF887CFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;DCFF90DFFFFFF;0;0;480141"/-->
-      <BodyProperties version="4"
-                      age="26.15"
-                      weight="0.2617"
-                      build="0.3315"
-                      key="000000000E0000000000000000047000000000000000000000000000000000000005460305000000000000000000000000000000000000000000000000A00000" />
-      <BodyPropertiesMax version="4"
-                         age="53.19"
-                         weight="0.8"
-                         build="0.8667"
-                         key="000BFC059A0038D4FFFFFFFF887CFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000DCFF90DFFFFFF000000000000000000000000000000000000000001680141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="50" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-		<equipment slot="Item0"
-				   id="Item.sturgia_2haxe_1_t4" />
-		<equipment slot="Item1"
-				   id="Item.northern_throwing_axe_1_t1" />
-		<equipment slot="Head"
-				   id="Item.sturgian_helmet_closed" />
-		<equipment slot="Body"
-				   id="Item.sturgian_chainmale_longsleeve" />
-		<equipment slot="Leg"
-				   id="Item.strapped_mail_chausses" />
-		<equipment slot="Gloves"
-				   id="Item.northern_plated_gloves" />
-		<equipment slot="Cape"
-				   id="Item.mail_shoulders" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_sturgian_ulfhednar_troop"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0008}Sturgian Heroic Line Breaker"
-                occupation="Soldier"
-                culture="Culture.sturgia">
-    <face>
-      <!--face_key value="26.15;0.2617;0.3315;E000000;47000;0;0;5460305000000;0;0;280000" max_value="73.19;0.8;0.8667;BFC059A0038D4;FFFFFFFF887CFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;DCFF90DFFFFFF;0;0;480141"/-->
-      <BodyProperties version="4"
-                      age="26.15"
-                      weight="0.2617"
-                      build="0.3315"
-                      key="000000000E0000000000000000047000000000000000000000000000000000000005460305000000000000000000000000000000000000000000000000A00000" />
-      <BodyPropertiesMax version="4"
-                         age="53.19"
-                         weight="0.8"
-                         build="0.8667"
-                         key="000BFC059A0038D4FFFFFFFF887CFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000DCFF90DFFFFFF000000000000000000000000000000000000000001680141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="200" />
-      <skill id="TwoHanded"
-             value="250" />
-      <skill id="Polearm"
-             value="200" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-		<equipment slot="Item0"
-				   id="Item.sturgia_2haxe_1_t4" />
-		<equipment slot="Item1"
-				   id="Item.northern_throwing_axe_1_t1" />
-		<equipment slot="Head"
-				   id="Item.sturgian_helmet_closed" />
-		<equipment slot="Body"
-				   id="Item.sturgian_chainmale_longsleeve" />
-		<equipment slot="Leg"
-				   id="Item.strapped_mail_chausses" />
-		<equipment slot="Gloves"
-				   id="Item.northern_plated_gloves" />
-		<equipment slot="Cape"
-				   id="Item.mail_shoulders" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-<!--Sturgian Veteran Bowman-->
-  <NPCCharacter id="mp_sturgian_veteran_bowman_hero"
-                default_group="Ranged"
-                level="20"
-                name="{=capc0007}Sturgian Veteran Bowman"
-                occupation="Soldier"
-                culture="Culture.sturgia">
-    <face>
-      <!--face_key value="25.56;0.1951;0.2648;0;37000;0;0;4360304000000;0;0;300000" max_value="42.73;0.5333;0.4667;11FC05800038D4;FFFFFFFF8878FFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;78FF507FFFFFF;0;0;480141"/-->
-      <BodyProperties version="4"
-                      age="25.56"
-                      weight="0.1951"
-                      build="0.2648"
-                      key="00000000000000000000000000037000000000000000000000000000000000000004360304000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="42.73"
-                         weight="0.5333"
-                         build="0.4667"
-                         key="0011FC05800038D4FFFFFFFF8878FFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF00078FF507FFFFFF000000000000000000000000000000000000000001680141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="50" />
-      <skill id="Crossbow"
-             value="100" />
-      <skill id="Bow"
-             value="100" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-        <equipment slot="Item0"
-                   id="Item.mp_nordic_short_bow" />
-        <equipment slot="Item1"
-                   id="Item.mp_arrows_bodkin" />
-		<equipment slot="Item3"
-				   id="Item.sturgia_axe_3_t3" />
-		<equipment slot="Head"
-				   id="Item.sturgian_helmet_b_open" />
-		<equipment slot="Body"
-				   id="Item.nordic_sloven_over_mail" />
-		<equipment slot="Leg"
-				   id="Item.mail_chausses" />
-		<equipment slot="Gloves"
-				   id="Item.northern_brass_bracers" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_sturgian_veteran_bowman_troop"
-                default_group="Ranged"
-                level="20"
-                name="{=capc0007}Sturgian Veteran Bowman"
-                occupation="Soldier"
-                culture="Culture.sturgia">
-    <face>
-      <!--face_key value="25.56;0.1951;0.2648;0;37000;0;0;4360304000000;0;0;300000" max_value="42.73;0.5333;0.4667;11FC05800038D4;FFFFFFFF8878FFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;78FF507FFFFFF;0;0;480141"/-->
-      <BodyProperties version="4"
-                      age="25.56"
-                      weight="0.1951"
-                      build="0.2648"
-                      key="00000000000000000000000000037000000000000000000000000000000000000004360304000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="42.73"
-                         weight="0.5333"
-                         build="0.4667"
-                         key="0011FC05800038D4FFFFFFFF8878FFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF00078FF507FFFFFF000000000000000000000000000000000000000001680141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="100" />
-      <skill id="TwoHanded"
-             value="100" />
-      <skill id="Polearm"
-             value="100" />
-      <skill id="Crossbow"
-             value="100" />
-      <skill id="Bow"
-             value="250" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-        <equipment slot="Item0"
-                   id="Item.mp_nordic_short_bow" />
-        <equipment slot="Item1"
-                   id="Item.mp_arrows_bodkin" />
-		<equipment slot="Item3"
-				   id="Item.sturgia_axe_3_t3" />
-		<equipment slot="Head"
-				   id="Item.sturgian_helmet_b_open" />
-		<equipment slot="Body"
-				   id="Item.nordic_sloven_over_mail" />
-		<equipment slot="Leg"
-				   id="Item.mail_chausses" />
-		<equipment slot="Gloves"
-				   id="Item.northern_brass_bracers" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-<!--Khuzait Darkhan-->
-  <NPCCharacter id="mp_khuzait_darkhan_hero"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0006}Khuzait Darkhan"
-                occupation="Soldier"
-                culture="Culture.khuzait">
-    <face>
-      <!--face_key value="35.02;0.1333;0.1333;16F40E40000001;6006DC20000;507788B0100;0;2211402000000;0;0;180000" max_value="59.33;0.7333;0.6599;1CFC0FC03C38D1;FFFFFFFFFFFBFF3F;FACFFFFFFFFFFFFF;FFFFFFFFF77FFFF7;ABFF70AFFFFFF;0;0;385141" /-->
-      <BodyProperties version="4"
-                      age="35.02"
-                      weight="0.1333"
-                      build="0.1333"
-                      key="0016F40E40000001000006006DC2000000000507788B010000000000000000000002211402000000000000000000000000000000000000000000000000500000" />
-      <BodyPropertiesMax version="4"
-                         age="45.33"
-                         weight="0.7333"
-                         build="0.6599"
-                         key="001CFC0FC03C38D1FFFFFFFFFFFBFF3FFACFFFFFFFFFFFFFFFFFFFFFF77FFFF7000ABFF70AFFFFFF000000000000000000000000000000000000000001185141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="75" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="50" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-		<equipment slot="Item0"
-				   id="Item.mp_khuzait_throwing_spear" />
-        <equipment slot="Item1"
-                   id="Item.mp_footmans_wicker_shield" />
-		<equipment slot="Item2"
-				   id="Item.khuzait_sword_5_t4" />
-		<equipment slot="Body"
-				   id="Item.brass_lamellar_over_mail" />
-		<equipment slot="Head"
-				   id="Item.spiked_helmet_with_facemask" />
-		<equipment slot="Leg"
-				   id="Item.eastern_leather_boots" />
-		<equipment slot="Gloves"
-				   id="Item.battania_warlord_bracers" />
-		<equipment slot="Cape"
-				   id="Item.lamellar_shoulders" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_khuzait_darkhan_troop"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0006}Khuzait Darkhan"
-                occupation="Soldier"
-                culture="Culture.khuzait">
-    <face>
-      <!--face_key value="35.02;0.1333;0.1333;16F40E40000001;6006DC20000;507788B0100;0;2211402000000;0;0;180000" max_value="59.33;0.7333;0.6599;1CFC0FC03C38D1;FFFFFFFFFFFBFF3F;FACFFFFFFFFFFFFF;FFFFFFFFF77FFFF7;ABFF70AFFFFFF;0;0;385141" /-->
-      <BodyProperties version="4"
-                      age="35.02"
-                      weight="0.1333"
-                      build="0.1333"
-                      key="0016F40E40000001000006006DC2000000000507788B010000000000000000000002211402000000000000000000000000000000000000000000000000500000" />
-      <BodyPropertiesMax version="4"
-                         age="45.33"
-                         weight="0.7333"
-                         build="0.6599"
-                         key="001CFC0FC03C38D1FFFFFFFFFFFBFF3FFACFFFFFFFFFFFFFFFFFFFFFF77FFFF7000ABFF70AFFFFFF000000000000000000000000000000000000000001185141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="75" />
-      <skill id="OneHanded"
-             value="200" />
-      <skill id="TwoHanded"
-             value="150" />
-      <skill id="Polearm"
-             value="200" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-		<equipment slot="Item0"
-				   id="Item.mp_khuzait_throwing_spear" />
-        <equipment slot="Item1"
-                   id="Item.mp_footmans_wicker_shield" />
-		<equipment slot="Item2"
-				   id="Item.khuzait_sword_5_t4" />
-		<equipment slot="Body"
-				   id="Item.brass_lamellar_over_mail" />
-		<equipment slot="Head"
-				   id="Item.spiked_helmet_with_facemask" />
-		<equipment slot="Leg"
-				   id="Item.eastern_leather_boots" />
-		<equipment slot="Gloves"
-				   id="Item.battania_warlord_bracers" />
-		<equipment slot="Cape"
-				   id="Item.lamellar_shoulders" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-<!--Khuzait Khan's Guard-->
-  <NPCCharacter id="mp_khuzait_khans_guard_hero"
-                default_group="HorseArcher"
-                level="30"
-                name="{=capc0005}Khuzait Khan's Guard"
-                occupation="Soldier"
-                culture="Culture.khuzait">
-    <face>
-      <!--face_key value="34.2;0.2043;0.1333;16F40E40000001;6006DC30000;507788B0100;0;2311402000000;0;0;100000" max_value="33.48;0.7333;0.5333;1CFC0FC03C38D1;FFFFFFFFFFFBFF3F;FACFFFFFFFFFFFFF;FFFFFFFFF77FFFF7;8BFF408FFFFFF;0;0;285141" /-->
-      <BodyProperties version="4"
-                      age="34.2"
-                      weight="0.2043"
-                      build="0.1333"
-                      key="0016F40E40000001000006006DC3000000000507788B010000000000000000000002311402000000000000000000000000000000000000000000000000280000" />
-      <BodyPropertiesMax version="4"
-                         age="33.48"
-                         weight="0.7333"
-                         build="0.5333"
-                         key="001CFC0FC03C38D1FFFFFFFFFFFBFF3FFACFFFFFFFFFFFFFFFFFFFFFF77FFFF70008BFF408FFFFFF000000000000000000000000000000000000000000A05141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="150" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="150" />
-      <skill id="Crossbow"
-             value="75" />
-      <skill id="Bow"
-             value="75" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-        <equipment slot="Item0"
-                   id="Item.mp_recurve_bow_captain" />
-        <equipment slot="Item1"
-                   id="Item.mp_khuzait_heavy_sabre" />
-        <equipment slot="Item2"
-                   id="Item.mp_arrows_steppe" />
-		<equipment slot="Item3"
-				   id="Item.khuzait_polearm_1_t4" />
-		<equipment slot="Body"
-				   id="Item.brass_lamellar_over_mail" />
-		<equipment slot="Head"
-				   id="Item.spiked_helmet_with_facemask" />
-		<equipment slot="Leg"
-				   id="Item.khuzait_curved_boots" />
-		<equipment slot="Gloves"
-				   id="Item.eastern_plated_leather_vambraces" />
-		<equipment slot="Cape"
-				   id="Item.brass_lamellar_shoulder_white" />
-        <equipment slot="Horse"
-                   id="Item.mp_khuzait_horse_war" />
-        <equipment slot="HorseHarness"
-                   id="Item.mp_steppe_half_barding" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_khuzait_khans_guard_troop"
-                default_group="HorseArcher"
-                level="30"
-                name="{=capc0005}Khuzait Khan's Guard"
-                occupation="Soldier"
-                culture="Culture.khuzait">
-    <face>
-      <!--face_key value="34.2;0.2043;0.1333;16F40E40000001;6006DC30000;507788B0100;0;2311402000000;0;0;100000" max_value="33.48;0.7333;0.5333;1CFC0FC03C38D1;FFFFFFFFFFFBFF3F;FACFFFFFFFFFFFFF;FFFFFFFFF77FFFF7;8BFF408FFFFFF;0;0;285141" /-->
-      <BodyProperties version="4"
-                      age="34.2"
-                      weight="0.2043"
-                      build="0.1333"
-                      key="0016F40E40000001000006006DC3000000000507788B010000000000000000000002311402000000000000000000000000000000000000000000000000280000" />
-      <BodyPropertiesMax version="4"
-                         age="33.48"
-                         weight="0.7333"
-                         build="0.5333"
-                         key="001CFC0FC03C38D1FFFFFFFFFFFBFF3FFACFFFFFFFFFFFFFFFFFFFFFF77FFFF70008BFF408FFFFFF000000000000000000000000000000000000000000A05141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="250" />
-      <skill id="OneHanded"
-             value="150" />
-      <skill id="TwoHanded"
-             value="100" />
-      <skill id="Polearm"
-             value="150" />
-      <skill id="Crossbow"
-             value="100" />
-      <skill id="Bow"
-             value="250" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-        <equipment slot="Item0"
-                   id="Item.mp_recurve_bow_captain" />
-        <equipment slot="Item1"
-                   id="Item.mp_khuzait_heavy_sabre" />
-        <equipment slot="Item2"
-                   id="Item.mp_arrows_steppe" />
-		<equipment slot="Item3"
-				   id="Item.khuzait_polearm_1_t4" />
-		<equipment slot="Body"
-				   id="Item.brass_lamellar_over_mail" />
-		<equipment slot="Head"
-				   id="Item.spiked_helmet_with_facemask" />
-		<equipment slot="Leg"
-				   id="Item.khuzait_curved_boots" />
-		<equipment slot="Gloves"
-				   id="Item.eastern_plated_leather_vambraces" />
-		<equipment slot="Cape"
-				   id="Item.brass_lamellar_shoulder_white" />
-        <equipment slot="Horse"
-                   id="Item.mp_khuzait_horse_war" />
-        <equipment slot="HorseHarness"
-                   id="Item.mp_steppe_half_barding" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_bucellarii_hero"
-                default_group="HorseArcher"
                 level="15"
-                name="{=capc0004}Imperial Bucellarii"
+                name="{=10000005}Throwing Axeman"
                 occupation="Soldier"
-                culture="Culture.empire">
+                culture="Culture.vlandia">
     <face>
-      <!--face_key value="28.8;0.2667;0.2562;880000002;40000;0;6000000007000;4400304000000;0;0;300000" max_value="54.53;0.7377;0.4568;11A80CC03C0010;FFFFFFFF887BFFFF;FFFFFFFF7FF0F7FF;FFFFFFFFFFFFFFFF;7BFF607FFFFFF;0;0;385142" /-->
+      <!--face_key value="18.16;0.3333;0;C0700000001;11111211151111;7010000100000;11101100010100;500202111110;0;0;280000" max_value="23;0.4667;0.2;11FC0FC03C384F;FFFFFFFEFFF7EFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;37FD303FFFFFF;0;0;309101" /-->
       <BodyProperties version="4"
-                      age="28.8"
-                      weight="0.2667"
-                      build="0.2562"
-                      key="00000008800000020000000000040000000000000000000000060000000070000004400304000000000000000000000000000000000000000000000000C80000" />
+                      age="23.16"
+                      weight="0.3333"
+                      build="0"
+                      key="00000C07000000010011111211151111000701000010000000111011000101000000500202111110000000000000000000000000000000000000000000A00000" />
       <BodyPropertiesMax version="4"
-                         age="45.53"
-                         weight="0.7377"
-                         build="0.4568"
-                         key="0011A80CC03C0010FFFFFFFF887BFFFFFFFFFFFF7FF0F7FFFFFFFFFFFFFFFFFF0007BFF607FFFFFF000000000000000000000000000000000000000001185142" />
+                         age="25"
+                         weight="0.4667"
+                         build="0.2"
+                         key="0011FC0FC03C384FFFFFFFFEFFF7EFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF00037FD303FFFFFF000000000000000000000000000000000000000000C89101" />
     </face>
     <skills>
       <skill id="Riding"
-             value="150" />
+             value="0" />
       <skill id="OneHanded"
              value="50" />
       <skill id="TwoHanded"
              value="50" />
       <skill id="Polearm"
-             value="150" />
+             value="50" />
       <skill id="Crossbow"
-             value="75" />
+             value="0" />
       <skill id="Bow"
-             value="75" />
+             value="0" />
       <skill id="Throwing"
              value="100" />
     </skills>
     <Equipments>
       <EquipmentRoster>
         <equipment slot="Item0"
-                   id="Item.mp_imperial_recurve_bow" />
+                   id="Item.mp_vlandian_short_sword" />
         <equipment slot="Item1"
-                   id="Item.mp_arrows_barbed" />
+                   id="Item.mp_ironrim_kite_shield" />
         <equipment slot="Item2"
-                   id="Item.mp_empire_spatha" />
-		<equipment slot="Head"
-				   id="Item.plumed_helmet" />
-		<equipment slot="Gloves"
-				   id="Item.plated_strip_gauntlets" />
-		<equipment slot="Body"
-				   id="Item.imperial_mail_vest" />
-		<equipment slot="Leg"
-				   id="Item.mail_cavalier_boots" />
-		<equipment slot="Cape"
-				   id="Item.studded_imperial_neckguard" />
-        <equipment slot="Horse"
-                   id="Item.mp_empire_horse_war" />
-        <equipment slot="HorseHarness"
-                   id="Item.mp_stripped_leather_harness" />
+                   id="Item.mp_vlandian_throwing_axe_extra" />
+        <equipment slot="Head"
+                   id="Item.mp_segmented_skullcap_over_mail_coif" />
+        <equipment slot="Body"
+                   id="Item.mp_banded_leather_over_mail" />
+        <equipment slot="Leg"
+                   id="Item.mp_leather_cavalier_boots" />
+        <equipment slot="Gloves"
+                   id="Item.mp_guarded_padded_vambrace" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="mp_bucellarii_troop"
-                default_group="HorseArcher"
+  <NPCCharacter id="mp_skirmisher_vlandia_troop"
+                default_group="Infantry"
                 level="15"
-                name="{=capc0004}Imperial Bucellarii"
+                name="{=10000005}Throwing Axeman"
                 occupation="Soldier"
-                culture="Culture.empire">
+                culture="Culture.vlandia">
     <face>
-      <!--face_key value="28.8;0.2667;0.2562;880000002;40000;0;6000000007000;4400304000000;0;0;300000" max_value="54.53;0.7377;0.4568;11A80CC03C0010;FFFFFFFF887BFFFF;FFFFFFFF7FF0F7FF;FFFFFFFFFFFFFFFF;7BFF607FFFFFF;0;0;385142" /-->
+      <!--face_key value="18.16;0.3333;0;C0700000001;11111211151111;7010000100000;11101100010100;500202111110;0;0;280000" max_value="23;0.4667;0.2;11FC0FC03C384F;FFFFFFFEFFF7EFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;37FD303FFFFFF;0;0;309101" /-->
       <BodyProperties version="4"
-                      age="28.8"
-                      weight="0.2667"
-                      build="0.2562"
-                      key="00000008800000020000000000040000000000000000000000060000000070000004400304000000000000000000000000000000000000000000000000C80000" />
+                      age="23.16"
+                      weight="0.3333"
+                      build="0"
+                      key="00000C07000000010011111211151111000701000010000000111011000101000000500202111110000000000000000000000000000000000000000000A00000" />
       <BodyPropertiesMax version="4"
-                         age="45.53"
-                         weight="0.7377"
-                         build="0.4568"
-                         key="0011A80CC03C0010FFFFFFFF887BFFFFFFFFFFFF7FF0F7FFFFFFFFFFFFFFFFFF0007BFF607FFFFFF000000000000000000000000000000000000000001185142" />
+                         age="25"
+                         weight="0.4667"
+                         build="0.2"
+                         key="0011FC0FC03C384FFFFFFFFEFFF7EFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF00037FD303FFFFFF000000000000000000000000000000000000000000C89101" />
     </face>
     <skills>
       <skill id="Riding"
-             value="250" />
+             value="0" />
       <skill id="OneHanded"
              value="150" />
       <skill id="TwoHanded"
-             value="100" />
+             value="50" />
       <skill id="Polearm"
-             value="100" />
+             value="50" />
       <skill id="Crossbow"
-             value="100" />
+             value="0" />
       <skill id="Bow"
-             value="250" />
+             value="0" />
       <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-        <equipment slot="Item0"
-                   id="Item.mp_imperial_recurve_bow" />
-        <equipment slot="Item1"
-                   id="Item.mp_arrows_barbed" />
-        <equipment slot="Item2"
-                   id="Item.mp_empire_spatha" />
-		<equipment slot="Head"
-				   id="Item.plumed_helmet" />
-		<equipment slot="Gloves"
-				   id="Item.plated_strip_gauntlets" />
-		<equipment slot="Body"
-				   id="Item.imperial_mail_vest" />
-		<equipment slot="Leg"
-				   id="Item.mail_cavalier_boots" />
-		<equipment slot="Cape"
-				   id="Item.studded_imperial_neckguard" />
-        <equipment slot="Horse"
-                   id="Item.mp_empire_horse_war" />
-        <equipment slot="HorseHarness"
-                   id="Item.mp_stripped_leather_harness" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_imperial_elite_menavliaton_hero"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0003}Imperial Elite Menavliaton"
-                occupation="Soldier"
-                culture="Culture.empire">
-    <face>
-      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
-      <BodyProperties version="4"
-                      age="41.23"
-                      weight="0.3963"
-                      build="0.3951"
-                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
-      <BodyPropertiesMax version="4"
-                         age="51.79"
-                         weight="0.6728"
-                         build="1"
-                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="50" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.empire_polearm_1_t4" />
-			<equipment slot="Item1"
-					   id="Item.mp_pilum" />
-			<equipment slot="Body"
-					   id="Item.imperial_lamellar_over_leather" />
-			<equipment slot="Gloves"
-					   id="Item.reinforced_mail_mitten" />
-			<equipment slot="Leg"
-					   id="Item.strapped_mail_chausses" />
-			<equipment slot="Head"
-					   id="Item.heavy_nasalhelm_over_imperial_leather" />
-			<equipment slot="Cape"
-					   id="Item.varangian_bra_mail" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_imperial_elite_menavliaton_troop"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0003}Imperial Elite Menavliaton"
-                occupation="Soldier"
-                culture="Culture.empire">
-    <face>
-      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
-      <BodyProperties version="4"
-                      age="41.23"
-                      weight="0.3963"
-                      build="0.3951"
-                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
-      <BodyPropertiesMax version="4"
-                         age="51.79"
-                         weight="0.6728"
-                         build="1"
-                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="200" />
-      <skill id="TwoHanded"
-             value="250" />
-      <skill id="Polearm"
-             value="250" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="20" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-		<EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.empire_polearm_1_t4" />
-			<equipment slot="Item1"
-					   id="Item.mp_pilum" />
-			<equipment slot="Body"
-					   id="Item.imperial_lamellar_over_leather" />
-			<equipment slot="Gloves"
-					   id="Item.reinforced_mail_mitten" />
-			<equipment slot="Leg"
-					   id="Item.strapped_mail_chausses" />
-			<equipment slot="Head"
-					   id="Item.heavy_nasalhelm_over_imperial_leather" />
-			<equipment slot="Cape"
-					   id="Item.varangian_bra_mail" />
-		</EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_battanian_fian_champion_hero"
-                default_group="Ranged"
-                level="30"
-                name="{=capc0002}Battanian Fian Champion"
-                occupation="Soldier"
-                culture="Culture.battania">
-    <face>
-      <!--face_key value="38.89;0.2;0.2;440000001;100000000037000;7001000000000;0;3300503000000;0;0;300000" max_value="63.08;0.5309;0.663;BFC0B4B3C300F;FFFFFAFFAAA8FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;A8FF70AFFFEFF;0;0;489181"/-->
-      <BodyProperties version="4"
-                      age="38.89"
-                      weight="0.2"
-                      build="0.2"
-                      key="00000004400000010100000000037000000700100000000000000000000000000003300503000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="43.08"
-                         weight="0.5309"
-                         build="0.663"
-                         key="000BFC0B4B3C300FFFFFFAFFAAA8FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000A8FF70AFFFEFF000000000000000000000000000000000000000001689181" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="50" />
-      <skill id="TwoHanded"
-             value="50" />
-      <skill id="Polearm"
-             value="50" />
-      <skill id="Crossbow"
-             value="100" />
-      <skill id="Bow"
-             value="250" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-        <equipment slot="Item0"
-                   id="Item.mp_long_bow" />
-        <equipment slot="Item1"
-                   id="Item.mp_arrows_bodkin" />
-        <equipment slot="Item2"
-                   id="Item.mp_arrows_bodkin" />
-        <equipment slot="Item3"
-                   id="Item.mp_battania_two_handed_sword" />
-		<equipment slot="Body"
-				   id="Item.mp_battania_noble_armor" />
-		<equipment slot="Head"
-				   id="Item.mp_battanian_crowned_helmet" />
-		<equipment slot="Gloves"
-				   id="Item.mp_highland_gloves" />
-		<equipment slot="Leg"
-				   id="Item.mp_battania_fur_boots" />
-		<equipment slot="Cape"
-				   id="Item.fur_cloak_c" />
-      </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_battanian_fian_champion_troop"
-                default_group="Ranged"
-                level="30"
-                name="{=capc0002}Battanian Fian Champion"
-                occupation="Soldier"
-                culture="Culture.battania">
-    <face>
-      <!--face_key value="38.89;0.2;0.2;440000001;100000000037000;7001000000000;0;3300503000000;0;0;300000" max_value="63.08;0.5309;0.663;BFC0B4B3C300F;FFFFFAFFAAA8FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;A8FF70AFFFEFF;0;0;489181"/-->
-      <BodyProperties version="4"
-                      age="38.89"
-                      weight="0.2"
-                      build="0.2"
-                      key="00000004400000010100000000037000000700100000000000000000000000000003300503000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="43.08"
-                         weight="0.5309"
-                         build="0.663"
-                         key="000BFC0B4B3C300FFFFFFAFFAAA8FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000A8FF70AFFFEFF000000000000000000000000000000000000000001689181" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="100" />
-      <skill id="TwoHanded"
-             value="250" />
-      <skill id="Polearm"
-             value="100" />
-      <skill id="Crossbow"
-             value="100" />
-      <skill id="Bow"
              value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_vlandian_short_sword" />
+        <equipment slot="Item1"
+                   id="Item.mp_ironrim_kite_shield" />
+        <equipment slot="Item2"
+                   id="Item.mp_vlandian_throwing_axe_extra" />
+        <equipment slot="Head"
+                   id="Item.mp_segmented_skullcap_over_mail_coif" />
+        <equipment slot="Body"
+                   id="Item.mp_banded_leather_over_mail" />
+        <equipment slot="Leg"
+                   id="Item.mp_leather_cavalier_boots" />
+        <equipment slot="Gloves"
+                   id="Item.mp_guarded_padded_vambrace" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <!--帝国弩手军士-->
+  <NPCCharacter id="mp_heavy_crossbow_empire_hero"
+                default_group="Ranged"
+                level="20"
+                name="{=10000004}Sergeant Crossbowman"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
+      <BodyProperties version="4"
+                      age="41.23"
+                      weight="0.3963"
+                      build="0.3951"
+                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="51.79"
+                         weight="0.6728"
+                         build="1"
+                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="75" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_crossbow" />
+        <equipment slot="Item1"
+                   id="Item.mp_empire_mace" />
+        <equipment slot="Item2"
+                   id="Item.mp_bolts_imperial" />
+	    <equipment slot="Head"
+                   id="Item.mp_empire_lord_helmet" />
+        <equipment slot="Body"
+                   id="Item.mp_imperial_scale_armor" />
+        <equipment slot="Leg"
+                   id="Item.mp_decorated_imperial_boots" />
+        <equipment slot="Gloves"
+                   id="Item.mp_decorated_imperial_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_heavy_crossbow_empire_troop"
+                default_group="Ranged"
+                level="20"
+                name="{=10000004}Sergeant Crossbowman"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
+      <BodyProperties version="4"
+                      age="41.23"
+                      weight="0.3963"
+                      build="0.3951"
+                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="51.79"
+                         weight="0.6728"
+                         build="1"
+                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="150" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="200" />
+      <skill id="Bow"
+             value="275" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_crossbow" />
+        <equipment slot="Item1"
+                   id="Item.mp_bolts_imperial" />
+        <equipment slot="Item2"
+                   id="Item.mp_empire_mace" />
+		<equipment slot="Head"
+                   id="Item.mp_empire_lord_helmet" />
+        <equipment slot="Body"
+                   id="Item.mp_imperial_scale_armor" />
+        <equipment slot="Leg"
+                   id="Item.mp_decorated_imperial_boots" />
+        <equipment slot="Gloves"
+                   id="Item.mp_decorated_imperial_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <!--帝国私属骑兵-->
+  <NPCCharacter id="mp_horse_archer_empire_hero"
+                default_group="HorseArcher"
+                level="15"
+                name="{=10000012}Bucellarii"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
+      <BodyProperties version="4"
+                      age="41.23"
+                      weight="0.3963"
+                      build="0.3951"
+                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="51.79"
+                         weight="0.6728"
+                         build="1"
+                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="150" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="75" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.composite_steppe_bow" />
+        <equipment slot="Item1"
+                   id="Item.barbed_arrows" />
+        <equipment slot="Item3"
+                   id="Item.empire_sword_5_t4" />
+        <equipment slot="Gloves"
+                   id="Item.plated_strip_gauntlets" />
+        <equipment slot="Head"
+                   id="Item.plumed_helmet" />
+        <equipment slot="Cape"
+                   id="Item.studded_imperial_neckguard" />
+        <equipment slot="Body"
+                   id="Item.imperial_mail_vest" />
+        <equipment slot="Leg"
+                   id="Item.mail_cavalier_boots" />
+        <equipment slot="Horse"
+                   id="Item.t2_empire_horse" />
+        <equipment slot="HorseHarness"
+                   id="Item.mp_steppe_harness" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_horse_archer_empire_troop"
+                default_group="HorseArcher"
+                level="15"
+                name="{=10000012}Bucellarii"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="51.23;0.3963;0.3951;1000300;67000;0;0;6660606000000;0;0;380000" max_value="81.79;0.6728;1;5FC059A0034D0;FFFFFFFF887AFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;FAFFA0FFFFFFF;0;0;480141" /-->
+      <BodyProperties version="4"
+                      age="41.23"
+                      weight="0.3963"
+                      build="0.3951"
+                      key="00000000010003000000000000067000000000000000000000000000000000000006660606000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="51.79"
+                         weight="0.6728"
+                         build="1"
+                         key="0005FC059A0034D0FFFFFFFF887AFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000FAFFA0FFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="250" />
+      <skill id="OneHanded"
+             value="250" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="250" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="275" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.composite_steppe_bow" />
+        <equipment slot="Item1"
+                   id="Item.barbed_arrows" />
+        <equipment slot="Item3"
+                   id="Item.empire_sword_5_t4" />
+        <equipment slot="Gloves"
+                   id="Item.plated_strip_gauntlets" />
+        <equipment slot="Head"
+                   id="Item.plumed_helmet" />
+        <equipment slot="Cape"
+                   id="Item.studded_imperial_neckguard" />
+        <equipment slot="Body"
+                   id="Item.imperial_mail_vest" />
+        <equipment slot="Leg"
+                   id="Item.mail_cavalier_boots" />
+        <equipment slot="Horse"
+                   id="Item.t2_empire_horse" />
+        <equipment slot="HorseHarness"
+                   id="Item.mp_steppe_harness" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <!--破阵勇士-->
+  <NPCCharacter id="mp_heavy_shock_infantry_sturgia_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000001}Heroic Line Breaker"
+                occupation="Soldier"
+                culture="Culture.sturgia">
+    <face>
+      <!--face_key value="26.15;0.2617;0.3315;E000000;47000;0;0;5460305000000;0;0;280000" max_value="73.19;0.8;0.8667;BFC059A0038D4;FFFFFFFF887CFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;DCFF90DFFFFFF;0;0;480141"/-->
+      <BodyProperties version="4"
+                      age="26.15"
+                      weight="0.2617"
+                      build="0.3315"
+                      key="000000000E0000000000000000047000000000000000000000000000000000000005460305000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="53.19"
+                         weight="0.8"
+                         build="0.8667"
+                         key="000BFC059A0038D4FFFFFFFF887CFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000DCFF90DFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_sturgia_twohanded_axe" />
+		<equipment slot="Body"
+                   id="Item.mp_sturgian_lamellar_gambeson_heavy" />
+        <equipment slot="Leg"
+                   id="Item.mp_plated_strip_boots" />
+        <equipment slot="Head"
+                   id="Item.mp_sturgian_helmet_base" />	   
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_heavy_shock_infantry_sturgia_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000001}Heroic Line Breaker"
+                occupation="Soldier"
+                culture="Culture.sturgia">
+    <face>
+      <!--face_key value="26.15;0.2617;0.3315;E000000;47000;0;0;5460305000000;0;0;280000" max_value="73.19;0.8;0.8667;BFC059A0038D4;FFFFFFFF887CFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;DCFF90DFFFFFF;0;0;480141"/-->
+      <BodyProperties version="4"
+                      age="26.15"
+                      weight="0.2617"
+                      build="0.3315"
+                      key="000000000E0000000000000000047000000000000000000000000000000000000005460305000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="53.19"
+                         weight="0.8"
+                         build="0.8667"
+                         key="000BFC059A0038D4FFFFFFFF887CFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000DCFF90DFFFFFF000000000000000000000000000000000000000001680141" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="320" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_sturgia_twohanded_axe" />
+		<equipment slot="Body"
+                   id="Item.mp_sturgian_lamellar_gambeson_heavy" />
+        <equipment slot="Leg"
+                   id="Item.mp_plated_strip_boots" />
+        <equipment slot="Head"
+                   id="Item.mp_sturgian_helmet_base" />	   
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--阿塞莱先锋法里斯-->
+  <NPCCharacter id="mp_royal_cavalry_aserai_hero"
+                default_group="Cavalry"
+                level="25"
+                name="{=10000013}Vanguard Faris"
+                occupation="Soldier"
+                culture="Culture.aserai">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="150" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_aserai_long_spear" />
+        <equipment slot="Item1"
+                   id="Item.mp_desert_round_shield" />
+		<equipment slot="Item2"
+                   id="Item.mp_aserai_ranger_sword" />
+  		<equipment slot="Item3"
+                   id="Item.mp_jereed_extra" />		   
+        <equipment slot="Head"
+                   id="Item.brass_aserai_helmet_b_closed" />
+        <equipment slot="Body"
+                   id="Item.aserai_full_scale_armor_on_chain" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_plated_strip_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_plated_strip_boots" />
+		<equipment slot="Horse"
+                   id="Item.mp_aserai_horse_war" />
+		<equipment slot="HorseHarness"
+                   id="Item.mp_half_mail_and_plate_barding" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_royal_cavalry_aserai_troop"
+                default_group="Cavalry"
+                level="25"
+                name="{=10000013}Vanguard Faris"
+                occupation="Soldier"
+                culture="Culture.aserai">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="300" />
+      <skill id="OneHanded"
+             value="250" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="330" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_aserai_long_spear" />
+        <equipment slot="Item1"
+                   id="Item.mp_desert_round_shield" />
+		<equipment slot="Item2"
+                   id="Item.mp_aserai_ranger_sword" />
+  		<equipment slot="Item3"
+                   id="Item.mp_jereed_extra" />		   
+        <equipment slot="Head"
+                   id="Item.brass_aserai_helmet_b_closed" />
+        <equipment slot="Body"
+                   id="Item.aserai_full_scale_armor_on_chain" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_plated_strip_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_plated_strip_boots" />
+		<equipment slot="Horse"
+                   id="Item.mp_aserai_horse_war" />
+		<equipment slot="HorseHarness"
+                   id="Item.mp_half_mail_and_plate_barding" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <!--巴丹尼亚资深镰兵-->
+  <NPCCharacter id="mp_heavy_shock_infantry_battania_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000014}Veteran Falxman"
+                occupation="Soldier"
+                culture="Culture.battania">
+    <face>
+      <!--face_key value="31;0.266;0.5247;141000340;100000000047000;7001000000000;0;8400408000000;0;0;380000" max_value="63.19;0.466;0.9994;BFC0B4D3C34D4;FFFFFAFFAAA7FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;F7FF70FFFFEFF;0;0;589181"/-->
+      <BodyProperties version="4"
+                      age="31"
+                      weight="0.266"
+                      build="0.5247"
+                      key="00000001410003400100000000047000000700100000000000000000000000000008400408000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="45.19"
+                         weight="0.466"
+                         build="0.9994"
+                         key="000BFC0B4D3C34D4FFFFFAFFAAA7FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000F7FF70FFFFEFF000000000000000000000000000000000000000001B89181" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_battania_polearm_falx" />
+        <equipment slot="Item1"
+                   id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Body"
+                   id="Item.kilt_over_plated_leather" />
+        <equipment slot="Leg"
+                   id="Item.battania_fur_boots" />
+	 <equipment slot="Head"
+                   id="Item.ridged_northernhelm" />
+	 <equipment slot="Gloves"
+                   id="Item.highland_gloves" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_heavy_shock_infantry_battania_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000014}Veteran Falxman"
+                occupation="Soldier"
+                culture="Culture.battania">
+    <face>
+      <!--face_key value="31;0.266;0.5247;141000340;100000000047000;7001000000000;0;8400408000000;0;0;380000" max_value="63.19;0.466;0.9994;BFC0B4D3C34D4;FFFFFAFFAAA7FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;F7FF70FFFFEFF;0;0;589181"/-->
+      <BodyProperties version="4"
+                      age="31"
+                      weight="0.266"
+                      build="0.5247"
+                      key="00000001410003400100000000047000000700100000000000000000000000000008400408000000000000000000000000000000000000000000000001180000" />
+      <BodyPropertiesMax version="4"
+                         age="45.19"
+                         weight="0.466"
+                         build="0.9994"
+                         key="000BFC0B4D3C34D4FFFFFAFFAAA7FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000F7FF70FFFFEFF000000000000000000000000000000000000000001B89181" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="320" />
+      <skill id="Polearm"
+             value="320" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.mp_battania_polearm_falx" />
+        <equipment slot="Item1"
+                   id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Body"
+                   id="Item.kilt_over_plated_leather" />
+        <equipment slot="Leg"
+                   id="Item.battania_fur_boots" />
+	 <equipment slot="Head"
+                   id="Item.ridged_northernhelm" />
+	 <equipment slot="Gloves"
+                   id="Item.highland_gloves" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--瓦兰迪亚冠军剑士-->
+  <NPCCharacter id="mp_special_infantry_vlandia_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000015}Champion Swordsman"
+                occupation="Soldier"
+                culture="Culture.vlandia">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.vlandia_2hsword_1_t5" />	   
+        <equipment slot="Head"
+                   id="Item.mp_vlandian_faceguard_helmet_b" />
+		<equipment slot="Cape"
+                   id="Item.noble_pauldron_with_cape" />		   
+        <equipment slot="Body"
+                   id="Item.mp_coat_of_plates_over_mail" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_lordly_mail_mitten" />
+        <equipment slot="Leg"
+                   id="Item.mp_mail_chausses" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_special_infantry_vlandia_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000015}Champion Swordsman"
+                occupation="Soldier"
+                culture="Culture.aserai">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="330" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="270" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.vlandia_2hsword_1_t5" />	   
+        <equipment slot="Head"
+                   id="Item.mp_vlandian_faceguard_helmet_b" />
+		<equipment slot="Cape"
+                   id="Item.noble_pauldron_with_cape" />		   
+        <equipment slot="Body"
+                   id="Item.mp_coat_of_plates_over_mail" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_lordly_mail_mitten" />
+        <equipment slot="Leg"
+                   id="Item.mp_mail_chausses" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--帝国瓦兰吉卫队-->
+  <NPCCharacter id="mp_special_infantry_empire_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000016}Champion Swordsman"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.vlandia_2hsword_2_t5" />	   
+        <equipment slot="Head"
+                   id="Item.mp_imperial_goggled_helmet" />
+		<equipment slot="Cape"
+                   id="Item.mp_imperial_lamellar_shoulders" />		   
+        <equipment slot="Body"
+                   id="Item.mp_imperial_scale_armor" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_lamellar_plate_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_lamellar_plate_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_special_infantry_empire_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000015}Champion Swordsman"
+                occupation="Soldier"
+                culture="Culture.empire">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="330" />
+      <skill id="Polearm"
+             value="330" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="200" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.vlandia_2hsword_2_t5" />	   
+        <equipment slot="Head"
+                   id="Item.mp_imperial_goggled_helmet" />
+		<equipment slot="Cape"
+                   id="Item.mp_imperial_lamellar_shoulders" />		   
+        <equipment slot="Body"
+                   id="Item.mp_imperial_scale_armor" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_lamellar_plate_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_lamellar_plate_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--库赛特土尔扈特-->
+  <NPCCharacter id="mp_special_infantry_khuzait_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000017}Torguud"
+                occupation="Soldier"
+                culture="Culture.khuzait">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.khuzait_polearm_1_t4" />	   
+        <equipment slot="Head"
+                   id="Item.mp_khuzait_noble_helmet_with_fur" />
+		<equipment slot="Cape"
+                   id="Item.mp_varangian_bra_royal" />		   
+        <equipment slot="Body"
+                   id="Item.khuzait_heavy_armor" />
+	    <equipment slot="Gloves"
+                   id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Leg"
+                   id="Item.mp_mail_chausses" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_special_infantry_khuzait_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000017}Torguud"
+                occupation="Soldier"
+                culture="Culture.khuzait">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="250" />
+      <skill id="TwoHanded"
+             value="250" />
+      <skill id="Polearm"
+             value="250" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.khuzait_polearm_1_t4" />	   
+        <equipment slot="Head"
+                   id="Item.mp_khuzait_noble_helmet_with_fur" />
+		<equipment slot="Cape"
+                   id="Item.mp_varangian_bra_royal" />		   
+        <equipment slot="Body"
+                   id="Item.khuzait_heavy_armor" />
+	    <equipment slot="Gloves"
+                   id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Leg"
+                   id="Item.mp_mail_chausses" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--阿塞莱苏丹亲卫-->
+  <NPCCharacter id="mp_special_infantry_aserai_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000018}Sultan Guardian"
+                occupation="Soldier"
+                culture="Culture.aserai">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.aserai_2haxe_3_t5" />	   
+        <equipment slot="Head"
+                   id="Item.brass_aserai_helmet_b_closed" />
+		<equipment slot="Cape"
+                   id="Item.aserai_scale_shoulder_b" />		   
+        <equipment slot="Body"
+                   id="Item.aserai_full_scale_armor_on_chain" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_decorated_imperial_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_decorated_imperial_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_special_infantry_aserai_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000018}Sultan Guardian"
+                occupation="Soldier"
+                culture="Culture.aserai">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="330" />
+      <skill id="Polearm"
+             value="330" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.aserai_2haxe_3_t5" />	   
+        <equipment slot="Head"
+                   id="Item.brass_aserai_helmet_b_closed" />
+		<equipment slot="Cape"
+                   id="Item.aserai_scale_shoulder_b" />		   
+        <equipment slot="Body"
+                   id="Item.aserai_full_scale_armor_on_chain" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_decorated_imperial_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_decorated_imperial_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--斯特吉亚皇家侍卫-->
+  <NPCCharacter id="mp_special_infantry_sturgia_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000019}Royal Guardian"
+                occupation="Soldier"
+                culture="Culture.sturgia">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.sturgia_2haxe_2_t5" />	   
+        <equipment slot="Head"
+                   id="Item.sturgian_lord_helmet_c" />
+		<equipment slot="Cape"
+                   id="Item.mp_brass_lamellar_shoulder_white" />		   
+        <equipment slot="Body"
+                   id="Item.mp_northern_brass_lamellar_over_mail" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_plated_strip_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_special_infantry_sturgia_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000019}Royal Guardian"
+                occupation="Soldier"
+                culture="Culture.sturgia">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="330" />
+      <skill id="Polearm"
+             value="330" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.sturgia_2haxe_2_t5" />	   
+        <equipment slot="Head"
+                   id="Item.sturgian_lord_helmet_c" />
+		<equipment slot="Cape"
+                   id="Item.mp_brass_lamellar_shoulder_white" />		   
+        <equipment slot="Body"
+                   id="Item.mp_sturgian_lamellar_base" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_plated_strip_gauntlets" />
+        <equipment slot="Leg"
+                   id="Item.mp_plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--巴旦尼亚英雄-->
+  <NPCCharacter id="mp_special_infantry_battania_hero"
+                default_group="Infantry"
+                level="25"
+                name="{=10000020}Hero"
+                occupation="Soldier"
+                culture="Culture.battania">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="330" />
+      <skill id="TwoHanded"
+             value="330" />
+      <skill id="Polearm"
+             value="330" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="300" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.battania_2hsword_4_t4" />	   
+        <equipment slot="Head"
+                   id="Item.mp_battanian_noble_helmet_with_feather" />
+		<equipment slot="Cape"
+                   id="Item.mp_battania_warlord_pauldrons" />		   
+        <equipment slot="Body"
+                   id="Item.mp_battania_warlord_armor" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_battania_warlord_bracers" />
+        <equipment slot="Leg"
+                   id="Item.mp_battania_warlord_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="mp_special_infantry_battania_troop"
+                default_group="Infantry"
+                level="25"
+                name="{=10000020}Hero"
+                occupation="Soldier"
+                culture="Culture.battania">
+    <face>
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+      <BodyProperties version="4"
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+      <BodyPropertiesMax version="4"
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="0" />
+      <skill id="Throwing"
+             value="100" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0"
+                   id="Item.battania_2hsword_4_t4" />	   
+        <equipment slot="Head"
+                   id="Item.mp_battanian_noble_helmet_with_feather" />
+		<equipment slot="Cape"
+                   id="Item.mp_battania_warlord_pauldrons" />		   
+        <equipment slot="Body"
+                   id="Item.mp_battania_warlord_armor" />
+	    <equipment slot="Gloves"
+                   id="Item.mp_battania_warlord_bracers" />
+        <equipment slot="Leg"
+                   id="Item.mp_battania_warlord_boots" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  
+  <!--斯特吉亚资深弓手-->
+  <NPCCharacter id="mp_heavy_ranged_sturgia_hero"
+                default_group="Ranged"
+                level="20"
+                name="{=10000021}Veteran Bowman"
+                occupation="Soldier"
+                culture="Culture.sturgia">
+    <face>
+      <!--face_key value="38.89;0.2;0.2;440000001;100000000037000;7001000000000;0;3300503000000;0;0;300000" max_value="63.08;0.5309;0.663;BFC0B4B3C300F;FFFFFAFFAAA8FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;A8FF70AFFFEFF;0;0;489181"/-->
+      <BodyProperties version="4"
+                      age="38.89"
+                      weight="0.2"
+                      build="0.2"
+                      key="00000004400000010100000000037000000700100000000000000000000000000003300503000000000000000000000000000000000000000000000000C80000" />
+      <BodyPropertiesMax version="4"
+                         age="43.08"
+                         weight="0.5309"
+                         build="0.663"
+                         key="000BFC0B4B3C300FFFFFFAFFAAA8FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000A8FF70AFFFEFF000000000000000000000000000000000000000001689181" />
+    </face>
+    <skills>
+      <skill id="Riding"
+             value="0" />
+      <skill id="OneHanded"
+             value="50" />
+      <skill id="TwoHanded"
+             value="50" />
+      <skill id="Polearm"
+             value="50" />
+      <skill id="Crossbow"
+             value="0" />
+      <skill id="Bow"
+             value="75" />
       <skill id="Throwing"
              value="100" />
     </skills>
@@ -6983,44 +7199,40 @@
         <equipment slot="Item1"
                    id="Item.mp_arrows_bodkin" />
         <equipment slot="Item2"
-                   id="Item.mp_arrows_bodkin" />
-        <equipment slot="Item3"
-                   id="Item.mp_battania_two_handed_sword" />
-		<equipment slot="Body"
-				   id="Item.mp_battania_noble_armor" />
+                   id="Item.mp_sturgia_heavy_axe" />
 		<equipment slot="Head"
-				   id="Item.mp_battanian_crowned_helmet" />
-		<equipment slot="Gloves"
-				   id="Item.mp_highland_gloves" />
-		<equipment slot="Leg"
-				   id="Item.mp_battania_fur_boots" />
-		<equipment slot="Cape"
-				   id="Item.fur_cloak_c" />
+                   id="Item.mp_sturgian_helmet_b_open" />		   
+        <equipment slot="Body"
+                   id="Item.mp_nordic_sloven_over_mail" />
+        <equipment slot="Gloves"
+                   id="Item.mp_northern_brass_bracers" />
+        <equipment slot="Leg"
+                   id="Item.mp_mail_chausses" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="mp_battanian_veteran_falxman_hero"
-                default_group="Infantry"
+  <NPCCharacter id="mp_heavy_ranged_sturgia_troop"
+                default_group="Ranged"
                 level="25"
-                name="{=capc0001}Battanian Veteran Falxman"
+                name="{=10000021}Veteran Bowman"
                 occupation="Soldier"
                 culture="Culture.battania">
     <face>
-      <!--face_key value="38.89;0.2;0.2;440000001;100000000037000;7001000000000;0;3300503000000;0;0;300000" max_value="63.08;0.5309;0.663;BFC0B4B3C300F;FFFFFAFFAAA8FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;A8FF70AFFFEFF;0;0;489181"/-->
+      <!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
       <BodyProperties version="4"
-                      age="38.89"
-                      weight="0.2"
-                      build="0.2"
-                      key="00000004400000010100000000037000000700100000000000000000000000000003300503000000000000000000000000000000000000000000000000C80000" />
+                      age="26.1"
+                      weight="0.2667"
+                      build="0.1944"
+                      key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
       <BodyPropertiesMax version="4"
-                         age="63.08"
-                         weight="0.5309"
-                         build="0.663"
-                         key="000BFC0B4B3C300FFFFFFAFFAAA8FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000A8FF70AFFFEFF000000000000000000000000000000000000000001689181" />
+                         age="40.61"
+                         weight="0.4"
+                         build="0.5333"
+                         key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
     </face>
     <skills>
       <skill id="Riding"
-             value="15" />
+             value="0" />
       <skill id="OneHanded"
              value="50" />
       <skill id="TwoHanded"
@@ -7028,79 +7240,29 @@
       <skill id="Polearm"
              value="50" />
       <skill id="Crossbow"
-             value="20" />
+             value="0" />
       <skill id="Bow"
-             value="250" />
+             value="275" />
       <skill id="Throwing"
              value="100" />
     </skills>
     <Equipments>
       <EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.battania_polearm_1_t5" />
-			<equipment slot="Body"
-					   id="Item.kilt_over_plated_leather" />
-			<equipment slot="Head"
-					   id="Item.ridged_northernhelm" />
-			<equipment slot="Leg"
-					   id="Item.battania_fur_boots" />
-			<equipment slot="Gloves"
-					   id="Item.highland_gloves" />
-			<equipment slot="Cape"
-					   id="Item.battania_civil_cape" />
+        <equipment slot="Item0"
+                   id="Item.mp_long_bow" />
+        <equipment slot="Item1"
+                   id="Item.mp_arrows_bodkin" />
+        <equipment slot="Item2"
+                   id="Item.mp_sturgia_heavy_axe" />
+		<equipment slot="Head"
+                   id="Item.mp_sturgian_helmet_b_open" />		   
+        <equipment slot="Body"
+                   id="Item.mp_nordic_sloven_over_mail" />
+        <equipment slot="Gloves"
+                   id="Item.mp_northern_brass_bracers" />
+        <equipment slot="Leg"
+                   id="Item.mp_mail_chausses" />
       </EquipmentRoster>
-    </Equipments>
-  </NPCCharacter>
-  <NPCCharacter id="mp_battanian_veteran_falxman_troop"
-                default_group="Infantry"
-                level="25"
-                name="{=capc0001}Battanian Veteran Falxman"
-                occupation="Soldier"
-                culture="Culture.battania">
-    <face>
-      <!--face_key value="38.89;0.2;0.2;440000001;100000000037000;7001000000000;0;3300503000000;0;0;300000" max_value="63.08;0.5309;0.663;BFC0B4B3C300F;FFFFFAFFAAA8FFFF;FFBFFFF77FF7FFFF;FFFFFFFFFF6BFFFF;A8FF70AFFFEFF;0;0;489181"/-->
-      <BodyProperties version="4"
-                      age="38.89"
-                      weight="0.2"
-                      build="0.2"
-                      key="00000004400000010100000000037000000700100000000000000000000000000003300503000000000000000000000000000000000000000000000000C80000" />
-      <BodyPropertiesMax version="4"
-                         age="63.08"
-                         weight="0.5309"
-                         build="0.663"
-                         key="000BFC0B4B3C300FFFFFFAFFAAA8FFFFFFBFFFF77FF7FFFFFFFFFFFFFF6BFFFF000A8FF70AFFFEFF000000000000000000000000000000000000000001689181" />
-    </face>
-    <skills>
-      <skill id="Riding"
-             value="15" />
-      <skill id="OneHanded"
-             value="200" />
-      <skill id="TwoHanded"
-             value="200" />
-      <skill id="Polearm"
-             value="250" />
-      <skill id="Crossbow"
-             value="20" />
-      <skill id="Bow"
-             value="250" />
-      <skill id="Throwing"
-             value="100" />
-    </skills>
-    <Equipments>
-      <EquipmentRoster>
-			<equipment slot="Item0"
-					   id="Item.battania_polearm_1_t5" />
-			<equipment slot="Body"
-					   id="Item.kilt_over_plated_leather" />
-			<equipment slot="Head"
-					   id="Item.ridged_northernhelm" />
-			<equipment slot="Leg"
-					   id="Item.battania_fur_boots" />
-			<equipment slot="Gloves"
-					   id="Item.highland_gloves" />
-			<equipment slot="Cape"
-					   id="Item.battania_civil_cape" />
-      </EquipmentRoster>
-    </Equipments>
+    </Equipments>  
   </NPCCharacter>
 </MPCharacters>
