@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item id="t2_empire_horse"
+        name="{=OKn90ad7}Canterion Charger{@Plural}Canterion chargers{\@}"
+        mesh="horse_brown"
+        subtype="horse"
+        item_category="war_horse"
+        culture="Culture.empire"
+        weight="460"
+        difficulty="35"
+        appearance="0"
+        Type="Horse">
+    <ItemComponent>
+      <Horse monster="Monster.horse"
+             maneuver="60"
+             speed="40"
+             charge_damage="4"
+             body_length="112"
+             is_mountable="true"
+             extra_health="10"
+             skeleton_scale="empire_horse">
+        <AdditionalMeshes>
+          <Mesh name="horse_mane_2"
+                affected_by_cover="true" />
+        </AdditionalMeshes>
+        <Materials>
+          <Material name="horse_brown_mat">
+            <MeshMultipliers>
+              <MeshMultiplier mesh_multiplier="FF010101"
+                              percentage="0.75" />
+              <MeshMultiplier mesh_multiplier="FF909090"
+                              percentage="0.25" />
+            </MeshMultipliers>
+          </Material>
+          <Material name="horse_black_mat">
+            <MeshMultipliers>
+              <MeshMultiplier mesh_multiplier="FF010101"
+                              percentage="0.75" />
+              <MeshMultiplier mesh_multiplier="FF909090"
+                              percentage="0.25" />
+            </MeshMultipliers>
+          </Material>
+          <Material name="horse_grey_mat">
+            <MeshMultipliers>
+              <MeshMultiplier mesh_multiplier="FF303030"
+                              percentage="0.75" />
+              <MeshMultiplier mesh_multiplier="FF909090"
+                              percentage="0.25" />
+            </MeshMultipliers>
+          </Material>
+          <Material name="horse_white_mat">
+            <MeshMultipliers>
+              <MeshMultiplier mesh_multiplier="FF303030"
+                              percentage="1.0" />
+            </MeshMultipliers>
+          </Material>
+        </Materials>
+      </Horse>
+    </ItemComponent>
+    <Flags Civilian="true" />
+  </Item>
+</Items>

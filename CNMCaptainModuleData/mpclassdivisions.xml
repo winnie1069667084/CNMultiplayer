@@ -849,14 +849,6 @@
                        slot="Item0"
                        item="mp_vlandian_heavy_lance" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <!-- EMPIRE -->
@@ -1313,14 +1305,6 @@
                        slot="Item2"
                        item="mp_arrows_barbed_strong" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_empire"
@@ -1539,17 +1523,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_empire_heavy_menavlion" /> 
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_menavlion" /> 
       </Perk>
       <Perk game_mode="all"
             name="{=fAnbXffX}Cavalry Spear"
@@ -1877,6 +1850,9 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="9" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain"/>
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_eastern_studded_shoulders"
                        target="Player" />
@@ -1916,6 +1892,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_khuzait_heavy_mace" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain" />
       </Perk>
       <Perk game_mode="all"
             name="{=4YTJJaTG}Heavy Sabre"
@@ -1925,6 +1904,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_khuzait_heavy_sabre" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_jereed_captain" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -2056,14 +2038,6 @@
                        slot="Item1"
                        item="mp_arrows_steppe_strong" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_ranged_khuzait"
@@ -2130,14 +2104,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_arrows_steppe_extra" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
       </Perk>
       <Perk game_mode="all"
             name="{=vyI2KVKM}Bullseye"
@@ -2253,17 +2219,6 @@
 						   slot="Item0"
 						   item="mp_khuzait_glaive" />
 		</Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-		<OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						slot="Item0"
-						item="mp_khuzait_glaive" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_horse_archer_khuzait"
@@ -2642,17 +2597,6 @@
                        slot="Item1"
                        item="mp_aserai_axe" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=cap00010}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="1">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-		  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-						 slot="Item3"
-						 item="mp_emirs_oval_shield" />
-      </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=v2WKbNZo}Rapid Throws"
@@ -2898,14 +2842,6 @@
         <Effect type="DamageTaken"
                 value="-0.35"
                 hit_type="Ranged" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
       </Perk>
       <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
@@ -3892,14 +3828,6 @@
                        slot="Item1"
                        item="mp_arrows_bodkin_strong" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_cavalry_sturgia"
@@ -4083,17 +4011,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_northern_scouts_shield" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_twohanded_axe" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -4816,14 +4733,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_arrows_bodkin_strong" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=ydALXo9b}Reinforcements"
-            description="{=d3NMiZmW}Grants +2 additional troops."
-            icon="PerkExtraTroop"
-            perk_list="2">
-        <OnSpawnEffect type="TroopCountOnSpawn"
-                       value="2.0" />
       </Perk>
     </Perks>
   </MPClassDivision>
