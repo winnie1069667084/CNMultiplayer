@@ -43,19 +43,19 @@ namespace CNMultiplayer.Modes.Siege
 
         public event OnObjectiveGoldGainedDelegate OnObjectiveGoldGained;
 
-        private const int FirstSpawnGold = 300; //初始金币
+        private const int FirstSpawnGold = 180; //初始金币
 
-        private const int FirstSpawnGoldForEarlyJoin = 300; //初始金币
+        private const int FirstSpawnGoldForEarlyJoin = 180; //初始金币
 
         private const int ChangeTeamGold = 150; //换边金币
 
         private const int RespawnGold = 100; //基础重生金币
 
-        private const int AttackerRespawnGold = 50; //攻城方重生奖励金币
+        private const int AttackerRespawnGold = 40; //攻城方重生奖励金币
 
-        private const int DefenderRespawnGold = 25; //守城方重生奖励金币
+        private const int DefenderRespawnGold = 20; //守城方重生奖励金币
 
-        private const int AttackerFlagGoldHoldMax = 400; //攻城方持有旗帜金币最大值
+        private const int AttackerFlagGoldHoldMax = 250; //攻城方持有旗帜金币最大值
 
         private const int DefenderFlagGoldHoldMax = 200; //守城方持有旗帜金币最大值
 
@@ -63,7 +63,7 @@ namespace CNMultiplayer.Modes.Siege
 
         private const float ObjectiveCheckPeriod = 0.25f;
 
-        private const float MoraleTickTimeInSeconds = 3.5f; //士气Tick
+        private const float MoraleTickTimeInSeconds = 2.5f; //士气Tick
 
         private const float HealTick = 1f; //旗帜回血Tick
 
@@ -71,7 +71,7 @@ namespace CNMultiplayer.Modes.Siege
 
         private const float DefenderFlagGoldTick = 1.5f; //守城方旗帜金币Tick
 
-        private const float FlagSpeedPerPlayer = 0.15f; //每人提供的旗帜升降速度
+        private const float FlagSpeedPerPlayer = 0.20f; //每人提供的旗帜升降速度
 
         private const float FlagSpeedMax = 1f; //最大旗帜升降速度
 
