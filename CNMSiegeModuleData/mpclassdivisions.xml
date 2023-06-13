@@ -450,7 +450,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
@@ -527,7 +527,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
@@ -542,7 +542,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
@@ -557,7 +557,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
@@ -572,7 +572,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_pauldron_cape_b"
@@ -1614,7 +1614,7 @@
                    icon="Infantry_Heavy"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="45"
+                   armor="40"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
@@ -5079,7 +5079,7 @@
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -5124,7 +5124,7 @@
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -5142,7 +5142,7 @@
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -5160,7 +5160,7 @@
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -5178,7 +5178,7 @@
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -5197,7 +5197,7 @@
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -5216,7 +5216,7 @@
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -6592,7 +6592,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_battania_noble_sword" />
@@ -6656,7 +6656,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_battania_shoulder_furr"
@@ -6671,7 +6671,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_battania_shoulder_furr"
@@ -6686,7 +6686,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_battania_shoulder_furr"
@@ -7337,7 +7337,7 @@
                    icon="Infantry_Heavy"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="40"
+                   armor="35"
                    movement_speed="0.80"
                    combat_movement_speed="0.7"
                    acceleration="3.0">
@@ -7363,7 +7363,9 @@
         <Effect type="DrivenProperty"
                 value="0.2"
                 driven_property="ThrustOrRangedReadySpeedMultiplier" />
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+		<OnSpawnEffect type="ArmorOnSpawn"
+                       value="5" />		
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_aserai_pike" />
       </Perk>
@@ -7375,6 +7377,8 @@
         <Effect type="DrivenProperty"
                 value="0.1"
                 driven_property="ThrustOrRangedReadySpeedMultiplier" />
+		<OnSpawnEffect type="ArmorOnSpawn"
+                       value="5" />			
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_jereed" />
@@ -7591,7 +7595,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7639,7 +7643,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7657,7 +7661,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7675,7 +7679,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7693,7 +7697,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7711,7 +7715,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7729,7 +7733,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7747,7 +7751,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -7765,7 +7769,7 @@
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="15" />
+                       value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
@@ -8585,7 +8589,7 @@
                    icon="Special_Swordsman"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="65"
+                   armor="60"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8639,7 +8643,7 @@
                    icon="Special_Swordsman"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="65"
+                   armor="60"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8693,7 +8697,7 @@
                    icon="Special_Swordsman"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="65"
+                   armor="60"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8767,7 +8771,7 @@
                    icon="Special_Swordsman"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="65"
+                   armor="60"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8822,7 +8826,7 @@
                    icon="Special_Swordsman"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="65"
+                   armor="60"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8877,7 +8881,7 @@
                    icon="Special_Swordsman"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="65"
+                   armor="60"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"

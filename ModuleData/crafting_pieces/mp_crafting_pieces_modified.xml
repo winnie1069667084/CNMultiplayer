@@ -27,30 +27,7 @@
       <Flag name="BonusAgainstShield" />
     </Flags>
   </CraftingPiece>
-  <CraftingPiece id="mp_vlandian_throwing_axe_head_extra"
-                 name="{=!}Mp Vlandian Throwing Axe Head"
-                 tier="2"
-                 piece_type="Blade"
-                 mesh="axe_craft_4_head"
-                 distance_to_next_piece="5.787"
-                 distance_to_previous_piece="1.483"
-                 weight="0.9">
-    <BuildData piece_offset="-2.966" />
-    <BladeData stack_amount="6"
-               blade_length="10.566"
-               blade_width="19.257"
-               physics_material="metal_weapon"
-               body_name="bo_axe_longer_b"
-               holster_mesh="throwing_axe_quiver_1">
-      <Swing damage_type="Cut"
-             damage_factor="2.4" />
-    </BladeData>
-    <Flags>
-      <Flag name="CanBePickedUpFromCorpse"
-            type="ItemFlags" />
-      <Flag name="BonusAgainstShield" />
-    </Flags>
-  </CraftingPiece>
+
   <CraftingPiece id="mp_battanian_throwing_axe_head"
                  name="{=!}Mp Battanian Throwing Axe Head"
                  tier="2"
@@ -339,14 +316,14 @@
                  distance_to_previous_piece="1.483"
                  weight="0.9">
     <BuildData piece_offset="-2.966" />
-    <BladeData stack_amount="3"
+    <BladeData stack_amount="6"
                blade_length="10.566"
                blade_width="19.257"
                physics_material="metal_weapon"
                body_name="bo_axe_longer_b"
                holster_mesh="throwing_axe_quiver_1">
       <Swing damage_type="Cut"
-             damage_factor="2.9" />
+             damage_factor="2.4" />
     </BladeData>
     <Flags>
       <Flag name="CanBePickedUpFromCorpse"
@@ -354,7 +331,7 @@
       <Flag name="BonusAgainstShield" />
     </Flags>
   </CraftingPiece>
-  
+
   <CraftingPiece id="mp_sturgia_throwing_axe_head"
                  name="{=!}Mp Sturgia Throwing Axe Head"
                  tier="2"
