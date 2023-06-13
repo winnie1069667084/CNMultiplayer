@@ -1817,7 +1817,7 @@
           </Effects>
         </ConditionalEffect>
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
+                       slot="Item3"
                        item="mp_western_long_spear" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
