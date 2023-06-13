@@ -6274,9 +6274,9 @@
       <EquipmentRoster>
         <equipment slot="Item0"
                    id="Item.mp_crossbow" />
-        <equipment slot="Item1"
-                   id="Item.mp_bolts_imperial" />
         <equipment slot="Item2"
+                   id="Item.mp_bolts_imperial" />
+        <equipment slot="Item1"
                    id="Item.mp_empire_mace" />
 		<equipment slot="Head"
                    id="Item.mp_empire_lord_helmet" />
@@ -6331,6 +6331,8 @@
         <equipment slot="Item0"
                    id="Item.composite_steppe_bow" />
         <equipment slot="Item1"
+                   id="Item.barbed_arrows" />
+        <equipment slot="Item2"
                    id="Item.barbed_arrows" />
         <equipment slot="Item3"
                    id="Item.empire_sword_5_t4" />
@@ -6391,6 +6393,8 @@
         <equipment slot="Item0"
                    id="Item.composite_steppe_bow" />
         <equipment slot="Item1"
+                   id="Item.barbed_arrows" />
+        <equipment slot="Item2"
                    id="Item.barbed_arrows" />
         <equipment slot="Item3"
                    id="Item.empire_sword_5_t4" />
