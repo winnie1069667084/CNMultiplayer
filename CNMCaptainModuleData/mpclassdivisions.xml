@@ -5011,7 +5011,7 @@
                    troop="mp_heavy_infantry_aserai_troop"
                    hero_idle_anim="act_aserai_aserai_mp_archer_idle"
                    troop_idle_anim="act_idle_bow_1"
-                   multiplier="0.68"
+                   multiplier="0.55"
                    cost="110"
                    casual_cost="150"
                    battle_cost="130"
