@@ -51,9 +51,9 @@ namespace CNMultiplayer.Modes.Siege
 
         private const int RespawnGold = 100; //基础重生金币
 
-        private const int AttackerRespawnGold = 40; //攻城方重生奖励金币
+        private const int AttackerRespawnGold = 30; //攻城方重生奖励金币
 
-        private const int DefenderRespawnGold = 20; //守城方重生奖励金币
+        private const int DefenderRespawnGold = 15; //守城方重生奖励金币
 
         private const int AttackerFlagGoldHoldMax = 250; //攻城方持有旗帜金币最大值
 
@@ -71,7 +71,7 @@ namespace CNMultiplayer.Modes.Siege
 
         private const float DefenderFlagGoldTick = 1.5f; //守城方旗帜金币Tick
 
-        private const float FlagSpeedPerPlayer = 0.20f; //每人提供的旗帜升降速度
+        private const float FlagSpeedPerPlayer = 0.25f; //每人提供的旗帜升降速度
 
         private const float FlagSpeedMax = 1f; //最大旗帜升降速度
 
