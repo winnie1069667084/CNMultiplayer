@@ -203,11 +203,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000159}Bareman"
-            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.05"
+                value="0.08"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -1342,11 +1342,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000159}Bareman"
-            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.05"
+                value="0.08"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -2683,11 +2683,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000159}Bareman"
-            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.05"
+                value="0.08"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -3580,11 +3580,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000159}Bareman"
-            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.05"
+                value="0.08"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -4726,11 +4726,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000159}Bareman"
-            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.05"
+                value="0.08"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -6104,11 +6104,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000159}Bareman"
-            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.05"
+                value="0.08"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
