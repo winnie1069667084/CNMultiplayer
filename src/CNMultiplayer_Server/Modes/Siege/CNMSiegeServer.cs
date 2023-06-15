@@ -67,9 +67,9 @@ namespace CNMultiplayer.Modes.Siege
 
         private const float HealTick = 1f; //旗帜回血Tick
 
-        private const float AttackerFlagGoldTick = 0.75f; //攻城方旗帜金币Tick
+        private const float AttackerFlagGoldTick = 1.2f; //攻城方旗帜金币Tick
 
-        private const float DefenderFlagGoldTick = 1.5f; //守城方旗帜金币Tick
+        private const float DefenderFlagGoldTick = 2.4f; //守城方旗帜金币Tick
 
         private const float FlagSpeedPerPlayer = 0.25f; //每人提供的旗帜升降速度
 
@@ -77,7 +77,7 @@ namespace CNMultiplayer.Modes.Siege
 
         private const float FlagSpeedMin = 0.1f; //最小旗帜升降速度（不得低于0.1f）
 
-        private const int FlagGoldGain = 1; //旗帜金币量
+        private const int FlagGoldGain = 2; //旗帜金币量
 
         private const int HealGain = 1; //旗帜回血量
 
