@@ -448,7 +448,7 @@
     </SpritePart>
     <SpritePart>
       <SheetID>42</SheetID>
-      <Name>crpg_siege_acre</Name>
+      <Name>mp_siege_acre</Name>
       <Width>1920</Width>
       <Height>1080</Height>
       <SheetX>0</SheetX>
@@ -457,7 +457,7 @@
     </SpritePart>
     <SpritePart>
       <SheetID>43</SheetID>
-      <Name>crpg_siege_frederiksborg</Name>
+      <Name>mp_siege_frederiksborg</Name>
       <Width>1920</Width>
       <Height>1080</Height>
       <SheetX>0</SheetX>
@@ -731,12 +731,12 @@
       <SpritePartName>mp_tdm_map_004a_w</SpritePartName>
     </GenericSprite>
     <GenericSprite>
-      <Name>crpg_siege_acre</Name>
-      <SpritePartName>crpg_siege_acre</SpritePartName>
+      <Name>mp_siege_acre</Name>
+      <SpritePartName>mp_siege_acre</SpritePartName>
     </GenericSprite>
     <GenericSprite>
-      <Name>crpg_siege_frederiksborg</Name>
-      <SpritePartName>crpg_siege_frederiksborg</SpritePartName>
+      <Name>mp_siege_frederiksborg</Name>
+      <SpritePartName>mp_siege_frederiksborg</SpritePartName>
     </GenericSprite>
     <GenericSprite>
       <Name>crpg_siege_hades</Name>
