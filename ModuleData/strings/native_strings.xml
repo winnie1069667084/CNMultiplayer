@@ -11,8 +11,8 @@
   <string id="str_taunt_name.MpAttack" text="{=20000009}Attack!" />
   <string id="str_multiplayer_scene_name.mp_siege_map_004_rs" text="{=20000010}Tubilis Castle" />
   <string id="str_multiplayer_scene_name.mp_siege_map_MLYX_003" text="{=20000011}New Skala Landing" />
-  <string id="str_multiplayer_scene_name.crpg_siege_acre" text="{=20000012}Acre" />
-  <string id="str_multiplayer_scene_name.crpg_siege_frederiksborg" text="{=20000013}Frederiksborg" />
+  <string id="str_multiplayer_scene_name.mp_siege_acre" text="{=20000012}Acre" />
+  <string id="str_multiplayer_scene_name.mp_siege_frederiksborg" text="{=20000013}Frederiksborg" />
   <string id="str_multiplayer_scene_name.crpg_siege_hades" text="{=20000014}Hades" />
   <string id="str_multiplayer_scene_name.crpg_siege_motteandbailey" text="{=20000015}Motteandbailey" />
   <string id="str_multiplayer_scene_name.crpg_siege_neuenburg" text="{=20000016}Neuenburg" />
