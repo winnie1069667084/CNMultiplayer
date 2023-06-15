@@ -55,9 +55,9 @@ namespace CNMultiplayer.Modes.Siege
 
         private const int DefenderRespawnGold = 15; //守城方重生奖励金币
 
-        private const int AttackerFlagGoldHoldMax = 250; //攻城方持有旗帜金币最大值
+        private const int AttackerFlagGoldHoldMax = 200; //攻城方持有旗帜金币最大值
 
-        private const int DefenderFlagGoldHoldMax = 200; //守城方持有旗帜金币最大值
+        private const int DefenderFlagGoldHoldMax = 150; //守城方持有旗帜金币最大值
 
         private const float radius = 20f; //定义旗帜半径
 
