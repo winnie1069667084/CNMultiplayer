@@ -1,4 +1,4 @@
-611
+604
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -76,26 +76,19 @@ mesh castle_scaffold_a_00
 mesh castle_scaffold_a_01
 mesh castle_scaffold_a_02
 mesh castle_scaffold_a_03
-mesh debug_lod_mesh
 mesh dragon_banner_center
 mesh dragon_banner_dragonhead
 mesh dragon_banner_handle
-mesh empire_castle_gate_outer_l3_plank
-mesh empire_castle_gate_outer_l3_state2
-mesh empire_castle_gate_outer_l3_state3
-mesh empire_castle_gate_outer_l3_state4
-mesh empire_castle_gate_outer_l3_state5
-mesh empire_castle_gate_outer_l3_state_1
 mesh empire_castle_keep_a_l3_interior_window_shutter_close
 mesh empire_street_fountain_e
 mesh empire_street_tent_01
 mesh fence_empire_a
 mesh flagpole_a
-mesh icon_man
 mesh mi_ship_2
 mesh ship_a
 mesh ship_e
 mesh siege_tower_5m_logs
+mesh soft_border_column
 mesh sturgia_shield_a
 mesh terrain_green_rock_big_c
 mesh vlandia_grandbazaar_ground_a
