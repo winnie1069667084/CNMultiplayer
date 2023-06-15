@@ -130,21 +130,21 @@ namespace CNMultiplayer.Modes.Siege
             GameMode.ChangeCurrentGoldForPeer(peer, GameMode.GetCurrentGoldForPeer(peer) - mPHeroClass.TroopCasualCost);
         }
 
-        public static bool LockTroop(MissionPeer component, MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer)
+        public static bool LockTroop(MissionPeer component, MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer) //锁定兵种比例上限
         {
             bool flag = false;
             int Sum = GetTroopTypeCountForTeam(component.Team)[0];
-            int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
+            //int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
             int Ranged = GetTroopTypeCountForTeam(component.Team)[2];
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
             BasicCharacterObject Character = mpheroClassForPeer.TroopCharacter;
-            if ((Character.IsRanged && !Character.IsMounted && Ranged > Sum / 4) || (Character.IsMounted && !Character.IsRanged && Cavalry > Sum / 4) || (Character.IsMounted && Character.IsRanged && HorseArcher > Sum / 4))
+            if ((Character.IsRanged && !Character.IsMounted && Ranged + Cavalry + HorseArcher > Sum * 2 / 5) || (Character.IsMounted && !Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5) || (Character.IsMounted && Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5))
                 flag = true;
             return flag;
         }
 
-        public static int[] GetTroopTypeCountForTeam(Team team)//统计某方战场存活兵种数，0总数；1步兵；2射手；3骑兵；4骑射
+        public static int[] GetTroopTypeCountForTeam(Team team) //统计某方战场存活兵种数，0总数；1步兵；2射手；3骑兵；4骑射
         {
             int[] num = new int[5];
             foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)

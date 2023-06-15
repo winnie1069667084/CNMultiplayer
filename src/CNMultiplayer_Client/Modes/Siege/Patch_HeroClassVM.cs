@@ -6,7 +6,7 @@ using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
 
 namespace HarmonyPatches
 {
-    [HarmonyPatch(typeof(HeroClassVM), "UpdateEnabled")]//根据战场兵种比例锁定兵种，限定射手、骑兵、骑射手分别不超过总兵力的1/4。
+    [HarmonyPatch(typeof(HeroClassVM), "UpdateEnabled")]//根据战场兵种比例锁定兵种，限定射手、骑兵、骑射手总和不超过总兵力的40%。
     internal class Patch_UpdateEnabled
     {
         public static bool Prefix(HeroClassVM __instance, MissionMultiplayerGameModeBaseClient ____gameMode)
@@ -21,7 +21,7 @@ namespace HarmonyPatches
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
             string Id = __instance.TroopTypeId;
-            if ((Id == "Ranged" && Ranged > Sum / 4) || (Id == "Cavalry" && Cavalry > Sum / 4) || (Id == "HorseArcher" && HorseArcher > Sum / 4))
+            if (Id == "Ranged" && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Id == "Cavalry" && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Id == "HorseArcher" && Ranged + Cavalry + HorseArcher > Sum * 2 / 5)
             {
                 flag = false;
                 MultiplayerClassDivisions.MPHeroClass mPHeroClassForPeer = MultiplayerClassDivisions.GetMPHeroClassForPeer(component);
@@ -32,7 +32,7 @@ namespace HarmonyPatches
                     GameNetwork.EndModuleEventAsClient();
                 }
             }
-            __instance.IsEnabled = ____gameMode.IsInWarmup || !____gameMode.IsGameModeUsingGold || (____gameMode.GetGoldAmount() >= __instance.Gold && flag);
+            __instance.IsEnabled = ____gameMode.IsInWarmup || !____gameMode.IsGameModeUsingGold || ____gameMode.GetGoldAmount() >= __instance.Gold && flag;
             return false;
         }
 
@@ -71,7 +71,7 @@ namespace HarmonyPatches
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
             BasicCharacterObject Character = mpheroClassForPeer.TroopCharacter;
-            if ((Character.IsRanged && !Character.IsMounted && Ranged > Sum / 4) || (Character.IsMounted && !Character.IsRanged && Cavalry > Sum / 4) || (Character.IsMounted && Character.IsRanged && HorseArcher > Sum / 4))
+            if (Character.IsRanged && !Character.IsMounted && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Character.IsMounted && !Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Character.IsMounted && Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5)
                 flag = true;
             return flag;
         }
