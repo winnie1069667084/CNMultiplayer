@@ -13,14 +13,14 @@
   <string id="str_multiplayer_scene_name.mp_siege_map_MLYX_003" text="{=20000011}New Skala Landing" />
   <string id="str_multiplayer_scene_name.mp_siege_acre" text="{=20000012}Acre" />
   <string id="str_multiplayer_scene_name.mp_siege_frederiksborg" text="{=20000013}Frederiksborg" />
-  <string id="str_multiplayer_scene_name.crpg_siege_hades" text="{=20000014}Hades" />
-  <string id="str_multiplayer_scene_name.crpg_siege_motteandbailey" text="{=20000015}Motteandbailey" />
-  <string id="str_multiplayer_scene_name.crpg_siege_neuenburg" text="{=20000016}Neuenburg" />
+  <string id="str_multiplayer_scene_name.mp_siege_hades" text="{=20000014}Hades" />
+  <string id="str_multiplayer_scene_name.mp_siege_motteandbailey" text="{=20000015}Motteandbailey" />
+  <string id="str_multiplayer_scene_name.mp_siege_neuenburg" text="{=20000016}Neuenburg" />
   <string id="str_multiplayer_scene_name.crpg_siege_hailescastle" text="{=20000017}Hailes Castle" />
   <string id="str_multiplayer_scene_name.crpg_siege_jameyyedcastle" text="{=20000018}Jameyyed Castle" />
   <string id="str_multiplayer_scene_name.crpg_siege_stronghold" text="{=20000019}Stronghold" />
   <string id="str_multiplayer_scene_name.crpg_siege_talmberg" text="{=20000020}Talmberg" />
-  <string id="str_multiplayer_scene_name.crpg_siege_silverskalitz" text="{=20000021}Silverskalitz" />
+  <string id="str_multiplayer_scene_name.mp_siege_silverskalitz" text="{=20000021}Silverskalitz" />
   <string id="str_multiplayer_scene_name.mp_sergeant_map_001" text="{=20000022}Cypegos Blockade" />
   <string id="str_multiplayer_scene_name.mp_sergeant_map_005" text="{=20000023}Skolder Hideout" />
   <string id="str_multiplayer_official_game_type_name.CNMSiege" text="{=cnmsiegemultiplayergametype}CNMSiege" />
