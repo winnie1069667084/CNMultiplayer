@@ -70,13 +70,8 @@ mesh fence_empire_a
 mesh flag_pole_big
 mesh flag_stand_white2
 mesh flagpole_a
-mesh icon_man_spawner_ghost
-mesh ladder_14m_spawner_ghost
-mesh ladder_usage_points_ghost
 mesh log_pine_m
 mesh module_european_village_rooftop_tangent_b
-mesh pushdistance_spawner_ghost
-mesh pushfork_spawner_ghost
 mesh ship_a
 mesh ship_e
 mesh stand_straw_a
@@ -143,7 +138,6 @@ prefab bd_flag_2
 prefab bd_heap_c
 prefab bd_heap_d
 prefab bd_heap_e
-prefab bd_ladder_a
 prefab bd_ladder_b
 prefab bd_log_and_axe
 prefab bd_manure_a
@@ -256,6 +250,10 @@ prefab empire_statue_plinth_b
 prefab empire_statue_plinth_c
 prefab empire_statue_plinth_d
 prefab empire_statue_plinth_e
+prefab empire_street_pottery_02
+prefab empire_street_pottery_04
+prefab empire_street_pottery_05
+prefab empire_street_pottery_11
 prefab empire_street_tent_02
 prefab empire_village_house_a
 prefab empire_village_house_b
@@ -348,6 +346,8 @@ prefab particles
 prefab pile_collider
 prefab port_a
 prefab port_ramp_a
+prefab pot_b
+prefab pot_heap_a
 prefab pot_pile
 prefab projectile_pile
 prefab prt_border_probe

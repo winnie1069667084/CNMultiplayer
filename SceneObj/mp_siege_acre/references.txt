@@ -1,4 +1,4 @@
-611
+612
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -70,6 +70,7 @@ mesh aserai_castle_wall_a_roof_6
 mesh aserai_castle_wall_a_roof_7
 mesh aserai_grandbazaar_wall
 mesh banner_empire_keep
+mesh barrier
 mesh castle_scaffold_a
 mesh castle_scaffold_a_00
 mesh castle_scaffold_a_01

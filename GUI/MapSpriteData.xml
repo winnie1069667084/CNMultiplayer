@@ -466,7 +466,7 @@
     </SpritePart>
     <SpritePart>
       <SheetID>44</SheetID>
-      <Name>crpg_siege_hades</Name>
+      <Name>mp_siege_hades</Name>
       <Width>1920</Width>
       <Height>1080</Height>
       <SheetX>0</SheetX>
@@ -484,7 +484,7 @@
     </SpritePart>
     <SpritePart>
       <SheetID>46</SheetID>
-      <Name>crpg_siege_neuenburg</Name>
+      <Name>mp_siege_neuenburg</Name>
       <Width>1920</Width>
       <Height>1080</Height>
       <SheetX>0</SheetX>
@@ -511,7 +511,7 @@
     </SpritePart>
     <SpritePart>
       <SheetID>49</SheetID>
-      <Name>crpg_siege_silverskalitz</Name>
+      <Name>mp_siege_silverskalitz</Name>
       <Width>1680</Width>
       <Height>765</Height>
       <SheetX>0</SheetX>
@@ -739,16 +739,16 @@
       <SpritePartName>mp_siege_frederiksborg</SpritePartName>
     </GenericSprite>
     <GenericSprite>
-      <Name>crpg_siege_hades</Name>
-      <SpritePartName>crpg_siege_hades</SpritePartName>
+      <Name>mp_siege_hades</Name>
+      <SpritePartName>mp_siege_hades</SpritePartName>
     </GenericSprite>
     <GenericSprite>
       <Name>crpg_siege_motteandbailey</Name>
       <SpritePartName>crpg_siege_motteandbailey</SpritePartName>
     </GenericSprite>
     <GenericSprite>
-      <Name>crpg_siege_neuenburg</Name>
-      <SpritePartName>crpg_siege_neuenburg</SpritePartName>
+      <Name>mp_siege_neuenburg</Name>
+      <SpritePartName>mp_siege_neuenburg</SpritePartName>
     </GenericSprite>
     <GenericSprite>
       <Name>crpg_siege_jameyyedcastle</Name>
@@ -759,8 +759,8 @@
       <SpritePartName>crpg_siege_hailescastle</SpritePartName>
     </GenericSprite>
     <GenericSprite>
-      <Name>crpg_siege_silverskalitz</Name>
-      <SpritePartName>crpg_siege_silverskalitz</SpritePartName>
+      <Name>mp_siege_silverskalitz</Name>
+      <SpritePartName>mp_siege_silverskalitz</SpritePartName>
     </GenericSprite>
     <GenericSprite>
       <Name>crpg_siege_stronghold</Name>
