@@ -1,4 +1,4 @@
-1009
+1008
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -114,7 +114,6 @@ mesh terrain_green_rock_big_a
 mesh terrain_green_rock_big_c
 mesh torch_flame_base
 mesh torch_wall_a
-mesh wm_cloud_b
 mesh wooden_platform_c
 mesh wooden_platform_plank_b
 mesh wooden_platform_plank_c
@@ -944,7 +943,7 @@ prefab wooden_platform_plank_d
 prefab wooden_platform_plank_e
 prefab wooden_platform_plank_f_column
 prefab wooden_platform_stairs_a
-texture cg_sepia_20
+texture cg_75c
 texture cliff_soil_d
 texture cliff_soil_h
 texture cliff_soil_n
