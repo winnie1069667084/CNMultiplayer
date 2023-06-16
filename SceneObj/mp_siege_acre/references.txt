@@ -1,4 +1,4 @@
-612
+614
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -70,7 +70,7 @@ mesh aserai_castle_wall_a_roof_6
 mesh aserai_castle_wall_a_roof_7
 mesh aserai_grandbazaar_wall
 mesh banner_empire_keep
-mesh barrier
+mesh bd_hay_cart_b
 mesh castle_scaffold_a
 mesh castle_scaffold_a_00
 mesh castle_scaffold_a_01
@@ -224,6 +224,7 @@ prefab bd_chair_f_unsittable
 prefab bd_chair_king_c_unsittable
 prefab bd_chair_trunk_a_unsittable
 prefab bd_chest_a
+prefab bd_chest_sturgia_d
 prefab bd_cloth_1
 prefab bd_cloth_2
 prefab bd_cloth_3
@@ -233,6 +234,7 @@ prefab bd_fabric_b
 prefab bd_fabric_c
 prefab bd_flag_2
 prefab bd_goblet_sturgia_a
+prefab bd_hay_cart_b
 prefab bd_heap_b
 prefab bd_heap_c
 prefab bd_heap_d
