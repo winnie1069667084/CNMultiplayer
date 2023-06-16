@@ -1,4 +1,4 @@
-1008
+1009
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -107,14 +107,14 @@ mesh european_castle_wall_gate_l3_stairs
 mesh flag_pole_big
 mesh flag_stand_white2
 mesh foods_basket_c
-mesh icon_man
-mesh mangonel_rock_pile
+mesh outer_rain_cylinder
 mesh rock_004
 mesh sturgia_village_house_entrance
 mesh terrain_green_rock_big_a
 mesh terrain_green_rock_big_c
 mesh torch_flame_base
 mesh torch_wall_a
+mesh wm_cloud_b
 mesh wooden_platform_c
 mesh wooden_platform_plank_b
 mesh wooden_platform_plank_c
@@ -435,6 +435,7 @@ prefab european_castle_l1_corner_upstairs_a
 prefab european_castle_l1_corner_upstairs_a_stairs
 prefab european_castle_l1_gatehouse_door_closed
 prefab european_castle_l1_gatehouse_door_open
+prefab european_castle_ladder
 prefab european_castle_stairs_a_l1
 prefab european_castle_stairs_a_l3
 prefab european_castle_stairs_a_l3_bo
@@ -802,7 +803,6 @@ prefab siege_barricade_group_a
 prefab siege_barricade_group_b
 prefab siege_barricade_group_c
 prefab siege_barricade_group_d
-prefab siege_ladder_11m_spawner
 prefab siege_ladder_6m_spawner
 prefab siege_ladder_7m_spawner
 prefab sound
@@ -813,6 +813,7 @@ prefab sp_duel_set
 prefab spawn_visual
 prefab spear_new_f_1-9m
 prefab spear_rack
+prefab stairs_bo
 prefab stand_straw_a
 prefab stand_straw_b
 prefab state1
@@ -943,7 +944,7 @@ prefab wooden_platform_plank_d
 prefab wooden_platform_plank_e
 prefab wooden_platform_plank_f_column
 prefab wooden_platform_stairs_a
-texture cg_75c
+texture cg_sepia_20
 texture cliff_soil_d
 texture cliff_soil_h
 texture cliff_soil_n
@@ -1000,7 +1001,7 @@ texture rock_cliff_b_s
 texture rock_k_h
 texture rock_k_n
 texture rock_k_s
-texture sky_photo_cloudy_01
+texture sky_photo_overcast_01
 texture sun_core2
 texture vtstt_ground_grass_soil_a_s
 texture vtstt_plowed_field_a_d
