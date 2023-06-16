@@ -1,4 +1,4 @@
-784
+792
 flora_entity 
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -188,6 +188,7 @@ mesh peasent_shovel
 mesh pot_b
 mesh rock_004
 mesh ship_a
+mesh shipyard_b
 mesh shop_prop_merchantcarpenter_d
 mesh shop_prop_merchantcarpenter_e
 mesh shop_prop_merchantcarpenter_f
@@ -220,7 +221,6 @@ prefab Fresian_horse
 prefab __empty_object
 prefab _barrier_04x04m
 prefab _barrier_08x04m
-prefab _barrier_12x04m
 prefab _barrier_16x04m
 prefab _sound_emitter
 prefab _to_carry_arm_kitchen_pot_c
@@ -290,6 +290,7 @@ prefab bd_cart_heap_a
 prefab bd_cart_heap_b
 prefab bd_cart_heap_d
 prefab bd_cart_heap_e
+prefab bd_cart_heap_f
 prefab bd_cart_heap_l
 prefab bd_cart_spoke
 prefab bd_cart_wheel_a
@@ -324,6 +325,7 @@ prefab bd_sack_c
 prefab bd_sack_heap_a
 prefab bd_sack_heap_b
 prefab bd_sack_heap_c
+prefab bd_shelf_2_heap_a
 prefab bd_shelf_2_heap_b
 prefab bd_shelf_heap_a
 prefab bd_shelf_heap_b
@@ -374,13 +376,17 @@ prefab civilian_ladder_6m
 prefab clean
 prefab close_inside
 prefab close_outside
+prefab collider
 prefab collider_agent_l
 prefab collider_agent_r
 prefab collider_l
 prefab collider_r
 prefab crate_a
+prefab crate_a_empty
+prefab crate_a_lid
 prefab crate_b
 prefab crate_b_empty
+prefab crate_b_lid
 prefab crow
 prefab crowd_man_b
 prefab crowd_man_c
@@ -460,6 +466,7 @@ prefab european_city_part_g_stairs
 prefab european_city_part_g_stairs_bo
 prefab european_city_part_h_door
 prefab european_city_part_j_balcony
+prefab european_sally_door_a
 prefab european_village_barn_a
 prefab european_village_house_c
 prefab extra_collider_l
@@ -664,6 +671,7 @@ prefab shop_sign_base_c2
 prefab shop_sign_merchantempty
 prefab shop_sign_merchantleather
 prefab shop_sign_merchantweaverywool
+prefab side
 prefab sidewalk_stone_a
 prefab siege_barricade_a
 prefab siege_barricade_c
