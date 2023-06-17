@@ -5,7 +5,7 @@
 		<value name="middle_gray" value="0.100"/>
 		<value name="temperature" value="18.000"/>
 		<value name="humidity" value="0.000"/>
-		<value name="color_grade_name" value="color_grade_empire_harsh"/>
+		<value name="color_grade_name" value="color_grade_soft_warm"/>
 		<value name="time_of_day" value="2.000"/>
 		<value name="fall_density" value="0.000"/>
 		<value name="snow_density" value="0.000"/>

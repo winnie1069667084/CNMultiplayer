@@ -407,7 +407,7 @@ prefab wooden_platform_plank_b
 prefab wooden_platform_plank_c
 prefab wooden_platform_plank_d
 prefab wooden_platform_plank_e
-texture color_grade_empire_harsh
+texture color_grade_soft_warm
 texture desert_floor_a
 texture desert_floor_a_h
 texture desert_floor_a_n
