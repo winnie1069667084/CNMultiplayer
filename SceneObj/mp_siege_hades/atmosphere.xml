@@ -14,7 +14,7 @@
 		<value name="global_envmap_color_factor" value="0.981, 0.987, 1.000"/>
 		<value name="prt_multiplier" value="1.000"/>
 		<value name="do_not_render_envmap" value="false"/>
-		<value name="skybox_background_texture_name" value="sky_photo_cloudy_01"/>
+		<value name="skybox_background_texture_name" value="sky_photo_overcast_01"/>
 		<value name="skybox_sun_texture_name" value="sun_core2"/>
 		<value name="lens_flare_dirt_texture_name" value="lens_dirt"/>
 		<value name="lens_flare_star_texture_name" value="lens_star"/>
@@ -23,7 +23,7 @@
 	</values>
 	<global_ambient fog_ambient_color="0.730, 0.639, 0.554"/>
 	<fog>
-		<value name="fog_density" value="5.000"/>
+		<value name="fog_density" value="80.000"/>
 		<value name="fog_falloff" value="2.000"/>
 		<value name="fog_color" value="0.542, 0.836, 1.000"/>
 		<value name="cloud_shadow_color" value="0.250, 0.250, 0.400"/>

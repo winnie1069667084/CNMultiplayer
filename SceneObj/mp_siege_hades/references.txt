@@ -1,4 +1,4 @@
-464
+468
 flora_entity agriculture_chickpeas
 flora_entity agriculture_garlic
 flora_entity agriculture_leek
@@ -14,6 +14,7 @@ mesh arabian_ladder_wood_a
 mesh arabian_platform_wooden_c
 mesh arrow_new_icon
 mesh aserai_grandbazaar_wall
+mesh ballista_b_spawner_ghost
 mesh banner_empire_keep
 mesh barn_fence_a
 mesh battania_keep_door_case_a
@@ -70,6 +71,7 @@ mesh fence_empire_a
 mesh flag_pole_big
 mesh flag_stand_white2
 mesh flagpole_a
+mesh icon_man_spawner_ghost
 mesh log_pine_m
 mesh module_european_village_rooftop_tangent_b
 mesh ship_a
@@ -130,6 +132,7 @@ prefab bd_bucket_a
 prefab bd_bucket_b
 prefab bd_cart_heap_a
 prefab bd_cart_heap_b
+prefab bd_cart_heap_e
 prefab bd_cart_spoke
 prefab bd_cart_wheel_b
 prefab bd_cartbroken_d
@@ -141,6 +144,7 @@ prefab bd_heap_e
 prefab bd_ladder_b
 prefab bd_log_and_axe
 prefab bd_manure_a
+prefab bd_planks_a
 prefab bd_rope_a
 prefab bd_rope_b
 prefab bd_rope_sturgia_a
@@ -459,7 +463,7 @@ texture pebbles_s
 texture plowed_field_a_h
 texture plowed_field_a_n
 texture plowed_field_b_d
-texture sky_photo_cloudy_01
+texture sky_photo_overcast_01
 texture splatmap
 texture sun_core2
 texture vtstt_plowed_field_a_s

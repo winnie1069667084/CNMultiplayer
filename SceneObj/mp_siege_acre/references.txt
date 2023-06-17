@@ -1,4 +1,4 @@
-614
+615
 flora_entity flora_green__mix_big_leafs
 flora_entity flora_tree_date_palm_b
 flora_entity flora_tree_date_palm_d
@@ -70,7 +70,6 @@ mesh aserai_castle_wall_a_roof_6
 mesh aserai_castle_wall_a_roof_7
 mesh aserai_grandbazaar_wall
 mesh banner_empire_keep
-mesh bd_hay_cart_b
 mesh castle_scaffold_a
 mesh castle_scaffold_a_00
 mesh castle_scaffold_a_01
@@ -178,6 +177,7 @@ prefab ballista_a_spawnerMP
 prefab ballista_b_spawnerFireMP
 prefab ballista_b_spawnerMP
 prefab barricade_f
+prefab battania_castle_keep_wood_stake_c
 prefab battering_ram_rest_point
 prefab batteringram_a_spawnerMP
 prefab battleground_fire_smoke_vertical
@@ -295,6 +295,7 @@ prefab capture_flag_a
 prefab carpet_empire_e
 prefab castle_door_sally
 prefab castle_plank_ramp_a
+prefab castle_plank_ramp_b
 prefab castle_plank_wall_a
 prefab castle_plank_wall_c
 prefab chest_empire_c

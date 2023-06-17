@@ -1,4 +1,4 @@
-1008
+1013
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -131,6 +131,8 @@ prefab _to_carry_foods_basket_apple
 prefab a_spr_light
 prefab adam2
 prefab adam_0
+prefab ai_barrier_l
+prefab ai_barrier_r
 prefab ambient_sound_emitter
 prefab ammo_pos_a
 prefab ammo_pos_b
@@ -733,6 +735,7 @@ prefab prt_watersplash_6
 prefab prt_watersplash_7
 prefab prt_watersplash_8
 prefab prt_watersplash_9
+prefab ramp
 prefab rock_001
 prefab rock_cliff_a
 prefab rock_cliff_b
@@ -804,6 +807,7 @@ prefab siege_barricade_group_c
 prefab siege_barricade_group_d
 prefab siege_ladder_6m_spawner
 prefab siege_ladder_7m_spawner
+prefab siege_tower_5m_spawnerMP
 prefab sound
 prefab sound_reverb
 prefab sp_duel_attacker
@@ -915,6 +919,7 @@ prefab weapon_rack_a
 prefab weapon_rack_aserai_a
 prefab weapon_rack_sturgia_a
 prefab weapon_rack_vlandia_a
+prefab wheel_back
 prefab wheel_front
 prefab wheel_rear
 prefab wood_storage_a

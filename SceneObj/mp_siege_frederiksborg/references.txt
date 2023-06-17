@@ -1,4 +1,4 @@
-792
+795
 flora_entity 
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -188,11 +188,12 @@ mesh peasent_shovel
 mesh pot_b
 mesh rock_004
 mesh ship_a
-mesh shipyard_b
 mesh shop_prop_merchantcarpenter_d
 mesh shop_prop_merchantcarpenter_e
 mesh shop_prop_merchantcarpenter_f
 mesh shop_prop_merchantsiege_e
+mesh shop_sign_base_b1
+mesh shop_sign_merchantpottery
 mesh siege_barricade_c
 mesh siege_large_shield_a
 mesh siege_tower_5m_destroyed_planks
@@ -666,10 +667,12 @@ prefab shop_prop_merchantweavery_linen_c
 prefab shop_prop_merchantweavery_wool_a
 prefab shop_prop_merchantweavery_wool_c
 prefab shop_prop_merchantwinery_c
+prefab shop_sign__d
 prefab shop_sign_base_c1
 prefab shop_sign_base_c2
 prefab shop_sign_merchantempty
 prefab shop_sign_merchantleather
+prefab shop_sign_merchantpottery
 prefab shop_sign_merchantweaverywool
 prefab side
 prefab sidewalk_stone_a
