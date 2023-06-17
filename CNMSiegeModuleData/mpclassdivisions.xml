@@ -307,8 +307,8 @@
                        item="mp_vlandian_pike" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000001}Change Chinese to see the description"
-            description="{=00000002}Change Chinese to see the description"
+            name="{=00000001}Bastard sword"
+            description="{=00000002}Equipped with Bastard sword, can be used with one hand or two hands {newline}{newline} equipped with Bastard sword"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
 			icon="PerkTwoHandedSwords"
             perk_list="1">
@@ -317,7 +317,20 @@
                        item="mp_vlandian_noble_bastard_sword" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
+                       item="mp_western_kite_shield" />			   
+      </Perk>
+	  <Perk game_mode="all"
+            name="{=00000001}Bastard sword"
+            description="{=00000002}Equipped with Bastard sword, can be used with one hand or two hands {newline}{newline} equipped with Bastard sword"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
+			icon="PerkTwoHandedSwords"
+            perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
                        item="mp_western_bastard_sword" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_western_kite_shield" />			   
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000118}Change Chinese to see the description"
@@ -446,7 +459,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=00000003}Change Chinese to see the description"
+            description="{=00000003}The armor is made of a higher grade material. {newline}{newline} Armor +10"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -489,7 +502,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000004}Change Chinese to see the description"
+            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equipped with axe {newline} for shield damage +40%{newline} Slash damage +10%{newline} Armor +5"
             icon="PerkHeavyAxe"
             perk_list="1">
 		<Effect type="DamageDealt"
@@ -955,7 +968,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
-            description="{=00000005}Change Chinese to see the description"
+            description="{=00000005}You're well-supplied, make the most of everything, and reload quickly. {newline}{newline} Equipped with an additional 20 crossbows"
             icon="PerkWellSupplied"
             perk_list="2">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -1257,7 +1270,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000006}Change Chinese to see the description"
+            description="{=00000006}Equipped with Western spears. {newline}{newline} Melee weapon +50% Mount damage with Western Spear. {newline}{newline} Melee Weapon damage to mount +50%"
             icon="PerkHorseHunters"
             perk_list="1">
         <Effect type="MountDamage"
@@ -1545,7 +1558,7 @@
       </Perk>
 	  <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000007}Change Chinese to see the description"
+            description="{=00000007}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equips the Imperial Tomahawk {newline}{newline} for +40% shield damage"
 			hero_idle_anim="act_aserai_mp_guard_idle"
             icon="PerkTwoHandedAxe"
             perk_list="1">
@@ -1678,8 +1691,8 @@
                        item="mp_pilum" />			   
       </Perk>
       <Perk game_mode="all"
-            name="{=00000008}Change Chinese to see the description"
-            description="{=00000009}Change Chinese to see the description"
+            name="{=00000008}Sword and Shield Plus"
+            description="{=00000009}Equipped with a single-player sword, paired with a shield {newline} with Imperial Spear {newline} armor +5"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
             perk_list="1">
@@ -1696,8 +1709,8 @@
                        item="mp_pilum" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000008}Change Chinese to see the description"
-            description="{=00000009}Change Chinese to see the description"
+            name="{=00000008}Sword and Shield Plus"
+            description="{=00000009}Equipped with a single-player sword, paired with a shield {newline} with Imperial Spear {newline} armor +5"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
             perk_list="1">
@@ -1714,8 +1727,8 @@
                        item="mp_pilum" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000008}Change Chinese to see the description"
-            description="{=00000009}Change Chinese to see the description"
+            name="{=00000008}Sword and Shield Plus"
+            description="{=00000009}Equipped with a single-player sword, paired with a shield {newline} with Imperial Spear {newline} armor +5"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
             perk_list="1">
@@ -1732,8 +1745,8 @@
                        item="mp_pilum" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000008}Change Chinese to see the description"
-            description="{=00000009}Change Chinese to see the description"
+            name="{=00000008}Sword and Shield Plus"
+            description="{=00000009}Equipped with a single-player sword, paired with a shield {newline} with Imperial Spear {newline} armor +5"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
             perk_list="1">
@@ -2765,7 +2778,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
-            description="{=00000010}Change Chinese to see the description"
+            description="{=00000010}Provides an additional 9 point armor"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -3888,8 +3901,8 @@
         </RandomOnSpawnEffect>
       </Perk>
       <Perk game_mode="all"
-            name="{=00000011}Change Chinese to see the description"
-            description="{=00000012}Change Chinese to see the description"
+            name="{=00000011}Double cane + flying axe"
+            description="{=00000012}Equipped with a double cane, effective against a number of enemies, using both hands. {newline}{newline} Equipped with two canes {newline} equipped with three bags of flying axes {newline} Max running speed +5%"
             hero_idle_anim="act_aserai_mp_guard_idle_2hperk"
             icon="PerkTwoHandedMaul"
             perk_list="1">
@@ -3919,8 +3932,8 @@
                        item="mp_aserai_throwing_axe" />
       </Perk>
       <Perk game_mode="all"
-            name="{=00000013}Change Chinese to see the description"
-            description="{=00000014}Change Chinese to see the description"
+            name="{=00000013}Palace guard"
+            description="{=00000014}You are the guardian of the Sultan's side, wearing heavy armor, using your weapons and large shields to protect the royal family. {newline}{newline} provides an additional 28 points of armor {newline} equipped with Clan Sword + Noble Sword + Decorative Oval Shield + spear"
             icon="PerkHoldTheLine"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -4227,7 +4240,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=00000019}Change Chinese to see the description"
+            description="{=00000019}The armor is made of a higher grade material. {newline}{newline} Armor +10"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -5135,7 +5148,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000004}Change Chinese to see the description"
+            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equipped with axe {newline} for shield damage +40%{newline} Slash damage +10%{newline} Armor +5"
             icon="PerkHeavyAxe"
             perk_list="1">
         <Effect type="ShieldDamage"
@@ -5151,8 +5164,8 @@
                        item="mp_sturgia_noble_axe" />			   
       </Perk>
       <Perk game_mode="all"
-            name="{=00000015}Change Chinese to see the description"
-            description="{=00000016}Change Chinese to see the description"
+            name="{=00000015}Hammer shield"
+            description="{=00000016}With a sturgia staff and a shield"
             hero_idle_anim="act_sturgia_mp_varyag_sword_and_shield_perk"
             icon="PerkHoldTheLine"
             perk_list="1">
@@ -6231,7 +6244,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000046}Improved Armor"
-            description="{=00000018}Provides +9 armor."
+            description="{=00000018}Provides +9 armor and battania pike."
             icon="PerkToughness"
             perk_list="1">
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -6261,7 +6274,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000046}Improved Armor"
-            description="{=00000018}Provides +9 armor."
+            description="{=00000018}Provides +9 armor and battania pike."
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -6291,7 +6304,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=00000046}Improved Armor"
-            description="{=00000018}Provides +9 armor."
+            description="{=00000018}Provides +9 armor and battania pike."
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -6636,7 +6649,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=00000020}Change Chinese to see the description"
+            description="{=00000020}The armor is made of a higher grade material. {newline}{newline} Armor +10"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -7651,7 +7664,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=iHljS6n5}Masked Nightmare"
-            description="{=00000003}Change Chinese to see the description"
+            description="{=00000003}The armor is made of a higher grade material. {newline}{newline} Armor +10"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -8084,7 +8097,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
-            description="{=00000005}Change Chinese to see the description"
+            description="{=00000005}You're well-supplied, make the most of everything, and reload quickly. {newline}{newline} Equipped with an additional 20 crossbows"
             icon="PerkWellSupplied"
             perk_list="2">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"

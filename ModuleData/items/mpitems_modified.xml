@@ -19552,7 +19552,7 @@
               ammo_class="Arrow"
               missile_speed="70"
               accuracy="96"
-              thrust_damage="50"
+              thrust_damage="45"
               thrust_speed="95"
               speed_rating="89"
               weapon_length="95"
@@ -19570,8 +19570,7 @@
                      UnloadWhenSheathed="true" />
       </Weapon>
     </ItemComponent>
-    <Flags ForceAttachOffHandPrimaryItemBone="true" 
-	       CannotBePickedUp="true"/>
+    <Flags ForceAttachOffHandPrimaryItemBone="true" />
   </Item>
   
   <!-- 反器材弩 -->
@@ -19611,7 +19610,7 @@
                      TwoHandIdleOnMount="true" />
       </Weapon>
     </ItemComponent>
-	<Flags  CannotBePickedUp="true"/>
+	<Flags  />
   </Item>
   
   <!-- 反器材箭 -->
@@ -19652,7 +19651,7 @@
                      AmmoBreaksOnBounceBack="true" />
       </Weapon>
     </ItemComponent>
-    <Flags CannotBePickedUp="true"/>
+    <Flags  />
   </Item>
   
   <!-- 反器材矢 -->
@@ -19693,7 +19692,6 @@
                      AmmoBreaksOnBounceBack="true" />
       </Weapon>
     </ItemComponent>
-    <Flags ForceAttachOffHandPrimaryItemBone="true" 
-	       CannotBePickedUp="true"/>
+    <Flags ForceAttachOffHandPrimaryItemBone="true" />
   </Item>
 </Items>

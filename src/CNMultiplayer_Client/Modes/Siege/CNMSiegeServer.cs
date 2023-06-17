@@ -29,7 +29,7 @@ namespace CNMultiplayer.Modes.Siege
 
         public const int AttackerGoldBonusOnFlagRemoval = 75; //攻城方移除旗帜金币奖励
 
-        public const int DefenderGoldBonusOnFlagRemoval = 150; //守城方移除旗帜金币补偿
+        public const int DefenderGoldBonusOnFlagRemoval = 200; //守城方移除旗帜金币补偿
 
         public const string MasterFlagTag = "keep_capture_point";
 

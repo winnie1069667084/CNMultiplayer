@@ -948,11 +948,11 @@ prefab wooden_platform_plank_d
 prefab wooden_platform_plank_e
 prefab wooden_platform_plank_f_column
 prefab wooden_platform_stairs_a
-texture cg_75c
 texture cliff_soil_d
 texture cliff_soil_h
 texture cliff_soil_n
 texture cliff_soil_s
+texture color_grade_empire_harsh
 texture desert_floor_a
 texture detail_texture_grass_a
 texture editor_grid_8_s

@@ -1,4 +1,4 @@
-468
+466
 flora_entity agriculture_chickpeas
 flora_entity agriculture_garlic
 flora_entity agriculture_leek
@@ -14,7 +14,6 @@ mesh arabian_ladder_wood_a
 mesh arabian_platform_wooden_c
 mesh arrow_new_icon
 mesh aserai_grandbazaar_wall
-mesh ballista_b_spawner_ghost
 mesh banner_empire_keep
 mesh barn_fence_a
 mesh battania_keep_door_case_a
@@ -71,7 +70,6 @@ mesh fence_empire_a
 mesh flag_pole_big
 mesh flag_stand_white2
 mesh flagpole_a
-mesh icon_man_spawner_ghost
 mesh log_pine_m
 mesh module_european_village_rooftop_tangent_b
 mesh ship_a

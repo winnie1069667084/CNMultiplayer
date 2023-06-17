@@ -9,12 +9,12 @@
         prefab="battania_tier_1_banner"
         culture="Culture.neutral_culture"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedMeleeDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -42,12 +42,12 @@
         prefab="battania_tier_2_banner"
         culture="Culture.neutral_culture"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedMeleeDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -108,12 +108,12 @@
         prefab="battania_tier_1_banner"
         culture="Culture.battania"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedDamageAgainstMountedTroops"
               weapon_balance="100"
               thrust_speed="78"
@@ -141,12 +141,12 @@
         prefab="battania_tier_2_banner"
         culture="Culture.battania"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedDamageAgainstMountedTroops"
               weapon_balance="100"
               thrust_speed="78"
@@ -207,12 +207,12 @@
         prefab="vlandia_tier_1_banner"
         culture="Culture.vlandia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedDamageAgainstMountedTroops"
               weapon_balance="100"
               thrust_speed="78"
@@ -240,12 +240,12 @@
         prefab="vlandia_tier_2_banner"
         culture="Culture.vlandia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedDamageAgainstMountedTroops"
               weapon_balance="100"
               thrust_speed="78"
@@ -306,12 +306,12 @@
         prefab="vlandia_tier_1_banner"
         culture="Culture.neutral_culture"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedRangedDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -339,12 +339,12 @@
         prefab="vlandia_tier_2_banner"
         culture="Culture.neutral_culture"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedRangedDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -405,12 +405,12 @@
         prefab="banner_aserai_level1"
         culture="Culture.aserai"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAccuracyPenalty"
               weapon_balance="100"
               thrust_speed="78"
@@ -438,12 +438,12 @@
         prefab="banner_aserai_level2"
         culture="Culture.aserai"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAccuracyPenalty"
               weapon_balance="100"
               thrust_speed="78"
@@ -504,12 +504,12 @@
         prefab="khuzait_tier_1_banner"
         culture="Culture.khuzait"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAccuracyPenalty"
               weapon_balance="100"
               thrust_speed="78"
@@ -537,12 +537,12 @@
         prefab="khuzait_tier_2_banner"
         culture="Culture.khuzait"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAccuracyPenalty"
               weapon_balance="100"
               thrust_speed="78"
@@ -603,12 +603,12 @@
         prefab="vlandia_tier_1_banner"
         culture="Culture.vlandia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedChargeDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -636,12 +636,12 @@
         prefab="vlandia_tier_2_banner"
         culture="Culture.vlandia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedChargeDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -702,12 +702,12 @@
         prefab="empire_tier_1_banner"
         culture="Culture.empire"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedMoraleShock"
               weapon_balance="100"
               thrust_speed="78"
@@ -735,12 +735,12 @@
         prefab="empire_tier_2_banner"
         culture="Culture.empire"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedMoraleShock"
               weapon_balance="100"
               thrust_speed="78"
@@ -801,12 +801,12 @@
         prefab="sturgia_tier_1_banner"
         culture="Culture.neutral_culture"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedMeleeAttackDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -834,12 +834,12 @@
         prefab="sturgia_tier_2_banner"
         culture="Culture.neutral_culture"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedMeleeAttackDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -900,12 +900,12 @@
         prefab="empire_tier_1_banner"
         culture="Culture.empire"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAttackDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -933,12 +933,12 @@
         prefab="empire_tier_2_banner"
         culture="Culture.empire"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAttackDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -999,12 +999,12 @@
         prefab="sturgia_tier_1_banner"
         culture="Culture.sturgia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAttackDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -1032,12 +1032,12 @@
         prefab="sturgia_tier_2_banner"
         culture="Culture.sturgia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedRangedAttackDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -1098,12 +1098,12 @@
         prefab="sturgia_tier_1_banner"
         culture="Culture.sturgia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedShieldDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -1131,12 +1131,12 @@
         prefab="sturgia_tier_2_banner"
         culture="Culture.sturgia"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="DecreasedShieldDamage"
               weapon_balance="100"
               thrust_speed="78"
@@ -1197,12 +1197,12 @@
         prefab="banner_aserai_level1"
         culture="Culture.aserai"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedTroopMovementSpeed"
               weapon_balance="100"
               thrust_speed="78"
@@ -1230,12 +1230,12 @@
         prefab="banner_aserai_level2"
         culture="Culture.aserai"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedTroopMovementSpeed"
               weapon_balance="100"
               thrust_speed="78"
@@ -1296,12 +1296,12 @@
         prefab="battania_tier_1_banner"
         culture="Culture.battania"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedTroopMovementSpeed"
               weapon_balance="100"
               thrust_speed="78"
@@ -1329,12 +1329,12 @@
         prefab="battania_tier_2_banner"
         culture="Culture.battania"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedTroopMovementSpeed"
               weapon_balance="100"
               thrust_speed="78"
@@ -1395,12 +1395,12 @@
         prefab="khuzait_tier_1_banner"
         culture="Culture.khuzait"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="1"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedMountMovementSpeed"
               weapon_balance="100"
               thrust_speed="78"
@@ -1428,12 +1428,12 @@
         prefab="khuzait_tier_2_banner"
         culture="Culture.khuzait"
         weight="0.2"
-        Type="Banner"
+        Type="Thrown"
         using_tableau="true"
-        item_holsters="abdomen_left">
+        item_holsters="throwing_stone:throwing_stone_2">
     <ItemComponent>
       <Banner banner_level="2"
-              weapon_class="Banner"
+              weapon_class="Stone"
               effect="IncreasedMountMovementSpeed"
               weapon_balance="100"
               thrust_speed="78"

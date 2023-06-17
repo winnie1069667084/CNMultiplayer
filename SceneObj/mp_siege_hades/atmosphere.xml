@@ -23,7 +23,7 @@
 	</values>
 	<global_ambient fog_ambient_color="0.730, 0.639, 0.554"/>
 	<fog>
-		<value name="fog_density" value="80.000"/>
+		<value name="fog_density" value="100.000"/>
 		<value name="fog_falloff" value="2.000"/>
 		<value name="fog_color" value="0.542, 0.836, 1.000"/>
 		<value name="cloud_shadow_color" value="0.250, 0.250, 0.400"/>
@@ -53,8 +53,8 @@
 		<value name="shadow_opacity" value="1.000"/>
 		<value name="minimum_ambient" value="0.000"/>
 		<value name="sun_rotation" value="288.000"/>
-		<value name="sun_intesity" value="9555.000"/>
-		<value name="sky_brightness" value="888.000"/>
+		<value name="sun_intesity" value="4000.000"/>
+		<value name="sky_brightness" value="500.000"/>
 		<value name="cloud_brightness" value="0.700"/>
 		<value name="sun_size" value="0.100"/>
 		<value name="sky_noise_amount" value="0.494"/>
