@@ -1,4 +1,4 @@
-628
+630
 flora_entity flora_shrub_a
 flora_entity flora_tree_plane_01_hero
 flora_entity flora_tree_plane_02_hero
@@ -101,6 +101,7 @@ mesh siege_soil_detail_f
 mesh siege_soil_detail_g
 mesh siege_tower_5m_destroyed_logs
 mesh siege_tower_l3_body_destroyed
+mesh soft_border_column
 mesh sturgia_windmill_fan_a_open
 mesh tent_vlandia_a
 mesh torch_flame_base
@@ -488,6 +489,7 @@ prefab pot_archery_destroyed
 prefab pot_archery_target_breakable
 prefab pot_pile
 prefab projectile_pile
+prefab prt_border_probe
 prefab ramp
 prefab rock_001
 prefab rock_pile
