@@ -976,13 +976,10 @@
                        item="mp_bolts_western_extra_captain" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000167}Anti Equipment Crossbow"
+            name="{=00000167}Anti Equipment Bolts"
             description="{=00000168}Change Chinese to see the description"
-            icon="PerkHeavyCrossbows"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="cnm_anti_equipment_crossbow" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="cnm_anti_equipment_bolts" />			   
@@ -2178,13 +2175,10 @@
                        item="mp_empire_mace" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000169}Anti Equipment Bow"
+            name="{=00000169}Anti Equipment Arrows"
             description="{=00000170}Change Chinese to see the description"
-            icon="PerkRecurveBows"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="cnm_anti_equipment_bow" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="cnm_anti_equipment_arrows" />			   
@@ -3128,13 +3122,10 @@
                        item="mp_arrows_steppe_extra" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000169}Anti Equipment Bow"
+            name="{=00000169}Anti Equipment Arrows"
             description="{=00000170}Change Chinese to see the description"
-            icon="PerkRecurveBows"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="cnm_anti_equipment_bow" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="cnm_anti_equipment_arrows" />			   
@@ -4333,13 +4324,10 @@
                        item="mp_arrows_barbed_extra" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000169}Anti Equipment Bow"
+            name="{=00000169}Anti Equipment Arrows"
             description="{=00000170}Change Chinese to see the description"
-            icon="PerkRecurveBows"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="cnm_anti_equipment_bow" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="cnm_anti_equipment_arrows" />			   
@@ -5023,21 +5011,13 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel"
+      <Perk game_mode="all"
             name="{=DeWp2GjP}Shield Breaker"
             description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
             icon="PerkShieldSplitterAxes"
             perk_list="2">
         <Effect type="ShieldDamage"
                 value="0.30" />
-      </Perk>
-      <Perk game_mode="Captain"
-            name="{=DeWp2GjP}Shield Breaker"
-            description="{=JxDrcvDO}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+100% Damage to Shields"
-            icon="PerkShieldSplitterAxes"
-            perk_list="2">
-        <Effect type="ShieldDamage"
-                value="1.0" />
       </Perk>
       <Perk game_mode="all"
             name="{=vHIIkFQF}Blood Rage"
@@ -7225,13 +7205,10 @@
                        item="mp_arrows_bodkin_extra" />			   
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000169}Anti Equipment Bow"
+            name="{=00000169}Anti Equipment Arrows"
             description="{=00000170}Change Chinese to see the description"
-            icon="PerkRecurveBows"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="cnm_anti_equipment_bow" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="cnm_anti_equipment_arrows" />			   
@@ -8105,13 +8082,10 @@
                        item="mp_bolts_western_extra_captain" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000167}Anti Equipment Crossbow"
+            name="{=00000167}Anti Equipment Bolts"
             description="{=00000168}Change Chinese to see the description"
-            icon="PerkHeavyCrossbows"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="cnm_anti_equipment_crossbow" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="cnm_anti_equipment_bolts" />			   
@@ -9124,13 +9098,10 @@
                        item="mp_leather_round_shield_light" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000169}Anti Equipment Bow"
+            name="{=00000169}Anti Equipment Arrows"
             description="{=00000170}Change Chinese to see the description"
-            icon="PerkRecurveBows"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="cnm_anti_equipment_bow" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="cnm_anti_equipment_arrows" />			   
