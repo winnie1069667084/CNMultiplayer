@@ -9,7 +9,7 @@ namespace HarmonyPatches
     {
         public static void Postfix(SpawnerEntityMissionHelper _spawnerMissionHelper)
         {
-            _spawnerMissionHelper.SpawnedEntity.GetFirstScriptOfType<DestructableComponent>().MaxHitPoint = 20000f;
+            _spawnerMissionHelper.SpawnedEntity.GetFirstScriptOfType<DestructableComponent>().MaxHitPoint = 15000f;
         }
     }
 
@@ -18,7 +18,7 @@ namespace HarmonyPatches
     {
         public static void Postfix(SpawnerEntityMissionHelper _spawnerMissionHelper)
         {
-            _spawnerMissionHelper.SpawnedEntity.GetFirstScriptOfType<DestructableComponent>().MaxHitPoint = 20000f;
+            _spawnerMissionHelper.SpawnedEntity.GetFirstScriptOfType<DestructableComponent>().MaxHitPoint = 15000f;
         }
     }
 }

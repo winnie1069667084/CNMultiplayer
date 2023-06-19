@@ -59,13 +59,13 @@ namespace CNMultiplayer.Modes.Siege
 
         private const int DefenderFlagGoldHoldMax = 150; //守城方持有旗帜金币最大值
 
-        private const float radius = 20f; //定义旗帜半径
+        private const float radius = 16f; //定义旗帜半径
 
         private const float ObjectiveCheckPeriod = 0.25f;
 
         private const float MoraleTickTimeInSeconds = 2.5f; //士气Tick
 
-        private const float HealTick = 1f; //旗帜回血Tick
+        private const float HealTick = 1.5f; //旗帜回血Tick
 
         private const float AttackerFlagGoldTick = 1.2f; //攻城方旗帜金币Tick
 

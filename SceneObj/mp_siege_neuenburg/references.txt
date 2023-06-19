@@ -1,4 +1,4 @@
-630
+631
 flora_entity flora_shrub_a
 flora_entity flora_tree_plane_01_hero
 flora_entity flora_tree_plane_02_hero
@@ -90,6 +90,7 @@ mesh outermesh_mountains_a_outer_g
 mesh outermesh_mountains_a_outer_h
 mesh pict_houses_m
 mesh rock_001
+mesh shop_prop_merchantwinery_c
 mesh siege_large_shield_a
 mesh siege_soil_a
 mesh siege_soil_detail_a
@@ -101,7 +102,6 @@ mesh siege_soil_detail_f
 mesh siege_soil_detail_g
 mesh siege_tower_5m_destroyed_logs
 mesh siege_tower_l3_body_destroyed
-mesh soft_border_column
 mesh sturgia_windmill_fan_a_open
 mesh tent_vlandia_a
 mesh torch_flame_base
@@ -499,6 +499,7 @@ prefab ruinous_castle_stone_heap_b
 prefab scene_escape_border
 prefab shield
 prefab ship_a
+prefab shop_prop_merchantwinery_c
 prefab side
 prefab siege_barricade_a
 prefab siege_barricade_c

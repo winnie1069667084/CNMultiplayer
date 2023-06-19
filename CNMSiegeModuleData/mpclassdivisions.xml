@@ -207,7 +207,7 @@
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.08"
+                value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -1200,6 +1200,53 @@
                        slot="Item1"
                        item="mp_heavy_heater_shield" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000171}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="2">	
+        <Effect type="MountManeuver"
+                value="0.20"
+                driven_property="AttributeRiding" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="spear_bracing_banner_t1" />
+          </Group>
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="spear_wall_banner_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="pike_wall_banner_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="archers_flag_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="bowmans_flag_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="marksmans_flag_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_the_horseman_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_the_squire_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_the_knight_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
 	  <!-- Third perks-->
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
@@ -1368,7 +1415,7 @@
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.08"
+                value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -2512,6 +2559,41 @@
                        slot="Item2"
                        item="mp_stronger_reinforced_kite_shield" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000171}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="2">	
+        <Effect type="MountManeuver"
+                value="0.20"
+                driven_property="AttributeRiding" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_duty_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_courage_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_discipline_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="phalanx_standard_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="fulcum_standard_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="testudo_standard_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
 	  <!-- Third perks-->
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
@@ -2718,7 +2800,7 @@
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.08"
+                value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -3379,6 +3461,41 @@
                        slot="HorseHarness"
                        item="mp_studded_steppe_barding" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000171}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="1">	
+        <Effect type="MountManeuver"
+                value="0.20"
+                driven_property="AttributeRiding" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="tug_of_wooden_arrow_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="tug_of_bone_arrow_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="tug_of_whistling_arrow_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="tug_of_the_roaming_horse_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="tug_of_the_boundless_horde_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="tug_of_the_endless_steppe_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=hchDYAKL}Lancer"
@@ -3624,7 +3741,7 @@
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.08"
+                value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -4588,6 +4705,41 @@
                        slot="Item2"
                        item="mp_aserai_heavy_mace" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000171}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="2">	
+        <Effect type="MountManeuver"
+                value="0.20"
+                driven_property="AttributeRiding" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_faris_falcon_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_emirs_hawk_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_sultans_eagle_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_desert_winds_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_shifting_sands_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_dust_devils_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
 	  <!-- Third perks-->
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
@@ -4779,7 +4931,7 @@
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.08"
+                value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -5890,6 +6042,53 @@
                        slot="Item2"
                        item="mp_sturgia_mace" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000171}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="2">	
+        <Effect type="MountManeuver"
+                value="0.20"
+                driven_property="AttributeRiding" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="stone_banner_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="iron_banner_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="steel_banner_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="close_shields_banner_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="shield_wall_banner_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="locked_shields_banner_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_oaken_shields_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_iron_shields_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="banner_of_steel_shields_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
 	  <!-- Third perks-->
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
@@ -6149,7 +6348,7 @@
             icon="PerkFleetFooted"
             perk_list="3">
         <Effect type="DrivenProperty"
-                value="0.08"
+                value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -7284,6 +7483,53 @@
                   item="mp_battania_earmuff_helmet_b" />
             <Item slot="Body"
                   item="mp_northern_leather_vest" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
+	  <Perk game_mode="all"
+            name="{=00000100}Change Chinese to see the description"
+            description="{=00000171}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="2">	
+        <Effect type="MountManeuver"
+                value="0.20"
+                driven_property="AttributeRiding" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_fury_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_rage_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_wrath_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="deer_bane_flag_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="boar_bane_flag_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="horse_bane_flag_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="scouts_flag_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="rangers_flag_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="striders_flag_t3" />
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
@@ -8676,6 +8922,9 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageTaken"
+                    value="-0.50"
+                    hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
                     hit_type="Melee" />
@@ -8730,6 +8979,9 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageTaken"
+                    value="-0.50"
+                    hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
                     hit_type="Melee" />
@@ -8785,6 +9037,9 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageTaken"
+                    value="-0.50"
+                    hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
                     hit_type="Melee" />
@@ -8859,6 +9114,9 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageTaken"
+                    value="-0.50"
+                    hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
                     hit_type="Melee" />
@@ -8914,6 +9172,9 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageTaken"
+                    value="-0.50"
+                    hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
                     hit_type="Melee" />
@@ -8977,6 +9238,9 @@
                        agent_status="OnFoot" />
           </Conditions>
           <Effects>
+		    <Effect type="DamageTaken"
+                    value="-0.50"
+                    hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
                     hit_type="Melee" />

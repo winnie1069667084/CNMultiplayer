@@ -87,7 +87,7 @@
                physics_material="wood_weapon"
                body_name="bo_spear_b">
       <Thrust damage_type="Pierce"
-              damage_factor="2.3" />
+              damage_factor="2.0" />
       <Swing damage_type="Cut"
              damage_factor="3.3" />
     </BladeData>

@@ -1,4 +1,4 @@
-798
+793
 flora_entity 
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -223,8 +223,6 @@ prefab _barrier_08x04m
 prefab _barrier_16x04m
 prefab _sound_emitter
 prefab _to_carry_arm_kitchen_pot_c
-prefab ai_barrier_l
-prefab ai_barrier_r
 prefab ambient_sound_emitter
 prefab ammo_pos_a
 prefab ammo_pos_b
@@ -652,7 +650,6 @@ prefab prop_merchantleather_c
 prefab prop_merchantweavery_wool_b
 prefab prop_merchantweavery_wool_c
 prefab prt_border_probe
-prefab ramp
 prefab rock_001
 prefab rock_pile
 prefab rope_chain_heap
@@ -735,8 +732,6 @@ prefab vlandia_grandbazaar_ground_a
 prefab vlandia_grandbazaar_shop_b
 prefab wait_pos_ground
 prefab weapon_rack_a
-prefab wheel_back
-prefab wheel_front
 prefab wooden_platform_2_c
 prefab wooden_platform_2_fence_b
 prefab wooden_platform_2_heap_a

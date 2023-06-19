@@ -25,7 +25,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -58,7 +58,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -91,7 +91,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -124,7 +124,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -157,7 +157,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -190,7 +190,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -223,7 +223,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -256,7 +256,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -289,7 +289,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -322,7 +322,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -355,7 +355,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -388,7 +388,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -421,7 +421,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -454,7 +454,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -487,7 +487,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -520,7 +520,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -553,7 +553,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -586,7 +586,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -619,7 +619,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -652,7 +652,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -685,7 +685,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -718,7 +718,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -751,7 +751,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -784,7 +784,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -817,7 +817,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -850,7 +850,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -883,7 +883,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -916,7 +916,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -949,7 +949,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -982,7 +982,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1015,7 +1015,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1048,7 +1048,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1081,7 +1081,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1114,7 +1114,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1147,7 +1147,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1180,7 +1180,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1213,7 +1213,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1246,7 +1246,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1279,7 +1279,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1312,7 +1312,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1345,7 +1345,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1378,7 +1378,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1411,7 +1411,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1444,7 +1444,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"
@@ -1477,7 +1477,7 @@
               swing_damage_type="Blunt"
               item_usage="banner"
               physics_material="metal_weapon"
-              position="0.0, 0.0, -0.8"></Banner>
+              position="0.0, 0.0, -1.5"></Banner>
     </ItemComponent>
     <Flags DropOnWeaponChange="true"
            ForceAttachOffHandPrimaryItemBone="true"

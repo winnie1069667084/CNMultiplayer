@@ -21,7 +21,7 @@ namespace HarmonyPatches
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
             string Id = __instance.TroopTypeId;
-            if (Id == "Ranged" && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Id == "Cavalry" && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Id == "HorseArcher" && Ranged + Cavalry + HorseArcher > Sum * 2 / 5)
+            if (Id == "Ranged" && Ranged > Sum * 0.3 || Id == "Cavalry" && Cavalry > Sum * 0.2 || Id == "HorseArcher" && HorseArcher > Sum * 0.1)
             {
                 flag = false;
                 MultiplayerClassDivisions.MPHeroClass mPHeroClassForPeer = MultiplayerClassDivisions.GetMPHeroClassForPeer(component);
@@ -62,16 +62,16 @@ namespace HarmonyPatches
             return num;
         }
 
-        public static bool LockTroop(MissionPeer component, MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer)
+        public static bool LockTroop(MissionPeer component, MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer) //锁定兵种比例上限
         {
             bool flag = false;
             int Sum = GetTroopTypeCountForTeam(component.Team)[0];
-            int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
+            //int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
             int Ranged = GetTroopTypeCountForTeam(component.Team)[2];
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
             BasicCharacterObject Character = mpheroClassForPeer.TroopCharacter;
-            if (Character.IsRanged && !Character.IsMounted && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Character.IsMounted && !Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5 || Character.IsMounted && Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5)
+            if ((Character.IsRanged && !Character.IsMounted && Ranged > Sum * 0.3) || (Character.IsMounted && !Character.IsRanged && Cavalry > Sum * 0.2) || (Character.IsMounted && Character.IsRanged && HorseArcher > Sum * 0.1))
                 flag = true;
             return flag;
         }

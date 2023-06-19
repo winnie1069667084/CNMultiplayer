@@ -139,7 +139,7 @@ namespace CNMultiplayer.Modes.Siege
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
             BasicCharacterObject Character = mpheroClassForPeer.TroopCharacter;
-            if ((Character.IsRanged && !Character.IsMounted && Ranged + Cavalry + HorseArcher > Sum * 2 / 5) || (Character.IsMounted && !Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5) || (Character.IsMounted && Character.IsRanged && Ranged + Cavalry + HorseArcher > Sum * 2 / 5))
+            if ((Character.IsRanged && !Character.IsMounted && Ranged > Sum * 0.3) || (Character.IsMounted && !Character.IsRanged && Cavalry > Sum * 0.2) || (Character.IsMounted && Character.IsRanged && HorseArcher > Sum * 0.1))
                 flag = true;
             return flag;
         }
