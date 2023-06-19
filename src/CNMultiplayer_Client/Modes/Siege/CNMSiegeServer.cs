@@ -29,7 +29,7 @@ namespace CNMultiplayer.Modes.Siege
 
         public const int AttackerGoldBonusOnFlagRemoval = 75; //攻城方移除旗帜金币奖励
 
-        public const int DefenderGoldBonusOnFlagRemoval = 200; //守城方移除旗帜金币补偿
+        public const int DefenderGoldBonusOnFlagRemoval = 250; //守城方移除旗帜金币补偿
 
         public const string MasterFlagTag = "keep_capture_point";
 
@@ -458,7 +458,7 @@ namespace CNMultiplayer.Modes.Siege
             }
             else if (GetFlagOwnerTeam(_masterFlag).Side == BattleSideEnum.Attacker && !_masterFlag.IsContested)
             {
-                moraleGain = DefenderMoraleDecayInTick;
+                moraleGain = DefenderMoraleDecayInTick + 4*CurrentFlagNum();
             }
             else
             {
@@ -904,6 +904,19 @@ namespace CNMultiplayer.Modes.Siege
             {
                 ChangeCurrentGoldForPeer(missionPeer, MBMath.ClampInt(missionPeer.Representative.Gold + num + DefenderRespawnGold, num, num + DefenderFlagGoldHoldMax));
             }
+        }
+
+        private int CurrentFlagNum() //统计战场上的剩余旗帜数
+        {
+            int num = 0;
+            foreach (FlagCapturePoint flag in AllCapturePoints)
+            {
+                if (!flag.IsDeactivated)
+                {
+                    num++;
+                }
+            }
+            return num;
         }
     }
 }
