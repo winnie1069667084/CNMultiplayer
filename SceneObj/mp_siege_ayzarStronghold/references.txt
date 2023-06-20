@@ -1,4 +1,4 @@
-1031
+1030
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -200,7 +200,6 @@ mesh siege_barricade_a_state_5
 mesh siege_tower_5m_destroyed_logs
 mesh siege_tower_5m_destroyed_part5
 mesh siege_tower_l2_destroyed_part7
-mesh soft_border_column
 mesh tavern_khuzait_stove_a
 mesh tent_vlandia_c
 mesh torture_tool_chain_a
