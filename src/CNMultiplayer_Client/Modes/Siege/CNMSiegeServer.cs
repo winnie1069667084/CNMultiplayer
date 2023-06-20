@@ -85,9 +85,9 @@ namespace CNMultiplayer.Modes.Siege
 
         private const int MoraleDecayInTick = 1; //攻城方基础士气衰减
 
-        private const int DefenderMoraleDecayInTick = -10; //守城方失去G的士气衰减
+        private const int DefenderMoraleDecayInTick = -6; //守城方失去G的士气衰减
 
-        private const int FlagLockNum = 3; //锁点数量
+        private const int FlagLockNum = 2; //锁点数量
 
         private int[] _morales;
 
@@ -458,7 +458,7 @@ namespace CNMultiplayer.Modes.Siege
             }
             else if (GetFlagOwnerTeam(_masterFlag).Side == BattleSideEnum.Attacker && !_masterFlag.IsContested)
             {
-                moraleGain = DefenderMoraleDecayInTick + 4*CurrentFlagNum();
+                moraleGain = DefenderMoraleDecayInTick + 3 * (CurrentFlagNum() - 1);
             }
             else
             {

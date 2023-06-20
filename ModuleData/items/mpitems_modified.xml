@@ -19557,7 +19557,7 @@
               thrust_speed="0"
               speed_rating="0"
               physics_material="missile"
-              missile_speed="100"
+              missile_speed="10"
               weapon_length="97"
               thrust_damage="0"
               thrust_damage_type="Cut"
@@ -19598,7 +19598,7 @@
               thrust_damage_type="Cut"
               thrust_damage="0"
               speed_rating="0"
-              missile_speed="100"
+              missile_speed="10"
               weapon_length="47"
               item_usage=""
               passby_sound_code="event:/mission/combat/missile/passby"
@@ -19615,5 +19615,243 @@
       </Weapon>
     </ItemComponent>
     <Flags ForceAttachOffHandPrimaryItemBone="true" />
+  </Item>
+  
+  <!-- 冠军剑士大盾 -->
+  <Item multiplayer_item="true"
+        id="special_infantry_vlandia_shield"
+        name="{=shield01}Special Infantry Vlandia Shield"
+        body_name="bo_cap_heater_shield_k"
+        shield_body_name="bo_heater_shield_k"
+        recalculate_body="false"
+        mesh="heater_shield_k"
+        culture="Culture.neutral_culture"
+        using_tableau="true"
+        value="1"
+        is_merchandise="false"
+        weight="2.1"
+        Type="Shield"
+        item_holsters="shield:shield_2:shield_3:shield_4"
+        has_lower_holster_priority="true"
+        holster_position_shift="-0.1,-0.05,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield"
+              body_armor="50"
+              thrust_speed="82"
+              thrust_damage_type="Blunt"
+              speed_rating="82"
+              physics_material="wood_shield"
+              item_usage="shield"
+              position="0.0, 0.00, 0.00"
+              rotation="0.0,10.0,40.00"
+              weapon_length="105"
+              center_of_mass="-0.0,0.1,0.05"
+              hit_points="500">
+        <WeaponFlags CanBlockRanged="true"
+                     HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true"
+           HeldInOffHand="true"
+           ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  
+  <!-- 瓦兰吉卫队大盾 -->
+  <Item multiplayer_item="true"
+        id="special_infantry_empire_shield"
+        name="{=shield02}Special Infantry Empire Shield"
+        body_name="bo_cap_kite_shield_d"
+        shield_body_name="bo_kite_shield_d"
+        recalculate_body="false"
+        mesh="kite_shield_d"
+        using_tableau="true"
+        value="1"
+        is_merchandise="false"
+        weight="2.2"
+        appearance="0.7"
+        Type="Shield"
+        item_holsters="shield_kite:shield_2:shield_3:shield_4"
+        has_lower_holster_priority="true"
+        holster_position_shift="-0.1,0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield"
+              body_armor="50"
+              thrust_speed="82"
+              thrust_damage_type="Blunt"
+              speed_rating="82"
+              item_usage="shield"
+              position="0.0, 0.00, 0.00"
+              rotation="0.0,10.0,40.00"
+              physics_material="wood_shield"
+              weapon_length="128"
+              center_of_mass="0.0,0.05,0.05"
+              hit_points="500">
+        <WeaponFlags CanBlockRanged="true"
+                     HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true"
+           HeldInOffHand="true"
+           ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  
+  <!-- 土尔扈特大盾 -->
+  <Item multiplayer_item="true"
+        id="special_infantry_khuzait_shield"
+        name="{=shield03}Special Infantry Khuzait Shield"
+        body_name="bo_cap_shield_khuzait_infantary_a"
+        shield_body_name="bo_shield_khuzait_infantary_b"
+        recalculate_body="false"
+        mesh="shield_khuzait_infantary_b"
+        using_tableau="true"
+        value="1"
+        is_merchandise="false"
+        weight="2.7"
+        appearance="0.5"
+        Type="Shield"
+        item_holsters="shield:shield_2:shield_3:shield_4"
+        has_lower_holster_priority="true"
+        holster_position_shift="-0.1,-0.1,0.01">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield"
+              body_armor="50"
+              thrust_speed="82"
+              thrust_damage_type="Blunt"
+              speed_rating="82"
+              physics_material="wood_shield"
+              item_usage="shield"
+              position="0.0, 0.00, 0.00"
+              rotation="0.0,10.0,40.00"
+              weapon_length="90"
+              center_of_mass="-0.0,0.25,0.05"
+              hit_points="500">
+        <WeaponFlags CanBlockRanged="true"
+                     HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true"
+           HeldInOffHand="true"
+           ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  
+  <!-- 苏丹亲卫大盾 -->
+  <Item multiplayer_item="true"
+        id="special_infantry_aserai_shield"
+        name="{=shield04}Special Infantry Aserai Shield"
+        body_name="bo_cap_aserai_shields_a"
+        shield_body_name="bo_aserai_shields_a"
+        recalculate_body="false"
+        mesh="aserai_shields_a"
+        using_tableau="true"
+        culture="Culture.neutral_culture"
+        value="1"
+        is_merchandise="false"
+        weight="2.2"
+        Type="Shield"
+        item_holsters="shield_oval:shield_4:shield_3:shield_2"
+        has_lower_holster_priority="true"
+        holster_position_shift="-0.04,-0.0,0">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield"
+              body_armor="50"
+              thrust_speed="82"
+              thrust_damage_type="Blunt"
+              speed_rating="82"
+              physics_material="wood_shield"
+              item_usage="shield"
+              position="0.0, 0.00, 0.00"
+              rotation="0.0,10.0,40.00"
+              weapon_length="135"
+              center_of_mass="0, 0, 0"
+              hit_points="500">
+        <WeaponFlags CanBlockRanged="true"
+                     HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true"
+           HeldInOffHand="true"
+           ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  
+  <!-- 皇家侍卫大盾 -->
+  <Item multiplayer_item="true"
+        id="special_infantry_sturgia_shield"
+        name="{=shield05}Special Infantry Sturgia Shield"
+        body_name="bo_cap_sturgia_shield_a"
+        shield_body_name="bo_sturgia_shield_b"
+        recalculate_body="false"
+        mesh="sturgia_shield_b"
+        culture="Culture.sturgia"
+        using_tableau="true"
+        value="1"
+        is_merchandise="false"
+        weight="2.1"
+        difficulty="0"
+        appearance="0.7"
+        Type="Shield"
+        item_holsters="shield_round:shield_4"
+        has_lower_holster_priority="true"
+        holster_position_shift="0,0,0.01">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield"
+              body_armor="50"
+              thrust_speed="82"
+              thrust_damage="5"
+              thrust_damage_type="Blunt"
+              speed_rating="82"
+              physics_material="wood_shield"
+              item_usage="hand_shield"
+              position="-0.02, 0.0, 0.0"
+              rotation="-15.0,-90.0,-10.0"
+              weapon_length="70"
+              center_of_mass="0, 0.15, 0"
+              hit_points="500">
+        <WeaponFlags CanBlockRanged="true"
+                     HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true"
+           ForceAttachOffHandPrimaryItemBone="true"
+           HeldInOffHand="true" />
+  </Item>
+  
+  <!-- 高地英雄大盾 -->
+  <Item multiplayer_item="true"
+        id="special_infantry_battania_shield"
+        name="{=shield06}Special Infantry Battania Shield"
+        body_name="bo_cap_battania_large_shield_a"
+        shield_body_name="bo_battania_large_shield_a"
+        recalculate_body="false"
+        mesh="mp_battania_large_shield_a"
+        using_tableau="true"
+        weight="1.2"
+        value="1"
+        is_merchandise="false"
+        appearance="1.1"
+        Type="Shield"
+        item_holsters="shield_kite:shield_2:shield_3:shield_4"
+        has_lower_holster_priority="true"
+        holster_position_shift="0.0,0.1,0">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield"
+              body_armor="50"
+              thrust_speed="82"
+              thrust_damage_type="Blunt"
+              speed_rating="82"
+              physics_material="wood_shield"
+              item_usage="hand_shield"
+              position="0.05, -0.01, 0.00"
+              rotation="-75.00,-62.90,0.00"
+              weapon_length="150"
+              center_of_mass="0.0,0.065,0.05"
+              hit_points="500"
+              modifier_group="shield_wood">
+        <WeaponFlags CanBlockRanged="true"
+                     HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true"
+           ForceAttachOffHandPrimaryItemBone="true"
+           HeldInOffHand="true" />
   </Item>
 </Items>

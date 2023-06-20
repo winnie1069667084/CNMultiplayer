@@ -8910,6 +8910,22 @@
                        slot="Item0"
                        item="vlandia_2hsword_1_t5" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=000000172}Heavy Shield Infantry"
+            description="{=00000173}Change Chinese to see the description"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_vlandian_long_sword" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_vlandian_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="special_infantry_vlandia_shield" />
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
@@ -8923,7 +8939,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageTaken"
-                    value="-0.50"
+                    value="-0.35"
                     hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
@@ -8967,6 +8983,22 @@
                        slot="Item0"
                        item="vlandia_2hsword_2_t5" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=000000172}Heavy Shield Infantry"
+            description="{=00000173}Change Chinese to see the description"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_empire_long_spatha" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_empire_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="special_infantry_empire_shield" />
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
@@ -8980,7 +9012,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageTaken"
-                    value="-0.50"
+                    value="-0.35"
                     hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
@@ -9025,6 +9057,22 @@
                        slot="Item0"
                        item="khuzait_polearm_1_t4" />
       </Perk>
+	  <Perk game_mode="all"
+            name="{=000000172}Heavy Shield Infantry"
+            description="{=00000173}Change Chinese to see the description"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_khuzait_heavy_sabre" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_khuzait_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="special_infantry_khuzait_shield" />
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
@@ -9038,7 +9086,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageTaken"
-                    value="-0.50"
+                    value="-0.35"
                     hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
@@ -9102,6 +9150,22 @@
                        slot="Item0"
                        item="aserai_2haxe_3_t5" />			   
       </Perk>
+	  <Perk game_mode="all"
+            name="{=000000172}Heavy Shield Infantry"
+            description="{=00000173}Change Chinese to see the description"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_aserai_ranger_sword" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_aserai_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="special_infantry_aserai_shield" />
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
@@ -9115,7 +9179,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageTaken"
-                    value="-0.50"
+                    value="-0.35"
                     hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
@@ -9160,6 +9224,22 @@
                        slot="Item0"
                        item="sturgia_2haxe_2_t5" />			   
       </Perk>
+	  <Perk game_mode="all"
+            name="{=000000172}Heavy Shield Infantry"
+            description="{=00000173}Change Chinese to see the description"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_sturgia_noble_axe" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_sturgia_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="special_infantry_sturgia_shield" />
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
@@ -9173,7 +9253,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageTaken"
-                    value="-0.50"
+                    value="-0.35"
                     hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
@@ -9226,6 +9306,22 @@
                        slot="Item0"
                        item="reaper_falx" />			   
       </Perk>
+	  <Perk game_mode="all"
+            name="{=000000172}Heavy Shield Infantry"
+            description="{=00000173}Change Chinese to see the description"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_battania_noble_sword" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_battnia_heavy_mace" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="special_infantry_battania_shield" />
+      </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=00000146}Melee Expert"
@@ -9239,7 +9335,7 @@
           </Conditions>
           <Effects>
 		    <Effect type="DamageTaken"
-                    value="-0.50"
+                    value="-0.35"
                     hit_type="Ranged" />
 		    <Effect type="DamageDealt"
                     value="0.10"
