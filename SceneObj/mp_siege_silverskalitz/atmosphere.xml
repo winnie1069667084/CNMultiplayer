@@ -53,8 +53,8 @@
 		<value name="shadow_opacity" value="1.000"/>
 		<value name="minimum_ambient" value="0.000"/>
 		<value name="sun_rotation" value="77.000"/>
-		<value name="sun_intesity" value="500.000"/>
-		<value name="sky_brightness" value="600.000"/>
+		<value name="sun_intesity" value="700.000"/>
+		<value name="sky_brightness" value="800.000"/>
 		<value name="cloud_brightness" value="0.700"/>
 		<value name="sun_size" value="0.100"/>
 		<value name="sky_noise_amount" value="0.494"/>

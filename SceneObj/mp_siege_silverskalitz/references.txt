@@ -1,4 +1,4 @@
-1014
+1009
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -81,7 +81,6 @@ mesh bd_cloth_hanging_rope
 mesh bd_sack_a
 mesh bd_sack_b
 mesh bd_sack_c
-mesh castle_plank_ramp_a
 mesh castle_plank_wall_c
 mesh editor_plane_low
 mesh european_castle_tower_round_a_l3
@@ -95,6 +94,11 @@ mesh european_castle_wall_a_l3_05
 mesh european_castle_wall_a_l3_06
 mesh european_castle_wall_a_l3_07
 mesh european_castle_wall_a_l3_old
+mesh european_castle_wall_c_l2
+mesh european_castle_wall_c_l2_01
+mesh european_castle_wall_c_l2_02
+mesh european_castle_wall_c_l2_03
+mesh european_castle_wall_c_l2_04
 mesh european_castle_wall_gate_l3
 mesh european_castle_wall_gate_l3_01
 mesh european_castle_wall_gate_l3_02
@@ -113,6 +117,7 @@ mesh rock_004
 mesh sturgia_village_house_entrance
 mesh terrain_green_rock_big_a
 mesh terrain_green_rock_big_c
+mesh terrain_green_rock_d
 mesh torch_flame_base
 mesh torch_wall_a
 mesh wooden_platform_c
@@ -408,7 +413,6 @@ prefab crate_b_lid
 prefab crate_c
 prefab debris_holder
 prefab dirty_b
-prefab distance_holder
 prefab dry_tree_d
 prefab dry_tree_e
 prefab empire_castle_barn_b_l2_door
@@ -437,7 +441,6 @@ prefab european_castle_l1_corner_upstairs_a
 prefab european_castle_l1_corner_upstairs_a_stairs
 prefab european_castle_l1_gatehouse_door_closed
 prefab european_castle_l1_gatehouse_door_open
-prefab european_castle_ladder
 prefab european_castle_stairs_a_l1
 prefab european_castle_stairs_a_l3
 prefab european_castle_stairs_a_l3_bo
@@ -453,6 +456,7 @@ prefab european_castle_wall_a_damaged_l1_heap_a
 prefab european_castle_wall_a_damaged_l3_2_old
 prefab european_castle_wall_a_l3
 prefab european_castle_wall_a_l3_old
+prefab european_castle_wall_c_l2
 prefab european_castle_wall_d_l2
 prefab european_castle_wall_fence_b
 prefab european_castle_wooden_cover_b
@@ -519,10 +523,8 @@ prefab foods_orange
 prefab foods_orange_basket
 prefab foods_orange_slice
 prefab foods_watermelon_b_piece
-prefab fork_holder
 prefab gate_plank
 prefab grappling_hook
-prefab ground_align
 prefab horse_critter
 prefab hung_fur_a
 prefab hung_fur_b
@@ -536,7 +538,6 @@ prefab hut_c_fishing
 prefab hut_d
 prefab hut_door_a
 prefab icon_man
-prefab initial_wait_pos
 prefab ivy_01
 prefab ivy_02
 prefab ivy_03
@@ -582,8 +583,6 @@ prefab kitchen_plate_steak
 prefab kitchen_pot_h
 prefab kitchen_potcover_a
 prefab kitchen_sausage_b
-prefab ladder_down_state
-prefab ladder_up_state
 prefab landscape_c
 prefab landscape_d
 prefab light
@@ -596,7 +595,6 @@ prefab log_bench_beech_c_unsittable
 prefab log_bench_default_c_unsittable
 prefab log_bench_pine_c_unsittable
 prefab log_pine_a
-prefab log_pine_b
 prefab log_pine_group_a
 prefab log_pine_group_c
 prefab log_pine_group_d
@@ -806,9 +804,8 @@ prefab siege_barricade_group_a
 prefab siege_barricade_group_b
 prefab siege_barricade_group_c
 prefab siege_barricade_group_d
-prefab siege_ladder_6m_spawner
-prefab siege_ladder_7m_spawner
 prefab siege_tower_5m_spawnerMP
+prefab siege_tower_9m_spawnerMP
 prefab sound
 prefab sound_reverb
 prefab sp_duel_attacker
@@ -817,7 +814,6 @@ prefab sp_duel_set
 prefab spawn_visual
 prefab spear_new_f_1-9m
 prefab spear_rack
-prefab stairs_bo
 prefab stand_straw_a
 prefab stand_straw_b
 prefab state1
@@ -901,7 +897,6 @@ prefab torture_tool_chain_d
 prefab torture_tools_b
 prefab torture_tools_e
 prefab tree_far_a
-prefab use_push
 prefab village_tent_c
 prefab vlandia_arena_grandstand_barrier_b
 prefab vlandia_arena_grandstand_barrier_c
