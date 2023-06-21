@@ -1,0 +1,2629 @@
+<?xml version="1.0"?>
+<scene name="mp_skirmish_dustII" version="2" unique_token="{65AB3FC8-D173-4082-BCD2-B24AD1184E61}" revision="1687382113268" id_automatic="true">
+	<flora_bounding_rect min="0.000, 0.000" max="0.000, 0.000"/>
+	<levels>
+		<level name="base" mask="1"/>
+	</levels>
+	<environment_properties>
+		<property name="nav_mesh_auto_generated_" value="false"/>
+		<property name="physics_world_min" value="0.000, 0.000"/>
+		<property name="physics_world_max_" value="300.000, 300.000"/>
+		<property name="north_angle" value="0.000"/>
+		<property name="is_indoors" value="false"/>
+		<property name="disable_flora_billboards" value="false"/>
+		<property name="ground_color" value="0.000, 0.000, 0.000"/>
+		<property name="prt_multiplier" value="1.000"/>
+		<property name="prt_point_light_multiplier" value="1.000"/>
+		<property name="fog_start_distance" value="50.000"/>
+		<property name="prt_color_contrast" value="1.000"/>
+		<property name="scene_scale_multiplier" value="1.000"/>
+		<property name="prt_intensity_contrast" value="1.000"/>
+		<property name="prt_fallback_probe_index" value="-1, -1, -1"/>
+		<property name="enforced_color_grade" value=""/>
+		<property name="gi_data_exists" value="false"/>
+		<atmosphere_properties>
+			<property name="atmosphere_name" value="scene_atmosphere"/>
+			<property name="wind" value="1.000, 0.000"/>
+			<property name="scene_fog_falloff_offset" value="0.000"/>
+		</atmosphere_properties>
+		<water_properties version="1">
+			<property name="water_level" value="-100.000"/>
+			<property name="water_strength" value="5.000"/>
+			<property name="water_wind_dependency" value="1.000"/>
+			<property name="water_material" value="water_default"/>
+			<property name="water_shallow_color" value="1.000, 1.000, 1.000"/>
+			<property name="water_deep_color" value="1.000, 1.000, 1.000"/>
+			<property name="water_exists" value="false"/>
+			<property name="place_water_probe" value="true"/>
+		</water_properties>
+		<out_of_bounds_effects_properties>
+			<property name="vignette_color" value="0.000, 0.500, 1.000"/>
+			<property name="vignette_alpha" value="0.000"/>
+		</out_of_bounds_effects_properties>
+	</environment_properties>
+	<entities>
+		<game_entity prefab="bd_sack_b">
+			<transform position="118.185, 120.348, 1.934" rotation_euler="-0.524, 0.000, 0.403"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="148.707, 158.642, -4.606" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_house_bridge_b">
+			<transform position="148.627, 175.662, -1.730" rotation_euler="0.000, 0.000, -1.571" scale="0.630, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_courtyard_a_wall_door">
+			<transform position="125.824, 158.736, -2.861" rotation_euler="0.000, 0.000, 1.571" scale="1.069, 1.160, 1.160"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_tower_a">
+			<transform position="168.047, 98.516, 5.656" rotation_euler="0.000, 0.000, -1.571" scale="0.500, 0.500, 0.500"/>
+		</game_entity>
+		<game_entity prefab="tavern_aserai_panel_b">
+			<transform position="168.534, 143.503, 10.212" rotation_euler="1.571, 0.000, 0.000" scale="4.000, 4.000, 4.000"/>
+		</game_entity>
+		<game_entity prefab="crate_b">
+			<transform position="111.166, 168.443, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="1.600, 1.600, 1.600"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_door_topwall">
+			<transform position="166.153, 138.722, 14.780" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="166.173, 138.653, 10.363" rotation_euler="0.000, 0.000, 0.000" scale="2.037, 1.544, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="175.584, 138.653, 10.363" rotation_euler="0.000, 0.000, 0.000" scale="2.037, 1.544, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_baracks_a_l1">
+			<transform position="175.284, 111.132, 2.370" rotation_euler="0.000, 0.000, 0.000" scale="0.600, 0.600, 0.800"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_door_topwall">
+			<transform position="175.653, 138.722, 14.780" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="163.612, 169.727, 0.166" rotation_euler="1.147, 3.141, 3.141" scale="1.000, 0.580, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_a_l3">
+			<transform position="119.131, 161.753, 0.473" rotation_euler="0.000, 0.000, 0.898" scale="0.750, 0.500, 0.750"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="104.214, 145.640, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_b_l3">
+			<transform position="146.281, 94.393, 1.779" rotation_euler="0.000, 0.000, 0.000" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="battania_castle_keep_a_l3_door_b">
+			<transform position="122.897, 183.500, -0.079" rotation_euler="0.000, 0.000, 1.082" scale="1.500, 1.000, 1.300"/>
+		</game_entity>
+		<game_entity prefab="merchandise_gold">
+			<transform position="174.535, 194.362, 2.234" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_door_column">
+			<transform position="175.414, 137.924, 0.000" rotation_euler="0.000, 0.000, -1.084" scale="1.000, 1.000, 1.555"/>
+		</game_entity>
+		<game_entity name="wooden_platform_plank_e" old_prefab_name="">
+			<transform position="170.763, 133.464, 4.835" rotation_euler="0.000, 0.000, 0.000" scale="1.500, 1.500, 1.500"/>
+			<physics shape="bo_wooden_platform_plank_e"/>
+			<components>
+				<meta_mesh_component name="wooden_platform_plank_e"/>
+			</components>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="152.778, 191.690, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="181.763, 203.535, 2.580" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="merchandise_grain">
+			<transform position="173.567, 193.531, 2.235" rotation_euler="-1.249, 0.000, -1.073"/>
+		</game_entity>
+		<game_entity name="aserai_castle_stairs_a_l2" old_prefab_name="aserai_castle_stairs_a_l2">
+			<transform position="128.128, 152.978, -3.828" rotation_euler="0.000, 0.000, -1.780" scale="1.561, 1.350, 0.432"/>
+			<physics shape="bo_aserai_castle_stairs_a_l2"/>
+			<components>
+				<meta_mesh_component name="aserai_castle_stairs_a_l2">
+					<mesh name="aserai_castle_stairs_a_l2.lod3.0" material="floor_2" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.lod3.1" material="stone_wall_desert_b" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.lod5.0" material="floor_2" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.lod5.1" material="stone_wall_desert_b" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.0" material="floor_2" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.1" material="adobe_wall_3_floor_connection" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.2" material="stone_wall_desert_b" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.lod6.0" material="floor_2" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.lod6.1" material="stone_wall_desert_b" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.lod3.2" material="stone_wall_desert_b_np" argument2="-6.948, 6.921, -0.014, -0.050"/>
+					<mesh name="aserai_castle_stairs_a_l2.3" material="stone_wall_desert_b_np" argument2="-6.948, 6.921, -0.014, -0.050"/>
+				</meta_mesh_component>
+			</components>
+			<scripts>
+				<script name="mesh_bender">
+					<variables>
+						<variable name="Bend Amount" value="46.000000"/>
+						<variable name="Bend Center Ratio" value="0.500000"/>
+					</variables>
+				</script>
+			</scripts>
+			<children>
+				<game_entity name="stairs_bo" old_prefab_name="stairs_bo">
+					<physics shape="bo_2_aserai_castle_stairs_a_l2">
+						<body_flags>
+							<body_flag name="has_steps"/>
+						</body_flags>
+					</physics>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a1">
+			<transform position="113.250, 191.710, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_corridor_stairs">
+			<transform position="196.239, 143.864, -1.373" rotation_euler="0.000, 0.000, 3.141" scale="1.000, 0.600, 1.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="120.291, 143.858, 0.668" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_door_wall">
+			<transform position="144.167, 164.514, -0.631" rotation_euler="0.000, 0.000, 0.000" scale="1.200, 1.000, 1.200"/>
+		</game_entity>
+		<game_entity prefab="battania_castle_keep_a_l3_door_b">
+			<transform position="142.080, 164.602, -1.992" rotation_euler="0.000, 0.000, 2.653" scale="1.500, 1.000, 1.300"/>
+		</game_entity>
+		<game_entity prefab="flora_tree_high_v_palm_date_c">
+			<transform position="161.685, 197.794, 2.235" rotation_euler="0.000, 0.000, -2.002"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="112.742, 118.794, -3.070" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.100, 1.000"/>
+		</game_entity>
+		<game_entity prefab="tavern_aserai_panel_b">
+			<transform position="173.035, 143.503, 10.212" rotation_euler="1.571, 0.000, 0.000" scale="4.000, 4.000, 4.000"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_b">
+			<transform position="182.447, 189.431, 2.234" rotation_euler="0.000, 0.000, 0.000" scale="4.500, 6.750, 6.750"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="183.710, 135.482, -5.088" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_door_column">
+			<transform position="166.618, 140.115, 0.000" rotation_euler="0.000, 0.000, 2.077" scale="1.000, 1.000, 1.555"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a_end">
+			<transform position="113.231, 186.383, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.400, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="102.652, 153.698, 0.668" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="empire_house_bridge_b">
+			<transform position="166.049, 177.791, -1.730" rotation_euler="0.000, 0.000, -1.571" scale="0.430, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_b">
+			<transform position="109.333, 209.362, 0.384" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="123.720, 150.664, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="128.823, 150.664, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="123.720, 155.687, 7.279" rotation_euler="0.252, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="165.430, 160.704, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="arabian_castle_house_new_b">
+			<transform position="154.462, 147.511, -0.341" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantweapons_shield_c">
+			<transform position="135.467, 108.480, 3.528" rotation_euler="0.000, 0.000, 3.135"/>
+		</game_entity>
+		<game_entity prefab="flora_tree_forest_beech_young_c">
+			<transform position="164.439, 150.326, 3.608" rotation_euler="0.000, 0.000, -1.605"/>
+		</game_entity>
+		<game_entity prefab="arabian_small_wall_a">
+			<transform position="195.317, 180.878, 1.211" rotation_euler="0.000, 0.000, 1.600"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a_end">
+			<transform position="113.231, 189.981, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.400, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="166.125, 189.344, -3.497" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_column">
+			<transform position="168.036, 102.042, 2.640" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.000, 1.144"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_cornertop">
+			<transform position="171.586, 106.941, 4.601" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.237, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="121.138, 137.916, 8.751" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 0.457, 0.358"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_a">
+			<transform position="184.829, 125.183, 4.645" rotation_euler="0.000, 0.000, -3.141" scale="0.850, 0.900, 0.900"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="170.578, 191.690, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="161.678, 191.690, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_bucket_b">
+			<transform position="184.352, 197.325, 2.583" rotation_euler="0.000, 0.000, 0.198" scale="1.400, 1.400, 1.889"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantcarpenter_b">
+			<transform position="174.769, 115.785, 1.101" rotation_euler="0.000, 0.000, 0.758"/>
+		</game_entity>
+		<game_entity name="ground_plane" old_prefab_name="">
+			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
+			<physics shape="bo_editor_plane"/>
+			<components>
+				<meta_mesh_component name="editor_plane_low"/>
+			</components>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="170.578, 206.881, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="121.532, 134.429, -4.560" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_e">
+			<transform position="98.506, 173.534, 0.134" rotation_euler="0.000, 0.000, -1.571" scale="0.700, 0.700, 0.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_a_l3">
+			<transform position="195.761, 163.562, 0.771" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity name="envmap_probe" old_prefab_name="" mobility="1">
+			<visibility_masks>
+				<visibility_mask name="no_shadow" value="true"/>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<transform position="20.000, 0.000, 5.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<scripts>
+				<script name="ReflectionCapturer">
+					<variables>
+						<variable name="IsGlobal" value="true"/>
+						<variable name="IsParallaxCorrected" value="false"/>
+						<variable name="AmbientMultiplier" value="1.000"/>
+						<variable name="AttenuationCoef" value="20.000"/>
+						<variable name="BoxOffset" value="0.000, 0.000, 0.000, 0.000"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="empire_keep_d_interior_column_a">
+			<transform position="173.055, 117.619, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="103.353, 127.399, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.550, 0.550, 0.850"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="160.955, 188.615, -1.950" rotation_euler="0.000, 0.000, 0.000" scale="1.600, 1.300, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_shop_door_a">
+			<transform position="154.588, 188.072, -1.331" rotation_euler="0.000, 0.000, -0.335" scale="1.000, 0.375, 0.525"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_a">
+			<transform position="150.348, 182.117, -4.416" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_gate_l3">
+			<transform position="114.783, 142.099, 2.277" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 0.640, 0.750"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_courtyard_a_battlement_b">
+			<transform position="167.050, 160.954, 3.168" rotation_euler="0.000, 0.000, -1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="103.382, 165.229, 0.668" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="151.129, 151.129, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="150.976, 110.119, -3.996" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_a_l3">
+			<transform position="138.947, 170.028, -0.286" rotation_euler="0.000, 0.000, 1.571" scale="0.500, 0.500, 0.500"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.000, 0.000, -0.103"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="142.002, 162.885, 0.176" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.488, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="102.652, 153.698, 8.254" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_gatehouse_a_l3">
+			<transform position="220.134, 173.663, -1.052" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="1">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="2">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="3">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="4">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="5">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="6">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_a_l3">
+			<transform position="129.969, 176.805, -0.286" rotation_euler="0.000, 0.000, 3.141" scale="0.500, 0.500, 0.500"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.000, 0.000, -0.103"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_castle_keep_a_l2">
+			<transform position="137.707, 149.997, -0.383" rotation_euler="-0.002, -0.004, -1.559" scale="0.300, 0.300, 0.300"/>
+		</game_entity>
+		<game_entity prefab="arabian_corner_b">
+			<transform position="126.245, 123.317, 1.648" rotation_euler="0.000, 0.000, 0.000" scale="0.500, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_b_l3">
+			<transform position="135.234, 143.286, -1.692" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.700"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a1">
+			<transform position="113.250, 195.377, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="flora_tree_high_v_palm_date_b">
+			<transform position="175.433, 198.380, 2.235" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_2_heap_a">
+			<transform position="116.948, 166.263, 0.000" rotation_euler="0.000, 0.000, 0.052"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="115.497, 121.876, -3.070" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_c">
+			<transform position="126.589, 228.717, 0.000" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="108.327, 155.687, 7.279" rotation_euler="0.252, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_gate_door_a">
+			<transform position="155.632, 97.665, 0.523" rotation_euler="0.000, 0.000, 0.000" scale="1.100, 1.100, 1.100"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="125.793, 158.644, 4.245" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a_end">
+			<transform position="103.685, 186.383, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.400, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="_barrier_04x04m">
+			<transform position="177.046, 158.338, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="4.000, 1.000, 4.000"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_c1">
+			<transform position="120.279, 190.544, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="127.309, 143.302, 0.332" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="158.536, 177.490, -3.418" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity name="arabian_battlement_a_b" old_prefab_name="arabian_battlement_a_b">
+			<transform position="129.541, 149.784, 0.000" rotation_euler="0.000, 0.000, 1.015" scale="1.500, 1.000, 1.000"/>
+			<physics shape="bo_arabian_battlement_a_b"/>
+			<components>
+				<meta_mesh_component name="arabian_battlement_a_b">
+					<mesh name="arabian_battlement_a_b.0" material="adobe_wall_1" argument2="-4.472, 4.201, -0.135, -0.008"/>
+					<mesh name="arabian_battlement_a_b.1" material="adobe_wall_relief" argument2="-4.472, 4.201, -0.135, -0.008"/>
+					<mesh name="arabian_battlement_a_b.2" material="adobe_wall_2" argument2="-4.472, 4.201, -0.135, -0.008"/>
+					<mesh name="arabian_battlement_a_b.3" material="trunks_b" argument2="-4.472, 4.201, -0.135, -0.008"/>
+					<mesh name="arabian_battlement_a_b.4" material="stone_wall_new_a" argument2="-4.472, 4.201, -0.135, -0.008"/>
+					<mesh name="arabian_battlement_a_b.5" material="dirt_a" argument2="-4.472, 4.201, -0.135, -0.008"/>
+				</meta_mesh_component>
+			</components>
+			<scripts>
+				<script name="mesh_bender">
+					<variables>
+						<variable name="Bend Amount" value="-25.000000"/>
+						<variable name="Bend Center Ratio" value="0.500000"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="128.217, 131.554, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="khuzait_grandbazaar_gate_door_b">
+			<transform position="173.251, 133.372, -0.307" rotation_euler="0.000, 0.000, -2.653" scale="1.450, 1.400, 1.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="169.689, 158.400, 0.394" rotation_euler="0.000, 0.000, -1.283" scale="1.000, 1.200, 1.000"/>
+		</game_entity>
+		<game_entity name="module_aserai_caravanserai_door_wall" old_prefab_name="">
+			<transform position="122.653, 181.415, 1.213" rotation_euler="0.000, 0.000, -1.600" scale="1.200, 0.700, 1.200"/>
+			<physics shape="bo_module_aserai_caravanserai_door_wall" override_material="stone"/>
+			<components>
+				<meta_mesh_component name="module_aserai_caravanserai_door_wall"/>
+			</components>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="120.597, 154.593, 1.687" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="104.618, 141.726, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="166.362, 138.609, 3.302" rotation_euler="0.000, 0.000, 1.582"/>
+		</game_entity>
+		<game_entity prefab="arabian_stairs_a">
+			<transform position="114.864, 131.301, -2.432" rotation_euler="0.000, 0.000, 0.000" scale="1.400, 1.000, 0.500"/>
+		</game_entity>
+		<game_entity prefab="arabian_castle_house_new_b">
+			<transform position="160.062, 191.841, -1.649" rotation_euler="0.000, 0.000, 0.000" scale="0.600, 0.500, 0.400"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="111.891, 145.640, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_detail_window_a">
+			<transform position="154.359, 156.872, 4.738" rotation_euler="0.000, 0.000, 3.141" scale="0.700, 0.700, 0.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="122.745, 139.990, 8.154" rotation_euler="0.000, -1.571, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_b">
+			<transform position="115.324, 188.836, -1.160" rotation_euler="0.000, 0.000, 1.571" scale="0.800, 0.800, 0.800"/>
+		</game_entity>
+		<game_entity prefab="arabian_platform_wooden_a">
+			<transform position="127.877, 193.492, 2.347" rotation_euler="0.000, 0.000, 1.560"/>
+		</game_entity>
+		<game_entity prefab="vlandia_chest_a">
+			<transform position="145.137, 124.607, 0.806" rotation_euler="0.005, 1.550, -0.351"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="183.701, 193.505, -2.874" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_statue_bust_a">
+			<transform position="175.810, 145.390, 0.000" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="mp_shop_prop_merchantbakery_a">
+			<transform position="159.873, 126.862, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_corridor_stairs">
+			<transform position="160.032, 166.908, -1.471" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.000, 1.800"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="179.856, 140.773, -0.003" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_b_l3">
+			<transform position="123.606, 176.235, 5.187" rotation_euler="0.000, 0.000, -1.571" scale="0.500, 0.500, 0.600"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="165.428, 170.272, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="188.354, 199.883, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 0.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="111.891, 138.043, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantbakery_c">
+			<transform position="159.524, 129.948, 0.000" rotation_euler="0.000, 0.000, -3.075"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="148.703, 163.965, -4.608" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="139.241, 115.395, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="1.248, 1.000, 1.000"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="empire_house_bridge_b">
+			<transform position="166.080, 183.025, -1.730" rotation_euler="0.000, 0.000, 1.571" scale="0.430, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="khuzait_grandbazaar_gate_door_b">
+			<transform position="173.582, 133.638, 4.984" rotation_euler="0.000, -1.571, 0.000" scale="1.450, 1.400, 1.700"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_b">
+			<transform position="173.960, 156.313, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_chest_c">
+			<transform position="146.995, 158.577, -0.305" rotation_euler="0.000, 0.000, -1.571" scale="1.000, 1.000, 0.818"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="165.429, 165.479, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_b_l3">
+			<transform position="196.794, 206.000, 2.957" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_b">
+			<transform position="187.710, 78.060, -2.000" rotation_euler="0.000, 0.000, 0.000" scale="1.600, 1.600, 1.600"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.733, 8.707, 0.000"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="111.891, 153.184, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="102.650, 162.183, 0.668" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="tavern_aserai_table_a">
+			<transform position="146.330, 122.768, 2.985" rotation_euler="0.000, 0.000, 0.000" scale="1.800, 1.800, 2.258"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_a_l2_sally">
+			<transform position="138.106, 128.838, 7.435" rotation_euler="0.000, 0.000, 1.977"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="134.492, 122.165, 6.044" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_a_l3">
+			<transform position="156.788, 212.188, 2.235" rotation_euler="0.000, 0.000, -0.999"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_gate_door_a">
+			<transform position="182.733, 164.842, 0.182" rotation_euler="0.000, 0.000, -1.570" scale="0.713, 1.000, 1.087"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_keep_a_l3_interior_column_a">
+			<transform position="113.259, 122.871, 0.375" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="159.331, 183.871, 5.206" rotation_euler="0.000, 0.000, 1.571" scale="1.100, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="154.727, 110.119, -4.576" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="bd_cart_heap_c">
+			<transform position="132.517, 113.334, 1.920" rotation_euler="0.000, 0.000, 0.032" scale="0.940, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="171.904, 195.962, 2.580" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="147.576, 110.118, -3.333" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantweavery_linen_c">
+			<transform position="114.466, 120.556, 1.923" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="148.707, 146.847, -4.606" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="121.244, 138.805, 2.091" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.000, 1.100"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_b">
+			<transform position="140.224, 144.581, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="1.100, 1.000, 1.100"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="153.229, 165.015, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_stadium_a">
+			<transform position="106.663, 96.627, 0.518" rotation_euler="0.000, 0.000, 3.141" scale="0.630, 0.630, 0.630"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="108.811, 143.855, 0.668" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a_end">
+			<transform position="113.231, 193.558, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.400, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="154.331, 176.221, -2.575" rotation_euler="0.000, 0.000, 2.168" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_ground_new_b">
+			<transform position="111.835, 163.692, 1.003" rotation_euler="0.000, 0.000, 0.000" scale="0.400, 0.400, 0.600"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_a">
+			<transform position="176.407, 156.626, 0.000" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="179.471, 199.283, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_b">
+			<transform position="108.282, 202.728, 0.420" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="120.948, 152.338, 0.422" rotation_euler="0.000, 0.000, 0.985"/>
+		</game_entity>
+		<game_entity prefab="empire_gatehouse_gate_a_close">
+			<transform position="100.780, 105.382, 1.865" rotation_euler="0.000, 0.000, -1.571" scale="1.300, 1.200, 1.200"/>
+		</game_entity>
+		<game_entity prefab="arabian_castle_barn_b">
+			<transform position="211.908, 103.562, 0.030" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="vlandia_chest_c">
+			<transform position="105.335, 187.016, 0.189" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantbakery_b">
+			<transform position="149.205, 139.800, -0.019" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.000, 1.595"/>
+		</game_entity>
+		<game_entity prefab="aserai_keep_column_a">
+			<transform position="148.698, 143.715, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_table_small_a">
+			<transform position="135.471, 108.594, 1.872" rotation_euler="0.000, 0.000, 0.000" scale="2.400, 2.400, 2.400"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_d_l3">
+			<transform position="175.796, 121.929, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.400, 0.800, 1.000"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.048, -1.649, 0.000"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="cave_desert_rock_wall_d">
+			<transform position="104.175, 194.116, -0.178" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 2.323, 1.000"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantsmithing_b">
+			<transform position="121.873, 184.768, 0.001" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantbeer_b">
+			<transform position="164.738, 110.318, 0.045" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.000, 1.208"/>
+		</game_entity>
+		<game_entity name="empty_object" old_prefab_name="">
+			<transform position="161.138, 127.727, 0.659" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_corner_c">
+			<transform position="117.511, 201.500, 0.000" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="138.847, 162.512, 3.654" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_c">
+			<transform position="147.005, 156.971, -0.842" rotation_euler="0.697, 0.000, 0.015" scale="0.400, 0.300, 0.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_column">
+			<transform position="110.804, 149.165, 0.625" rotation_euler="0.000, 0.000, 1.571" scale="1.300, 1.000, 1.400"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="135.641, 167.236, 5.265" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="bd_flag_2">
+			<transform position="183.640, 144.740, 12.804" rotation_euler="0.000, 0.000, -3.141" scale="0.500, 0.500, 1.000"/>
+			<children>
+				<game_entity _index_="0">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="flag_rope_cloth_02">
+			<transform position="159.936, 184.513, 8.827" rotation_euler="0.000, 0.000, 0.000" scale="0.421, 0.421, 0.421"/>
+			<children>
+				<game_entity _index_="0">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+				<game_entity _index_="1">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+				<game_entity _index_="2">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+				<game_entity _index_="3">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+				<game_entity _index_="4">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+				<game_entity _index_="5">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+				<game_entity _index_="6">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+				<game_entity _index_="7">
+					<components>
+						<cloth_simulator/>
+					</components>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="arabian_battlement_test">
+			<transform position="199.602, 144.359, -3.846" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity name="empire_garden_wall_b_round1" old_prefab_name="empire_garden_wall_b_round1" occlusion_body_name="bo_occ_empire_garden_wall_a_round1">
+			<transform position="124.458, 152.223, -2.130" rotation_euler="0.000, 0.000, -1.520" scale="1.582, 1.165, 2.617"/>
+			<physics shape="bo_empire_garden_wall_b_round1" override_material="stone"/>
+			<components>
+				<meta_mesh_component name="empire_garden_wall_b_round1">
+					<mesh name="empire_garden_wall_b_round1.0" material="roman_hippodrome_wall_brick" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.1" material="empire_wall_c" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.2" material="roman_hippodrome_wall_brick_plaster" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.lod1.0" material="roman_hippodrome_wall_brick" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.lod1.1" material="empire_wall_c" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.lod1.2" material="roman_hippodrome_wall_brick_plaster" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.lod2.0" material="roman_hippodrome_wall_brick" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.lod2.1" material="empire_wall_c" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.lod4" material="empire_wall_c" argument2="-1.403, 1.503, 0.050, -0.027"/>
+					<mesh name="empire_garden_wall_b_round1.lod5" material="empire_wall_c" argument2="-1.403, 1.503, 0.050, -0.027"/>
+				</meta_mesh_component>
+			</components>
+			<scripts>
+				<script name="mesh_bender">
+					<variables>
+						<variable name="Bend Amount" value="-15.000000"/>
+						<variable name="Bend Center Ratio" value="0.500000"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_c_l3">
+			<transform position="134.986, 135.106, 0.176" rotation_euler="0.000, 0.000, -1.083" scale="1.200, 1.000, 1.100"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="183.710, 141.412, -5.088" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="163.579, 138.200, -0.021" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="161.678, 191.716, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="119.545, 138.037, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="152.778, 206.881, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_a_l1">
+			<transform position="150.297, 123.357, 7.979" rotation_euler="0.000, 0.000, -1.571" scale="0.700, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="wall_stone_detail_a">
+			<transform position="121.761, 191.754, 0.284" rotation_euler="1.571, 1.571, -3.142"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantweavery_linen_b">
+			<transform position="112.292, 194.967, 0.290" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantsmithing_b">
+			<transform position="110.788, 191.127, 0.400" rotation_euler="0.000, 0.000, -2.234"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="161.678, 184.100, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="151.129, 160.704, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantweavery_velvet_c">
+			<transform position="122.202, 192.356, 1.199" rotation_euler="0.000, 0.000, -2.305"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_b_l3">
+			<transform position="175.760, 159.673, 4.399" rotation_euler="0.000, 0.000, -1.571" scale="0.570, 0.570, 0.500"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="169.197, 186.207, -2.874" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.050, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_gate">
+			<transform position="170.973, 143.846, 2.400" rotation_euler="0.000, 0.000, 3.141" scale="1.300, 1.300, 1.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="148.707, 152.754, -4.606" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_keep_column_a">
+			<transform position="112.589, 151.706, 0.625" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="125.835, 141.726, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="123.720, 145.698, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="118.573, 155.687, 7.279" rotation_euler="0.252, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="118.573, 145.698, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="118.573, 150.664, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="113.447, 145.698, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="113.447, 150.664, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="113.447, 155.687, 7.279" rotation_euler="0.252, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="103.177, 155.687, 7.279" rotation_euler="0.252, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="103.177, 145.698, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="103.177, 150.664, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="vlandia_chest_c">
+			<transform position="110.762, 135.346, 1.625" rotation_euler="0.000, -1.571, 0.348" scale="1.100, 1.300, 1.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_keep_a_l3">
+			<transform position="94.655, 126.731, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.700, 0.700, 0.700"/>
+		</game_entity>
+		<game_entity prefab="module_european_floor_c">
+			<transform position="129.652, 157.962, 2.579" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.650, 1.000"/>
+		</game_entity>
+		<game_entity prefab="module_european_floor_c">
+			<transform position="137.599, 157.962, 2.579" rotation_euler="0.000, 0.000, 0.000" scale="1.100, 1.650, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="127.365, 153.892, 4.590" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="124.614, 157.041, 4.590" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_stone_a">
+			<transform position="124.544, 154.821, 10.232" rotation_euler="0.000, 0.000, -1.594"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_b">
+			<transform position="134.112, 157.105, -3.236" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="battania_castle_keep_a_l3_door_b">
+			<transform position="146.242, 164.531, -1.992" rotation_euler="0.000, 0.000, -0.489" scale="1.500, 1.000, 1.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_a_l3">
+			<transform position="156.794, 124.645, 0.157" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="151.026, 175.402, -2.575" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="merchandise_fish_barrel_a">
+			<transform position="165.976, 190.245, 2.235" rotation_euler="0.000, 0.000, -0.782"/>
+		</game_entity>
+		<game_entity prefab="merchandise_fish_barrel_a">
+			<transform position="166.574, 189.365, 2.235" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_stairs_a_l3">
+			<transform position="156.322, 127.501, 3.966" rotation_euler="0.000, 0.000, -1.571" scale="0.400, 1.046, 0.400"/>
+		</game_entity>
+		<game_entity prefab="bd_barrel_heap_a">
+			<transform position="146.444, 159.720, -1.496" rotation_euler="0.000, 0.000, 1.164"/>
+		</game_entity>
+		<game_entity prefab="bd_cart_heap_b">
+			<transform position="192.874, 177.758, 0.000" rotation_euler="0.000, 0.000, 1.877"/>
+		</game_entity>
+		<game_entity prefab="battania_castle_keep_a_l3_door_b">
+			<transform position="122.897, 179.337, -0.079" rotation_euler="0.000, 0.000, -2.059" scale="1.500, 1.000, 1.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="177.935, 184.964, -2.874" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.330, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="179.471, 191.690, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_tower_round_a_l3">
+			<transform position="153.563, 124.430, 3.915" rotation_euler="0.000, 0.000, 0.000" scale="0.400, 0.400, 0.400"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+						<game_entity _index_="1">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="102.152, 112.262, 3.302" rotation_euler="0.000, 0.000, 0.954" scale="0.800, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="112.742, 112.587, -3.070" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_corner_c">
+			<transform position="168.748, 112.980, 2.229" rotation_euler="0.000, 0.000, -1.571" scale="0.650, 0.500, 0.800"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="161.333, 195.962, 2.580" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_c">
+			<transform position="147.857, 159.989, -1.618" rotation_euler="0.000, 0.000, 0.000" scale="3.000, 3.790, 3.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="104.214, 153.185, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_a">
+			<transform position="178.363, 157.683, -0.571" rotation_euler="0.000, 0.000, 0.000" scale="1.180, 1.180, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_cart_heap_b">
+			<transform position="116.855, 172.034, 0.000" rotation_euler="0.000, 0.000, 0.797"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_a">
+			<transform position="159.337, 86.264, 0.000" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="108.327, 145.698, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="wooden_platform_2_a">
+			<transform position="108.327, 150.664, 8.344" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantbakery_b">
+			<transform position="162.035, 137.726, 0.006" rotation_euler="0.000, 0.000, -1.560"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="121.337, 196.251, -3.099" rotation_euler="0.000, 0.000, 2.718" scale="0.700, 0.700, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="155.904, 165.479, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="108.700, 138.803, 2.091" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.000, 1.100"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="122.924, 187.263, -1.201" rotation_euler="0.000, 0.000, 1.571" scale="0.700, 0.700, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l1">
+			<transform position="149.027, 165.140, 3.762" rotation_euler="0.000, 0.000, 0.000" scale="0.470, 0.470, 0.600"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="prop_merchantsmithing_tools_c">
+			<transform position="120.241, 188.684, 0.000" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="177.406, 200.481, 2.580" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="166.381, 171.040, -1.392" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.000, 0.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="175.229, 186.207, -2.874" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_d">
+			<transform position="127.518, 160.184, -4.028" rotation_euler="0.000, 0.000, 1.571" scale="0.900, 0.900, 0.900"/>
+		</game_entity>
+		<game_entity prefab="bd_stone_and_tub">
+			<transform position="140.971, 189.295, -1.439" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="floorstone_c">
+			<transform position="134.591, 188.722, -1.093" rotation_euler="0.172, 0.000, 1.192"/>
+		</game_entity>
+		<game_entity prefab="cave_desert_floor_b">
+			<transform position="144.147, 189.616, -1.950" rotation_euler="0.072, 0.000, -0.635" scale="1.200, 1.200, 1.200"/>
+		</game_entity>
+		<game_entity prefab="floorstone_c">
+			<transform position="145.415, 189.103, -1.323" rotation_euler="0.000, 0.000, -0.293"/>
+		</game_entity>
+		<game_entity prefab="olive_cart_a">
+			<transform position="145.089, 187.960, -1.350" rotation_euler="0.000, 0.000, -0.476"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_c">
+			<transform position="151.310, 176.610, -0.370" rotation_euler="0.000, 0.000, 3.141" scale="3.500, 4.172, 2.500"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_2_heap_a">
+			<transform position="127.267, 178.559, -0.183" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantflour_c">
+			<transform position="128.544, 179.253, -0.430" rotation_euler="-0.064, 0.000, -0.543"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantpottery_b">
+			<transform position="125.505, 177.661, -0.024" rotation_euler="0.000, 0.000, -0.312"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantweavery_wool_b">
+			<transform position="126.360, 178.988, -0.048" rotation_euler="0.000, 0.000, 0.624"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="118.785, 115.739, 1.805" rotation_euler="0.000, 0.000, 0.000" scale="1.560, 1.560, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="130.690, 115.739, 1.833" rotation_euler="0.000, 0.000, 0.000" scale="1.560, 1.560, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="153.851, 171.207, 1.908" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.570, 1.000"/>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_a">
+			<transform position="117.116, 194.020, -0.564" rotation_euler="0.000, 0.000, -0.433" scale="1.300, 1.300, 1.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="163.265, 177.491, -3.418" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_corridor_stairs">
+			<transform position="180.575, 194.654, 1.539" rotation_euler="0.000, 0.000, 0.000" scale="0.843, 0.453, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="160.301, 98.688, 0.221" rotation_euler="0.000, 0.000, 0.000" scale="-0.023, 0.822, 1.000"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="148.710, 167.865, -1.220" rotation_euler="0.000, 0.000, 1.571" scale="0.900, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l1">
+			<transform position="158.263, 177.086, 7.537" rotation_euler="0.000, 0.000, 0.000" scale="0.470, 0.470, 0.600"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="160.685, 165.479, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_a">
+			<transform position="142.084, 198.924, -3.259" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l1">
+			<transform position="149.027, 171.716, 3.762" rotation_euler="0.000, 0.000, 0.000" scale="0.470, 0.470, 0.600"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="adam_0">
+			<transform position="125.409, 178.160, -0.047" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_gate_door_a">
+			<transform position="188.388, 127.159, -3.616" rotation_euler="0.000, 0.000, 0.026" scale="1.100, 1.100, 1.100"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_stairs_a_l3">
+			<transform position="107.715, 172.519, -2.842" rotation_euler="0.000, 0.000, -1.571" scale="1.000, 1.400, 0.300"/>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_c">
+			<transform position="145.782, 125.764, -1.642" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="vlandia_chest_c">
+			<transform position="148.105, 159.273, -0.755" rotation_euler="0.000, 0.000, 1.585" scale="1.460, 2.210, 1.460"/>
+		</game_entity>
+		<game_entity prefab="bd_chest_b">
+			<transform position="184.419, 187.472, 0.343" rotation_euler="0.000, -0.247, 1.571"/>
+		</game_entity>
+		<game_entity prefab="market_leek_basket">
+			<transform position="116.536, 120.951, 1.923" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="flora_tree_forest_beech_young_e">
+			<transform position="164.712, 146.586, 2.851" rotation_euler="0.000, 0.000, -2.822"/>
+		</game_entity>
+		<game_entity prefab="sew_or_knit_chair_unsittable">
+			<transform position="160.637, 123.090, 0.000" rotation_euler="0.000, 0.000, -0.347"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_a">
+			<transform position="121.497, 191.037, 0.542" rotation_euler="0.000, 0.000, -1.523" scale="1.200, 1.200, 1.200"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="119.545, 145.780, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_c2">
+			<transform position="147.395, 157.440, -1.338" rotation_euler="0.000, 0.000, -1.497"/>
+		</game_entity>
+		<game_entity prefab="arabian_battlement_a_b">
+			<transform position="162.549, 155.550, 0.000" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="cupboard_empire_a">
+			<transform position="108.636, 201.236, -0.485" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="flora_tree_high_v_palm_date_d">
+			<transform position="171.668, 159.760, 2.907" rotation_euler="0.000, 0.000, -1.741"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="151.129, 155.918, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="khuzait_grandbazaar_gate_door_b">
+			<transform position="168.776, 144.018, -0.307" rotation_euler="0.000, 0.000, 0.489" scale="1.450, 1.400, 1.700"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="149.100, 178.794, 4.024" rotation_euler="0.000, 0.000, 1.571" scale="1.200, 1.000, 0.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_courtyard_a_wall_window">
+			<transform position="160.084, 98.610, -1.259" rotation_euler="0.000, 0.000, -1.571" scale="1.000, 0.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_courtyard_a_stairs">
+			<transform position="162.565, 98.706, -2.278" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_castle_house_new_b">
+			<transform position="130.812, 196.600, -0.066" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="155.905, 155.918, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_passage_a">
+			<transform position="95.402, 105.281, 0.000" rotation_euler="0.000, 0.000, -1.571" scale="1.300, 1.300, 1.300"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_gate">
+			<transform position="170.973, 133.589, 2.400" rotation_euler="0.000, 0.000, 0.000" scale="1.300, 1.300, 1.300"/>
+		</game_entity>
+		<game_entity prefab="market_apple_crate">
+			<transform position="111.213, 168.374, 1.079" rotation_euler="0.000, 0.000, 0.000" scale="2.100, 1.800, 1.354"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l1">
+			<transform position="149.027, 183.770, 3.762" rotation_euler="0.000, 0.000, 0.000" scale="0.470, 0.470, 0.600"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.000, 4.312, 0.000"/>
+				</game_entity>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="115.859, 154.107, 0.668" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantweavery_velvet_c">
+			<transform position="148.105, 158.675, -1.399" rotation_euler="0.000, 0.000, 1.628"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_column">
+			<transform position="103.167, 149.165, 0.625" rotation_euler="0.000, 0.000, 1.571" scale="1.300, 1.000, 1.400"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="108.207, 134.426, -4.560" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_dungeon_cell_bars_closed">
+			<transform position="162.335, 101.134, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="161.678, 176.520, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="152.778, 176.520, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="160.686, 155.918, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="151.129, 146.325, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="191.323, 203.535, 2.580" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_battlement_d_b">
+			<transform position="117.134, 161.202, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.800, 1.738, 0.900"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="122.809, 192.085, -3.202" rotation_euler="0.000, 0.000, 0.000" scale="1.937, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="161.678, 199.283, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_a">
+			<transform position="145.272, 125.124, 1.752" rotation_euler="0.000, 0.000, 1.226"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="108.811, 144.108, 1.983" rotation_euler="0.000, 0.000, 1.571" scale="2.049, 1.000, 1.176"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a1">
+			<transform position="111.853, 186.355, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="192.969, 140.254, -3.809" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="120.291, 144.580, 2.689" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.000, 1.043"/>
+		</game_entity>
+		<game_entity prefab="arabian_battlement_test">
+			<transform position="199.600, 124.320, -3.850" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_a">
+			<transform position="94.717, 200.706, 0.833" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="192.969, 143.525, -4.608" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.300, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l1">
+			<transform position="158.260, 192.730, 7.540" rotation_euler="0.000, 0.000, 0.000" scale="0.470, 0.470, 0.600"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="151.128, 165.479, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="110.805, 153.536, 0.668" rotation_euler="0.000, 0.000, 0.000" scale="1.213, 0.098, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="180.841, 183.805, -2.874" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.050, 1.000"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_a">
+			<transform position="107.005, 201.290, 0.420" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_e">
+			<transform position="110.726, 146.671, 10.509" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="110.371, 160.888, 0.453" rotation_euler="0.000, 0.000, 0.000" scale="0.605, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_keep_column_a">
+			<transform position="112.589, 145.692, 0.625" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="104.214, 160.889, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="155.934, 120.972, 6.437" rotation_euler="0.000, 0.000, 0.000" scale="0.800, 0.800, 0.800"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="147.993, 123.279, 3.348" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 0.254"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="188.354, 206.881, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="khuzait_grandbazaar_gate_door_b">
+			<transform position="173.251, 143.628, -0.307" rotation_euler="0.000, 0.000, -2.653" scale="1.450, 1.400, 1.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="105.621, 156.676, 2.357" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.100, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_corner_shop_door">
+			<transform position="163.454, 101.400, -0.690" rotation_euler="0.000, 0.000, -1.571" scale="0.770, 0.970, 0.970"/>
+		</game_entity>
+		<game_entity prefab="sturgia_grandbazaar_gate_door_a">
+			<transform position="166.539, 105.534, 0.000" rotation_euler="0.000, 0.000, -1.559" scale="1.476, 1.000, 1.417"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="113.699, 156.203, 0.668" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.800, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="179.856, 132.812, -0.003" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_hay_cart_a">
+			<transform position="107.522, 103.217, 1.936" rotation_euler="0.000, 0.000, -1.571" scale="0.640, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="155.905, 160.704, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="bd_sack_a">
+			<transform position="117.499, 121.091, 1.923" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="108.842, 154.022, 9.097" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="arabian_platform_wooden_c">
+			<transform position="147.459, 158.573, -0.336" rotation_euler="0.000, 0.000, 0.000" scale="0.841, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="121.401, 121.876, -3.070" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="159.172, 168.946, 3.467" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.000, 0.800"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="183.710, 129.544, -5.088" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_castle_house_new_b">
+			<transform position="198.634, 160.611, 0.000" rotation_euler="0.000, 0.000, 3.141" scale="0.670, 0.670, 0.670"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="183.701, 187.221, -2.874" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.120, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_chest_b">
+			<transform position="121.897, 192.149, 1.318" rotation_euler="0.000, 0.000, 1.621"/>
+		</game_entity>
+		<game_entity prefab="bd_sturgian_buttertub_a">
+			<transform position="185.411, 197.547, 2.583" rotation_euler="0.000, 0.000, 0.685" scale="1.400, 1.400, 1.530"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_a_l3">
+			<transform position="136.381, 154.790, 0.772" rotation_euler="0.000, 0.000, 0.000" scale="0.519, 0.500, 0.500"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.000, 0.000, -0.103"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_b_l3">
+			<transform position="137.780, 175.016, 2.746" rotation_euler="0.000, 0.000, 3.141" scale="0.500, 0.500, 0.600"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_b_l2">
+			<transform position="138.573, 122.030, 2.723" rotation_euler="0.000, 0.000, -1.571" scale="0.960, 1.050, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="188.255, 131.049, 0.828" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.596, 1.000"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantweavery_velvet_c">
+			<transform position="121.576, 192.349, 0.618" rotation_euler="0.000, 0.000, -2.305"/>
+		</game_entity>
+		<game_entity prefab="siege_soil_detail_d">
+			<transform position="168.757, 196.032, 2.234" rotation_euler="0.000, 0.000, 0.825"/>
+		</game_entity>
+		<game_entity prefab="wall_stone_detail_a">
+			<transform position="169.160, 195.462, 2.235" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="170.945, 138.461, 13.554" rotation_euler="0.000, 0.000, 0.000" scale="1.038, 1.139, 0.600"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantcarpenter_b">
+			<transform position="169.073, 194.983, 4.012" rotation_euler="-0.152, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="horse_barrier_a">
+			<transform position="171.339, 197.593, 2.400" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="tavern_aserai_table_b">
+			<transform position="174.726, 116.393, -0.049" rotation_euler="0.000, 0.000, 3.141"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a1">
+			<transform position="113.250, 188.040, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_b_l3">
+			<transform position="178.201, 167.869, -0.217" rotation_euler="0.000, 0.000, 1.571" scale="0.890, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="arabian_tower_a">
+			<transform position="131.510, 125.264, -2.078" rotation_euler="0.000, 0.000, -1.571" scale="0.800, 0.800, 0.800"/>
+		</game_entity>
+		<game_entity name="wooden_platform_plank_e" old_prefab_name="">
+			<transform position="170.763, 143.721, 4.835" rotation_euler="0.000, 0.000, 3.141" scale="1.500, 1.500, 1.500"/>
+			<physics shape="bo_wooden_platform_plank_e"/>
+			<components>
+				<meta_mesh_component name="wooden_platform_plank_e"/>
+			</components>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="196.829, 136.054, 1.211" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.357, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_column">
+			<transform position="117.376, 148.943, 0.625" rotation_euler="0.000, 0.000, 1.571" scale="1.300, 1.000, 1.400"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l1">
+			<transform position="157.720, 165.140, 3.762" rotation_euler="0.000, 0.000, 0.000" scale="0.470, 0.470, 0.600"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_c">
+			<transform position="111.491, 185.108, -1.218" rotation_euler="0.000, 0.000, 0.000" scale="1.250, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="160.686, 160.704, -0.052" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="khuzait_grandbazaar_gate_door_b">
+			<transform position="168.776, 133.762, -0.307" rotation_euler="0.000, 0.000, 0.489" scale="1.450, 1.400, 1.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="182.087, 184.921, 2.013" rotation_euler="0.000, 1.571, -3.141" scale="0.900, 0.400, 0.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_baracks_a_l2">
+			<transform position="168.896, 105.639, 7.867" rotation_euler="0.000, 0.000, -1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_tower_round_a_patch_l3">
+			<transform position="164.588, 158.890, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_keep_a_l3">
+			<transform position="129.806, 81.169, 1.545" rotation_euler="0.000, 0.000, 3.141" scale="1.150, 1.200, 1.200"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="192.969, 135.534, -3.809" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.790, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_b_l3">
+			<transform position="137.210, 163.641, 9.512" rotation_euler="0.000, 0.000, 1.571" scale="0.500, 0.500, 0.600"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="wooden_platform_plank_f_column">
+			<transform position="183.639, 144.743, 0.245" rotation_euler="0.000, 0.000, 0.000" scale="2.000, 2.000, 3.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="128.217, 139.636, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="192.969, 130.838, -3.809" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.790, 1.000"/>
+		</game_entity>
+		<game_entity prefab="vlandia_chest_a">
+			<transform position="145.073, 124.191, 0.806" rotation_euler="0.022, 1.568, -1.571"/>
+		</game_entity>
+		<game_entity prefab="arabian_small_wall_a">
+			<transform position="195.506, 175.023, 0.486" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantwinery_c">
+			<transform position="161.862, 194.244, 2.234" rotation_euler="0.000, 0.000, 0.125"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_a_l3">
+			<transform position="195.761, 191.035, 0.771" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="152.778, 199.283, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="165.770, 150.213, -1.787" rotation_euler="0.000, 0.000, -1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_d_l3">
+			<transform position="175.793, 135.836, 0.000" rotation_euler="0.000, 0.000, 1.571" scale="1.400, 0.800, 1.000"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.048, -1.649, 0.000"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="138.969, 161.749, -0.376" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="empire_garden_wall_a1">
+			<transform position="105.166, 186.355, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.400, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="166.130, 184.676, -2.879" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.580, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_column">
+			<transform position="124.582, 148.943, 0.625" rotation_euler="0.000, 0.000, 1.571" scale="1.300, 1.000, 1.400"/>
+		</game_entity>
+		<game_entity prefab="bd_cart_c">
+			<transform position="141.639, 133.234, 0.707" rotation_euler="1.466, -3.141, 1.571"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_column">
+			<transform position="168.036, 109.012, 2.640" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.000, 1.144"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_gatehouse_a_l2">
+			<transform position="188.838, 123.725, -5.718" rotation_euler="0.000, 0.000, 3.141"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.121, 0.000, 0.000"/>
+				</game_entity>
+				<game_entity _index_="1">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="2">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="3">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="4">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_courtyard_a_battlement_b">
+			<transform position="170.395, 175.313, -5.247" rotation_euler="0.000, 0.000, 3.141" scale="0.820, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_courtyard_a_battlement_b">
+			<transform position="168.062, 172.992, -5.247" rotation_euler="0.000, 0.000, -1.571" scale="0.820, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="152.778, 184.100, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l3">
+			<transform position="186.154, 98.093, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.000, 0.445, 0.000"/>
+				</game_entity>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_gate">
+			<transform position="141.745, 158.709, -1.387" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_a_l3">
+			<transform position="121.849, 167.904, -0.337" rotation_euler="0.000, 0.000, -1.571" scale="0.500, 0.500, 0.500"/>
+		</game_entity>
+		<game_entity prefab="empire_house_bridge_b">
+			<transform position="148.658, 183.072, -1.730" rotation_euler="0.000, 0.000, 1.571" scale="0.630, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="wall_stone_detail_a">
+			<transform position="124.257, 193.760, 1.661" rotation_euler="1.571, -2.150, -3.142" scale="1.000, 1.000, 1.228"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="170.578, 199.283, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_chest_b">
+			<transform position="184.419, 187.314, 0.970" rotation_euler="0.000, -0.247, 1.571"/>
+		</game_entity>
+		<game_entity name="arabian_battlement_d_c" old_prefab_name="" occlusion_body_name="bo_arabian_battlement_d_c">
+			<transform position="101.793, 152.713, 0.000" rotation_euler="0.000, 0.000, -1.571"/>
+			<physics shape="bo_arabian_battlement_d_c"/>
+			<components>
+				<meta_mesh_component name="arabian_battlement_d_c"/>
+			</components>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="159.348, 198.098, 2.580" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="119.545, 153.310, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="179.471, 206.881, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_heap_b">
+			<transform position="104.711, 152.362, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="148.498, 172.635, -3.497" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_barn_b_l3">
+			<transform position="151.197, 190.314, -1.915" rotation_euler="0.000, 0.000, 1.568" scale="0.670, 0.770, 0.670"/>
+		</game_entity>
+		<game_entity prefab="khuzait_grandbazaar_gate_door_b">
+			<transform position="173.580, 143.890, 4.983" rotation_euler="0.000, -1.571, 0.000" scale="1.450, 1.400, 1.700"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_gate_l3">
+			<transform position="107.457, 163.964, 1.654" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 1.250, 0.750"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="merchandise_flour">
+			<transform position="171.610, 186.827, 2.234" rotation_euler="0.000, 0.000, -0.693"/>
+		</game_entity>
+		<game_entity prefab="merchandise_grain">
+			<transform position="170.827, 186.972, 2.187" rotation_euler="0.237, 0.000, 0.000" scale="1.000, 1.000, 1.165"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_c">
+			<transform position="178.083, 189.526, 2.234" rotation_euler="0.000, 0.000, -0.185" scale="3.500, 4.172, 2.500"/>
+		</game_entity>
+		<game_entity prefab="chest_empire_b">
+			<transform position="151.311, 176.608, -1.970" rotation_euler="0.000, 0.000, 1.571" scale="4.500, 6.750, 6.750"/>
+		</game_entity>
+		<game_entity prefab="bd_hay_cart_b">
+			<transform position="171.899, 125.944, 0.000" rotation_euler="0.000, 0.000, 0.255" scale="0.800, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="market_apple_crate">
+			<transform position="111.213, 168.374, 1.425" rotation_euler="0.000, 0.000, 0.000" scale="2.100, 1.800, 2.100"/>
+		</game_entity>
+		<game_entity prefab="wall_stone_detail_a">
+			<transform position="165.943, 158.262, 0.186" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_corner_e_l1">
+			<transform position="170.336, 166.581, 9.849" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="empire_statue_plinth_b">
+			<transform position="164.550, 176.547, 0.196" rotation_euler="0.000, 0.000, 0.000" scale="1.800, 1.800, 1.800"/>
+			<edit_mode_data locked_for_selection="true" selection_group_mask="1"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantleather_c">
+			<transform position="121.255, 122.982, 0.055" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantflour_c">
+			<transform position="122.335, 126.326, 0.000" rotation_euler="0.000, 0.000, 0.579"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantcarpenter_b">
+			<transform position="121.786, 122.299, -0.064" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantweavery_linen_c">
+			<transform position="121.766, 123.342, 0.067" rotation_euler="0.000, 0.000, -1.787"/>
+		</game_entity>
+		<game_entity prefab="prop_merchantsiege_b">
+			<transform position="128.897, 119.367, 1.923" rotation_euler="0.000, 0.000, 1.266"/>
+		</game_entity>
+		<game_entity prefab="mp_prop_merchantweavery_linen_a">
+			<transform position="130.962, 120.588, 1.923" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="merchandise_wooden_stick">
+			<transform position="133.206, 116.783, 1.923" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_dungeon_cell_bars_door">
+			<transform position="135.895, 139.021, 0.394" rotation_euler="0.000, 0.000, -1.083" scale="1.300, 1.300, 1.300"/>
+		</game_entity>
+		<game_entity prefab="arabian_stone_b">
+			<transform position="141.574, 164.582, 5.955" rotation_euler="0.000, 0.000, -0.579"/>
+		</game_entity>
+		<game_entity prefab="arabian_stone_b">
+			<transform position="145.701, 164.561, 5.955" rotation_euler="0.000, 0.000, -0.579"/>
+		</game_entity>
+		<game_entity prefab="module_aserai_caravanserai_door_topwall">
+			<transform position="143.468, 164.260, 5.111" rotation_euler="0.000, 0.000, 0.000" scale="0.700, 1.100, 0.600"/>
+		</game_entity>
+		<game_entity prefab="merchandise_gold">
+			<transform position="174.433, 195.003, 2.234" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="merchandise_gold">
+			<transform position="174.982, 193.789, 2.234" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="166.125, 180.287, 1.766" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 0.900, 0.176"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_b">
+			<transform position="135.640, 172.013, 5.265" rotation_euler="0.000, 0.000, 1.571" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_wall">
+			<transform position="161.678, 206.881, 1.900" rotation_euler="0.000, -1.571, 1.571" scale="1.500, 1.500, 1.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_wall_a_l3">
+			<transform position="138.947, 170.028, -0.286" rotation_euler="0.000, 0.000, 1.571" scale="0.500, 0.500, 0.500"/>
+			<children>
+				<game_entity _index_="0">
+					<transform position="0.000, 0.000, -0.103"/>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantleather_c">
+			<transform position="114.076, 119.086, 1.923" rotation_euler="0.000, 0.000, -1.540"/>
+		</game_entity>
+		<game_entity prefab="aserai_castle_keep_a_l1">
+			<transform position="129.005, 169.640, 5.244" rotation_euler="0.000, 0.000, -1.571" scale="0.500, 0.526, 0.500"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="122.924, 198.041, -1.083" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="aserai_grandbazaar_floor_a">
+			<transform position="104.220, 138.043, 0.453" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="aserai_village_house_a">
+			<transform position="131.617, 166.266, -2.017" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="prt_border_probe">
+			<transform position="235.702, 61.282, 52.074" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="prt_border_probe">
+			<transform position="83.777, 242.677, -9.485" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+	</entities>
+	<terrain enabled="true" node_dimension_x="3" node_dimension_y="3" node_size="100.000" lod_multiplier="1.000" min_height="-3.593" max_height="9.640" vista_normalmap="" vista_diffuse_name="" vista_diffuse_blend_type="0" vista_diffuse_blend_amount="0.000" vista_layer_detail_distance="35.000" vista_albedo_multiplier="0.670" vista_detail_albedo_name="" vista_detail_normal_name="" vista_detail_tile="20.000" vista_tileset="" colormap_detail_level="-1" ao_intensity="4.000">
+		<outer_mesh>
+			<variable name="outer_mesh_name" value=""/>
+			<variable name="diffuse1_texture_name" value=""/>
+			<variable name="diffuse2_texture_name" value=""/>
+			<variable name="diffuse3_texture_name" value=""/>
+			<variable name="areamap_texture_name" value=""/>
+			<variable name="splatmap_texture_name" value=""/>
+			<variable name="splatmap_normal_name" value=""/>
+			<variable name="horizon_mesh_diffuse_1_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_diffuse_2_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_diffuse_3_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_areamap_tile_multiplier" value="1.000"/>
+			<variable name="horizon_mesh_areamap_power" value="1.000"/>
+			<variable name="horizon_mesh_height" value="1.000"/>
+		</outer_mesh>
+		<layers version="1">
+			<layer name="desert_a">
+				<summer is_enabled="true" name="desert_a" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="sand" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="0" bigdetailmap_weight="0.000" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+					<textures>
+						<texture type="diffusemap" name="desert_floor_a"/>
+						<texture type="areamap" name="desert_floor_a"/>
+						<texture type="normalmap" name="desert_floor_c_n"/>
+						<texture type="specularmap" name="desert_floor_c_s"/>
+						<texture type="splattingmap" name="none"/>
+						<texture type="displacementmap" name="desert_floor_c_h"/>
+					</textures>
+					<layer_flags>
+						<flag name="use_parallax" value="false"/>
+						<flag name="use_displacement_mapping" value="false"/>
+						<flag name="use_randomized_normalmap" value="false"/>
+						<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+						<flag name="use_transparency_of_ground_slope" value="false"/>
+						<flag name="use_dxt5_normal" value="false"/>
+						<flag name="use_six_side_uv_mapping" value="false"/>
+					</layer_flags>
+					<meshes/>
+				</summer>
+				<fall is_enabled="true" name="desert_a" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</fall>
+				<winter is_enabled="true" name="desert_a" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</winter>
+				<spring is_enabled="true" name="desert_a" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</spring>
+			</layer>
+			<layer name="road_mud">
+				<summer is_enabled="true" name="road_mud" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 90.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="sand" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="0" bigdetailmap_weight="0.000" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+					<textures>
+						<texture type="diffusemap" name="desert_floor_b"/>
+						<texture type="areamap" name="desert_floor_a"/>
+						<texture type="normalmap" name="desert_floor_c_n"/>
+						<texture type="specularmap" name="desert_floor_c_s"/>
+						<texture type="splattingmap" name="none"/>
+						<texture type="displacementmap" name="desert_floor_c_h"/>
+					</textures>
+					<layer_flags>
+						<flag name="use_parallax" value="false"/>
+						<flag name="use_displacement_mapping" value="false"/>
+						<flag name="use_randomized_normalmap" value="false"/>
+						<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+						<flag name="use_transparency_of_ground_slope" value="false"/>
+						<flag name="use_dxt5_normal" value="false"/>
+						<flag name="use_six_side_uv_mapping" value="false"/>
+					</layer_flags>
+					<meshes/>
+				</summer>
+				<fall is_enabled="true" name="road_mud" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</fall>
+				<winter is_enabled="true" name="road_mud" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</winter>
+				<spring is_enabled="true" name="road_mud" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</spring>
+			</layer>
+			<layer name="stone">
+				<summer is_enabled="true" name="stone" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="soil" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="0" bigdetailmap_weight="0.000" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+					<textures>
+						<texture type="diffusemap" name="ground_roads_d_d"/>
+						<texture type="areamap" name="desert_floor_a"/>
+						<texture type="normalmap" name="ground_roads_d_n"/>
+						<texture type="specularmap" name="ground_roads_d_s"/>
+						<texture type="splattingmap" name="none"/>
+						<texture type="displacementmap" name="ground_roads_d_h"/>
+					</textures>
+					<layer_flags>
+						<flag name="use_parallax" value="false"/>
+						<flag name="use_displacement_mapping" value="false"/>
+						<flag name="use_randomized_normalmap" value="false"/>
+						<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+						<flag name="use_transparency_of_ground_slope" value="false"/>
+						<flag name="use_dxt5_normal" value="false"/>
+						<flag name="use_six_side_uv_mapping" value="false"/>
+					</layer_flags>
+					<meshes/>
+				</summer>
+				<fall is_enabled="true" name="stone" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</fall>
+				<winter is_enabled="true" name="stone" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</winter>
+				<spring is_enabled="true" name="stone" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</spring>
+			</layer>
+			<layer name="floor">
+				<summer is_enabled="true" name="floor" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="soil" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="0" bigdetailmap_weight="0.000" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+					<textures>
+						<texture type="diffusemap" name="floor_2_d"/>
+						<texture type="areamap" name="none"/>
+						<texture type="normalmap" name="floor_2_n"/>
+						<texture type="specularmap" name="floor_2_s"/>
+						<texture type="splattingmap" name="none"/>
+						<texture type="displacementmap" name="floor_2_h"/>
+					</textures>
+					<layer_flags>
+						<flag name="use_parallax" value="false"/>
+						<flag name="use_displacement_mapping" value="false"/>
+						<flag name="use_randomized_normalmap" value="false"/>
+						<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+						<flag name="use_transparency_of_ground_slope" value="false"/>
+						<flag name="use_dxt5_normal" value="false"/>
+						<flag name="use_six_side_uv_mapping" value="false"/>
+					</layer_flags>
+					<meshes/>
+				</summer>
+				<fall is_enabled="true" name="floor" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</fall>
+				<winter is_enabled="true" name="floor" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</winter>
+				<spring is_enabled="true" name="floor" is_flora_layer="false" is_mesh_blend_layer="true">
+					<meshes/>
+				</spring>
+			</layer>
+			<layer name="road">
+				<summer is_enabled="true" name="road" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="stone" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="0" bigdetailmap_weight="0.000" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+					<textures>
+						<texture type="diffusemap" name="adobe_wall_white_d"/>
+						<texture type="areamap" name="desert_floor_a"/>
+						<texture type="normalmap" name="vtstt_roman_ground_n"/>
+						<texture type="specularmap" name="vtstt_roman_ground_s"/>
+						<texture type="splattingmap" name="none"/>
+						<texture type="displacementmap" name="vtstt_roman_ground_h"/>
+					</textures>
+					<layer_flags>
+						<flag name="use_parallax" value="false"/>
+						<flag name="use_displacement_mapping" value="false"/>
+						<flag name="use_randomized_normalmap" value="false"/>
+						<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+						<flag name="use_transparency_of_ground_slope" value="false"/>
+						<flag name="use_dxt5_normal" value="false"/>
+						<flag name="use_six_side_uv_mapping" value="false"/>
+					</layer_flags>
+					<meshes/>
+				</summer>
+				<fall is_enabled="true" name="road" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</fall>
+				<winter is_enabled="true" name="road" is_flora_layer="false" is_mesh_blend_layer="true">
+					<meshes/>
+				</winter>
+				<spring is_enabled="true" name="road" is_flora_layer="false" is_mesh_blend_layer="false">
+					<meshes/>
+				</spring>
+			</layer>
+		</layers>
+		<nodes>
+			<node idx="0" idy="0" occluders_enabled="true" layer_is_used_mask_summer="3" layer_is_used_mask_fall="3" layer_is_used_mask_winter="3" layer_is_used_mask_spring="3" layer_is_used_mask="true" height_complexity="0.204" min_height="0.000" max_height="1.890">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="0" idy="1" occluders_enabled="true" layer_is_used_mask_summer="23" layer_is_used_mask_fall="23" layer_is_used_mask_winter="23" layer_is_used_mask_spring="23" layer_is_used_mask="true" height_complexity="0.301" min_height="0.000" max_height="1.890">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="0" idy="2" occluders_enabled="true" layer_is_used_mask_summer="3" layer_is_used_mask_fall="3" layer_is_used_mask_winter="3" layer_is_used_mask_spring="3" layer_is_used_mask="true" height_complexity="0.010" min_height="0.000" max_height="0.331">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="1" idy="0" occluders_enabled="true" layer_is_used_mask_summer="19" layer_is_used_mask_fall="19" layer_is_used_mask_winter="19" layer_is_used_mask_spring="19" layer_is_used_mask="true" height_complexity="0.253" min_height="0.000" max_height="1.899">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="1" idy="1" occluders_enabled="true" layer_is_used_mask_summer="31" layer_is_used_mask_fall="31" layer_is_used_mask_winter="31" layer_is_used_mask_spring="31" layer_is_used_mask="true" height_complexity="1.482" min_height="-3.593" max_height="2.690">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="1" idy="2" occluders_enabled="true" layer_is_used_mask_summer="31" layer_is_used_mask_fall="31" layer_is_used_mask_winter="31" layer_is_used_mask_spring="31" layer_is_used_mask="true" height_complexity="0.608" min_height="-1.969" max_height="2.690">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="2" idy="0" occluders_enabled="true" layer_is_used_mask_summer="1" layer_is_used_mask_fall="1" layer_is_used_mask_winter="1" layer_is_used_mask_spring="1" layer_is_used_mask="true" height_complexity="0.000" min_height="0.000" max_height="0.000">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="2" idy="1" occluders_enabled="true" layer_is_used_mask_summer="13" layer_is_used_mask_fall="13" layer_is_used_mask_winter="13" layer_is_used_mask_spring="13" layer_is_used_mask="true" height_complexity="0.000" min_height="0.000" max_height="0.000">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+			<node idx="2" idy="2" occluders_enabled="true" layer_is_used_mask_summer="9" layer_is_used_mask_fall="9" layer_is_used_mask_winter="9" layer_is_used_mask_spring="9" layer_is_used_mask="true" height_complexity="0.000" min_height="0.000" max_height="0.000">
+				<texture_levels>
+					<variable name="heightmap_level" value="6"/>
+					<variable name="min_heightmap_level" value="2"/>
+					<variable name="normalmap_level" value="6"/>
+					<variable name="weightmap_levels">
+						<variable layer="0" value="6"/>
+						<variable layer="1" value="6"/>
+						<variable layer="2" value="6"/>
+						<variable layer="3" value="6"/>
+						<variable layer="4" value="6"/>
+						<variable layer="5" value="0"/>
+						<variable layer="6" value="0"/>
+						<variable layer="7" value="0"/>
+						<variable layer="8" value="0"/>
+						<variable layer="9" value="0"/>
+						<variable layer="10" value="0"/>
+						<variable layer="11" value="0"/>
+						<variable layer="12" value="0"/>
+						<variable layer="13" value="0"/>
+						<variable layer="14" value="0"/>
+						<variable layer="15" value="0"/>
+					</variable>
+				</texture_levels>
+			</node>
+		</nodes>
+	</terrain>
+	<editor_data editor_camera_position="235.018, 61.619, 91.386" editor_camera_elevation="-0.641" editor_camera_bearing="-7.209" editor_camera_forward="-0.524, 0.405, -0.749" author="" comment=""/>
+	<camera_data near_plane="0.100" far_plane="100000.000"/>
+	<Paths/>
+</scene>
+
