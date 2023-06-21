@@ -502,7 +502,7 @@
     </SpritePart>
     <SpritePart>
       <SheetID>48</SheetID>
-      <Name>crpg_siege_hailescastle</Name>
+      <Name>mp_siege_newAyzarStronghold</Name>
       <Width>1920</Width>
       <Height>1080</Height>
       <SheetX>0</SheetX>
@@ -755,8 +755,8 @@
       <SpritePartName>crpg_siege_jameyyedcastle</SpritePartName>
     </GenericSprite>
     <GenericSprite>
-      <Name>crpg_siege_hailescastle</Name>
-      <SpritePartName>crpg_siege_hailescastle</SpritePartName>
+      <Name>mp_siege_newAyzarStronghold</Name>
+      <SpritePartName>mp_siege_newAyzarStronghold</SpritePartName>
     </GenericSprite>
     <GenericSprite>
       <Name>mp_siege_silverskalitz</Name>
