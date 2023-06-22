@@ -439,7 +439,10 @@ namespace CNMultiplayer.Modes.Siege
                     if (flag == _masterFlag || flag.IsDeactivated || GetFlagOwnerTeam(flag).Side != BattleSideEnum.Attacker)
                         continue;
 
-                    _capturePointRemainingMoraleGains[flag.FlagIndex] -= MoraleGainPerFlag;
+                    if (!flag.IsContested)
+                    {
+                        _capturePointRemainingMoraleGains[flag.FlagIndex] -= MoraleGainPerFlag;
+                    }
                     moraleGain += MoraleGainPerFlag;
                     if (_capturePointRemainingMoraleGains[flag.FlagIndex] != 0)
                         continue;
@@ -458,7 +461,7 @@ namespace CNMultiplayer.Modes.Siege
             }
             else if (GetFlagOwnerTeam(_masterFlag).Side == BattleSideEnum.Attacker && !_masterFlag.IsContested)
             {
-                moraleGain = DefenderMoraleDecayInTick + 3 * (CurrentFlagNum() - 1);
+                moraleGain = DefenderMoraleDecayInTick + 3*(CurrentFlagNum() - 1);
             }
             else
             {

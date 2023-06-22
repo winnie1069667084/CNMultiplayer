@@ -439,7 +439,10 @@ namespace CNMultiplayer.Modes.Siege
                     if (flag == _masterFlag || flag.IsDeactivated || GetFlagOwnerTeam(flag).Side != BattleSideEnum.Attacker)
                         continue;
 
-                    _capturePointRemainingMoraleGains[flag.FlagIndex] -= MoraleGainPerFlag;
+                    if (!flag.IsContested)
+                    {
+                        _capturePointRemainingMoraleGains[flag.FlagIndex] -= MoraleGainPerFlag;
+                    }
                     moraleGain += MoraleGainPerFlag;
                     if (_capturePointRemainingMoraleGains[flag.FlagIndex] != 0)
                         continue;
