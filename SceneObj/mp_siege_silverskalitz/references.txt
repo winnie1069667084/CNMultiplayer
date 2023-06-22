@@ -1,4 +1,4 @@
-1014
+1017
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -216,7 +216,9 @@ prefab battania_watermill
 prefab battania_watermill_mill
 prefab battering_ram_rest_point
 prefab batteringram_a_spawnerMP
+prefab battleground_fire_smoke_square
 prefab battleground_fire_smoke_vertical
+prefab battleground_fire_smoke_vertical_square
 prefab bd_barrel_a
 prefab bd_barrel_b
 prefab bd_barrel_c
@@ -509,6 +511,7 @@ prefab flag_pole_big_sergeant_main
 prefab flag_raising_boundary
 prefab flag_rope_cloth_02
 prefab flag_stand_big
+prefab flame_light
 prefab flame_loop
 prefab flee_line
 prefab floor_dirt_d
