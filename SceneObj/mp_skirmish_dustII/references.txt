@@ -1,13 +1,13 @@
-273
+300
 flora_entity flora_green_e
 flora_entity plant_dry_grass
 mesh arabian_battlement_a_b
 mesh arabian_battlement_d_c
+mesh arrow_new_icon
 mesh aserai_castle_stairs_a_l2
 mesh editor_plane_low
 mesh empire_garden_wall_b_round1
 mesh module_aserai_caravanserai_door_wall
-mesh soft_border_column
 mesh wooden_platform_plank_e
 prefab __empty_object
 prefab _barrier_04x04m
@@ -51,6 +51,7 @@ prefab aserai_castle_corner_c_l3
 prefab aserai_castle_corner_e_l1
 prefab aserai_castle_corner_e_l3
 prefab aserai_castle_corner_stairs_l1
+prefab aserai_castle_gate_inner_l1
 prefab aserai_castle_gatehouse_a_l2
 prefab aserai_castle_gatehouse_a_l2_stairs
 prefab aserai_castle_gatehouse_a_l3
@@ -89,7 +90,9 @@ prefab aserai_grandbazaar_wall
 prefab aserai_keep_column_a
 prefab aserai_village_house_a
 prefab ashes_a
+prefab attacker_spawn_visual
 prefab battania_castle_keep_a_l3_door_b
+prefab battering_ram_rest_point
 prefab bd_barrel_a
 prefab bd_barrel_heap_a
 prefab bd_basket_a
@@ -119,11 +122,19 @@ prefab bd_sturgian_buttertub_a
 prefab bd_table_small_a
 prefab burned_wood_b
 prefab burned_wood_f
+prefab capture_flag_a
 prefab cave_desert_floor_b
 prefab cave_desert_rock_wall_d
 prefab chest_empire_a
 prefab chest_empire_b
 prefab chest_empire_c
+prefab clean
+prefab close_inside
+prefab close_outside
+prefab collider_agent_l
+prefab collider_agent_r
+prefab collider_l
+prefab collider_r
 prefab crate_a
 prefab crate_a_empty
 prefab crate_a_lid
@@ -145,8 +156,15 @@ prefab empire_statue_plinth_d
 prefab empire_street_pottery_06
 prefab empire_street_pottery_07
 prefab empire_street_pottery_08
+prefab extra_collider_l
+prefab extra_collider_r
 prefab flag_5
+prefab flag_pole_big_sergeant_A
+prefab flag_pole_big_sergeant_B
+prefab flag_pole_big_sergeant_C
+prefab flag_raising_boundary
 prefab flag_rope_cloth_02
+prefab flag_stand_big
 prefab floorstone_c
 prefab flora_tree_forest_beech_young_c
 prefab flora_tree_forest_beech_young_e
@@ -155,6 +173,7 @@ prefab flora_tree_high_v_palm_date_c
 prefab flora_tree_high_v_palm_date_d
 prefab foods_basket_c
 prefab foods_basket_olive_a
+prefab gate_plank
 prefab horse_barrier_a
 prefab khuzait_grandbazaar_gate_door_b
 prefab market_apple_crate
@@ -186,6 +205,7 @@ prefab merlon_6
 prefab merlon_7
 prefab merlon_8
 prefab merlon_9
+prefab middle_position
 prefab module_aserai_caravanserai_column
 prefab module_aserai_caravanserai_cornertop
 prefab module_aserai_caravanserai_door_column
@@ -195,7 +215,9 @@ prefab module_european_floor_c
 prefab mp_prop_merchantweavery_linen_a
 prefab mp_shop_prop_merchantbakery_a
 prefab olive_cart_a
+prefab open_inside
 prefab particle_spawner_a
+prefab particles
 prefab pot_a
 prefab pot_b
 prefab prop_merchantbakery_b
@@ -234,7 +256,12 @@ prefab shop_prop_merchantweavery_wool_b
 prefab siege_soil_detail_d
 prefab sound
 prefab sound_reverb
+prefab spawn_visual
 prefab stairs_bo
+prefab state1
+prefab state2
+prefab state3
+prefab state4
 prefab sturgia_grandbazaar_gate_door_a
 prefab sturgia_grandbazaar_gate_door_b
 prefab sturgia_grandbazaar_gate_door_c

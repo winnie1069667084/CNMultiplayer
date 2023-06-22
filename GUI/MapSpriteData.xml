@@ -493,7 +493,7 @@
     </SpritePart>
     <SpritePart>
       <SheetID>47</SheetID>
-      <Name>crpg_siege_jameyyedcastle</Name>
+      <Name>mp_skirmish_dustII</Name>
       <Width>1920</Width>
       <Height>1080</Height>
       <SheetX>0</SheetX>
@@ -751,8 +751,8 @@
       <SpritePartName>mp_siege_neuenburg</SpritePartName>
     </GenericSprite>
     <GenericSprite>
-      <Name>crpg_siege_jameyyedcastle</Name>
-      <SpritePartName>crpg_siege_jameyyedcastle</SpritePartName>
+      <Name>mp_skirmish_dustII</Name>
+      <SpritePartName>mp_skirmish_dustII</SpritePartName>
     </GenericSprite>
     <GenericSprite>
       <Name>mp_siege_newAyzarStronghold</Name>
