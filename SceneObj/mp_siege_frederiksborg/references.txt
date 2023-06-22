@@ -1,4 +1,4 @@
-793
+794
 flora_entity 
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -21,6 +21,7 @@ mesh arrow_new_icon
 mesh aserai_dungeon_cell_bars_opened
 mesh barn_fence_a
 mesh barn_fence_b
+mesh barrier
 mesh battania_dungeon_door_a1
 mesh battania_keep_door_case_a
 mesh battania_watermill_mill
