@@ -1,4 +1,4 @@
-1009
+1014
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_leek
@@ -114,6 +114,11 @@ mesh flag_stand_white2
 mesh foods_basket_c
 mesh outer_rain_cylinder
 mesh rock_004
+mesh siege_barricade_a_state_1
+mesh siege_barricade_a_state_2
+mesh siege_barricade_a_state_3
+mesh siege_barricade_a_state_4
+mesh siege_barricade_a_state_5
 mesh sturgia_village_house_entrance
 mesh terrain_green_rock_big_a
 mesh terrain_green_rock_big_c
