@@ -6956,7 +6956,44 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-      <Perk game_mode="all"
+	  <Perk game_mode="all"
+            name="{=E1bKcoaT}Cavalry Breaker"
+            description="{=00000039}Change Chinese to see the description"
+            icon="PerkHorseHunters"
+            perk_list="2">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="SpeedBonus"
+                    value="0.5"
+                    hit_type="Melee"
+                    damage_type="Pierce" />
+            <Effect type="MountDamage"
+                    value="0.5"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_battania_long_spear" />		   
+      </Perk>
+	  <Perk game_mode="all"
+            name="{=jf8luKVV}Brawny"
+            description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
+            icon="PerkBrawny"
+            perk_list="2">
+        <Effect type="SpeedBonus"
+                value="0.35"
+                hit_type="Melee" />
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+      </Perk>
+	  <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
             description="{=00000021}Change Chinese to see the description"
             icon="PerkHorseHunters"
@@ -6979,19 +7016,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="mp_battania_pike" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=jf8luKVV}Brawny"
-            description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
-            icon="PerkBrawny"
-            perk_list="2">
-        <Effect type="SpeedBonus"
-                value="0.35"
-                hit_type="Melee" />
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000100}Change Chinese to see the description"
@@ -8911,7 +8935,7 @@
                        item="vlandia_2hsword_1_t5" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=000000172}Heavy Shield Infantry"
+            name="{=00000172}Heavy Shield Infantry"
             description="{=00000173}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
@@ -8984,7 +9008,7 @@
                        item="vlandia_2hsword_2_t5" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=000000172}Heavy Shield Infantry"
+            name="{=00000172}Heavy Shield Infantry"
             description="{=00000173}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
@@ -9058,7 +9082,7 @@
                        item="khuzait_polearm_1_t4" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=000000172}Heavy Shield Infantry"
+            name="{=00000172}Heavy Shield Infantry"
             description="{=00000173}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
@@ -9151,7 +9175,7 @@
                        item="aserai_2haxe_3_t5" />			   
       </Perk>
 	  <Perk game_mode="all"
-            name="{=000000172}Heavy Shield Infantry"
+            name="{=00000172}Heavy Shield Infantry"
             description="{=00000173}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
@@ -9225,7 +9249,7 @@
                        item="sturgia_2haxe_2_t5" />			   
       </Perk>
 	  <Perk game_mode="all"
-            name="{=000000172}Heavy Shield Infantry"
+            name="{=00000172}Heavy Shield Infantry"
             description="{=00000173}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
@@ -9307,7 +9331,7 @@
                        item="reaper_falx" />			   
       </Perk>
 	  <Perk game_mode="all"
-            name="{=000000172}Heavy Shield Infantry"
+            name="{=00000172}Heavy Shield Infantry"
             description="{=00000173}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
