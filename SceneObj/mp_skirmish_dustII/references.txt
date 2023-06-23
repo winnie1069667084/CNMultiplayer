@@ -1,12 +1,15 @@
-300
+316
 flora_entity flora_green_e
 flora_entity plant_dry_grass
 mesh arabian_battlement_a_b
 mesh arabian_battlement_d_c
+mesh arena_arabian_wall_a
 mesh arrow_new_icon
 mesh aserai_castle_stairs_a_l2
+mesh battania_castle_keep_a_l3_door_b
 mesh editor_plane_low
 mesh empire_garden_wall_b_round1
+mesh khuzait_grandbazaar_gate_door_b
 mesh module_aserai_caravanserai_door_wall
 mesh wooden_platform_plank_e
 prefab __empty_object
@@ -20,6 +23,8 @@ prefab arabian_battlement_d_b
 prefab arabian_battlement_destroyed
 prefab arabian_battlement_test
 prefab arabian_castle_barn_b
+prefab arabian_castle_barn_door
+prefab arabian_castle_house_floor_a
 prefab arabian_castle_house_new_b
 prefab arabian_corner_b
 prefab arabian_corner_c
@@ -42,6 +47,7 @@ prefab arena_arabian_tower_a
 prefab arena_arabian_wall_a
 prefab aserai_castle_baracks_a_l1
 prefab aserai_castle_baracks_a_l2
+prefab aserai_castle_barn_a_l2
 prefab aserai_castle_barn_a_l3
 prefab aserai_castle_barn_b_l2
 prefab aserai_castle_barn_b_l3
@@ -54,8 +60,6 @@ prefab aserai_castle_corner_stairs_l1
 prefab aserai_castle_gate_inner_l1
 prefab aserai_castle_gatehouse_a_l2
 prefab aserai_castle_gatehouse_a_l2_stairs
-prefab aserai_castle_gatehouse_a_l3
-prefab aserai_castle_gatehouse_a_l3_stairs
 prefab aserai_castle_keep_a_l1
 prefab aserai_castle_keep_a_l2
 prefab aserai_castle_keep_a_l3
@@ -69,9 +73,11 @@ prefab aserai_castle_wall_a_l2_sally
 prefab aserai_castle_wall_a_l3
 prefab aserai_castle_wall_d_l3
 prefab aserai_castle_wall_gate_l3
+prefab aserai_courtyard_a_battlement_a
 prefab aserai_courtyard_a_battlement_b
 prefab aserai_courtyard_a_stairs
 prefab aserai_courtyard_a_stairs_stairs
+prefab aserai_courtyard_a_top
 prefab aserai_courtyard_a_wall_door
 prefab aserai_courtyard_a_wall_window
 prefab aserai_dungeon_cell_bars_closed
@@ -89,9 +95,9 @@ prefab aserai_grandbazaar_shop_door_b
 prefab aserai_grandbazaar_wall
 prefab aserai_keep_column_a
 prefab aserai_village_house_a
+prefab aserai_village_house_c
 prefab ashes_a
 prefab attacker_spawn_visual
-prefab battania_castle_keep_a_l3_door_b
 prefab battering_ram_rest_point
 prefab bd_barrel_a
 prefab bd_barrel_heap_a
@@ -128,6 +134,7 @@ prefab cave_desert_rock_wall_d
 prefab chest_empire_a
 prefab chest_empire_b
 prefab chest_empire_c
+prefab civilian_ladder_4m
 prefab clean
 prefab close_inside
 prefab close_outside
@@ -145,6 +152,7 @@ prefab cupboard_empire_a
 prefab debris_holder
 prefab empire_garden_wall_a1
 prefab empire_garden_wall_a_end
+prefab empire_gate_door_a_close
 prefab empire_gatehouse_gate_a_close
 prefab empire_house_bridge_b
 prefab empire_keep_d_interior_column_a
@@ -158,6 +166,7 @@ prefab empire_street_pottery_07
 prefab empire_street_pottery_08
 prefab extra_collider_l
 prefab extra_collider_r
+prefab fence_a
 prefab flag_5
 prefab flag_pole_big_sergeant_A
 prefab flag_pole_big_sergeant_B
@@ -165,6 +174,7 @@ prefab flag_pole_big_sergeant_C
 prefab flag_raising_boundary
 prefab flag_rope_cloth_02
 prefab flag_stand_big
+prefab flame_loop
 prefab floorstone_c
 prefab flora_tree_forest_beech_young_c
 prefab flora_tree_forest_beech_young_e
@@ -174,8 +184,8 @@ prefab flora_tree_high_v_palm_date_d
 prefab foods_basket_c
 prefab foods_basket_olive_a
 prefab gate_plank
-prefab horse_barrier_a
 prefab khuzait_grandbazaar_gate_door_b
+prefab light
 prefab market_apple_crate
 prefab market_leek_basket
 prefab merchandise_fish_a
@@ -193,11 +203,7 @@ prefab merlon_13
 prefab merlon_14
 prefab merlon_15
 prefab merlon_16
-prefab merlon_17
-prefab merlon_18
-prefab merlon_19
 prefab merlon_2
-prefab merlon_20
 prefab merlon_3
 prefab merlon_4
 prefab merlon_5
@@ -216,6 +222,7 @@ prefab mp_prop_merchantweavery_linen_a
 prefab mp_shop_prop_merchantbakery_a
 prefab olive_cart_a
 prefab open_inside
+prefab orientation_fix
 prefab particle_spawner_a
 prefab particles
 prefab pot_a
@@ -232,6 +239,7 @@ prefab prop_merchantweavery_velvet_c
 prefab prop_merchantwinery_c
 prefab prt_border_probe
 prefab prt_torch_fire
+prefab prt_torch_light
 prefab reverb_gatehouse
 prefab reverb_stone_corridor
 prefab reverb_stone_interior
@@ -265,10 +273,18 @@ prefab state4
 prefab sturgia_grandbazaar_gate_door_a
 prefab sturgia_grandbazaar_gate_door_b
 prefab sturgia_grandbazaar_gate_door_c
+prefab sturgia_grandbazaar_shop_door_a
+prefab sturgia_grandbazaar_shop_door_b
 prefab tavern_aserai_panel_b
 prefab tavern_aserai_table_a
 prefab tavern_aserai_table_b
+prefab torch_aa
 prefab torch_fire_sparks
+prefab torch_flame_base
+prefab torch_light
+prefab torch_outdoors_a_burning
+prefab torch_wall_a_cycleoff
+prefab torch_wall_d
 prefab vlandia_chest_a
 prefab vlandia_chest_c
 prefab vlandia_chest_c_lid
