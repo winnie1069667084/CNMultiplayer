@@ -84,7 +84,7 @@ namespace HarmonyPatches
             { return true; }
             MultiplayerClassDivisions.MPHeroClass mPHeroClassForCharacter = MultiplayerClassDivisions.GetMPHeroClassForCharacter(agent.Character);
             SkillObject skill = (equippedItem == null) ? DefaultSkills.Athletics : equippedItem.RelevantSkill;
-            int effectiveSkill = __instance.GetEffectiveSkill(agent.Character, agent.Origin, agent.Formation, skill);
+            int effectiveSkill = __instance.GetEffectiveSkill(agent, skill);
             int melee_Ai = MBMath.ClampInt(mPHeroClassForCharacter.MeleeAI, 0, 100);//设定近战AI为0-100之间的数值
             int ranged_Ai = MBMath.ClampInt(mPHeroClassForCharacter.RangedAI, 0, 100);//设定远程AI为0-100之间的数值
             float num = melee_Ai * 0.01f;

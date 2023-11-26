@@ -7,6 +7,8 @@ using TaleWorlds.MountAndBlade.Source.Missions;
 #if CLIENT
 using TaleWorlds.MountAndBlade.View;
 using TaleWorlds.MountAndBlade.View.MissionViews;
+using TaleWorlds.MountAndBlade.Multiplayer;
+using TaleWorlds.MountAndBlade.Multiplayer.View.MissionViews;
 #endif
 
 namespace CNMultiplayer.Modes.IndividualDeathMatch
@@ -26,20 +28,20 @@ namespace CNMultiplayer.Modes.IndividualDeathMatch
         {
             return new[]
             {
-                ViewCreator.CreateMissionServerStatusUIHandler(),
-                ViewCreator.CreateMissionMultiplayerPreloadView(mission),
-                ViewCreator.CreateMissionMultiplayerFFAView(),
-                ViewCreator.CreateMissionKillNotificationUIHandler(),
+                MultiplayerViewCreator.CreateMissionServerStatusUIHandler(),
+                MultiplayerViewCreator.CreateMissionMultiplayerPreloadView(mission),
+                MultiplayerViewCreator.CreateMissionMultiplayerFFAView(),
+                MultiplayerViewCreator.CreateMissionKillNotificationUIHandler(),
                 ViewCreator.CreateMissionAgentStatusUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentEquipmentController(mission),
                 ViewCreator.CreateMissionMainAgentCheerBarkControllerView(mission),
-                ViewCreator.CreateMissionMultiplayerEscapeMenu("FreeForAll"),
-                ViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
-                ViewCreator.CreateMissionScoreBoardUIHandler(mission, true),
-                ViewCreator.CreateLobbyEquipmentUIHandler(),
-                ViewCreator.CreatePollProgressUIHandler(),
-                ViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
-                ViewCreator.CreateMultiplayerMissionDeathCardUIHandler(null),
+                MultiplayerViewCreator.CreateMissionMultiplayerEscapeMenu("FreeForAll"),
+                MultiplayerViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
+                MultiplayerViewCreator.CreateMissionScoreBoardUIHandler(mission, true),
+                MultiplayerViewCreator.CreateLobbyEquipmentUIHandler(),
+                MultiplayerViewCreator.CreatePollProgressUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerMissionDeathCardUIHandler(null),
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
                 ViewCreator.CreateMissionBoundaryCrossingView(),
@@ -95,9 +97,11 @@ namespace CNMultiplayer.Modes.IndividualDeathMatch
                 new MissionBoundaryPlacer(),
                 new MissionBoundaryCrossingHandler(),
                 new MultiplayerPollComponent(),
+                new MultiplayerAdminComponent(),
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
                 new MissionScoreboardComponent(new FFAScoreboardData()),
+                MissionMatchHistoryComponent.CreateIfConditionsAreMet(),
                 new EquipmentControllerLeaveLogic(),
                 new MissionRecentPlayersComponent(),
                 new MultiplayerPreloadHelper()

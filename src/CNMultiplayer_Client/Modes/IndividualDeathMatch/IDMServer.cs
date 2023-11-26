@@ -11,9 +11,9 @@ namespace CNMultiplayer.Modes.IndividualDeathMatch
 
         public override bool IsGameModeUsingOpposingTeams => false;
 
-        public override MissionLobbyComponent.MultiplayerGameType GetMissionType()
+        public override MultiplayerGameType GetMissionType()
         {
-            return MissionLobbyComponent.MultiplayerGameType.FreeForAll;
+            return MultiplayerGameType.FreeForAll;
         }
 
         public override void OnRemoveBehavior()

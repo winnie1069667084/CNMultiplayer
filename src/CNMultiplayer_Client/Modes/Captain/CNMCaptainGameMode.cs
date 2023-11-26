@@ -7,6 +7,8 @@ using CNMultiplayer.Common;
 #if CLIENT
 using TaleWorlds.MountAndBlade.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
+using TaleWorlds.MountAndBlade.Multiplayer;
+using TaleWorlds.MountAndBlade.Multiplayer.View.MissionViews;
 #endif
 
 namespace CNMultiplayer.Modes.Captain
@@ -30,34 +32,35 @@ namespace CNMultiplayer.Modes.Captain
         {
             return new[]
             {
-                ViewCreator.CreateMissionServerStatusUIHandler(),
-                ViewCreator.CreateMultiplayerFactionBanVoteUIHandler(), // None Native
-                ViewCreator.CreateMissionMultiplayerPreloadView(mission),
-                ViewCreator.CreateMissionKillNotificationUIHandler(),
+                MultiplayerViewCreator.CreateLobbyEquipmentUIHandler(),
+                MultiplayerViewCreator.CreateMissionServerStatusUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerFactionBanVoteUIHandler(),
+                MultiplayerViewCreator.CreateMissionMultiplayerPreloadView(mission),
+                MultiplayerViewCreator.CreateMissionKillNotificationUIHandler(),
                 ViewCreator.CreateMissionAgentStatusUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentEquipmentController(mission),
-                ViewCreator.CreateMultiplayerMissionOrderUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentCheerBarkControllerView(mission),
-                ViewCreator.CreateMissionMultiplayerEscapeMenu("Captain"),
-                ViewCreator.CreateOrderTroopPlacerView(mission),
-                ViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
+                MultiplayerViewCreator.CreateMissionMultiplayerEscapeMenu("Captain"),
+                MultiplayerViewCreator.CreateMultiplayerMissionOrderUIHandler(mission),
                 ViewCreator.CreateMissionAgentLabelUIHandler(mission),
-                ViewCreator.CreateMultiplayerTeamSelectUIHandler(),
-                ViewCreator.CreateMissionScoreBoardUIHandler(mission, isSingleTeam: false),
-                ViewCreator.CreateMultiplayerEndOfRoundUIHandler(),
-                ViewCreator.CreateLobbyEquipmentUIHandler(),
-                ViewCreator.CreatePollProgressUIHandler(),
-                ViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
-                ViewCreator.CreateMultiplayerMissionDeathCardUIHandler(),
-                ViewCreator.CreateMissionFlagMarkerUIHandler(), // Draw flags when pressing ALT.
+                ViewCreator.CreateOrderTroopPlacerView(mission),
+                MultiplayerViewCreator.CreateMultiplayerTeamSelectUIHandler(),
+                MultiplayerViewCreator.CreateMissionScoreBoardUIHandler(mission, false),
+                MultiplayerViewCreator.CreateMultiplayerEndOfRoundUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
+                MultiplayerViewCreator.CreatePollProgressUIHandler(),
+                new MissionItemContourControllerView(),
+                new MissionAgentContourControllerView(),
+                MultiplayerViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerMissionDeathCardUIHandler(null),
+                MultiplayerViewCreator.CreateMissionFlagMarkerUIHandler(),
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
                 ViewCreator.CreateMissionBoundaryCrossingView(),
-                ViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(),
-                new MissionItemContourControllerView(), // Draw contour of item on the ground when pressing ALT.
-                new MissionAgentContourControllerView(),
                 new MissionBoundaryWallView(),
-                new SpectatorCameraView(), // None Native
+                new SpectatorCameraView(),
+                MultiplayerViewCreator.CreateMultiplayerFactionBanVoteUIHandler(), // None Native
+                MultiplayerViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(),
             };
         }
 #endif
@@ -73,7 +76,7 @@ namespace CNMultiplayer.Modes.Captain
             ? new MissionBehavior[] // Server side behavior
             {
                 MissionLobbyComponent.CreateBehavior(),
-                new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain),
+                new MissionMultiplayerFlagDomination(MultiplayerGameType.Captain),
                 roundController,
                 new SpawnComponent(new FlagDominationSpawnFrameBehavior(), new CNMCaptainSpawningBehavior(roundController)),
                 warmupComponent,
@@ -103,10 +106,10 @@ namespace CNMultiplayer.Modes.Captain
             {
                 MissionLobbyComponent.CreateBehavior(),
                 warmupComponent,
-                new MissionMultiplayerGameModeFlagDominationClient(),
                 new MultiplayerAchievementComponent(),
-                new MultiplayerTimerComponent(),
+                new MissionMultiplayerGameModeFlagDominationClient(),
                 new MultiplayerRoundComponent(),
+                new MultiplayerTimerComponent(),
                 new MultiplayerMissionAgentVisualSpawnComponent(),
                 new ConsoleMatchStartEndHandler(),
                 new MissionLobbyEquipmentNetworkComponent(),
@@ -115,14 +118,13 @@ namespace CNMultiplayer.Modes.Captain
                 new MissionBoundaryPlacer(),
                 new MissionBoundaryCrossingHandler(),
                 new MultiplayerPollComponent(),
+                new MultiplayerAdminComponent(),
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
                 new MissionScoreboardComponent(new CaptainScoreboardData()),
-                new MissionMatchHistoryComponent(),
+                MissionMatchHistoryComponent.CreateIfConditionsAreMet(),
                 new EquipmentControllerLeaveLogic(),
                 new MissionRecentPlayersComponent(),
-                new AgentVictoryLogic(),
-                new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             }
             );

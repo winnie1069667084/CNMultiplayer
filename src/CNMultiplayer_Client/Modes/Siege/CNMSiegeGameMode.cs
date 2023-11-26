@@ -3,10 +3,12 @@ using CNMultiplayer.Modes.Warmup;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
+using TaleWorlds.MountAndBlade.Multiplayer;
 
 #if CLIENT
-using TaleWorlds.MountAndBlade.View.MissionViews;
+using TaleWorlds.MountAndBlade.Multiplayer.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
+using TaleWorlds.MountAndBlade.View.MissionViews;
 #endif
 
 namespace CNMultiplayer.Modes.Siege
@@ -30,32 +32,32 @@ namespace CNMultiplayer.Modes.Siege
         {
             return new[]
             {
-                ViewCreator.CreateMissionServerStatusUIHandler(),
-                ViewCreator.CreateMultiplayerFactionBanVoteUIHandler(), // None Native
-                ViewCreator.CreateMissionMultiplayerPreloadView(mission),
-                ViewCreator.CreateMissionKillNotificationUIHandler(),
+                MultiplayerViewCreator.CreateMissionServerStatusUIHandler(),
+                MultiplayerViewCreator.CreateMissionMultiplayerPreloadView(mission),
+                MultiplayerViewCreator.CreateMissionKillNotificationUIHandler(),
                 ViewCreator.CreateMissionAgentStatusUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentEquipmentController(mission),
                 ViewCreator.CreateMissionMainAgentCheerBarkControllerView(mission),
-                ViewCreator.CreateMissionMultiplayerEscapeMenu("Siege"),
-                ViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
+                MultiplayerViewCreator.CreateMissionMultiplayerEscapeMenu("Siege"),
+                MultiplayerViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
                 ViewCreator.CreateMissionAgentLabelUIHandler(mission),
-                ViewCreator.CreateMultiplayerTeamSelectUIHandler(),
-                ViewCreator.CreateMissionScoreBoardUIHandler(mission, isSingleTeam: false),
-                ViewCreator.CreateMultiplayerEndOfRoundUIHandler(),
-                ViewCreator.CreateLobbyEquipmentUIHandler(),
-                ViewCreator.CreatePollProgressUIHandler(),
-                ViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
-                ViewCreator.CreateMultiplayerMissionDeathCardUIHandler(),
-                ViewCreator.CreateMissionFlagMarkerUIHandler(), // Draw flags when pressing ALT.
+                MultiplayerViewCreator.CreateMultiplayerTeamSelectUIHandler(),
+                MultiplayerViewCreator.CreateMissionScoreBoardUIHandler(mission, false),
+                MultiplayerViewCreator.CreateMultiplayerEndOfRoundUIHandler(),
+                MultiplayerViewCreator.CreateLobbyEquipmentUIHandler(),
+                MultiplayerViewCreator.CreatePollProgressUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerMissionDeathCardUIHandler(null),
+                new MissionItemContourControllerView(),
+                new MissionAgentContourControllerView(),
+                MultiplayerViewCreator.CreateMissionFlagMarkerUIHandler(),
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
                 ViewCreator.CreateMissionBoundaryCrossingView(),
-                ViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(),
-                new MissionItemContourControllerView(), // Draw contour of item on the ground when pressing ALT.
-                new MissionAgentContourControllerView(),
                 new MissionBoundaryWallView(),
                 new SpectatorCameraView(), // None Native
+                MultiplayerViewCreator.CreateMultiplayerFactionBanVoteUIHandler(), // None Native
+                MultiplayerViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(), //语音系统
             };
         }
 
@@ -113,7 +115,7 @@ namespace CNMultiplayer.Modes.Siege
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
                 new MissionScoreboardComponent(new SiegeScoreboardData()),
-                new MissionMatchHistoryComponent(),
+                MissionMatchHistoryComponent.CreateIfConditionsAreMet(),
                 new EquipmentControllerLeaveLogic(),
                 new MissionRecentPlayersComponent(),
                 new VoiceChatHandler(),

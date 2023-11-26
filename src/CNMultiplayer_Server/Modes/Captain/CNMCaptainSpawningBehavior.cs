@@ -15,7 +15,7 @@ namespace TaleWorlds.MountAndBlade
         {
             _enforcedSpawnTimers = new List<KeyValuePair<MissionPeer, Timer>>();
             _roundController = roundController;
-            _flagDominationMissionController = new MissionMultiplayerFlagDomination(MissionLobbyComponent.MultiplayerGameType.Captain);
+            _flagDominationMissionController = new MissionMultiplayerFlagDomination(MultiplayerGameType.Captain);
         }
 
         public const int CNMCaptainSumOfAgents = 1400; //最大agent数
@@ -282,7 +282,7 @@ namespace TaleWorlds.MountAndBlade
                 {
                     continue;
                 }
-                int troopCount = MPPerkObject.GetTroopCount(mPHeroClassForPeer, onSpawnPerkHandler);
+                int troopCount = MPPerkObject.GetTroopCount(mPHeroClassForPeer, numberOfBotsPerFormation, onSpawnPerkHandler);
                 IEnumerable<(EquipmentIndex, EquipmentElement)> alternativeEquipments = onSpawnPerkHandler?.GetAlternativeEquipments(isPlayer: false);
                 for (int k = 0; k < troopCount; k++)
                 {

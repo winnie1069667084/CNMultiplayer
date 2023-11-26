@@ -2,8 +2,8 @@
 <Module>
     <Name value="CN Multiplayer"/>
     <Id value="CNMultiplayer"/>
-    <Version value="v1.1.5.3"/>
-	<DefaultModule value="true"/>
+    <Version value="v1.2.5"/>
+	<DefaultModule value="false"/>
 	<ModuleCategory value="MultiplayerOptional"/>
 	<DependedModules>
     	<DependedModule Id="Native" />
@@ -27,7 +27,7 @@
 			</Tags>
     	</SubModule>
     </SubModules>
-  	<Xmls>
+  	<!--Xmls>
 		<XmlNode>
 			<XmlName id="GameText" path="strings"/>
 		</XmlNode>
@@ -43,5 +43,5 @@
     	<XmlNode>
     		<XmlName id="CraftingPieces" path="crafting_pieces"/>
     	</XmlNode>
-    </Xmls>
+    </Xmls-->
 </Module>

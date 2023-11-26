@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
-using TaleWorlds.MountAndBlade.GauntletUI.Mission.Multiplayer;
 using TaleWorlds.MountAndBlade.View;
-using TaleWorlds.MountAndBlade.View.MissionViews.Multiplayer;
-using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
+using TaleWorlds.MountAndBlade.Multiplayer.GauntletUI.Mission;
+using TaleWorlds.MountAndBlade.Multiplayer.View.MissionViews;
+using TaleWorlds.MountAndBlade.Multiplayer.ViewModelCollection.ClassLoadout;
 
 namespace CNMultiplayer
 {
