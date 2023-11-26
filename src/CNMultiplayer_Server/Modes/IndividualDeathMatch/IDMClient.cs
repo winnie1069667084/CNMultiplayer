@@ -11,7 +11,7 @@ namespace CNMultiplayer.Modes.IndividualDeathMatch
 
         public override bool IsGameModeUsingRoundCountdown => false;
 
-        public override MissionLobbyComponent.MultiplayerGameType GameType => MissionLobbyComponent.MultiplayerGameType.FreeForAll;
+        public override MultiplayerGameType GameType => MultiplayerGameType.FreeForAll;
 
         public override int GetGoldAmount()
         {

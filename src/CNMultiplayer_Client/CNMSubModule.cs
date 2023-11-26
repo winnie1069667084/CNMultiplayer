@@ -24,14 +24,6 @@ namespace CNMultiplayer
         {
             MBObjectManager.Instance.ClearAllObjectsWithType(typeof(MultiplayerClassDivisions.MPHeroClass)); //目前只实现了根据游戏模式加载MPClassDivisions
             new LoadXMLbyMode().ModeJudgment();
-            if (MultiplayerOptions.OptionType.GameType.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions) == "CNMCaptain")
-            {
-                CompressionOrder.FormationClassCompressionInfo = new CompressionInfo.Integer(-1, 100, true);
-            }
-            else
-            {
-                CompressionOrder.FormationClassCompressionInfo = new CompressionInfo.Integer(-1, 10, true);
-            }
         }
     }
 }

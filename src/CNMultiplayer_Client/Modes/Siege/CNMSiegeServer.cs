@@ -353,8 +353,8 @@ namespace CNMultiplayer.Modes.Siege
             this.OnDestructableComponentDestroyed?.Invoke(destructableComponent, attackerScriptComponentBehavior, list.ToArray());
         }
 
-        public override MissionLobbyComponent.MultiplayerGameType GetMissionType()
-            => MissionLobbyComponent.MultiplayerGameType.FreeForAll; // Helps to avoid a few crashes.
+        public override MultiplayerGameType GetMissionType()
+            => MultiplayerGameType.FreeForAll; // Helps to avoid a few crashes.
 
         public override bool UseRoundController() => false;
 
@@ -520,7 +520,7 @@ namespace CNMultiplayer.Modes.Siege
                     flag.SetTeamColorsSynched(newFlagTeam.Color, newFlagTeam.Color2);
                     _capturePointOwners[flag.FlagIndex] = newFlagTeam;
                     GameNetwork.BeginBroadcastModuleEvent();
-                    GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(flag.FlagIndex, newFlagTeam));
+                    GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(flag.FlagIndex, newFlagTeam.TeamIndex));
                     GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
                     _gameModeSiegeClient?.OnCapturePointOwnerChanged(flag, newFlagTeam);
                     NotificationsComponent.FlagXCapturedByTeamX(flag, newFlagTeam);
@@ -619,7 +619,7 @@ namespace CNMultiplayer.Modes.Siege
             foreach (FlagCapturePoint flag in AllCapturePoints.Where((FlagCapturePoint cp) => !cp.IsDeactivated))
             {
                 GameNetwork.BeginModuleEventAsServer(networkPeer);
-                GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(flag.FlagIndex, _capturePointOwners[flag.FlagIndex]));
+                GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(flag.FlagIndex, _capturePointOwners[flag.FlagIndex].TeamIndex));
                 GameNetwork.EndModuleEventAsServer();
             }
         }
@@ -809,7 +809,7 @@ namespace CNMultiplayer.Modes.Siege
                     AllCapturePoints[i].SetTeamColorsSynched(Mission.DefenderTeam.Color, Mission.DefenderTeam.Color2);
                     _capturePointOwners[i] = Mission.DefenderTeam;
                     GameNetwork.BeginBroadcastModuleEvent();
-                    GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(i, Mission.DefenderTeam));
+                    GameNetwork.WriteMessage(new FlagDominationCapturePointMessage(i, Mission.DefenderTeam.TeamIndex));
                     GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None);
                     _gameModeSiegeClient?.OnCapturePointOwnerChanged(AllCapturePoints[i], Mission.DefenderTeam);
                     break;

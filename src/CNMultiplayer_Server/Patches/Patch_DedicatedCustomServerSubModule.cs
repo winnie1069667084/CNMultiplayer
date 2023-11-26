@@ -4,17 +4,19 @@ using System.Collections.Generic;
 using System.Reflection;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.DedicatedCustomServer;
+using TaleWorlds.MountAndBlade.ListedServer;
 
 namespace HarmonyPatches
 {
-    [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "TickAutomatedBattles")]//config中设置“disable_map_voting" 和 “disable_culture_voting”时启用随机阵营或地图
+
+    [HarmonyPatch(typeof(ServerSideIntermissionManager), "TickAutomatedBattles")]//config中设置“disable_map_voting" 和 “disable_culture_voting”时启用随机阵营或地图
     internal class Patch_TickAutomatedBattles
     {
-        public static bool Prefix(DedicatedCustomServerSubModule __instance, bool ____automatedBattleSwitchingEnabled, AutomatedBattleState ____automatedBattleState, ref float ____currentAutomatedBattleRemainingTime)
+        public static bool Prefix(ServerSideIntermissionManager __instance, bool ____automatedBattleSwitchingEnabled, AutomatedBattleState ____automatedBattleState, ref float ____currentAutomatedBattleRemainingTime)
         {
-            MethodInfo SelectRandomMap = AccessTools.Method(typeof(DedicatedCustomServerSubModule), "SelectRandomMap");
-            MethodInfo SyncOptionsToClients = AccessTools.Method(typeof(DedicatedCustomServerSubModule), "SyncOptionsToClients");
-            MethodInfo SelectRandomCultures = AccessTools.Method(typeof(DedicatedCustomServerSubModule), "SelectRandomCultures");
+            MethodInfo SelectRandomMap = AccessTools.Method(typeof(ServerSideIntermissionManager), "SelectRandomMap");
+            MethodInfo SyncOptionsToClients = AccessTools.Method(typeof(ServerSideIntermissionManager), "SyncOptionsToClients");
+            MethodInfo SelectRandomCultures = AccessTools.Method(typeof(ServerSideIntermissionManager), "SelectRandomCultures");
             if (____automatedBattleSwitchingEnabled)
             {
                 switch (____automatedBattleState)
