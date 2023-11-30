@@ -13,6 +13,7 @@
     <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
     <GenerateDependencyFile>false</GenerateDependencyFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,7 +21,17 @@
     <DebugType>none</DebugType>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DefineConstants>$(DefineConstants);SERVER</DefineConstants>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SERVER</DefineConstants>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DefineConstants>$(DefineConstants);SERVER</DefineConstants>
     <DebugType>none</DebugType>
   </PropertyGroup>
@@ -41,297 +52,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.5.30268-beta" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.5.30268-beta" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" GeneratePathProperty="true" />
+    <PackageReference Include="MonoMod.Common" Version="22.6.3.1" GeneratePathProperty="true" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.4" GeneratePathProperty="true" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\Modules\CNMultiplayer\bin\Win64_Shipping_Server\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="dotnet-aspnet-codegenerator-design">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\dotnet-aspnet-codegenerator-design.dll</HintPath>
-    </Reference>
-    <Reference Include="jose-jwt">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\jose-jwt.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.JsonPatch">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.AspNetCore.JsonPatch.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Razor.Language">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.AspNetCore.Razor.Language.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.CodeAnalysis.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Workspaces">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Web.CodeGeneration">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.VisualStudio.Web.CodeGeneration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Web.CodeGeneration.Core">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json.Bson">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\Newtonsoft.Json.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="NuGet.Frameworks">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\NuGet.Frameworks.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.engine">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\nunit.engine.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunitlite">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\nunitlite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.AttributedModel">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\System.Composition.AttributedModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Convention">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\System.Composition.Convention.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Hosting">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\System.Composition.Hosting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Runtime">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\System.Composition.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.TypedParts">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\System.Composition.TypedParts.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Management">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\System.Management.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.AchievementSystem">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.AchievementSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.ActivitySystem">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.ActivitySystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.CampaignSystem">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.CampaignSystem.ViewModelCollection">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.ViewModelCollection.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Core">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Core.ViewModelCollection">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.Core.ViewModelCollection.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Diamond">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Diamond.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Diamond.AccessProvider.Epic">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Epic.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Diamond.AccessProvider.GDK">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.GDK.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Diamond.AccessProvider.GOG">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.GOG.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Diamond.AccessProvider.Steam">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Steam.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Diamond.AccessProvider.Test">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Diamond.AccessProvider.Test.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Diamond.ChatSystem.Library">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Diamond.ChatSystem.Library.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.DotNet">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.DotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.DotNet.AutoGenerated">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.DotNet.AutoGenerated.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Engine">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Engine.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Engine.AutoGenerated">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Engine.AutoGenerated.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Engine.GauntletUI">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.Engine.GauntletUI.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.GauntletUI">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.GauntletUI.CodeGenerator">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.CodeGenerator.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.GauntletUI.Data">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.GauntletUI.ExtraWidgets">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.ExtraWidgets.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.GauntletUI.PrefabSystem">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.PrefabSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.GauntletUI.TooltipExtensions">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.TooltipExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.InputSystem">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.InputSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Library">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Library.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.LinQuick">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.LinQuick.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Localization">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Localization.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.ModuleManager">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.ModuleManager.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.AutoGenerated">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.AutoGenerated.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.DedicatedCommunityServer">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.DedicatedCommunityServer.dll</HintPath>
-    </Reference>
     <Reference Include="TaleWorlds.MountAndBlade.DedicatedCustomServer">
       <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.DedicatedCustomServer.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.DedicatedCustomServer.ClientHelper">
-      <HintPath>..\..\..\Multiplayer\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.DedicatedCustomServer.ClientHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.DedicatedCustomServer.WebPanel">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.DedicatedCustomServer.WebPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Diamond">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.Diamond.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.DotNetCore">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.DotNetCore.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.GauntletUI.Widgets">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.GauntletUI.Widgets.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Helpers">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Launcher.Library">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Launcher.Library.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Launcher.Steam">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Launcher.Steam.dll</HintPath>
     </Reference>
     <Reference Include="TaleWorlds.MountAndBlade.ListedServer">
       <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.ListedServer.dll</HintPath>
     </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.ListedServer.MapServer">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.ListedServer.MapServer.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Multiplayer">
-      <HintPath>..\..\..\Multiplayer\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Multiplayer.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Multiplayer.GauntletUI">
-      <HintPath>..\..\..\Multiplayer\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Multiplayer.GauntletUI.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Multiplayer.GauntletUI.AutoGenerated">
-      <HintPath>..\..\..\Multiplayer\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Multiplayer.GauntletUI.AutoGenerated.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Multiplayer.Test">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Multiplayer.Test.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Multiplayer.View">
-      <HintPath>..\..\..\Multiplayer\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Multiplayer.View.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.Multiplayer.ViewModelCollection">
-      <HintPath>..\..\..\Multiplayer\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Multiplayer.ViewModelCollection.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.ViewModelCollection">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.ViewModelCollection.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.NavigationSystem">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.NavigationSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Network">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Network.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.ObjectSystem">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.ObjectSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.PlatformService">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.PlatformService.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.PlatformService.Epic">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.PlatformService.Epic.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.PlatformService.GOG">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.PlatformService.GOG.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.PlatformService.Steam">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.PlatformService.Steam.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.PlayerServices">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.PlayerServices.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.PSAI">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.PSAI.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.SaveSystem">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.SaveSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.ScreenSystem">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.ScreenSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.ServiceDiscovery.Client">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.ServiceDiscovery.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Starter.DotNetCore">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Starter.DotNetCore.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Starter.DotNetCore.Linux">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Starter.DotNetCore.Linux.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.Starter.Library">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.Starter.Library.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.TwoDimension">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.TwoDimension.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.TwoDimension.Standalone">
-      <HintPath>..\..\..\..\bin\Win64_Shipping_Client\TaleWorlds.TwoDimension.Standalone.dll</HintPath>
-    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--向输出目录copy一份Harmony所需的文件-->
+    <None Include="$(PkgLib_Harmony)\lib\net6.0\0Harmony.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+    <None Include="$(PkgMonoMod_Common)\lib\net5.0\MonoMod.Common.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+    <None Include="$(PkgMono_Cecil)\lib\netstandard2.0\Mono.Cecil.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
   </ItemGroup>
 </Project>

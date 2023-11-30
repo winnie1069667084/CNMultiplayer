@@ -1,8 +1,0 @@
-kneel | act_main_story_conspirator_kneel_down_1 | stop
-throne | act_throne_sit_idle4 | stop
-sit | act_sit_down_on_floor_1 | stop
-victory | act_arena_winner_1 | 5
-no | act_conversation_normal_negative | 3
-yes | act_conversation_normal_positive | 3
-threat | act_conversation_threat_cuttrhoat
-prisoner | act_cutscene_execution_prisoner_idle | stop
