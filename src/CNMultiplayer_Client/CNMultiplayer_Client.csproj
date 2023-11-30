@@ -56,6 +56,6 @@
 
   <ItemGroup>
     <!--向输出目录copy一份Harmony所需的文件-->
-    <None Include="$(PkgLib_Harmony)\ref\netstandard2.0\0Harmony.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+    <None Include="$(PkgLib_Harmony)\..\2.2.2\lib\net48\0Harmony.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
   </ItemGroup>
 </Project>
