@@ -112,6 +112,7 @@ namespace CNMultiplayer.Modes.Siege
                 new MissionBoundaryPlacer(),
                 new MissionBoundaryCrossingHandler(),
                 new MultiplayerPollComponent(),
+                new MultiplayerAdminComponent(),
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
                 new MissionScoreboardComponent(new SiegeScoreboardData()),
