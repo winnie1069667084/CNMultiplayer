@@ -44,7 +44,7 @@ namespace HarmonyPatches
         }
     }
 
-    [HarmonyPatch(typeof(DedicatedCustomServerSubModule), "SelectRandomMap")]//循环地图池中的地图(随机初次启动服务器的地图)
+    [HarmonyPatch(typeof(ServerSideIntermissionManager), "SelectRandomMap")]//循环地图池中的地图(随机初次启动服务器的地图)
     internal class Patch_SelectRandomMap
     {
         private static bool isRandom = true;

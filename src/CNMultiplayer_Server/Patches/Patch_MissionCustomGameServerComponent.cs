@@ -11,7 +11,7 @@ namespace HarmonyPatches
         public static void Postfix(NetworkCommunicator networkPeer)
         {
             GameNetwork.BeginBroadcastModuleEvent();
-            GameNetwork.WriteMessage(new ServerMessage("[服务器]: " + networkPeer.UserName.ToString() + " 加入游戏", false));
+            GameNetwork.WriteMessage(new ServerMessage("[服务器]: " + networkPeer.UserName.ToString() + " 加入游戏", false, true));
             GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.None, null);
         }
     }
