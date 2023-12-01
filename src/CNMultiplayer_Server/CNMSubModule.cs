@@ -13,8 +13,8 @@ namespace CNMultiplayer
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
-            //Harmony harmony = new Harmony("CNMultiplayer");
-            //harmony.PatchAll();
+            Harmony harmony = new Harmony("CNMultiplayer");
+            harmony.PatchAll();
             Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
             Module.CurrentModule.AddMultiplayerGameMode(new CNMCaptainGameMode());
             Module.CurrentModule.AddMultiplayerGameMode(new IDMGameMode());

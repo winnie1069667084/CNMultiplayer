@@ -48,15 +48,17 @@
     <None Remove="Patches\ServerPatches\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Patches\Patch_AgentStatCalculateModel.cs" />
+    <Compile Remove="Patches\Patch_DedicatedCustomServerSubModule.cs" />
     <Compile Remove="Patches\Patch_SpawningBehaviorBase.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.5.30268-beta" />
-    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.5.30268-beta" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.6.30619-beta" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.6.30619-beta" />
     <PackageReference Include="Lib.Harmony" Version="2.2.2" GeneratePathProperty="true" />
     <PackageReference Include="MonoMod.Common" Version="22.6.3.1" GeneratePathProperty="true" />
-    <PackageReference Include="Mono.Cecil" Version="0.11.4" GeneratePathProperty="true" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.5" GeneratePathProperty="true" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 

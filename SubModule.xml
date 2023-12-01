@@ -27,7 +27,7 @@
 			</Tags>
     	</SubModule>
     </SubModules>
-  	<!--Xmls>
+  	<Xmls>
 		<XmlNode>
 			<XmlName id="GameText" path="strings"/>
 		</XmlNode>
@@ -43,5 +43,5 @@
     	<XmlNode>
     		<XmlName id="CraftingPieces" path="crafting_pieces"/>
     	</XmlNode>
-    </Xmls-->
+    </Xmls>
 </Module>
