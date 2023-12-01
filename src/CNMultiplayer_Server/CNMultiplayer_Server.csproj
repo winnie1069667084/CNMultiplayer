@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <AssemblyName>CNMultiplayer_Server</AssemblyName>
     <RootNamespace>CNMultiplayer</RootNamespace>
     <ModuleName>CNMultiplayer</ModuleName>
@@ -12,8 +11,7 @@
     <OutputPath>$(MB_PATH)\Modules\$(ModuleName)\bin\Win64_Shipping_Server</OutputPath>
     <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
     <GenerateDependencyFile>false</GenerateDependencyFile>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <Platforms>AnyCPU;x64</Platforms>
+    <Platforms>x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -48,14 +46,19 @@
     <None Remove="Patches\ServerPatches\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Modes\Captain\CNMCaptainGameMode.cs" />
+    <Compile Remove="Modes\Captain\CNMCaptainSpawningBehavior.cs" />
+    <Compile Remove="Modes\Captain\Patch_DeploymentPlan.cs" />
+    <Compile Remove="Modes\Captain\Patch_Team.cs" />
+    <Compile Remove="Modes\IndividualDeathMatch\IDMClient.cs" />
+    <Compile Remove="Modes\IndividualDeathMatch\IDMGameMode.cs" />
+    <Compile Remove="Modes\IndividualDeathMatch\IDMServer.cs" />
     <Compile Remove="Patches\Patch_AgentStatCalculateModel.cs" />
     <Compile Remove="Patches\Patch_DedicatedCustomServerSubModule.cs" />
     <Compile Remove="Patches\Patch_SpawningBehaviorBase.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.6.30619-beta" />
-    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.6.30619-beta" />
     <PackageReference Include="Lib.Harmony" Version="2.2.2" GeneratePathProperty="true" />
     <PackageReference Include="MonoMod.Common" Version="22.6.3.1" GeneratePathProperty="true" />
     <PackageReference Include="Mono.Cecil" Version="0.11.5" GeneratePathProperty="true" />
@@ -63,18 +66,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="TaleWorlds.MountAndBlade.DedicatedCustomServer">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.DedicatedCustomServer.dll</HintPath>
-    </Reference>
-    <Reference Include="TaleWorlds.MountAndBlade.ListedServer">
-      <HintPath>..\..\..\..\..\Mount &amp; Blade II Dedicated Server\bin\Win64_Shipping_Server\TaleWorlds.MountAndBlade.ListedServer.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <!--向输出目录copy一份Harmony所需的文件-->
     <None Include="$(PkgLib_Harmony)\lib\net6.0\0Harmony.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
     <None Include="$(PkgMonoMod_Common)\lib\net5.0\MonoMod.Common.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
     <None Include="$(PkgMono_Cecil)\lib\netstandard2.0\Mono.Cecil.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--引用所有服务器端.dll(private - false表示不复制到Output目录)-->
+    <Reference Include="$(MB_SERVER_PATH)\bin\Win64_Shipping_Server\TaleWorlds.*.dll">
+      <HintPath>%(Identity)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Modes\Captain\" />
+    <Folder Include="Modes\IndividualDeathMatch\" />
   </ItemGroup>
 </Project>

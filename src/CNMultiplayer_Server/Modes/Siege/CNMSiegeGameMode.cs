@@ -74,12 +74,10 @@ namespace CNMultiplayer.Modes.Siege
             {
                 MissionLobbyComponent.CreateBehavior(),
                 new CNMSiegeServer(),
-                new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()),
                 warmupComponent,
                 new MissionMultiplayerSiegeClient(),
                 new MultiplayerTimerComponent(),
-                new MultiplayerMissionAgentVisualSpawnComponent(),
-                new ConsoleMatchStartEndHandler(),
+                new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()),
                 new MissionLobbyEquipmentNetworkComponent(),
                 new CNMTeamSelectComponent(warmupComponent, null),
                 new MissionHardBorderPlacer(),
@@ -93,7 +91,7 @@ namespace CNMultiplayer.Modes.Siege
                 new MissionAgentPanicHandler(),
                 new AgentHumanAILogic(),
                 new EquipmentControllerLeaveLogic(),
-                new VoiceChatHandler(),
+                //new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             }
 
@@ -104,8 +102,6 @@ namespace CNMultiplayer.Modes.Siege
                 new MissionMultiplayerSiegeClient(),
                 new MultiplayerAchievementComponent(),
                 new MultiplayerTimerComponent(),
-                new MultiplayerMissionAgentVisualSpawnComponent(),
-                new ConsoleMatchStartEndHandler(),
                 new MissionLobbyEquipmentNetworkComponent(),
                 new CNMTeamSelectComponent(warmupComponent, null),
                 new MissionHardBorderPlacer(),

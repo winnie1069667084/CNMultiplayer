@@ -81,9 +81,10 @@ namespace CNMultiplayer.Modes.Siege
                     .VisualsIndex(0)
                     .ClothingColor1((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color : basicCultureObject.ClothAlternativeColor)
                     .ClothingColor2((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color2 : basicCultureObject.ClothAlternativeColor2);
-                if (GameMode.ShouldSpawnVisualsForServer(networkPeer))
+                if (this.GameMode.ShouldSpawnVisualsForServer(networkPeer) && agentBuildData.AgentVisualsIndex == 0)
                 {
-                    AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(component, agentBuildData, component.SelectedTroopIndex);
+                    component.HasSpawnedAgentVisuals = true;
+                    component.EquipmentUpdatingExpired = false;
                 }
 
                 GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData);

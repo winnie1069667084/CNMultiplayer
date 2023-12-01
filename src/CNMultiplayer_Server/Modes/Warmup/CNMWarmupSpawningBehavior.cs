@@ -43,7 +43,7 @@ namespace CNMultiplayer.Modes.Warmup
                 if (component == null || component.ControlledAgent != null || component.HasSpawnedAgentVisuals || component.Team == null || component.Team == Mission.SpectatorTeam || !component.TeamInitialPerkInfoReady || !component.SpawnTimer.Check(Mission.CurrentTime))
                     continue;
 
-                IAgentVisual agentVisualForPeer = component.GetAgentVisualForPeer(0);
+                IAgentVisual agentVisualForPeer = null;
                 BasicCultureObject basicCultureObject = ((component.Team.Side == BattleSideEnum.Attacker) ? @object : object2);
                 int num = component.SelectedTroopIndex;
                 IEnumerable<MultiplayerClassDivisions.MPHeroClass> mPHeroClasses = MultiplayerClassDivisions.GetMPHeroClasses(basicCultureObject);
@@ -81,9 +81,10 @@ namespace CNMultiplayer.Modes.Warmup
                     .VisualsIndex(0)
                     .ClothingColor1((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color : basicCultureObject.ClothAlternativeColor)
                     .ClothingColor2((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color2 : basicCultureObject.ClothAlternativeColor2);
-                if (GameMode.ShouldSpawnVisualsForServer(networkPeer))
+                if (this.GameMode.ShouldSpawnVisualsForServer(networkPeer) && agentBuildData2.AgentVisualsIndex == 0)
                 {
-                    AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(component, agentBuildData2, num);
+                    component.HasSpawnedAgentVisuals = true;
+                    component.EquipmentUpdatingExpired = false;
                 }
                 GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData2);
             }
