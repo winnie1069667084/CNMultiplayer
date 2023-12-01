@@ -91,7 +91,7 @@ namespace CNMultiplayer.Modes.Siege
                 new MissionAgentPanicHandler(),
                 new AgentHumanAILogic(),
                 new EquipmentControllerLeaveLogic(),
-                //new VoiceChatHandler(),
+                new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             }
 

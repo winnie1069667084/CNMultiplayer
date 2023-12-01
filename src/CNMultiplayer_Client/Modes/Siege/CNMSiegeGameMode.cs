@@ -53,10 +53,9 @@ namespace CNMultiplayer.Modes.Siege
                 MultiplayerViewCreator.CreateMissionFlagMarkerUIHandler(),
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
+                MultiplayerViewCreator.CreateMultiplayerAdminPanelUIHandler(),
                 ViewCreator.CreateMissionBoundaryCrossingView(),
                 new MissionBoundaryWallView(),
-                new SpectatorCameraView(), // None Native
-                MultiplayerViewCreator.CreateMultiplayerFactionBanVoteUIHandler(), // None Native
                 MultiplayerViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(), //语音系统
             };
         }
