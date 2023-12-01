@@ -1,6 +1,6 @@
 ﻿using CNMultiplayer.Common;
-using CNMultiplayer.Modes.Captain;
-using CNMultiplayer.Modes.IndividualDeathMatch;
+//using CNMultiplayer.Modes.Captain;
+//using CNMultiplayer.Modes.IndividualDeathMatch;
 using CNMultiplayer.Modes.Siege;
 using HarmonyLib;
 using TaleWorlds.MountAndBlade;
@@ -16,8 +16,8 @@ namespace CNMultiplayer
             Harmony harmony = new Harmony("CNMultiplayer");
             harmony.PatchAll();
             Module.CurrentModule.AddMultiplayerGameMode(new CNMSiegeGameMode());
-            Module.CurrentModule.AddMultiplayerGameMode(new CNMCaptainGameMode());
-            Module.CurrentModule.AddMultiplayerGameMode(new IDMGameMode());
+            //Module.CurrentModule.AddMultiplayerGameMode(new CNMCaptainGameMode());
+            //Module.CurrentModule.AddMultiplayerGameMode(new IDMGameMode());
         }
 
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
