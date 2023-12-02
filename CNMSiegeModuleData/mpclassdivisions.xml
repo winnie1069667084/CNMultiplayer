@@ -26,32 +26,36 @@
     <Perks>
       <!-- First perks-->
       <Perk game_mode="all"
-            name="{=DlKYZgA3}Improved Armor"
-            description="{=IUsT27oV}Provides +9 armor."
-            icon="PerkToughness"
-            hero_idle_anim="act_vlandia_mp_peasant_levy_armorperk_idle"
+            name="{=HMbGb1V2}Village Militia"
+            description="{=W4GfVIbC}Your experience as Village Militia made you hardened. You take less damage.{newline} {newline}Grants Short Spear{newline}Grants Small Shield"
+            hero_idle_anim="act_vlandia_mp_peasant_levy_shieldperk_idle"
+            icon="PerkExtraTroop"
             perk_list="1">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_old_kite_sparring_shield" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_peasant_hood"
-                       target="Player" />		   
+                       slot="Item2"
+                       item="mp_ironrim_kite_shield" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_western_short_spear" />
       </Perk>
       <Perk game_mode="all"
             name="{=t68bkisr}Hammer"
             description="{=73DALTsR}Replaces Sickle with Hammer, effective against armored opponents."
             icon="PerkMaces"
             perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_hammer" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="vlandia_mace_1_t2" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="mp_vlandian_hammer" />
+          </Group>
+        </RandomOnSpawnEffect>
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
-                       item="mp_old_kite_sparring_shield" />			   
+                       item="mp_old_kite_sparring_shield"/>
       </Perk>
       <Perk game_mode="all"
             name="{=ZvMcHde3}Pickaxe"
@@ -65,91 +69,42 @@
                        slot="Item2"
                        item="mp_old_kite_sparring_shield" />			   
       </Perk>
-	  <Perk game_mode="all"
-            name="{=00000132}Change Chinese to see the description"
-            description="{=00000133}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_peasant_hood"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="vlandia_sword_1_t2" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+      <Perk game_mode="all"
+            name="{=00000174}Burglar"
+            description="{=00000175}You are agile and capable of stealing some handy weapons from the armory."
+            icon="PerkBetterSwords"
+            perk_list="1">	
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="vlandia_sword_1_t2" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="vlandia_axe_1_t3" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="large_franziskaa_axe_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+	  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
-                       item="mp_old_kite_sparring_shield" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000136}Change Chinese to see the description"
-            description="{=00000137}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_peasant_hood"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="vlandia_axe_1_t3" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_old_kite_sparring_shield" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000136}Change Chinese to see the description"
-            description="{=00000137}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_peasant_hood"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="large_franziskaa_axe_t3" />	
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_old_kite_sparring_shield" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000142}Change Chinese to see the description"
-            description="{=00000143}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_peasant_hood"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="vlandia_mace_1_t2" />	
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_old_kite_sparring_shield" />			   
+                       item="mp_old_kite_sparring_shield" />		   
       </Perk>
       <!-- Second perks -->
       <Perk game_mode="all"
-            name="{=HMbGb1V2}Village Militia"
-            description="{=W4GfVIbC}Your experience as Village Militia made you hardened. You take less damage.{newline} {newline}Grants Short Spear{newline}Grants Small Shield"
-            hero_idle_anim="act_vlandia_mp_peasant_levy_shieldperk_idle"
-            icon="PerkExtraTroop"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=IUsT27oV}Provides +9 armor."
+            icon="PerkToughness"
+            hero_idle_anim="act_vlandia_mp_peasant_levy_armorperk_idle"
             perk_list="2">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_ironrim_kite_shield" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_western_short_spear" />
+                       slot="Cape"
+                       item="mp_peasant_hood"
+                       target="Player" />		   
       </Perk>
       <Perk game_mode="all"
             name="{=DYUfnBHb}Farmer"
@@ -161,12 +116,12 @@
         <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
           <Group>
             <Item slot="Item3"
-                  item="mp_western_pitchfork_metal" />
-          </Group>
-          <Group>
-            <Item slot="Item3"
                   item="mp_western_pitchfork_wood" />
           </Group>
+          <!--Group>
+            <Item slot="Item3"
+                  item="mp_western_pitchfork_metal" />
+          </Group-->
           <Group>
             <Item slot="Item3"
                   item="mp_western_scythe" />
@@ -179,7 +134,7 @@
             <Item slot="Item3"
                   item="mp_western_2h_shovel" />
           </Group>
-		  <Group>
+	    <Group>
             <Item slot="Item3"
                   item="mp_vlandian_billhook" />
           </Group>
@@ -194,18 +149,11 @@
                 value="2"
                 is_disabled_in_warmup="true" />
       </Perk>
-      <!-- Third perks 
-	  <Perk game_mode="all"
-            name="{=00000149}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">		   
-      </Perk>
       <Perk game_mode="all"
             name="{=00000159}Bareman"
-            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
+            description="{=00000160}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+5% Maximum Running Speed"
             icon="PerkFleetFooted"
-            perk_list="3">
+            perk_list="2">
         <Effect type="DrivenProperty"
                 value="0.05"
                 driven_property="MaxSpeedMultiplier"
@@ -240,7 +188,14 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Leg"
                        item="null" />
-      </Perk>-->
+      </Perk>
+      <!-- Third perks -->
+	  <!--Perk game_mode="all"
+            name="{=00000149}Change Chinese to see the description"
+            description="{=00000148}Change Chinese to see the description"
+            icon="PerkToughness"
+            perk_list="3"		   
+      </Perk-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_shock_infantry_vlandia"
@@ -277,7 +232,7 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_vlandian_long_sword" />
+                       item="vlandia_sword_2_t3" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_western_kite_shield" />
@@ -285,7 +240,30 @@
                        slot="Item2"
                        item="mp_western_spear" />
       </Perk>
-	  <Perk game_mode="all"
+      <Perk game_mode="all"
+            name="{=00000001}Bastard sword"
+            description="{=00000002}Equipped with a Bastard sword, which can be used with two hands after the shield is broken. {newline}{newline} equipped with Bastard sword{newline}Grants Shield"
+            hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkLargerShields"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_western_bastard_sword" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_western_kite_shield" />
+      </Perk>
+	<Perk game_mode="all"
+            name="{=00000118}Two Handed Sword"
+            description="{=00000119}双手剑，决斗和刺击时很有效，双手使用。{newline}{newline}配备双手剑"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
+            icon="PerkTwoHandedSwords"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="western_2hsword_t4" />
+      </Perk>
+	<Perk game_mode="all"
             name="{=Dj64aJKQ}Billhook"
             description="{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed."
             icon="PerkPolearms"
@@ -294,55 +272,7 @@
                        slot="Item0"
                        item="mp_vlandian_halberd_lol" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=00000023}Change Chinese to see the description"
-            description="{=00000024}Change Chinese to see the description"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_noble_two_handed_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_vlandian_pike" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000001}Bastard sword"
-            description="{=00000002}Equipped with Bastard sword, can be used with one hand or two hands {newline}{newline} equipped with Bastard sword"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
-			icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_noble_bastard_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_western_kite_shield" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000001}Bastard sword"
-            description="{=00000002}Equipped with Bastard sword, can be used with one hand or two hands {newline}{newline} equipped with Bastard sword"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
-			icon="PerkTwoHandedSwords"
-            perk_list="1">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_western_bastard_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_western_kite_shield" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000118}Change Chinese to see the description"
-            description="{=00000119}Change Chinese to see the description"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="western_2hsword_t4" />
-      </Perk>
-	  <Perk game_mode="all"
+	<!--Perk game_mode="all"
             name="{=00000126}Change Chinese to see the description"
             description="{=00000127}Change Chinese to see the description"
 			hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
@@ -361,7 +291,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="cleaver_2hsword_t3" />
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=rJFGyaBS}Moloch"
@@ -437,6 +367,15 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
+      <Perk game_mode="all"
+            name="{=00000023}锥头枪"
+            description="{=00000024}配备锥头枪，用距离优势压制敌人。{newline}{newline}配备锥头枪"
+            icon="PerkPikes"
+            perk_list="2">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_vlandian_pike" />
+      </Perk>
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_infantry_vlandia"
@@ -457,6 +396,19 @@
                    acceleration="2.4">
     <Perks>
       <!-- First perks-->
+	<Perk game_mode="all"
+            name="{=00000001}Bastard sword"
+            description="{=00000002}Equipped with a Bastard sword, which can be used with two hands after the shield is broken. {newline}{newline} equipped with Bastard sword{newline}Grants Shield"
+			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+			icon="PerkTwoHandedSwords"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_vlandian_noble_bastard_sword" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_western_kite_shield" />			   
+      </Perk>
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
             description="{=00000003}The armor is made of a higher grade material. {newline}{newline} Armor +10"
@@ -563,21 +515,6 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="vlandia_noble_sword_3_t5" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="vlandia_sword_2_t3" />			   
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
