@@ -194,7 +194,7 @@
                 value="2"
                 is_disabled_in_warmup="true" />
       </Perk>
-      <!-- Third perks -->
+      <!-- Third perks 
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -240,7 +240,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Leg"
                        item="null" />
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_shock_infantry_vlandia"
@@ -707,7 +707,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -771,7 +771,7 @@
                        slot="Body"
                        item="mp_coat_of_plates_over_mail"
                        target="Player" />			   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_vlandia"
@@ -1247,7 +1247,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -1275,7 +1275,7 @@
                        slot="Head"
                        item="mp_vlandian_faceguard_helmet_b"
                        target="Player" />		   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <!-- EMPIRE -->
@@ -1402,7 +1402,7 @@
                        slot="Item2"
                        item="empire_mace_1_t2" />			   
       </Perk>
-      <!-- Third perks -->
+      <!-- Third perks 
 	<Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -1448,7 +1448,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Leg"
                        item="null" />
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_shock_infantry_empire"
@@ -1917,7 +1917,7 @@
                        item="mp_varangian_bra_royal"
                        target="Player" />
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -1981,7 +1981,7 @@
                        slot="Body"
                        item="mp_lamellar_with_scale_skirt"
                        target="Player" />			   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_empire"
@@ -2594,7 +2594,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -2612,7 +2612,7 @@
                        slot="Head"
                        item="mp_empire_battle_crown_north"
                        target="Player" />		   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <!-- KHUZAIT -->
@@ -2787,7 +2787,7 @@
                        slot="Item2"
                        item="mp_khuzait_short_spear" />
       </Perk>
-      <!-- Third perks -->
+      <!-- Third perks 
 	<Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -2833,7 +2833,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Leg"
                        item="null" />
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_heavy_infantry_khuzait"
@@ -3596,7 +3596,7 @@
                        slot="Item2"
                        item="mp_light_oval_shield" />
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -3618,7 +3618,7 @@
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder"
                        target="Player" />					   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <!-- ASERAI -->
@@ -3728,7 +3728,7 @@
                        slot="Item2"
                        item="mp_aserai_long_spear" />
       </Perk>
-      <!-- Third perks -->
+      <!-- Third perks 
 	<Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -3774,7 +3774,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Leg"
                        item="null" />
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_skirmisher_aserai"
@@ -4740,7 +4740,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -4758,7 +4758,7 @@
                        slot="Head"
                        item="mp_aserai_battle_crown"
                        target="Player" />					   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <!-- Sturgia -->
@@ -4918,7 +4918,7 @@
                        slot="Item1"
                        item="mp_sturgia_old_shield_a" />
       </Perk>
-      <!-- Third perks -->
+      <!-- Third perks 
 	<Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -4964,7 +4964,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Leg"
                        item="null" />
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_skirmisher_sturgia"
@@ -5529,7 +5529,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -5609,7 +5609,7 @@
                        slot="Leg"
                        item="mp_northern_plated_boots"
                        target="Player" />				   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_sturgia"
@@ -6089,7 +6089,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -6107,7 +6107,7 @@
                        slot="Head"
                        item="mp_sturgian_helmet_b_close"
                        target="Player" />		   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <!-- BATTANIA -->
@@ -6335,7 +6335,7 @@
                        slot="Item1"
                        item="mp_battania_targe_b" />			   
       </Perk>
-      <!-- Third perks -->
+      <!-- Third perks 
 	<Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -6381,7 +6381,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Leg"
                        item="null" />
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_shock_infantry_battania"
@@ -6641,7 +6641,7 @@
                 value="-0.30"
                 damage_type="Blunt" />
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -6697,7 +6697,7 @@
                        slot="Body"
                        item="mp_battania_light_armor_e"
                        target="Player" />				   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_skirmisher_battania"
@@ -7072,7 +7072,7 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -7136,7 +7136,7 @@
                        slot="Body"
                        item="mp_battanian_scale_armor_a"
                        target="Player" />				   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_battania"
@@ -9123,7 +9123,7 @@
           </Effects>
         </ConditionalEffect>
       </Perk>
-	  <!-- Third perks-->
+	  <!-- Third perks
 	  <Perk game_mode="all"
             name="{=00000150}Change Chinese to see the description"
             description="{=00000148}Change Chinese to see the description"
@@ -9141,7 +9141,7 @@
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
                        target="Player" />		   
-      </Perk>
+      </Perk>-->
     </Perks>
   </MPClassDivision>
   
