@@ -46,6 +46,7 @@
     <Compile Remove="Modes\CNMCaptainSpawningBehavior.cs" />
     <Compile Remove="Modes\Patch_MissionNetworkComponent.cs" />
     <Compile Remove="Modes\Patch_Team.cs" />
+    <Compile Remove="Patches\Patch_MissionPeer.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.6.30619-beta" />
@@ -57,5 +58,9 @@
   <ItemGroup>
     <!--向输出目录copy一份Harmony所需的文件-->
     <None Include="$(PkgLib_Harmony)\..\2.2.2\lib\net48\0Harmony.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Patches\" />
   </ItemGroup>
 </Project>
