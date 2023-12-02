@@ -4,20 +4,13 @@ using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
 using TaleWorlds.MountAndBlade.Multiplayer;
-
-#if CLIENT
 using TaleWorlds.MountAndBlade.Multiplayer.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
 using TaleWorlds.MountAndBlade.View.MissionViews;
-#endif
 
 namespace CNMultiplayer.Modes.Siege
 {
-
-#if CLIENT
-    [ViewCreatorModule] // Exposes methods with ViewMethod attribute.
-#endif
-
+    [ViewCreatorModule]
     internal class CNMSiegeGameMode : MissionBasedMultiplayerGameMode
     {
         private const string GameName = "CNMSiege";
@@ -26,7 +19,6 @@ namespace CNMultiplayer.Modes.Siege
             : base(GameName)
         { }
 
-#if CLIENT
         [ViewMethod(GameName)]
         public static MissionView[] OpenCNMSiege(Mission mission)
         {
@@ -53,14 +45,12 @@ namespace CNMultiplayer.Modes.Siege
                 MultiplayerViewCreator.CreateMissionFlagMarkerUIHandler(),
                 ViewCreator.CreateOptionsUIHandler(),
                 ViewCreator.CreateMissionMainAgentEquipDropView(mission),
-                MultiplayerViewCreator.CreateMultiplayerAdminPanelUIHandler(),
+                MultiplayerViewCreator.CreateMultiplayerAdminPanelUIHandler(), //管理UI
                 ViewCreator.CreateMissionBoundaryCrossingView(),
                 new MissionBoundaryWallView(),
-                MultiplayerViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(), //语音系统
+                MultiplayerViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(), //语音UI
             };
         }
-
-#endif
 
         public override void StartMultiplayerGame(string scene)
         {
@@ -68,35 +58,7 @@ namespace CNMultiplayer.Modes.Siege
 
             MissionState.OpenNew(GameName, new MissionInitializerRecord(scene)
             { SceneUpgradeLevel = 3, SceneLevels = string.Empty },
-            _ => (GameNetwork.IsServer)
-            ? new MissionBehavior[] // Server side behavior
-            {
-                MissionLobbyComponent.CreateBehavior(),
-                new CNMSiegeServer(),
-                new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()),
-                warmupComponent,
-                new MissionMultiplayerSiegeClient(),
-                new MultiplayerTimerComponent(),
-                new MultiplayerMissionAgentVisualSpawnComponent(),
-                new ConsoleMatchStartEndHandler(),
-                new MissionLobbyEquipmentNetworkComponent(),
-                new CNMTeamSelectComponent(warmupComponent, null),
-                new MissionHardBorderPlacer(),
-                new MissionBoundaryPlacer(),
-                new MissionBoundaryCrossingHandler(),
-                new MultiplayerPollComponent(),
-                new MultiplayerAdminComponent(),
-                new MultiplayerGameNotificationsComponent(),
-                new MissionOptionsComponent(),
-                new MissionScoreboardComponent(new SiegeScoreboardData()),
-                new MissionAgentPanicHandler(),
-                new AgentHumanAILogic(),
-                new EquipmentControllerLeaveLogic(),
-                new VoiceChatHandler(),
-                new MultiplayerPreloadHelper()
-            }
-
-            : new MissionBehavior[] // Client side behavior
+            _ => new MissionBehavior[]
             {
                 MissionLobbyComponent.CreateBehavior(),
                 warmupComponent,
