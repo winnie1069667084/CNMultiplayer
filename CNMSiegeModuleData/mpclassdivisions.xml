@@ -218,7 +218,7 @@
       <Perk game_mode="all"
             name="{=zbsajPMp}Voulge"
             description="{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale."
-            icon="PerkTwoHandedAxe"
+            icon="PerkVoulge"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
@@ -390,67 +390,44 @@
                    icon="Infantry_Heavy"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="45"
+                   armor="40"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
       <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=E1bKcoaT}Cavalry Breaker"
+            description="{=00000039}你是步战反骑的专家，精于利用骑兵的速度还施彼身。{newline}{newline}配备长矛{newline}近战武器对坐骑伤害+100%{newline}近战武器穿刺攻击的相对速度伤害加成+50%"
+            icon="PerkHorseHunters"
+            perk_list="1">
+        <ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="SpeedBonus"
+                    value="0.50"
+                    hit_type="Melee"
+                    damage_type="Pierce" />
+            <Effect type="MountDamage"
+                    value="1.0"
+                    hit_type="Melee" />
+          </Effects>
+        </ConditionalEffect>
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_western_long_spear" />
+      </Perk>
 	<Perk game_mode="all"
             name="{=00000001}Bastard sword"
             description="{=00000002}Equipped with a Bastard sword, which can be used with two hands after the shield is broken. {newline}{newline} equipped with Bastard sword{newline}Grants Shield"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-			icon="PerkTwoHandedSwords"
+		icon="PerkLargerShields"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_noble_bastard_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_western_kite_shield" />			   
-      </Perk>
-      <Perk game_mode="all"
-            name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=00000003}The armor is made of a higher grade material. {newline}{newline} Armor +10"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_pauldron_cape_b"
-                       target="Player" />			   
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_guards_kettle_over_mail_coif" />
-            <Item slot="Cape"
-                  item="mp_hood" />
-            <Item slot="Body"
-                  item="mp_white_coat_over_mail" />
-            <Item slot="Gloves"
-                  item="mp_lordly_mail_mitten" />
-            <Item slot="Leg"
-                  item="mp_strapped_mail_chausses" />
-          </Group>
-          <Group>
-            <Item slot="Body"
-                  item="mp_white_coat_over_mail" />
-            <Item slot="Leg"
-                  item="mp_mail_cavalier_boots" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_visored_helmet_over_mail_coif" />
-            <Item slot="Cape"
-                  item="mp_hood" />
-            <Item slot="Gloves"
-                  item="mp_reinforced_mail_mitten" />
-            <Item slot="Leg"
-                  item="mp_mail_chausses" />
-          </Group>
-        </RandomOnSpawnEffect>
+                       item="mp_vlandian_noble_bastard_sword" />
       </Perk>
       <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
@@ -470,7 +447,7 @@
                        item="mp_hood"
                        target="Player" />			   
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
+                       slot="Item1"
                        item="mp_vlandian_axe" />
       </Perk>
       <Perk game_mode="all"
@@ -478,15 +455,11 @@
             description="{=pblXb1ae}Grants Mace, effective against armored opponents."
             icon="PerkMaces"
             perk_list="1">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_hood"
-                       target="Player" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
+                       slot="Item1"
                        item="mp_vlandian_mace" />			   
       </Perk>
-	  <Perk game_mode="all"
+	<!--Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -501,7 +474,7 @@
                        slot="Item3"
                        item="vlandia_sword_4_t4" />			   
       </Perk>
-	  <Perk game_mode="all"
+	<Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -530,49 +503,39 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="broad_arming_sword_t4" />			   
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
-            name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000039}Change Chinese to see the description"
-            icon="PerkHorseHunters"
+            name="{=BbV2Pwzb}Reinforced Armor"
+            description="{=00000003}The armor is made of a higher grade material. {newline}{newline} Armor +13"
+            icon="PerkToughness"
             perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="0.50"
-                    hit_type="Melee"
-                    damage_type="Pierce" />
-            <Effect type="MountDamage"
-                    value="0.5"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="13" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_western_long_spear" />
+                       slot="Cape"
+                       item="mp_pauldron_cape_b"
+                       target="Player" />
       </Perk>
-	  <Perk game_mode="all"
-            name="{=jf8luKVV}Brawny"
-            description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
-            icon="PerkBrawny"
+	<Perk game_mode="all"
+            name="{=00000176}Noble Two Handed Sword"
+            description="{=00000177}手持瓦兰迪亚标志性的巨剑，依靠娴熟的格挡在战场中七进七出。{newline}{newline}配备贵族巨剑{newline}+5% movement speed"
+            hero_idle_anim="act_aserai_mp_guard_idle"
+		icon="PerkTwoHandedSwords"
             perk_list="2">
-        <Effect type="SpeedBonus"
-                value="0.35"
-                hit_type="Melee" />
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
+	  <Effect
+		type="DrivenProperty"
+		value="0.05"
+		driven_property="MaxSpeedMultiplier"
+		is_ratio="true" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_vlandian_noble_two_handed_sword" />
       </Perk>
       <Perk game_mode="all"
             name="{=sQCpO6sp}Melee Expert"
             description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
-            icon="PerkGeneral"
+            icon="PerkMeleeExpert"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -590,8 +553,8 @@
         </ConditionalEffect>
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000101}Change Chinese to see the description"
+            name="{=00000100}旗手"
+            description="{=00000101}配备符合本国文化的随机一面旗帜。{newline}{newline}移动速度+5%"
             icon="PerkToughness"
             perk_list="2">	
 		<ConditionalEffect>
