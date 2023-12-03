@@ -2425,17 +2425,29 @@
                    troop="mp_light_infantry_khuzait_troop"
                    hero_idle_anim="act_khuzait_mp_rabble_idle"
                    troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.94"
+                   multiplier="0.89"
                    cost="100"
                    icon="Infantry_Light"
                    melee_ai="40"
                    ranged_ai="40"
                    armor="15"
-                   movement_speed="0.82"
+                   movement_speed="0.81"
                    combat_movement_speed="0.9"
                    acceleration="1.8">
     <Perks>
       <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=DlKYZgA3}Improved Armor"
+            description="{=PFTzVdJg}Provides +9 armor."
+            icon="PerkToughness"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="9" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_reinforced_suede_shoulders"
+                       target="Player" />		   
+      </Perk>
       <Perk game_mode="all"
             name="{=bY9U7w1Q}Sword"
             description="{=SjiFP0za}Replaces Club with Sword, effective at dueling and thrusting."
@@ -2450,56 +2462,12 @@
             description="{=YqqhxGwH}Replaces Club with Sickle, capable of dealing decent damage and effective against shields."
             icon="PerkSickle"
             perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_sichel" />		   
+            <OnSpawnEffect
+                  type="AlternativeEquipmentOnSpawn"
+                  slot="Item0"
+                  item="mp_khuzait_sichel" />		   
       </Perk>
-      <Perk game_mode="all"
-            name="{=DlKYZgA3}Improved Armor"
-            description="{=PFTzVdJg}Provides +9 armor."
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_reinforced_suede_shoulders"
-                       target="Player" />		   
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_nomad_padded_hood" />
-            <Item slot="Cape"
-                  item="mp_eastern_studded_shoulders" />
-            <Item slot="Leg"
-                  item="mp_leather_cavalier_boots" />
-            <Item slot="Gloves"
-                  item="mp_buttoned_leather_bracers" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_nomad_padded_hood" />
-            <Item slot="Cape"
-                  item="mp_eastern_studded_shoulders" />
-            <Item slot="Leg"
-                  item="mp_leather_cavalier_boots" />
-            <Item slot="Gloves"
-                  item="mp_buttoned_leather_bracers" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_plumed_fur_lined_helmet" />
-            <Item slot="Cape"
-                  item="mp_eastern_studded_shoulders" />
-            <Item slot="Leg"
-                  item="mp_leather_cavalier_boots" />
-            <Item slot="Gloves"
-                  item="mp_buttoned_leather_bracers" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>
-	  <Perk game_mode="all"
+	  <!--Perk game_mode="all"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -2558,7 +2526,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="khuzait_mace_1_t2" />			   
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=oBBE3ggU}Conscript"
@@ -2573,11 +2541,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=urUwa4bf}Looter"
-            description="{=00000029}Change Chinese to see the description"
+            description="{=00000029}你知道如何从死人不再需要的装备中获取利润。击杀和助攻会奖励金钱。{newline}{newline}每次击杀，第纳尔+3"
             icon="PerkGold"
             perk_list="2">
         <Effect type="GoldGainOnKill"
-                value="2"
+                value="3"
                 is_disabled_in_warmup="true" />
       </Perk>
       <Perk game_mode="all"
@@ -2685,7 +2653,23 @@
                        slot="Item2"
                        item="mp_khuzait_heavy_sabre" />
       </Perk>
-	  <Perk game_mode="all"
+	<Perk game_mode="all"
+            name="{=6hwZwODh}Glaive"
+            description="{=00000059}Change Chinese to see the description"
+			hero_idle_anim="act_aserai_mp_guard_idle"
+            icon="PerkPolearms"
+            perk_list="1">
+            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_khuzait_glaive" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+      </Perk>
+	  <!--Perk game_mode="all"
             name="{=00000089}Change Chinese to see the description"
             description="{=00000090}Change Chinese to see the description"
 			hero_idle_anim="act_aserai_mp_guard_idle"
@@ -2716,27 +2700,11 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="null" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=6hwZwODh}Glaive"
-            description="{=00000059}Change Chinese to see the description"
-			hero_idle_anim="act_aserai_mp_guard_idle"
-            icon="PerkPolearms"
-            perk_list="1">
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_khuzait_glaive" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="null" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="null" />
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000039}Change Chinese to see the description"
+            description="{=Pg2BjZ7v}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself. Grants a long spear that does more damage. {newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
             icon="PerkHorseHunters"
             perk_list="2">
         <ConditionalEffect>
@@ -2750,7 +2718,7 @@
                     hit_type="Melee"
                     damage_type="Pierce" />
             <Effect type="MountDamage"
-                    value="0.5"
+                    value="1.0"
                     hit_type="Melee" />
           </Effects>
         </ConditionalEffect>
@@ -2760,11 +2728,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=YeRH0SUc}Steppe Infantry"
-            description="{=00000044}Change Chinese to see the description"
-            icon="PerkFleetFooted"
+            description="{=00000044}你是草原上的战士，你在战斗中灵活机动、保持威慑，寻找敌人的背后破绽。{newline}{newline}配备长矛{newline}{newline}移动速度+7%{newline}近战伤害+5%"
+            icon="PerkSteppeInfantry"
             perk_list="2">
         <Effect type="DrivenProperty"
-                value="0.05"
+                value="0.07"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
         <Effect type="DamageDealt"
@@ -2773,11 +2741,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=blqDgCtL}Big Game Hunter"
-            description="{=00000068}Change Chinese to see the description"
+            description="{=pjgUeOSa}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+100% Ranged Damage to Mounts"
             icon="PerkThrowingSpears"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.5"
+                value="1.0"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
@@ -8706,7 +8674,7 @@
       </Perk>
     </Perks>
   </MPClassDivision>
-  
+
   <!--斯特吉亚资深弓手-->
   <MPClassDivision id="mp_heavy_ranged_sturgia"
                    hero="mp_heavy_ranged_sturgia_hero"
