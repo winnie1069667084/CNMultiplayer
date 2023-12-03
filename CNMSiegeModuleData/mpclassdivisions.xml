@@ -1532,14 +1532,14 @@
     <Perks>
 	<Perk game_mode="all"
             name="{=00000188}中流砥柱"
-            description="{=00000086}军团步兵的标准配置，强大的防御力成为队伍的绝对中坚。{newline}{newline}配备优质钢帝国军刀{newline}配备强化橡木筝形盾{newline}配备帝国投矛{newline}护甲+5"
+            description="{=00000086}军团步兵的标准配置，强大的防御力成为队伍的绝对中坚。{newline}{newline}配备加长帝国重剑{newline}配备强化橡木筝形盾{newline}配备帝国投矛{newline}护甲+5"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
             icon="PerkHoldTheLine"
             perk_list="1">
 、
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="empire_sword_5_t4" />
+                       item="mp_empire_long_spatha" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_stronger_reinforced_kite_shield" />
@@ -2778,11 +2778,11 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_steppe_short_bow"
+                       item="mp_short_bow"
                        target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_steppe_short_bow"
+                       item="mp_short_bow"
                        target="Troops" />
       </Perk>
       <Perk game_mode="all"
@@ -2792,11 +2792,11 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_steppe_short_bow"
+                       item="mp_short_bow"
                        target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_steppe_short_bow"
+                       item="mp_short_bow"
                        target="Troops" />
       </Perk>
       <Perk game_mode="all"
@@ -2806,11 +2806,11 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_steppe_superior_bow"
+                       item="mp_superior_bow"
                        target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_steppe_superior_bow"
+                       item="mp_superior_bow"
                        target="Troops" />
       </Perk>
       <!-- Second perks-->
