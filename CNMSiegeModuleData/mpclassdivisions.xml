@@ -7670,20 +7670,20 @@
                    troop_idle_anim="act_idle_bow_1"
                    multiplier="0.68"
                    cost="110"
-                   casual_cost="150"
+                   casual_cost="140"
                    battle_cost="130"
                    icon="Infantry_Heavy"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="45"
-                   movement_speed="0.82"
-                   combat_movement_speed="0.7"
+                   armor="38"
+                   movement_speed="0.80"
+                   combat_movement_speed="0.8"
                    acceleration="3.0">
     <Perks>
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=iHljS6n5}Masked Nightmare"
-            description="{=00000003}The armor is made of a higher grade material. {newline}{newline} Armor +10"
+            description="{=00000003}你是敌人日夜难寐的成因，是一个不可阻挡的死亡贩子。{newline}{newline}护甲+10"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -7698,6 +7698,22 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
+      </Perk>
+	<Perk game_mode="all"
+            name="{=6hwZwODh}Glaive"
+            description="{=00000059}配备偃月刀，一种库赛特长杆武器。让你成为近身搏斗中一股不容忽视的力量。{newline}{newline}配备偃月刀"
+			hero_idle_anim="act_aserai_mp_guard_idle"
+            icon="PerkPolearms"
+            perk_list="1">
+            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_khuzait_glaive" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
       </Perk>
       <Perk game_mode="all"
             name="{=VI4gQt8Q}Mace"
@@ -7729,7 +7745,7 @@
                        slot="Item0"
                        item="mp_khuzait_pike" />
       </Perk>
-	  <Perk game_mode="all"
+	  <!--Perk game_mode="all"
             name="{=00000104}Masked Nightmare"
             description="{=00000105}Change Chinese to see the description"
             icon="PerkToughness"
@@ -7872,7 +7888,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_stronger_eastern_wicker_shield" />
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
 	  <Perk game_mode="all"
             name="{=jf8luKVV}Brawny"
@@ -7889,8 +7905,8 @@
       </Perk>
       <Perk game_mode="all"
             name="{=YeRH0SUc}Steppe Infantry"
-            description="{=00000064}Change Chinese to see the description"
-            icon="PerkFleetFooted"
+            description="{=00000064}你是草原上的战士，你在战斗中灵活机动、保持威慑，寻找敌人的背后破绽。{newline}{newline}移动速度+7%{newline}近战伤害+10%"
+            icon="PerkSteppeInfantry"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="0.07"
@@ -7902,19 +7918,19 @@
       </Perk>
       <Perk game_mode="all"
             name="{=blqDgCtL}Big Game Hunter"
-            description="{=00000068}Change Chinese to see the description"
+            description="{=00000068}你是猎杀巨兽的专家，尤其是使用投掷武器。{newline}{newline}配备投矛{newline}{newline}对坐骑的远程伤害+100%"
             icon="PerkThrowingSpears"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.5"
+                value="1.0"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="mp_khuzait_throwing_spear" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000101}Change Chinese to see the description"
+            name="{=00000100}旗手"
+            description="{=00000101}配备符合本国文化的随机旗帜。{newline}{newline}移动速度+5%"
             icon="PerkToughness"
             perk_list="2">
 		<ConditionalEffect>
