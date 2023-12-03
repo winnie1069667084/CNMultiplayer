@@ -2996,8 +2996,8 @@
                    casual_cost="180"
                    battle_cost="140"
                    icon="Cavalry_Light"
-                   melee_ai="65"
-                   ranged_ai="65"
+                   melee_ai="50"
+                   ranged_ai="50"
                    armor="19"
                    movement_speed="0.79"
                    combat_movement_speed="0.7"
@@ -3059,7 +3059,7 @@
       <Perk game_mode="all"
             name="{=4O4xjMMd}Nomad Archer"
             description="{=tiw9b4f6}You are an experienced with the bow on a horse, your accuracy is much better.{newline} {newline}Grants Hunting Bow and Arrows{newline}-40% Movement Accuracy Penalty"
-            icon="PerkRecurveBows"
+            icon="PerkNomadArcher"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="-0.4"
@@ -3083,7 +3083,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=ueWfi5aP}You are an expert at charging in to break defensive lines.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount"
+            description="{=aPnYFXVX}You are an expert at charging in to break defensive lines.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount"
             icon="PerkLongSpear"
             perk_list="2">
         <ConditionalEffect>
@@ -3093,7 +3093,7 @@
           </Conditions>
           <Effects>
             <Effect type="SpeedBonus"
-                    value="1.5"
+                    value="0.5"
                     is_ratio="true" />
           </Effects>
         </ConditionalEffect>
@@ -3152,7 +3152,7 @@
       <Perk game_mode="all"
             name="{=WEUSMkCp}Mounted Archery"
             description="{=NezswS6S}You are an expert with the bow on a horse, your accuracy is much better.{newline} {newline}-50% Movement Accuracy Penalty{newline}-50% turning Accuracy Penalty"
-            icon="PerkStrongArrows"
+            icon="PerkMountedArchery"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="-0.5"
@@ -3193,31 +3193,48 @@
                    troop="mp_heavy_cavalry_khuzait_troop"
                    hero_mount_idle_anim="act_khuzait_mp_lancer_mount_idle"
                    troop_mount_idle_anim="act_horse_idle_1"
-                   multiplier="0.24"
+                   multiplier="0.3"
                    cost="200"
                    casual_cost="300"
                    icon="Cavalry_Heavy"
-                   melee_ai="100"
-                   ranged_ai="100"
-                   armor="56"
-                   movement_speed="0.59"
-                   combat_movement_speed="0.7"
+                   melee_ai="60"
+                   ranged_ai="50"
+                   armor="48"
+                   movement_speed="0.7"
+                   combat_movement_speed="0.65"
                    acceleration="3.2"
                    hitpoints="100">
     <Perks>
       <!-- First perks-->
-	  <Perk game_mode="all"
-            name="{=VR2SwarS}Tougher Horse"
-            description="{=xuad1OP3}Replaces mount with the most durable horse in the steppes."
-            icon="PerkAgileHorses"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Horse"
-                       item="mp_khuzait_horse_tougher" />
-      </Perk>
+	<Perk
+		game_mode="all"
+		name="{=hchDYAKL}Lancer"
+		description="{=3hTJgq6V}You are an expert at fighting on horseback.{newline} {newline}Grants Long Lance{newline} {newline}+33% Speed Bonus with Pierce Attacks from mount"
+		icon="PerkCouchedHeavySpears"
+		perk_list="1">
+		<ConditionalEffect>
+			<Conditions>
+				<Condition
+					type="AgentStatus"
+					agent_status="OnMount" />
+			</Conditions>
+			<Effects>
+				<Effect
+					type="SpeedBonus"
+					value="0.33"
+					hit_type="Melee"
+					damage_type="Pierce"
+					is_ratio="true" />
+			</Effects>
+		</ConditionalEffect>
+		<OnSpawnEffect
+			type="AlternativeEquipmentOnSpawn"
+			slot="Item0"
+			item="mp_khuzait_lance_long" />
+	</Perk>
       <Perk game_mode="all"
             name="{=6hwZwODh}Glaive"
-            description="{=iSpXc3qQ}Grants Glaive, a Khuzait polearm, deadly on horseback."
+            description="{=ZBEwVayp}Grants Glaive, a Khuzait polearm, deadly on horseback and capable of dismounting cavalry with swing attacks."
             icon="PerkPolearms"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -3226,16 +3243,21 @@
       </Perk>
       <Perk game_mode="all"
             name="{=WapSyVbv}Full Barding"
-            description="{=qwnHqTdO}Upgrades your horses armor."
+            description="{=RI9hmnDu}Upgrades your horses armor and add additional protection against ranged weapons.{newline} {newline}+11 Armor to Mount{newline}-25% Damage taken by Mount from Ranged Weapons."
             icon="PerkFullBarding"
             perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="HorseHarness"
-                       item="mp_studded_steppe_barding" />
+		<Effect
+			type="MountDamageTaken"
+			value="-0.25"
+			hit_type="Ranged"
+			is_ratio="true" />
+            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                  slot="HorseHarness"
+                  item="mp_studded_steppe_barding" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000171}Change Chinese to see the description"
+            name="{=00000100}旗手"
+            description="{=00000171}配备符合本国文化的随机旗帜。{newline}{newline}骑术技能等级+30"
             icon="PerkToughness"
             perk_list="1">	
         <Effect type="MountManeuver"
@@ -3270,49 +3292,34 @@
       </Perk>
       <!-- Second perks-->
 	  <Perk game_mode="all"
-            name="{=hchDYAKL}Lancer"
-            description="{=3hTJgq6V}You are an expert at fighting on horseback.{newline} {newline}Grants Long Lance{newline} {newline}+33% Speed Bonus with Pierce Attacks from mount"
-            icon="PerkCouchedHeavySpears"
+            name="{=VR2SwarS}Tougher Horse"
+            description="{=xuad1OP3}Replaces mount with the most durable horse in the steppes."
+            icon="PerkAgileHorses"
             perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.33"
-                    hit_type="Melee"
-                    damage_type="Pierce"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_lance_long" />
+                       slot="Horse"
+                       item="mp_khuzait_horse_tougher" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=v3TAosde}Royal Archer"
-            description="{=00000080}You are an experienced with the bow on a horse, your accuracy is much better.{newline} {newline}Grants Short Bow and Arrows{newline}-50% Movement Accuracy Penalty"
-            icon="PerkRecurveBows"
-            perk_list="2">
-        <Effect type="DrivenProperty"
-                value="-0.5"
-                driven_property="WeaponWorstMobileAccuracyPenalty"
-                is_ratio="true" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_cavalry_mace" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_steppe_guardian_shield" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_strong_recurve_bow" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_arrows_barbed_extra" />
-      </Perk>
+	<Perk
+		game_mode="all"
+		name="{=v3TAosde}Royal Archer"
+		description="{=E0sUI9sm}You are an experienced with the bow on a horse, your accuracy is much better.{newline} {newline}Grants Short Bow and Arrows{newline}-50% Movement Accuracy Penalty"
+		icon="PerkRecurveBows"
+		perk_list="2">
+		<Effect
+			type="DrivenProperty"
+			value="-0.5"
+			driven_property="WeaponWorstMobileAccuracyPenalty"
+			is_ratio="true" />
+		<OnSpawnEffect
+			type="AlternativeEquipmentOnSpawn"
+			slot="Item3"
+			item="mp_short_bow" />
+		<OnSpawnEffect
+			type="AlternativeEquipmentOnSpawn"
+			slot="Item2"
+			item="mp_arrows_steppe_mounted" />
+	</Perk>
       <Perk game_mode="all"
             name="{=iHljS6n5}Masked Nightmare"
             description="{=E8f6ngSe}You are the reason enemy troops have trouble sleeping, an unstoppable death dealer.{newline} {newline}+9 Armor{newline}+10% Swing Speed on Horseback{newline}+10% Damage dealt with Blunt Weapons"
@@ -3338,35 +3345,6 @@
                        slot="Head"
                        item="mp_spiked_helmet_with_facemask"
                        target="Player" />					   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=5f6TSkM1}Mounted Skirmish"
-            description="{=00000095}Change Chinese to see the description"
-            icon="PerkGeneral"
-            perk_list="2">
-		<ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="MountDamageTaken"
-                    value="-0.3"
-                    hit_type="Melee" />
-		    <Effect type="DamageTaken"
-                    value="-0.3"
-                    hit_type="Melee" />	
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_heavy_sabre" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_light_oval_shield" />
       </Perk>
 	  <!-- Third perks
 	  <Perk game_mode="all"
