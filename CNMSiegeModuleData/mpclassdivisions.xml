@@ -768,15 +768,15 @@
                    troop="mp_heavy_ranged_vlandia_troop"
                    hero_idle_anim="act_vlandia_mp_sharpshooter_idle"
                    troop_idle_anim="act_idle_1h_with_shield_1_left_stance"
-                   multiplier="0.50"
+                   multiplier="0.46"
                    cost="160"
                    casual_cost="180"
                    battle_cost="180"
                    icon="Crossbowman_Heavy"
                    melee_ai="50"
-                   ranged_ai="50"
-                   armor="36"
-                   movement_speed="0.74"
+                   ranged_ai="100"
+                   armor="30"
+                   movement_speed="0.73"
                    combat_movement_speed="0.7"
                    acceleration="3.2">
     <Perks>
@@ -784,7 +784,7 @@
       <Perk game_mode="all"
             name="{=0e17RZrZ}Arbalest"
             description="{=5FPhltaZ}Replaces Crossbow with Arbalest, best in Calradia. Has a reinforced bow arm, increasing effective range."
-            icon="PerkHeavyCrossbows"
+            icon="PerkLongRangeCrossbow"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
@@ -847,11 +847,11 @@
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
+            description="{=ko852qPg}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+60% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.50"
+                value="0.60"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -868,16 +868,16 @@
       </Perk>
       <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
-            description="{=00000005}You're well-supplied, make the most of everything, and reload quickly. {newline}{newline} Equipped with an additional 20 crossbows"
+            description="{=00000005}You are well supplied and an expert at spending it well.{newline} {newline}Grants 10 Extra Bolts{newline}"
             icon="PerkWellSupplied"
             perk_list="2">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_bolts_western_extra_captain" />
+                       item="mp_bolts_western_extra" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000167}Anti Equipment Bolts"
-            description="{=00000168}Change Chinese to see the description"
+            description="{=00000168}配备反器材矢，对人和马的伤害很低，但是对于器材具有奇效，可用于远程破坏弩炮和掩体。"
             icon="PerkShieldSplitterAxes"
             perk_list="2">
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
