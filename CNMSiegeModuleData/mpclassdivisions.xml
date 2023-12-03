@@ -1972,20 +1972,20 @@
                    troop_idle_anim="act_idle_bow_1"
                    multiplier="0.46"
                    cost="160"
-                   casual_cost="160"
+                   casual_cost="170"
                    battle_cost="180"
                    icon="Archer_Heavy"
                    melee_ai="50"
                    ranged_ai="50"
-                   armor="40"
-                   movement_speed="0.75"
+                   armor="23"
+                   movement_speed="0.74"
                    combat_movement_speed="0.7"
                    acceleration="3.1">
     <Perks>
       <!-- First perks-->
       <Perk game_mode="all"
-            name="{=00000025}Change Chinese to see the description"
-            description="{=00000026}Change Chinese to see the description"
+            name="{=00000025}护卫弓"
+            description="{=00000026}替换反曲弓为护卫弓，伤害最高的短弓，但拉弓时间较长，精度较差。"
             icon="PerkRecurveBows"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -2012,29 +2012,6 @@
                        slot="Cape"
                        item="mp_imperial_lamellar_shoulders"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Cape"
-                  item="mp_imperial_studded_strip_shoulders" />
-            <Item slot="Gloves"
-                  item="mp_reinforced_leather_vambraces" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_varangian_bra_basic" />
-            <Item slot="Body"
-                  item="mp_imperial_scale_armor" />
-            <Item slot="Gloves"
-                  item="mp_plated_strip_gauntlets" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_varangian_bra_basic" />
-            <Item slot="Gloves"
-                  item="mp_reinforced_leather_vambraces" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -2066,7 +2043,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=vyI2KVKM}Bullseye"
-            description="{=00000041}Change Chinese to see the description"
+            description="{=00000041}你明白应射向目标的何处，你的射击造成额外伤害，爆头尤甚。{newline}{newline}投射物伤害+5%{newline}爆头额外伤害+5%"
             icon="PerkSharpshooters"
             perk_list="2">
         <Effect type="RangedHeadShotDamage"
@@ -2074,13 +2051,10 @@
         <Effect type="DamageDealt"
                 value="0.05"
                 hit_type="Ranged" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_empire_mace" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000169}Anti Equipment Arrows"
-            description="{=00000170}Change Chinese to see the description"
+            description="{=00000170}配备反器材箭，对人和马的伤害很低，但是对于器材具有奇效，可用于远程破坏弩炮和掩体。"
             icon="PerkShieldSplitterAxes"
             perk_list="2">
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -2102,7 +2076,7 @@
                    melee_ai="65"
                    ranged_ai="65"
                    armor="16"
-                   movement_speed="0.71"
+                   movement_speed="0.76"
                    combat_movement_speed="0.7"
                    acceleration="2.8">
     <Perks>
