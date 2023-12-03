@@ -1393,99 +1393,12 @@
                    melee_ai="65"
                    ranged_ai="65"
                    armor="24"
-                   movement_speed="0.80"
+                   movement_speed="0.81"
                    combat_movement_speed="0.8"
                    acceleration="2.2"
                    hitpoints="100">
     <Perks>
       <!-- First perks-->
-	  <Perk game_mode="all"
-            name="{=00000071}Change Chinese to see the description"
-            description="{=00000072}Change Chinese to see the description"
-			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_long_spatha" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_reinforced_flat_kite_shield" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_pilum" />			   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_imperial_lamellar_over_leather"
-                       target="Player" />
-        <!--<RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Cape"
-                  item="mp_varangian_bra_padded" />
-            <Item slot="Body"
-                  item="mp_imperial_mail_over_stripped_leather" />
-            <Item slot="Gloves"
-                  item="mp_guarded_padded_vambrace" />
-            <Item slot="Leg"
-                  item="mp_mail_cavalier_boots" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_varangian_bra_basic" />
-            <Item slot="Body"
-                  item="mp_empire_legion_a" />
-            <Item slot="Gloves"
-                  item="mp_padded_vambrace" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_empire_warrior_padded_armor_shoulder" />
-            <Item slot="Body"
-                  item="mp_imperial_mail_over_stripped_leather" />
-            <Item slot="Gloves"
-                  item="mp_guarded_padded_vambrace" />
-          </Group>
-        </RandomOnSpawnEffect>-->
-      </Perk>
-      <Perk game_mode="all"
-            name="{=bzr6vtXi}Heavy Menavlion"
-            description="{=8wsIzdlM}Replaces Menavlion with Heavy Menavlion, longer but slower.{newline} {newline}Can Crush Through on Overhead swings."
-            icon="PerkPolearms"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_heavy_menavlion" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_pilum" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=H8MYgA6i}Longer Menavlion"
-            description="{=DegRGTT1}Replaces Menavlion with Long Menavlion, longer but slower. Deals more thrust damage and less swing damage."
-            icon="PerkPolearms"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_long_menavlion" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_pilum" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000130}Menavlion"
-            description="{=00000131}Change Chinese to see the description"
-            icon="PerkPolearms"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="empire_polearm_1_t4" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_pilum" />			   
-      </Perk>
       <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
             description="{=IUsT27oV}Provides +9 armor."
@@ -1500,88 +1413,87 @@
                        slot="Body"
                        item="mp_imperial_lamellar_over_leather"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Cape"
-                  item="mp_varangian_bra_padded" />
-            <Item slot="Body"
-                  item="mp_imperial_mail_over_stripped_leather" />
-            <Item slot="Gloves"
-                  item="mp_guarded_padded_vambrace" />
-            <Item slot="Leg"
-                  item="mp_mail_cavalier_boots" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_varangian_bra_basic" />
-            <Item slot="Body"
-                  item="mp_empire_legion_a" />
-            <Item slot="Gloves"
-                  item="mp_padded_vambrace" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_empire_warrior_padded_armor_shoulder" />
-            <Item slot="Body"
-                  item="mp_imperial_mail_over_stripped_leather" />
-            <Item slot="Gloves"
-                  item="mp_guarded_padded_vambrace" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="all"
-            name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000007}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equips the Imperial Tomahawk {newline}{newline} for +40% shield damage"
-			hero_idle_anim="act_aserai_mp_guard_idle"
-            icon="PerkTwoHandedAxe"
+	<Perk game_mode="all"
+            name="{=00000071}Medium Infantry"
+            description="{=00000072}替换双刃枪为剑盾投矛组合，加入步兵方阵成为中流砥柱。{newline}{newline}配备加长帝国重剑{newline}配备盾牌{newline}配备帝国投矛"
+			hero_idle_anim="act_aserai_mp_tribal_warrior_idle_bigshieldperk"
+            icon="PerkHoldTheLine"
             perk_list="1">
-        <Effect type="ShieldDamage"
-                value="0.4" />		
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_battle_axe" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_pilum" />				   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000079}Change Chinese to see the description"
-			hero_idle_anim="act_aserai_mp_guard_idle"
-            icon="PerkTwoHandedAxe"
-            perk_list="1">
-        <Effect type="ShieldDamage"
-                value="0.4" />		
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_empire_long_twohandedaxe" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       item="mp_empire_long_spatha" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_pilum" />					   
+                       item="mp_reinforced_flat_kite_shield" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_pilum" />
       </Perk>
-      <!-- Second perks-->
+	<Perk game_mode="all"
+            name="{=00000130}Menavlion"
+            description="{=00000131}缩短的双刃枪配角旗，枪刃由精炼钢锻造而成，既能看又能打。{newline}{newline}配备角旗双刃枪"
+            icon="PerkPolearms"
+            perk_list="1">
+            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="empire_polearm_1_t4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_pilum" />			   
+      </Perk>
       <Perk game_mode="all"
-            name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000040}Change Chinese to see the description"
-            icon="PerkHorseHunters"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="0.50"
-                    hit_type="Melee"
-                    damage_type="Pierce" />
-            <Effect type="MountDamage"
-                    value="0.5"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
+            name="{=bzr6vtXi}Heavy Menavlion"
+            description="{=8wsIzdlM}Replaces Menavlion with Heavy Menavlion, longer but slower.{newline} {newline}Can Crush Through on Overhead swings."
+            icon="PerkPolearms"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_empire_heavy_menavlion" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_pilum" />
       </Perk>
+	<Perk
+		game_mode="all"
+		name="{=H8MYgA6i}Longer Menavlion"
+		description="{=urTZJjZK}Replaces Menavlion with Long Menavlion, longer but slower. Deals more thrust, less swing damage and capable of dismounting cavalry with thrust attacks."
+		icon="PerkPolearms"
+		perk_list="1">
+		<OnSpawnEffect
+			type="AlternativeEquipmentOnSpawn"
+			slot="Item0"
+			item="mp_empire_long_menavlion" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_pilum" />
+	</Perk>
+      <!-- Second perks-->
+	<Perk
+		game_mode="all"
+      	name="{=E1bKcoaT}Cavalry Breaker"
+	      description="{=mbIhGIcV}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}+75% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
+	      icon="PerkHorseHunters"
+	      perk_list="2">
+      	<ConditionalEffect>
+	      	<Conditions>
+		      	<Condition
+			      	type="AgentStatus"
+				      agent_status="OnFoot" />
+      		</Conditions>
+      		<Effects>
+		      	<Effect
+			      	type="SpeedBonus"
+			      	value="0.50"
+			      	hit_type="Melee"
+			      	damage_type="Pierce" />
+			      <Effect
+			      	type="MountDamage"
+			      	value="0.75"
+			      	hit_type="Melee" />
+			      </Effects>
+		      </ConditionalEffect>
+	</Perk>
       <Perk game_mode="all"
             name="{=DeWp2GjP}Shield Breaker"
             description="{=pqaYbQBy}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+20% Damage to Shields"
@@ -1593,7 +1505,7 @@
       <Perk game_mode="all"
             name="{=Pnzm9fvH}Armor Padding"
             description="{=M5BDshPv}Your padded armor lowers the impact of blunt weapons.{newline} {newline}-40% Damage Taken from Blunt Weapons"
-            icon="PerkArmorUpgrade"
+            icon="PerkArmorPadding"
             perk_list="2">
         <Effect type="DamageTaken"
                 value="-0.4"
