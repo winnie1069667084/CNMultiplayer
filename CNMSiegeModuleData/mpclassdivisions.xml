@@ -2144,36 +2144,39 @@
         </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="all"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkCouchedHeavySpears"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnMount" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="1.5"
-                    is_ratio="true" />
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
+	<Perk
+		game_mode="all"
+		name="{=KGYSP8Sn}Ride Like the Wind"
+		description="{=0o6o94sk}You are an expert at charging in with your mount to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
+		icon="PerkLineBreaker"
+		perk_list="2">
+		<ConditionalEffect>
+			<Conditions>
+				<Condition
+					type="AgentStatus"
+					agent_status="OnMount" />
+			</Conditions>
+			<Effects>
+				<Effect
+					type="SpeedBonus"
+					value="0.5"
+					is_ratio="true" />
+			</Effects>
+		</ConditionalEffect>
+	</Perk>
       <Perk game_mode="all"
             name="{=QDxixJH9}Auxiliary"
-            description="{=00000037}Change Chinese to see the description"
-            icon="PerkGold"
+            description="{=00000037}你在战斗中担任辅助角色，每次助攻都能获得金钱奖励。{newline}{newline}每次助攻，第纳尔+2"
+            icon="PerkAuxiliary"
             perk_list="2">
         <Effect type="GoldGainOnAssist"
-                value="1"
+                value="2"
                 is_disabled_in_warmup="true" />
       </Perk>
       <Perk game_mode="all"
             name="{=fAnbXffX}Cavalry Spear"
             description="{=QXF6TpBp}Grants a longer spear that does more damage.{newline} {newline}Grants Cavalry Spear"
-            icon="PerkLongSpear"
+            icon="PerkCavalrySpear"
             perk_list="2">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
