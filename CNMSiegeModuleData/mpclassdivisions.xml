@@ -1109,7 +1109,7 @@
             icon="PerkToughness"
             perk_list="2">	
         <Effect type="MountManeuver"
-                value="0.30"
+                value="0.20"
                 driven_property="AttributeRiding" />
         <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
           <Group>
@@ -2189,14 +2189,14 @@
                    troop="mp_heavy_cavalry_empire_troop"
                    hero_mount_idle_anim="act_empire_mp_cataphract_mount_idle"
                    troop_mount_idle_anim="act_horse_idle_1"
-                   multiplier="0.22"
+                   multiplier="0.3"
                    cost="200"
                    casual_cost="300"
                    icon="Cavalry_Heavy"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="62"
-                   movement_speed="0.58"
+                   armor="55"
+                   movement_speed="0.56"
                    combat_movement_speed="0.6"
                    acceleration="2.8"
                    hitpoints="100">
@@ -2214,7 +2214,7 @@
       <Perk game_mode="all"
             name="{=ZEdfJJP2}Flanker"
             description="{=wjQCNHTO}Replaces mount with a more maneuverable one. Replaces full barding with a half barding. Faster and more maneuverable.{newline} {newline}Grants Half Barding {newline}Grants Agile Horse"
-            icon="PerkAgileHorses"
+            icon="PerkFlanker"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
@@ -2234,39 +2234,12 @@
                        slot="Cape"
                        item="mp_studded_imperial_neckguard"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Cape"
-                  item="mp_varangian_bra_basic" />
-            <Item slot="Leg"
-                  item="mp_lamellar_plate_boots" />
-            <Item slot="Gloves"
-                  item="mp_lamellar_plate_gauntlets" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_imperial_lamellar_shoulders" />
-            <Item slot="Leg"
-                  item="mp_lamellar_plate_boots" />
-            <Item slot="Gloves"
-                  item="mp_lamellar_plate_gauntlets" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_studded_imperial_neckguard" />
-            <Item slot="Leg"
-                  item="mp_lamellar_plate_boots" />
-            <Item slot="Gloves"
-                  item="mp_lamellar_plate_gauntlets" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
-            name="{=ptxHd7K1}Spearhead"
-            description="{=00000033}Change Chinese to see the description"
-            icon="PerkHeavyLances"
+            name="{=efYCG9u2}Armored Spearhead"
+            description="{=00000033}你领导冲锋，即使敌人使用远程武器也无法阻挡。{newline}{newline}配备重型骑矛{newline}{newline}配备帝国骑兵杖{newline}{newline}受到的远程武器伤害-35%{newline}坐骑受到的远程武器伤害-35%"
+            icon="PerkSpearhead"
             perk_list="2">
         <Effect type="MountDamageTaken"
                 value="-0.35"
@@ -2334,7 +2307,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=98Uh0FjL}Dragoon"
-            description="{=00000034}Change Chinese to see the description"
+            description="{=00000034}你是马背上战斗的专家。{newline}{newline}配备手半斧，挥砍可使骑兵坠马{newline}配备猎弓{newline}{newline}马背上的挥砍速度+10%{newline}马背上使用挥砍武器造成的伤害+10%"
             icon="PerkFightingMadness"
             perk_list="2">
         <ConditionalEffect>
@@ -2355,18 +2328,15 @@
                        slot="Item1"
                        item="mp_empire_battle_axe" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_stronger_reinforced_kite_shield" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
-                       item="mp_strong_recurve_bow" />
+                       item="mp_hunting_bow" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_arrows_barbed_extra" />
+                       item="mp_arrows_steppe_mounted" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
-            description="{=00000082}Change Chinese to see the description"
+            description="{=00000082}你是马上单手作战的专家，擅长冲撞敌人并使用单手武器给予其致命一击。{newline}{newline}配备加长帝国军刀{newline}配备帝国骑兵杖{newline}配备强化橡木筝形盾{newline}骑马状态时，人物和坐骑受到的近战伤害-30%"
             icon="PerkGeneral"
             perk_list="2">
 		<ConditionalEffect>
@@ -2394,8 +2364,8 @@
                        item="mp_stronger_reinforced_kite_shield" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000171}Change Chinese to see the description"
+            name="{=00000100}旗手"
+            description="{=00000171}配备符合本国文化的随机旗帜。{newline}{newline}骑术技能等级+30"
             icon="PerkToughness"
             perk_list="2">	
         <Effect type="MountManeuver"
@@ -8226,7 +8196,7 @@
       <Perk game_mode="all"
             name="{=WEUSMkCp}Mounted Archery"
             description="{=NezswS6S}You are an expert with the bow on a horse, your accuracy is much better.{newline} {newline}-50% Movement Accuracy Penalty{newline}-50% turning Accuracy Penalty"
-            icon="PerkStrongArrows"
+            icon="PerkMountedArchery"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="-0.5"
@@ -8242,9 +8212,6 @@
             description="{=00000154}You are well supplied and an expert at spending it well.{newline} {newline}Grants 20 Extra Arrows"
             icon="PerkWellSupplied"
             perk_list="2">
-        <Effect type="DrivenProperty"
-                driven_property="ReloadSpeed"
-                value="0.125" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="barbed_arrows" />
@@ -8736,475 +8703,6 @@
         <Effect type="DamageTaken"
                 value="-0.30"
                 damage_type="Blunt" />
-      </Perk>
-    </Perks>
-  </MPClassDivision>
-  
-  <!--瓦兰迪亚冠军剑士-->
-  <MPClassDivision id="mp_special_infantry_vlandia"
-                   hero="mp_special_infantry_vlandia_hero"
-                   troop="mp_special_infantry_vlandia_troop"
-                   hero_idle_anim="act_battania_mp_savage_idle"
-                   troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.64"
-                   cost="250"
-                   casual_cost="250"
-                   icon="Special_Swordsman"
-                   melee_ai="80"
-                   ranged_ai="80"
-                   armor="60"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.9"
-                   acceleration="1.6"
-                   hitpoints="100">
-    <Perks>
-      <!-- First perks-->
-	  <Perk game_mode="all"
-            name="{=00000093}Two Handed Sword"
-            description="{=00000094}Change Chinese to see the description"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="vlandia_2hsword_1_t5" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000172}Heavy Shield Infantry"
-            description="{=00000173}Change Chinese to see the description"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_vlandian_long_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_vlandian_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="special_infantry_vlandia_shield" />
-      </Perk>
-      <!-- Second perks-->
-	  <Perk game_mode="all"
-            name="{=00000146}Melee Expert"
-            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed"
-            icon="PerkGeneral"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-		    <Effect type="DamageTaken"
-                    value="-0.35"
-                    hit_type="Ranged" />
-		    <Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee" />
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-			<Effect type="ShieldDamage"
-                    value="0.2" />		
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-    </Perks>
-  </MPClassDivision>
-  
-  <!--帝国瓦兰吉卫队-->
-  <MPClassDivision id="mp_special_infantry_empire"
-                   hero="mp_special_infantry_empire_hero"
-                   troop="mp_special_infantry_empire_troop"
-                   hero_idle_anim="act_battania_mp_savage_idle"
-                   troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.64"
-                   cost="250"
-                   casual_cost="250"
-                   icon="Special_Swordsman"
-                   melee_ai="80"
-                   ranged_ai="80"
-                   armor="60"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.9"
-                   acceleration="1.6"
-                   hitpoints="100">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="all"
-            name="{=00000087}Two Handed Sword"
-            description="{=00000092}Change Chinese to see the description"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="vlandia_2hsword_2_t5" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000172}Heavy Shield Infantry"
-            description="{=00000173}Change Chinese to see the description"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_long_spatha" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_empire_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="special_infantry_empire_shield" />
-      </Perk>
-      <!-- Second perks-->
-	  <Perk game_mode="all"
-            name="{=00000146}Melee Expert"
-            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed"
-            icon="PerkGeneral"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-		    <Effect type="DamageTaken"
-                    value="-0.35"
-                    hit_type="Ranged" />
-		    <Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee" />
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-			<Effect type="ShieldDamage"
-                    value="0.2" />		
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-    </Perks>
-  </MPClassDivision>
-  
-  <!--库赛特土尔扈特-->
-  <MPClassDivision id="mp_special_infantry_khuzait"
-                   hero="mp_special_infantry_khuzait_hero"
-                   troop="mp_special_infantry_khuzait_troop"
-                   hero_idle_anim="act_battania_mp_savage_idle"
-                   troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.64"
-                   cost="250"
-                   casual_cost="250"
-                   icon="Special_Swordsman"
-                   melee_ai="80"
-                   ranged_ai="80"
-                   armor="60"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.9"
-                   acceleration="1.6"
-                   hitpoints="100">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="all"
-            name="{=6hwZwODh}Glaive"
-            description="{=00000059}Change Chinese to see the description"
-			hero_idle_anim="act_aserai_mp_guard_idle"
-            icon="PerkPolearms"
-            perk_list="1">
-            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="khuzait_polearm_1_t4" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000172}Heavy Shield Infantry"
-            description="{=00000173}Change Chinese to see the description"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_khuzait_heavy_sabre" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_khuzait_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="special_infantry_khuzait_shield" />
-      </Perk>
-      <!-- Second perks-->
-	  <Perk game_mode="all"
-            name="{=00000146}Melee Expert"
-            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed"
-            icon="PerkGeneral"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-		    <Effect type="DamageTaken"
-                    value="-0.35"
-                    hit_type="Ranged" />
-		    <Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee" />
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-			<Effect type="ShieldDamage"
-                    value="0.2" />		
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-	  <!-- Third perks
-	  <Perk game_mode="all"
-            name="{=00000150}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="0" />				   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000151}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_spiked_helmet_with_facemask"
-                       target="Player" />		   
-      </Perk>-->
-    </Perks>
-  </MPClassDivision>
-  
-  <!--阿塞莱苏丹亲卫-->
-  <MPClassDivision id="mp_special_infantry_aserai"
-                   hero="mp_special_infantry_aserai_hero"
-                   troop="mp_special_infantry_aserai_troop"
-                   hero_idle_anim="act_battania_mp_savage_idle"
-                   troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.64"
-                   cost="250"
-                   casual_cost="250"
-                   icon="Special_Swordsman"
-                   melee_ai="80"
-                   ranged_ai="80"
-                   armor="60"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.9"
-                   acceleration="1.6"
-                   hitpoints="100">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="all"
-            name="{=00000097}Change Chinese to see the description"
-            description="{=00000098}Change Chinese to see the description"
-			hero_idle_anim="act_aserai_mp_guard_idle"
-            icon="PerkBardiche"
-            perk_list="1">				   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="aserai_2haxe_3_t5" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000172}Heavy Shield Infantry"
-            description="{=00000173}Change Chinese to see the description"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_aserai_ranger_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="special_infantry_aserai_shield" />
-      </Perk>
-      <!-- Second perks-->
-	  <Perk game_mode="all"
-            name="{=00000146}Melee Expert"
-            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed"
-            icon="PerkGeneral"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-		    <Effect type="DamageTaken"
-                    value="-0.35"
-                    hit_type="Ranged" />
-		    <Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee" />
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-			<Effect type="ShieldDamage"
-                    value="0.2" />		
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-    </Perks>
-  </MPClassDivision>
-  
-  <!--斯特吉亚皇家侍卫-->
-  <MPClassDivision id="mp_special_infantry_sturgia"
-                   hero="mp_special_infantry_sturgia_hero"
-                   troop="mp_special_infantry_sturgia_troop"
-                   hero_idle_anim="act_battania_mp_savage_idle"
-                   troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.64"
-                   cost="250"
-                   casual_cost="250"
-                   icon="Special_Swordsman"
-                   melee_ai="80"
-                   ranged_ai="80"
-                   armor="60"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.9"
-                   acceleration="1.6"
-                   hitpoints="100">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="all"
-            name="{=00000161}Change Chinese to see the description"
-            description="{=00000162}Change Chinese to see the description"
-			hero_idle_anim="act_aserai_mp_guard_idle"
-            icon="PerkTwoHandedAxe"
-            perk_list="1">				   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="sturgia_2haxe_2_t5" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000172}Heavy Shield Infantry"
-            description="{=00000173}Change Chinese to see the description"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_noble_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_sturgia_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="special_infantry_sturgia_shield" />
-      </Perk>
-      <!-- Second perks-->
-	  <Perk game_mode="all"
-            name="{=00000146}Melee Expert"
-            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed"
-            icon="PerkGeneral"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-		    <Effect type="DamageTaken"
-                    value="-0.35"
-                    hit_type="Ranged" />
-		    <Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee" />
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-			<Effect type="ShieldDamage"
-                    value="0.2" />		
-          </Effects>
-        </ConditionalEffect>
-      </Perk>
-    </Perks>
-  </MPClassDivision>
-  
-  <!--巴旦尼亚高地英雄-->
-  <MPClassDivision id="mp_special_infantry_battania"
-                   hero="mp_special_infantry_battania_hero"
-                   troop="mp_special_infantry_battania_troop"
-                   hero_idle_anim="act_battania_mp_savage_idle"
-                   troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.64"
-                   cost="250"
-                   casual_cost="250"
-                   icon="Special_Swordsman"
-                   melee_ai="80"
-                   ranged_ai="80"
-                   armor="60"
-                   movement_speed="0.80"
-                   combat_movement_speed="0.9"
-                   acceleration="1.6"
-                   hitpoints="100">
-    <Perks>
-      <!-- First perks-->
-      <Perk game_mode="all"
-            name="{=00000163}Change Chinese to see the description"
-            description="{=00000164}Change Chinese to see the description"
-            icon="PerkBetterSwords"
-            perk_list="1">				   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="battania_2hsword_4_t4" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000165}Change Chinese to see the description"
-            description="{=00000166}Change Chinese to see the description"
-            icon="PerkBetterSwords"
-            perk_list="1">				   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="reaper_falx" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000172}Heavy Shield Infantry"
-            description="{=00000173}Change Chinese to see the description"
-			hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_battania_noble_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_battnia_heavy_mace" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="special_infantry_battania_shield" />
-      </Perk>
-      <!-- Second perks-->
-	  <Perk game_mode="all"
-            name="{=00000146}Melee Expert"
-            description="{=00000147}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+15% Damage with Melee Weapons"
-            icon="PerkGeneral"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-		    <Effect type="DamageTaken"
-                    value="-0.35"
-                    hit_type="Ranged" />
-		    <Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee" />
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-			<Effect type="ShieldDamage"
-                    value="0.2" />		
-          </Effects>
-        </ConditionalEffect>
       </Perk>
     </Perks>
   </MPClassDivision>
