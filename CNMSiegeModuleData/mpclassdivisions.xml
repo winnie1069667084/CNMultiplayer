@@ -1525,20 +1525,37 @@
                    icon="Infantry_Heavy"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="40"
+                   armor="39"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
-	  <Perk game_mode="all"
+	<Perk game_mode="all"
+            name="{=00000188}中流砥柱"
+            description="{=00000086}军团步兵的标准配置，强大的防御力成为队伍的绝对中坚。{newline}{newline}配备优质钢帝国军刀{newline}配备强化橡木筝形盾{newline}配备帝国投矛{newline}护甲+5"
+            hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+、
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="empire_sword_5_t4" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_stronger_reinforced_kite_shield" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_pilum" />
+		<OnSpawnEffect type="ArmorOnSpawn"
+                       value="5" />				   
+      </Perk>
+	<Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000085}Change Chinese to see the description"
+            description="{=00000085}你对各类斧战得心应手，对木头则深恶痛绝。{newline}{newline}配备帝国重斧{newline}配备帝国投矛{newline}对盾伤害+40%"
             icon="PerkHeavyAxe"
             perk_list="1">
         <Effect type="ShieldDamage"
-                value="0.4" />
-		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="5" />		
+                value="0.4" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_empire_heavy_axe" />
@@ -1546,9 +1563,73 @@
                        slot="Item2"
                        item="mp_pilum" />
       </Perk>
-      <Perk game_mode="all"
+	<Perk
+		game_mode="all"
+		name="{=DrWY4I8X}Mace Specialist"
+            description="{=00000032}你已学会如何对抗着甲敌人。{newline}{newline}配备帝国杖{newline}配备帝国投矛"
+		icon="PerkMaces"
+		perk_list="1">
+		<OnSpawnEffect
+			type="AlternativeEquipmentOnSpawn"
+			slot="Item0"
+			item="mp_empire_mace" />
+		<OnSpawnEffect
+                  type="AlternativeEquipmentOnSpawn"
+                  slot="Item2"
+                  item="mp_pilum" />
+	</Perk>
+	  <Perk game_mode="all"
+            name="{=00000100}旗手"
+            description="{=00000101}配备符合本国文化的随机旗帜。{newline}{newline}配备帝国投矛{newline}移动速度+5%"
+            icon="PerkToughness"
+            perk_list="1">
+            <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="empire_sword_5_t4" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_pilum" />
+		<ConditionalEffect>
+          <Conditions>
+            <Condition type="AgentStatus"
+                       agent_status="OnFoot" />
+          </Conditions>
+          <Effects>
+            <Effect type="DrivenProperty"
+                    driven_property="MaxSpeedMultiplier"
+                    value="0.05" />
+          </Effects>
+        </ConditionalEffect>	
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_duty_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_courage_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="standard_of_discipline_t3" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="phalanx_standard_t1" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="fulcum_standard_t2" />
+          </Group>
+		  <Group>
+            <Item slot="ExtraWeaponSlot"
+                  item="testudo_standard_t3" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
+      <!--Perk game_mode="all"
             name="{=DrWY4I8X}Mace Specialist"
-            description="{=00000032}Change Chinese to see the description"
+            description="{=00000032}你已学会如何对抗着甲敌人。{newline}{newline}配备重杖{newline}配备帝国投矛{newline}护甲+5"
             icon="PerkMaces"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -1557,26 +1638,8 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_pilum" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=C9ufRSsL}Sword and Shield"
-            description="{=00000086}Change Chinese to see the description"
-            hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="5" />	
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_empire_long_spatha" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_stronger_reinforced_kite_shield" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_pilum" />			   
-      </Perk>
-      <Perk game_mode="all"
+      </Perk-->
+      <!--Perk game_mode="all"
             name="{=00000008}Sword and Shield Plus"
             description="{=00000009}Equipped with a single-player sword, paired with a shield {newline} with Imperial Spear {newline} armor +5"
             hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
@@ -1647,69 +1710,29 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_pilum" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000101}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-		<ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    driven_property="MaxSpeedMultiplier"
-                    value="0.05" />
-          </Effects>
-        </ConditionalEffect>	
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
-          <Group>
-            <Item slot="ExtraWeaponSlot"
-                  item="standard_of_duty_t1" />
-          </Group>
-		  <Group>
-            <Item slot="ExtraWeaponSlot"
-                  item="standard_of_courage_t2" />
-          </Group>
-		  <Group>
-            <Item slot="ExtraWeaponSlot"
-                  item="standard_of_discipline_t3" />
-          </Group>
-		  <Group>
-            <Item slot="ExtraWeaponSlot"
-                  item="phalanx_standard_t1" />
-          </Group>
-		  <Group>
-            <Item slot="ExtraWeaponSlot"
-                  item="fulcum_standard_t2" />
-          </Group>
-		  <Group>
-            <Item slot="ExtraWeaponSlot"
-                  item="testudo_standard_t3" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
-            name="{=Do4Mmbs9}Plated Armor"
-            description="{=00000070}Change Chinese to see the description"
+            name="{=00000189}帝国鳞甲"
+            description="{=00000070}帝国先进的盔甲锻造工艺使得鳞甲可以大规模装备至军团，成为帝国军团战无不胜的秘诀。{newline}{newline}护甲+10{newline}受到的挥砍伤害-10%{newline}受到的穿刺伤害-10%"
             icon="PerkArmorUpgrade"
             perk_list="2">
         <Effect type="DamageTaken"
                 value="-0.10"
                 damage_type="Cut" />
+        <Effect type="DamageTaken"
+                value="-0.10"
+                damage_type="Pierce" />
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="10" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+	  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_imperial_lamellar_shoulders"
                        target="Player" />			   
       </Perk>
       <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000039}Change Chinese to see the description"
+            description="{=00000039}你是步战反骑的专家，精于利用骑兵的速度还施彼身。{newline}{newline}配备长矛{newline}近战武器对坐骑伤害+100%{newline}近战武器穿刺攻击的相对速度伤害加成+50%"
             icon="PerkHorseHunters"
             perk_list="2">
         <ConditionalEffect>
@@ -1723,22 +1746,18 @@
                     hit_type="Melee"
                     damage_type="Pierce" />
             <Effect type="MountDamage"
-                    value="0.5"
+                    value="1.0"
                     hit_type="Melee" />
           </Effects>
         </ConditionalEffect>
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_western_long_spear" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_varangian_bra_royal"
-                       target="Player" />			   
+                       item="mp_western_long_spear" />		   
       </Perk>
       <Perk game_mode="all"
             name="{=sQCpO6sp}Melee Expert"
             description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
-            icon="PerkGeneral"
+            icon="PerkMeleeExpert"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -1754,10 +1773,6 @@
                     value="0.05" />
           </Effects>
         </ConditionalEffect>
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_varangian_bra_royal"
-                       target="Player" />
       </Perk>
 	  <!-- Third perks
 	  <Perk game_mode="all"
