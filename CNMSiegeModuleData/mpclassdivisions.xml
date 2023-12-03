@@ -265,7 +265,7 @@
       </Perk>
 	<Perk game_mode="all"
             name="{=Dj64aJKQ}Billhook"
-            description="{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed."
+            description="{=uTBqXeKJ}Grants a Billhook, effective at long range infantry support, two handed."
             icon="PerkPolearms"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -728,12 +728,12 @@
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=dTpTyUtb}Replenished"
-            description="{=R2X605jB}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 10 Extra Bolts{newline} {newline}+25% Reload Speed"
+            description="{=00000178}You are well supplied and an expert at spending it well, you reload faster.{newline} {newline}Grants 10 Extra Bolts{newline} {newline}+10% Reload Speed"
             icon="PerkWellSupplied"
             perk_list="2">
         <Effect type="DrivenProperty"
                 driven_property="ReloadSpeed"
-                value="0.125" />
+                value="0.10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_bolts_western_extra" />
@@ -751,7 +751,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=RzwDaddH}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
+            description="{=ko852qPg}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Strong Bolts{newline} {newline}+50% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
