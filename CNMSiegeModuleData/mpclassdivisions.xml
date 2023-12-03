@@ -1187,64 +1187,66 @@
                    troop="mp_skirmisher_empire_troop"
                    hero_idle_anim="act_empire_mp_recruit_idle"
                    troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.86"
+                   multiplier="0.82"
                    cost="100"
                    icon="Special_JavelinThrower"
                    melee_ai="40"
                    ranged_ai="40"
                    armor="10"
-                   movement_speed="0.81"
+                   movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="1.8">
     <Perks>
       <!-- First perks-->
+	<Perk
+		game_mode="all"
+		name="{=FLBYsvxp}Long Sword"
+		description="{=sFJfF1Gb}Replaces Gladius with Spatha, longer and deals more damage."
+		icon="PerkBetterSwords"
+		perk_list="1">
+		<OnSpawnEffect
+			type="AlternativeEquipmentOnSpawn"
+			slot="Item2"
+			item="mp_empire_spatha" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />	
+	</Perk>
+	<Perk game_mode="all"
+            name="{=00000182}尖刺棒"
+            description="{=00000183}尖刺棒挥砍时造成刺击伤害，对抗着甲敌人时很有效。{newline}{newline}配备尖刺棒"
+            icon="PerkMaces"
+            perk_list="1">
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="empire_mace_1_t2" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />				   
+      </Perk>
       <Perk game_mode="all"
-            name="{=p06HSYkq}Specialist"
-            description="{=aZIG2v6p}You are one of the best among your troops, you throw more accurately.{newline} {newline}+50% Initial Ranged Accuracy{newline}+80% Faster Ranged Accuracy Increase"
+            name="{=00000179}Skirmisher"
+            description="{=00000180}作为散兵你游离于战阵外，对敌人进行远程骚扰。{newline}{newline}配备帝国标枪"
             icon="PerkHeavierJavelins"
             perk_list="1">
-        <Effect type="DrivenProperty"
-                value="-0.5"
-                driven_property="WeaponWorstUnsteadyAccuracyPenalty"
-                is_ratio="true" />
-        <Effect type="DrivenProperty"
-                value="-0.8"
-                driven_property="WeaponBestAccuracyWaitTime"
-                is_ratio="true" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_empire_javelin" />		   
+                       item="mp_empire_javelin" />	   
       </Perk>
       <Perk game_mode="all"
-            name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000006}Equipped with Western spears. {newline}{newline} Melee weapon +50% Mount damage with Western Spear. {newline}{newline} Melee Weapon damage to mount +50%"
-            icon="PerkHorseHunters"
-            perk_list="1">
-        <Effect type="MountDamage"
-                value="0.5"
-                hit_type="Melee" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_western_spear" />			   
-      </Perk>
-      <Perk game_mode="all"
-            name="{=v2WKbNZo}Rapid Throws"
-            description="{=Ha8HVTck}You are able throw javelins much quicker.{newline} {newline}Grants additional Javelins{newline} {newline}+5% Missle Release Speed {newline} +10% Ready Speed"
+            name="{=00000184}事倍功半"
+            description="{=00000185}配备伤害较低的标枪，但数量更多。{newline}{newline}配备轻型标枪"
             icon="PerkMoreThrowingSpears"
             perk_list="1">
-        <Effect type="ThrowingWeaponSpeed"
-                value="0.05" />
-        <Effect type="DrivenProperty"
-                value="0.1"
-                driven_property="ThrustOrRangedReadySpeedMultiplier" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_light_javelin" />			   
       </Perk>
+
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=Yvk8a2tb}Footwork"
-            description="{=9MSG1p0W}You have impeccable footwork, you aim less affected while moving.{newline} {newline}+80% accuracy when moving{newline}+5% Movement speed"
+            description="{=00000181}你拥有无懈可击的步法。{newline}{newline}移动速度+5%"
             icon="PerkFleetFooted"
             perk_list="2">
         <ConditionalEffect>
@@ -1252,42 +1254,76 @@
             <Condition type="AgentStatus"
                        agent_status="OnFoot" />
           </Conditions>
-          <Effects>
-            <Effect type="DrivenProperty"
-                    value="-0.8"
-                    driven_property="WeaponWorstMobileAccuracyPenalty"
-                    is_ratio="true" />
             <Effect type="DrivenProperty"
                     driven_property="MaxSpeedMultiplier"
                     value="0.05" />
-          </Effects>
         </ConditionalEffect>
       </Perk>
       <Perk game_mode="all"
-            name="{=00000048}Change Chinese to see the description"
-            description="{=00000049}Change Chinese to see the description"
-            icon="PerkBetterSwords"
+            name="{=00000186}Spearman"
+            description="{=00000006}Equipped with Simple Commoner Spear.{newline}{newline}Melee Weapon damage to mount +50%"
+            icon="PerkLongSpear"
             perk_list="2">
+        <Effect type="MountDamage"
+                value="0.5"
+                hit_type="Melee" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_empire_spatha" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_empire_axe" />			   
+                       item="western_spear_1_t2" />			   
       </Perk>
       <Perk game_mode="all"
             name="{=rTPnyeJ3}Shield Wall"
-            description="{=8B7pGxj4}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline}-30% Damage taken from Ranged Weapons"
-            icon="PerkStrongerShield"
+            description="{=8B7pGxj4}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline}-15% Damage taken from Ranged Weapons"
+            icon="PerkShieldWall"
             perk_list="2">
         <Effect type="DamageTaken"
-                value="-0.30"
+                value="-0.15"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_lighter_reinforced_kite_shield" />
       </Perk>
-	  <Perk game_mode="all"
+      <Perk game_mode="all"
+            name="{=00000159}Bareman"
+            description="{=00000187}You choose to abandon all your equipment and make a living scavenging on the battlefield...{newline} {newline}+8% Maximum Running Speed"
+            icon="PerkFleetFooted"
+            perk_list="2">
+        <Effect type="DrivenProperty"
+                value="0.08"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="-10" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       target="Troops"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="null" />
+      </Perk>
+	  <!--Perk game_mode="all"
             name="{=00000140}Change Chinese to see the description"
             description="{=00000141}Change Chinese to see the description"
             icon="PerkAxes"
@@ -1295,16 +1331,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="tzkurion_axe_t3" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=VI4gQt8Q}Mace"
-            description="{=pblXb1ae}Grants Mace, effective against armored opponents."
-            icon="PerkMaces"
-            perk_list="2">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="empire_mace_1_t2" />			   
-      </Perk>
+      </Perk-->
       <!-- Third perks 
 	<Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
