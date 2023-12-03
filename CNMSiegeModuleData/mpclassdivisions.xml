@@ -896,8 +896,8 @@
                    casual_cost="200"
                    battle_cost="150"
                    icon="Cavalry_Light"
-                   melee_ai="65"
-                   ranged_ai="65"
+                   melee_ai="50"
+                   ranged_ai="50"
                    armor="19"
                    movement_speed="0.77"
                    combat_movement_speed="0.6"
@@ -983,13 +983,13 @@
                    troop="mp_heavy_cavalry_vlandia_troop"
                    hero_mount_idle_anim="act_vlandia_mp_knight_mount_idle"
                    troop_mount_idle_anim="act_horse_idle_1"
-                   multiplier="0.24"
+                   multiplier="0.3"
                    cost="200"
                    casual_cost="300"
                    icon="Cavalry_Heavy"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="57"
+                   armor="50"
                    movement_speed="0.57"
                    combat_movement_speed="0.6"
                    acceleration="2.8"
@@ -1008,7 +1008,7 @@
       <Perk game_mode="all"
             name="{=ZEdfJJP2}Flanker"
             description="{=bZyzMko7}Replaces mount with a faster one. Replaces full barding with a half barding. Faster and more maneuverable.{newline} {newline}Grants Half Barding {newline}Grants Faster Horse"
-            icon="PerkAgileHorses"
+            icon="PerkFlanker"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Horse"
@@ -1048,7 +1048,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=hchDYAKL}Lancer"
-            description="{=1lnKj0cm}You are an expert at fighting on horseback.{newline} {newline}Grants Heavy Lance{newline} {newline}+15% Speed Bonus with Pierce Attacks from mount"
+            description="{=lKdJbwYz}You are an expert at fighting on horseback.{newline} {newline}Grants Heavy Lance{newline} {newline}+15% Speed Bonus with Pierce Attacks from mount"
             icon="PerkCouchedHeavySpears"
             perk_list="2">
         <ConditionalEffect>
@@ -1070,17 +1070,17 @@
       </Perk>
       <Perk game_mode="all"
             name="{=7qB0WKMW}Generous Lord"
-            description="{=00000031}Change Chinese to see the description"
-            icon="PerkGold"
+            description="{=00000031}You let the peasants do the dirty work and pay them for their services while you get all the glory for the kills.{newline} {newline}Allies get +5 Gold for Assists to your Kills."
+            icon="PerkGenerousLord"
             perk_list="2">
         <Effect type="RewardGoldOnAssist"
-                value="3"
+                value="5"
                 is_disabled_in_warmup="true" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
-            description="{=00000081}Change Chinese to see the description"
-            icon="PerkGeneral"
+            description="{=00000081}你是马上单手作战的专家，擅长冲撞敌人并使用单手武器给予其致命一击。{newline}{newline}配备杖{newline}配备宽扇形盾{newline}骑马时人物和坐骑受到的近战伤害-30%"
+            icon="PerkLineBreaker"
             perk_list="2">
 		<ConditionalEffect>
           <Conditions>
@@ -1101,15 +1101,15 @@
                        item="mp_vlandian_cavalry_mace" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_heavy_heater_shield" />
+                       item="mp_wide_heater_shield" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000171}Change Chinese to see the description"
+            name="{=00000100}旗手"
+            description="{=00000171}配备符合本国文化的随机旗帜。{newline}{newline}骑术技能等级+30"
             icon="PerkToughness"
             perk_list="2">	
         <Effect type="MountManeuver"
-                value="0.20"
+                value="0.30"
                 driven_property="AttributeRiding" />
         <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
           <Group>
