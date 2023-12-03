@@ -1941,7 +1941,7 @@
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=YVwl3BgB}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
