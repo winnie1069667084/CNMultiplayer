@@ -2778,25 +2778,25 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_fast_short_bow"
+                       item="mp_steppe_short_bow"
                        target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_fast_short_bow"
+                       item="mp_steppe_short_bow"
                        target="Troops" />
       </Perk>
       <Perk game_mode="all"
             name="{=i6OSr5QM}Range Bow"
             description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
-            icon="PerkLongBows"
+            icon="PerkLongRangeBow"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_short_bow"
+                       item="mp_steppe_short_bow"
                        target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_short_bow"
+                       item="mp_steppe_short_bow"
                        target="Troops" />
       </Perk>
       <Perk game_mode="all"
@@ -2806,11 +2806,11 @@
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_superior_bow"
+                       item="mp_steppe_superior_bow"
                        target="Player" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_superior_bow"
+                       item="mp_steppe_superior_bow"
                        target="Troops" />
       </Perk>
       <!-- Second perks-->
@@ -2833,11 +2833,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=URPm3XjU}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
+            description="{=ha2b1k4u}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.50"
+                value="0.60"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -2846,7 +2846,7 @@
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="2.0"
@@ -2869,20 +2869,20 @@
                    troop_idle_anim="act_idle_bow_1"
                    multiplier="0.46"
                    cost="160"
-                   casual_cost="160"
+                   casual_cost="170"
                    battle_cost="180"
                    icon="Archer_Heavy"
                    melee_ai="50"
                    ranged_ai="50"
-                   armor="45"
-                   movement_speed="0.75"
+                   armor="28"
+                   movement_speed="0.73"
                    combat_movement_speed="0.7"
                    acceleration="3.0">
     <Perks>
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=6hwZwODh}Glaive"
-            description="{=wJv3Aljs}Replaces Sword with Glaive, a Khuzait polearm. Making you a force to be reckoned with in melee combat{newline} {newline}Grants Glaive{newline}Grants +5% movement speed"
+            description="{=q5G5Hxbi}Replaces Sword with Glaive, a Khuzait polearm. Making you a force to be reckoned with in melee combat{newline} {newline}Grants Glaive{newline}Grants +5% movement speed"
             icon="PerkPolearms"
             perk_list="1">
         <Effect type="DrivenProperty"
@@ -2899,7 +2899,7 @@
       <Perk game_mode="all"
             name="{=6W3s9mVH}Fighter"
             description="{=bxUVwypQ}You know how to handle yourself in melee, grants a shield and a mace.{newline} {newline}Grants Small Metal Shield{newline}Grants Heavy Mace{newline}+7% movement speed"
-            icon="PerkHoldTheLine"
+            icon="PerkFighter"
             perk_list="1">
         <Effect type="DrivenProperty"
                 value="0.07"
@@ -2933,7 +2933,7 @@
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="2.0"

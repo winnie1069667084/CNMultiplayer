@@ -1437,7 +1437,7 @@
 					id="Item.mp_khuzait_heavy_sabre" />
 				<equipment
 					slot="Item2"
-					id="Item.mp_arrows_steppe_extra" />
+					id="Item.mp_arrows_steppe" />
 				<equipment
 					slot="Head"
 					id="Item.mp_khuzait_noble_helmet_with_neckguard" />
