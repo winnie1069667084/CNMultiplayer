@@ -420,10 +420,10 @@
                        slot="Item3"
                        item="mp_western_long_spear" />
       </Perk>
-	<Perk game_mode="all"
+	  <Perk game_mode="all"
             name="{=00000001}Bastard sword"
             description="{=00000002}Equipped with a Bastard sword, which can be used with two hands after the shield is broken. {newline}{newline} equipped with Bastard sword{newline}Grants Shield"
-		icon="PerkLargerShields"
+		    icon="PerkLargerShields"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -431,7 +431,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equipped with axe {newline} for shield damage +40%{newline} Slash damage +10%{newline} Armor +5"
+            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equipped with axe {newline} for shield damage +40%{newline} Slash damage +10%"
             icon="PerkHeavyAxe"
             perk_list="1">
 		<Effect type="DamageDealt"
@@ -440,8 +440,6 @@
                     damage_type="Cut" />
         <Effect type="ShieldDamage"
                 value="0.4" />
-		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="5" />	
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_hood"
@@ -507,7 +505,7 @@
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
-            description="{=00000003}The armor is made of a higher grade material. {newline}{newline} Armor +13"
+            description="{=6M5TbvlU}The armor is made of a higher grade material. {newline}{newline} Armor +13"
             icon="PerkToughness"
             perk_list="2">
         <OnSpawnEffect type="ArmorOnSpawn"
@@ -1548,7 +1546,7 @@
                        item="mp_pilum" />
 		<OnSpawnEffect type="ArmorOnSpawn"
                        value="5" />				   
-      </Perk>
+    </Perk>
 	<Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
             description="{=00000085}你对各类斧战得心应手，对木头则深恶痛绝。{newline}{newline}配备帝国重斧{newline}配备帝国投矛{newline}对盾伤害+40%"
@@ -3649,9 +3647,6 @@
                        slot="Item0"
                        item="mp_aserai_strong_twohanded_axe" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_throwing_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_aserai_crown"
                        target="Player" />
@@ -3679,9 +3674,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_aserai_two_handed_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_throwing_axe" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_aserai_crown"
@@ -3759,8 +3751,8 @@
         </RandomOnSpawnEffect>
       </Perk>
       <Perk game_mode="all"
-            name="{=00000011}Double cane + flying axe"
-            description="{=00000012}Equipped with a double cane, effective against a number of enemies, using both hands. {newline}{newline} Equipped with two canes {newline} equipped with three bags of flying axes {newline} Max running speed +5%"
+            name="{=00000011}Double cane"
+            description="{=00000012}Equipped with a double cane, effective against a number of enemies, using both hands. {newline}{newline} Equipped with twohanded canes {newline} equipped with flying axes {newline} Max running speed +5%"
             hero_idle_anim="act_aserai_mp_guard_idle_2hperk"
             icon="PerkTwoHandedMaul"
             perk_list="1">
@@ -3859,37 +3851,6 @@
                   item="mp_brass_lamellar_shoulder_white" />
           </Group>
         </RandomOnSpawnEffect>
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000114}Change Chinese to see the description"
-            description="{=00000115}Change Chinese to see the description"
-            hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="18" />					   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="southern_broad_2hsword_t4" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_aserai_throwing_axe" />			   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_aserai_crown"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_aserai_archer_armor"
-                       target="Player" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -4180,11 +4141,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=URPm3XjU}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
+            description="{=ko852qPg}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.50"
+                value="0.60"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -4517,13 +4478,13 @@
                    troop="mp_light_infantry_sturgia_troop"
                    hero_idle_anim="act_sturgia_mp_warrior_idle"
                    troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.93"
+                   multiplier="0.88"
                    cost="100"
                    icon="Infantry_Light"
                    melee_ai="40"
                    ranged_ai="40"
                    armor="17"
-                   movement_speed="0.82"
+                   movement_speed="0.81"
                    combat_movement_speed="0.8"
                    acceleration="2.4">
     <Perks>
@@ -4540,6 +4501,7 @@
       <Perk game_mode="all"
             name="{=FLBYsvxp}Long Sword"
             description="{=tbQZitYG}Replaces Short Sword, longer and deals more damage."
+		hero_idle_anim="act_sturgia_mp_warrior_idle"
             icon="PerkLongerSwords"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -4556,34 +4518,9 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_battania_civil_cape"
-                       target="Player" />		   
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_sturgian_helmet_base" />
-            <Item slot="Gloves"
-                  item="mp_buttoned_leather_bracers" />
-            <Item slot="Cape"
-                  item="mp_battania_civil_cape" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_nasalhelm_over_leather" />
-            <Item slot="Body"
-                  item="mp_nordic_lamellar_vest" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_battania_civil_cape" />
-            <Item slot="Gloves"
-                  item="mp_highland_gloves" />
-            <Item slot="Body"
-                  item="mp_nordic_lamellar_vest" />
-          </Group>
-        </RandomOnSpawnEffect>
+                       target="Player" />
       </Perk>
-	  <Perk game_mode="all"
+	  <!--<Perk game_mode="all"
             name="{=00000132}Change Chinese to see the description"
             description="{=00000133}Change Chinese to see the description"
             icon="PerkToughness"
@@ -4612,8 +4549,8 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="sturgia_axe_2_t2" />			   
-      </Perk>
-	  <Perk game_mode="all"
+      </Perk>-->
+	  <!--Perk game_mode="all"
             name="{=00000136}Change Chinese to see the description"
             description="{=00000137}Change Chinese to see the description"
             icon="PerkToughness"
@@ -4627,7 +4564,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="northern_battle_axe_t3" />			   
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=HbngeqNq}Spearman"
@@ -4635,7 +4572,7 @@
             icon="PerkSpears"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.5" />
+                value="0.75" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_sturgia_short_spear" />
@@ -4660,7 +4597,7 @@
       <Perk game_mode="all"
             name="{=LB32tvzS}Die Hard"
             description="{=ljy7FbRB}Your warrior code forbids you from dying. You are more resistant to damage taken.{newline} {newline}Grants Bigger Shield{newline} {newline}-10% Damage Taken"
-            icon="PerkArmorUpgrade"
+            icon="PerkDieHard"
             perk_list="2">
         <Effect type="DamageTaken"
                 value="-0.1" />
@@ -4722,13 +4659,13 @@
                    troop="mp_skirmisher_sturgia_troop"
                    hero_idle_anim="act_sturgia_mp_brigand_idle"
                    troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.76"
+                   multiplier="0.72"
                    cost="110"
                    icon="Special_JavelinThrower"
                    melee_ai="50"
                    ranged_ai="50"
                    armor="10"
-                   movement_speed="0.82"
+                   movement_speed="0.81"
                    combat_movement_speed="0.9"
                    acceleration="1.8">
     <Perks>
@@ -4772,7 +4709,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=C9ufRSsL}Sword and Shield"
-            description="{=TsleMQL2}Grants a Long Sword and a bigger shield."
+            description="{=skPA7s3Q}Grants a Long Sword and a bigger shield."
             icon="PerkHoldTheLine"
 			hero_idle_anim="act_sturgia_mp_brigand_idle_largershieldperk"
             perk_list="1">
@@ -4784,9 +4721,9 @@
                        item="mp_sturgia_old_shield_b" />
       </Perk>
       <Perk game_mode="all"
-            name="{=4t6A2jY8}Axe and Shield"
+            name="{=EcYwrKTf}Heavy Axe and Shield"
             description="{=Isppj4D1}Grants a better Axe and a bigger shield."
-            icon="PerkAxes"
+            icon="PerkHeavyAxe"
             hero_idle_anim="act_sturgia_mp_brigand_idle_largershieldperk"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -4825,7 +4762,7 @@
       <Perk game_mode="all"
             name="{=blqDgCtL}Big Game Hunter"
             description="{=cQHeVV3V}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+50% Ranged Damage to Mounts"
-            icon="PerkThrowingSpears"
+            icon="PerkThrowingSpear"
             perk_list="2">
         <Effect type="MountDamage"
                 value="0.5"
@@ -4841,14 +4778,14 @@
                    troop="mp_shock_infantry_sturgia_troop"
                    hero_idle_anim="act_sturgia_mp_ulfhednar_idle"
                    troop_idle_anim="act_idle_2h_1"
-                   multiplier="0.62"
+                   multiplier="0.59"
                    cost="130"
                    casual_cost="120"
                    icon="Special_Axeman"
                    melee_ai="65"
                    ranged_ai="65"
-                   armor="2"
-                   movement_speed="0.81"
+                   armor="7"
+                   movement_speed="0.83"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
                    hitpoints="100">
@@ -4856,7 +4793,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=KXwN1PW4}Great Axe"
-            description="{=RV6BCPvg}Replaces Axe with a longer and heavier axe. Extra effective against shields."
+            description="{=pjq5Nkn4}Replaces Axe with a longer and heavier axe. Extra effective against shields."
             icon="PerkTwoHandedAxe"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -4865,8 +4802,9 @@
       </Perk>
       <Perk game_mode="all"
             name="{=HoVaJ0BH}Two Handed Maul"
-            description="{=DZ2g8IZr}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
+            description="{=K5ab4UuF}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
             icon="PerkTwoHandedMaul"
+		hero_idle_anim="act_sturgia_mp_berserker_two_handed_maul_perk_idle"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
@@ -4876,6 +4814,7 @@
             name="{=WqJdn2ET}Berserker Skin"
             description="{=H6y5zvHY}A thick layer of muscles protects you from cuts and bruises.{newline} {newline}+7 armor{newline}-30% Blunt damage taken"
             icon="PerkToughness"
+		hero_idle_anim="act_sturgia_mp_berserker_shield_breaker_perk_idle"
             perk_list="1">
         <Effect type="DamageTaken"
                 value="-0.30"
@@ -5007,7 +4946,7 @@
                    icon="Infantry_Heavy"
                    melee_ai="80"
                    ranged_ai="80"
-                   armor="48"
+                   armor="45"
                    movement_speed="0.78"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
@@ -5015,14 +4954,14 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=lWl3W0do}Padded Armor"
-            description="{=00000047}Change Chinese to see the description"
+            description="{=00000047}你在护甲之下穿着多层填充内衬。{newline}{newline}护甲+13{newline}受到的钝击伤害-20%"
             icon="PerkArmorUpgrade"
             perk_list="1">
         <Effect type="DamageTaken"
                 value="-0.20"
                 damage_type="Blunt" />
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
+                       value="13" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -5030,35 +4969,58 @@
       </Perk>
       <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equipped with axe {newline} for shield damage +40%{newline} Slash damage +10%{newline} Armor +5"
+            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline}Grants Axe{newline}+40% Damage Dealt to Shields"
             icon="PerkHeavyAxe"
             perk_list="1">
         <Effect type="ShieldDamage"
                 value="0.4" />
-		<Effect type="DamageDealt"
-                value="0.10"
-                hit_type="Melee"
-                damage_type="Cut" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="5" />					
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="mp_sturgia_noble_axe" />			   
       </Perk>
-      <Perk game_mode="all"
+      <!--Perk game_mode="all"
             name="{=00000015}Hammer shield"
             description="{=00000016}With a sturgia staff and a shield"
             hero_idle_anim="act_sturgia_mp_varyag_sword_and_shield_perk"
             icon="PerkHoldTheLine"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="mp_sturgia_mace" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
+                       slot="Item1"
+                       item="mp_leather_round_shield" />			   
+      </Perk-->
+	  <Perk game_mode="all"
+            name="{=C9ufRSsL}Sword and Shield"
+            description="{=Y30Y1Ywt}Grants a strong Sword together with a Shield."
+		hero_idle_anim="act_sturgia_mp_varyag_sword_and_shield_perk"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_sturgia_northern_sword" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
                        item="mp_leather_round_shield" />			   
       </Perk>
 	  <Perk game_mode="all"
+            name="{=00000128}Avalanche"
+            description="{=00000129}横扫千军，如山崩地裂之势。{newline}{newline}配备雪崩"
+            hero_idle_anim="act_aserai_mp_guard_idle"
+            icon="PerkTwoHandedAxe"
+            perk_list="1">
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="avalanche_2haxe" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="null" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="null" />			   
+      </Perk>
+	  <!--<Perk game_mode="all"
             name="{=00000106}Change Chinese to see the description"
             description="{=00000107}Change Chinese to see the description"
             icon="PerkArmorUpgrade"
@@ -5073,7 +5035,7 @@
                        item="mp_brass_lamellar_shoulder_white"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="sturgia_sword_5_t5" />			   
       </Perk>
 	  <Perk game_mode="all"
@@ -5091,7 +5053,7 @@
                        item="mp_brass_lamellar_shoulder_white"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="sturgia_sword_4_t4" />			   
       </Perk>
 	  <Perk game_mode="all"
@@ -5109,7 +5071,7 @@
                        item="mp_brass_lamellar_shoulder_white"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="sturgia_noble_sword_1_t5" />			   
       </Perk>
 	  <Perk game_mode="all"
@@ -5127,7 +5089,7 @@
                        item="mp_brass_lamellar_shoulder_white"
                        target="Player" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="ambassador_sword_t3" />			   
       </Perk>
 	  <Perk game_mode="all"
@@ -5146,7 +5108,7 @@
                        item="mp_brass_lamellar_shoulder_white"
                        target="Player" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="mp_sturgia_northern_sword" />		   
       </Perk>
 	  <Perk game_mode="all"
@@ -5165,13 +5127,13 @@
                        item="mp_brass_lamellar_shoulder_white"
                        target="Player" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="dawnbreaker_sword_t3" />		   
-      </Perk>
+      </Perk>-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=4bzbhbaP}Feller"
-            description="{=00000077}You cut down everything and everyone that dares to be in your way {newline} {newline}+17% Cut Damage with Melee Weapons"
+            description="{=l2Qy5kbg}You cut down everything and everyone that dares to be in your way {newline} {newline}+17% Cut Damage with Melee Weapons"
             icon="PerkFightingMadness"
             perk_list="2">	
         <ConditionalEffect>
@@ -5181,7 +5143,7 @@
           </Conditions>
           <Effects>
             <Effect type="DamageDealt"
-                    value="0.10"
+                    value="0.17"
                     hit_type="Melee"
                     damage_type="Cut" />
 		  </Effects>		   
@@ -5202,7 +5164,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000039}Change Chinese to see the description"
+            description="{=VmoAFrzI}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself. Grants a long spear that does more damage.{newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
             icon="PerkHorseHunters"
             perk_list="2">
         <ConditionalEffect>
@@ -5216,17 +5178,17 @@
                     hit_type="Melee"
                     damage_type="Pierce" />
             <Effect type="MountDamage"
-                    value="0.5"
+                    value="1.0"
                     hit_type="Melee" />
           </Effects>
         </ConditionalEffect>
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_long_spear" />
+                       slot="Item2"
+                       item="mp_sturgia_long_infantry_spear" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000101}Change Chinese to see the description"
+            name="{=00000100}旗手"
+            description="{=00000101}配备符合本国文化的随机旗帜。{newline}{newline}移动速度+5%"
             icon="PerkToughness"
             perk_list="2">	
 		<ConditionalEffect>
@@ -5618,8 +5580,8 @@
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=0K58as8Y}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
-            icon="PerkLongSpear"
+            description="{=0o6o94sk}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
+            icon="PerkLineBreaker"
             hero_mount_idle_anim="act_sturgia_mp_raider_mount_shieldperk_idle"
             perk_list="2">
         <ConditionalEffect>
@@ -5629,7 +5591,7 @@
           </Conditions>
           <Effects>
             <Effect type="SpeedBonus"
-                    value="1.5"
+                    value="0.5"
                     is_ratio="true" />
           </Effects>
         </ConditionalEffect>
@@ -5637,7 +5599,7 @@
       <Perk game_mode="all"
             name="{=ptxHd7K1}Spearhead"
             description="{=b1AcD5zT}You lead the charge and you are unphased by enemy ranged weapons.{newline} {newline}Grants Kontos{newline} {newline}-30% Damage taken from Ranged Weapons"
-            icon="PerkHeavyLances"
+            icon="PerkKontos"
             perk_list="2">
         <Effect type="DamageTaken"
                 value="-0.3"
@@ -5648,12 +5610,12 @@
       </Perk>
       <Perk game_mode="all"
             name="{=Vf4mofBO}Blood Money"
-            description="{=00000030}You know how to earn some extra gold on the side.{newline} {newline}+20 Gold per Kill"
+            description="{=00000030}你懂得如何赚取外快。{newline}{newline}每次击杀，第纳尔+3"
             icon="PerkGold"
             hero_mount_idle_anim="act_sturgia_mp_raider_mount_shieldperk_idle"
             perk_list="2">
         <Effect type="GoldGainOnKill"
-                value="2"
+                value="3"
                 is_disabled_in_warmup="true" />
       </Perk>
     </Perks>
@@ -5663,14 +5625,14 @@
                    troop="mp_heavy_cavalry_sturgia_troop"
                    hero_mount_idle_anim="act_sturgia_mp_druzhina_mount_idle"
                    troop_mount_idle_anim="act_horse_idle_1"
-                   multiplier="0.24"
+                   multiplier="0.30"
                    cost="200"
                    casual_cost="300"
                    icon="Cavalry_Heavy"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="60"
-                   movement_speed="0.58"
+                   armor="48"
+                   movement_speed="0.70"
                    combat_movement_speed="0.6"
                    acceleration="2.8"
                    hitpoints="100">
@@ -5696,9 +5658,14 @@
       </Perk>
       <Perk game_mode="all"
             name="{=WapSyVbv}Full Barding"
-            description="{=qwnHqTdO}Upgrades your horses armor."
+            description="{=RI9hmnDu}Upgrades your horses armor and add additional protection against ranged weapons.{newline} {newline}+11 Armor to Mount{newline}-25% Damage taken by Mount from Ranged Weapons"
             icon="PerkFullBarding"
             perk_list="1">
+		<Effect
+			type="MountDamageTaken"
+			value="-0.25"
+			hit_type="Ranged"
+			is_ratio="true" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="HorseHarness"
                        item="mp_chain_horse_harness" />
@@ -5718,7 +5685,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=hchDYAKL}Lancer"
-            description="{=ewUPfiVM}You are an expert at fighting on horseback.{newline} {newline}Grants Heavy Lance{newline} {newline}+33% Speed Bonus with Pierce Attacks from mount"
+            description="{=rnO8lCtE}You are an expert at fighting on horseback. Grants a heavy lance that does more damage.{newline} {newline}Grants Heavy Lance{newline} {newline}+33% Speed Bonus with Pierce Attacks from mount"
             icon="PerkCouchedHeavySpears"
             perk_list="2">
         <ConditionalEffect>
@@ -5728,7 +5695,7 @@
           </Conditions>
           <Effects>
             <Effect type="SpeedBonus"
-                    value="1.33"
+                    value="0.33"
                     hit_type="Melee"
                     damage_type="Pierce"
                     is_ratio="true" />
@@ -5739,16 +5706,16 @@
                        item="mp_sturgia_heavy_lance" />
       </Perk>
       <Perk game_mode="all"
-            name="{=00000076}Change Chinese to see the description"
-            description="{=00000050}Change Chinese to see the description"
+            name="{=00000076}烧杀抢掠"
+            description="{=00000050}你喜欢使用双手斧猎杀敌人，用飞斧取人性命，这令你十分享受。{newline}{newline}配备双手长斧{newline}配备飞斧{newline}{newline}受到的远程武器伤害-33%{newline}坐骑受到的远程武器伤害-33%"
             icon="PerkTwoHandedAxe"
             perk_list="2">
         <Effect type="MountDamageTaken"
-                value="-0.50"
+                value="-0.33"
                 hit_type="Ranged"
                 is_ratio="true" />
         <Effect type="DamageTaken"
-                value="-0.50"
+                value="-0.33"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
@@ -5756,16 +5723,16 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_sturgia_throwing_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+	  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_sturgia_throwing_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+	  <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
                        item="mp_sturgia_throwing_axe" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
-            description="{=00000081}Change Chinese to see the description"
+            description="{=00000192}你是马上单手作战的专家，擅长冲撞敌人并使用单手武器给予其致命一击。{newline}{newline}配备杖{newline}配备大圆盾{newline}骑马时人物和坐骑受到的近战伤害-30%"
             icon="PerkGeneral"
             perk_list="2">
 		<ConditionalEffect>
@@ -5793,8 +5760,8 @@
                        item="mp_sturgia_mace" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000100}Change Chinese to see the description"
-            description="{=00000171}Change Chinese to see the description"
+            name="{=00000100}旗手"
+            description="{=00000171}配备符合本国文化的随机旗帜。{newline}{newline}骑术技能等级+30"
             icon="PerkToughness"
             perk_list="2">	
         <Effect type="MountManeuver"
@@ -5932,19 +5899,24 @@
         </RandomOnSpawnEffect>
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000102}Change Chinese to see the description"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_battania_civil_cloak"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="broad_falchion_sword_t3" />			   
+            name="{=00000174}Burglar"
+            description="{=00000175}You are agile and capable of stealing some handy weapons from the armory."
+            icon="PerkBetterSwords"
+            perk_list="1">	
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="broad_falchion_sword_t3" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="battania_axe_1_t2" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="peasant_maul_t1_2" />
+          </Group>
+        </RandomOnSpawnEffect>	   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -6029,62 +6001,6 @@
                        slot="Item1"
                        item="mp_battania_large_shield_a" />
       </Perk>
-	  <Perk game_mode="all"
-            name="{=00000138}Change Chinese to see the description"
-            description="{=00000139}Change Chinese to see the description"
-            icon="PerkBloodRage"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="80" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.05"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="60" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.05"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="40" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.05"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="Health"
-                       max="20" />
-          </Conditions>
-          <Effects>
-            <Effect type="DamageDealt"
-                    value="0.05"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="battania_axe_1_t2" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_battania_targe_b" />			   
-      </Perk>
       <!-- Third perks 
 	<Perk game_mode="all"
             name="{=00000149}Change Chinese to see the description"
@@ -6163,7 +6079,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=t68bkisr}Hammer"
-            description="{=L01yAZlu}Replaces Sword with Hammer, effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
+            description="{=X4Hvkakc}Replaces Sword with Hammer, effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
             hero_idle_anim="act_battania_mp_savage_idle_maceperk"
             icon="PerkMaces"
             perk_list="1">
@@ -6176,15 +6092,29 @@
             description="{=00000018}Provides +9 armor and battania pike."
             icon="PerkToughness"
             perk_list="1">
+		<RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Cape"
+                  item="mp_battania_shoulder_strap_cloak" />
+          </Group>
+          <Group>
+		    <Item slot="Head"
+                  item="mp_wolfhead" />
+            <Item slot="Cape"
+                  item="wolf_shoulder" />
+          </Group>
+          <Group>
+		    <Item slot="Head"
+                  item="mp_bearhead" />
+            <Item slot="Cape"
+                  item="rough_bearskin" />
+          </Group>
+        </RandomOnSpawnEffect>	
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_battania_pike" />
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_battania_shoulder_strap_cloak"
-                       target="Player" />
         <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
                              target="Troops">
           <Group>
@@ -6200,84 +6130,6 @@
                   item="mp_battania_earmuff_helmet_b_brnz" />
           </Group>
         </RandomOnSpawnEffect>
-      </Perk>
-      <Perk game_mode="all"
-            name="{=00000046}Improved Armor"
-            description="{=00000018}Provides +9 armor and battania pike."
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_battania_pike" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="wolf_shoulder"
-                       target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_a" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_b" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_b_brnz" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>
-      <Perk game_mode="all"
-            name="{=00000046}Improved Armor"
-            description="{=00000018}Provides +9 armor and battania pike."
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_battania_pike" />
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="rough_bearskin"
-                       target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_a" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_b" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_b_brnz" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000110}Change Chinese to see the description"
-            description="{=00000111}Change Chinese to see the description"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="battania_2hsword_5_t5" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000116}Change Chinese to see the description"
-            description="{=00000117}Change Chinese to see the description"
-            icon="PerkTwoHandedSwords"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="early_retirement_2hsword_t3" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000124}Change Chinese to see the description"
@@ -6476,7 +6328,7 @@
                        item="mp_battania_long_sword" />
       </Perk>
       <Perk game_mode="all"
-            name="{=BUAatpbx}Shield and Axe"
+            name="{=4t6A2jY8}Axe and Shield"
             description="{=XgH6b7LY}Grants an Axe and a stronger Shield. Effective in melee fights against heavy troops."
             icon="PerkHeavyAxe"
             perk_list="1">
@@ -6584,7 +6436,7 @@
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="10" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="mp_battania_noble_sword" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
@@ -6620,7 +6472,7 @@
             icon="PerkMaces"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="mp_battnia_heavy_mace" />
       </Perk>
       <Perk game_mode="all"
@@ -6633,57 +6485,52 @@
 		<Effect type="DamageDealt"
                 value="0.15"
                 hit_type="Melee"
-                damage_type="Cut" />
-		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="5" />			
+                damage_type="Cut" />		
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
+                       slot="Item0"
                        item="mp_battania_axe" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
+            name="{=00000001}Bastard sword"
+            description="{=00000002}Equipped with a Bastard sword, which can be used with two hands after the shield is broken. {newline}{newline} equipped with Bastard sword{newline}Grants Shield"
+		    icon="PerkLargerShields"
             perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_battania_shoulder_furr"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="battania_sword_5_t5" />			   
+		<RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="battania_2hsword_5_t5" />
+          </Group>
+          <Group>
+		    <Item slot="Item0"
+                  item="early_retirement_2hsword_t3" />
+          </Group>
+        </RandomOnSpawnEffect>		
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
             perk_list="1">
+		<RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="battania_noble_sword_2_t5" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="battania_sword_5_t5" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="battania_noble_sword_3_t5" />
+          </Group>
+        </RandomOnSpawnEffect>	
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="10" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_battania_shoulder_furr"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="battania_noble_sword_2_t5" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_battania_shoulder_furr"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="battania_noble_sword_3_t5" />			   
+                       target="Player" />		   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -7140,11 +6987,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=URPm3XjU}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
+            description="{=ko852qPg}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.50"
+                value="0.60"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
@@ -7427,7 +7274,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=IFqtwpb0}Pikeman"
-            description="{=O3vdRYyZ}Your experience as a Pikeman allows you to use the Pike more effectively, thrusting faster.{newline} {newline}Grants Pike{newline} {newline}+20% Thrust Ready Speed"
+            description="{=00000109}Your experience as a Pikeman allows you to use the Pike more effectively, thrusting faster.{newline} {newline}Grants Pike{newline} {newline}+20% Thrust Ready Speed{newline}+5 Armor"
             icon="PerkPikes"
             perk_list="1">
         <Effect type="DrivenProperty"
@@ -7441,7 +7288,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=v2WKbNZo}Rapid Throws"
-            description="{=00000065}Change Chinese to see the description"
+            description="{=00000065}你投掷标枪更快。{newline}{newline}配备阿塞莱标枪{newline}{newline}准备速度+10%{newline}护甲+5"
             icon="PerkMoreThrowingSpears"
             perk_list="1">
         <Effect type="DrivenProperty"
@@ -7454,94 +7301,56 @@
                        item="mp_jereed" />
       </Perk>
 	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
+            name="{=00000114}Change Chinese to see the description"
+            description="{=00000115}Change Chinese to see the description"
+            hero_idle_anim="act_vlandia_mp_voulgier_swordperk_idle"
+            icon="PerkTwoHandedSwords"
+            perk_list="1">					   
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="southern_broad_2hsword_t4" />		   
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
+                       item="mp_aserai_crown"
                        target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="aserai_noble_sword_1_t5" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_aserai_archer_armor"
+                       target="Player" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
             perk_list="1">
+		<RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+          <Group>
+            <Item slot="Item0"
+                  item="aserai_noble_sword_1_t5" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="aserai_noble_sword_2_t5" />
+          </Group>
+          <Group>
+            <Item slot="Item0"
+                  item="aserai_noble_sword_4_t5" />
+          </Group>
+        </RandomOnSpawnEffect>	
         <OnSpawnEffect type="ArmorOnSpawn"
                        value="10" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_closed_desert_helmet_with_mail"
                        target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="aserai_noble_sword_2_t5" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="aserai_noble_sword_4_t5" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="aserai_sword_4_t4" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="ridged_sabre_sword_t4" />   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="the_scalpel_sword_t3" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
@@ -8201,7 +8010,7 @@
                    icon="Special_Axeman"
                    melee_ai="65"
                    ranged_ai="65"
-                   armor="25"
+                   armor="21"
                    movement_speed="0.80"
                    combat_movement_speed="0.9"
                    acceleration="1.6"
@@ -8209,46 +8018,12 @@
     <Perks>
       <!-- First perks-->
       <Perk game_mode="all"
-            name="{=KXwN1PW4}Great Axe"
-            description="{=RV6BCPvg}Replaces Axe with a longer and heavier axe. Extra effective against shields."
-            icon="PerkTwoHandedAxe"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_long_twohanded_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_sturgian_helmet_open"
-                       target="Player" />			   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_northern_brass_bracers"
-                       target="Player" />			   
-      </Perk>
-      <Perk game_mode="all"
-            name="{=HoVaJ0BH}Two Handed Maul"
-            description="{=DZ2g8IZr}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
-            icon="PerkTwoHandedMaul"
-            perk_list="1">
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_sturgia_twohanded_hammer" />					   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_sturgian_helmet_open"
-                       target="Player" />			   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_northern_brass_bracers"
-                       target="Player" />
-      </Perk>
-      <Perk game_mode="all"
-            name="{=00000042}Change Chinese to see the description"
-            description="{=00000043}Change Chinese to see the description"
+            name="{=00000042}破阵勇士"
+            description="{=00000043}一层厚重的盔甲帮你抵御砍伤和瘀伤。{newline}{newline}护甲+13"
             icon="PerkToughness"
             perk_list="1">
         <OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />
+                       value="13" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_brass_lamellar_shoulder_white"
@@ -8291,68 +8066,50 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <Perk game_mode="all"
-            name="{=00000108}Change Chinese to see the description"
-            description="{=00000109}Change Chinese to see the description"
-            icon="PerkToughness"
+      <Perk game_mode="all"
+            name="{=KXwN1PW4}Great Axe"
+            description="{=pjq5Nkn4}Replaces Axe with a longer and heavier axe. Extra effective against shields."
+            icon="PerkTwoHandedAxe"
             perk_list="1">
-		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="black_heart_2haxe_t3" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_brass_lamellar_shoulder_white"
-                       target="Player" />
+                       item="mp_sturgia_long_twohanded_axe" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
-                       item="mp_sturgian_helmet_closed"
-                       target="Player" />				   
+                       item="mp_sturgian_helmet_open"
+                       target="Player" />			   
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Gloves"
-                       item="mp_northern_plated_gloves"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_northern_plated_boots"
-                       target="Player" />		   
+                       item="mp_northern_brass_bracers"
+                       target="Player" />			   
       </Perk>
-	  <Perk game_mode="all"
-            name="{=00000128}Change Chinese to see the description"
-            description="{=00000129}Change Chinese to see the description"
-            icon="PerkToughness"
+      <Perk game_mode="all"
+            name="{=HoVaJ0BH}Two Handed Maul"
+            description="{=K5ab4UuF}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
+            icon="PerkTwoHandedMaul"
             perk_list="1">
-		<OnSpawnEffect type="ArmorOnSpawn"
-                       value="9" />	
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="avalanche_2haxe" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_brass_lamellar_shoulder_white"
-                       target="Player" />
+                       item="mp_sturgia_twohanded_hammer" />					   
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
-                       item="mp_sturgian_helmet_closed"
-                       target="Player" />				   
+                       item="mp_sturgian_helmet_open"
+                       target="Player" />			   
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Gloves"
-                       item="mp_northern_plated_gloves"
+                       item="mp_northern_brass_bracers"
                        target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_northern_plated_boots"
-                       target="Player" />		   
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
-            name="{=DeWp2GjP}Shield Breaker"
-            description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
-            icon="PerkShieldSplitterAxes"
+            name="{=0TtCRwmr}Athletic"
+            description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
+            icon="PerkFleetFooted"
             perk_list="2">
-        <Effect type="ShieldDamage"
-                value="0.30" />
+        <Effect type="DrivenProperty"
+                value="0.05"
+                driven_property="MaxSpeedMultiplier"
+                is_ratio="true" />
       </Perk>
       <Perk game_mode="all"
             name="{=vHIIkFQF}Blood Rage"
@@ -8417,14 +8174,12 @@
         </ConditionalEffect>
       </Perk>
       <Perk game_mode="all"
-            name="{=0TtCRwmr}Athletic"
-            description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
-            icon="PerkFleetFooted"
+            name="{=DeWp2GjP}Shield Breaker"
+            description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
+            icon="PerkShieldSplitterAxes"
             perk_list="2">
-        <Effect type="DrivenProperty"
-                value="0.05"
-                driven_property="MaxSpeedMultiplier"
-                is_ratio="true" />
+        <Effect type="ShieldDamage"
+                value="0.30" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -8682,7 +8437,7 @@
                    icon="Archer_Heavy"
                    melee_ai="50"
                    ranged_ai="50"
-                   armor="36"
+                   armor="26"
                    movement_speed="0.75"
                    combat_movement_speed="0.7"
                    acceleration="3.2">
@@ -8756,20 +8511,20 @@
       </Perk>
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=URPm3XjU}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+50% Damage to Mounts"
+            description="{=ko852qPg}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.50"
+                value="0.60"
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_arrows_bodkin_extra" />
       </Perk>
       <Perk game_mode="all"
-            name="{=aVGSZhCN}Pavise Shield"
-            description="{=loPT6GUc}Grants Pavise Shield, makes blocking easier, effective against ranged units."
-            icon="PerkPaviseShield"
+            name="{=rTPnyeJ3}Shield Wall"
+            description="{=00000193}配备轻型圆盾。"
+            icon="PerkShieldWall"
             perk_list="2">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
@@ -8777,7 +8532,7 @@
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000169}Anti Equipment Arrows"
-            description="{=00000170}Change Chinese to see the description"
+            description="{=00000170}配备反器材箭，对人和马的伤害很低，但是对于器材具有奇效，可用于远程破坏弩炮和掩体。"
             icon="PerkShieldSplitterAxes"
             perk_list="2">
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
