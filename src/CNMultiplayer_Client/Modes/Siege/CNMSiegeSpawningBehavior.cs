@@ -14,6 +14,10 @@ namespace CNMultiplayer.Modes.Siege
         {
             base.Initialize(spawnComponent);
             base.OnAllAgentsFromPeerSpawnedFromVisuals += OnAllAgentsFromPeerSpawnedFromVisuals;
+            if (this.GameMode.WarmupComponent == null)
+            {
+                this.RequestStartSpawnSession();
+            }
         }
 
         public override void Clear()
@@ -27,15 +31,15 @@ namespace CNMultiplayer.Modes.Siege
             if (IsSpawningEnabled && _spawnCheckTimer.Check(Mission.CurrentTime))
             {
                 SpawnAgents();
-                SpawnBotAgents();
+                //SpawnBotAgents();
             }
             base.OnTick(dt);
         }
 
         protected override void SpawnAgents()
         {
-            BasicCultureObject @object = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam1.GetStrValue());
-            BasicCultureObject object2 = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam2.GetStrValue());
+            BasicCultureObject cultureTeam1 = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam1.GetStrValue());
+            BasicCultureObject cultureTeam2 = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam2.GetStrValue());
             foreach (NetworkCommunicator networkPeer in GameNetwork.NetworkPeers)
             {
                 if (!networkPeer.IsSynchronized)
@@ -49,7 +53,7 @@ namespace CNMultiplayer.Modes.Siege
                     continue;
                 }
 
-                BasicCultureObject basicCultureObject = ((component.Team.Side == BattleSideEnum.Attacker) ? @object : object2);
+                BasicCultureObject basicCultureObject = ((component.Team.Side == BattleSideEnum.Attacker) ? cultureTeam1 : cultureTeam2);
                 MultiplayerClassDivisions.MPHeroClass mPHeroClassForPeer = MultiplayerClassDivisions.GetMPHeroClassForPeer(component);
                 if (mPHeroClassForPeer == null || mPHeroClassForPeer.TroopCasualCost > GameMode.GetCurrentGoldForPeer(component) || LockTroop(component, mPHeroClassForPeer))
                 {
@@ -77,13 +81,14 @@ namespace CNMultiplayer.Modes.Siege
                 AgentBuildData agentBuildData = new AgentBuildData(heroCharacter).MissionPeer(component).Equipment(equipment).Team(component.Team)
                     .TroopOrigin(new BasicBattleAgentOrigin(heroCharacter))
                     .IsFemale(component.Peer.IsFemale)
-                    .BodyProperties(GetBodyProperties(component, (component.Team == Mission.AttackerTeam) ? @object : object2))
+                    .BodyProperties(GetBodyProperties(component, (component.Team == Mission.AttackerTeam) ? cultureTeam1 : cultureTeam2))
                     .VisualsIndex(0)
                     .ClothingColor1((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color : basicCultureObject.ClothAlternativeColor)
                     .ClothingColor2((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color2 : basicCultureObject.ClothAlternativeColor2);
-                if (GameMode.ShouldSpawnVisualsForServer(networkPeer))
+                if (this.GameMode.ShouldSpawnVisualsForServer(networkPeer) && agentBuildData.AgentVisualsIndex == 0)
                 {
-                    AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(component, agentBuildData, component.SelectedTroopIndex);
+                    component.HasSpawnedAgentVisuals = true;
+                    component.EquipmentUpdatingExpired = false;
                 }
 
                 GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData);
@@ -95,7 +100,7 @@ namespace CNMultiplayer.Modes.Siege
             return true;
         }
 
-        public override int GetMaximumReSpawnPeriodForPeer(MissionPeer peer)
+        public override int GetMaximumReSpawnPeriodForPeer(MissionPeer peer) //热身中3s复活，非热身根据服务器设置复活时间
         {
             if (GameMode.WarmupComponent != null && GameMode.WarmupComponent.IsInWarmup)
             {
@@ -123,7 +128,7 @@ namespace CNMultiplayer.Modes.Siege
             return Mission.Current.CurrentState == Mission.State.Continuing;
         }
 
-        private new void OnAllAgentsFromPeerSpawnedFromVisuals(MissionPeer peer)
+        private new void OnAllAgentsFromPeerSpawnedFromVisuals(MissionPeer peer) //玩家复活后根据TroopCasualCost扣去兵种费用
         {
             bool flag = peer.Team == Mission.AttackerTeam;
             MultiplayerClassDivisions.MPHeroClass mPHeroClass = MultiplayerClassDivisions.GetMPHeroClasses(MBObjectManager.Instance.GetObject<BasicCultureObject>(flag ? MultiplayerOptions.OptionType.CultureTeam1.GetStrValue() : MultiplayerOptions.OptionType.CultureTeam2.GetStrValue())).ElementAt(peer.SelectedTroopIndex);
