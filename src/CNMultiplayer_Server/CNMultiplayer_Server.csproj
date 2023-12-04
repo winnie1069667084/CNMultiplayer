@@ -46,6 +46,7 @@
     <None Remove="Patches\ServerPatches\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="LoadXMLbyMode.cs" />
     <Compile Remove="Modes\Captain\CNMCaptainGameMode.cs" />
     <Compile Remove="Modes\Captain\CNMCaptainSpawningBehavior.cs" />
     <Compile Remove="Modes\Captain\Patch_DeploymentPlan.cs" />

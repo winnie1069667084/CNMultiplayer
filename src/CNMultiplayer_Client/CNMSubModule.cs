@@ -19,10 +19,12 @@ namespace CNMultiplayer
             Module.CurrentModule.AddMultiplayerGameMode(new IDMGameMode());
         }
 
+        /*
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
         {
             MBObjectManager.Instance.ClearAllObjectsWithType(typeof(MultiplayerClassDivisions.MPHeroClass)); //目前只实现了根据游戏模式加载MPClassDivisions
             new LoadXMLbyMode().ModeJudgment();
         }
+        */
     }
 }
