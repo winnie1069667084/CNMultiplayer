@@ -3375,13 +3375,13 @@
                    troop="mp_light_infantry_aserai_troop"
                    hero_idle_anim="act_aserai_mp_tribal_warrior_idle"
                    troop_idle_anim="act_idle_1h_with_shield_1"
-                   multiplier="0.85"
+                   multiplier="0.77"
                    cost="100"
                    icon="Infantry_Light"
                    melee_ai="40"
                    ranged_ai="40"
                    armor="15"
-                   movement_speed="0.82"
+                   movement_speed="0.81"
                    combat_movement_speed="0.9"
                    acceleration="2.4">
     <Perks>
@@ -3414,7 +3414,7 @@
                        slot="Item0"
                        item="mp_aserai_axe" />		   
       </Perk>
-	  <Perk game_mode="all"
+	  <!--Perk game_mode="all"
             name="{=00000134}Change Chinese to see the description"
             description="{=00000135}Change Chinese to see the description"
             icon="PerkBetterSwords"
@@ -3431,7 +3431,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="aserai_axe_1_t2" />		   
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=DlKYZgA3}Improved Armor"
@@ -3448,7 +3448,7 @@
       <Perk game_mode="all"
             name="{=P1VHoGL2}Tribesmen"
             description="{=F2J9upsv}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+5% Damage with Melee Weapons"
-            icon="PerkGeneral"
+            icon="PerkTribesmen"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -3471,7 +3471,7 @@
             icon="PerkSpears"
             perk_list="2">
         <Effect type="MountDamage"
-                value="0.5" />
+                value="0.75" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_aserai_long_spear" />
@@ -3530,15 +3530,15 @@
                    troop="mp_skirmisher_aserai_troop"
                    hero_idle_anim="act_aserai_mp_skrimisher_idle"
                    troop_idle_anim="act_idle_1h_with_shield_1"
-                   multiplier="0.80"
+                   multiplier="0.76"
                    cost="130"
                    casual_cost="120"
                    battle_cost="130"
                    icon="Special_JavelinThrower"
                    melee_ai="50"
                    ranged_ai="50"
-                   armor="10"
-                   movement_speed="0.81"
+                   armor="13"
+                   movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="1.8">
     <Perks>
@@ -3630,12 +3630,83 @@
                    melee_ai="65"
                    ranged_ai="65"
                    armor="7"
-                   movement_speed="0.80"
+                   movement_speed="0.81"
                    combat_movement_speed="0.9"
                    acceleration="2.3"
                    hitpoints="100">
     <Perks>
       <!-- First perks-->
+      <Perk game_mode="all"
+            name="{=00000013}Palace guard"
+            description="{=00000014}You are the guardian of the Sultan's side, wearing heavy armor, using your weapons and large shields to protect the royal family. {newline}{newline} provides an additional 28 points of armor {newline} equipped with Clan Sword + Noble Sword + Decorative Oval Shield + spear"
+            icon="PerkHoldTheLine"
+            perk_list="1">
+        <OnSpawnEffect type="ArmorOnSpawn"
+                       value="23" />
+        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Cape"
+                       item="mp_desert_scale_shoulders"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Head"
+                       item="mp_closed_desert_helmet_with_mail"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Leg"
+                       item="mp_plated_strip_boots"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Gloves"
+                       item="mp_plated_strip_gauntlets"
+                       target="Player" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Body"
+                       item="mp_desert_lamellar"
+                       target="Player" />				   
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item0"
+                       item="mp_aserai_ranger_sword" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item1"
+                       item="mp_emirs_oval_shield" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item2"
+                       item="mp_aserai_fast_sword" />
+		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+                       slot="Item3"
+                       item="mp_aserai_long_spear" />
+        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
+                             target="Troops">
+          <Group>
+            <Item slot="Head"
+                  item="mp_desert_mail_coif" />
+            <Item slot="Gloves"
+                  item="mp_plated_strip_gauntlets" />
+            <Item slot="Body"
+                  item="mp_aserai_armor_02_b" />
+            <Item slot="Cape"
+                  item="mp_brass_lamellar_shoulder_white" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_pointed_skullcap_with_mail" />
+            <Item slot="Gloves"
+                  item="mp_plated_strip_gauntlets" />
+            <Item slot="Cape"
+                  item="mp_brass_scale_shoulders" />
+            <Item slot="Leg"
+                  item="mp_plated_strip_boots" />
+          </Group>
+          <Group>
+            <Item slot="Head"
+                  item="mp_closed_desert_helmet_with_mail" />
+            <Item slot="Body"
+                  item="mp_brass_lamellar_over_mail" />
+            <Item slot="Cape"
+                  item="mp_brass_lamellar_shoulder_white" />
+          </Group>
+        </RandomOnSpawnEffect>
+      </Perk>
       <Perk game_mode="all"
             name="{=00000057}Change Chinese to see the description"
             description="{=00000058}Change Chinese to see the description"
@@ -3781,77 +3852,6 @@
                        slot="Item3"
                        item="mp_aserai_throwing_axe" />
       </Perk>
-      <Perk game_mode="all"
-            name="{=00000013}Palace guard"
-            description="{=00000014}You are the guardian of the Sultan's side, wearing heavy armor, using your weapons and large shields to protect the royal family. {newline}{newline} provides an additional 28 points of armor {newline} equipped with Clan Sword + Noble Sword + Decorative Oval Shield + spear"
-            icon="PerkHoldTheLine"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="23" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_desert_scale_shoulders"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_closed_desert_helmet_with_mail"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Leg"
-                       item="mp_plated_strip_boots"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Gloves"
-                       item="mp_plated_strip_gauntlets"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_desert_lamellar"
-                       target="Player" />				   
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_aserai_ranger_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_emirs_oval_shield" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item2"
-                       item="mp_aserai_fast_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_aserai_long_spear" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_desert_mail_coif" />
-            <Item slot="Gloves"
-                  item="mp_plated_strip_gauntlets" />
-            <Item slot="Body"
-                  item="mp_aserai_armor_02_b" />
-            <Item slot="Cape"
-                  item="mp_brass_lamellar_shoulder_white" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_pointed_skullcap_with_mail" />
-            <Item slot="Gloves"
-                  item="mp_plated_strip_gauntlets" />
-            <Item slot="Cape"
-                  item="mp_brass_scale_shoulders" />
-            <Item slot="Leg"
-                  item="mp_plated_strip_boots" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_closed_desert_helmet_with_mail" />
-            <Item slot="Body"
-                  item="mp_brass_lamellar_over_mail" />
-            <Item slot="Cape"
-                  item="mp_brass_lamellar_shoulder_white" />
-          </Group>
-        </RandomOnSpawnEffect>
-      </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=rJFGyaBS}Moloch"
@@ -3875,7 +3875,7 @@
       <Perk game_mode="all"
             name="{=du7l3z5b}Sturdy"
             description="{=sfK8Dkso}You were born tougher than most, you are harder to kill.{newline} {newline}-20% Damage Taken from Melee Attacks."
-            icon="PerkToughness"
+            icon="PerkSturdy"
             perk_list="2">
         <Effect type="DamageTaken"
                 value="-0.2"
@@ -3928,7 +3928,7 @@
       <Perk game_mode="all"
             name="{=i6OSr5QM}Range Bow"
             description="{=YUauBtTT}A bow arm from strong wood, makes this bow shoot especially fast and far."
-            icon="PerkLongBows"
+            icon="PerkLongRangeBow"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
@@ -3942,7 +3942,7 @@
       <Perk game_mode="all"
             name="{=3eb3ZyiU}Superior Bow"
             description="{=uxSlnb7y}Made from the most exquisite wood, this bow is exceptionally accurate."
-            icon="PerkRecurveBow"
+            icon="PerkAccurateBow"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
@@ -3982,7 +3982,7 @@
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="2.0"
@@ -4003,7 +4003,7 @@
             perk_list="2">
         <Effect type="DrivenProperty"
                 driven_property="ReloadSpeed"
-                value="0.125" />
+                value="0.25" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_arrows_barbed_extra" />
@@ -4022,8 +4022,8 @@
                    icon="Archer_Heavy"
                    melee_ai="50"
                    ranged_ai="50"
-                   armor="40"
-                   movement_speed="0.75"
+                   armor="33"
+                   movement_speed="0.74"
                    combat_movement_speed="0.7"
                    acceleration="3.1"
                    hitpoints="100">
@@ -4068,41 +4068,12 @@
                        slot="Cape"
                        item="mp_aserai_horseman_shoulder"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Body"
-                  item="mp_ringed_desert_armor" />
-            <Item slot="Cape"
-                  item="mp_aserai_horseman_shoulder" />
-            <Item slot="Gloves"
-                  item="mp_plated_strip_gauntlets" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_southern_noble_helmet" />
-            <Item slot="Cape"
-                  item="mp_desert_scale_shoulders" />
-            <Item slot="Gloves"
-                  item="mp_plated_strip_gauntlets" />
-            <Item slot="Leg"
-                  item="mp_plated_strip_boots" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_a_aserai_scale_b_shoulder_d" />
-            <Item slot="Gloves"
-                  item="mp_eastern_plated_leather_vambraces" />
-            <Item slot="Leg"
-                  item="mp_plated_strip_boots" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -4122,12 +4093,12 @@
         </ConditionalEffect>
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_arrows_barbed_extra" />
+                       item="mp_arrows_barbed_strong" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=6W3s9mVH}Fighter"
             description="{=TzlcYzfg}You know how to handle yourself in melee, grants a shield and a mace.{newline} {newline}Grants Small Shield{newline} {newline}Grants Heavy Mace{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons"
-            icon="PerkHoldTheLine"
+            icon="PerkFighter"
             perk_list="2">
         <Effect type="DrivenProperty"
                 value="0.25"
@@ -4141,7 +4112,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=ko852qPg}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
+            description="{=ha2b1k4u}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
@@ -4212,40 +4183,13 @@
                        value="9" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
-                       item="mp_leopard_pelt"
+                       item="mp_desert_leather_shoulderpad"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_open_desert_helmet" />
-            <Item slot="Cape"
-                  item="mp_desert_leather_shoulderpad" />
-            <Item slot="Gloves"
-                  item="mp_buttoned_leather_bracers" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_loose_wrapped_desert_helmet" />
-            <Item slot="Cape"
-                  item="mp_desert_leather_shoulderpad" />
-            <Item slot="Gloves"
-                  item="mp_woven_leather_bracers" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_closed_desert_helmet" />
-            <Item slot="Cape"
-                  item="mp_desert_leather_shoulderpad" />
-            <Item slot="Gloves"
-                  item="mp_studded_leather_vambraces" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
-            name="{=k5wDzNqz}Line Breaker"
-            description="{=GFZifSoP}You are an expert at charging in to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
+            name="{=KGYSP8Sn}Ride Like the Wind"
+            description="{=0o6o94sk}You are an expert at charging in with your mount to break defensive lines.{newline} {newline}+50% Speed Bonus Damage on Mount"
             icon="PerkLongSpear"
             perk_list="2">
         <ConditionalEffect>
@@ -4255,7 +4199,7 @@
           </Conditions>
           <Effects>
             <Effect type="SpeedBonus"
-                    value="1.5"
+                    value="0.5"
                     is_ratio="true" />
           </Effects>
         </ConditionalEffect>
@@ -4293,14 +4237,14 @@
                    troop="mp_heavy_cavalry_aserai_troop"
                    hero_mount_idle_anim="act_aserai_mp_mamluke_mount_idle"
                    troop_mount_idle_anim="act_horse_idle_1"
-                   multiplier="0.24"
+                   multiplier="0.3"
                    cost="200"
                    casual_cost="300"
                    icon="Cavalry_Heavy"
                    melee_ai="100"
                    ranged_ai="100"
-                   armor="59"
-                   movement_speed="0.60"
+                   armor="49"
+                   movement_speed="0.70"
                    combat_movement_speed="0.7"
                    acceleration="2.8">
     <Perks>
@@ -4325,9 +4269,14 @@
       </Perk>
       <Perk game_mode="all"
             name="{=WapSyVbv}Full Barding"
-            description="{=qwnHqTdO}Upgrades your horses armor."
+            description="{=RI9hmnDu}Upgrades your horses armor and add additional protection against ranged weapons.{newline} {newline}+11 Armor to Mount{newline}-25% Damage taken by Mount from Ranged Weapons"
             icon="PerkFullBarding"
             perk_list="1">
+		<Effect
+			type="MountDamageTaken"
+			value="-0.25"
+			hit_type="Ranged"
+			is_ratio="true" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="HorseHarness"
                        item="mp_mail_and_plate_barding" />
@@ -4336,7 +4285,7 @@
       <Perk game_mode="all"
             name="{=XavOmQlX}Goliath"
             description="{=EqbLGvGF}You came to realize that size is the most important advantage in combat.{newline} {newline}Grants Longer Lance{newline} {newline}Grants Bigger Shield{newline} {newline}-25% Damage taken by Mount from Ranged Weapons"
-            icon="PerkLongerLances"
+            icon="PerkGoliath"
             perk_list="2">
         <Effect type="MountDamageTaken"
                 value="-0.25"
@@ -4351,7 +4300,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=hchDYAKL}Lancer"
-            description="{=ewUPfiVM}You are an expert at fighting on horseback.{newline} {newline}Grants Heavy Lance{newline} {newline}+33% Speed Bonus with Pierce Attacks from mount"
+            description="{=rnO8lCtE}You are an expert at fighting on horseback. Grants a heavy lance that does more damage.{newline} {newline}Grants Heavy Lance{newline} {newline}+33% Speed Bonus with Pierce Attacks from mount"
             icon="PerkCouchedHeavySpears"
             perk_list="2">
         <ConditionalEffect>
@@ -4361,7 +4310,7 @@
           </Conditions>
           <Effects>
             <Effect type="SpeedBonus"
-                    value="1.33"
+                    value="0.33"
                     hit_type="Melee"
                     damage_type="Pierce"
                     is_ratio="true" />
@@ -4373,7 +4322,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=v3TAosde}Royal Archer"
-            description="{=00000036}Change Chinese to see the description"
+            description="{=E0sUI9sm}You are an experienced with the bow on a horse, your accuracy is much better.{newline} {newline}Grants Short Bow and Arrows{newline}-50% Movement Accuracy Penalty"
             icon="PerkRecurveBows"
             perk_list="2">
         <Effect type="DrivenProperty"
@@ -4382,10 +4331,10 @@
                 is_ratio="true" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_strong_recurve_bow" />
+                       item="mp_short_bow" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
-                       item="mp_arrows_barbed_extra" />
+                       item="mp_arrows_barbed_mounted" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
@@ -5833,7 +5782,7 @@
                    troop="mp_light_infantry_battania_troop"
                    hero_idle_anim="act_battania_mp_clan_warrior_maceperk_idle"
                    troop_idle_anim="act_idle_unarmed_1"
-                   multiplier="0.93"
+                   multiplier="0.88"
                    cost="100"
                    icon="Infantry_Light"
                    melee_ai="40"
@@ -5873,30 +5822,7 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_battania_civil_cloak"
-                       target="Player" />		   
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_a" />
-            <Item slot="Cape"
-                  item="mp_battania_woodland_cloak" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_ridged_northernhelm" />
-            <Item slot="Body"
-                  item="mp_northern_padded_cloth" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_b" />
-            <Item slot="Cape"
-                  item="mp_battanian_leather_shoulder_a" />
-            <Item slot="Body"
-                  item="mp_northern_leather_vest" />
-          </Group>
-        </RandomOnSpawnEffect>
+                       target="Player" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000174}Burglar"
@@ -5937,7 +5863,7 @@
       <Perk game_mode="all"
             name="{=pJGFNLOz}Blood Thirsty"
             description="{=7HVIIZ8M}Getting hurt puts you in a frenzied rage, you deal more damage in melee the more you get hurt.{newline} {newline}Grants Axe{newline} {newline}+5% Damage per 20 Hitpoints lost"
-            icon="PerkBloodRage"
+            icon="PerkBloodThirsty"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -6236,11 +6162,11 @@
       </Perk>
       <Perk game_mode="all"
             name="{=AW8XDIIP}Thick Skin"
-            description="{=VPmy8IN2}A thick layer of muscles protects you from bruises.{newline} {newline}-30% Blunt damage taken"
-            icon="PerkToughness"
+            description="{=FLKxfaGn}A thick layer of muscles protects you from bruises.{newline} {newline}-20% Blunt damage taken"
+            icon="PerkThickSkin"
             perk_list="2">
         <Effect type="DamageTaken"
-                value="-0.30"
+                value="-0.20"
                 damage_type="Blunt" />
       </Perk>
 	  <!-- Third perks
@@ -6307,12 +6233,12 @@
                    troop="mp_skirmisher_battania_troop"
                    hero_idle_anim="act_battania_mp_wildling_idle"
                    troop_idle_anim="act_idle_1h_with_shield_1"
-                   multiplier="0.76"
+                   multiplier="0.72"
                    cost="130"
                    icon="Special_JavelinThrower"
                    melee_ai="50"
                    ranged_ai="50"
-                   armor="26"
+                   armor="22"
                    movement_speed="0.82"
                    combat_movement_speed="0.9"
                    acceleration="2.0">
@@ -6330,7 +6256,7 @@
       <Perk game_mode="all"
             name="{=4t6A2jY8}Axe and Shield"
             description="{=XgH6b7LY}Grants an Axe and a stronger Shield. Effective in melee fights against heavy troops."
-            icon="PerkHeavyAxe"
+            icon="PerkAxeAndShield"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
@@ -6361,25 +6287,29 @@
         </ConditionalEffect>
       </Perk>
       <!-- Second perks-->
-      <Perk game_mode="all"
-            name="{=nGJvuvD3}Axe Thrower"
-            description="{=bIRS8ZSU}You are able throw axes much quicker with greater precision, throwing axes also deal extra damage to shields.{newline} {newline} Grants Throwing Axes{newline} {newline}+30% Damage to Shields"
-            icon="PerkThrowingAxes"
-            perk_list="2">
-		<Effect type="ShieldDamage"
-                value="0.30" />	
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_battanian_throwing_axe" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_battanian_throwing_axe" />			   
-      </Perk>
+	<Perk
+		game_mode="all"
+		name="{=v2WKbNZo}Rapid Throws"
+		description="{=Ha8HVTck}You are able throw javelins much quicker.{newline} {newline}Grants additional Javelins{newline} {newline}+5% Missle Release Speed {newline} +10% Ready Speed"
+		icon="PerkMoreThrowingSpears"
+		perk_list="2">
+		<Effect
+			type="ThrowingWeaponSpeed"
+			value="0.05" />
+		<Effect
+			type="DrivenProperty"
+			value="0.1"
+			driven_property="ThrustOrRangedReadySpeedMultiplier" />
+		<OnSpawnEffect
+			type="AlternativeEquipmentOnSpawn"
+			slot="Item0"
+			item="mp_javelin_extraammo" />
+	</Perk>
       <Perk game_mode="all"
             name="{=ZxqXs36U}Strong Arm"
             description="{=00000055}Change Chinese to see the description"
-            icon="PerkPilums"
-            hero_idle_anim="act_battania_mp_wildling_strong_arm_perk_idle"
+            icon="PerkStrongArm"
+            hero_idle_anim="act_battania_mp_wildling_strong_arm_perk_idle_b"
             perk_list="2">
         <Effect type="ThrowingWeaponDamage"
                 value="0.2" />
@@ -6405,7 +6335,7 @@
                 is_ratio="true" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
-                       item="mp_battania_javelin_captain" />
+                       item="mp_battania_javelin" />
       </Perk>
     </Perks>
   </MPClassDivision>
@@ -6442,33 +6372,11 @@
                        slot="Cape"
                        item="mp_battania_shoulder_furr"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Cape"
-                  item="mp_battania_shoulder_furr" />
-            <Item slot="Body"
-                  item="mp_battania_mercenary_armor" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_battanian_chainmail_shoulder_b" />
-            <Item slot="Gloves"
-                  item="mp_battania_noble_bracers" />
-            <Item slot="Leg"
-                  item="mp_strapped_mail_chausses" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_battanian_chainmail_shoulder_a" />
-            <Item slot="Body"
-                  item="mp_battania_noble_armor" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
       <Perk game_mode="all"
             name="{=VI4gQt8Q}Mace"
             description="{=7I7fd6OQ}Grants Heavy Mace, effective against armored opponents."
+            hero_idle_anim="act_battania_mp_oathbound_mace_axe_perk_idle"
             icon="PerkMaces"
             perk_list="1">
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
@@ -6481,11 +6389,7 @@
             icon="PerkHeavyAxe"
             perk_list="1">
         <Effect type="ShieldDamage"
-                value="0.4" />
-		<Effect type="DamageDealt"
-                value="0.15"
-                hit_type="Melee"
-                damage_type="Cut" />		
+                value="0.4" />		
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item0"
                        item="mp_battania_axe" />
@@ -6506,7 +6410,7 @@
           </Group>
         </RandomOnSpawnEffect>		
       </Perk>
-	  <Perk game_mode="all"
+	  <!--Perk game_mode="all"
             name="{=00000102}Reinforced Armor"
             description="{=00000103}Change Chinese to see the description"
             icon="PerkToughness"
@@ -6531,12 +6435,12 @@
                        slot="Cape"
                        item="mp_battania_shoulder_furr"
                        target="Player" />		   
-      </Perk>
+      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=sQCpO6sp}Melee Expert"
             description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
-            icon="PerkGeneral"
+            icon="PerkMeleeExpert"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -6555,7 +6459,7 @@
       </Perk>
 	  <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000039}Change Chinese to see the description"
+            description="{=VmoAFrzI}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself. Grants a long spear that does more damage.{newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
             icon="PerkHorseHunters"
             perk_list="2">
         <ConditionalEffect>
@@ -6569,7 +6473,7 @@
                     hit_type="Melee"
                     damage_type="Pierce" />
             <Effect type="MountDamage"
-                    value="0.5"
+                    value="1.0"
                     hit_type="Melee" />
           </Effects>
         </ConditionalEffect>
@@ -6589,30 +6493,6 @@
                 value="0.05"
                 driven_property="MaxSpeedMultiplier"
                 is_ratio="true" />
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000021}Change Chinese to see the description"
-            icon="PerkHorseHunters"
-            perk_list="2">
-        <ConditionalEffect>
-          <Conditions>
-            <Condition type="AgentStatus"
-                       agent_status="OnFoot" />
-          </Conditions>
-          <Effects>
-            <Effect type="SpeedBonus"
-                    value="0.5"
-                    hit_type="Melee"
-                    damage_type="Pierce" />
-            <Effect type="MountDamage"
-                    value="0.5"
-                    hit_type="Melee" />
-          </Effects>
-        </ConditionalEffect>
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="mp_battania_pike" />
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000100}Change Chinese to see the description"
@@ -6669,71 +6549,6 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks
-	  <Perk game_mode="all"
-            name="{=00000149}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="0" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000150}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_battanian_noble_helmet_with_feather"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_battania_noble_armor"
-                       target="Player" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000151}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_battanian_noble_helmet_with_feather"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_battanian_scale_armor_a"
-                       target="Player" />					   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000152}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_battanian_plated_noble_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_battania_noble_armor"
-                       target="Player" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000153}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_battanian_plated_noble_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_battanian_scale_armor_a"
-                       target="Player" />				   
-      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_battania"
@@ -6790,7 +6605,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=bsabIdYm}Two Handed Axe"
-            description="{=UgZvT3FQ}Replaces Hatchet with Two Handed Axe, extra effective against shields. {newline} {newline}+5% Movement Speed"
+            description="{=n56qzZ6j}Replaces Hatchet with Two Handed Axe, extra effective against shields and capable of dismounting cavalry with swing attacks. {newline} {newline}+5% Movement Speed"
             icon="PerkTwoHandedAxe"
             perk_list="1">
         <Effect type="DrivenProperty"
@@ -6840,7 +6655,7 @@
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -6877,7 +6692,7 @@
                    melee_ai="50"
                    ranged_ai="50"
                    armor="42"
-                   movement_speed="0.75"
+                   movement_speed="0.73"
                    combat_movement_speed="0.7"
                    acceleration="3.2">
     <Perks>
@@ -6898,7 +6713,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_helmet_with_faceguard"
-                       target="Player" />			   
+                       target="Player" />
       </Perk>
       <Perk game_mode="all"
             name="{=E7WWiQCf}Range Longbow"
@@ -6932,38 +6747,13 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Head"
                        item="mp_helmet_with_faceguard"
-                       target="Player" />			   
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_battanian_noble_helmet_with_feather" />
-            <Item slot="Cape"
-                  item="mp_battania_shoulder_strap" />
-            <Item slot="Gloves"
-                  item="mp_battania_noble_bracers" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_mail_shoulders" />
-            <Item slot="Body"
-                  item="mp_battania_woodland_chainmail" />
-            <Item slot="Gloves"
-                  item="mp_battania_noble_bracers" />
-          </Group>
-          <Group>
-            <Item slot="Cape"
-                  item="mp_battanian_leather_shoulder_a" />
-            <Item slot="Body"
-                  item="mp_battania_noble_armor" />
-          </Group>
-        </RandomOnSpawnEffect>
+                       target="Player" />
       </Perk>
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -6983,11 +6773,11 @@
         </ConditionalEffect>
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_arrows_bodkin_extra" />
+                       item="mp_arrows_bodkin" />
       </Perk>
       <Perk game_mode="all"
             name="{=xnDWqYKW}Hunter"
-            description="{=ko852qPg}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
+            description="{=ha2b1k4u}Your experience as a Hunter allows you hit mounts in critical places dealing more damage.{newline} {newline}Grants Barbed Arrows{newline} {newline}+60% Damage to Mounts"
             icon="PerkHunter"
             perk_list="2">
         <Effect type="MountDamage"
@@ -6995,12 +6785,12 @@
                 hit_type="Ranged" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
-                       item="mp_arrows_bodkin_extra" />
+                       item="mp_arrows_bodkin_strong" />
       </Perk>
       <Perk game_mode="all"
             name="{=Ty7PjLFt}Frontliner"
             description="{=AApw8sqj}Your experience as a Frontliner allows you fight better in melee.{newline} {newline}Grants Better Twohanded Sword{newline} {newline}+5% Movement Speed {newline}-60% Moving Accuracy Penalty"
-            icon="PerkLongerSwords"
+            icon="PerkFrontliner"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
@@ -7020,9 +6810,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_battania_noble_two_handed_sword" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item1"
-                       item="mp_arrows_bodkin_extra" />			   
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000169}Anti Equipment Arrows"
@@ -7047,8 +6834,8 @@
                    icon="Cavalry_Light"
                    melee_ai="65"
                    ranged_ai="65"
-                   armor="25"
-                   movement_speed="0.70"
+                   armor="16"
+                   movement_speed="0.78"
                    combat_movement_speed="0.7"
                    acceleration="2.8">
     <Perks>
@@ -7085,27 +6872,6 @@
                        slot="Cape"
                        item="mp_battania_civil_cape"
                        target="Player" />
-        <RandomOnSpawnEffect type="RandomEquipmentOnSpawn"
-                             target="Troops">
-          <Group>
-            <Item slot="Head"
-                  item="mp_ridged_northernhelm" />
-            <Item slot="Body"
-                  item="mp_northern_lamellar_armor" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_a" />
-            <Item slot="Body"
-                  item="mp_northern_lamellar_armor" />
-          </Group>
-          <Group>
-            <Item slot="Head"
-                  item="mp_battania_earmuff_helmet_b" />
-            <Item slot="Body"
-                  item="mp_northern_leather_vest" />
-          </Group>
-        </RandomOnSpawnEffect>
       </Perk>
 	  <Perk game_mode="all"
             name="{=00000100}Change Chinese to see the description"
@@ -7157,7 +6923,7 @@
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=k5wDzNqz}Line Breaker"
-            description="{=00000052}Change Chinese to see the description"
+            description="{=00000052}你是冲锋陷阵、突破防线的专家。{newline}{newline}配备骑枪{newline}{newline}骑乘时的相对速度伤害加成+100%"
             icon="PerkLongSpear"
             perk_list="2">
         <ConditionalEffect>
@@ -7167,7 +6933,7 @@
           </Conditions>
           <Effects>
             <Effect type="SpeedBonus"
-                    value="1.5"
+                    value="0.5"
                     is_ratio="true" />
           </Effects>
         </ConditionalEffect>
@@ -7176,8 +6942,8 @@
                        item="mp_battania_lance" />			   
       </Perk>
       <Perk game_mode="all"
-            name="{=00000053}Change Chinese to see the description"
-            description="{=00000054}Change Chinese to see the description"
+            name="{=tZgHdSOX}Half Barding"
+            description="{=hvINBQ1p}Provides armor for your mount and additional protection against ranged weapons.{newline} {newline}+17 Armor to Mount{newline}-20% Damage taken by Mount from Ranged Weapons"
             hero_mount_idle_anim="act_battania_mp_mounted_warrior_mount_idle_perks"
             icon="PerkHalfBarding"
             perk_list="2">
@@ -7188,9 +6954,6 @@
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="HorseHarness"
                        item="mp_battania_horse_harness_halfscaled" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item0"
-                       item="mp_battania_cavalry_spear" />
       </Perk>
       <Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
@@ -7207,9 +6970,9 @@
                 is_ratio="true" />
         <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item3"
-                       item="mp_battania_javelin_captain" />
+                       item="mp_battania_javelin" />
       </Perk>
-	  <Perk game_mode="all"
+	  <!--Perk game_mode="all"
             name="{=5f6TSkM1}Mounted Skirmish"
             description="{=00000099}Change Chinese to see the description"
             icon="PerkGeneral"
@@ -7237,7 +7000,7 @@
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Item2"
                        item="mp_battnia_heavy_mace" />
-      </Perk>
+      </Perk-->
     </Perks>
   </MPClassDivision>
 
@@ -8487,7 +8250,7 @@
       <Perk game_mode="all"
             name="{=s5qRvBOp}Marksman"
             description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
-            icon="PerkStrongArrows"
+            icon="PerkMarksman"
             perk_list="2">
         <ConditionalEffect>
           <Conditions>
