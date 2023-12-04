@@ -56,6 +56,7 @@
     <Compile Remove="Patches\Patch_AgentStatCalculateModel.cs" />
     <Compile Remove="Patches\Patch_DedicatedCustomServerSubModule.cs" />
     <Compile Remove="Patches\Patch_MissionPeer.cs" />
+    <Compile Remove="Patches\Patch_MultiplayerStrikeMagnitudeModel.cs" />
     <Compile Remove="Patches\Patch_SpawningBehaviorBase.cs" />
   </ItemGroup>
 
