@@ -137,6 +137,9 @@ namespace CNMultiplayer.Modes.Siege
 
         public static bool LockTroop(MissionPeer component, MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer) //锁定兵种比例上限
         {
+            double archerPer = 0.25; //射狗比例
+            double cavalryPer = 0.25; //骑兵比例
+            double horseArcherPer = 0.25; //骑射比例
             bool flag = false;
             int Sum = GetTroopTypeCountForTeam(component.Team)[0];
             //int Infantry = GetTroopTypeCountForTeam(component.Team)[1];
@@ -144,7 +147,7 @@ namespace CNMultiplayer.Modes.Siege
             int Cavalry = GetTroopTypeCountForTeam(component.Team)[3];
             int HorseArcher = GetTroopTypeCountForTeam(component.Team)[4];
             BasicCharacterObject Character = mpheroClassForPeer.TroopCharacter;
-            if ((Character.IsRanged && !Character.IsMounted && Ranged > Sum * 0.3) || (Character.IsMounted && !Character.IsRanged && Cavalry > Sum * 0.2) || (Character.IsMounted && Character.IsRanged && HorseArcher > Sum * 0.1))
+            if ((Character.IsRanged && !Character.IsMounted && Ranged > Sum * archerPer) || (Character.IsMounted && !Character.IsRanged && Cavalry > Sum * cavalryPer) || (Character.IsMounted && Character.IsRanged && HorseArcher > Sum * horseArcherPer))
                 flag = true;
             return flag;
         }
