@@ -398,7 +398,7 @@
       <!-- First perks-->
       <Perk game_mode="all"
             name="{=E1bKcoaT}Cavalry Breaker"
-            description="{=00000039}你是步战反骑的专家，精于利用骑兵的速度还施彼身。{newline}{newline}配备长矛{newline}近战武器对坐骑伤害+100%{newline}近战武器穿刺攻击的相对速度伤害加成+50%"
+            description="{=eMd39oQf}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
             icon="PerkHorseHunters"
             perk_list="1">
         <ConditionalEffect>
@@ -431,20 +431,17 @@
       </Perk>
       <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equipped with axe {newline} for shield damage +40%{newline} Slash damage +10%"
+            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline} Equipped with axe {newline} for shield damage +40%"
             icon="PerkHeavyAxe"
             perk_list="1">
-		<Effect type="DamageDealt"
-                    value="0.10"
-                    hit_type="Melee"
-                    damage_type="Cut" />
-        <Effect type="ShieldDamage"
+            <Effect type="ShieldDamage"
                 value="0.4" />
 		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
                        slot="Cape"
                        item="mp_hood"
                        target="Player" />			   
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
+            <OnSpawnEffect
+                       type="AlternativeEquipmentOnSpawn"
                        slot="Item1"
                        item="mp_vlandian_axe" />
       </Perk>
@@ -457,51 +454,6 @@
                        slot="Item1"
                        item="mp_vlandian_mace" />			   
       </Perk>
-	<!--Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="vlandia_sword_4_t4" />			   
-      </Perk>
-	<Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="vlandia_noble_sword_3_t5" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000102}Reinforced Armor"
-            description="{=00000103}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="1">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="10" />
-        <OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Cape"
-                       item="mp_pauldron_cape_b"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Item3"
-                       item="broad_arming_sword_t4" />			   
-      </Perk-->
       <!-- Second perks-->
       <Perk game_mode="all"
             name="{=BbV2Pwzb}Reinforced Armor"
@@ -605,71 +557,6 @@
           </Group>
         </RandomOnSpawnEffect>
       </Perk>
-	  <!-- Third perks
-	  <Perk game_mode="all"
-            name="{=00000149}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-        <OnSpawnEffect type="ArmorOnSpawn"
-                       value="0" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000150}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_western_crowned_plated_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_white_coat_over_mail"
-                       target="Player" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000151}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_western_crowned_plated_helmet"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_coat_of_plates_over_mail"
-                       target="Player" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000152}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_visored_helmet_over_mail_coif"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_white_coat_over_mail"
-                       target="Player" />			   
-      </Perk>
-	  <Perk game_mode="all"
-            name="{=00000153}Change Chinese to see the description"
-            description="{=00000148}Change Chinese to see the description"
-            icon="PerkToughness"
-            perk_list="3">
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Head"
-                       item="mp_visored_helmet_over_mail_coif"
-                       target="Player" />
-		<OnSpawnEffect type="AlternativeEquipmentOnSpawn"
-                       slot="Body"
-                       item="mp_coat_of_plates_over_mail"
-                       target="Player" />			   
-      </Perk>-->
     </Perks>
   </MPClassDivision>
   <MPClassDivision id="mp_light_ranged_vlandia"
@@ -4918,7 +4805,7 @@
       </Perk>
       <Perk game_mode="all"
             name="{=9XtgLuAL}Axe Specialist"
-            description="{=00000004}You're good with axes of all kinds, but you hate wood. {newline}{newline}Grants Axe{newline}+40% Damage Dealt to Shields"
+            description="{=00000194}You're good with axes of all kinds, but you hate wood. {newline}{newline}Grants Axe{newline}+40% Damage Dealt to Shields"
             icon="PerkHeavyAxe"
             perk_list="1">
         <Effect type="ShieldDamage"
