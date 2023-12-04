@@ -15,14 +15,6 @@ namespace CNMultiplayer.Common
     {
         private const float FemaleAiPossibility = 0.25f; //女性AI比例
 
-        private bool _hasCalledSpawningEnded;
-
-        public event SpawningBehaviorBase.OnSpawningEndedEventDelegate OnSpawningEnded;
-
-        protected event Action<MissionPeer> OnPeerSpawnedFromVisuals;
-
-        protected event Action<MissionPeer> OnAllAgentsFromPeerSpawnedFromVisuals;
-
         protected override void SpawnAgents()
         {
             BasicCultureObject cultureTeam1 = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam1.GetStrValue());

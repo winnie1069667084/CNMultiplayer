@@ -1,6 +1,7 @@
 ﻿using NetworkMessages.FromServer;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using TaleWorlds.Core;
 using TaleWorlds.Engine;
@@ -13,14 +14,6 @@ namespace CNMultiplayer.Common
     internal abstract class CNMSpawningBehaviorBase : SpawningBehaviorBase
     {
         private const float FemaleAiPossibility = 0.25f; //女性AI比例
-
-        private bool _hasCalledSpawningEnded;
-
-        //public event SpawningBehaviorBase.OnSpawningEndedEventDelegate OnSpawningEnded;
-
-        //protected event Action<MissionPeer> OnPeerSpawnedFromVisuals;
-
-        //protected event Action<MissionPeer> OnAllAgentsFromPeerSpawnedFromVisuals;
 
         protected override void SpawnAgents()
         {
@@ -68,9 +61,10 @@ namespace CNMultiplayer.Common
                         .VisualsIndex(0)
                         .ClothingColor1((missionPeer.Team == Mission.AttackerTeam) ? teamCulture.Color : teamCulture.ClothAlternativeColor)
                         .ClothingColor2((missionPeer.Team == Mission.AttackerTeam) ? teamCulture.Color2 : teamCulture.ClothAlternativeColor2);
-                    if (GameMode.ShouldSpawnVisualsForServer(networkPeer))
+                    if (this.GameMode.ShouldSpawnVisualsForServer(networkPeer) && agentBuildData.AgentVisualsIndex == 0)
                     {
-                        AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(missionPeer, agentBuildData, missionPeer.SelectedTroopIndex);
+                        missionPeer.HasSpawnedAgentVisuals = true;
+                        missionPeer.EquipmentUpdatingExpired = false;
                     }
                     GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData);
                 }

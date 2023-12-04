@@ -353,8 +353,7 @@ namespace CNMultiplayer.Modes.Siege
             this.OnDestructableComponentDestroyed?.Invoke(destructableComponent, attackerScriptComponentBehavior, list.ToArray());
         }
 
-        public override MultiplayerGameType GetMissionType()
-            => MultiplayerGameType.FreeForAll; // Helps to avoid a few crashes.
+        public override MultiplayerGameType GetMissionType() => MultiplayerGameType.FreeForAll;
 
         public override bool UseRoundController() => false;
 
@@ -661,7 +660,7 @@ namespace CNMultiplayer.Modes.Siege
                     BattleSideEnum battleSideEnum = ((num2 == 0) ? BattleSideEnum.None : ((num2 < 0) ? BattleSideEnum.Attacker : BattleSideEnum.Defender));
                     if (battleSideEnum != BattleSideEnum.None && battleSideEnum == missionPeer.Team.Side)
                     {
-                        num2 = TaleWorlds.Library.MathF.Abs(num2);
+                        num2 = MathF.Abs(num2);
                         int count = array[(int)battleSideEnum].Count;
                         if (count > 0)
                         {
@@ -725,7 +724,6 @@ namespace CNMultiplayer.Modes.Siege
         public override void OnClearScene()
         {
             base.OnClearScene();
-            ClearPeerCounts();
             foreach (CastleGate gate in Mission.Current.MissionObjects.FindAllWithType<CastleGate>())
             {
                 foreach (StandingPoint standingPoint in gate.StandingPoints)
