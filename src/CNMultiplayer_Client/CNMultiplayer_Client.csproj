@@ -42,6 +42,7 @@
     <Error Text="Environment variable MB_SERVER_PATH should be set to your Bannerlord server installation path" Condition="'$(MB_SERVER_PATH)' == ''" />
   </Target>
   <ItemGroup>
+    <Compile Remove="LoadXMLbyMode.cs" />
     <Compile Remove="Modes\CNMCaptainGameMode.cs" />
     <Compile Remove="Modes\CNMCaptainSpawningBehavior.cs" />
     <Compile Remove="Modes\Patch_MissionNetworkComponent.cs" />

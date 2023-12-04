@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这个文件记录了兵种的价格、图标、AI数值（暂不可用）、护甲值、移动速度、战斗移动速度乘数、加速度、Perk等信息 -->
+
+<!-- 由于mpclassdivisions.xml的加载可以直接覆盖Native，所以这里只写出需要被修改的兵种，以保证和原版最高的同步性，防止因为TaleWorlds的某次更新导致数据需要全部修改的情况再次出现。 -->
+
+<!-- hero_idle_anim:        控制兵种选择界面的人物站姿，从TaleWorlds已经给出的anim中选择-->
+<!-- multiplier:            士兵乘数（领军） Captain only: This number is multiplied with the BotsPerFormation setting to get the final amount of troops to spawn. -->
+<!-- cost:                  兵种价格（遭遇战） Skirmish only: The gold cost of this troop. -->
+<!-- casual_cost:           兵种价格 适用于除Skirmish和Battle以外的其它所有模式，包括自定义模式 -->
+<!-- battle_cost:           兵种价格（战场） -->
+<!-- icon:                  兵种图标 -->
+<!-- armor:                 护甲值 This armor value is applied to every body part, regardless of equipment. -->
+<!-- movement_speed:        移动速度 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_speed_multiplier' (in native_parameters.xml).        Human only. -->
+<!-- combat_movement_speed: 战斗移动速度乘数 Goes from 0.0 to 1.0. This will be multiplied with 'movement_speed' during combat.    Human only. -->
+<!-- acceleration:          加速度 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_acceleration_multiplier'. Human only. -->
+<!-- hitpoints:             血量 Goes from 1 to infinity. Default is 100. Human only. -->
+
+<?xml-model href="../../../XmlSchemas/MPClassDivisions.xsd"?>
+<MPClassDivisions>
+    <!-- VLANDIA -->
+    <!-- 瓦兰迪亚军士 -->
+    <MPClassDivision
+        id="mp_heavy_infantry_vlandia"
+        hero="mp_heavy_infantry_vlandia_hero"
+        troop="mp_heavy_infantry_vlandia_troop"
+        hero_idle_anim="act_vlandia_mp_sergeant_idle"
+        troop_idle_anim="act_idle_1h_with_shield_1_left_stance"
+        multiplier="0.61"
+        cost="160"
+        casual_cost="150"
+        battle_cost="150"
+        icon="Infantry_Heavy"
+        melee_ai="50"
+        ranged_ai="50"
+        armor="40"
+        movement_speed="0.80"
+        combat_movement_speed="0.9"
+        acceleration="2.4">
+        <Perks>
+            <!-- First perks-->
+            <Perk
+                game_mode="all"
+                name="{=E1bKcoaT}Cavalry Breaker"
+                description="{=eMd39oQf}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
+                icon="PerkHorseHunters"
+                perk_list="1">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="SpeedBonus"
+                            value="0.50"
+                            hit_type="Melee"
+                            damage_type="Pierce" />
+                        <Effect
+                            type="MountDamage"
+                            value="1.0"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item3"
+                    item="mp_western_long_spear" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000001}Bastard Sword"
+                description="{=00000002}Replaced the One-handed Sword with a Bastard sword, both offensive and defensive, which can be used with two hands after the shield is broken. {newline} {newline}Eequipped with Bastard Sword"
+                icon="PerkLargerShields"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_vlandian_noble_bastard_sword" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=9XtgLuAL}Axe Specialist"
+                description="{=ITnsSkJr}You are experienced in all disciplines of axe combat, with a deep hate for wood.{newline} {newline}Grants Axe{newline} {newline}+20% Damage Dealt to Shields"
+                icon="PerkHeavyAxe"
+                perk_list="1">
+                <Effect
+                    type="ShieldDamage"
+                    value="0.2" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_vlandian_axe" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=VI4gQt8Q}Mace"
+                description="{=pblXb1ae}Grants Mace, effective against armored opponents."
+                icon="PerkMaces"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_vlandian_mace" />
+            </Perk>
+            <!-- Second perks-->
+            <Perk
+                game_mode="all"
+                name="{=BbV2Pwzb}Reinforced Armor"
+                description="{=6M5TbvlU}Armor crafted from higher grade materials.{newline} {newline}+ 13 armor"
+                icon="PerkToughness"
+                perk_list="2">
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="13" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_hood"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000003}Noble Two Handed Sword"
+                description="{=00000004}手持瓦兰迪亚标志性的巨剑，依靠娴熟的格挡在战场中七进七出。{newline}{newline}Grants Noble Two Handed Sword{newline}+5% movement speed"
+                hero_idle_anim="act_aserai_mp_guard_idle"
+                icon="PerkTwoHandedSwords"
+                perk_list="2">
+                <Effect
+                    type="DrivenProperty"
+                    value="0.05"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="mp_vlandian_noble_two_handed_sword" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=sQCpO6sp}Melee Expert"
+                description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
+                icon="PerkMeleeExpert"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.10"
+                            hit_type="Melee" />
+                        <Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000005}旗手"
+                description="{=00000006}举起旗帜，激励士气！{newline} {newline}+5% movement speed"
+                icon="PerkToughness"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="spear_bracing_banner_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="spear_wall_banner_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="pike_wall_banner_t3" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="archers_flag_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="bowmans_flag_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="marksmans_flag_t3" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_the_horseman_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_the_squire_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_the_knight_t3" />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+</MPClassDivisions>

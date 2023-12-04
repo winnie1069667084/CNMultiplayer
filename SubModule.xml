@@ -1,4 +1,3 @@
-
 <Module>
     <Name value="CN Multiplayer"/>
     <Id value="CNMultiplayer"/>
@@ -31,17 +30,20 @@
 		<XmlNode>
 			<XmlName id="GameText" path="strings"/>
 		</XmlNode>
-		<XmlNode>
+		<XmlNode>                
+			<XmlName id="MPClassDivisions" path="mpclassdivisions"/>
+		</XmlNode>  
+		<!--XmlNode>
 			<XmlName id="Items" path="items"/>
-		</XmlNode>
+		</XmlNode-->
 		<XmlNode>
 			<XmlName id="Items" path="items/spitems"/>
 		</XmlNode>
-		<XmlNode>
+		<!--XmlNode>
     		<XmlName id="MPCharacters" path="characters"/>
     	</XmlNode>
     	<XmlNode>
     		<XmlName id="CraftingPieces" path="crafting_pieces"/>
-    	</XmlNode>
+    	</XmlNode-->
     </Xmls>
 </Module>
