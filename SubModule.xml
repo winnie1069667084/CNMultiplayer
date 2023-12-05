@@ -42,8 +42,8 @@
 		<XmlNode>
     		<XmlName id="MPCharacters" path="characters"/>
     	</XmlNode>
-    	<!--XmlNode>
+    	<XmlNode>
     		<XmlName id="CraftingPieces" path="crafting_pieces"/>
-    	</XmlNode-->
+    	</XmlNode>
     </Xmls>
 </Module>

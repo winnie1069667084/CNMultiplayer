@@ -223,8 +223,7 @@
 					id="Item.mp_empire_horseman_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_vlandia_hero"
@@ -290,8 +289,7 @@
 					id="Item.mp_padded_mitten" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 
 	<!-- 瓦兰迪亚军士 -->
@@ -362,8 +360,7 @@
 					id="Item.mp_mail_mitten" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_vlandia_hero"
@@ -432,8 +429,7 @@
 					id="Item.mp_empire_horseman_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_vlandia_hero"
@@ -505,8 +501,7 @@
 					id="Item.mp_leather_cavalier_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_vlandia_hero"
@@ -581,8 +576,7 @@
 					id="Item.mp_light_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_vlandia_hero"
@@ -660,8 +654,7 @@
 					id="Item.mp_chain_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!-- Empire Heros -->
 	<NPCCharacter
@@ -731,8 +724,7 @@
 					id="Item.mp_laced_coif" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_empire_hero"
@@ -792,8 +784,7 @@
 					id="Item.mp_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_empire_hero"
@@ -849,21 +840,26 @@
 					slot="Item1"
 					id="Item.mp_reinforced_flat_kite_shield" />
 				<equipment
+					slot="Item2"
+					id="Item.mp_pilum" />
+				<equipment
 					slot="Head"
-					id="Item.mp_ironlame_nasalhelm_over_imperial_mail" />
+					id="Item.mp_heavy_nasalhelm_over_laced_cloth" />
+				<equipment
+					slot="Cape"
+					id="Item.imperial_studded_strip_shoulders" />
 				<equipment
 					slot="Body"
-					id="Item.mp_legionary_mail" />
+					id="Item.mp_imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.mp_mail_chausses" />
+					id="Item.mp_strapped_mail_chausses" />
 				<equipment
 					slot="Gloves"
-					id="Item.mp_reinforced_leather_vambraces" />
+					id="Item.mp_reinforced_padded_mitten" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_empire_hero"
@@ -932,8 +928,7 @@
 					id="Item.mp_imperial_leather_coif" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_empire_hero"
@@ -1005,8 +1000,7 @@
 					id="Item.mp_fine_town_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_empire_hero"
@@ -1084,8 +1078,7 @@
 					id="Item.mp_stripped_leather_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_empire_hero"
@@ -1163,8 +1156,7 @@
 					id="Item.mp_imperial_scale_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!--Khuzait Heros-->
 	<NPCCharacter
@@ -1231,8 +1223,7 @@
 					id="Item.mp_eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_khuzait_hero"
@@ -1301,8 +1292,80 @@
 					id="Item.mp_steppe_helmet" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="50" />
+		<Resistances dismount="50" />
+	</NPCCharacter>
+	<!-- 库赛特达尔罕Hero -->
+	<NPCCharacter
+		id="mp_heavier_infantry_khuzait_hero"
+		default_group="Infantry"
+		level="25"
+		name="{=10000001}Darkhan"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<!--face_key value="34.2;0.2043;0.1333;16F40E40000001;6006DC30000;507788B0100;0;2311402000000;0;0;100000" max_value="33.48;0.7333;0.5333;1CFC0FC03C38D1;FFFFFFFFFFFBFF3F;FACFFFFFFFFFFFFF;FFFFFFFFF77FFFF7;8BFF408FFFFFF;0;0;285141" /-->
+			<BodyProperties
+				version="4"
+				age="34.2"
+				weight="0.2043"
+				build="0.1333"
+				key="0016F40E40000001000006006DC3000000000507788B010000000000000000000002311402000000000000000000000000000000000000000000000000280000" />
+			<BodyPropertiesMax
+				version="4"
+				age="33.48"
+				weight="0.7333"
+				build="0.5333"
+				key="001CFC0FC03C38D1FFFFFFFFFFFBFF3FFACFFFFFFFFFFFFFFFFFFFFFF77FFFF70008BFF408FFFFFF000000000000000000000000000000000000000000A05141" />
+		</face>
+		<skills>
+			<skill
+				id="Riding"
+				value="75" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="20" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item1"
+					id="Item.mp_khuzait_heavy_sabre" />
+				<equipment
+					slot="Item2"
+					id="Item.mp_noyans_shield" />
+				<equipment
+					slot="Head"
+					id="Item.mp_plumed_nomad_helmet" />
+				<equipment
+					slot="Cape"
+					id="Item.mp_leather_lamellar_shoulders" />
+				<equipment
+					slot="Body"
+					id="Item.mp_leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.mp_steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.mp_steppe_leather_vambraces" />
+			</EquipmentRoster>
+		</Equipments>
+		<Resistances dismount="50" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_khuzait_hero"
@@ -1374,8 +1437,7 @@
 					id="Item.mp_buttoned_leather_bracers" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_khuzait_hero"
@@ -1447,8 +1509,7 @@
 					id="Item.mp_eastern_plated_leather_vambraces" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="45" />
+		<Resistances dismount="45" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_khuzait_hero"
@@ -1523,8 +1584,7 @@
 					id="Item.mp_steppe_fur_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_khuzait_hero"
@@ -1605,8 +1665,7 @@
 					id="Item.mp_steppe_half_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_horse_archer_khuzait_hero"
@@ -1687,8 +1746,7 @@
 					id="Item.mp_steppe_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="80" />
+		<Resistances dismount="80" />
 	</NPCCharacter>
 	<!--Aserai Heros-->
 	<NPCCharacter
@@ -1755,8 +1813,7 @@
 					id="Item.mp_khuzait_curved_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_aserai_hero"
@@ -1819,8 +1876,80 @@
 					id="Item.mp_steppe_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
+	</NPCCharacter>
+	<!-- 阿塞莱资深步兵 -->
+	<NPCCharacter
+		id="mp_heavy_infantry_aserai_hero"
+		default_group="Infantry"
+		level="25"
+		name="{=10000002}Veteran Infantry"
+		occupation="Soldier"
+		culture="Culture.aserai">
+		<face>
+			<!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+			<BodyProperties
+				version="4"
+				age="26.1"
+				weight="0.2667"
+				build="0.1944"
+				key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+			<BodyPropertiesMax
+				version="4"
+				age="40.61"
+				weight="0.4"
+				build="0.5333"
+				key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+		</face>
+		<skills>
+			<skill
+				id="Riding"
+				value="50" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="20" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.mp_aserai_ranger_sword" />
+				<equipment
+					slot="Item1"
+					id="Item.mp_emirs_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.mp_emirs_helmet" />
+				<equipment
+					slot="Cape"
+					id="Item.mp_leopard_pelt" />
+				<equipment
+					slot="Body"
+					id="Item.empire_plate_vest_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.mp_northern_brass_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.mp_leather_boots" />
+			</EquipmentRoster>
+		</Equipments>
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_skirmisher_aserai_hero"
@@ -1889,8 +2018,7 @@
 					id="Item.mp_eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_aserai_hero"
@@ -1959,8 +2087,7 @@
 					id="Item.mp_eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_aserai_hero"
@@ -2032,8 +2159,7 @@
 					id="Item.mp_eastern_plated_leather_vambraces" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_aserai_hero"
@@ -2108,8 +2234,7 @@
 					id="Item.mp_light_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_aserai_hero"
@@ -2187,8 +2312,7 @@
 					id="Item.mp_half_mail_and_plate_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!--Sturgia Heros-->
 	<NPCCharacter
@@ -2255,8 +2379,7 @@
 					id="Item.mp_nordic_fur_cap" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_sturgia_hero"
@@ -2325,8 +2448,7 @@
 					id="Item.mp_plated_strip_gauntlets" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_sturgia_hero"
@@ -2389,8 +2511,7 @@
 					id="Item.mp_fur_hat" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_skirmisher_sturgia_hero"
@@ -2459,8 +2580,7 @@
 					id="Item.mp_wrapped_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_sturgia_hero"
@@ -2529,8 +2649,7 @@
 					id="Item.mp_wrapped_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_sturgia_hero"
@@ -2605,8 +2724,7 @@
 					id="Item.mp_northern_light_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_sturgia_hero"
@@ -2687,8 +2805,7 @@
 					id="Item.mp_plated_strip_gauntlets" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!--Battanian Heros-->
 	<NPCCharacter
@@ -2749,8 +2866,7 @@
 					id="Item.mp_highland_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_battania_hero"
@@ -2819,8 +2935,7 @@
 					id="Item.mp_battania_woodland_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_battania_hero"
@@ -2883,8 +2998,7 @@
 					id="Item.mp_armwraps" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_skirmisher_battania_hero"
@@ -2956,8 +3070,7 @@
 					id="Item.mp_battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_battania_hero"
@@ -3029,8 +3142,7 @@
 					id="Item.mp_wrapped_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_battania_hero"
@@ -3102,8 +3214,7 @@
 					id="Item.mp_battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_battania_hero"
@@ -3175,8 +3286,7 @@
 					id="Item.mp_battania_horse_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<!-- Troops -->
 	<!-- Vlandian Troops -->
@@ -3266,8 +3376,7 @@
 					id="Item.mp_padded_cap" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_vlandia_troop"
@@ -3372,8 +3481,7 @@
 					id="Item.mp_leather_cavalier_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_vlandia_troop"
@@ -3482,8 +3590,7 @@
 					id="Item.mp_leather_cavalier_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_vlandia_troop"
@@ -3592,8 +3699,7 @@
 					id="Item.mp_leather_cavalier_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_vlandia_troop"
@@ -3711,8 +3817,7 @@
 					id="Item.mp_leather_cavalier_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_vlandia_troop"
@@ -3848,8 +3953,7 @@
 					id="Item.mp_light_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_vlandia_troop"
@@ -3985,8 +4089,7 @@
 					id="Item.mp_chain_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!-- Empire Troops -->
 	<NPCCharacter
@@ -4090,8 +4193,7 @@
 					id="Item.mp_decorated_imperial_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_empire_troop"
@@ -4182,8 +4284,7 @@
 					id="Item.mp_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_skirmisher_empire_troop"
@@ -4289,8 +4390,7 @@
 					id="Item.mp_leather_cap" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_empire_troop"
@@ -4396,8 +4496,7 @@
 					id="Item.mp_empire_horseman_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_empire_troop"
@@ -4506,8 +4605,7 @@
 					id="Item.mp_decorated_imperial_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_empire_troop"
@@ -4643,8 +4741,7 @@
 					id="Item.mp_light_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_empire_troop"
@@ -4780,8 +4877,7 @@
 					id="Item.mp_imperial_scale_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!--Khuzait Troops-->
 	<NPCCharacter
@@ -4882,8 +4978,7 @@
 					id="Item.mp_eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_khuzait_troop"
@@ -4992,8 +5087,80 @@
 					id="Item.mp_khuzait_curved_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="50" />
+		<Resistances dismount="50" />
+	</NPCCharacter>
+	<!-- 库赛特达尔罕Troop -->
+	<NPCCharacter
+		id="mp_heavier_infantry_khuzait_troop"
+		default_group="Infantry"
+		level="25"
+		name="{=10000001}Darkhan"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<!--face_key value="34.2;0.2043;0.1333;16F40E40000001;6006DC30000;507788B0100;0;2311402000000;0;0;100000" max_value="33.48;0.7333;0.5333;1CFC0FC03C38D1;FFFFFFFFFFFBFF3F;FACFFFFFFFFFFFFF;FFFFFFFFF77FFFF7;8BFF408FFFFFF;0;0;285141" /-->
+			<BodyProperties
+				version="4"
+				age="34.2"
+				weight="0.2043"
+				build="0.1333"
+				key="0016F40E40000001000006006DC3000000000507788B010000000000000000000002311402000000000000000000000000000000000000000000000000280000" />
+			<BodyPropertiesMax
+				version="4"
+				age="33.48"
+				weight="0.7333"
+				build="0.5333"
+				key="001CFC0FC03C38D1FFFFFFFFFFFBFF3FFACFFFFFFFFFFFFFFFFFFFFFF77FFFF70008BFF408FFFFFF000000000000000000000000000000000000000000A05141" />
+		</face>
+		<skills>
+			<skill
+				id="Riding"
+				value="75" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="20" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item1"
+					id="Item.mp_khuzait_heavy_sabre" />
+				<equipment
+					slot="Item2"
+					id="Item.mp_noyans_shield" />
+				<equipment
+					slot="Head"
+					id="Item.mp_plumed_nomad_helmet" />
+				<equipment
+					slot="Cape"
+					id="Item.mp_leather_lamellar_shoulders" />
+				<equipment
+					slot="Body"
+					id="Item.mp_leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.mp_steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.mp_steppe_leather_vambraces" />
+			</EquipmentRoster>
+		</Equipments>
+		<Resistances dismount="50" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_khuzait_troop"
@@ -5105,8 +5272,7 @@
 					id="Item.mp_eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_khuzait_troop"
@@ -5221,8 +5387,7 @@
 					id="Item.mp_steppe_leather_vambraces" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="45" />
+		<Resistances dismount="45" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_khuzait_troop"
@@ -5340,8 +5505,7 @@
 					id="Item.mp_desert_cloth_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_khuzait_troop"
@@ -5477,8 +5641,7 @@
 					id="Item.mp_steppe_half_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_horse_archer_khuzait_troop"
@@ -5614,8 +5777,7 @@
 					id="Item.mp_steppe_fur_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="80" />
+		<Resistances dismount="80" />
 	</NPCCharacter>
 	<!--Aserai Troops-->
 	<NPCCharacter
@@ -5716,8 +5878,7 @@
 					id="Item.mp_khuzait_curved_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_aserai_troop"
@@ -5817,8 +5978,80 @@
 					id="Item.mp_buttoned_leather_bracers" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
+	</NPCCharacter>
+	<!-- 阿塞莱资深步兵Troop -->
+	<NPCCharacter
+		id="mp_heavy_infantry_aserai_troop"
+		default_group="Infantry"
+		level="25"
+		name="{=10000002}Veteran Infantry"
+		occupation="Soldier"
+		culture="Culture.aserai">
+		<face>
+			<!--face_key value="26.1;0.2667;0.1944;1DC40E40000000;100000000040000;0;6650003;3400303000000;0;0;280000" max_value="33.1;0.4;0.5333;2DFC0FC000374F;FFFFFFFFAE76FFFF;FFF1FFFFFFD7FFFF;FFFFEFEFFFFFFFFF;86FF408FFFEFF;0;0;309184"/-->
+			<BodyProperties
+				version="4"
+				age="26.1"
+				weight="0.2667"
+				build="0.1944"
+				key="001CC40E400000000100000000040000000000000000000000000000066500030003400303000000000000000000000000000000000000000000000000A00000" />
+			<BodyPropertiesMax
+				version="4"
+				age="40.61"
+				weight="0.4"
+				build="0.5333"
+				key="002DFC0FC000374FFFFFFFFFAE76FFFFFFF1FFFFFFD7FFFFFFFFEFEFFFFFFFFF00086FFD08FFFEFF000000000000000000000000000000000000000000C89183" />
+		</face>
+		<skills>
+			<skill
+				id="Riding"
+				value="50" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="20" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.mp_aserai_heavy_mace" />
+				<equipment
+					slot="Item1"
+					id="Item.mp_emirs_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.mp_emirs_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.mp_desert_scale_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.mp_plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.mp_plated_strip_boots" />
+				<equipment
+					slot="Cape"
+					id="Item.mp_desert_scale_shoulders" />
+			</EquipmentRoster>
+		</Equipments>
+		<Resistances dismount="50" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_skirmisher_aserai_troop"
@@ -5927,8 +6160,7 @@
 					id="Item.mp_steppe_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_aserai_troop"
@@ -6046,8 +6278,7 @@
 					id="Item.mp_buttoned_leather_bracers" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_aserai_troop"
@@ -6159,8 +6390,7 @@
 					id="Item.mp_plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_aserai_troop"
@@ -6296,8 +6526,7 @@
 					id="Item.mp_light_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_aserai_troop"
@@ -6436,8 +6665,7 @@
 					id="Item.mp_desert_fabric_shoulderpad" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!--Sturgia Troops-->
 	<NPCCharacter
@@ -6535,8 +6763,7 @@
 					id="Item.mp_battania_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_sturgia_troop"
@@ -6653,8 +6880,7 @@
 					id="Item.mp_rough_tied_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_sturgia_troop"
@@ -6742,8 +6968,7 @@
 					id="Item.mp_battania_woodland_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_skirmisher_sturgia_troop"
@@ -6852,8 +7077,7 @@
 					id="Item.mp_battania_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_sturgia_troop"
@@ -6968,8 +7192,7 @@
 					id="Item.mp_buttoned_leather_bracers" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_sturgia_troop"
@@ -7096,8 +7319,7 @@
 					id="Item.mp_northern_noble_harness" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_cavalry_sturgia_troop"
@@ -7233,8 +7455,7 @@
 					id="Item.mp_northern_ring_barding" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="85" />
+		<Resistances dismount="85" />
 	</NPCCharacter>
 	<!--Battanian Troops-->
 	<NPCCharacter
@@ -7326,8 +7547,7 @@
 					id="Item.mp_battania_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="25" />
+		<Resistances dismount="25" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_infantry_battania_troop"
@@ -7436,8 +7656,7 @@
 					id="Item.mp_battania_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="40" />
+		<Resistances dismount="40" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_shock_infantry_battania_troop"
@@ -7528,8 +7747,7 @@
 					id="Item.mp_battania_scarf_a" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_skirmisher_battania_troop"
@@ -7647,8 +7865,7 @@
 					id="Item.mp_battania_shoulder_strap" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_ranged_battania_troop"
@@ -7769,8 +7986,7 @@
 					id="Item.mp_thinhide_coif" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="30" />
+		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_heavy_ranged_battania_troop"
@@ -7888,8 +8104,7 @@
 					id="Item.mp_battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="35" />
+		<Resistances dismount="35" />
 	</NPCCharacter>
 	<NPCCharacter
 		id="mp_light_cavalry_battania_troop"
@@ -8016,7 +8231,6 @@
 					id="Item.mp_bandit_saddle_highland" />
 			</EquipmentRoster>
 		</Equipments>
-		<Resistances
-			dismount="75" />
+		<Resistances dismount="75" />
 	</NPCCharacter>
 </MPCharacters>
