@@ -39,10 +39,10 @@
 		<XmlNode>
 			<XmlName id="Items" path="items/spitems"/>
 		</XmlNode>
-		<!--XmlNode>
+		<XmlNode>
     		<XmlName id="MPCharacters" path="characters"/>
     	</XmlNode>
-    	<XmlNode>
+    	<!--XmlNode>
     		<XmlName id="CraftingPieces" path="crafting_pieces"/>
     	</XmlNode-->
     </Xmls>
