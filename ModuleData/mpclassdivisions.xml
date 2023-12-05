@@ -2,6 +2,7 @@
 <!-- 这个文件记录了兵种的价格、图标、AI数值（暂不可用）、护甲值、移动速度、战斗移动速度乘数、加速度、Perk等信息 -->
 
 <!-- 由于mpclassdivisions.xml的加载可以直接覆盖Native。 -->
+<!-- 官方规定的护甲等级：无护甲（0）、低护甲（12）、中甲（37）、最高护甲（55）。（数据来自mpcharacters.xml） -->
 
 <!-- hero_idle_anim:        控制兵种选择界面的人物站姿，从TaleWorlds已经给出的anim中选择-->
 <!-- multiplier:            士兵乘数（领军） Captain only: This number is multiplied with the BotsPerFormation setting to get the final amount of troops to spawn. -->
@@ -1247,7 +1248,7 @@
                     item="mp_empire_spatha" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=rTPnyeJ3}Shield Wall"
                 description="{=8B7pGxj4}Your Shield has more durability and you take less damage from Ranged attacks.{newline} {newline}Grants Stronger Shield{newline}-30% Damage taken from Ranged Weapons"
                 icon="PerkShieldWall"
@@ -1361,7 +1362,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=E1bKcoaT}Cavalry Breaker"
                 description="{=mbIhGIcV}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself.{newline} {newline}+75% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
                 icon="PerkHorseHunters"
@@ -1386,7 +1387,7 @@
                 </ConditionalEffect>
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=DeWp2GjP}Shield Breaker"
                 description="{=pqaYbQBy}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+20% Damage to Shields"
                 icon="PerkShieldSplitterAxes"
@@ -1408,6 +1409,7 @@
             </Perk>
         </Perks>
     </MPClassDivision>
+    <!-- 帝国军团步兵 -->
     <MPClassDivision
         id="mp_heavy_infantry_empire"
         hero="mp_heavy_infantry_empire_hero"
@@ -1416,7 +1418,7 @@
         troop_idle_anim="act_idle_1h_with_shield_1"
         multiplier="0.65"
         cost="150"
-        casual_cost="140"
+        casual_cost="150"
         battle_cost="140"
         icon="Infantry_Heavy"
         melee_ai="50"
@@ -1426,6 +1428,35 @@
         combat_movement_speed="0.9"
         acceleration="2.4">
         <Perks>
+            <Perk
+                game_mode="all"
+                name="{=00000007}中流砥柱"
+                description="{=00000008}军团步兵的标准配置，强大的防御力成为队伍的绝对中坚。{newline} {newline}配备加长帝国重剑{newline}护甲+5"
+                hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
+                icon="PerkHoldTheLine"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="mp_empire_long_spatha" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_stronger_reinforced_kite_shield" />
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="5" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_varangian_bra_royal"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Leg"
+                    item="mp_plated_strip_boots"
+                    target="Player" />
+            </Perk>
             <Perk
                 game_mode="all"
                 name="{=9XtgLuAL}Axe Specialist"
@@ -1442,39 +1473,72 @@
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=DrWY4I8X}Mace Specialist"
-                description="{=tpbjS8J8}You have learned how to fight against against armored opponents. {newline}Grants Heavy Mace {newline}+ 4 Armor"
+                name="{=00000011}城镇驻军"
+                description="{=00000012}你的任务是维护属地的治安，用锤杖击晕所有胆敢反抗的暴民。{newline} {newline}配备帝国杖"
                 icon="PerkMaces"
                 perk_list="1">
                 <OnSpawnEffect
                     type="AlternativeEquipmentOnSpawn"
                     slot="Item0"
                     item="mp_empire_mace" />
-                <OnSpawnEffect
-                    type="ArmorOnSpawn"
-                    value="4" />
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=C9ufRSsL}Sword and Shield"
-                description="{=Y30Y1Ywt}Grants a strong Sword together with a Shield."
-                hero_idle_anim="act_vlandia_mp_voulgier_swordandshieldperk_idle"
-                icon="PerkHoldTheLine"
+                name="{=00000005}旗手"
+                description="{=00000006}举起旗帜，激励士气！{newline} {newline}移动速度+5%"
+                icon="PerkToughness"
                 perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="mp_empire_long_spatha" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item1"
-                    item="mp_stronger_reinforced_kite_shield" />
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                        <Effects>
+                        <Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="standard_of_duty_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="standard_of_courage_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="standard_of_discipline_t3" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="phalanx_standard_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="fulcum_standard_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="testudo_standard_t3" />
+                    </Group>
+                </RandomOnSpawnEffect>
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
-                name="{=Do4Mmbs9}Plated Armor"
-                description="{=2BpUBMJS}You improved your armor with sturdy metal plates.{newline} {newline}+10 armor{newline}-20% Cut damage taken"
+                game_mode="all"
+                name="{=00000009}帝国鳞甲"
+                description="{=00000010}帝国先进的盔甲锻造工艺使得鳞甲可以大规模装备至军团，成为帝国军队战无不胜的秘诀。{newline} {newline}护甲+10{newline}受到的挥砍伤害-20%"
                 icon="PerkArmorUpgrade"
                 perk_list="2">
                 <Effect
@@ -1486,8 +1550,18 @@
                     value="10" />
                 <OnSpawnEffect
                     type="AlternativeEquipmentOnSpawn"
-                    slot="Cape"
-                    item="mp_empire_warrior_padded_armor_shoulder"
+                    slot="Head"
+                    item="mp_empire_helmet_with_metal_strips"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Body"
+                    item="mp_lamellar_with_scale_skirt"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Gloves"
+                    item="mp_plated_strip_gauntlets"
                     target="Player" />
             </Perk>
             <Perk
@@ -1617,7 +1691,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=qZctRzJS}Mobility"
                 description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
                 icon="PerkFleetFooted"
@@ -1661,7 +1735,7 @@
                     item="mp_arrows_barbed_strong" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=s5qRvBOp}Marksman"
                 description="{=YVwl3BgB}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy duration"
                 icon="PerkMarksman"
@@ -1820,7 +1894,7 @@
                     item="mp_empire_long_spatha" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=vyI2KVKM}Bullseye"
                 description="{=gcmyaxK9}You know where to hit your targets, your shots deal additional damage, especially your headshots.{newline} {newline}+5% Damage with Missiles {newline}+5% extra Damage on Headshots"
                 icon="PerkSharpshooters"
@@ -1957,7 +2031,7 @@
                 </ConditionalEffect>
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=QDxixJH9}Auxiliary"
                 description="{=wv6Jpubk}You take an assisting role in combat and gain gold for every assist as reward.{newline} {newline}+20 Gold per Assist"
                 icon="PerkAuxiliary"
@@ -2292,7 +2366,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=oBBE3ggU}Conscript"
                 description="{=n5d7CnPo}Your experience as Village Militia made you hardened. You take less damage.{newline} {newline}Grants Throwing Stones{newline} {newline}-15% Damage taken"
                 icon="PerkGeneral"
@@ -2306,7 +2380,7 @@
                     item="mp_throwing_stone" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=urUwa4bf}Looter"
                 description="{=UkukckV4}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+10 Gold per Kill"
                 icon="PerkGold"
@@ -2454,7 +2528,7 @@
                     item="mp_khuzait_long_infantry_spear" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=YeRH0SUc}Steppe Infantry"
                 description="{=pn9OIMbK}You are a fighter of the steppe, in combat you stay mobile and dangerous to open up the back of your enemies.{newline} {newline}Grants Short Spear{newline} {newline}+7% Movement Speed{newline}+5% Melee Damage"
                 icon="PerkSteppeInfantry"
@@ -2483,6 +2557,213 @@
                     type="AlternativeEquipmentOnSpawn"
                     slot="Item0"
                     item="mp_khuzait_throwing_spear" />
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- 库赛特达尔罕 -->
+    <MPClassDivision
+        id="mp_heavier_infantry_khuzait"
+        hero="mp_heavier_infantry_khuzait_hero"
+        troop="mp_heavier_infantry_khuzait_troop"
+        hero_idle_anim="act_khuzait_mp_spear_infantry_idle"
+        troop_idle_anim="act_idle_1h_with_shield_1"
+        multiplier="0.60"
+        cost="140"
+        casual_cost="140"
+        battle_cost="130"
+        icon="Infantry_Heavy"
+        melee_ai="80"
+        ranged_ai="80"
+        armor="34"
+        movement_speed="0.81"
+        combat_movement_speed="0.9"
+        acceleration="2.5">
+        <Perks>
+            <!-- First perks-->
+            <Perk
+                game_mode="all"
+                name="{=00000013}Masked Nightmare"
+                description="{=00000014}你是敌人日夜难寐的成因，是一个不可阻挡的死亡贩子。{newline}{newline}护甲+10"
+                icon="PerkToughness"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="10" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_spiked_helmet_with_facemask"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_lamellar_shoulders"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Body"
+                    item="mp_eastern_lamellar_armor"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Gloves"
+                    item="mp_plated_strip_gauntlets"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000015}Glaive"
+                description="{=00000016}草原民族的步兵擅长用长杆武器的距离优势克敌机先，缨饰偃月刀更是这群战士们的挚爱。{newline} {newline}配备缨饰偃月刀"
+                hero_idle_anim="act_aserai_mp_guard_idle"
+                icon="PerkPolearms"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item2"
+                    item="khuzait_polearm_1_t4" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="null" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000017}草原奴贩"
+                description="{=00000018}早年的响马经历使你保留了使用钝器的习惯，库赛特汗国也对那些能够在战场上带回俘虏的战士许诺丰厚的奖赏。{newline} {newline}配备库赛特重杖{newline}每次击杀，第纳尔+5"
+                icon="PerkMaces"
+                perk_list="1">
+                <Effect
+                    type="GoldGainOnKill"
+                    value="5"
+                    is_disabled_in_warmup="true" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_khuzait_heavy_mace" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000019}重型偃月刀"
+                description="{=00000020}这种超长的偃月刀对距离的追求达到了丧心病狂的地步，只有极少数战士才能在步战中发挥它的优势。{newline} {newline}配备重型偃月刀"
+                hero_idle_anim="act_aserai_mp_guard_idle"
+                icon="PerkPolearms"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item2"
+                    item="mp_khuzait_heavy_glaive" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="null" />
+            </Perk>
+            <!-- Second perks-->
+            <Perk
+                game_mode="all"
+                name="{=YeRH0SUc}Steppe Infantry"
+                description="{=pn9OIMbK}You are a fighter of the steppe, in combat you stay mobile and dangerous to open up the back of your enemies.{newline} {newline}Grants Short Spear{newline} {newline}+7% Movement Speed{newline}+5% Melee Damage"
+                icon="PerkSteppeInfantry"
+                perk_list="2">
+                <Effect
+                    type="DrivenProperty"
+                    value="0.07"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+                <Effect
+                    type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=jf8luKVV}Brawny"
+                description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
+                icon="PerkBrawny"
+                perk_list="2">
+                <Effect
+                    type="SpeedBonus"
+                    value="0.35"
+                    hit_type="Melee" />
+                <Effect
+                    type="DrivenProperty"
+                    value="0.05"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=blqDgCtL}Big Game Hunter"
+                description="{=pjgUeOSa}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+100% Ranged Damage to Mounts"
+                icon="PerkThrowingSpear"
+                perk_list="2">
+                <Effect
+                    type="MountDamage"
+                    value="1.0"
+                    hit_type="Ranged" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item3"
+                    item="mp_khuzait_throwing_spear" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000005}旗手"
+                description="{=00000006}举起旗帜，激励士气！{newline} {newline}移动速度+5%"
+                icon="PerkToughness"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_wooden_arrow_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_bone_arrow_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_whistling_arrow_t3" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_the_roaming_horse_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_the_boundless_horde_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_the_endless_steppe_t3" />
+                    </Group>
+                </RandomOnSpawnEffect>
             </Perk>
         </Perks>
     </MPClassDivision>
@@ -2558,7 +2839,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=qZctRzJS}Mobility"
                 description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
                 icon="PerkFleetFooted"
@@ -2603,7 +2884,7 @@
                     item="mp_arrows_steppe_strong" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=s5qRvBOp}Marksman"
                 description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
                 icon="PerkMarksman"
@@ -2692,7 +2973,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=s5qRvBOp}Marksman"
                 description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
                 icon="PerkMarksman"
@@ -2713,7 +2994,7 @@
                     item="mp_arrows_steppe_strong" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=qZctRzJS}Mobility"
                 description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
                 icon="PerkFleetFooted"
@@ -2875,7 +3156,7 @@
                     item="mp_steppe_guardian_shield" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=k5wDzNqz}Line Breaker"
                 description="{=aPnYFXVX}You are an expert at charging in to break defensive lines. Grants a cavalry spear that does more damage.{newline} {newline}Grants Cavalry Spear{newline} {newline}+50% Speed Bonus Damage on Mount"
                 icon="PerkLongSpear"
@@ -3376,7 +3657,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=v2WKbNZo}Rapid Throws"
                 description="{=dIbTJvfA}You are able throw javelins quicker.{newline} {newline}Grants 2 additional Jereeds{newline} {newline} +10% Ready Speed"
                 icon="PerkMoreThrowingSpears"
@@ -3416,7 +3697,7 @@
                 </ConditionalEffect>
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=6CDEbd1S}Impaler"
                 description="{=vhyTjeAR}Your strong arm allows you to throw faster with much more deadly force.{newline} {newline}+5% Missle Release Speed{newline} {newline}+20% Throwing Weapon Damage"
                 icon="PerkHeavierJavelins"
@@ -3460,7 +3741,7 @@
                     item="mp_aserai_strong_twohanded_axe" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=PNZmPprx}Two Handed Sword"
                 description="{=vBvDZCtw}Replaces Tabar with Two Handed Sword, effective at dueling and thrusting."
                 hero_idle_anim="act_aserai_mp_guard_idle_2hperk"
@@ -3531,7 +3812,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=rJFGyaBS}Moloch"
                 description="{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields"
                 icon="PerkFightingMadness"
@@ -3554,7 +3835,7 @@
                 </ConditionalEffect>
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=du7l3z5b}Sturdy"
                 description="{=sfK8Dkso}You were born tougher than most, you are harder to kill.{newline} {newline}-20% Damage Taken from Melee Attacks."
                 icon="PerkSturdy"
@@ -3565,7 +3846,7 @@
                     hit_type="Melee" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=0TtCRwmr}Athletic"
                 description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed"
                 icon="PerkFleetFooted"
@@ -3575,6 +3856,234 @@
                     value="0.05"
                     driven_property="MaxSpeedMultiplier"
                     is_ratio="true" />
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- 阿塞莱资深步兵 -->
+    <MPClassDivision
+        id="mp_heavy_infantry_aserai"
+        hero="mp_heavy_infantry_aserai_hero"
+        troop="mp_heavy_infantry_aserai_troop"
+        hero_idle_anim="act_aserai_aserai_mp_archer_idle"
+        troop_idle_anim="act_idle_bow_1"
+        multiplier="0.68"
+        cost="150"
+        casual_cost="150"
+        battle_cost="130"
+        icon="Infantry_Heavy"
+        melee_ai="80"
+        ranged_ai="80"
+        armor="39"
+        movement_speed="0.80"
+        combat_movement_speed="0.9"
+        acceleration="2.5">
+        <Perks>
+            <!-- First perks-->
+            <Perk
+                game_mode="all"
+                name="{=00000021}宫殿卫士"
+                description="{=00000022}苏丹最亲近的侍卫，无上荣耀！任何人看到这身黄铜鳞甲都要退避三尺。{newline} {newline}配备精炼钢部落剑{newline}配备重型椭圆盾{newline}护甲+13"
+                icon="PerkToughness"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="13" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="brass_aserai_helmet_closed"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="aserai_scale_shoulder_e"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Leg"
+                    item="mp_plated_strip_boots"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="aserai_sword_7_t5"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_heavy_oval_shield"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000025}晨星"
+                description="{=00000026}卡拉迪亚大陆一流战锤，短小精悍，能够高效率地解决身着重甲的敌人。 {newline} {newline}配备晨星"
+                icon="PerkMaces"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="morningstar_mace_t3"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000023}沙漠剑圣"
+                description="{=00000024}这些人在荒无人烟的沙漠里日夜苦练剑术，他们的武器和技术丝毫不逊西方早已闻名于世的瓦兰迪亚剑士。{newline} {newline}配备阿塞莱双手剑"
+                hero_idle_anim="act_aserai_mp_guard_idle"
+                icon="PerkTwoHandedSwords"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item2"
+                    item="mp_aserai_two_handed_sword" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_aserai_battle_crown"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_a_battania_cloak_a"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Gloves"
+                    item="mp_plated_strip_gauntlets"
+                    target="Player" />
+            </Perk>
+            <!-- Second perks-->
+            
+            <Perk
+                game_mode="all"
+                name="{=E1bKcoaT}Cavalry Breaker"
+                description="{=VmoAFrzI}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself. Grants a long spear that does more damage.{newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
+                icon="PerkHorseHunters"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                <Effects>
+                        <Effect
+                            type="SpeedBonus"
+                            value="0.5"
+                            hit_type="Melee"
+                            damage_type="Pierce" />
+                    <Effect
+                            type="MountDamage"
+                            value="1.0"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item3"
+                    item="mp_aserai_long_spear" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=sQCpO6sp}Melee Expert"
+                description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
+                icon="PerkMeleeExpert"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.10"
+                            hit_type="Melee" />
+						<Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=jf8luKVV}Brawny"
+                description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
+                icon="PerkBrawny"
+                perk_list="2">
+                <Effect
+                    type="SpeedBonus"
+                    value="0.35"
+                    hit_type="Melee" />
+                <Effect
+                    type="DrivenProperty"
+                    value="0.05"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000005}旗手"
+                description="{=00000006}举起旗帜，激励士气！{newline} {newline}移动速度+5%"
+                icon="PerkToughness"
+                perk_list="2">
+
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_faris_falcon_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_emirs_hawk_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_sultans_eagle_t3" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_desert_winds_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_shifting_sands_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_dust_devils_t3" />
+                    </Group>
+                </RandomOnSpawnEffect>
             </Perk>
         </Perks>
     </MPClassDivision>
@@ -3650,7 +4159,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=qZctRzJS}Mobility"
                 description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
                 icon="PerkFleetFooted"
@@ -3680,7 +4189,7 @@
                 </ConditionalEffect>
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=s5qRvBOp}Marksman"
                 description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
                 icon="PerkMarksman"
@@ -3828,7 +4337,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=s5qRvBOp}Marksman"
                 description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
                 icon="PerkMarksman"
@@ -4014,7 +4523,7 @@
                 </ConditionalEffect>
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=5f6TSkM1}Mounted Skirmish"
                 description="{=maaVSxDj}You are an expert with throwing weapons on a mount, you have better accuracy.{newline} {newline}Grants Javelins{newline} {newline}-25% Movement Accuracy Penalty{newline}-25% Turning Accuracy Penalty"
                 icon="PerkJavelins"
@@ -4203,7 +4712,7 @@
                     item="mp_sturgia_axe" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=FLBYsvxp}Long Sword"
                 description="{=tbQZitYG}Replaces Short Sword, longer and deals more damage."
                 hero_idle_anim="act_sturgia_mp_warrior_idle"
@@ -4414,7 +4923,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=nGJvuvD3}Axe Thrower"
                 description="{=bIRS8ZSU}You are able throw axes much quicker with greater precision, throwing axes also deal extra damage to shields.{newline} {newline} Grants Throwing Axes{newline} {newline}+30% Damage to Shields"
                 icon="PerkThrowingAxes"
@@ -4428,7 +4937,7 @@
                     item="mp_sturgia_throwing_axe" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=Awc23bFS}Marauder"
                 description="{=THpbhFDV}Your years of being a Marauder has given you a strong arm, you throw much faster.{newline} {newline}Grants Stronger Javelins{newline} {newline}+10% Missle Release Speed {newline}+10% Ready Speed"
                 hero_idle_anim="act_sturgia_mp_brigand_marauder"
@@ -4447,7 +4956,7 @@
                     item="mp_sturgia_harpoon_strong" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=blqDgCtL}Big Game Hunter"
                 description="{=cQHeVV3V}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+50% Ranged Damage to Mounts"
                 icon="PerkThrowingSpear"
@@ -4561,7 +5070,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=DeWp2GjP}Shield Breaker"
                 description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
                 icon="PerkShieldSplitterAxes"
@@ -4679,7 +5188,7 @@
         <Perks>
             <!-- First perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=lWl3W0do}Padded Armor"
                 description="{=7mssfSVp}You are wearing extra layers of padding below your armor.{newline} {newline}+10 armor{newline}-33% Blunt damage taken"
                 icon="PerkArmorUpgrade"
@@ -4871,7 +5380,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=qZctRzJS}Mobility"
                 description="{=eLoZTNYa}You are an expert at fighting while moving around with your bow.{newline} {newline}+25% Faster Movement When moving and aiming{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
                 icon="PerkFleetFooted"
@@ -4915,7 +5424,7 @@
                     item="mp_arrows_bodkin_strong" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=vyI2KVKM}Bullseye"
                 description="{=vn2uYMOj}You know where to hit your targets, your headshots deal additional damage.{newline} {newline}Grants Stronger Ammo{newline} {newline}+10% Damage to Headshots"
                 icon="PerkSharpshooters"
@@ -5144,7 +5653,7 @@
                     item="mp_sturgia_great_spear" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=Vf4mofBO}Blood Money"
                 description="{=Jstm1A5q}You know how to earn some extra gold on the side.{newline} {newline}+20 Gold per Kill"
                 icon="PerkGold"
@@ -5537,7 +6046,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=0TtCRwmr}Athletic"
                 description="{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed"
                 icon="PerkFleetFooted"
@@ -5549,7 +6058,7 @@
                     is_ratio="true" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=vHIIkFQF}Blood Rage"
                 description="{=h5Oj84Wu}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+7% Damage per 20 Hitpoints lost{newline}-7% Damage Taken from Melee Attacks per 20 Hitpoints lost"
                 icon="PerkBloodRage"
@@ -5624,7 +6133,7 @@
                 </ConditionalEffect>
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=AW8XDIIP}Thick Skin"
                 description="{=VPmy8IN2}A thick layer of muscles protects you from bruises.{newline} {newline}-30% Blunt damage taken"
                 icon="PerkThickSkin"
@@ -5706,7 +6215,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=v2WKbNZo}Rapid Throws"
                 description="{=Ha8HVTck}You are able throw javelins much quicker.{newline} {newline}Grants additional Javelins{newline} {newline}+5% Missle Release Speed {newline} +10% Ready Speed"
                 icon="PerkMoreThrowingSpears"
@@ -5724,7 +6233,7 @@
                     item="mp_javelin_extraammo" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=ZxqXs36U}Strong Arm"
                 description="{=G4nZNi6t}Your time spent in nature made you unnaturally strong,  your throws deal more damage.{newline} {newline}Grants Throwing Spear{newline} {newline}+20% Throwing Damage"
                 icon="PerkStrongArm"
@@ -5739,7 +6248,7 @@
                     item="mp_ash_throwing_spear" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=lQTHNi5P}Chieftain"
                 description="{=b4CYRWEr}You are one of the best among your troops, you throw more accurately.{newline} {newline}+60% Initial Ranged Accuracy{newline}+70% Faster Ranged Accuracy Increase"
                 icon="PerkHeavierJavelins"
@@ -5996,7 +6505,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=qZctRzJS}Mobility"
                 description="{=Ixwvwhg9}You are an expert at fighting while moving around with your bow.{newline} {newline}-25% Movement Penalty when aiming with Ranged Weapons{newline}-80% Turning Accuracy Penalty{newline}-80% Moving Accuracy Penalty"
                 icon="PerkFleetFooted"
@@ -6040,7 +6549,7 @@
                     item="mp_arrows_bodkin_strong" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=s5qRvBOp}Marksman"
                 description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
                 icon="PerkMarksman"
@@ -6175,7 +6684,7 @@
             </Perk>
             <!-- Second perks-->
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=s5qRvBOp}Marksman"
                 description="{=fVaqYLsw}Your experience as Marksman allows you to fire heavier arrows with more precision.{newline} {newline}Grants Stronger Arrows{newline} {newline}+100% Max Accuracy Duration"
                 icon="PerkMarksman"
@@ -6381,7 +6890,7 @@
                     item="mp_battania_horse_harness_halfscaled" />
             </Perk>
             <Perk
-            game_mode="all"
+                game_mode="all"
                 name="{=5f6TSkM1}Mounted Skirmish"
                 description="{=DciUJ0pY}You are an expert at ranged combat while moving around on your mount.{newline} {newline}Grants Javelins{newline} {newline}-25% Movement Accuracy Penalty{newline}-25% Turning Accuracy Penalty"
                 icon="PerkJavelins"
