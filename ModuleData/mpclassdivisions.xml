@@ -5267,6 +5267,18 @@
                     item="mp_sturgian_helmet_open"
                     target="Player" />
             </Perk>
+            <Perk
+                game_mode="all"
+                name="{=HoVaJ0BH}Two Handed Maul"
+                description="{=K5ab4UuF}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents and capable of dismounting cavalry with swing attacks.{newline} {newline}Can Crush Through on Overhead swings."
+                icon="PerkTwoHandedMaul"
+                hero_idle_anim="act_sturgia_mp_berserker_two_handed_maul_perk_idle"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="mp_sturgia_twohanded_hammer" />
+            </Perk>
             <!-- Second perks-->
             <Perk
                 game_mode="all"

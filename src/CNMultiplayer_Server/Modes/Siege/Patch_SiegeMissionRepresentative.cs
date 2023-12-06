@@ -16,14 +16,6 @@ namespace HarmonyPatches
 
         private const int maximumKillGold = 20; //最多差价击杀
 
-        private const int firstAssistGold = 5; //第一助攻
-
-        private const int secondAssistGold = 3; //第二助攻
-
-        private const int thirdAssistGold = 1; //第三助攻
-
-        private const int defaultAssistGold = 1; //默认助攻
-
         private const int firstMeleeKillGold = 10; //首次近战击杀
 
         private const int firstRangeKillGold = 5; //首次远程击杀
@@ -31,6 +23,14 @@ namespace HarmonyPatches
         private const int fifthKillGold = 5; //五杀
 
         private const int tenthKillGold = 10; //十杀
+
+        private const int firstAssistGold = 5; //第一助攻
+
+        private const int secondAssistGold = 3; //第二助攻
+
+        private const int thirdAssistGold = 2; //第三助攻
+
+        private const int defaultAssistGold = 1; //默认助攻
 
         public static bool Prefix(MPPerkObject.MPPerkHandler killerPerkHandler, MPPerkObject.MPPerkHandler assistingHitterPerkHandler, MultiplayerClassDivisions.MPHeroClass victimClass, bool isAssist, bool isRanged, bool isFriendly, SiegeMissionRepresentative __instance, ref GoldGainFlags ____currentGoldGains, int ____assistCountOnSpawn, int ____killCountOnSpawn, ref int __result)
         {
