@@ -11,13 +11,33 @@ namespace HarmonyPatches
     [HarmonyPatch(typeof(SiegeMissionRepresentative), "GetGoldGainsFromKillDataAndUpdateFlags")]//攻城模式击杀金币系统修改
     internal class Patch_GetGoldGainsFromKillDataAndUpdateFlags
     {
+        //击杀更贵兵种，奖励差价除10
+        private const int minimumKillGold = 2; //最少差价击杀
+
+        private const int maximumKillGold = 20; //最多差价击杀
+
+        private const int firstAssistGold = 5; //第一助攻
+
+        private const int secondAssistGold = 3; //第二助攻
+
+        private const int thirdAssistGold = 1; //第三助攻
+
+        private const int defaultAssistGold = 1; //默认助攻
+
+        private const int firstMeleeKillGold = 10; //首次近战击杀
+
+        private const int firstRangeKillGold = 5; //首次远程击杀
+
+        private const int fifthKillGold = 5; //五杀
+
+        private const int tenthKillGold = 10; //十杀
+
         public static bool Prefix(MPPerkObject.MPPerkHandler killerPerkHandler, MPPerkObject.MPPerkHandler assistingHitterPerkHandler, MultiplayerClassDivisions.MPHeroClass victimClass, bool isAssist, bool isRanged, bool isFriendly, SiegeMissionRepresentative __instance, ref GoldGainFlags ____currentGoldGains, int ____assistCountOnSpawn, int ____killCountOnSpawn, ref int __result)
         {
             int num = 0;
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             if (isAssist)
             {
-                int num2 = 1;
                 if (!isFriendly)
                 {
                     int num3 = ((killerPerkHandler != null) ? killerPerkHandler.GetRewardedGoldOnAssist() : 0) + ((assistingHitterPerkHandler != null) ? assistingHitterPerkHandler.GetGoldOnAssist() : 0);
@@ -31,23 +51,23 @@ namespace HarmonyPatches
                 switch (__instance.MissionPeer.AssistCount - ____assistCountOnSpawn)
                 {
                     case 1:
-                        num += 1;
+                        num += firstAssistGold;
                         ____currentGoldGains |= GoldGainFlags.FirstAssist;
-                        list.Add(new KeyValuePair<ushort, int>(4, 1));
+                        list.Add(new KeyValuePair<ushort, int>(4, firstAssistGold));
                         break;
                     case 2:
-                        num++;
+                        num += secondAssistGold;
                         ____currentGoldGains |= GoldGainFlags.SecondAssist;
-                        list.Add(new KeyValuePair<ushort, int>(8, 1));
+                        list.Add(new KeyValuePair<ushort, int>(8, secondAssistGold));
                         break;
                     case 3:
-                        num++;
+                        num += thirdAssistGold;
                         ____currentGoldGains |= GoldGainFlags.ThirdAssist;
-                        list.Add(new KeyValuePair<ushort, int>(16, 1));
+                        list.Add(new KeyValuePair<ushort, int>(16, thirdAssistGold));
                         break;
                     default:
-                        num += num2;
-                        list.Add(new KeyValuePair<ushort, int>(256, num2));
+                        num += defaultAssistGold;
+                        list.Add(new KeyValuePair<ushort, int>(256, defaultAssistGold));
                         break;
                 }
             }
@@ -57,8 +77,8 @@ namespace HarmonyPatches
                 if (__instance.ControlledAgent != null)
                 {
                     num4 = MultiplayerClassDivisions.GetMPHeroClassForCharacter(__instance.ControlledAgent.Character).TroopCasualCost;
-                    int num5 = victimClass.TroopCasualCost - num4;
-                    int num6 = MBMath.ClampInt(num5 / 10, 2, 20);
+                    int num5 = victimClass.TroopCasualCost - num4; //根据击杀兵种金币差距奖励金币
+                    int num6 = MBMath.ClampInt(num5 / 10, minimumKillGold, maximumKillGold);
                     num += num6;
                     list.Add(new KeyValuePair<ushort, int>(128, num6));
                 }
@@ -74,28 +94,28 @@ namespace HarmonyPatches
                 {
                     if (num8 == 10)
                     {
-                        num += 2;
+                        num += tenthKillGold;
                         ____currentGoldGains |= GoldGainFlags.TenthKill;
-                        list.Add(new KeyValuePair<ushort, int>(64, 2));
+                        list.Add(new KeyValuePair<ushort, int>(64, tenthKillGold));
                     }
                 }
                 else
                 {
-                    num += 2;
+                    num += fifthKillGold;
                     ____currentGoldGains |= GoldGainFlags.FifthKill;
-                    list.Add(new KeyValuePair<ushort, int>(32, 2));
+                    list.Add(new KeyValuePair<ushort, int>(32, fifthKillGold));
                 }
                 if (isRanged && !____currentGoldGains.HasAnyFlag(GoldGainFlags.FirstRangedKill))
                 {
-                    num += 2;
+                    num += firstRangeKillGold;
                     ____currentGoldGains |= GoldGainFlags.FirstRangedKill;
-                    list.Add(new KeyValuePair<ushort, int>(1, 2));
+                    list.Add(new KeyValuePair<ushort, int>(1, firstRangeKillGold));
                 }
                 if (!isRanged && !____currentGoldGains.HasAnyFlag(GoldGainFlags.FirstMeleeKill))
                 {
-                    num += 2;
+                    num += firstMeleeKillGold;
                     ____currentGoldGains |= GoldGainFlags.FirstMeleeKill;
-                    list.Add(new KeyValuePair<ushort, int>(2, 2));
+                    list.Add(new KeyValuePair<ushort, int>(2, firstMeleeKillGold));
                 }
             }
             int num9 = 0;
