@@ -1540,7 +1540,7 @@
             <Perk
                 game_mode="all"
                 name="{=00000009}帝国鳞甲"
-                description="{=00000010}帝国先进的盔甲锻造工艺使得鳞甲可以大规模装备至军团，成为帝国军队战无不胜的秘诀。{newline} {newline}护甲+10{newline}受到的挥砍伤害-20%{newline}硬直阈值翻倍"
+                description="{=00000010}帝国先进的盔甲锻造工艺使得鳞甲可以大规模装备至军团，成为帝国军队战无不胜的秘诀。{newline} {newline}护甲+10{newline}受到的挥砍伤害-20%{newline}硬直阈值提升至12"
                 icon="PerkArmorUpgrade"
                 perk_list="2">
                 <Effect
@@ -1549,7 +1549,7 @@
                     damage_type="Cut" />
                 <Effect
                     type="DamageInterruptionThreshold"
-                    value="10"
+                    value="12"
                     is_disabled_in_warmup="false" />
                 <OnSpawnEffect
                     type="ArmorOnSpawn"
