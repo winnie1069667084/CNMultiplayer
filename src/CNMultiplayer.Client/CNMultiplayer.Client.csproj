@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>0.0.1</Version>
+    <TargetFramework>net472</TargetFramework>
+    <Configuration>Release</Configuration>
+    <Platforms>x64</Platforms>
+		<LangVersion>10.0</LangVersion>
+    <RootNamespace>CNMultiplayer.Client</RootNamespace>
+    <AssemblyName>CNMultiplayer.Client</AssemblyName>
+    <ModuleName>CNMultiplayer</ModuleName>
+    <MB_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</MB_PATH>
+    <MB_SERVER_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Dedicated Server</MB_SERVER_PATH>
+    <OutputPath>$(MB_PATH)\Modules\$(ModuleName)\bin\Win64_Shipping_Client</OutputPath>
+    <!-- 输出时路径中不带目标框架名 -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- 不输出被引用的程序集 -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
+    <Error Text="Environment variable MB_PATH should be set to your Bannerlord installation path" Condition="'$(MB_PATH)' == ''" />
+  </Target>
+  <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
+    <Error Text="Environment variable MB_SERVER_PATH should be set to your Bannerlord server installation path" Condition="'$(MB_SERVER_PATH)' == ''" />
+  </Target>
+  <ItemGroup>
+    <Compile Remove="Patches\**" />
+    <EmbeddedResource Remove="Patches\**" />
+    <None Remove="Patches\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.6.30619-beta" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.6.30619-beta" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Native" Version="1.2.6.30619-beta" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 向输出目录copy一份Harmony所需的文件 -->
+    <None Include="$(PkgLib_Harmony)\..\2.2.2\lib\net472\0Harmony.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <!-- Copy Win64_Shipping_Client in Gaming.Desktop.x64_Shipping_Client for gamepass version -->
+    <Exec Command="xcopy &quot;$(OutputPath)&quot; &quot;$(MB_PATH)\Modules\$(ModuleName)\bin\Gaming.Desktop.x64_Shipping_Client\&quot; /C /I /Y /F" />
+  </Target>
+
+  <ItemGroup>
+    <Compile Remove="LoadXMLbyMode.cs" />
+    <Compile Remove="Modes\CNMCaptainGameMode.cs" />
+    <Compile Remove="Modes\CNMCaptainSpawningBehavior.cs" />
+    <Compile Remove="Modes\Patch_MissionNetworkComponent.cs" />
+    <Compile Remove="Modes\Patch_Team.cs" />
+  </ItemGroup>
+</Project>

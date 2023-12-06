@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "CNMultiplayer.Client": {
+      "commandName": "Project"
+    }
+  }
+}

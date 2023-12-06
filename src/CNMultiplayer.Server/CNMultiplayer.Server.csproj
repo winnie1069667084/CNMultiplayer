@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>0.0.1</Version>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configuration>Release</Configuration>
+    <Platforms>x64</Platforms>
+    <LangVersion>10.0</LangVersion>
+    <RootNamespace>CNMultiplayer.Server</RootNamespace>
+    <AssemblyName>CNMultiplayer.Server</AssemblyName>
+    <ModuleName>CNMultiplayer</ModuleName>
+    <MB_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</MB_PATH>
+    <MB_SERVER_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Dedicated Server</MB_SERVER_PATH>
+    <OutputPath>$(MB_PATH)\Modules\$(ModuleName)\bin\Win64_Shipping_Server</OutputPath>
+    <!-- 输出时路径中不带目标框架名 -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- 不输出被引用的程序集 -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
+    <Error Text="Environment variable MB_PATH should be set to your Bannerlord installation path" Condition="'$(MB_PATH)' == ''" />
+  </Target>
+  <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
+    <Error Text="Environment variable MB_SERVER_PATH should be set to your Bannerlord server installation path" Condition="'$(MB_SERVER_PATH)' == ''" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" GeneratePathProperty="true" />
+    <PackageReference Include="MonoMod.Common" Version="22.6.3.1" GeneratePathProperty="true" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.5" GeneratePathProperty="true" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 引用所有服务器端.dll(private - false表示不复制到Output目录) -->
+    <Reference Include="$(MB_SERVER_PATH)\bin\Win64_Shipping_Server\TaleWorlds.*.dll">
+      <HintPath>%(Identity)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 向输出目录copy一份Harmony所需的文件 -->
+    <None Include="$(PkgLib_Harmony)\lib\net6.0\0Harmony.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+    <None Include="$(PkgMonoMod_Common)\lib\net5.0\MonoMod.Common.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+    <None Include="$(PkgMono_Cecil)\lib\netstandard2.0\Mono.Cecil.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+  
+    <ItemGroup>
+    <Compile Remove="Patches\ServerPatches\**" />
+    <EmbeddedResource Remove="Patches\ServerPatches\**" />
+    <None Remove="Patches\ServerPatches\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="LoadXMLbyMode.cs" />
+    <Compile Remove="Patches\Patch_AgentStatCalculateModel.cs" />
+    <Compile Remove="Patches\Patch_DedicatedCustomServerSubModule.cs" />
+    <Compile Remove="Patches\Patch_MissionPeer.cs" />
+    <Compile Remove="Patches\Patch_MultiplayerStrikeMagnitudeModel.cs" />
+    <Compile Remove="Patches\Patch_SpawningBehaviorBase.cs" />
+  </ItemGroup>
+</Project>
