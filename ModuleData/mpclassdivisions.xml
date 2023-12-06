@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 这个文件记录了兵种的价格、图标、AI数值（暂不可用）、护甲值、移动速度、战斗移动速度乘数、加速度、Perk等信息 -->
 
-<!-- 由于mpclassdivisions.xml的加载可以直接覆盖Native。 -->
+<!-- mpclassdivisions.xml的加载可以直接覆盖Native，不需要使用xslt。 -->
 <!-- 官方规定的护甲等级：无护甲（0）、低护甲（12）、中甲（37）、最高护甲（55）。（数据来自mpcharacters.xml） -->
 
 <!-- hero_idle_anim:        控制兵种选择界面的人物站姿，从TaleWorlds已经给出的anim中选择-->
@@ -11,10 +11,12 @@
 <!-- battle_cost:           兵种价格（战场） -->
 <!-- icon:                  兵种图标 -->
 <!-- armor:                 护甲值 This armor value is applied to every body part, regardless of equipment. -->
-<!-- movement_speed:        移动速度 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_speed_multiplier' (in native_parameters.xml).        Human only. -->
-<!-- combat_movement_speed: 战斗移动速度乘数 Goes from 0.0 to 1.0. This will be multiplied with 'movement_speed' during combat.    Human only. -->
-<!-- acceleration:          加速度，应该是到达最大速度的时间 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_acceleration_multiplier'. Human only. -->
+<!-- movement_speed:        最大移动速度 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_speed_multiplier' (in native_parameters.xml).        Human only. -->
+<!-- combat_movement_speed: 战斗移动速度乘数（暂不可用） Goes from 0.0 to 1.0. This will be multiplied with 'movement_speed' during combat.    Human only. -->
+<!-- acceleration:          到达最大速度的时间（数值越大加速越慢） Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_acceleration_multiplier'. Human only. -->
 <!-- hitpoints:             血量 Goes from 1 to infinity. Default is 100. Human only. -->
+
+<!-- 全局修改：               经济perk —— 击杀+5（劫匪、沾血金币、草原奴贩）/助攻+5（辅兵）/慷慨领主+10-->
 
 <?xml-model href="../../../XmlSchemas/MPClassDivisions.xsd"?>
 <MPClassDivisions>
@@ -162,13 +164,13 @@
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=urUwa4bf}Looter"
-                description="{=UkukckV4}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+10 Gold per Kill"
+                name="{=00000029}Looter"
+                description="{=00000030}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+5 Gold per Kill"
                 icon="PerkGold"
                 perk_list="2">
                 <Effect
                     type="GoldGainOnKill"
-                    value="10"
+                    value="5"
                     is_disabled_in_warmup="true" />
             </Perk>
         </Perks>
@@ -1126,13 +1128,13 @@
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=7qB0WKMW}Generous Lord"
-                description="{=mDU16Bih}You let the peasants do the dirty work and pay them for their services while you get all the glory for the kills.{newline} {newline}Allies get +20 Gold for Assists to your Kills."
+                name="{=00000035}Generous Lord"
+                description="{=00000036}You let the peasants do the dirty work and pay them for their services while you get all the glory for the kills.{newline} {newline}Allies get +10 Gold for Assists to your Kills."
                 icon="PerkGenerousLord"
                 perk_list="2">
                 <Effect
                     type="RewardGoldOnAssist"
-                    value="20"
+                    value="10"
                     is_disabled_in_warmup="true" />
             </Perk>
         </Perks>
@@ -1538,13 +1540,17 @@
             <Perk
                 game_mode="all"
                 name="{=00000009}帝国鳞甲"
-                description="{=00000010}帝国先进的盔甲锻造工艺使得鳞甲可以大规模装备至军团，成为帝国军队战无不胜的秘诀。{newline} {newline}护甲+10{newline}受到的挥砍伤害-20%"
+                description="{=00000010}帝国先进的盔甲锻造工艺使得鳞甲可以大规模装备至军团，成为帝国军队战无不胜的秘诀。{newline} {newline}护甲+10{newline}受到的挥砍伤害-20%{newline}硬直阈值翻倍"
                 icon="PerkArmorUpgrade"
                 perk_list="2">
                 <Effect
                     type="DamageTaken"
                     value="-0.20"
                     damage_type="Cut" />
+                <Effect
+                    type="DamageInterruptionThreshold"
+                    value="10"
+                    is_disabled_in_warmup="false" />
                 <OnSpawnEffect
                     type="ArmorOnSpawn"
                     value="10" />
@@ -1614,6 +1620,27 @@
                             type="DrivenProperty"
                             driven_property="MaxSpeedMultiplier"
                             value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000037}急救"
+                description="{=00000038}帝国为每个服役的士兵配备了急救包，以应对士兵受伤导致的战斗力下降。{newline} {newline}低于25生命值后，每秒恢复1点生命值"
+                icon="PerkToughness"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="25" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="HealthRecovery"
+                            value="1"
+                            period="1"
+                            is_disabled_in_warmup="false" />
                     </Effects>
                 </ConditionalEffect>
             </Perk>
@@ -2032,13 +2059,13 @@
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=QDxixJH9}Auxiliary"
-                description="{=wv6Jpubk}You take an assisting role in combat and gain gold for every assist as reward.{newline} {newline}+20 Gold per Assist"
+                name="{=00000033}Auxiliary"
+                description="{=00000034}You take an assisting role in combat and gain gold for every assist as reward.{newline} {newline}+5 Gold per Assist"
                 icon="PerkAuxiliary"
                 perk_list="2">
                 <Effect
                     type="GoldGainOnAssist"
-                    value="20"
+                    value="5"
                     is_disabled_in_warmup="true" />
             </Perk>
             <Perk
@@ -2381,13 +2408,13 @@
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=urUwa4bf}Looter"
-                description="{=UkukckV4}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+10 Gold per Kill"
+                name="{=00000029}Looter"
+                description="{=00000030}You know how to profit from equipment the dead has no use for anymore. Kills and assists grant you gold.{newline} {newline}+5 Gold per Kill"
                 icon="PerkGold"
                 perk_list="2">
                 <Effect
                     type="GoldGainOnKill"
-                    value="10"
+                    value="5"
                     is_disabled_in_warmup="true" />
             </Perk>
             <Perk
@@ -5071,6 +5098,17 @@
             <!-- Second perks-->
             <Perk
                 game_mode="all"
+                name="{=00000037}兽人"
+                description="{=00000038}这群野兽即使在极寒之地也能赤裸上身参加战斗，或许已经不能再把他们当作人类看待。{newline} {newline}无论受到怎样的攻击，你的动作不会中断"
+                icon="PerkDieHard"
+                perk_list="2">
+                <Effect
+                    type="DamageInterruptionThreshold"
+                    value="100"
+                    is_disabled_in_warmup="false" />
+            </Perk>
+            <Perk
+                game_mode="all"
                 name="{=DeWp2GjP}Shield Breaker"
                 description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
                 icon="PerkShieldSplitterAxes"
@@ -5183,7 +5221,7 @@
         ranged_ai="65"
         armor="27"
         movement_speed="0.81"
-        combat_movement_speed="0.9"
+        combat_movement_speed="0.0"
         acceleration="1.6"
         hitpoints="100">
         <Perks>
@@ -5202,7 +5240,7 @@
                     slot="Head"
                     item="mp_sturgian_helmet_closed"
                     target="Player" />
-                    <OnSpawnEffect
+                <OnSpawnEffect
                     type="AlternativeEquipmentOnSpawn"
                     slot="Cape"
                     item="mp_sturgian_lamellar_gambeson_heavy"
@@ -5223,22 +5261,6 @@
                     type="AlternativeEquipmentOnSpawn"
                     slot="Item0"
                     item="mp_sturgia_long_twohanded_axe" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Head"
-                    item="mp_sturgian_helmet_open"
-                    target="Player" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=HoVaJ0BH}Two Handed Maul"
-                description="{=K5ab4UuF}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
-                icon="PerkTwoHandedMaul"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="mp_sturgia_twohanded_hammer" />
                 <OnSpawnEffect
                     type="AlternativeEquipmentOnSpawn"
                     slot="Head"
@@ -5831,14 +5853,14 @@
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=Vf4mofBO}Blood Money"
-                description="{=Jstm1A5q}You know how to earn some extra gold on the side.{newline} {newline}+20 Gold per Kill"
+                name="{=00000031}Blood Money"
+                description="{=00000032}You know how to earn some extra gold on the side.{newline} {newline}+5 Gold per Kill"
                 icon="PerkGold"
                 hero_mount_idle_anim="act_sturgia_mp_raider_mount_shieldperk_idle"
                 perk_list="2">
                 <Effect
                     type="GoldGainOnKill"
-                    value="20"
+                    value="5"
                     is_disabled_in_warmup="true" />
             </Perk>
         </Perks>
