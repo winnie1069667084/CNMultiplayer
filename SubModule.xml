@@ -11,16 +11,16 @@
 	<SubModules>
     	<SubModule>
       		<Name value="CNMultiplayer" />
-      		<DLLName value="CNMultiplayer_Client.dll" />
-      		<SubModuleClassType value="CNMultiplayer.CNMSubModule" />
+      		<DLLName value="CNMultiplayer.Client.dll" />
+      		<SubModuleClassType value="CNMultiplayer.Client.CNMSubModule" />
       		<Tags>
 				<Tag key="DedicatedServerType" value="none" />
 			</Tags>
     	</SubModule>
     	<SubModule>
       		<Name value="CNMultiplayer" />
-      		<DLLName value="CNMultiplayer_Server.dll" />
-      		<SubModuleClassType value="CNMultiplayer.CNMSubModule" />
+      		<DLLName value="CNMultiplayer.Server.dll" />
+      		<SubModuleClassType value="CNMultiplayer.Server.CNMSubModule" />
       		<Tags>
 				<Tag key="DedicatedServerType" value="custom" />
 			</Tags>

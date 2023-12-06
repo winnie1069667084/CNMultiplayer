@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>0.0.1</Version>
+    <TargetFramework>net472</TargetFramework>
+    <Configuration>Release</Configuration>
+    <Platforms>x64</Platforms>
+    <LangVersion>10.0</LangVersion>
+    <RootNamespace>CNMultiplayer.Common</RootNamespace>
+    <AssemblyName>CNMultiplayer.Common</AssemblyName>
+    <ModuleName>CNMultiplayer</ModuleName>
+    <MB_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</MB_PATH>
+    <MB_SERVER_PATH>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Dedicated Server</MB_SERVER_PATH>
+    <OutputPath>$(MB_PATH)\Modules\$(ModuleName)\bin\Win64_Shipping_Client</OutputPath>
+    <!-- 输出时路径中不带目标框架名 -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- 不输出被引用的程序集 -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
+    <Error Text="Environment variable MB_PATH should be set to your Bannerlord installation path" Condition="'$(MB_PATH)' == ''" />
+  </Target>
+  <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
+    <Error Text="Environment variable MB_SERVER_PATH should be set to your Bannerlord server installation path" Condition="'$(MB_SERVER_PATH)' == ''" />
+  </Target>
+</Project>
