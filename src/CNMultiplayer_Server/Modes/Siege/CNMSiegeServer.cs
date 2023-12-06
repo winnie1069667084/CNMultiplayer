@@ -503,7 +503,8 @@ namespace CNMultiplayer.Modes.Siege
                         continue;
 
                     HealInFlagRange(flag, lastFoundAgent);
-                    GainGoldInFlagRange(lastFoundAgent);
+                    if (!(_capturePointOwners[flag.FlagIndex] == lastFoundAgent.Team && flag.IsFullyRaised)) //如果旗帜归玩家方所有且旗帜已升满,则不再给玩家金币
+                        GainGoldInFlagRange(lastFoundAgent);
                     if (lastFoundAgent.Team.IsAttacker) //计算旗帜内双方人数
                         attackerCount++;
                     else if (lastFoundAgent.Team.IsDefender)
