@@ -3929,14 +3929,14 @@
             <Perk
                 game_mode="all"
                 name="{=00000023}沙漠剑圣"
-                description="{=00000024}这些人在荒无人烟的沙漠里日夜苦练剑术，他们的武器和技术丝毫不逊西方早已闻名于世的瓦兰迪亚剑士。{newline} {newline}配备阿塞莱双手剑"
+                description="{=00000024}这些人在荒无人烟的沙漠里日夜苦练剑术，他们的武器和技术丝毫不逊西方早已闻名于世的瓦兰迪亚剑士。{newline} {newline}配备部落阔剑"
                 hero_idle_anim="act_aserai_mp_guard_idle"
                 icon="PerkTwoHandedSwords"
                 perk_list="1">
                 <OnSpawnEffect
                     type="AlternativeEquipmentOnSpawn"
                     slot="Item2"
-                    item="mp_aserai_two_handed_sword" />
+                    item="southern_broad_2hsword_t4" />
                 <OnSpawnEffect
                     type="AlternativeEquipmentOnSpawn"
                     slot="Item0"

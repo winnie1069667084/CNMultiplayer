@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 这个文件添加了对单机武器配件的引用，被修改的武器可以通过搜索字段“修改”查到 -->
+
 <CraftingPieces>
 	<!-- #region Sword Pieces -->
 	<!-- #region Used Sword Blade Pieces -->
@@ -787,6 +789,7 @@
 				count="3" />
 		</Materials>
 	</CraftingPiece>
+  <!-- 修改：阿塞莱部落阔剑的挥砍系数3.9到3.4 -->
 	<CraftingPiece
 		id="aserai_blade_5"
 		name="{=pX4nTZOI}Fine Steel Broad Kaskara"
@@ -806,7 +809,7 @@
 				damage_factor="2.4" />
 			<Swing
 				damage_type="Cut"
-				damage_factor="3.9" />
+				damage_factor="3.4" />
 		</BladeData>
 		<Materials>
 			<Material
