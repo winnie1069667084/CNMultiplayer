@@ -13,7 +13,7 @@
 <!-- armor:                 护甲值 This armor value is applied to every body part, regardless of equipment. -->
 <!-- movement_speed:        移动速度 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_speed_multiplier' (in native_parameters.xml).        Human only. -->
 <!-- combat_movement_speed: 战斗移动速度乘数 Goes from 0.0 to 1.0. This will be multiplied with 'movement_speed' during combat.    Human only. -->
-<!-- acceleration:          加速度 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_acceleration_multiplier'. Human only. -->
+<!-- acceleration:          加速度，应该是到达最大速度的时间 Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_acceleration_multiplier'. Human only. -->
 <!-- hitpoints:             血量 Goes from 1 to infinity. Default is 100. Human only. -->
 
 <?xml-model href="../../../XmlSchemas/MPClassDivisions.xsd"?>
@@ -3917,7 +3917,7 @@
             <Perk
                 game_mode="all"
                 name="{=00000025}晨星"
-                description="{=00000026}卡拉迪亚大陆一流战锤，短小精悍，能够高效率地解决身着重甲的敌人。 {newline} {newline}配备晨星"
+                description="{=00000026}卡拉迪亚大陆的一流战锤，短小精悍，能够高效率地解决身着重甲的敌人。 {newline} {newline}配备晨星"
                 icon="PerkMaces"
                 perk_list="1">
                 <OnSpawnEffect
@@ -3962,7 +3962,7 @@
                     target="Player" />
             </Perk>
             <!-- Second perks-->
-            
+
             <Perk
                 game_mode="all"
                 name="{=E1bKcoaT}Cavalry Breaker"
@@ -4980,7 +4980,7 @@
         troop_idle_anim="act_idle_2h_1"
         multiplier="0.59"
         cost="130"
-        casual_cost="140"
+        casual_cost="125"
         icon="Special_Axeman"
         melee_ai="50"
         ranged_ai="50"
@@ -5165,6 +5165,183 @@
                     value="0.07"
                     driven_property="MaxSpeedMultiplier"
                     is_ratio="true" />
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- 斯特吉亚破阵勇士 -->
+    <MPClassDivision
+        id="mp_heavy_shock_infantry_sturgia"
+        hero="mp_heavy_shock_infantry_sturgia_hero"
+        troop="mp_heavy_shock_infantry_sturgia_troop"
+        hero_idle_anim="act_aserai_mp_guard_idle"
+        troop_idle_anim="act_idle_2h_1"
+        multiplier="0.62"
+        cost="140"
+        casual_cost="140"
+        icon="Special_Axeman"
+        melee_ai="65"
+        ranged_ai="65"
+        armor="27"
+        movement_speed="0.81"
+        combat_movement_speed="0.9"
+        acceleration="1.6"
+        hitpoints="100">
+        <Perks>
+            <!-- First perks-->
+            <Perk
+                game_mode="all"
+                name="{=00000027}破阵勇士"
+                description="{=00000028}破阵是你的使命，依靠护甲与力量撕开敌人的阵线！{newline} {newline}护甲+13"
+                icon="PerkToughness"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="13" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_sturgian_helmet_closed"
+                    target="Player" />
+                    <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_sturgian_lamellar_gambeson_heavy"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Body"
+                    item="a_brass_lamellar_shoulder_white_a"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=KXwN1PW4}Great Axe"
+                description="{=pjq5Nkn4}Replaces Axe with a longer and heavier axe. Extra effective against shields."
+                icon="PerkTwoHandedAxe"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="mp_sturgia_long_twohanded_axe" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_sturgian_helmet_open"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=HoVaJ0BH}Two Handed Maul"
+                description="{=K5ab4UuF}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents, two handed.{newline} {newline}Can Crush Through on Overhead swings."
+                icon="PerkTwoHandedMaul"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="mp_sturgia_twohanded_hammer" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_sturgian_helmet_open"
+                    target="Player" />
+            </Perk>
+            <!-- Second perks-->
+            <Perk
+                game_mode="all"
+                name="{=0TtCRwmr}Athletic"
+                description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
+                icon="PerkFleetFooted"
+                perk_list="2">
+                <Effect
+                    type="DrivenProperty"
+                    value="0.07"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=vHIIkFQF}Blood Rage"
+                description="{=2NofSpJ0}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+5% Damage per 20 Hitpoints lost{newline}-5% Damage Taken from Melee Attacks per 20 Hitpoints lost"
+                icon="PerkBloodRage"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="80" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="60" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="40" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="20" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=DeWp2GjP}Shield Breaker"
+                description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
+                icon="PerkShieldSplitterAxes"
+                perk_list="2">
+                <Effect
+                    type="ShieldDamage"
+                    value="0.30" />
             </Perk>
         </Perks>
     </MPClassDivision>
