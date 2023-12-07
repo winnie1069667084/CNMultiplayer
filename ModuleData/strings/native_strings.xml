@@ -1,90 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <strings>
-  <string
-    id="str_multiplayer_scene_name.mp_siege_map_004_rs"
-    text="{=20000010}Tubilis Castle" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_map_MLYX_003"
-    text="{=20000011}New Skala Landing" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_acre"
-    text="{=20000012}Acre" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_frederiksborg"
-    text="{=20000013}Frederiksborg" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_hades"
-    text="{=20000014}Hades" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_motteandbailey"
-    text="{=20000015}Motteandbailey" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_neuenburg"
-    text="{=20000016}Neuenburg" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_newAyzarStronghold"
-    text="{=20000017}New Ayzar Stronghold" />
-  <string
-    id="str_multiplayer_scene_name.mp_skirmish_dustII"
-    text="{=20000018}Dust II" />
-  <string
-    id="str_multiplayer_scene_name.crpg_siege_stronghold"
-    text="{=20000019}Stronghold" />
-  <string
-    id="str_multiplayer_scene_name.crpg_siege_talmberg"
-    text="{=20000020}Talmberg" />
-  <string
-    id="str_multiplayer_scene_name.mp_siege_silverskalitz"
-    text="{=20000021}Silverskalitz" />
-  <string
-    id="str_multiplayer_scene_name.mp_sergeant_map_001"
-    text="{=20000022}Cypegos Blockade" />
-  <string
-    id="str_multiplayer_scene_name.mp_sergeant_map_005"
-    text="{=20000023}Skolder Hideout" />
-  <string
-    id="str_multiplayer_official_game_type_name.CNMSiege"
-    text="{=cnmsiegemultiplayergametype}CNMSiege" />
-  <string
-    id="str_multiplayer_game_type.CNMSiege"
-    text="{=cnmsiegemultiplayergametype}CNMSiege" />
-  <string
-    id="str_multiplayer_official_game_type_explainer.CNMSiege"
-    text="{=cnmsiegeexplainer}·   Use various siege engines to attack or defend control points{newline}·   Spawn points advance as control points are captured{newline}·   Successfully assault and hold the keep flag or repel the enemy to win" />
-  <string
-    id="str_gold_gain_first_assist"
-    text="{=gold0001}First Kill" />
-  <string
-    id="str_gold_gain_second_assist"
-    text="{=gold0002}Double Kill" />
-  <string
-    id="str_gold_gain_third_assist"
-    text="{=gold0003}Fifth Kill" />
-  <string
-    id="str_gold_gain_first_ranged_kill"
-    text="{=gold0004}Head Shot" />
-  <string
-    id="str_gold_gain_first_melee_kill"
-    text="{=gold0005}Kill" />
-  <string
-    id="str_gold_gain_fifth_kill"
-    text="{=gold0006}Tenth Kill" />
-  <string
-    id="str_gold_gain_tenth_kill"
-    text="{=gold0007}Assist" />
-  <string
-    id="str_gold_gain_default_kill"
-    text="{=gold0008}Scramble Flag" />
-  <string
-    id="str_gold_gain_default_assist"
-    text="{=gold0009}Flag Remove" />
-  <string
-    id="str_gold_gain_objective_completed"
-    text="{=gold0010}Objective Completed" />
-  <string
-    id="str_gold_gain_objective_destroyed"
-    text="{=gold0011}Objective Destroyed" />
-  <string
-    id="str_gold_gain_perk_bonus"
-    text="{=gold0012}Perk Bonus" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_004_rs" text="{=20000010}Tubilis Castle" />
+  <string id="str_multiplayer_scene_name.mp_siege_map_MLYX_003" text="{=20000011}New Skala Landing" />
+  <string id="str_multiplayer_scene_name.mp_siege_acre" text="{=20000012}Acre" />
+  <string id="str_multiplayer_scene_name.mp_siege_frederiksborg" text="{=20000013}Frederiksborg" />
+  <string id="str_multiplayer_scene_name.mp_siege_hades" text="{=20000014}Hades" />
+  <string id="str_multiplayer_scene_name.mp_siege_motteandbailey" text="{=20000015}Motteandbailey" />
+  <string id="str_multiplayer_scene_name.mp_siege_neuenburg" text="{=20000016}Neuenburg" />
+  <string id="str_multiplayer_scene_name.mp_siege_newAyzarStronghold" text="{=20000017}New Ayzar Stronghold" />
+  <string id="str_multiplayer_scene_name.mp_skirmish_dustII" text="{=20000018}Dust II" />
+  <string id="str_multiplayer_scene_name.crpg_siege_stronghold" text="{=20000019}Stronghold" />
+  <string id="str_multiplayer_scene_name.crpg_siege_talmberg" text="{=20000020}Talmberg" />
+  <string id="str_multiplayer_scene_name.mp_siege_silverskalitz" text="{=20000021}Silverskalitz" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_001" text="{=20000022}Cypegos Blockade" />
+  <string id="str_multiplayer_scene_name.mp_sergeant_map_005" text="{=20000023}Skolder Hideout" />
+  <string id="str_multiplayer_official_game_type_name.CNMSiege" text="{=cnmsiegemultiplayergametype}CNMSiege" />
+  <string id="str_multiplayer_game_type.CNMSiege" text="{=cnmsiegemultiplayergametype}CNMSiege" />
+  <string id="str_multiplayer_official_game_type_explainer.CNMSiege" text="{=cnmsiegeexplainer}·   Use various siege engines to attack or defend control points{newline}·   Spawn points advance as control points are captured{newline}·   Successfully assault and hold the keep flag or repel the enemy to win" />
 </strings>

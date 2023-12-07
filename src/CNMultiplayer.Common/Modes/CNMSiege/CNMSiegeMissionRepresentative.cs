@@ -3,28 +3,30 @@ using System.Collections.Generic;
 using TaleWorlds.Engine;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.Library;
-using GoldGainFlags = CNMultiplayer.Common.Gold.GoldGainFlags;
 
 namespace CNMultiplayer.Common.Modes.CNMSiege
 {
     public class CNMSiegeMissionRepresentative : MissionRepresentativeBase
     {
+        private const int minimumKillGold = 2; //最少差价击杀
 
-        private const int maximumKillGold = 20; //最大差价击杀
+        private const int maximumKillGold = 20; //最多差价击杀
 
-        private const int headShotGold = 3; //爆头
+        private const int firstMeleeKillGold = 10; //首次近战击杀
 
-        private const int defaultKill = 2; //击杀
-
-        private const int firstKillGold = 10; //首杀
-
-        private const int doubleKillGold = 5; //双杀
+        private const int firstRangeKillGold = 5; //首次远程击杀
 
         private const int fifthKillGold = 5; //五杀
 
         private const int tenthKillGold = 10; //十杀
 
-        private const int defaultAssistGold = 1; //助攻
+        private const int firstAssistGold = 5; //第一助攻
+
+        private const int secondAssistGold = 3; //第二助攻
+
+        private const int thirdAssistGold = 2; //第三助攻
+
+        private const int defaultAssistGold = 1; //默认助攻
 
         private const int defaultDestructableGold = 50; //默认可破坏物（投石车、弩炮）
 
@@ -38,29 +40,21 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
 
         private int _killCountOnSpawn;
 
-        public int GetGoldAmountForVisual()
-        {
-            if (base.Gold < 0)
-            {
-                return 80;
-            }
-            return base.Gold;
-        }
+        private int _assistCountOnSpawn;
 
         public override void OnAgentSpawned()
         {
             this._currentGoldGains = (GoldGainFlags)0;
             this._killCountOnSpawn = base.MissionPeer.KillCount;
+            this._assistCountOnSpawn = base.MissionPeer.AssistCount;
         }
 
-        public int GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.MPPerkHandler killerPerkHandler, MPPerkObject.MPPerkHandler assistingHitterPerkHandler, MultiplayerClassDivisions.MPHeroClass victimClass, bool isAssist, bool isHeadShot, bool isFriendly)
+        public int GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.MPPerkHandler killerPerkHandler, MPPerkObject.MPPerkHandler assistingHitterPerkHandler, MultiplayerClassDivisions.MPHeroClass victimClass, bool isAssist, bool isRanged, bool isFriendly)
         {
             int num = 0;
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
             if (isAssist)
             {
-                num += defaultAssistGold;
-                list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.DefaultAssist, defaultAssistGold)); //助攻
                 if (!isFriendly)
                 {
                     int num3 = ((killerPerkHandler != null) ? killerPerkHandler.GetRewardedGoldOnAssist() : 0) + ((assistingHitterPerkHandler != null) ? assistingHitterPerkHandler.GetGoldOnAssist() : 0);
@@ -68,8 +62,30 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
                     {
                         num += num3;
                         this._currentGoldGains |= GoldGainFlags.PerkBonus;
-                        list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.PerkBonus, num3)); //Perk
+                        list.Add(new KeyValuePair<ushort, int>(2048, num3));
                     }
+                }
+                switch (base.MissionPeer.AssistCount - this._assistCountOnSpawn)
+                {
+                    case 1:
+                        num += firstAssistGold;
+                        this._currentGoldGains |= GoldGainFlags.FirstAssist;
+                        list.Add(new KeyValuePair<ushort, int>(4, firstAssistGold));
+                        break;
+                    case 2:
+                        num += secondAssistGold;
+                        this._currentGoldGains |= GoldGainFlags.SecondAssist;
+                        list.Add(new KeyValuePair<ushort, int>(8, secondAssistGold));
+                        break;
+                    case 3:
+                        num += thirdAssistGold;
+                        this._currentGoldGains |= GoldGainFlags.ThirdAssist;
+                        list.Add(new KeyValuePair<ushort, int>(16, thirdAssistGold));
+                        break;
+                    default:
+                        num += defaultAssistGold;
+                        list.Add(new KeyValuePair<ushort, int>(256, defaultAssistGold));
+                        break;
                 }
             }
             else
@@ -78,48 +94,45 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
                 if (base.ControlledAgent != null)
                 {
                     num4 = MultiplayerClassDivisions.GetMPHeroClassForCharacter(base.ControlledAgent.Character).TroopCasualCost;
-                    int num5 = victimClass.TroopCasualCost - num4;
-                    int num6 = MBMath.ClampInt(num5 / 10, defaultKill, maximumKillGold);
+                    int num5 = victimClass.TroopCasualCost - num4; //根据击杀兵种金币差距奖励金币
+                    int num6 = MBMath.ClampInt(num5 / 10, minimumKillGold, maximumKillGold);
                     num += num6;
-                    list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.DefaultKill, num6)); //根据击杀兵种金币差距奖励金币
+                    list.Add(new KeyValuePair<ushort, int>(128, num6));
                 }
                 int num7 = ((killerPerkHandler != null) ? killerPerkHandler.GetGoldOnKill((float)num4, (float)victimClass.TroopCasualCost) : 0);
                 if (num7 > 0)
                 {
                     num += num7;
                     this._currentGoldGains |= GoldGainFlags.PerkBonus;
-                    list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.PerkBonus, num7)); //Perk
+                    list.Add(new KeyValuePair<ushort, int>(2048, num7));
                 }
                 int num8 = base.MissionPeer.KillCount - this._killCountOnSpawn;
-                switch (num8)
+                if (num8 != 5)
                 {
-                    case 1:
-                        num += firstKillGold;
-                        this._currentGoldGains |= GoldGainFlags.FirstKill;
-                        list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.FirstKill, firstKillGold)); // 首杀
-                        break;
-                    case 2:
-                        num += doubleKillGold;
-                        this._currentGoldGains |= GoldGainFlags.DoubleKill;
-                        list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.DoubleKill, doubleKillGold)); // 双杀
-                        break;
-                    case 5:
-                        num += fifthKillGold;
-                        this._currentGoldGains |= GoldGainFlags.FifthKill;
-                        list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.FifthKill, fifthKillGold)); // 五杀
-                        break;
-                    case 10:
+                    if (num8 == 10)
+                    {
                         num += tenthKillGold;
                         this._currentGoldGains |= GoldGainFlags.TenthKill;
-                        list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.TenthKill, tenthKillGold)); // 十杀
-                        break;
+                        list.Add(new KeyValuePair<ushort, int>(64, tenthKillGold));
+                    }
                 }
-
-                if (isHeadShot)
+                else
                 {
-                    num += headShotGold;
-                    this._currentGoldGains |= GoldGainFlags.HeadShot;
-                    list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.HeadShot, headShotGold)); //爆头
+                    num += fifthKillGold;
+                    this._currentGoldGains |= GoldGainFlags.FifthKill;
+                    list.Add(new KeyValuePair<ushort, int>(32, fifthKillGold));
+                }
+                if (isRanged && !this._currentGoldGains.HasAnyFlag(GoldGainFlags.FirstRangedKill))
+                {
+                    num += firstRangeKillGold;
+                    this._currentGoldGains |= GoldGainFlags.FirstRangedKill;
+                    list.Add(new KeyValuePair<ushort, int>(1, firstRangeKillGold));
+                }
+                if (!isRanged && !this._currentGoldGains.HasAnyFlag(GoldGainFlags.FirstMeleeKill))
+                {
+                    num += firstMeleeKillGold;
+                    this._currentGoldGains |= GoldGainFlags.FirstMeleeKill;
+                    list.Add(new KeyValuePair<ushort, int>(2, firstMeleeKillGold));
                 }
             }
             int num9 = 0;
@@ -159,7 +172,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
                 GameNetwork.BeginModuleEventAsServer(base.Peer);
                 GameNetwork.WriteMessage(new GoldGain(new List<KeyValuePair<ushort, int>>
                 {
-                    new KeyValuePair<ushort, int>((ushort)(isCompleted ? (ushort)GoldGainFlags.ObjectiveCompleted : (ushort)GoldGainFlags.ObjectiveDestroyed), num)
+                    new KeyValuePair<ushort, int>((ushort)(isCompleted ? 512 : 1024), num)
                 }));
                 GameNetwork.EndModuleEventAsServer();
             }
@@ -173,7 +186,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
                 GameNetwork.BeginModuleEventAsServer(base.Peer);
                 GameNetwork.WriteMessage(new GoldGain(new List<KeyValuePair<ushort, int>>
                 {
-                    new KeyValuePair<ushort, int>((ushort)GoldGainFlags.PerkBonus, baseAmount)
+                    new KeyValuePair<ushort, int>(2048, baseAmount)
                 }));
                 GameNetwork.EndModuleEventAsServer();
             }

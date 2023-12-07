@@ -1,10 +1,14 @@
 ﻿using NetworkMessages.FromServer;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TaleWorlds.Core;
 using TaleWorlds.Engine;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
+using TaleWorlds.MountAndBlade.MissionRepresentatives;
 using TaleWorlds.MountAndBlade.Network.Messages;
 using TaleWorlds.MountAndBlade.Objects;
 using TaleWorlds.ObjectSystem;
@@ -93,7 +97,36 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
 
         public void OnNumberOfFlagsChanged()
         {
-            this.OnFlagNumberChangedEvent?.Invoke();
+            Action onFlagNumberChangedEvent = this.OnFlagNumberChangedEvent;
+            if (onFlagNumberChangedEvent != null)
+            {
+                onFlagNumberChangedEvent();
+            }
+            CNMSiegeMissionRepresentative myRepresentative = this._myRepresentative;
+            bool flag;
+            if (myRepresentative == null)
+            {
+                flag = false;
+            }
+            else
+            {
+                Team team = myRepresentative.MissionPeer.Team;
+                BattleSideEnum? battleSideEnum = ((team != null) ? new BattleSideEnum?(team.Side) : null);
+                BattleSideEnum battleSideEnum2 = BattleSideEnum.Attacker;
+                flag = (battleSideEnum.GetValueOrDefault() == battleSideEnum2) & (battleSideEnum != null);
+            }
+            if (flag)
+            {
+                Action<GoldGain> onGoldGainEvent = this.OnGoldGainEvent;
+                if (onGoldGainEvent == null)
+                {
+                    return;
+                }
+                onGoldGainEvent(new GoldGain(new List<KeyValuePair<ushort, int>>
+                {
+                    new KeyValuePair<ushort, int>(512, 35)
+                }));
+            }
         }
 
         public void OnCapturePointOwnerChanged(FlagCapturePoint flagCapturePoint, Team ownerTeam)
@@ -316,10 +349,15 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
             }
         }
 
-        private void HandleServerEventTDMGoldGain(GameNetworkMessage baseMessage) //金币获取视觉反馈
+        private void HandleServerEventTDMGoldGain(GameNetworkMessage baseMessage)
         {
-            if (OnGoldGainEvent == null) return;
-            this.OnGoldGainEvent((GoldGain)baseMessage);
+            GoldGain goldGain = (GoldGain)baseMessage;
+            Action<GoldGain> onGoldGainEvent = this.OnGoldGainEvent;
+            if (onGoldGainEvent == null)
+            {
+                return;
+            }
+            onGoldGainEvent(goldGain);
         }
 
         private const float DefenderMoraleDropThresholdIncrement = 0.2f;
