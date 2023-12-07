@@ -1,4 +1,5 @@
-﻿using NetworkMessages.FromServer;
+﻿using CNMultiplayer.Common.Modes.CNMSiege;
+using NetworkMessages.FromServer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -336,7 +337,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             List<MissionPeer> list = new List<MissionPeer>();
             foreach (KeyValuePair<MissionPeer, float> item in allContributorsForSideAndClear)
             {
-                int goldGainsFromObjectiveAssist = (item.Key.Representative as SiegeMissionRepresentative).GetGoldGainsFromObjectiveAssist(root, item.Value / num, isCompleted: false);
+                int goldGainsFromObjectiveAssist = (item.Key.Representative as CNMSiegeMissionRepresentative).GetGoldGainsFromObjectiveAssist(root, item.Value / num, isCompleted: false);
                 if (goldGainsFromObjectiveAssist > 0)
                 {
                     ChangeCurrentGoldForPeer(item.Key, item.Key.Representative.Gold + goldGainsFromObjectiveAssist);
@@ -548,7 +549,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                         float num2 = allContributorsForSideAndClear.Sum((ac) => ac.Value);
                         foreach (KeyValuePair<MissionPeer, float> item3 in allContributorsForSideAndClear)
                         {
-                            int goldGainsFromObjectiveAssist = (item3.Key.Representative as SiegeMissionRepresentative).GetGoldGainsFromObjectiveAssist(root, item3.Value / num2, isCompleted: true);
+                            int goldGainsFromObjectiveAssist = (item3.Key.Representative as CNMSiegeMissionRepresentative).GetGoldGainsFromObjectiveAssist(root, item3.Value / num2, isCompleted: true);
                             if (goldGainsFromObjectiveAssist > 0)
                             {
                                 ChangeCurrentGoldForPeer(item3.Key, item3.Key.Representative.Gold + goldGainsFromObjectiveAssist);
@@ -600,7 +601,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
 
         protected override void HandleEarlyNewClientAfterLoadingFinished(NetworkCommunicator networkPeer)
         {
-            networkPeer.AddComponent<SiegeMissionRepresentative>();
+            networkPeer.AddComponent<CNMSiegeMissionRepresentative>();
         }
 
         protected override void HandleNewClientAfterSynchronized(NetworkCommunicator networkPeer)
@@ -611,7 +612,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 num = FirstSpawnGoldForEarlyJoin;
             }
             ChangeCurrentGoldForPeer(networkPeer.GetComponent<MissionPeer>(), num);
-            _gameModeSiegeClient?.OnGoldAmountChangedForRepresentative(networkPeer.GetComponent<SiegeMissionRepresentative>(), num);
+            _gameModeSiegeClient?.OnGoldAmountChangedForRepresentative(networkPeer.GetComponent<CNMSiegeMissionRepresentative>(), num);
             if (AllCapturePoints == null || networkPeer.IsServerPeer)
             {
                 return;
@@ -677,13 +678,13 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             Agent.Hitter assistingHitter = affectedAgent.GetAssistingHitter(affectorAgent?.MissionPeer);
             if (affectorAgent?.MissionPeer != null && affectorAgent != affectedAgent && affectedAgent.Team != affectorAgent.Team)
             {
-                SiegeMissionRepresentative siegeMissionRepresentative = affectorAgent.MissionPeer.Representative as SiegeMissionRepresentative;
+                CNMSiegeMissionRepresentative siegeMissionRepresentative = affectorAgent.MissionPeer.Representative as CNMSiegeMissionRepresentative;
                 int goldGainsFromKillDataAndUpdateFlags = siegeMissionRepresentative.GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.GetPerkHandler(affectorAgent.MissionPeer), MPPerkObject.GetPerkHandler(assistingHitter?.HitterPeer), mPHeroClassForCharacter, isAssist: false, blow.IsMissile, isFriendly);
                 ChangeCurrentGoldForPeer(affectorAgent.MissionPeer, siegeMissionRepresentative.Gold + goldGainsFromKillDataAndUpdateFlags);
             }
             if (assistingHitter?.HitterPeer != null && !assistingHitter.IsFriendlyHit)
             {
-                SiegeMissionRepresentative siegeMissionRepresentative2 = assistingHitter.HitterPeer.Representative as SiegeMissionRepresentative;
+                CNMSiegeMissionRepresentative siegeMissionRepresentative2 = assistingHitter.HitterPeer.Representative as CNMSiegeMissionRepresentative;
                 int goldGainsFromKillDataAndUpdateFlags2 = siegeMissionRepresentative2.GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.GetPerkHandler(affectorAgent?.MissionPeer), MPPerkObject.GetPerkHandler(assistingHitter.HitterPeer), mPHeroClassForCharacter, isAssist: true, blow.IsMissile, isFriendly);
                 ChangeCurrentGoldForPeer(assistingHitter.HitterPeer, siegeMissionRepresentative2.Gold + goldGainsFromKillDataAndUpdateFlags2);
             }
@@ -698,7 +699,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             }
             foreach (var (missionPeer2, num4) in enumerable)
             {
-                if (num4 > 0 && missionPeer2?.Representative is SiegeMissionRepresentative siegeMissionRepresentative3)
+                if (num4 > 0 && missionPeer2?.Representative is CNMSiegeMissionRepresentative siegeMissionRepresentative3)
                 {
                     int goldGainsFromAllyDeathReward = siegeMissionRepresentative3.GetGoldGainsFromAllyDeathReward(num4);
                     if (goldGainsFromAllyDeathReward > 0)
