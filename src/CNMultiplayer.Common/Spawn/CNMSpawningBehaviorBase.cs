@@ -11,7 +11,7 @@ using TaleWorlds.ObjectSystem;
 
 namespace CNMultiplayer.Common
 {
-    internal abstract class CNMSpawningBehaviorBase : SpawningBehaviorBase
+    public abstract class CNMSpawningBehaviorBase : SpawningBehaviorBase
     {
         private const float FemaleAiPossibility = 0.25f; //女性AI比例
 

@@ -16,6 +16,8 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <!-- 不输出被引用的程序集 -->
     <GenerateDependencyFile>false</GenerateDependencyFile>
+	<!-- 不输出.pdb文件 -->
+	<DebugType>none</DebugType>
   </PropertyGroup>
 
   <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
@@ -24,4 +26,8 @@
   <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
     <Error Text="Environment variable MB_SERVER_PATH should be set to your Bannerlord server installation path" Condition="'$(MB_SERVER_PATH)' == ''" />
   </Target>
+  <ItemGroup>
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.6.30619-beta" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.6.30619-beta" />
+  </ItemGroup>
 </Project>

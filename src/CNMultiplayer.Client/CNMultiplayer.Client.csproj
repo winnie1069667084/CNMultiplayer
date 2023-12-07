@@ -16,6 +16,8 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <!-- 不输出被引用的程序集 -->
     <GenerateDependencyFile>false</GenerateDependencyFile>
+	<!-- 不输出.pdb文件 -->
+	<DebugType>none</DebugType>
   </PropertyGroup>
 
   <Target Name="CheckMbPathDefined" BeforeTargets="GetReferenceAssemblyPaths">
@@ -28,6 +30,10 @@
     <Compile Remove="Patches\**" />
     <EmbeddedResource Remove="Patches\**" />
     <None Remove="Patches\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CNMultiplayer.Common\CNMultiplayer.Common.csproj" />
   </ItemGroup>
   
   <ItemGroup>
