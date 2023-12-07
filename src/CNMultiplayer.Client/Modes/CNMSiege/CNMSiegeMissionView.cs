@@ -19,7 +19,7 @@ namespace CNMultiplayer.Client.Modes.CNMSiege
                 ViewCreator.CreateMissionAgentStatusUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentEquipmentController(mission),
                 ViewCreator.CreateMissionMainAgentCheerBarkControllerView(mission),
-                MultiplayerViewCreator.CreateMissionMultiplayerEscapeMenu("Siege"),
+                MultiplayerViewCreator.CreateMissionMultiplayerEscapeMenu("CNMSiege"),
                 MultiplayerViewCreator.CreateMultiplayerEndOfBattleUIHandler(),
                 ViewCreator.CreateMissionAgentLabelUIHandler(mission),
                 MultiplayerViewCreator.CreateMultiplayerTeamSelectUIHandler(),
