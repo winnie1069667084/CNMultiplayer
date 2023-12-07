@@ -68,7 +68,7 @@ namespace CNMultiplayer.Client.Modes.Siege
                 new MultiplayerMissionAgentVisualSpawnComponent(),
                 new ConsoleMatchStartEndHandler(),
                 new MissionLobbyEquipmentNetworkComponent(),
-                new CNMTeamSelectComponent(warmupComponent, null),
+                new MultiplayerTeamSelectComponent(),
                 new MissionHardBorderPlacer(),
                 new MissionBoundaryPlacer(),
                 new MissionBoundaryCrossingHandler(),

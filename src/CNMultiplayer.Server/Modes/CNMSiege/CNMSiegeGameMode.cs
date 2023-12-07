@@ -32,7 +32,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 new MultiplayerTimerComponent(),
                 new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()),
                 new MissionLobbyEquipmentNetworkComponent(),
-                new CNMTeamSelectComponent(warmupComponent, null),
+                new MultiplayerTeamSelectComponent(),
                 new MissionHardBorderPlacer(),
                 new MissionBoundaryPlacer(),
                 new MissionBoundaryCrossingHandler(),
