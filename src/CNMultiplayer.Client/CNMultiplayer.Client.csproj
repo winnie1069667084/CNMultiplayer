@@ -35,7 +35,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CNMultiplayer.Common\CNMultiplayer.Common.csproj" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.6.30619-beta" />
     <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.6.30619-beta" />

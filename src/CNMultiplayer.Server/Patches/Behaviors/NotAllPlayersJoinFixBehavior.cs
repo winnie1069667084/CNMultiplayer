@@ -9,6 +9,7 @@ using TaleWorlds.PlayerServices;
 
 namespace CNMultiplayer.Server.Patches.Behaviors
 {
+    // Made by mentalrob
     public class NotAllPlayersJoinFixBehavior : MissionNetwork
     {
         public CustomBattleServer DedicatedCustomServer { get; private set; }

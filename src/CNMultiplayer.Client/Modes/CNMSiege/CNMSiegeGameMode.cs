@@ -1,20 +1,18 @@
-﻿using TaleWorlds.Core;
+﻿using CNMultiplayer.Modes.Warmup;
+using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
 using TaleWorlds.MountAndBlade.Multiplayer;
-using CNMultiplayer.Server.Modes.Warmup;
 
-namespace CNMultiplayer.Server.Modes.CNMSiege
+namespace CNMultiplayer.Client.Modes.CNMSiege
 {
-
     internal class CNMSiegeGameMode : MissionBasedMultiplayerGameMode
     {
         private const string GameName = "CNMSiege";
 
-        public CNMSiegeGameMode()
-            : base(GameName)
-        { }
+        public CNMSiegeGameMode() : base(GameName) { }
 
+        [MissionMethod]
         public override void StartMultiplayerGame(string scene)
         {
             CNMWarmupComponent warmupComponent = new CNMWarmupComponent(() => (new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()));
@@ -24,11 +22,12 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             _ => new MissionBehavior[]
             {
                 MissionLobbyComponent.CreateBehavior(),
-                new CNMSiegeServer(),
                 warmupComponent,
                 new MissionMultiplayerSiegeClient(),
+                new MultiplayerAchievementComponent(),
                 new MultiplayerTimerComponent(),
-                new SpawnComponent(new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()),
+                new MultiplayerMissionAgentVisualSpawnComponent(),
+                new ConsoleMatchStartEndHandler(),
                 new MissionLobbyEquipmentNetworkComponent(),
                 new MultiplayerTeamSelectComponent(),
                 new MissionHardBorderPlacer(),
@@ -39,9 +38,9 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
                 new MissionScoreboardComponent(new SiegeScoreboardData()),
-                new MissionAgentPanicHandler(),
-                new AgentHumanAILogic(),
+                MissionMatchHistoryComponent.CreateIfConditionsAreMet(),
                 new EquipmentControllerLeaveLogic(),
+                new MissionRecentPlayersComponent(),
                 new VoiceChatHandler(),
                 new MultiplayerPreloadHelper()
             });

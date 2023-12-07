@@ -1,6 +1,6 @@
-﻿using CNMultiplayer.Client.Modes.Siege;
-using HarmonyLib;
+﻿using HarmonyLib;
 using TaleWorlds.MountAndBlade;
+using CNMultiplayer.Client.Modes.CNMSiege;
 
 namespace CNMultiplayer.Client
 {
