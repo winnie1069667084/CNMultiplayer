@@ -3,6 +3,7 @@ using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
 using TaleWorlds.MountAndBlade.Multiplayer;
+using CNMultiplayer.Common.Modes.CNMSiege;
 
 namespace CNMultiplayer.Client.Modes.CNMSiege
 {
@@ -22,7 +23,7 @@ namespace CNMultiplayer.Client.Modes.CNMSiege
             {
                 MissionLobbyComponent.CreateBehavior(),
                 warmupComponent,
-                new MissionMultiplayerSiegeClient(),
+                new CNMSiegeClient(),
                 new MultiplayerAchievementComponent(),
                 new MultiplayerTimerComponent(),
                 new MultiplayerMissionAgentVisualSpawnComponent(),

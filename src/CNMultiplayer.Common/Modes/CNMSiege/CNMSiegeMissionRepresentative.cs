@@ -1,17 +1,13 @@
-﻿using HarmonyLib;
-using NetworkMessages.FromServer;
+﻿using NetworkMessages.FromServer;
 using System.Collections.Generic;
 using TaleWorlds.Engine;
-using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
-using TaleWorlds.MountAndBlade.MissionRepresentatives;
+using TaleWorlds.Library;
 
-namespace HarmonyPatches
+namespace CNMultiplayer.Common.Modes.CNMSiege
 {
-    [HarmonyPatch(typeof(SiegeMissionRepresentative), "GetGoldGainsFromKillDataAndUpdateFlags")]//攻城模式击杀金币系统修改
-    internal class Patch_GetGoldGainsFromKillDataAndUpdateFlags
+    public class CNMSiegeMissionRepresentative : MissionRepresentativeBase
     {
-        //击杀更贵兵种，奖励差价除10
         private const int minimumKillGold = 2; //最少差价击杀
 
         private const int maximumKillGold = 20; //最多差价击杀
@@ -32,7 +28,28 @@ namespace HarmonyPatches
 
         private const int defaultAssistGold = 1; //默认助攻
 
-        public static bool Prefix(MPPerkObject.MPPerkHandler killerPerkHandler, MPPerkObject.MPPerkHandler assistingHitterPerkHandler, MultiplayerClassDivisions.MPHeroClass victimClass, bool isAssist, bool isRanged, bool isFriendly, SiegeMissionRepresentative __instance, ref GoldGainFlags ____currentGoldGains, int ____assistCountOnSpawn, int ____killCountOnSpawn, ref int __result)
+        private const int defaultDestructableGold = 50; //默认可破坏物（投石车、弩炮）
+
+        private const int gateAndWallGold = 300; //大门与可破坏墙
+
+        private const int ramAndTowerGold = 150; //攻城槌与攻城塔
+
+        private const int otherDestructableGold = 300; //其它
+
+        private GoldGainFlags _currentGoldGains;
+
+        private int _killCountOnSpawn;
+
+        private int _assistCountOnSpawn;
+
+        public override void OnAgentSpawned()
+        {
+            this._currentGoldGains = (GoldGainFlags)0;
+            this._killCountOnSpawn = base.MissionPeer.KillCount;
+            this._assistCountOnSpawn = base.MissionPeer.AssistCount;
+        }
+
+        public int GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.MPPerkHandler killerPerkHandler, MPPerkObject.MPPerkHandler assistingHitterPerkHandler, MultiplayerClassDivisions.MPHeroClass victimClass, bool isAssist, bool isRanged, bool isFriendly)
         {
             int num = 0;
             List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
@@ -44,25 +61,25 @@ namespace HarmonyPatches
                     if (num3 > 0)
                     {
                         num += num3;
-                        ____currentGoldGains |= GoldGainFlags.PerkBonus;
+                        this._currentGoldGains |= GoldGainFlags.PerkBonus;
                         list.Add(new KeyValuePair<ushort, int>(2048, num3));
                     }
                 }
-                switch (__instance.MissionPeer.AssistCount - ____assistCountOnSpawn)
+                switch (base.MissionPeer.AssistCount - this._assistCountOnSpawn)
                 {
                     case 1:
                         num += firstAssistGold;
-                        ____currentGoldGains |= GoldGainFlags.FirstAssist;
+                        this._currentGoldGains |= GoldGainFlags.FirstAssist;
                         list.Add(new KeyValuePair<ushort, int>(4, firstAssistGold));
                         break;
                     case 2:
                         num += secondAssistGold;
-                        ____currentGoldGains |= GoldGainFlags.SecondAssist;
+                        this._currentGoldGains |= GoldGainFlags.SecondAssist;
                         list.Add(new KeyValuePair<ushort, int>(8, secondAssistGold));
                         break;
                     case 3:
                         num += thirdAssistGold;
-                        ____currentGoldGains |= GoldGainFlags.ThirdAssist;
+                        this._currentGoldGains |= GoldGainFlags.ThirdAssist;
                         list.Add(new KeyValuePair<ushort, int>(16, thirdAssistGold));
                         break;
                     default:
@@ -74,56 +91,56 @@ namespace HarmonyPatches
             else
             {
                 int num4 = 0;
-                if (__instance.ControlledAgent != null)
+                if (base.ControlledAgent != null)
                 {
-                    num4 = MultiplayerClassDivisions.GetMPHeroClassForCharacter(__instance.ControlledAgent.Character).TroopCasualCost;
+                    num4 = MultiplayerClassDivisions.GetMPHeroClassForCharacter(base.ControlledAgent.Character).TroopCasualCost;
                     int num5 = victimClass.TroopCasualCost - num4; //根据击杀兵种金币差距奖励金币
                     int num6 = MBMath.ClampInt(num5 / 10, minimumKillGold, maximumKillGold);
                     num += num6;
                     list.Add(new KeyValuePair<ushort, int>(128, num6));
                 }
-                int num7 = (killerPerkHandler != null) ? killerPerkHandler.GetGoldOnKill((float)num4, (float)victimClass.TroopCasualCost) : 0;
+                int num7 = ((killerPerkHandler != null) ? killerPerkHandler.GetGoldOnKill((float)num4, (float)victimClass.TroopCasualCost) : 0);
                 if (num7 > 0)
                 {
                     num += num7;
-                    ____currentGoldGains |= GoldGainFlags.PerkBonus;
+                    this._currentGoldGains |= GoldGainFlags.PerkBonus;
                     list.Add(new KeyValuePair<ushort, int>(2048, num7));
                 }
-                int num8 = __instance.MissionPeer.KillCount - ____killCountOnSpawn;
+                int num8 = base.MissionPeer.KillCount - this._killCountOnSpawn;
                 if (num8 != 5)
                 {
                     if (num8 == 10)
                     {
                         num += tenthKillGold;
-                        ____currentGoldGains |= GoldGainFlags.TenthKill;
+                        this._currentGoldGains |= GoldGainFlags.TenthKill;
                         list.Add(new KeyValuePair<ushort, int>(64, tenthKillGold));
                     }
                 }
                 else
                 {
                     num += fifthKillGold;
-                    ____currentGoldGains |= GoldGainFlags.FifthKill;
+                    this._currentGoldGains |= GoldGainFlags.FifthKill;
                     list.Add(new KeyValuePair<ushort, int>(32, fifthKillGold));
                 }
-                if (isRanged && !____currentGoldGains.HasAnyFlag(GoldGainFlags.FirstRangedKill))
+                if (isRanged && !this._currentGoldGains.HasAnyFlag(GoldGainFlags.FirstRangedKill))
                 {
                     num += firstRangeKillGold;
-                    ____currentGoldGains |= GoldGainFlags.FirstRangedKill;
+                    this._currentGoldGains |= GoldGainFlags.FirstRangedKill;
                     list.Add(new KeyValuePair<ushort, int>(1, firstRangeKillGold));
                 }
-                if (!isRanged && !____currentGoldGains.HasAnyFlag(GoldGainFlags.FirstMeleeKill))
+                if (!isRanged && !this._currentGoldGains.HasAnyFlag(GoldGainFlags.FirstMeleeKill))
                 {
                     num += firstMeleeKillGold;
-                    ____currentGoldGains |= GoldGainFlags.FirstMeleeKill;
+                    this._currentGoldGains |= GoldGainFlags.FirstMeleeKill;
                     list.Add(new KeyValuePair<ushort, int>(2, firstMeleeKillGold));
                 }
             }
             int num9 = 0;
-            if (__instance.MissionPeer.Team == Mission.Current.Teams.Attacker)
+            if (base.MissionPeer.Team == Mission.Current.Teams.Attacker)
             {
                 num9 = MultiplayerOptions.OptionType.GoldGainChangePercentageTeam1.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
             }
-            else if (__instance.MissionPeer.Team == Mission.Current.Teams.Defender)
+            else if (base.MissionPeer.Team == Mission.Current.Teams.Defender)
             {
                 num9 = MultiplayerOptions.OptionType.GoldGainChangePercentageTeam2.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
             }
@@ -138,21 +155,45 @@ namespace HarmonyPatches
                     num += num11;
                 }
             }
-            if (list.Count > 0 && !__instance.Peer.Communicator.IsServerPeer && __instance.Peer.Communicator.IsConnectionActive)
+            if (list.Count > 0 && !base.Peer.Communicator.IsServerPeer && base.Peer.Communicator.IsConnectionActive)
             {
-                GameNetwork.BeginModuleEventAsServer(__instance.Peer);
+                GameNetwork.BeginModuleEventAsServer(base.Peer);
                 GameNetwork.WriteMessage(new GoldGain(list));
                 GameNetwork.EndModuleEventAsServer();
             }
-            __result = num;
-            return false;
+            return num;
         }
-    }
 
-    [HarmonyPatch(typeof(SiegeMissionRepresentative), "GetTotalGoldDistributionForDestructable")]//攻城模式器械摧毁&贡献度金币系统修改
-    internal class Patch_GetTotalGoldDistributionForDestructable
-    {
-        public static bool Prefix(GameEntity objectiveMostParentEntity, ref int __result)
+        public int GetGoldGainsFromObjectiveAssist(GameEntity objectiveMostParentEntity, float contributionRatio, bool isCompleted)
+        {
+            int num = (int)(contributionRatio * (float)this.GetTotalGoldDistributionForDestructable(objectiveMostParentEntity));
+            if (num > 0 && !base.Peer.Communicator.IsServerPeer && base.Peer.Communicator.IsConnectionActive)
+            {
+                GameNetwork.BeginModuleEventAsServer(base.Peer);
+                GameNetwork.WriteMessage(new GoldGain(new List<KeyValuePair<ushort, int>>
+                {
+                    new KeyValuePair<ushort, int>((ushort)(isCompleted ? 512 : 1024), num)
+                }));
+                GameNetwork.EndModuleEventAsServer();
+            }
+            return num;
+        }
+
+        public int GetGoldGainsFromAllyDeathReward(int baseAmount)
+        {
+            if (baseAmount > 0 && !base.Peer.Communicator.IsServerPeer && base.Peer.Communicator.IsConnectionActive)
+            {
+                GameNetwork.BeginModuleEventAsServer(base.Peer);
+                GameNetwork.WriteMessage(new GoldGain(new List<KeyValuePair<ushort, int>>
+                {
+                    new KeyValuePair<ushort, int>(2048, baseAmount)
+                }));
+                GameNetwork.EndModuleEventAsServer();
+            }
+            return baseAmount;
+        }
+
+        private int GetTotalGoldDistributionForDestructable(GameEntity objectiveMostParentEntity)
         {
             string text = null;
             foreach (string text2 in objectiveMostParentEntity.Tags)
@@ -165,22 +206,18 @@ namespace HarmonyPatches
             }
             if (text == null)
             {
-                __result = 50;
-                return false;
+                return defaultDestructableGold;
             }
-            string a = text.Replace("mp_siege_objective_", "");
-            if (a == "wall_breach" || a == "castle_gate")
+            string text3 = text.Replace("mp_siege_objective_", "");
+            if (text3 == "wall_breach" || text3 == "castle_gate")
             {
-                __result = 300;
-                return false;
+                return gateAndWallGold;
             }
-            if (!(a == "battering_ram") && !(a == "siege_tower"))
+            if (!(text3 == "battering_ram") && !(text3 == "siege_tower"))
             {
-                __result = 50;
-                return false;
+                return ramAndTowerGold;
             }
-            __result = 300;
-            return false;
+            return otherDestructableGold;
         }
     }
 }
