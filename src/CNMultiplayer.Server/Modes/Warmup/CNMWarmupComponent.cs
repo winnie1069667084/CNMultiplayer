@@ -78,7 +78,7 @@ namespace CNMultiplayer.Server.Modes.Warmup
             spawnComponent.SetNewSpawningBehavior(new CNMWarmupSpawningBehavior());
         }
 
-        private void EndWarmupProgress()
+        private new void EndWarmupProgress()
         {
             WarmupStateReflection = WarmupStates.Ending;
             TimerComponentReflection.StartTimerAsServer(30f);

@@ -19,8 +19,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
         {
             CNMWarmupComponent warmupComponent = new CNMWarmupComponent(() => (new SiegeSpawnFrameBehavior(), new CNMSiegeSpawningBehavior()));
 
-            MissionState.OpenNew(GameName, new MissionInitializerRecord(scene)
-            { SceneUpgradeLevel = 3, SceneLevels = string.Empty },
+            MissionState.OpenNew(GameName, new MissionInitializerRecord(scene),
             _ => new MissionBehavior[]
             {
                 MissionLobbyComponent.CreateBehavior(),
