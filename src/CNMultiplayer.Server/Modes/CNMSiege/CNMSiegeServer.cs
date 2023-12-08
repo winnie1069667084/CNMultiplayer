@@ -108,7 +108,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
 
         private (RangedSiegeWeapon, Agent)[] _lastReloadingAgentPerRangedSiegeMachine;
 
-        private MissionMultiplayerSiegeClient _gameModeSiegeClient;
+        private CNMSiegeClient _gameModeSiegeClient;
 
         private MultiplayerWarmupComponent _warmupComponent;
 
@@ -206,7 +206,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             base.OnBehaviorInitialize();
             _objectiveSystem = new ObjectiveSystem();
             _childDestructableComponents = new Dictionary<GameEntity, List<DestructableComponent>>();
-            _gameModeSiegeClient = Mission.Current.GetMissionBehavior<MissionMultiplayerSiegeClient>();
+            _gameModeSiegeClient = Mission.Current.GetMissionBehavior<CNMSiegeClient>();
             _warmupComponent = Mission.Current.GetMissionBehavior<MultiplayerWarmupComponent>();
             _missionScoreboardComponent = Mission.Current.GetMissionBehavior<MissionScoreboardComponent>();
             InitializeMorales();
