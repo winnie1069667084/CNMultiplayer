@@ -11,7 +11,7 @@ using TaleWorlds.ObjectSystem;
 
 namespace CNMultiplayer.Common.Modes.CNMSiege
 {
-    public class CNMSiegeClient : MissionMultiplayerGameModeBaseClient, ICommanderInfo, IMissionBehavior
+    public class CNMSiegeClient : MissionMultiplayerSiegeClient, ICommanderInfo, IMissionBehavior
     {
         public override bool IsGameModeUsingGold => true;
 
@@ -21,19 +21,19 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
 
         public override MultiplayerGameType GameType => MultiplayerGameType.Siege;
 
-        public event Action<BattleSideEnum, float> OnMoraleChangedEvent;
+        public new event Action<BattleSideEnum, float> OnMoraleChangedEvent;
 
-        public event Action OnFlagNumberChangedEvent;
+        public new event Action OnFlagNumberChangedEvent;
 
-        public event Action<FlagCapturePoint, Team> OnCapturePointOwnerChangedEvent;
+        public new event Action<FlagCapturePoint, Team> OnCapturePointOwnerChangedEvent;
 
-        public event Action<GoldGain> OnGoldGainEvent;
+        public new event Action<GoldGain> OnGoldGainEvent; //这两个事件不会被正常调用，解决办法只有一个，重写整个GUI系统
 
-        public event Action<int[]> OnCapturePointRemainingMoraleGainsChangedEvent;
+        public new event Action<int[]> OnCapturePointRemainingMoraleGainsChangedEvent; //这两个事件不会被正常调用，解决办法只有一个，重写整个GUI系统
 
-        public bool AreMoralesIndependent => true;
+        public new bool AreMoralesIndependent => true;
 
-        public IEnumerable<FlagCapturePoint> AllCapturePoints { get; private set; }
+        public new IEnumerable<FlagCapturePoint> AllCapturePoints { get; private set; }
 
         protected override void AddRemoveMessageHandlers(GameNetwork.NetworkMessageHandlerRegistererContainer registerer)
         {
@@ -91,7 +91,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
             }
         }
 
-        public void OnNumberOfFlagsChanged()
+        public new void OnNumberOfFlagsChanged()
         {
             Action onFlagNumberChangedEvent = this.OnFlagNumberChangedEvent;
             if (onFlagNumberChangedEvent != null)
@@ -125,7 +125,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
             }
         }
 
-        public void OnCapturePointOwnerChanged(FlagCapturePoint flagCapturePoint, Team ownerTeam)
+        public new void OnCapturePointOwnerChanged(FlagCapturePoint flagCapturePoint, Team ownerTeam)
         {
             this._capturePointOwners[flagCapturePoint.FlagIndex] = ownerTeam;
             Action<FlagCapturePoint, Team> onCapturePointOwnerChangedEvent = this.OnCapturePointOwnerChangedEvent;
@@ -153,7 +153,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
             }
         }
 
-        public void OnMoraleChanged(int attackerMorale, int defenderMorale, int[] capturePointRemainingMoraleGains)
+        public new void OnMoraleChanged(int attackerMorale, int defenderMorale, int[] capturePointRemainingMoraleGains)
         {
             float num = (float)attackerMorale / 360f;
             float num2 = (float)defenderMorale / 360f;
@@ -256,7 +256,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
             onCapturePointRemainingMoraleGainsChangedEvent(capturePointRemainingMoraleGains);
         }
 
-        public Team GetFlagOwner(FlagCapturePoint flag)
+        public new Team GetFlagOwner(FlagCapturePoint flag)
         {
             return this._capturePointOwners[flag.FlagIndex];
         }
@@ -282,7 +282,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
             }
         }
 
-        public List<ItemObject> GetSiegeMissiles()
+        public new List<ItemObject> GetSiegeMissiles()
         {
             List<ItemObject> list = new List<ItemObject>();
             ItemObject @object = MBObjectManager.Instance.GetObject<ItemObject>("grapeshot_fire_projectile");
@@ -345,15 +345,10 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
             }
         }
 
-        private void HandleServerEventTDMGoldGain(GameNetworkMessage baseMessage)
+        private void HandleServerEventTDMGoldGain(GameNetworkMessage baseMessage) //金币获取视觉反馈
         {
-            GoldGain goldGain = (GoldGain)baseMessage;
-            Action<GoldGain> onGoldGainEvent = this.OnGoldGainEvent;
-            if (onGoldGainEvent == null)
-            {
-                return;
-            }
-            onGoldGainEvent(goldGain);
+            if (OnGoldGainEvent == null) return;
+            this.OnGoldGainEvent((GoldGain)baseMessage);
         }
 
         private const float DefenderMoraleDropThresholdIncrement = 0.2f;
