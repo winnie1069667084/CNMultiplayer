@@ -38,7 +38,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 new MultiplayerAdminComponent(),
                 new MultiplayerGameNotificationsComponent(),
                 new MissionOptionsComponent(),
-                new MissionScoreboardComponent(new SiegeScoreboardData()),
+                new MissionScoreboardComponent(new CNMSiegeScoreboardData()),
                 new MissionAgentPanicHandler(),
                 new AgentHumanAILogic(),
                 new EquipmentControllerLeaveLogic(),
