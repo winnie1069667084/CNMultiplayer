@@ -42,6 +42,15 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
 
         private int _assistCountOnSpawn;
 
+        public int GetGoldAmountForVisual()
+        {
+            if (base.Gold < 0)
+            {
+                return 80;
+            }
+            return base.Gold;
+        }
+
         public override void OnAgentSpawned()
         {
             this._currentGoldGains = (GoldGainFlags)0;
