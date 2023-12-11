@@ -3,6 +3,7 @@ using TaleWorlds.MountAndBlade.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
 using TaleWorlds.MountAndBlade;
 using CNMultiplayer.Client.GUI.HUDExtension;
+using CNMultiplayer.Client.GUI;
 
 namespace CNMultiplayer.Client.Modes.CNMSiege
 {
@@ -16,7 +17,7 @@ namespace CNMultiplayer.Client.Modes.CNMSiege
             {
                 MultiplayerViewCreator.CreateMissionServerStatusUIHandler(),
                 MultiplayerViewCreator.CreateMissionMultiplayerPreloadView(mission),
-                MultiplayerViewCreator.CreateMissionKillNotificationUIHandler(),
+                new CNMKillNotificationUIHandler(), //击杀反馈、金币反馈
                 ViewCreator.CreateMissionAgentStatusUIHandler(mission),
                 ViewCreator.CreateMissionMainAgentEquipmentController(mission),
                 ViewCreator.CreateMissionMainAgentCheerBarkControllerView(mission),
@@ -28,7 +29,6 @@ namespace CNMultiplayer.Client.Modes.CNMSiege
                 MultiplayerViewCreator.CreateMultiplayerEndOfRoundUIHandler(),
                 MultiplayerViewCreator.CreateLobbyEquipmentUIHandler(),
                 MultiplayerViewCreator.CreatePollProgressUIHandler(),
-                //MultiplayerViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
                 MultiplayerViewCreator.CreateMultiplayerMissionDeathCardUIHandler(null),
                 new MissionItemContourControllerView(),
                 new MissionAgentContourControllerView(),
@@ -39,7 +39,7 @@ namespace CNMultiplayer.Client.Modes.CNMSiege
                 ViewCreator.CreateMissionBoundaryCrossingView(),
                 new MissionBoundaryWallView(),
                 MultiplayerViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(), //语音UI
-                new CNMHUDExtensionHandler(),
+                new CNMHUDExtensionHandler(), //顶部UI
             };
         }
     }
