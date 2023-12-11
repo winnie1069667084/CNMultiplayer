@@ -1,5 +1,5 @@
-﻿using CNMultiplayer.Common;
-using CNMultiplayer.Helpers;
+﻿using CNMultiplayer.Client.Helpers;
+using CNMultiplayer.Common;
 using System;
 using System.Linq;
 using System.Reflection;
