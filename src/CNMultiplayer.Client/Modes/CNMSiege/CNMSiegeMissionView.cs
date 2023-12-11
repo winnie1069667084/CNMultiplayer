@@ -2,8 +2,9 @@
 using TaleWorlds.MountAndBlade.View.MissionViews;
 using TaleWorlds.MountAndBlade.View;
 using TaleWorlds.MountAndBlade;
+using CNMultiplayer.Client.GUI.HUDExtension;
 
-namespace CNMultiplayer.Client.Modes.CNMSiege.CNMSiegeGUI
+namespace CNMultiplayer.Client.Modes.CNMSiege
 {
     [ViewCreatorModule]
     internal class CNMSiegeMissionView
@@ -27,7 +28,7 @@ namespace CNMultiplayer.Client.Modes.CNMSiege.CNMSiegeGUI
                 MultiplayerViewCreator.CreateMultiplayerEndOfRoundUIHandler(),
                 MultiplayerViewCreator.CreateLobbyEquipmentUIHandler(),
                 MultiplayerViewCreator.CreatePollProgressUIHandler(),
-                MultiplayerViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
+                //MultiplayerViewCreator.CreateMultiplayerMissionHUDExtensionUIHandler(),
                 MultiplayerViewCreator.CreateMultiplayerMissionDeathCardUIHandler(null),
                 new MissionItemContourControllerView(),
                 new MissionAgentContourControllerView(),
@@ -38,8 +39,7 @@ namespace CNMultiplayer.Client.Modes.CNMSiege.CNMSiegeGUI
                 ViewCreator.CreateMissionBoundaryCrossingView(),
                 new MissionBoundaryWallView(),
                 MultiplayerViewCreator.CreateMultiplayerMissionVoiceChatUIHandler(), //语音UI
-
-                new MissionGauntletCNMSiegeUI(),
+                new CNMHUDExtensionHandler(),
             };
         }
     }
