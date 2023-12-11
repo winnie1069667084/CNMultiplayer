@@ -93,36 +93,7 @@ namespace CNMultiplayer.Common.Modes.CNMSiege
 
         public void OnNumberOfFlagsChanged()
         {
-            Action onFlagNumberChangedEvent = this.OnFlagNumberChangedEvent;
-            if (onFlagNumberChangedEvent != null)
-            {
-                onFlagNumberChangedEvent();
-            }
-            CNMSiegeMissionRepresentative myRepresentative = this._myRepresentative;
-            bool flag;
-            if (myRepresentative == null)
-            {
-                flag = false;
-            }
-            else
-            {
-                Team team = myRepresentative.MissionPeer.Team;
-                BattleSideEnum? battleSideEnum = ((team != null) ? new BattleSideEnum?(team.Side) : null);
-                BattleSideEnum battleSideEnum2 = BattleSideEnum.Attacker;
-                flag = (battleSideEnum.GetValueOrDefault() == battleSideEnum2) & (battleSideEnum != null);
-            }
-            if (flag)
-            {
-                Action<GoldGain> onGoldGainEvent = this.OnGoldGainEvent;
-                if (onGoldGainEvent == null)
-                {
-                    return;
-                }
-                onGoldGainEvent(new GoldGain(new List<KeyValuePair<ushort, int>>
-                {
-                    new KeyValuePair<ushort, int>(512, 35)
-                }));
-            }
+            this.OnFlagNumberChangedEvent?.Invoke();
         }
 
         public void OnCapturePointOwnerChanged(FlagCapturePoint flagCapturePoint, Team ownerTeam)
