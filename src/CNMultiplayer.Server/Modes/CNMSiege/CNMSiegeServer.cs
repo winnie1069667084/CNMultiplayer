@@ -11,6 +11,7 @@ using TaleWorlds.MountAndBlade.MissionRepresentatives;
 using TaleWorlds.MountAndBlade.Objects;
 using TaleWorlds.ObjectSystem;
 using MathF = TaleWorlds.Library.MathF;
+using GoldGainFlags = CNMultiplayer.Common.Gold.GoldGainFlags;
 
 namespace CNMultiplayer.Server.Modes.CNMSiege
 {
@@ -28,9 +29,9 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
 
         public const int MoraleGainPerFlag = 1; //被占领的旗帜提供的士气值
 
-        public const int AttackerGoldBonusOnFlagRemoval = 75; //攻城方移除旗帜金币奖励
+        public const int AttackerGoldBonusOnFlagRemoval = 30; //攻城方移除旗帜金币奖励
 
-        public const int DefenderGoldBonusOnFlagRemoval = 250; //守城方移除旗帜金币补偿
+        public const int DefenderGoldBonusOnFlagRemoval = 150; //守城方移除旗帜金币补偿
 
         public const string MasterFlagTag = "keep_capture_point";
 
@@ -52,15 +53,15 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
 
         private const int RespawnGold = 100; //基础重生金币
 
-        private const int AttackerRespawnGold = 30; //攻城方重生奖励金币
+        private const int AttackerRespawnGold = 20; //攻城方重生奖励金币
 
-        private const int DefenderRespawnGold = 15; //守城方重生奖励金币
+        private const int DefenderRespawnGold = 10; //守城方重生奖励金币
 
         private const int AttackerFlagGoldHoldMax = 200; //攻城方持有旗帜金币最大值
 
-        private const int DefenderFlagGoldHoldMax = 150; //守城方持有旗帜金币最大值
+        private const int DefenderFlagGoldHoldMax = 200; //守城方持有旗帜金币最大值
 
-        private const float radius = 16f; //定义旗帜半径
+        private const float radius = 16f; //旗帜半径
 
         private const float ObjectiveCheckPeriod = 0.25f;
 
@@ -68,9 +69,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
 
         private const float HealTick = 1.5f; //旗帜回血Tick
 
-        private const float AttackerFlagGoldTick = 1.2f; //攻城方旗帜金币Tick
-
-        private const float DefenderFlagGoldTick = 2.4f; //守城方旗帜金币Tick
+        private const float FlagGoldTick = 5f; //旗帜金币Tick
 
         private const float FlagSpeedPerPlayer = 0.25f; //每人提供的旗帜升降速度
 
@@ -78,7 +77,9 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
 
         private const float FlagSpeedMin = 0.1f; //最小旗帜升降速度（不得低于0.1f）
 
-        private const int FlagGoldGain = 2; //旗帜金币量
+        private const int AttackerFlagGoldGain = 10; //进攻方争夺旗帜金币奖励
+
+        private const int DenfenderFlagGoldGain = 5; //防守方争夺旗帜金币奖励
 
         private const int HealGain = 1; //旗帜回血量
 
@@ -101,6 +102,8 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
         private float _dtSumCheckMorales;
 
         private float _dtSumObjectiveCheck;
+
+        private float _dtFlagGoldTime;
 
         private ObjectiveSystem _objectiveSystem;
 
@@ -383,6 +386,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             if (MissionLobbyComponent.CurrentMultiplayerState == MissionLobbyComponent.MultiplayerGameState.Playing && !WarmupComponent.IsInWarmup)
             {
                 CheckMorales(dt);
+                CheckFlagGoldTick(dt);
                 if (CheckObjectives(dt))
                 {
                     TickFlags();
@@ -406,6 +410,13 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 _morales[(int)BattleSideEnum.Attacker] = attackerMorale;
                 _morales[(int)BattleSideEnum.Defender] = defenderMorale;
             }
+        }
+
+        private void CheckFlagGoldTick(float dt)
+        {
+            _dtFlagGoldTime += dt;
+            if (_dtFlagGoldTime >= FlagGoldTick)
+                _dtFlagGoldTime -= FlagGoldTick;
         }
 
         public override bool CheckForMatchEnd()
@@ -679,13 +690,13 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             if (affectorAgent?.MissionPeer != null && affectorAgent != affectedAgent && affectedAgent.Team != affectorAgent.Team)
             {
                 CNMSiegeMissionRepresentative siegeMissionRepresentative = affectorAgent.MissionPeer.Representative as CNMSiegeMissionRepresentative;
-                int goldGainsFromKillDataAndUpdateFlags = siegeMissionRepresentative.GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.GetPerkHandler(affectorAgent.MissionPeer), MPPerkObject.GetPerkHandler(assistingHitter?.HitterPeer), mPHeroClassForCharacter, isAssist: false, blow.IsMissile, isFriendly);
+                int goldGainsFromKillDataAndUpdateFlags = siegeMissionRepresentative.GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.GetPerkHandler(affectorAgent.MissionPeer), MPPerkObject.GetPerkHandler(assistingHitter?.HitterPeer), mPHeroClassForCharacter, isAssist: false, blow.IsHeadShot(), isFriendly);
                 ChangeCurrentGoldForPeer(affectorAgent.MissionPeer, siegeMissionRepresentative.Gold + goldGainsFromKillDataAndUpdateFlags);
             }
             if (assistingHitter?.HitterPeer != null && !assistingHitter.IsFriendlyHit)
             {
                 CNMSiegeMissionRepresentative siegeMissionRepresentative2 = assistingHitter.HitterPeer.Representative as CNMSiegeMissionRepresentative;
-                int goldGainsFromKillDataAndUpdateFlags2 = siegeMissionRepresentative2.GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.GetPerkHandler(affectorAgent?.MissionPeer), MPPerkObject.GetPerkHandler(assistingHitter.HitterPeer), mPHeroClassForCharacter, isAssist: true, blow.IsMissile, isFriendly);
+                int goldGainsFromKillDataAndUpdateFlags2 = siegeMissionRepresentative2.GetGoldGainsFromKillDataAndUpdateFlags(MPPerkObject.GetPerkHandler(affectorAgent?.MissionPeer), MPPerkObject.GetPerkHandler(assistingHitter.HitterPeer), mPHeroClassForCharacter, isAssist: true, blow.IsHeadShot(), isFriendly);
                 ChangeCurrentGoldForPeer(assistingHitter.HitterPeer, siegeMissionRepresentative2.Gold + goldGainsFromKillDataAndUpdateFlags2);
             }
             if (missionPeer?.Team == null)
@@ -824,10 +835,22 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 MissionPeer component = networkPeer.GetComponent<MissionPeer>();
                 if (component?.Team?.Side == BattleSideEnum.Defender)
                 {
-                    ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + DefenderGoldBonusOnFlagRemoval);
+                    List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
+                    list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.FlagRemove, DefenderGoldBonusOnFlagRemoval)); //防守方旗帜移除金币
+                    GameNetwork.BeginModuleEventAsServer(component.Peer);
+                    GameNetwork.WriteMessage(new GoldGain(list));
+                    GameNetwork.EndModuleEventAsServer();
+                    list.Clear();
                 }
                 else if (component?.Team?.Side == BattleSideEnum.Attacker)
-                    ChangeCurrentGoldForPeer(component, GetCurrentGoldForPeer(component) + AttackerGoldBonusOnFlagRemoval);
+                {
+                    List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
+                    list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.FlagRemove, AttackerGoldBonusOnFlagRemoval)); //攻击方旗帜移除金币
+                    GameNetwork.BeginModuleEventAsServer(component.Peer);
+                    GameNetwork.WriteMessage(new GoldGain(list));
+                    GameNetwork.EndModuleEventAsServer();
+                    list.Clear();
+                }
             }
         }
 
@@ -839,13 +862,23 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             }
         }
 
-        private void GainGoldInFlagRange(Agent agent) //旗帜范围获取金币
+        private void GainGoldInFlagRange(Agent agent)
         {
-            if (agent.MissionPeer.Representative.Gold < AttackerFlagGoldHoldMax && agent.Team.IsAttacker && _dtSumCheckMorales % AttackerFlagGoldTick < ObjectiveCheckPeriod || agent.MissionPeer.Representative.Gold < DefenderFlagGoldHoldMax && agent.Team.IsDefender && _dtSumCheckMorales % DefenderFlagGoldTick < ObjectiveCheckPeriod)
+            if (agent.MissionPeer.Representative.Gold < AttackerFlagGoldHoldMax && agent.Team.IsAttacker && _dtFlagGoldTime < ObjectiveCheckPeriod)
             {
                 List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
-                ChangeCurrentGoldForPeer(agent.MissionPeer, agent.MissionPeer.Representative.Gold + FlagGoldGain);//设定占旗获取金币数
-                list.Add(new KeyValuePair<ushort, int>(512, FlagGoldGain));
+                ChangeCurrentGoldForPeer(agent.MissionPeer, agent.MissionPeer.Representative.Gold + AttackerFlagGoldGain);
+                list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.ScrambleFlag, AttackerFlagGoldGain)); //进攻方争夺旗帜金币奖励
+                GameNetwork.BeginModuleEventAsServer(agent.MissionPeer.Peer);
+                GameNetwork.WriteMessage(new GoldGain(list));
+                GameNetwork.EndModuleEventAsServer();
+                list.Clear();
+            }
+            else if (agent.MissionPeer.Representative.Gold < DefenderFlagGoldHoldMax && agent.Team.IsDefender && _dtFlagGoldTime < ObjectiveCheckPeriod)
+            {
+                List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
+                ChangeCurrentGoldForPeer(agent.MissionPeer, agent.MissionPeer.Representative.Gold + DenfenderFlagGoldGain);
+                list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.ScrambleFlag, DenfenderFlagGoldGain)); //防守方方争夺旗帜金币奖励
                 GameNetwork.BeginModuleEventAsServer(agent.MissionPeer.Peer);
                 GameNetwork.WriteMessage(new GoldGain(list));
                 GameNetwork.EndModuleEventAsServer();
