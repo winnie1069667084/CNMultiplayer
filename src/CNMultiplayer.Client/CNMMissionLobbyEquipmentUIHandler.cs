@@ -9,7 +9,7 @@ using TaleWorlds.MountAndBlade.Multiplayer.ViewModelCollection.ClassLoadout;
 namespace CNMultiplayer
 {
     [OverrideView(typeof(MissionLobbyEquipmentUIHandler))]
-    public class CNM_MissionLobbyEquipmentUIHandler : MissionGauntletClassLoadout
+    public class CNMMissionLobbyEquipmentUIHandler : MissionGauntletClassLoadout
     {
         public override void OnAgentBuild(Agent agent, Banner banner)//在有agent生成或死亡时统计被锁定的兵种(agent为队友且不是AI)
         {

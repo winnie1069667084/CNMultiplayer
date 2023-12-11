@@ -511,7 +511,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 {
                     Agent lastFoundAgent = proximitySearch.LastFoundAgent;
                     float num2 = lastFoundAgent.Position.DistanceSquared(flag.Position);
-                    if (lastFoundAgent.IsMount || !lastFoundAgent.IsActive() || num2 > radius * radius || lastFoundAgent.IsAIControlled)
+                    if (lastFoundAgent.IsMount || !lastFoundAgent.IsActive() || num2 > radius * radius || lastFoundAgent.IsAIControlled || lastFoundAgent.HasMount) //骑兵、骑射在马上不参与旗帜争夺
                         continue;
 
                     HealInFlagRange(flag, lastFoundAgent);
