@@ -24,5 +24,18 @@
   <string id="cnmsiegeexplainer" text="·使用各类围城器械攻击或防守旗帜{newline}·在旗帜附近获取金币或回血{newline}·重生点随着旗帜的移除而向前推进{newline}·控制主旗帜或挫败敌人的士气来获取胜利"/>
   <string id="cnmcaptainexplainer" text="·指挥你的小队{newline}·占据地图上的旗帜来打击敌方士气{newline}·消灭敌人全队或耗尽敌方士气来获取胜利"/>
   <string id="idmexplainer" text="·不择手段的击杀任何人{newline}·从敌人的身上赚取金币以使用更强力兵种{newline}·总得分是衡量你战斗水平的唯一指标"/>
- </strings>
+  
+  <string id="gold0001" text="首杀"/>
+  <string id="gold0002" text="双杀"/>
+  <string id="gold0003" text="五杀"/>
+  <string id="gold0004" text="爆头"/> 
+  <string id="gold0005" text="击杀"/>
+  <string id="gold0006" text="十杀"/>
+  <string id="gold0007" text="助攻"/>
+  <string id="gold0008" text="争夺旗帜"/>
+  <string id="gold0009" text="旗帜移除"/>
+  <string id="gold0010" text="目标完成"/>
+  <string id="gold0011" text="目标摧毁"/>
+  <string id="gold0012" text="技能津贴"/>
+</strings>
 </base>
