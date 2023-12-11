@@ -836,6 +836,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 if (component?.Team?.Side == BattleSideEnum.Defender)
                 {
                     List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
+                    ChangeCurrentGoldForPeer(component, component.Representative.Gold + DefenderGoldBonusOnFlagRemoval);
                     list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.FlagRemove, DefenderGoldBonusOnFlagRemoval)); //防守方旗帜移除金币
                     GameNetwork.BeginModuleEventAsServer(component.Peer);
                     GameNetwork.WriteMessage(new GoldGain(list));
@@ -845,6 +846,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 else if (component?.Team?.Side == BattleSideEnum.Attacker)
                 {
                     List<KeyValuePair<ushort, int>> list = new List<KeyValuePair<ushort, int>>();
+                    ChangeCurrentGoldForPeer(component, component.Representative.Gold + AttackerGoldBonusOnFlagRemoval);
                     list.Add(new KeyValuePair<ushort, int>((ushort)GoldGainFlags.FlagRemove, AttackerGoldBonusOnFlagRemoval)); //攻击方旗帜移除金币
                     GameNetwork.BeginModuleEventAsServer(component.Peer);
                     GameNetwork.WriteMessage(new GoldGain(list));
