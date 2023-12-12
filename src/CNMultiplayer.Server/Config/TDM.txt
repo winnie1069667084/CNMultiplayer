@@ -1,0 +1,25 @@
+﻿ServerName CN - 中文站死斗 - 群767427084
+GameType TeamDeathmatch
+add_map_to_automated_battle_pool mp_duel_001
+add_map_to_automated_battle_pool mp_tdm_map_003 
+add_map_to_automated_battle_pool mp_tdm_map_004a_w
+add_map_to_automated_battle_pool mp_tdm_map_001_spring
+add_map_to_automated_battle_pool mp_tdm_map
+AutoTeamBalanceThreshold 1
+UnlimitedGold False
+MapTimeLimit 60
+RespawnPeriodTeam1 3
+RespawnPeriodTeam1 3
+#NumberOfBotsTeam1 450
+#NumberOfBotsTeam2 450
+MinNumberOfPlayersForMatchStart 1
+MaxNumberOfPlayers 200
+CultureTeam1 vlandia
+CultureTeam2 empire
+FriendlyFireDamageMeleeFriendPercent 10
+FriendlyFireDamageMeleeSelfPercent 10
+FriendlyFireDamageRangedFriendPercent 10
+FriendlyFireDamageRangedSelfPercent 10
+set_automated_battle_count -1
+enable_automated_battle_switching
+start_game_and_mission

@@ -1,0 +1,31 @@
+﻿ServerName CN - 中文站领军 - 群767427084
+GameType Captain
+AutoTeamBalanceThreshold 1
+MaxNumberOfPlayers 14
+RoundTotal 7
+RoundPreparationTimeLimit 20
+RoundTimeLimit 600
+NumberOfBotsPerFormation 50
+WarmupTimeLimit 3
+SingleSpawn True
+
+add_map_to_automated_battle_pool mp_sergeant_map_008
+add_map_to_automated_battle_pool mp_sergeant_map_007
+add_map_to_automated_battle_pool mp_sergeant_map_009
+add_map_to_automated_battle_pool mp_sergeant_map_011_rw
+add_map_to_automated_battle_pool mp_sergeant_map_018
+
+CultureTeam1 empire
+CultureTeam2 vlandia
+AllowPollsToKickPlayers True
+AllowPollsToBanPlayers False
+MinNumberOfPlayersForMatchStart 2
+FriendlyFireDamageMeleeFriendPercent 0
+FriendlyFireDamageMeleeSelfPercent 0
+FriendlyFireDamageRangedFriendPercent 0
+FriendlyFireDamageRangedSelfPercent 0
+enable_map_voting
+enable_culture_voting
+set_automated_battle_count -1
+enable_automated_battle_switching
+start_game_and_mission
