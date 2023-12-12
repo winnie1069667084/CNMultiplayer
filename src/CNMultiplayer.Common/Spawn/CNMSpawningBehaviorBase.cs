@@ -12,7 +12,7 @@ namespace CNMultiplayer.Common
 {
     public abstract class CNMSpawningBehaviorBase : SpawningBehaviorBase
     {
-        private const float FemaleAiPossibility = 0.125f; //女性AI比例
+        private const float FemaleAiPossibility = 0.1f; //女性AI比例
 
         private List<AgentBuildData> _agentsToBeSpawnedCache;
 
@@ -379,29 +379,35 @@ namespace CNMultiplayer.Common
                 }
 
                 int botsAlive = team.ActiveAgents.Count(a => a.IsAIControlled && a.IsHuman);
-                if (botsAlive < numberOfBots)
+                if (botsAlive < numberOfBots - 1) //每次生成2个AI，加快AI生成速度
                 {
-                    var troopCharacter = MultiplayerClassDivisions.GetMPHeroClasses()
-                        .GetRandomElementWithPredicate<MultiplayerClassDivisions.MPHeroClass>(x => !x.TroopCharacter.IsMounted && x.Culture == teamCulture).TroopCharacter; //禁用骑兵AI
-                    MatrixFrame spawnFrame = SpawnComponent.GetSpawnFrame(team, troopCharacter.HasMount(), true);
-                    AgentBuildData agentBuildData = new AgentBuildData(troopCharacter).Team(team).InitialPosition(spawnFrame.origin).VisualsIndex(0);
-                    Vec2 vec = spawnFrame.rotation.f.AsVec2;
-                    vec = vec.Normalized();
-                    AgentBuildData agentBuildData2 = agentBuildData.InitialDirection(vec).TroopOrigin(new BasicBattleAgentOrigin(troopCharacter)).EquipmentSeed(MissionLobbyComponent.GetRandomFaceSeedForCharacter(troopCharacter, 0))
-                        .ClothingColor1((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color : teamCulture.ClothAlternativeColor)
-                        .ClothingColor2((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color2 : teamCulture.ClothAlternativeColor2)
-                        .IsFemale(GenerateFemaleAIRandom(FemaleAiPossibility)); //AI性别控制
-                    agentBuildData2.Equipment(Equipment.GetRandomEquipmentElements(troopCharacter, !(Game.Current.GameType is MultiplayerGame), false, agentBuildData2.AgentEquipmentSeed));
-                    agentBuildData2.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData2.AgentRace, agentBuildData2.AgentIsFemale, troopCharacter.GetBodyPropertiesMin(false), troopCharacter.GetBodyPropertiesMax(), (int)agentBuildData2.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData2.AgentEquipmentSeed, troopCharacter.HairTags, troopCharacter.BeardTags, troopCharacter.TattooTags));
-                    Agent agent = Mission.SpawnAgent(agentBuildData2, false);
-                    MultiplayerClassDivisions.MPHeroClass mPHeroClassForCharacter = MultiplayerClassDivisions.GetMPHeroClassForCharacter(agent.Character);
-                    agent.AIStateFlags |= Agent.AIStateFlag.Alarmed;
-                    agent.AgentDrivenProperties.ArmorHead = mPHeroClassForCharacter.ArmorValue; //为AI添加护甲，与MPClassDivision相匹配
-                    agent.AgentDrivenProperties.ArmorTorso = mPHeroClassForCharacter.ArmorValue;
-                    agent.AgentDrivenProperties.ArmorArms = mPHeroClassForCharacter.ArmorValue;
-                    agent.AgentDrivenProperties.ArmorLegs = mPHeroClassForCharacter.ArmorValue;
+                    SpawnBot(team, teamCulture);
+                    SpawnBot(team, teamCulture);
                 }
             }
+        }
+
+        private new void SpawnBot(Team team, BasicCultureObject teamCulture)
+        {
+            var troopCharacter = MultiplayerClassDivisions.GetMPHeroClasses()
+        .GetRandomElementWithPredicate<MultiplayerClassDivisions.MPHeroClass>(x => !x.TroopCharacter.IsMounted && x.Culture == teamCulture).TroopCharacter; //禁用骑兵AI
+            MatrixFrame spawnFrame = SpawnComponent.GetSpawnFrame(team, troopCharacter.HasMount(), true);
+            AgentBuildData agentBuildData = new AgentBuildData(troopCharacter).Team(team).InitialPosition(spawnFrame.origin).VisualsIndex(0);
+            Vec2 vec = spawnFrame.rotation.f.AsVec2;
+            vec = vec.Normalized();
+            AgentBuildData agentBuildData2 = agentBuildData.InitialDirection(vec).TroopOrigin(new BasicBattleAgentOrigin(troopCharacter)).EquipmentSeed(MissionLobbyComponent.GetRandomFaceSeedForCharacter(troopCharacter, 0))
+                .ClothingColor1((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color : teamCulture.ClothAlternativeColor)
+                .ClothingColor2((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color2 : teamCulture.ClothAlternativeColor2)
+                .IsFemale(GenerateFemaleAIRandom(FemaleAiPossibility)); //AI性别控制
+            agentBuildData2.Equipment(Equipment.GetRandomEquipmentElements(troopCharacter, !(Game.Current.GameType is MultiplayerGame), false, agentBuildData2.AgentEquipmentSeed));
+            agentBuildData2.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData2.AgentRace, agentBuildData2.AgentIsFemale, troopCharacter.GetBodyPropertiesMin(false), troopCharacter.GetBodyPropertiesMax(), (int)agentBuildData2.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData2.AgentEquipmentSeed, troopCharacter.HairTags, troopCharacter.BeardTags, troopCharacter.TattooTags));
+            Agent agent = Mission.SpawnAgent(agentBuildData2, false);
+            MultiplayerClassDivisions.MPHeroClass mPHeroClassForCharacter = MultiplayerClassDivisions.GetMPHeroClassForCharacter(agent.Character);
+            agent.AIStateFlags |= Agent.AIStateFlag.Alarmed;
+            agent.AgentDrivenProperties.ArmorHead = mPHeroClassForCharacter.ArmorValue; //为AI添加护甲，与MPClassDivision相匹配
+            agent.AgentDrivenProperties.ArmorTorso = mPHeroClassForCharacter.ArmorValue;
+            agent.AgentDrivenProperties.ArmorArms = mPHeroClassForCharacter.ArmorValue;
+            agent.AgentDrivenProperties.ArmorLegs = mPHeroClassForCharacter.ArmorValue;
         }
 
         private static bool GenerateFemaleAIRandom(float t)
