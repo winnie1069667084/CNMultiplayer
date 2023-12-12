@@ -1,0 +1,14 @@
+﻿ServerName CN - 中文站决斗 - 群767427084
+GameType Duel
+MinNumberOfPlayersForMatchStart 1
+MinScoreToWinDuel 3
+MaxNumberOfPlayers 32
+MapTimeLimit 60
+add_map_to_automated_battle_pool mp_duel_mode_map_004
+CultureTeam1 empire
+CultureTeam2 vlandia
+disable_map_voting
+enable_culture_voting
+set_automated_battle_count -1
+enable_automated_battle_switching
+start_game_and_mission
