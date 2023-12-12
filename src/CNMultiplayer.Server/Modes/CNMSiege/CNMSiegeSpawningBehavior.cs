@@ -31,7 +31,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             if (IsSpawningEnabled && _spawnCheckTimer.Check(Mission.CurrentTime))
             {
                 SpawnAgents();
-                //SpawnBotAgents();
+                SpawnBotAgents();
             }
             base.OnTick(dt);
         }
