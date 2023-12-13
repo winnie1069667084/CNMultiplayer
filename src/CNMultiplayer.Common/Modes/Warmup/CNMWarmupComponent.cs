@@ -1,16 +1,16 @@
 ﻿using CNMultiplayer.Common;
-using CNMultiplayer.Helpers;
+using CNMultiplayer.Common.Helpers;
 using System;
 using System.Linq;
 using System.Reflection;
 using TaleWorlds.MountAndBlade;
 
-namespace CNMultiplayer.Server.Modes.Warmup
+namespace CNMultiplayer.Common.Modes.Warmup
 {
     /// <summary>
     /// Custom warmup component so we can load the <see cref="CNMSpawningBehaviorBase"/> as soon as warmup ends.
     /// </summary>
-    internal class CNMWarmupComponent : MultiplayerWarmupComponent
+    public class CNMWarmupComponent : MultiplayerWarmupComponent
     {
         private static readonly FieldInfo WarmupStateField = typeof(MultiplayerWarmupComponent).GetField("_warmupState", BindingFlags.NonPublic | BindingFlags.Instance)!;
         private static readonly FieldInfo TimerComponentField = typeof(MultiplayerWarmupComponent).GetField("_timerComponent", BindingFlags.NonPublic | BindingFlags.Instance)!;

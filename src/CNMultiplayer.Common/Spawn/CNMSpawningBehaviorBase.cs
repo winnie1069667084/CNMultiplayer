@@ -1,5 +1,6 @@
 ﻿using NetworkMessages.FromServer;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TaleWorlds.Core;
@@ -7,6 +8,7 @@ using TaleWorlds.Engine;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
+using static TaleWorlds.MountAndBlade.MPPerkObject;
 
 namespace CNMultiplayer.Common
 {
@@ -14,11 +16,19 @@ namespace CNMultiplayer.Common
     {
         private const float FemaleAiPossibility = 0.1f; //女性AI比例
 
-        private List<AgentBuildData> _agentsToBeSpawnedCache;
+        private const float cavalryBotSpawnRatio = 0.20f; //骑兵相较Native的Spawn概率
 
-        private static readonly int MaxAgentCount = 2048; //找不到IMBAgent，先用2048代替
+        private const float archerBotSpawnRatio = 0.5f; //射手相较Native的Spawn概率
+
+        private const float horseArcherBotSpawnRatio = 0.20f; //骑射手相较Native的Spawn概率
+
+        //最大Agent数，找不到IMBAgent，先用2048代替
+        //private static int MaxAgentCount = MBAPI.IMBAgent.GetMaximumNumberOfAgents();
+        private static int MaxAgentCount = 2048;
 
         private static readonly int AgentCountThreshold = (int)((float)CNMSpawningBehaviorBase.MaxAgentCount * 0.9f);
+
+        private List<AgentBuildData> _agentsToBeSpawnedCache;
 
         private MissionTime _nextTimeToCleanUpMounts;
 
@@ -416,42 +426,83 @@ namespace CNMultiplayer.Common
             }
         }
 
+        // 这个方法提供了与Native不同的AI生成方式，为AI添加了盾牌旗帜、实装随机perk效果，限定生成AI兵种的比例
         private new void SpawnBot(Team team, BasicCultureObject teamCulture)
         {
+            //TODO: 限定AI兵种比例
             uint backGroundColor = ((!this.GameMode.IsGameModeUsingOpposingTeams || team == this.Mission.AttackerTeam) ? teamCulture.BackgroundColor1 : teamCulture.BackgroundColor2);
             uint foreGroundColor = ((!this.GameMode.IsGameModeUsingOpposingTeams || team == this.Mission.AttackerTeam) ? teamCulture.ForegroundColor1 : teamCulture.ForegroundColor2);
             Banner banner = new Banner(teamCulture.BannerKey, backGroundColor, foreGroundColor);
 
-            var troopCharacter = MultiplayerClassDivisions.GetMPHeroClasses()
-            .GetRandomElementWithPredicate<MultiplayerClassDivisions.MPHeroClass>(x => !x.TroopCharacter.IsMounted && x.Culture == teamCulture).TroopCharacter; //禁用骑兵AI
-            MatrixFrame spawnFrame = SpawnComponent.GetSpawnFrame(team, troopCharacter.HasMount(), true);
-            AgentBuildData agentBuildData = new AgentBuildData(troopCharacter).Team(team).InitialPosition(spawnFrame.origin).VisualsIndex(0);
+            Random random = new Random();
+            MultiplayerClassDivisions.MPHeroClass heroClass = null;
+            while (heroClass == null) //谓词查找可能会导致heroClass为null
+            {
+                heroClass = MultiplayerClassDivisions.GetMPHeroClasses()
+                .GetRandomElementWithPredicate<MultiplayerClassDivisions.MPHeroClass>(x => x.Culture == teamCulture &&
+                    ((!x.TroopCharacter.IsMounted && !x.TroopCharacter.IsRanged) || // 步兵
+                    (x.TroopCharacter.IsMounted && !x.TroopCharacter.IsRanged && random.NextFloat() < cavalryBotSpawnRatio) || // 骑兵
+                    (!x.TroopCharacter.IsMounted && x.TroopCharacter.IsRanged && random.NextFloat() < archerBotSpawnRatio) || // 射手
+                    (x.TroopCharacter.IsMounted && x.TroopCharacter.IsRanged && random.NextFloat() < horseArcherBotSpawnRatio))); // 骑射手
+            }
+            var heroCharacter = heroClass.HeroCharacter;
+            Equipment equipment = (heroCharacter.Equipment.Clone(false));
+            MatrixFrame spawnFrame = SpawnComponent.GetSpawnFrame(team, heroCharacter.HasMount(), true);
+            AgentBuildData agentBuildData = new AgentBuildData(heroCharacter).Team(team).InitialPosition(spawnFrame.origin).VisualsIndex(0);
             Vec2 vec = spawnFrame.rotation.f.AsVec2;
             vec = vec.Normalized();
-            AgentBuildData agentBuildData2 = agentBuildData.InitialDirection(vec).TroopOrigin(new BasicBattleAgentOrigin(troopCharacter)).EquipmentSeed(MissionLobbyComponent.GetRandomFaceSeedForCharacter(troopCharacter, 0))
+            AgentBuildData agentBuildData2 = agentBuildData.InitialDirection(vec).TroopOrigin(new BasicBattleAgentOrigin(heroCharacter)).EquipmentSeed(MissionLobbyComponent.GetRandomFaceSeedForCharacter(heroCharacter, 0))
                 .ClothingColor1((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color : teamCulture.ClothAlternativeColor)
                 .ClothingColor2((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color2 : teamCulture.ClothAlternativeColor2)
-                .IsFemale(GenerateFemaleAIRandom(FemaleAiPossibility)) //BOT性别控制
+                .IsFemale(random.NextFloat() < FemaleAiPossibility) //BOT性别控制
                 .Banner(banner); //为BOT生成国家旗帜
 
-            agentBuildData2.Equipment(Equipment.GetRandomEquipmentElements(troopCharacter, Game.Current.GameType is not MultiplayerGame, false, agentBuildData2.AgentEquipmentSeed));
-            agentBuildData2.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData2.AgentRace, agentBuildData2.AgentIsFemale, troopCharacter.GetBodyPropertiesMin(false), troopCharacter.GetBodyPropertiesMax(), (int)agentBuildData2.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData2.AgentEquipmentSeed, troopCharacter.HairTags, troopCharacter.BeardTags, troopCharacter.TattooTags));
+            // BOT随机选择Perk，by chatGPT
+            List<IReadOnlyPerkObject> selectedPerks = new List<IReadOnlyPerkObject>();
+
+            var allPerkGroups = MultiplayerClassDivisions.GetAllPerksForHeroClass(heroClass);
+
+            foreach (var perkGroup in allPerkGroups)
+            {
+                if (perkGroup.Any())
+                {
+                    IReadOnlyPerkObject randomPerk = perkGroup[random.Next(perkGroup.Count)];
+                    selectedPerks.Add(randomPerk);
+                }
+            }
+            MPPerkObject.MPOnSpawnPerkHandler onSpawnPerkHandler = MPPerkObject.GetOnSpawnPerkHandler(selectedPerks);
+
+            // 实装AIPerk中选择的装备
+            IEnumerable<ValueTuple<EquipmentIndex, EquipmentElement>> perkAlternativeEquipments = (onSpawnPerkHandler?.GetAlternativeEquipments(true));
+            if (perkAlternativeEquipments != null)
+            {
+                foreach (ValueTuple<EquipmentIndex, EquipmentElement> valueTuple in perkAlternativeEquipments)
+                {
+                    if (valueTuple.Item1 == EquipmentIndex.ExtraWeaponSlot) continue; //如果抽到“旗手”perk，跳过装备旗帜
+                    equipment[valueTuple.Item1] = valueTuple.Item2;
+                }
+            }
+            agentBuildData2.Equipment(equipment);
+            agentBuildData2.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData2.AgentRace, agentBuildData2.AgentIsFemale, heroCharacter.GetBodyPropertiesMin(false), heroCharacter.GetBodyPropertiesMax(), (int)agentBuildData2.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData2.AgentEquipmentSeed, heroCharacter.HairTags, heroCharacter.BeardTags, heroCharacter.TattooTags));
             Agent agent = Mission.SpawnAgent(agentBuildData2, false);
             MultiplayerClassDivisions.MPHeroClass mPHeroClassForCharacter = MultiplayerClassDivisions.GetMPHeroClassForCharacter(agent.Character);
             agent.AIStateFlags |= Agent.AIStateFlag.Alarmed;
-            agent.AgentDrivenProperties.ArmorHead = mPHeroClassForCharacter.ArmorValue; //为AI添加护甲，与MPClassDivision相匹配
-            agent.AgentDrivenProperties.ArmorTorso = mPHeroClassForCharacter.ArmorValue;
-            agent.AgentDrivenProperties.ArmorArms = mPHeroClassForCharacter.ArmorValue;
-            agent.AgentDrivenProperties.ArmorLegs = mPHeroClassForCharacter.ArmorValue;
-        }
 
-        private static bool GenerateFemaleAIRandom(float t)
-        {
-            Random ran = new Random();
-            if (ran.NextFloat() < t)
-                return true;
-            else
-                return false;
+            // 为AI添加护甲，与MPClassDivision及Perk相匹配
+            // 为AI添加Perk的其他属性（移速、速度加成、伤害等）
+            for (int i = 0; i < 55; i++)
+            {
+                DrivenProperty drivenProperty = (DrivenProperty)i;
+                float stat = agent.AgentDrivenProperties.GetStat(drivenProperty);
+                if (drivenProperty == DrivenProperty.ArmorHead || drivenProperty == DrivenProperty.ArmorTorso || drivenProperty == DrivenProperty.ArmorLegs || drivenProperty == DrivenProperty.ArmorArms)
+                {
+                    agent.AgentDrivenProperties.SetStat(drivenProperty, stat + (float)mPHeroClassForCharacter.ArmorValue + onSpawnPerkHandler.GetDrivenPropertyBonusOnSpawn(true, drivenProperty, stat));
+                }
+                else
+                {
+                    agent.AgentDrivenProperties.SetStat(drivenProperty, stat + onSpawnPerkHandler.GetDrivenPropertyBonusOnSpawn(true, drivenProperty, stat));
+                }
+            }
         }
 
         public override bool AllowEarlyAgentVisualsDespawning(MissionPeer missionPeer)
