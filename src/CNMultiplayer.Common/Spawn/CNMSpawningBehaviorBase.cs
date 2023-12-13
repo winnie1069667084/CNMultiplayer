@@ -8,6 +8,7 @@ using TaleWorlds.Engine;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
+using TaleWorlds.TwoDimension;
 using static TaleWorlds.MountAndBlade.MPPerkObject;
 
 namespace CNMultiplayer.Common
@@ -418,8 +419,9 @@ namespace CNMultiplayer.Common
                 }
 
                 int botsAlive = team.ActiveAgents.Count(a => a.IsAIControlled && a.IsHuman);
-                if (botsAlive < numberOfBots - 1) //每次生成2个AI，加快AI生成速度
+                if (botsAlive < numberOfBots - 1) //每次生成3个AI，加快AI生成速度
                 {
+                    SpawnBot(team, teamCulture);
                     SpawnBot(team, teamCulture);
                     SpawnBot(team, teamCulture);
                 }
