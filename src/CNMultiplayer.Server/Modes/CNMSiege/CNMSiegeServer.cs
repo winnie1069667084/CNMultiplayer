@@ -121,6 +121,8 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
 
         private bool _firstTickDone;
 
+        private bool _firstTickAfterWarmupDone;
+
         private class ObjectiveSystem
         {
             private class ObjectiveContributor
@@ -214,45 +216,45 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
             _missionScoreboardComponent = Mission.Current.GetMissionBehavior<MissionScoreboardComponent>();
             InitializeMorales();
             InitializeFlags();
-            foreach (DestructableComponent item2 in Mission.Current.MissionObjects.FindAllWithType<DestructableComponent>())
+            foreach (DestructableComponent destructableComponent in Mission.Current.MissionObjects.FindAllWithType<DestructableComponent>())
             {
-                if (item2.BattleSide != BattleSideEnum.None)
+                if (destructableComponent.BattleSide != BattleSideEnum.None)
                 {
-                    GameEntity root = item2.GameEntity.Root;
+                    GameEntity root = destructableComponent.GameEntity.Root;
                     if (_objectiveSystem.RegisterObjective(root))
                     {
                         _childDestructableComponents.Add(root, new List<DestructableComponent>());
                         GetDestructableCompoenentClosestToTheRoot(root).OnDestroyed += DestructableComponentOnDestroyed;
                     }
-                    _childDestructableComponents[root].Add(item2);
-                    item2.OnHitTaken += DestructableComponentOnHitTaken;
+                    _childDestructableComponents[root].Add(destructableComponent);
+                    destructableComponent.OnHitTaken += DestructableComponentOnHitTaken;
                 }
             }
-            List<RangedSiegeWeapon> list = new List<RangedSiegeWeapon>();
-            List<IMoveableSiegeWeapon> list2 = new List<IMoveableSiegeWeapon>();
-            foreach (UsableMachine item3 in Mission.Current.MissionObjects.FindAllWithType<UsableMachine>())
+            List<RangedSiegeWeapon> listRangedSiegeWeapon = new List<RangedSiegeWeapon>();
+            List<IMoveableSiegeWeapon> listMoveableSiegeWeapon = new List<IMoveableSiegeWeapon>();
+            foreach (UsableMachine usableMachine in Mission.Current.MissionObjects.FindAllWithType<UsableMachine>())
             {
-                if (item3 is RangedSiegeWeapon rangedSiegeWeapon)
+                if (usableMachine is RangedSiegeWeapon rangedSiegeWeapon)
                 {
-                    list.Add(rangedSiegeWeapon);
+                    listRangedSiegeWeapon.Add(rangedSiegeWeapon);
                     rangedSiegeWeapon.OnAgentLoadsMachine += RangedSiegeMachineOnAgentLoadsMachine;
                 }
-                else if (item3 is IMoveableSiegeWeapon item)
+                else if (usableMachine is IMoveableSiegeWeapon item)
                 {
-                    list2.Add(item);
-                    _objectiveSystem.RegisterObjective(item3.GameEntity.Root);
+                    listMoveableSiegeWeapon.Add(item);
+                    _objectiveSystem.RegisterObjective(usableMachine.GameEntity.Root);
                 }
             }
-            _lastReloadingAgentPerRangedSiegeMachine = new (RangedSiegeWeapon, Agent)[list.Count];
+            _lastReloadingAgentPerRangedSiegeMachine = new (RangedSiegeWeapon, Agent)[listRangedSiegeWeapon.Count];
             for (int i = 0; i < _lastReloadingAgentPerRangedSiegeMachine.Length; i++)
             {
-                _lastReloadingAgentPerRangedSiegeMachine[i] = ValueTuple.Create<RangedSiegeWeapon, Agent>(list[i], null);
+                _lastReloadingAgentPerRangedSiegeMachine[i] = ValueTuple.Create<RangedSiegeWeapon, Agent>(listRangedSiegeWeapon[i], null);
             }
-            _movingObjectives = new (IMoveableSiegeWeapon, Vec3)[list2.Count];
+            _movingObjectives = new (IMoveableSiegeWeapon, Vec3)[listMoveableSiegeWeapon.Count];
             for (int j = 0; j < _movingObjectives.Length; j++)
             {
-                SiegeWeapon siegeWeapon = list2[j] as SiegeWeapon;
-                _movingObjectives[j] = ValueTuple.Create(list2[j], siegeWeapon.GameEntity.GlobalPosition);
+                SiegeWeapon siegeWeapon = listMoveableSiegeWeapon[j] as SiegeWeapon;
+                _movingObjectives[j] = ValueTuple.Create(listMoveableSiegeWeapon[j], siegeWeapon.GameEntity.GlobalPosition);
             }
         }
 
@@ -371,6 +373,7 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
         public override void OnMissionTick(float dt)
         {
             base.OnMissionTick(dt);
+            //热身阶段打开城门
             if (!_firstTickDone)
             {
                 foreach (CastleGate gate in Mission.MissionObjects.FindAllWithType<CastleGate>())
@@ -383,8 +386,24 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
                 }
                 _firstTickDone = true;
             }
+
             if (MissionLobbyComponent.CurrentMultiplayerState == MissionLobbyComponent.MultiplayerGameState.Playing && !WarmupComponent.IsInWarmup)
             {
+                //热身结束后，含有“openAfterWarmup” Tag的GameEntity城门将会被打开
+                if (!_firstTickAfterWarmupDone)
+                {
+                    foreach (CastleGate gate in Mission.MissionObjects.FindAllWithType<CastleGate>())
+                    {
+                        if (!gate.GameEntity.HasTag("openAfterWarmup")) continue;
+                        gate.OpenDoor();
+                        foreach (StandingPoint standingPoint in gate.StandingPoints)
+                        {
+                            standingPoint.SetIsDeactivatedSynched(true);
+                        }
+                    }
+                    _firstTickAfterWarmupDone = true;
+                }
+
                 CheckMorales(dt);
                 CheckFlagGoldTick(dt);
                 if (CheckObjectives(dt))
