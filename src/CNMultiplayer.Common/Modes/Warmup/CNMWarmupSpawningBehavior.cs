@@ -1,4 +1,4 @@
-﻿using CNMultiplayer.Common;
+﻿using NetworkMessages.FromServer;
 using System.Collections.Generic;
 using System.Linq;
 using TaleWorlds.Core;
@@ -6,7 +6,7 @@ using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
 
-namespace CNMultiplayer.Modes.Warmup
+namespace CNMultiplayer.Common.Modes.Warmup
 {
     internal class CNMWarmupSpawningBehavior : CNMSpawningBehaviorBase
     {
@@ -43,14 +43,14 @@ namespace CNMultiplayer.Modes.Warmup
                 if (component == null || component.ControlledAgent != null || component.HasSpawnedAgentVisuals || component.Team == null || component.Team == Mission.SpectatorTeam || !component.TeamInitialPerkInfoReady || !component.SpawnTimer.Check(Mission.CurrentTime))
                     continue;
 
-                IAgentVisual agentVisualForPeer = component.GetAgentVisualForPeer(0);
-                BasicCultureObject basicCultureObject = ((component.Team.Side == BattleSideEnum.Attacker) ? @object : object2);
+                IAgentVisual agentVisualForPeer = null;
+                BasicCultureObject basicCultureObject = component.Team.Side == BattleSideEnum.Attacker ? @object : object2;
                 int num = component.SelectedTroopIndex;
                 IEnumerable<MultiplayerClassDivisions.MPHeroClass> mPHeroClasses = MultiplayerClassDivisions.GetMPHeroClasses(basicCultureObject);
-                MultiplayerClassDivisions.MPHeroClass mPHeroClass = ((num < 0) ? null : mPHeroClasses.ElementAt(num));
+                MultiplayerClassDivisions.MPHeroClass mPHeroClass = num < 0 ? null : mPHeroClasses.ElementAt(num);
                 if (mPHeroClass == null && num < 0)
                 {
-                    mPHeroClass = mPHeroClasses.First<MultiplayerClassDivisions.MPHeroClass>();
+                    mPHeroClass = mPHeroClasses.First();
                     num = 0;
                 }
                 BasicCharacterObject heroCharacter = mPHeroClass.HeroCharacter;
@@ -79,13 +79,43 @@ namespace CNMultiplayer.Modes.Warmup
                 Vec2 direction = matrixFrame.rotation.f.AsVec2.Normalized();
                 AgentBuildData agentBuildData2 = agentBuildData.InitialDirection(in direction).IsFemale(component.Peer.IsFemale).BodyProperties(GetBodyProperties(component, basicCultureObject))
                     .VisualsIndex(0)
-                    .ClothingColor1((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color : basicCultureObject.ClothAlternativeColor)
-                    .ClothingColor2((component.Team == Mission.AttackerTeam) ? basicCultureObject.Color2 : basicCultureObject.ClothAlternativeColor2);
-                if (GameMode.ShouldSpawnVisualsForServer(networkPeer))
+                    .ClothingColor1(component.Team == Mission.AttackerTeam ? basicCultureObject.Color : basicCultureObject.ClothAlternativeColor)
+                    .ClothingColor2(component.Team == Mission.AttackerTeam ? basicCultureObject.Color2 : basicCultureObject.ClothAlternativeColor2);
+                if (GameMode.ShouldSpawnVisualsForServer(networkPeer) && agentBuildData2.AgentVisualsIndex == 0)
                 {
-                    AgentVisualSpawnComponent.SpawnAgentVisualsForPeer(component, agentBuildData2, num);
+                    component.HasSpawnedAgentVisuals = true;
+                    component.EquipmentUpdatingExpired = false;
                 }
-                GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData2);
+                this.HandleAgentVisualSpawning(networkPeer, agentBuildData2);
+            }
+        }
+
+        // copy from MissionMultiplayerGameModeBase
+        public void HandleAgentVisualSpawning(NetworkCommunicator spawningNetworkPeer, AgentBuildData spawningAgentBuildData, int troopCountInFormation = 0, bool useCosmetics = true)
+        {
+            MissionPeer component = spawningNetworkPeer.GetComponent<MissionPeer>();
+            GameNetwork.BeginBroadcastModuleEvent();
+            GameNetwork.WriteMessage(new SyncPerksForCurrentlySelectedTroop(spawningNetworkPeer, component.Perks[component.SelectedTroopIndex]));
+            GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.ExcludeOtherTeamPlayers, spawningNetworkPeer);
+            component.HasSpawnedAgentVisuals = true;
+            component.EquipmentUpdatingExpired = false;
+            // 禁用大厅自定义皮肤
+            //if (useCosmetics)
+            //{
+            //    this.AddCosmeticItemsToEquipment(spawningAgentBuildData.AgentOverridenSpawnEquipment, this.GetUsedCosmeticsFromPeer(component, spawningAgentBuildData.AgentCharacter));
+            //}
+            if (!GameMode.IsGameModeHidingAllAgentVisuals)
+            {
+                GameNetwork.BeginBroadcastModuleEvent();
+                GameNetwork.WriteMessage(new CreateAgentVisuals(spawningNetworkPeer, spawningAgentBuildData, component.SelectedTroopIndex, troopCountInFormation));
+                GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.ExcludeOtherTeamPlayers, spawningNetworkPeer);
+                return;
+            }
+            if (!spawningNetworkPeer.IsServerPeer)
+            {
+                GameNetwork.BeginModuleEventAsServer(spawningNetworkPeer);
+                GameNetwork.WriteMessage(new CreateAgentVisuals(spawningNetworkPeer, spawningAgentBuildData, component.SelectedTroopIndex, troopCountInFormation));
+                GameNetwork.EndModuleEventAsServer();
             }
         }
 
@@ -102,7 +132,7 @@ namespace CNMultiplayer.Modes.Warmup
         public override void Clear()
         {
             base.Clear();
-            base.RequestStopSpawnSession();
+            RequestStopSpawnSession();
         }
     }
 }

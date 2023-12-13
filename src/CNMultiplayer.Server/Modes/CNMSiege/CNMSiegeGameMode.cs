@@ -2,7 +2,7 @@
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;
 using TaleWorlds.MountAndBlade.Multiplayer;
-using CNMultiplayer.Server.Modes.Warmup;
+using CNMultiplayer.Common.Modes.Warmup;
 using CNMultiplayer.Common.Modes.CNMSiege;
 
 namespace CNMultiplayer.Server.Modes.CNMSiege

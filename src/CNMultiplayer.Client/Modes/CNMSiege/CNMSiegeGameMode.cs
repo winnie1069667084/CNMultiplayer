@@ -1,4 +1,4 @@
-﻿using CNMultiplayer.Modes.Warmup;
+﻿using CNMultiplayer.Common.Modes.Warmup;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.Source.Missions;

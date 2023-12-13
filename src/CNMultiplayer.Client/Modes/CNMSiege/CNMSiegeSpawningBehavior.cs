@@ -92,7 +92,36 @@ namespace CNMultiplayer.Client.Modes.CNMSiege
                     component.EquipmentUpdatingExpired = false;
                 }
 
-                GameMode.HandleAgentVisualSpawning(networkPeer, agentBuildData);
+                this.HandleAgentVisualSpawning(networkPeer, agentBuildData);
+            }
+        }
+
+        // copy from MissionMultiplayerGameModeBase
+        public void HandleAgentVisualSpawning(NetworkCommunicator spawningNetworkPeer, AgentBuildData spawningAgentBuildData, int troopCountInFormation = 0, bool useCosmetics = true)
+        {
+            MissionPeer component = spawningNetworkPeer.GetComponent<MissionPeer>();
+            GameNetwork.BeginBroadcastModuleEvent();
+            GameNetwork.WriteMessage(new SyncPerksForCurrentlySelectedTroop(spawningNetworkPeer, component.Perks[component.SelectedTroopIndex]));
+            GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.ExcludeOtherTeamPlayers, spawningNetworkPeer);
+            component.HasSpawnedAgentVisuals = true;
+            component.EquipmentUpdatingExpired = false;
+            // 禁用大厅自定义皮肤
+            //if (useCosmetics)
+            //{
+            //    this.AddCosmeticItemsToEquipment(spawningAgentBuildData.AgentOverridenSpawnEquipment, this.GetUsedCosmeticsFromPeer(component, spawningAgentBuildData.AgentCharacter));
+            //}
+            if (!GameMode.IsGameModeHidingAllAgentVisuals)
+            {
+                GameNetwork.BeginBroadcastModuleEvent();
+                GameNetwork.WriteMessage(new CreateAgentVisuals(spawningNetworkPeer, spawningAgentBuildData, component.SelectedTroopIndex, troopCountInFormation));
+                GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.ExcludeOtherTeamPlayers, spawningNetworkPeer);
+                return;
+            }
+            if (!spawningNetworkPeer.IsServerPeer)
+            {
+                GameNetwork.BeginModuleEventAsServer(spawningNetworkPeer);
+                GameNetwork.WriteMessage(new CreateAgentVisuals(spawningNetworkPeer, spawningAgentBuildData, component.SelectedTroopIndex, troopCountInFormation));
+                GameNetwork.EndModuleEventAsServer();
             }
         }
 
