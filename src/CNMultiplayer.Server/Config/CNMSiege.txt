@@ -3,14 +3,14 @@ GameType CNMSiege
 
 WelcomeMessage 欢迎来到骑砍中文站CNM攻城模式服务器！    兵种限制：射手25% | 骑兵25% | 骑射手25%
 
-add_map_to_automated_battle_pool mp_siege_silverskalitz
 add_map_to_automated_battle_pool mp_siege_newAyzarStronghold
+add_map_to_automated_battle_pool mp_siege_silverskalitz
 add_map_to_automated_battle_pool mp_siege_neuenburg
 add_map_to_automated_battle_pool mp_siege_acre
 add_map_to_automated_battle_pool mp_siege_hades
 add_map_to_automated_battle_pool mp_siege_frederiksborg
-add_map_to_usable_maps mp_siege_silverskalitz CNMSiege
 add_map_to_usable_maps mp_siege_newAyzarStronghold CNMSiege
+add_map_to_usable_maps mp_siege_silverskalitz CNMSiege
 add_map_to_usable_maps mp_siege_neuenburg CNMSiege
 add_map_to_usable_maps mp_siege_acre CNMSiege
 add_map_to_usable_maps mp_siege_hades CNMSiege
@@ -42,7 +42,7 @@ CultureTeam2 vlandia
 SpectatorCamera 0
 GoldGainChangePercentageTeam1 0
 GoldGainChangePercentageTeam2 0
-MinNumberOfPlayersForMatchStart 6
+MinNumberOfPlayersForMatchStart 4
 MaxNumberOfPlayers 250
 FriendlyFireDamageMeleeFriendPercent 10
 FriendlyFireDamageMeleeSelfPercent 10
