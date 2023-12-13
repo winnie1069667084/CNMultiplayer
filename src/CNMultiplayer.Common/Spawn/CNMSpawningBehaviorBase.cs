@@ -16,9 +16,9 @@ namespace CNMultiplayer.Common
 
         private List<AgentBuildData> _agentsToBeSpawnedCache;
 
-        private static int MaxAgentCount = 2048; //找不到IMBAgent，先用2048代替
+        private static readonly int MaxAgentCount = 2048; //找不到IMBAgent，先用2048代替
 
-        private static int AgentCountThreshold = (int)((float)CNMSpawningBehaviorBase.MaxAgentCount * 0.9f);
+        private static readonly int AgentCountThreshold = (int)((float)CNMSpawningBehaviorBase.MaxAgentCount * 0.9f);
 
         private MissionTime _nextTimeToCleanUpMounts;
 
@@ -53,100 +53,112 @@ namespace CNMultiplayer.Common
 
         }
 
+        //这个方法包含了领军模式中士兵的生成逻辑，被移除了一般模式的BOT生成逻辑
         public override void OnTick(float dt)
         {
-            int count = Mission.Current.AllAgents.Count;
-            int num = 0;
+            int currentAgentCount = Mission.Current.AllAgents.Count;
+            int agentsToBeSpawnedCount = 0;
             this._agentsToBeSpawnedCache.Clear();
             foreach (NetworkCommunicator networkCommunicator in GameNetwork.NetworkPeers)
             {
                 if (networkCommunicator.IsSynchronized)
                 {
-                    MissionPeer component = networkCommunicator.GetComponent<MissionPeer>();
-                    if (component != null && component.ControlledAgent == null && component.HasSpawnedAgentVisuals && !this.CanUpdateSpawnEquipment(component))
+                    MissionPeer missionPeer = networkCommunicator.GetComponent<MissionPeer>();
+                    if (missionPeer != null && missionPeer.ControlledAgent == null && missionPeer.HasSpawnedAgentVisuals && !this.CanUpdateSpawnEquipment(missionPeer))
                     {
-                        MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer = MultiplayerClassDivisions.GetMPHeroClassForPeer(component, false);
-                        MPPerkObject.MPOnSpawnPerkHandler onSpawnPerkHandler = MPPerkObject.GetOnSpawnPerkHandler(component);
+                        MultiplayerClassDivisions.MPHeroClass mpheroClassForPeer = MultiplayerClassDivisions.GetMPHeroClassForPeer(missionPeer, false);
+                        MPPerkObject.MPOnSpawnPerkHandler onSpawnPerkHandler = MPPerkObject.GetOnSpawnPerkHandler(missionPeer);
                         GameNetwork.BeginBroadcastModuleEvent();
-                        GameNetwork.WriteMessage(new SyncPerksForCurrentlySelectedTroop(networkCommunicator, component.Perks[component.SelectedTroopIndex]));
+                        GameNetwork.WriteMessage(new SyncPerksForCurrentlySelectedTroop(networkCommunicator, missionPeer.Perks[missionPeer.SelectedTroopIndex]));
                         GameNetwork.EndBroadcastModuleEvent(GameNetwork.EventBroadcastFlags.ExcludeOtherTeamPlayers, networkCommunicator);
-                        int num2 = 0;
-                        bool flag = false;
-                        int intValue = MultiplayerOptions.OptionType.NumberOfBotsPerFormation.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
-                        if (intValue > 0 && (this.GameMode.WarmupComponent == null || !this.GameMode.WarmupComponent.IsInWarmup))
+                        int troopCount = 0;
+                        bool hasBannerBearer = false;
+                        int numBotsPerFormation = MultiplayerOptions.OptionType.NumberOfBotsPerFormation.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
+                        if (numBotsPerFormation > 0 && (this.GameMode.WarmupComponent == null || !this.GameMode.WarmupComponent.IsInWarmup))
                         {
-                            num2 = MPPerkObject.GetTroopCount(mpheroClassForPeer, intValue, onSpawnPerkHandler);
-                            using (List<MPPerkObject>.Enumerator enumerator2 = component.SelectedPerks.GetEnumerator())
+                            troopCount = MPPerkObject.GetTroopCount(mpheroClassForPeer, numBotsPerFormation, onSpawnPerkHandler);
+                            using (List<MPPerkObject>.Enumerator selectedPerk = missionPeer.SelectedPerks.GetEnumerator())
                             {
-                                while (enumerator2.MoveNext())
+                                while (selectedPerk.MoveNext())
                                 {
-                                    if (enumerator2.Current.HasBannerBearer)
+                                    // 选择的perk是否有旗手？联机领军没有旗手perk，可能是直接移植单机代码
+                                    if (selectedPerk.Current.HasBannerBearer)
                                     {
-                                        flag = true;
+                                        hasBannerBearer = true;
                                         break;
                                     }
                                 }
                             }
                         }
-                        if (num2 > 0)
+                        if (troopCount > 0)
                         {
-                            num2 = (int)((float)num2 * this.GameMode.GetTroopNumberMultiplierForMissingPlayer(component));
+                            // 玩家数量不平衡调整双方troop乘数
+                            troopCount = (int)((float)troopCount * this.GameMode.GetTroopNumberMultiplierForMissingPlayer(missionPeer));
                         }
-                        num2 += (flag ? 2 : 1);
-                        IEnumerable<ValueTuple<EquipmentIndex, EquipmentElement>> enumerable = ((onSpawnPerkHandler != null) ? onSpawnPerkHandler.GetAlternativeEquipments(false) : null);
+                        troopCount += (hasBannerBearer ? 2 : 1);
+                        IEnumerable<ValueTuple<EquipmentIndex, EquipmentElement>> enumerable = (onSpawnPerkHandler?.GetAlternativeEquipments(false));
                         int i = 0;
-                        while (i < num2)
+                        while (i < troopCount)
                         {
-                            bool flag2 = i == 0;
-                            BasicCharacterObject basicCharacterObject = (flag2 ? mpheroClassForPeer.HeroCharacter : ((flag && i == 1) ? mpheroClassForPeer.BannerBearerCharacter : mpheroClassForPeer.TroopCharacter));
-                            uint num3 = ((!this.GameMode.IsGameModeUsingOpposingTeams || component.Team == this.Mission.AttackerTeam) ? component.Culture.Color : component.Culture.ClothAlternativeColor);
-                            uint num4 = ((!this.GameMode.IsGameModeUsingOpposingTeams || component.Team == this.Mission.AttackerTeam) ? component.Culture.Color2 : component.Culture.ClothAlternativeColor2);
-                            uint num5 = ((!this.GameMode.IsGameModeUsingOpposingTeams || component.Team == this.Mission.AttackerTeam) ? component.Culture.BackgroundColor1 : component.Culture.BackgroundColor2);
-                            uint num6 = ((!this.GameMode.IsGameModeUsingOpposingTeams || component.Team == this.Mission.AttackerTeam) ? component.Culture.ForegroundColor1 : component.Culture.ForegroundColor2);
-                            Banner banner = new Banner(component.Peer.BannerCode, num5, num6);
-                            AgentBuildData agentBuildData = new AgentBuildData(basicCharacterObject).VisualsIndex(i).Team(component.Team).TroopOrigin(new BasicBattleAgentOrigin(basicCharacterObject))
-                                .Formation(component.ControlledFormation)
-                                .IsFemale(flag2 ? component.Peer.IsFemale : basicCharacterObject.IsFemale)
-                                .ClothingColor1(num3)
-                                .ClothingColor2(num4)
+                            bool isPlayer = i == 0;
+                            // 为旗手单独生成一个CharacterObject
+                            BasicCharacterObject basicCharacterObject = (isPlayer ? mpheroClassForPeer.HeroCharacter : ((hasBannerBearer && i == 1) ? mpheroClassForPeer.BannerBearerCharacter : mpheroClassForPeer.TroopCharacter));
+                            uint clothColor1 = ((!this.GameMode.IsGameModeUsingOpposingTeams || missionPeer.Team == this.Mission.AttackerTeam) ? missionPeer.Culture.Color : missionPeer.Culture.ClothAlternativeColor);
+                            uint clothColor2 = ((!this.GameMode.IsGameModeUsingOpposingTeams || missionPeer.Team == this.Mission.AttackerTeam) ? missionPeer.Culture.Color2 : missionPeer.Culture.ClothAlternativeColor2);
+                            uint backGroundColor = ((!this.GameMode.IsGameModeUsingOpposingTeams || missionPeer.Team == this.Mission.AttackerTeam) ? missionPeer.Culture.BackgroundColor1 : missionPeer.Culture.BackgroundColor2);
+                            uint foreGroundColor = ((!this.GameMode.IsGameModeUsingOpposingTeams || missionPeer.Team == this.Mission.AttackerTeam) ? missionPeer.Culture.ForegroundColor1 : missionPeer.Culture.ForegroundColor2);
+                            // 玩家自定义旗帜
+                            Banner banner = new Banner(missionPeer.Peer.BannerCode, backGroundColor, foreGroundColor);
+                            AgentBuildData agentBuildData = new AgentBuildData(basicCharacterObject).VisualsIndex(i).Team(missionPeer.Team).TroopOrigin(new BasicBattleAgentOrigin(basicCharacterObject))
+                                .Formation(missionPeer.ControlledFormation)
+                                .IsFemale(isPlayer ? missionPeer.Peer.IsFemale : basicCharacterObject.IsFemale)
+                                .ClothingColor1(clothColor1)
+                                .ClothingColor2(clothColor2)
                                 .Banner(banner);
-                            if (flag2)
+                            if (isPlayer)
                             {
-                                agentBuildData.MissionPeer(component);
+                                agentBuildData.MissionPeer(missionPeer);
                             }
                             else
                             {
-                                agentBuildData.OwningMissionPeer(component);
+                                //为玩家添加指挥的士兵
+                                agentBuildData.OwningMissionPeer(missionPeer);
                             }
-                            Equipment equipment = (flag2 ? basicCharacterObject.Equipment.Clone(false) : Equipment.GetRandomEquipmentElements(basicCharacterObject, false, false, MBRandom.RandomInt()));
-                            IEnumerable<ValueTuple<EquipmentIndex, EquipmentElement>> enumerable2 = (flag2 ? ((onSpawnPerkHandler != null) ? onSpawnPerkHandler.GetAlternativeEquipments(true) : null) : enumerable);
-                            if (enumerable2 != null)
+                            //为玩家和士兵分配不同的Equipment
+                            Equipment equipment = (isPlayer ? basicCharacterObject.Equipment.Clone(false) : Equipment.GetRandomEquipmentElements(basicCharacterObject, false, false, MBRandom.RandomInt()));
+                            //实装perk的AlternativeEquipments
+                            IEnumerable<ValueTuple<EquipmentIndex, EquipmentElement>> perkAlternativeEquipments = (isPlayer ? (onSpawnPerkHandler?.GetAlternativeEquipments(true)) : enumerable);
+                            if (perkAlternativeEquipments != null)
                             {
-                                foreach (ValueTuple<EquipmentIndex, EquipmentElement> valueTuple in enumerable2)
+                                foreach (ValueTuple<EquipmentIndex, EquipmentElement> valueTuple in perkAlternativeEquipments)
                                 {
                                     equipment[valueTuple.Item1] = valueTuple.Item2;
                                 }
                             }
                             agentBuildData.Equipment(equipment);
+                            /* 移除大厅自定义皮肤
                             if (flag2)
                             {
-                                this.GameMode.AddCosmeticItemsToEquipment(equipment, this.GameMode.GetUsedCosmeticsFromPeer(component, basicCharacterObject));
+                                this.GameMode.AddCosmeticItemsToEquipment(equipment, this.GameMode.GetUsedCosmeticsFromPeer(missionPeer, basicCharacterObject));
                             }
-                            if (flag2)
+                            */
+                            if (isPlayer)
                             {
-                                agentBuildData.BodyProperties(this.GetBodyProperties(component, component.Culture));
+                                agentBuildData.BodyProperties(this.GetBodyProperties(missionPeer, missionPeer.Culture));
                                 agentBuildData.Age((int)agentBuildData.AgentBodyProperties.Age);
                             }
                             else
                             {
+                                //为BOT分配随机Equipment和身体特征
                                 agentBuildData.EquipmentSeed(this.MissionLobbyComponent.GetRandomFaceSeedForCharacter(basicCharacterObject, agentBuildData.AgentVisualsIndex));
                                 agentBuildData.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData.AgentRace, agentBuildData.AgentIsFemale, basicCharacterObject.GetBodyPropertiesMin(false), basicCharacterObject.GetBodyPropertiesMax(), (int)agentBuildData.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData.AgentEquipmentSeed, basicCharacterObject.HairTags, basicCharacterObject.BeardTags, basicCharacterObject.TattooTags));
                             }
-                            if (component.ControlledFormation != null && component.ControlledFormation.Banner == null)
+                            if (missionPeer.ControlledFormation != null && missionPeer.ControlledFormation.Banner == null)
                             {
-                                component.ControlledFormation.Banner = banner;
+                                missionPeer.ControlledFormation.Banner = banner;
                             }
-                            MatrixFrame spawnFrame = this.SpawnComponent.GetSpawnFrame(component.Team, equipment[EquipmentIndex.ArmorItemEndSlot].Item != null, component.SpawnCountThisRound == 0);
+                            // spawnFrame相关看不懂
+                            MatrixFrame spawnFrame = this.SpawnComponent.GetSpawnFrame(missionPeer.Team, equipment[EquipmentIndex.ArmorItemEndSlot].Item != null, missionPeer.SpawnCountThisRound == 0);
                             if (spawnFrame.IsIdentity)
                             {
                                 goto IL_587;
@@ -167,17 +179,17 @@ namespace CNMultiplayer.Common
                             vec = vec.Normalized();
                             agentBuildData2.InitialDirection(vec);
                         IL_5A0:
-                            if (component.ControlledAgent != null && !flag2)
+                            if (missionPeer.ControlledAgent != null && !isPlayer)
                             {
-                                MatrixFrame frame = component.ControlledAgent.Frame;
+                                MatrixFrame frame = missionPeer.ControlledAgent.Frame;
                                 frame.rotation.OrthonormalizeAccordingToForwardAndKeepUpAsZAxis();
                                 MatrixFrame matrixFrame = frame;
                                 matrixFrame.origin -= matrixFrame.rotation.f.NormalizedCopy() * 3.5f;
                                 Mat3 rotation = matrixFrame.rotation;
                                 rotation.MakeUnit();
                                 bool flag3 = !basicCharacterObject.Equipment[EquipmentIndex.ArmorItemEndSlot].IsEmpty;
-                                int num7 = MathF.Min(num2, 10);
-                                MatrixFrame matrixFrame2 = Formation.GetFormationFramesForBeforeFormationCreation((float)num7 * Formation.GetDefaultUnitDiameter(flag3) + (float)(num7 - 1) * Formation.GetDefaultMinimumInterval(flag3), num2, flag3, new WorldPosition(Mission.Current.Scene, matrixFrame.origin), rotation)[i - 1].ToGroundMatrixFrame();
+                                int num7 = MathF.Min(troopCount, 10);
+                                MatrixFrame matrixFrame2 = Formation.GetFormationFramesForBeforeFormationCreation((float)num7 * Formation.GetDefaultUnitDiameter(flag3) + (float)(num7 - 1) * Formation.GetDefaultMinimumInterval(flag3), troopCount, flag3, new WorldPosition(Mission.Current.Scene, matrixFrame.origin), rotation)[i - 1].ToGroundMatrixFrame();
                                 agentBuildData.InitialPosition(matrixFrame2.origin);
                                 AgentBuildData agentBuildData3 = agentBuildData;
                                 vec = matrixFrame2.rotation.f.AsVec2;
@@ -185,10 +197,10 @@ namespace CNMultiplayer.Common
                                 agentBuildData3.InitialDirection(vec);
                             }
                             this._agentsToBeSpawnedCache.Add(agentBuildData);
-                            num++;
+                            agentsToBeSpawnedCount++;
                             if (!agentBuildData.AgentOverridenSpawnEquipment[EquipmentIndex.ArmorItemEndSlot].IsEmpty)
                             {
-                                num++;
+                                agentsToBeSpawnedCount++;
                             }
                             i++;
                             continue;
@@ -199,8 +211,9 @@ namespace CNMultiplayer.Common
                     }
                 }
             }
-            int num8 = num + count;
-            if (num8 > CNMSpawningBehaviorBase.AgentCountThreshold && this._nextTimeToCleanUpMounts.IsPast)
+            int sumAgentsCount = agentsToBeSpawnedCount + currentAgentCount;
+            // 当要生成的Agent数量与现有Agent数量大于允许的Agent数量上限时，清理超过30s未被骑过的无人马
+            if (sumAgentsCount > CNMSpawningBehaviorBase.AgentCountThreshold && this._nextTimeToCleanUpMounts.IsPast)
             {
                 this._nextTimeToCleanUpMounts = MissionTime.SecondsFromNow(5f);
                 for (int j = Mission.Current.MountsWithoutRiders.Count - 1; j >= 0; j--)
@@ -213,30 +226,30 @@ namespace CNMultiplayer.Common
                     }
                 }
             }
-            int num9 = CNMSpawningBehaviorBase.MaxAgentCount - num8;
-            if (num9 >= 0)
+            // 剩余允许生成的Agent数
+            int remainAllowGeneratedAgentCount = CNMSpawningBehaviorBase.MaxAgentCount - sumAgentsCount;
+            // 生成缓存池中存储的Agent
+            if (remainAllowGeneratedAgentCount >= 0)
             {
                 for (int k = this._agentsToBeSpawnedCache.Count - 1; k >= 0; k--)
                 {
                     AgentBuildData agentBuildData4 = this._agentsToBeSpawnedCache[k];
-                    bool flag4 = agentBuildData4.AgentMissionPeer != null;
-                    MissionPeer missionPeer = (flag4 ? agentBuildData4.AgentMissionPeer : agentBuildData4.OwningAgentMissionPeer);
-                    MPPerkObject.MPOnSpawnPerkHandler onSpawnPerkHandler2 = MPPerkObject.GetOnSpawnPerkHandler(missionPeer);
+                    bool isPlayer = agentBuildData4.AgentMissionPeer != null;
+                    MissionPeer missionPeer = (isPlayer ? agentBuildData4.AgentMissionPeer : agentBuildData4.OwningAgentMissionPeer);
+                    MPPerkObject.MPOnSpawnPerkHandler spawnPerk = MPPerkObject.GetOnSpawnPerkHandler(missionPeer);
                     Agent agent = this.Mission.SpawnAgent(agentBuildData4, true);
                     agent.AddComponent(new MPPerksAgentComponent(agent));
                     Agent mountAgent = agent.MountAgent;
-                    if (mountAgent != null)
-                    {
-                        mountAgent.UpdateAgentProperties();
-                    }
-                    agent.HealthLimit += ((onSpawnPerkHandler2 != null) ? onSpawnPerkHandler2.GetHitpoints(flag4) : 0f);
+                    mountAgent?.UpdateAgentProperties();
+                    agent.HealthLimit += ((spawnPerk != null) ? spawnPerk.GetHitpoints(isPlayer) : 0f);
                     agent.Health = agent.HealthLimit;
-                    if (!flag4)
+                    if (!isPlayer)
                     {
                         agent.SetWatchState(Agent.WatchState.Alarmed);
                     }
+                    // 设置初始武器
                     agent.WieldInitialWeapons(Agent.WeaponWieldActionType.InstantAfterPickUp, Equipment.InitialWeaponEquipPreference.Any);
-                    if (flag4)
+                    if (isPlayer)
                     {
                         MissionPeer missionPeer2 = missionPeer;
                         int spawnCountThisRound = missionPeer2.SpawnCountThisRound;
@@ -259,12 +272,28 @@ namespace CNMultiplayer.Common
                         }
                         missionPeer.HasSpawnedAgentVisuals = false;
                         MPPerkObject.MPPerkHandler perkHandler = MPPerkObject.GetPerkHandler(missionPeer);
-                        if (perkHandler != null)
+                        perkHandler?.OnEvent(MPPerkCondition.PerkEventFlags.SpawnEnd);
+                    }
+                }
+                /* 隐藏SpawningBehaviorBase中成BOT的部分
+                int intValue2 = MultiplayerOptions.OptionType.NumberOfBotsTeam1.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
+                int intValue3 = MultiplayerOptions.OptionType.NumberOfBotsTeam2.GetIntValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions);
+                if (this.GameMode.IsGameModeUsingOpposingTeams && (intValue2 > 0 || intValue3 > 0))
+                {
+                    ValueTuple<Team, BasicCultureObject, int>[] array = new ValueTuple<Team, BasicCultureObject, int>[]
+                    {
+                        new ValueTuple<Team, BasicCultureObject, int>(this.Mission.DefenderTeam, MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam2.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)), intValue3 - this._botsCountForSides[0]),
+                        new ValueTuple<Team, BasicCultureObject, int>(this.Mission.AttackerTeam, MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam1.GetStrValue(MultiplayerOptions.MultiplayerOptionsAccessMode.CurrentMapOptions)), intValue2 - this._botsCountForSides[1])
+                    };
+                    if (num9 >= 4)
+                    {
+                        for (int l = 0; l < Math.Min(num9 / 2, array[0].Item3 + array[1].Item3); l++)
                         {
-                            perkHandler.OnEvent(MPPerkCondition.PerkEventFlags.SpawnEnd);
+                            this.SpawnBot(array[l % 2].Item1, array[l % 2].Item2);
                         }
                     }
                 }
+                */
             }
             if (!this.IsSpawningEnabled && this.IsRoundInProgress())
             {
@@ -389,8 +418,12 @@ namespace CNMultiplayer.Common
 
         private new void SpawnBot(Team team, BasicCultureObject teamCulture)
         {
+            uint backGroundColor = ((!this.GameMode.IsGameModeUsingOpposingTeams || team == this.Mission.AttackerTeam) ? teamCulture.BackgroundColor1 : teamCulture.BackgroundColor2);
+            uint foreGroundColor = ((!this.GameMode.IsGameModeUsingOpposingTeams || team == this.Mission.AttackerTeam) ? teamCulture.ForegroundColor1 : teamCulture.ForegroundColor2);
+            Banner banner = new Banner(teamCulture.BannerKey, backGroundColor, foreGroundColor);
+
             var troopCharacter = MultiplayerClassDivisions.GetMPHeroClasses()
-        .GetRandomElementWithPredicate<MultiplayerClassDivisions.MPHeroClass>(x => !x.TroopCharacter.IsMounted && x.Culture == teamCulture).TroopCharacter; //禁用骑兵AI
+            .GetRandomElementWithPredicate<MultiplayerClassDivisions.MPHeroClass>(x => !x.TroopCharacter.IsMounted && x.Culture == teamCulture).TroopCharacter; //禁用骑兵AI
             MatrixFrame spawnFrame = SpawnComponent.GetSpawnFrame(team, troopCharacter.HasMount(), true);
             AgentBuildData agentBuildData = new AgentBuildData(troopCharacter).Team(team).InitialPosition(spawnFrame.origin).VisualsIndex(0);
             Vec2 vec = spawnFrame.rotation.f.AsVec2;
@@ -398,8 +431,10 @@ namespace CNMultiplayer.Common
             AgentBuildData agentBuildData2 = agentBuildData.InitialDirection(vec).TroopOrigin(new BasicBattleAgentOrigin(troopCharacter)).EquipmentSeed(MissionLobbyComponent.GetRandomFaceSeedForCharacter(troopCharacter, 0))
                 .ClothingColor1((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color : teamCulture.ClothAlternativeColor)
                 .ClothingColor2((team.Side == BattleSideEnum.Attacker) ? teamCulture.Color2 : teamCulture.ClothAlternativeColor2)
-                .IsFemale(GenerateFemaleAIRandom(FemaleAiPossibility)); //AI性别控制
-            agentBuildData2.Equipment(Equipment.GetRandomEquipmentElements(troopCharacter, !(Game.Current.GameType is MultiplayerGame), false, agentBuildData2.AgentEquipmentSeed));
+                .IsFemale(GenerateFemaleAIRandom(FemaleAiPossibility)) //BOT性别控制
+                .Banner(banner); //为BOT生成国家旗帜
+
+            agentBuildData2.Equipment(Equipment.GetRandomEquipmentElements(troopCharacter, Game.Current.GameType is not MultiplayerGame, false, agentBuildData2.AgentEquipmentSeed));
             agentBuildData2.BodyProperties(BodyProperties.GetRandomBodyProperties(agentBuildData2.AgentRace, agentBuildData2.AgentIsFemale, troopCharacter.GetBodyPropertiesMin(false), troopCharacter.GetBodyPropertiesMax(), (int)agentBuildData2.AgentOverridenSpawnEquipment.HairCoverType, agentBuildData2.AgentEquipmentSeed, troopCharacter.HairTags, troopCharacter.BeardTags, troopCharacter.TattooTags));
             Agent agent = Mission.SpawnAgent(agentBuildData2, false);
             MultiplayerClassDivisions.MPHeroClass mPHeroClassForCharacter = MultiplayerClassDivisions.GetMPHeroClassForCharacter(agent.Character);

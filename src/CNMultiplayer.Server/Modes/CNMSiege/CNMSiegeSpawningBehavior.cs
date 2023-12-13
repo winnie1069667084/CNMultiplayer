@@ -30,12 +30,13 @@ namespace CNMultiplayer.Server.Modes.CNMSiege
         {
             if (IsSpawningEnabled && _spawnCheckTimer.Check(Mission.CurrentTime))
             {
-                SpawnAgents();
-                SpawnBotAgents();
+                this.SpawnAgents();
+                base.SpawnBotAgents();
             }
             base.OnTick(dt);
         }
 
+        //此类中的SpawnAgents相较于基类添加了兵种锁定功能
         protected override void SpawnAgents()
         {
             BasicCultureObject cultureTeam1 = MBObjectManager.Instance.GetObject<BasicCultureObject>(MultiplayerOptions.OptionType.CultureTeam1.GetStrValue());
