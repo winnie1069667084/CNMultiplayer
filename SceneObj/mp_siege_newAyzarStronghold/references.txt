@@ -1,4 +1,4 @@
-1031
+1037
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -123,6 +123,11 @@ mesh aserai_castle_corner_e_l3_08
 mesh aserai_castle_corner_e_l3_09
 mesh aserai_castle_corner_e_l3_10
 mesh aserai_castle_corner_stairs_l1
+mesh aserai_castle_gate_inner_l1_plank
+mesh aserai_castle_gate_inner_l1_state1
+mesh aserai_castle_gate_inner_l1_state2
+mesh aserai_castle_gate_inner_l1_state3
+mesh aserai_castle_gate_inner_l1_state4
 mesh aserai_castle_gate_inner_l1_state5
 mesh aserai_castle_gate_inner_l1_state5_part1
 mesh aserai_castle_gate_inner_l1_state5_part2
@@ -173,6 +178,7 @@ mesh bd_barrel_a
 mesh bd_kitchen_stove__grill
 mesh bd_pole_6m
 mesh castle_plank_ramp_a
+mesh debug_lod_mesh
 mesh desert_cow_skull
 mesh empire_castle_keep_a_l3_interior_folding_screen_a
 mesh empire_garden_sidewalk_b2
