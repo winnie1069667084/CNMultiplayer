@@ -35,14 +35,14 @@ MapTimeLimit 60
 WarmupTimeLimit 20
 RespawnPeriodTeam1 4
 RespawnPeriodTeam2 4
-NumberOfBotsTeam1 250
-NumberOfBotsTeam2 250
+NumberOfBotsTeam1 15
+NumberOfBotsTeam2 15
 CultureTeam1 empire
 CultureTeam2 vlandia
 SpectatorCamera 0
 GoldGainChangePercentageTeam1 0
 GoldGainChangePercentageTeam2 0
-MinNumberOfPlayersForMatchStart 4
+MinNumberOfPlayersForMatchStart 1
 MaxNumberOfPlayers 250
 FriendlyFireDamageMeleeFriendPercent 10
 FriendlyFireDamageMeleeSelfPercent 10
