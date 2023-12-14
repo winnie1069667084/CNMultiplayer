@@ -1,4 +1,4 @@
-1037
+1040
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -173,6 +173,7 @@ mesh aserai_castle_wall_gate_l2
 mesh aserai_castle_wall_gate_l3
 mesh aserai_grandbazaar_gate
 mesh barrier
+mesh battania_castle_keep_wood_stake_b
 mesh batteringram_c_body_destroyed
 mesh bd_barrel_a
 mesh bd_kitchen_stove__grill
@@ -215,6 +216,7 @@ mesh wooden_platform_plank_c
 prefab __empty_object
 prefab _barrier_04x04m
 prefab _barrier_08x04m
+prefab _barrier_ai_04x04m
 prefab _bo
 prefab _decal
 prefab _decal_leaking_a
@@ -342,6 +344,7 @@ prefab barn_fence_c
 prefab barn_fence_d
 prefab barn_fence_e
 prefab barricade_f
+prefab battania_castle_keep_wood_stake_b
 prefab battania_castle_keep_wood_stake_e
 prefab battering_ram_rest_point
 prefab batteringram_a_spawnerMP
