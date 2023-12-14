@@ -19,7 +19,7 @@ namespace CNMultiplayer.Common
 
         private const float cavalryBotSpawnRatio = 0.20f; //骑兵相较Native的Spawn概率
 
-        private const float archerBotSpawnRatio = 0.5f; //射手相较Native的Spawn概率
+        private const float archerBotSpawnRatio = 0.20f; //射手相较Native的Spawn概率
 
         private const float horseArcherBotSpawnRatio = 0.20f; //骑射手相较Native的Spawn概率
 
@@ -419,7 +419,7 @@ namespace CNMultiplayer.Common
                 }
 
                 int botsAlive = team.ActiveAgents.Count(a => a.IsAIControlled && a.IsHuman);
-                if (botsAlive < numberOfBots - 1) //每次生成3个AI，加快AI生成速度
+                if (botsAlive <= numberOfBots - 3) //每次生成3个AI，加快AI生成速度
                 {
                     SpawnBot(team, teamCulture);
                     SpawnBot(team, teamCulture);
