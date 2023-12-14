@@ -17,11 +17,11 @@ namespace CNMultiplayer.Common
     {
         private const float FemaleAiPossibility = 0.1f; //女性AI比例
 
-        private const float cavalryBotSpawnRatio = 0.20f; //骑兵相较Native的Spawn概率
+        //private const float cavalryBotSpawnRatio = 0.20f; //骑兵相较Native的Spawn概率
 
         private const float archerBotSpawnRatio = 0.20f; //射手相较Native的Spawn概率
 
-        private const float horseArcherBotSpawnRatio = 0.20f; //骑射手相较Native的Spawn概率
+        //private const float horseArcherBotSpawnRatio = 0.20f; //骑射手相较Native的Spawn概率
 
         //最大Agent数，找不到IMBAgent，先用2048代替
         //private static int MaxAgentCount = MBAPI.IMBAgent.GetMaximumNumberOfAgents();
@@ -442,10 +442,10 @@ namespace CNMultiplayer.Common
             {
                 heroClass = MultiplayerClassDivisions.GetMPHeroClasses()
                 .GetRandomElementWithPredicate<MultiplayerClassDivisions.MPHeroClass>(x => x.Culture == teamCulture &&
-                    ((!x.TroopCharacter.IsMounted && !x.TroopCharacter.IsRanged) || // 步兵
-                    (x.TroopCharacter.IsMounted && !x.TroopCharacter.IsRanged && random.NextFloat() < cavalryBotSpawnRatio) || // 骑兵
-                    (!x.TroopCharacter.IsMounted && x.TroopCharacter.IsRanged && random.NextFloat() < archerBotSpawnRatio) || // 射手
-                    (x.TroopCharacter.IsMounted && x.TroopCharacter.IsRanged && random.NextFloat() < horseArcherBotSpawnRatio))); // 骑射手
+                    ((!x.TroopCharacter.IsMounted && x.TroopCharacter.IsRanged && random.NextFloat() < archerBotSpawnRatio) || //射手
+                    !x.TroopCharacter.IsMounted)); // 禁用骑兵（包括骑射手）
+                    //(x.TroopCharacter.IsMounted && !x.TroopCharacter.IsRanged && random.NextFloat() < cavalryBotSpawnRatio) || // 骑兵
+                    //(x.TroopCharacter.IsMounted && x.TroopCharacter.IsRanged && random.NextFloat() < horseArcherBotSpawnRatio))); // 骑射手
             }
             var heroCharacter = heroClass.HeroCharacter;
             Equipment equipment = (heroCharacter.Equipment.Clone(false));
