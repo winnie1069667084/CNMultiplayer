@@ -1625,8 +1625,8 @@
             </Perk>
             <Perk
                 game_mode="all"
-                name="{=00000037}急救"
-                description="{=00000038}帝国为每个服役的士兵配备了急救包，以应对士兵受伤导致的战斗力下降。{newline} {newline}低于25生命值后，每秒恢复1点生命值"
+                name="{=00000039}急救"
+                description="{=00000040}帝国为每个服役的士兵配备了急救包，以应对士兵受伤导致的战斗力下降。{newline} {newline}低于25生命值后，每秒恢复1点生命值"
                 icon="PerkToughness"
                 perk_list="2">
                 <ConditionalEffect>
@@ -2584,213 +2584,6 @@
                     type="AlternativeEquipmentOnSpawn"
                     slot="Item0"
                     item="mp_khuzait_throwing_spear" />
-            </Perk>
-        </Perks>
-    </MPClassDivision>
-    <!-- 库赛特达尔罕 -->
-    <MPClassDivision
-        id="mp_heavier_infantry_khuzait"
-        hero="mp_heavier_infantry_khuzait_hero"
-        troop="mp_heavier_infantry_khuzait_troop"
-        hero_idle_anim="act_khuzait_mp_spear_infantry_idle"
-        troop_idle_anim="act_idle_1h_with_shield_1"
-        multiplier="0.60"
-        cost="140"
-        casual_cost="140"
-        battle_cost="130"
-        icon="Infantry_Heavy"
-        melee_ai="80"
-        ranged_ai="80"
-        armor="34"
-        movement_speed="0.81"
-        combat_movement_speed="0.9"
-        acceleration="2.5">
-        <Perks>
-            <!-- First perks-->
-            <Perk
-                game_mode="all"
-                name="{=00000013}Masked Nightmare"
-                description="{=00000014}你是敌人日夜难寐的成因，是一个不可阻挡的死亡贩子。{newline}{newline}护甲+10"
-                icon="PerkToughness"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="ArmorOnSpawn"
-                    value="10" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Head"
-                    item="mp_spiked_helmet_with_facemask"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Cape"
-                    item="mp_lamellar_shoulders"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Body"
-                    item="mp_eastern_lamellar_armor"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Gloves"
-                    item="mp_plated_strip_gauntlets"
-                    target="Player" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=00000015}Glaive"
-                description="{=00000016}草原民族的步兵擅长用长杆武器的距离优势克敌机先，缨饰偃月刀更是这群战士们的挚爱。{newline} {newline}配备缨饰偃月刀"
-                hero_idle_anim="act_aserai_mp_guard_idle"
-                icon="PerkPolearms"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item2"
-                    item="khuzait_polearm_1_t4" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="null" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item1"
-                    item="null" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=00000017}草原奴贩"
-                description="{=00000018}早年的响马经历使你保留了使用钝器的习惯，库赛特汗国也对那些能够在战场上带回俘虏的战士许诺丰厚的奖赏。{newline} {newline}配备库赛特重杖{newline}每次击杀，第纳尔+5"
-                icon="PerkMaces"
-                perk_list="1">
-                <Effect
-                    type="GoldGainOnKill"
-                    value="5"
-                    is_disabled_in_warmup="true" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item1"
-                    item="mp_khuzait_heavy_mace" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=00000019}重型偃月刀"
-                description="{=00000020}这种超长的偃月刀对距离的追求达到了丧心病狂的地步，只有极少数战士才能在步战中发挥它的优势。{newline} {newline}配备重型偃月刀"
-                hero_idle_anim="act_aserai_mp_guard_idle"
-                icon="PerkPolearms"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item2"
-                    item="mp_khuzait_heavy_glaive" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="null" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item1"
-                    item="null" />
-            </Perk>
-            <!-- Second perks-->
-            <Perk
-                game_mode="all"
-                name="{=YeRH0SUc}Steppe Infantry"
-                description="{=pn9OIMbK}You are a fighter of the steppe, in combat you stay mobile and dangerous to open up the back of your enemies.{newline} {newline}Grants Short Spear{newline} {newline}+7% Movement Speed{newline}+5% Melee Damage"
-                icon="PerkSteppeInfantry"
-                perk_list="2">
-                <Effect
-                    type="DrivenProperty"
-                    value="0.07"
-                    driven_property="MaxSpeedMultiplier"
-                    is_ratio="true" />
-                <Effect
-                    type="DamageDealt"
-                    value="0.05"
-                    hit_type="Melee" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=jf8luKVV}Brawny"
-                description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
-                icon="PerkBrawny"
-                perk_list="2">
-                <Effect
-                    type="SpeedBonus"
-                    value="0.35"
-                    hit_type="Melee" />
-                <Effect
-                    type="DrivenProperty"
-                    value="0.05"
-                    driven_property="MaxSpeedMultiplier"
-                    is_ratio="true" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=blqDgCtL}Big Game Hunter"
-                description="{=pjgUeOSa}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+100% Ranged Damage to Mounts"
-                icon="PerkThrowingSpear"
-                perk_list="2">
-                <Effect
-                    type="MountDamage"
-                    value="1.0"
-                    hit_type="Ranged" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item3"
-                    item="mp_khuzait_throwing_spear" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=00000005}旗手"
-                description="{=00000006}举起旗帜，激励士气！{newline} {newline}移动速度+5%"
-                icon="PerkToughness"
-                perk_list="2">
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="AgentStatus"
-                            agent_status="OnFoot" />
-                    </Conditions>
-                    <Effects>
-                        <Effect
-                            type="DrivenProperty"
-                            driven_property="MaxSpeedMultiplier"
-                            value="0.05" />
-                    </Effects>
-                </ConditionalEffect>
-                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="tug_of_wooden_arrow_t1" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="tug_of_bone_arrow_t2" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="tug_of_whistling_arrow_t3" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="tug_of_the_roaming_horse_t1" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="tug_of_the_boundless_horde_t2" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="tug_of_the_endless_steppe_t3" />
-                    </Group>
-                </RandomOnSpawnEffect>
             </Perk>
         </Perks>
     </MPClassDivision>
@@ -3886,234 +3679,6 @@
             </Perk>
         </Perks>
     </MPClassDivision>
-    <!-- 阿塞莱资深步兵 -->
-    <MPClassDivision
-        id="mp_heavy_infantry_aserai"
-        hero="mp_heavy_infantry_aserai_hero"
-        troop="mp_heavy_infantry_aserai_troop"
-        hero_idle_anim="act_aserai_aserai_mp_archer_idle"
-        troop_idle_anim="act_idle_bow_1"
-        multiplier="0.68"
-        cost="150"
-        casual_cost="150"
-        battle_cost="130"
-        icon="Infantry_Heavy"
-        melee_ai="80"
-        ranged_ai="80"
-        armor="39"
-        movement_speed="0.80"
-        combat_movement_speed="0.9"
-        acceleration="2.5">
-        <Perks>
-            <!-- First perks-->
-            <Perk
-                game_mode="all"
-                name="{=00000021}宫殿卫士"
-                description="{=00000022}苏丹最亲近的侍卫，无上荣耀！任何人看到这身黄铜鳞甲都要退避三尺。{newline} {newline}配备精炼钢部落剑{newline}配备重型椭圆盾{newline}护甲+13"
-                icon="PerkToughness"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="ArmorOnSpawn"
-                    value="13" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Head"
-                    item="brass_aserai_helmet_closed"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Cape"
-                    item="aserai_scale_shoulder_e"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Leg"
-                    item="mp_plated_strip_boots"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="aserai_sword_7_t5"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item1"
-                    item="mp_heavy_oval_shield"
-                    target="Player" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=00000025}晨星"
-                description="{=00000026}卡拉迪亚大陆的一流战锤，短小精悍，能够高效率地解决身着重甲的敌人。 {newline} {newline}配备晨星"
-                icon="PerkMaces"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="morningstar_mace_t3"
-                    target="Player" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=00000023}沙漠剑圣"
-                description="{=00000024}这些人在荒无人烟的沙漠里日夜苦练剑术，他们的武器和技术丝毫不逊西方早已闻名于世的瓦兰迪亚剑士。{newline} {newline}配备部落阔剑"
-                hero_idle_anim="act_aserai_mp_guard_idle"
-                icon="PerkTwoHandedSwords"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item2"
-                    item="southern_broad_2hsword_t4" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="null" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item1"
-                    item="null" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Head"
-                    item="mp_aserai_battle_crown"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Cape"
-                    item="mp_a_battania_cloak_a"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Gloves"
-                    item="mp_plated_strip_gauntlets"
-                    target="Player" />
-            </Perk>
-            <!-- Second perks-->
-
-            <Perk
-                game_mode="all"
-                name="{=E1bKcoaT}Cavalry Breaker"
-                description="{=VmoAFrzI}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself. Grants a long spear that does more damage.{newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
-                icon="PerkHorseHunters"
-                perk_list="2">
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="AgentStatus"
-                            agent_status="OnFoot" />
-                    </Conditions>
-                <Effects>
-                        <Effect
-                            type="SpeedBonus"
-                            value="0.5"
-                            hit_type="Melee"
-                            damage_type="Pierce" />
-                    <Effect
-                            type="MountDamage"
-                            value="1.0"
-                            hit_type="Melee" />
-                    </Effects>
-                </ConditionalEffect>
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item3"
-                    item="mp_aserai_long_spear" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=sQCpO6sp}Melee Expert"
-                description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
-                icon="PerkMeleeExpert"
-                perk_list="2">
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="AgentStatus"
-                            agent_status="OnFoot" />
-                    </Conditions>
-					<Effects>
-                        <Effect
-                            type="DamageDealt"
-                            value="0.10"
-                            hit_type="Melee" />
-						<Effect
-                            type="DrivenProperty"
-                            driven_property="MaxSpeedMultiplier"
-                            value="0.05" />
-                    </Effects>
-                </ConditionalEffect>
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=jf8luKVV}Brawny"
-                description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
-                icon="PerkBrawny"
-                perk_list="2">
-                <Effect
-                    type="SpeedBonus"
-                    value="0.35"
-                    hit_type="Melee" />
-                <Effect
-                    type="DrivenProperty"
-                    value="0.05"
-                    driven_property="MaxSpeedMultiplier"
-                    is_ratio="true" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=00000005}旗手"
-                description="{=00000006}举起旗帜，激励士气！{newline} {newline}移动速度+5%"
-                icon="PerkToughness"
-                perk_list="2">
-
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="AgentStatus"
-                            agent_status="OnFoot" />
-                    </Conditions>
-                    <Effects>
-                        <Effect
-                            type="DrivenProperty"
-                            driven_property="MaxSpeedMultiplier"
-                            value="0.05" />
-                    </Effects>
-                </ConditionalEffect>
-                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="banner_of_faris_falcon_t1" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="banner_of_emirs_hawk_t2" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="banner_of_sultans_eagle_t3" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="banner_of_desert_winds_t1" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="banner_of_shifting_sands_t2" />
-                    </Group>
-                    <Group>
-                        <Item
-                            slot="ExtraWeaponSlot"
-                            item="banner_of_dust_devils_t3" />
-                    </Group>
-                </RandomOnSpawnEffect>
-            </Perk>
-        </Perks>
-    </MPClassDivision>
     <MPClassDivision
         id="mp_light_ranged_aserai"
         hero="mp_light_ranged_aserai_hero"
@@ -5203,179 +4768,6 @@
                     value="0.07"
                     driven_property="MaxSpeedMultiplier"
                     is_ratio="true" />
-            </Perk>
-        </Perks>
-    </MPClassDivision>
-    <!-- 斯特吉亚破阵勇士 -->
-    <MPClassDivision
-        id="mp_heavy_shock_infantry_sturgia"
-        hero="mp_heavy_shock_infantry_sturgia_hero"
-        troop="mp_heavy_shock_infantry_sturgia_troop"
-        hero_idle_anim="act_aserai_mp_guard_idle"
-        troop_idle_anim="act_idle_2h_1"
-        multiplier="0.62"
-        cost="140"
-        casual_cost="140"
-        icon="Special_Axeman"
-        melee_ai="65"
-        ranged_ai="65"
-        armor="27"
-        movement_speed="0.81"
-        combat_movement_speed="0.0"
-        acceleration="1.6"
-        hitpoints="100">
-        <Perks>
-            <!-- First perks-->
-            <Perk
-                game_mode="all"
-                name="{=00000027}破阵勇士"
-                description="{=00000028}破阵是你的使命，依靠护甲与力量撕开敌人的阵线！{newline} {newline}护甲+13"
-                icon="PerkToughness"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="ArmorOnSpawn"
-                    value="13" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Head"
-                    item="mp_sturgian_helmet_closed"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Cape"
-                    item="mp_sturgian_lamellar_gambeson_heavy"
-                    target="Player" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Body"
-                    item="a_brass_lamellar_shoulder_white_a"
-                    target="Player" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=KXwN1PW4}Great Axe"
-                description="{=pjq5Nkn4}Replaces Axe with a longer and heavier axe. Extra effective against shields."
-                icon="PerkTwoHandedAxe"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="mp_sturgia_long_twohanded_axe" />
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Head"
-                    item="mp_sturgian_helmet_open"
-                    target="Player" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=HoVaJ0BH}Two Handed Maul"
-                description="{=K5ab4UuF}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents and capable of dismounting cavalry with swing attacks.{newline} {newline}Can Crush Through on Overhead swings."
-                icon="PerkTwoHandedMaul"
-                hero_idle_anim="act_sturgia_mp_berserker_two_handed_maul_perk_idle"
-                perk_list="1">
-                <OnSpawnEffect
-                    type="AlternativeEquipmentOnSpawn"
-                    slot="Item0"
-                    item="mp_sturgia_twohanded_hammer" />
-            </Perk>
-            <!-- Second perks-->
-            <Perk
-                game_mode="all"
-                name="{=0TtCRwmr}Athletic"
-                description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
-                icon="PerkFleetFooted"
-                perk_list="2">
-                <Effect
-                    type="DrivenProperty"
-                    value="0.07"
-                    driven_property="MaxSpeedMultiplier"
-                    is_ratio="true" />
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=vHIIkFQF}Blood Rage"
-                description="{=2NofSpJ0}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+5% Damage per 20 Hitpoints lost{newline}-5% Damage Taken from Melee Attacks per 20 Hitpoints lost"
-                icon="PerkBloodRage"
-                perk_list="2">
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="Health"
-                            max="80" />
-                    </Conditions>
-					<Effects>
-                        <Effect
-                            type="DamageDealt"
-                            value="0.05"
-                            hit_type="Melee" />
-						<Effect
-                            type="DamageTaken"
-                            value="-0.05"
-                            hit_type="Melee" />
-                    </Effects>
-                </ConditionalEffect>
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="Health"
-                            max="60" />
-                    </Conditions>
-					<Effects>
-                        <Effect
-                            type="DamageDealt"
-                            value="0.05"
-                            hit_type="Melee" />
-						<Effect
-                            type="DamageTaken"
-                            value="-0.05"
-                            hit_type="Melee" />
-                    </Effects>
-                </ConditionalEffect>
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="Health"
-                            max="40" />
-                    </Conditions>
-					<Effects>
-                        <Effect
-                            type="DamageDealt"
-                            value="0.05"
-                            hit_type="Melee" />
-						<Effect
-                            type="DamageTaken"
-                            value="-0.05"
-                            hit_type="Melee" />
-                    </Effects>
-                </ConditionalEffect>
-                <ConditionalEffect>
-                    <Conditions>
-                        <Condition
-                            type="Health"
-                            max="20" />
-                    </Conditions>
-					<Effects>
-                        <Effect
-                            type="DamageDealt"
-                            value="0.05"
-                            hit_type="Melee" />
-						<Effect
-                            type="DamageTaken"
-                            value="-0.05"
-                            hit_type="Melee" />
-                    </Effects>
-                </ConditionalEffect>
-            </Perk>
-            <Perk
-                game_mode="all"
-                name="{=DeWp2GjP}Shield Breaker"
-                description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
-                icon="PerkShieldSplitterAxes"
-                perk_list="2">
-                <Effect
-                    type="ShieldDamage"
-                    value="0.30" />
             </Perk>
         </Perks>
     </MPClassDivision>
@@ -7120,6 +6512,615 @@
                     type="AlternativeEquipmentOnSpawn"
                     slot="Item3"
                     item="mp_battania_javelin" />
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+
+    <!-- 库赛特达尔罕 -->
+    <MPClassDivision
+        id="mp_heavier_infantry_khuzait"
+        hero="mp_heavier_infantry_khuzait_hero"
+        troop="mp_heavier_infantry_khuzait_troop"
+        hero_idle_anim="act_khuzait_mp_spear_infantry_idle"
+        troop_idle_anim="act_idle_1h_with_shield_1"
+        multiplier="0.60"
+        cost="140"
+        casual_cost="140"
+        battle_cost="130"
+        icon="Infantry_Heavy"
+        melee_ai="80"
+        ranged_ai="80"
+        armor="34"
+        movement_speed="0.81"
+        combat_movement_speed="0.9"
+        acceleration="2.5">
+        <Perks>
+            <!-- First perks-->
+            <Perk
+                game_mode="all"
+                name="{=00000013}Masked Nightmare"
+                description="{=00000014}你是敌人日夜难寐的成因，是一个不可阻挡的死亡贩子。{newline}{newline}护甲+10"
+                icon="PerkToughness"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="10" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_spiked_helmet_with_facemask"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_lamellar_shoulders"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Body"
+                    item="mp_eastern_lamellar_armor"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Gloves"
+                    item="mp_plated_strip_gauntlets"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000015}Glaive"
+                description="{=00000016}草原民族的步兵擅长用长杆武器的距离优势克敌机先，缨饰偃月刀更是这群战士们的挚爱。{newline} {newline}配备缨饰偃月刀"
+                hero_idle_anim="act_aserai_mp_guard_idle"
+                icon="PerkPolearms"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item2"
+                    item="khuzait_polearm_1_t4" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="null" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000017}草原奴贩"
+                description="{=00000018}早年的响马经历使你保留了使用钝器的习惯，库赛特汗国也对那些能够在战场上带回俘虏的战士许诺丰厚的奖赏。{newline} {newline}配备库赛特重杖{newline}每次击杀，第纳尔+5"
+                icon="PerkMaces"
+                perk_list="1">
+                <Effect
+                    type="GoldGainOnKill"
+                    value="5"
+                    is_disabled_in_warmup="true" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_khuzait_heavy_mace" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000019}重型偃月刀"
+                description="{=00000020}这种超长的偃月刀对距离的追求达到了丧心病狂的地步，只有极少数战士才能在步战中发挥它的优势。{newline} {newline}配备重型偃月刀"
+                hero_idle_anim="act_aserai_mp_guard_idle"
+                icon="PerkPolearms"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item2"
+                    item="mp_khuzait_heavy_glaive" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="null" />
+            </Perk>
+            <!-- Second perks-->
+            <Perk
+                game_mode="all"
+                name="{=YeRH0SUc}Steppe Infantry"
+                description="{=pn9OIMbK}You are a fighter of the steppe, in combat you stay mobile and dangerous to open up the back of your enemies.{newline} {newline}Grants Short Spear{newline} {newline}+7% Movement Speed{newline}+5% Melee Damage"
+                icon="PerkSteppeInfantry"
+                perk_list="2">
+                <Effect
+                    type="DrivenProperty"
+                    value="0.07"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+                <Effect
+                    type="DamageDealt"
+                    value="0.05"
+                    hit_type="Melee" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=jf8luKVV}Brawny"
+                description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
+                icon="PerkBrawny"
+                perk_list="2">
+                <Effect
+                    type="SpeedBonus"
+                    value="0.35"
+                    hit_type="Melee" />
+                <Effect
+                    type="DrivenProperty"
+                    value="0.05"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=blqDgCtL}Big Game Hunter"
+                description="{=pjgUeOSa}You are an expert at taking down large animals, especially with throwing weapons.{newline} {newline}Grants Throwing Spear{newline} {newline}+100% Ranged Damage to Mounts"
+                icon="PerkThrowingSpear"
+                perk_list="2">
+                <Effect
+                    type="MountDamage"
+                    value="1.0"
+                    hit_type="Ranged" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item3"
+                    item="mp_khuzait_throwing_spear" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000005}旗手"
+                description="{=00000006}举起旗帜，激励士气！{newline} {newline}移动速度+5%"
+                icon="PerkToughness"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_wooden_arrow_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_bone_arrow_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_whistling_arrow_t3" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_the_roaming_horse_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_the_boundless_horde_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="tug_of_the_endless_steppe_t3" />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- 阿塞莱资深步兵 -->
+    <MPClassDivision
+        id="mp_heavy_infantry_aserai"
+        hero="mp_heavy_infantry_aserai_hero"
+        troop="mp_heavy_infantry_aserai_troop"
+        hero_idle_anim="act_aserai_aserai_mp_archer_idle"
+        troop_idle_anim="act_idle_bow_1"
+        multiplier="0.68"
+        cost="150"
+        casual_cost="150"
+        battle_cost="130"
+        icon="Infantry_Heavy"
+        melee_ai="80"
+        ranged_ai="80"
+        armor="39"
+        movement_speed="0.80"
+        combat_movement_speed="0.9"
+        acceleration="2.5">
+        <Perks>
+            <!-- First perks-->
+            <Perk
+                game_mode="all"
+                name="{=00000021}宫殿卫士"
+                description="{=00000022}苏丹最亲近的侍卫，无上荣耀！任何人看到这身黄铜鳞甲都要退避三尺。{newline} {newline}配备精炼钢部落剑{newline}配备重型椭圆盾{newline}护甲+13"
+                icon="PerkToughness"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="13" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="brass_aserai_helmet_closed"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="aserai_scale_shoulder_e"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Leg"
+                    item="mp_plated_strip_boots"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="aserai_sword_7_t5"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="mp_heavy_oval_shield"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000025}晨星"
+                description="{=00000026}卡拉迪亚大陆的一流战锤，短小精悍，能够高效率地解决身着重甲的敌人。 {newline} {newline}配备晨星"
+                icon="PerkMaces"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="morningstar_mace_t3"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000023}沙漠剑圣"
+                description="{=00000024}这些人在荒无人烟的沙漠里日夜苦练剑术，他们的武器和技术丝毫不逊西方早已闻名于世的瓦兰迪亚剑士。{newline} {newline}配备部落阔剑"
+                hero_idle_anim="act_aserai_mp_guard_idle"
+                icon="PerkTwoHandedSwords"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item2"
+                    item="southern_broad_2hsword_t4" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item1"
+                    item="null" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_aserai_battle_crown"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_a_battania_cloak_a"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Gloves"
+                    item="mp_plated_strip_gauntlets"
+                    target="Player" />
+            </Perk>
+            <!-- Second perks-->
+
+            <Perk
+                game_mode="all"
+                name="{=E1bKcoaT}Cavalry Breaker"
+                description="{=VmoAFrzI}You are an expert at fighting against cavalry on foot and mastered to use cavalry's speed against itself. Grants a long spear that does more damage.{newline} {newline}Grants Long Spear.{newline} {newline}+100% Damage to Mounts with Melee Weapons{newline}+50% Speed Bonus Damage with Melee Weapons on Piercing Attacks"
+                icon="PerkHorseHunters"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                <Effects>
+                        <Effect
+                            type="SpeedBonus"
+                            value="0.5"
+                            hit_type="Melee"
+                            damage_type="Pierce" />
+                    <Effect
+                            type="MountDamage"
+                            value="1.0"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item3"
+                    item="mp_aserai_long_spear" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=sQCpO6sp}Melee Expert"
+                description="{=8NHaOWIO}You are an expert at fighting.{newline} {newline}+5% Movement Speed{newline}+10% Damage with Melee Weapons"
+                icon="PerkMeleeExpert"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.10"
+                            hit_type="Melee" />
+						<Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=jf8luKVV}Brawny"
+                description="{=tUEn8Si4}Years of battle experience have trained you to use the speed of your weapons and legs to your advantage.{newline} {newline}+35% Speed Bonus damage with Melee Weapons{newline} {newline}+5% Movement Speed"
+                icon="PerkBrawny"
+                perk_list="2">
+                <Effect
+                    type="SpeedBonus"
+                    value="0.35"
+                    hit_type="Melee" />
+                <Effect
+                    type="DrivenProperty"
+                    value="0.05"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=00000005}旗手"
+                description="{=00000006}举起旗帜，激励士气！{newline} {newline}移动速度+5%"
+                icon="PerkToughness"
+                perk_list="2">
+
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="AgentStatus"
+                            agent_status="OnFoot" />
+                    </Conditions>
+                    <Effects>
+                        <Effect
+                            type="DrivenProperty"
+                            driven_property="MaxSpeedMultiplier"
+                            value="0.05" />
+                    </Effects>
+                </ConditionalEffect>
+                <RandomOnSpawnEffect type="RandomEquipmentOnSpawn">
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_faris_falcon_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_emirs_hawk_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_sultans_eagle_t3" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_desert_winds_t1" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_shifting_sands_t2" />
+                    </Group>
+                    <Group>
+                        <Item
+                            slot="ExtraWeaponSlot"
+                            item="banner_of_dust_devils_t3" />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- 斯特吉亚破阵勇士 -->
+    <MPClassDivision
+        id="mp_heavy_shock_infantry_sturgia"
+        hero="mp_heavy_shock_infantry_sturgia_hero"
+        troop="mp_heavy_shock_infantry_sturgia_troop"
+        hero_idle_anim="act_aserai_mp_guard_idle"
+        troop_idle_anim="act_idle_2h_1"
+        multiplier="0.62"
+        cost="140"
+        casual_cost="140"
+        icon="Special_Axeman"
+        melee_ai="65"
+        ranged_ai="65"
+        armor="27"
+        movement_speed="0.81"
+        combat_movement_speed="0.0"
+        acceleration="1.6"
+        hitpoints="100">
+        <Perks>
+            <!-- First perks-->
+            <Perk
+                game_mode="all"
+                name="{=00000027}破阵勇士"
+                description="{=00000028}破阵是你的使命，依靠护甲与力量撕开敌人的阵线！{newline} {newline}护甲+13"
+                icon="PerkToughness"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="ArmorOnSpawn"
+                    value="13" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_sturgian_helmet_closed"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Cape"
+                    item="mp_sturgian_lamellar_gambeson_heavy"
+                    target="Player" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Body"
+                    item="a_brass_lamellar_shoulder_white_a"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=KXwN1PW4}Great Axe"
+                description="{=pjq5Nkn4}Replaces Axe with a longer and heavier axe. Extra effective against shields."
+                icon="PerkTwoHandedAxe"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="mp_sturgia_long_twohanded_axe" />
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Head"
+                    item="mp_sturgian_helmet_open"
+                    target="Player" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=HoVaJ0BH}Two Handed Maul"
+                description="{=K5ab4UuF}Replaces Two Handed Axe with Two Handed Maul. Effective against armored opponents and capable of dismounting cavalry with swing attacks.{newline} {newline}Can Crush Through on Overhead swings."
+                icon="PerkTwoHandedMaul"
+                hero_idle_anim="act_sturgia_mp_berserker_two_handed_maul_perk_idle"
+                perk_list="1">
+                <OnSpawnEffect
+                    type="AlternativeEquipmentOnSpawn"
+                    slot="Item0"
+                    item="mp_sturgia_twohanded_hammer" />
+            </Perk>
+            <!-- Second perks-->
+            <Perk
+                game_mode="all"
+                name="{=0TtCRwmr}Athletic"
+                description="{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed"
+                icon="PerkFleetFooted"
+                perk_list="2">
+                <Effect
+                    type="DrivenProperty"
+                    value="0.07"
+                    driven_property="MaxSpeedMultiplier"
+                    is_ratio="true" />
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=vHIIkFQF}Blood Rage"
+                description="{=2NofSpJ0}Getting hurt puts you in a frenzied rage, you take less damage and deal more damage in melee the more you get hurt.{newline} {newline}+5% Damage per 20 Hitpoints lost{newline}-5% Damage Taken from Melee Attacks per 20 Hitpoints lost"
+                icon="PerkBloodRage"
+                perk_list="2">
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="80" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="60" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="40" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition
+                            type="Health"
+                            max="20" />
+                    </Conditions>
+					<Effects>
+                        <Effect
+                            type="DamageDealt"
+                            value="0.05"
+                            hit_type="Melee" />
+						<Effect
+                            type="DamageTaken"
+                            value="-0.05"
+                            hit_type="Melee" />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk
+                game_mode="all"
+                name="{=DeWp2GjP}Shield Breaker"
+                description="{=KrEPteFM}You know the weak points of shields, your attacks are extra effective against shields.{newline} {newline}+30% Damage to Shields"
+                icon="PerkShieldSplitterAxes"
+                perk_list="2">
+                <Effect
+                    type="ShieldDamage"
+                    value="0.30" />
             </Perk>
         </Perks>
     </MPClassDivision>
