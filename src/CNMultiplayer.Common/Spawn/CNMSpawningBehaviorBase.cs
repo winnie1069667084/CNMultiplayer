@@ -419,10 +419,8 @@ namespace CNMultiplayer.Common
                 }
 
                 int botsAlive = team.ActiveAgents.Count(a => a.IsAIControlled && a.IsHuman);
-                if (botsAlive <= numberOfBots - 3) //每次生成3个AI，加快AI生成速度
+                if (botsAlive <= numberOfBots - 1) //每次生成1个AI，加快AI生成速度
                 {
-                    SpawnBot(team, teamCulture);
-                    SpawnBot(team, teamCulture);
                     SpawnBot(team, teamCulture);
                 }
             }

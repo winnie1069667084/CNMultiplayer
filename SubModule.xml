@@ -1,8 +1,8 @@
 <Module>
     <Name value="CN Multiplayer"/>
     <Id value="CNMultiplayer"/>
-    <Version value="v1.2.7"/>
-	<ModuleCategory value="Multiplayer"/>
+    <Version value="v1.2.7.1"/>
+	<ModuleCategory value="MultiplayerOptional"/>
 	<DefaultModule value="false"/>
 	<DependedModules>
     	<DependedModule Id="Native" />
@@ -30,12 +30,6 @@
 		<XmlNode>
 			<XmlName id="GameText" path="strings"/>
 		</XmlNode>
-		<XmlNode>                
-			<XmlName id="MPClassDivisions" path="mpclassdivisions"/>
-		</XmlNode>  
-		<!--XmlNode>
-			<XmlName id="Items" path="items"/>
-		</XmlNode-->
 		<XmlNode>
 			<XmlName id="Items" path="items/spitems"/>
 		</XmlNode>
