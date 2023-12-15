@@ -37,9 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.6.30619-beta" />
-    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.6.30619-beta" />
-    <PackageReference Include="Bannerlord.ReferenceAssemblies.Native" Version="1.2.6.30619-beta" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.2.7.31207" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Multiplayer" Version="1.2.7.31207" />
+    <PackageReference Include="Bannerlord.ReferenceAssemblies.Native" Version="1.2.7.31207" />
     <PackageReference Include="Lib.Harmony" Version="2.2.2" GeneratePathProperty="true" />
   </ItemGroup>
 
