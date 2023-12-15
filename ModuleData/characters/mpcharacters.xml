@@ -2368,69 +2368,6 @@
 		<Resistances dismount="30" />
 	</NPCCharacter>
 	<NPCCharacter
-		id="mp_heavy_shock_infantry_sturgia_troop"
-		default_group="Infantry"
-		level="25"
-		name="{=10000001}Heroic Line Breaker"
-		occupation="Soldier"
-		culture="Culture.sturgia">
-		<face>
-			<!--face_key value="26.15;0.2617;0.3315;E000000;47000;0;0;5460305000000;0;0;280000" max_value="73.19;0.8;0.8667;BFC059A0038D4;FFFFFFFF887CFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;DCFF90DFFFFFF;0;0;480141"/-->
-			<BodyProperties
-				version="4"
-				age="26.15"
-				weight="0.2617"
-				build="0.3315"
-				key="000000000E0000000000000000047000000000000000000000000000000000000005460305000000000000000000000000000000000000000000000000A00000" />
-			<BodyPropertiesMax
-				version="4"
-				age="53.19"
-				weight="0.8"
-				build="0.8667"
-				key="000BFC059A0038D4FFFFFFFF887CFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000DCFF90DFFFFFF000000000000000000000000000000000000000001680141" />
-		</face>
-		<skills>
-			<skill
-				id="Riding"
-				value="0" />
-			<skill
-				id="OneHanded"
-				value="50" />
-			<skill
-				id="TwoHanded"
-				value="50" />
-			<skill
-				id="Polearm"
-				value="50" />
-			<skill
-				id="Crossbow"
-				value="0" />
-			<skill
-				id="Bow"
-				value="0" />
-			<skill
-				id="Throwing"
-				value="100" />
-		</skills>
-		<Equipments>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.mp_sturgia_twohanded_axe" />
-				<equipment
-					slot="Body"
-					id="Item.mp_sturgian_lamellar_gambeson_heavy" />
-				<equipment
-					slot="Leg"
-					id="Item.mp_plated_strip_boots" />
-				<equipment
-					slot="Head"
-					id="Item.mp_sturgian_helmet_base" />
-			</EquipmentRoster>
-		</Equipments>
-		<Resistances dismount="35" />
-	</NPCCharacter>
-	<NPCCharacter
 		id="mp_skirmisher_sturgia_hero"
 		default_group="Infantry"
 		level="10"
@@ -8364,68 +8301,68 @@
 		</Equipments>
 		<Resistances dismount="35" />
 	</NPCCharacter>
-	<!-- 斯特吉亚破阵勇士Troop -->
-	<NPCCharacter
+  <!-- 斯特吉亚破阵勇士Troop -->
+  <NPCCharacter
 		id="mp_heavy_shock_infantry_sturgia_troop"
 		default_group="Infantry"
 		level="25"
 		name="{=10000003}Heroic Line Breaker"
 		occupation="Soldier"
 		culture="Culture.sturgia">
-		<face>
-			<!--face_key value="26.15;0.2617;0.3315;E000000;47000;0;0;5460305000000;0;0;280000" max_value="73.19;0.8;0.8667;BFC059A0038D4;FFFFFFFF887CFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;DCFF90DFFFFFF;0;0;480141"/-->
-			<BodyProperties
+    <face>
+      <!--face_key value="26.15;0.2617;0.3315;E000000;47000;0;0;5460305000000;0;0;280000" max_value="73.19;0.8;0.8667;BFC059A0038D4;FFFFFFFF887CFFFF;FFFEFFFB6FB7FFFF;FFFFFFFFFFFFFFFF;DCFF90DFFFFFF;0;0;480141"/-->
+      <BodyProperties
 				version="4"
 				age="26.15"
 				weight="0.2617"
 				build="0.3315"
 				key="000000000E0000000000000000047000000000000000000000000000000000000005460305000000000000000000000000000000000000000000000000A00000" />
-			<BodyPropertiesMax
+      <BodyPropertiesMax
 				version="4"
 				age="53.19"
 				weight="0.8"
 				build="0.8667"
 				key="000BFC059A0038D4FFFFFFFF887CFFFFFFFEFFFB6FB7FFFFFFFFFFFFFFFFFFFF000DCFF90DFFFFFF000000000000000000000000000000000000000001680141" />
-		</face>
-		<skills>
-			<skill
+    </face>
+    <skills>
+      <skill
 				id="Riding"
 				value="50" />
-			<skill
+      <skill
 				id="OneHanded"
 				value="50" />
-			<skill
+      <skill
 				id="TwoHanded"
 				value="50" />
-			<skill
+      <skill
 				id="Polearm"
 				value="50" />
-			<skill
+      <skill
 				id="Crossbow"
 				value="20" />
-			<skill
+      <skill
 				id="Bow"
 				value="20" />
-			<skill
+      <skill
 				id="Throwing"
 				value="100" />
-		</skills>
-		<Equipments>
-			<EquipmentRoster>
-				<equipment
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment
 					slot="Item0"
 					id="Item.mp_sturgia_twohanded_axe" />
-				<equipment
+        <equipment
 					slot="Body"
 					id="Item.mp_sturgian_lamellar_gambeson_heavy" />
-				<equipment
+        <equipment
 					slot="Leg"
 					id="Item.mp_plated_strip_boots" />
-				<equipment
+        <equipment
 					slot="Head"
 					id="Item.mp_sturgian_helmet_base" />
-			</EquipmentRoster>
-		</Equipments>
-		<Resistances dismount="35" />
-	</NPCCharacter>
+      </EquipmentRoster>
+    </Equipments>
+    <Resistances dismount="35" />
+  </NPCCharacter>
 </MPCharacters>
