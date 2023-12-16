@@ -1,4 +1,4 @@
-1040
+1039
 flora_entity agriculture_carrot
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -173,7 +173,6 @@ mesh aserai_castle_wall_gate_l2
 mesh aserai_castle_wall_gate_l3
 mesh aserai_grandbazaar_gate
 mesh barrier
-mesh battania_castle_keep_wood_stake_b
 mesh batteringram_c_body_destroyed
 mesh bd_barrel_a
 mesh bd_kitchen_stove__grill

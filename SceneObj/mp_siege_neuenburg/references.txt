@@ -1,4 +1,4 @@
-631
+630
 flora_entity flora_shrub_a
 flora_entity flora_tree_plane_01_hero
 flora_entity flora_tree_plane_02_hero
@@ -90,7 +90,6 @@ mesh outermesh_mountains_a_outer_g
 mesh outermesh_mountains_a_outer_h
 mesh pict_houses_m
 mesh rock_001
-mesh shop_prop_merchantwinery_c
 mesh siege_large_shield_a
 mesh siege_soil_a
 mesh siege_soil_detail_a
