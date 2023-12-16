@@ -1,4 +1,4 @@
-794
+793
 flora_entity 
 flora_entity agriculture_chickpeas
 flora_entity agriculture_favabeans
@@ -193,7 +193,6 @@ mesh shop_prop_merchantcarpenter_d
 mesh shop_prop_merchantcarpenter_e
 mesh shop_prop_merchantcarpenter_f
 mesh shop_prop_merchantsiege_e
-mesh siege_barricade_c
 mesh siege_large_shield_a
 mesh siege_tower_5m_destroyed_planks
 mesh siege_tower_5m_logs
